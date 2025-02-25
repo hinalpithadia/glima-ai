@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- REQUIRED META TAGS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Glima AI</title>
+    <!--- MAIN CSS ---->
+    <link rel="stylesheet" href="assets/css/input.css">
+    <link rel="stylesheet" href="assets/css/styles-output.css">
+</head>
+
+<body class="overflow-hidden">
+    <div class="flex bg-black-0a0a0a">
+        <!--Header--->
+        <header class="py-4 px-3 border-b border-white/10 fixed top-0 z-30 w-full bg-black-0a0a0a">
+            <div class="flex justify-between items-center">
+                <a href="#" class=" 2xl:max-w-[230px] xl:max-w-[200px] lg:max-w-[180px]">
+                    <svg width="140" height="34" viewBox="0 0 140 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="34" height="34" rx="8" fill="#C6FF00"/>
+                        <path d="M10.4609 13.7307V15.755C11.9028 15.7317 15.0641 15.9653 17.0225 16.5181C18.0095 16.2067 18.5492 16.0042 19.8985 15.3424C19.513 15.2023 16.3055 13.7229 10.4609 13.7307Z" fill="black"/>
+                        <path d="M10.4609 11.1799C11.0161 11.1799 11.3553 11.1877 11.5712 11.1954C11.7871 11.2032 12.037 11.2141 12.1264 11.2188C12.2158 11.2235 12.3916 11.2344 12.5196 11.2422C12.6461 11.2515 12.7895 11.2608 12.8358 11.2655C12.882 11.2702 13.0424 11.2842 13.1904 11.2967C13.3385 11.3107 13.5883 11.3356 13.7456 11.3527C13.9029 11.3699 14.1342 11.3979 14.2622 11.4135C14.3886 11.4306 14.6354 11.4648 14.8096 11.4898C14.9839 11.5162 15.2861 11.5661 15.4804 11.6003C15.6747 11.6361 15.9986 11.6984 16.1975 11.742C16.3964 11.7856 16.7018 11.8557 16.876 11.8993C17.0503 11.9414 17.334 12.0177 17.5083 12.0675C17.6825 12.1173 17.9354 12.1952 18.0712 12.2388C18.2069 12.284 18.4644 12.3743 18.6417 12.4412C18.8191 12.5082 19.0735 12.6094 19.2046 12.667C19.3357 12.7247 19.5577 12.8305 19.6981 12.9006C19.8384 12.9707 20.0497 13.0859 20.1684 13.156C20.2871 13.2276 20.4598 13.3382 20.5524 13.4036C20.6449 13.469 20.7837 13.5765 20.8608 13.6419C20.9379 13.7073 21.0597 13.8225 21.1307 13.8988C21.2016 13.9751 21.2895 14.0795 21.3265 14.1308C21.362 14.1822 21.4159 14.2772 21.4468 14.3411C21.4761 14.4049 21.5116 14.4999 21.5254 14.5513C21.5378 14.6027 21.5486 14.6805 21.5486 14.7226C21.5486 14.7662 21.5378 14.8425 21.5254 14.8939C21.5131 14.9453 21.4745 15.0434 21.4422 15.1119C21.4082 15.1804 21.3342 15.2988 21.2741 15.3766C21.2155 15.4545 21.1122 15.5697 21.0458 15.6336C20.9795 15.699 20.8577 15.8049 20.7775 15.8687C20.6973 15.9341 20.5585 16.0369 20.4691 16.0961C20.3797 16.1568 20.2131 16.2596 20.099 16.3265C19.9849 16.3935 19.8106 16.4869 19.7135 16.5368C19.6163 16.5866 19.4189 16.6785 19.274 16.7439C19.129 16.8077 18.8946 16.9058 18.7497 16.9619C18.6047 17.0164 18.3595 17.1067 18.2022 17.1597C18.0449 17.2126 17.7643 17.2998 17.5777 17.3543C17.3911 17.4088 17.1135 17.4851 16.9608 17.5241C16.8082 17.563 16.5584 17.6222 16.4057 17.6564C16.253 17.6891 16.0202 17.739 15.8891 17.7654C15.758 17.7919 15.5529 17.8308 15.4342 17.8511C15.3154 17.8729 15.0826 17.9103 14.9176 17.9367C14.7526 17.9632 14.4812 18.0021 14.3162 18.0224C14.1512 18.0442 13.8875 18.0769 13.7302 18.094C13.5729 18.1096 13.3277 18.1345 13.1827 18.1485C13.0378 18.161 12.7741 18.1812 12.5967 18.1937C12.4178 18.2061 12.1958 18.2217 12.1033 18.2264C12.0092 18.2311 11.7563 18.242 11.5404 18.2497C11.3245 18.2575 10.993 18.2653 10.8033 18.2653H10.4609V20.2897C11.0531 20.2773 11.3523 20.271 11.5096 20.2664C11.6669 20.2617 11.8673 20.2539 11.9568 20.2508C12.0462 20.2461 12.1742 20.2383 12.2421 20.2352C12.3099 20.2305 12.4826 20.2196 12.6276 20.2119C12.771 20.2025 13.0532 20.1807 13.2521 20.1636C13.4511 20.1465 13.7749 20.1153 13.9692 20.0935C14.1635 20.0717 14.4796 20.0343 14.6708 20.0079C14.8621 19.9829 15.1874 19.9331 15.3956 19.8989C15.6038 19.8662 15.8876 19.8163 16.0279 19.7899C16.1682 19.7649 16.4458 19.7073 16.6447 19.6653C16.8436 19.6217 17.1629 19.5485 17.3541 19.5002C17.5453 19.4535 17.8429 19.3741 18.0172 19.3242C18.1914 19.2744 18.4582 19.1934 18.6109 19.1452C18.7636 19.0969 19.0134 19.0112 19.166 18.9552C19.3187 18.8991 19.5654 18.8041 19.7135 18.7449C19.8615 18.6842 20.0419 18.6079 20.1144 18.5736C20.1869 18.5409 20.2933 18.4911 20.3534 18.4631C20.412 18.4366 20.5539 18.3665 20.6649 18.3089L20.87 18.203C21.052 18.3665 21.1553 18.4724 21.2155 18.5456C21.2772 18.6188 21.3558 18.7278 21.3897 18.787C21.4252 18.8477 21.473 18.9427 21.4946 19.0019C21.5162 19.0595 21.5378 19.1529 21.5424 19.2121C21.5501 19.2837 21.5455 19.3523 21.527 19.4332C21.5131 19.4971 21.4761 19.603 21.4437 19.6668C21.4129 19.7307 21.3466 19.8366 21.2987 19.9004C21.2509 19.9643 21.1337 20.0951 21.0366 20.1901C20.941 20.2851 20.7729 20.4299 20.6619 20.5124C20.5524 20.5949 20.3565 20.7258 20.2301 20.8021C20.1021 20.8799 19.9047 20.9905 19.7906 21.0512C19.6765 21.1104 19.4822 21.2054 19.3588 21.2599C19.2354 21.3159 19.0303 21.4032 18.9039 21.4545C18.7759 21.5059 18.5446 21.5931 18.3873 21.6492C18.23 21.7053 17.9632 21.7925 17.7936 21.8454C17.6239 21.8968 17.3541 21.9747 17.1922 22.0183C17.0302 22.0603 16.7326 22.1351 16.5291 22.1818C16.3255 22.2269 16.0171 22.2939 15.8428 22.3282C15.6686 22.3624 15.4018 22.4122 15.2491 22.4372C15.0965 22.4636 14.8251 22.5057 14.6477 22.5306C14.4704 22.5571 14.1774 22.596 14 22.6162C13.8227 22.638 13.5266 22.6692 13.3446 22.6863C13.1627 22.7034 12.8712 22.7284 12.697 22.7408C12.5227 22.7533 12.3037 22.7673 12.2112 22.7735C12.1171 22.7782 11.9861 22.786 11.9182 22.7891C11.8504 22.7938 11.5142 22.8047 11.1703 22.8125C10.8264 22.8202 10.5272 22.828 10.5026 22.828H10.4609V24.8447C11.3507 24.826 11.6761 24.8182 11.7563 24.8135C11.8365 24.8088 12.0477 24.7979 12.2266 24.7886C12.404 24.7808 12.7309 24.759 12.9514 24.7419C13.1719 24.7247 13.522 24.6936 13.7302 24.6734C13.9384 24.6516 14.2745 24.6126 14.4781 24.5877C14.6816 24.5612 15.0086 24.5161 15.2029 24.4849C15.3972 24.4553 15.7272 24.3993 15.9354 24.3603C16.1435 24.323 16.4766 24.256 16.6756 24.2124C16.8745 24.1688 17.2045 24.0925 17.4081 24.0411C17.6116 23.9897 17.9247 23.9056 18.102 23.8542C18.2793 23.8029 18.5985 23.7016 18.8114 23.6316C19.0226 23.5599 19.3141 23.4556 19.459 23.3995C19.6024 23.3435 19.7937 23.2672 19.8831 23.2282C19.9725 23.1909 20.0897 23.1395 20.1453 23.1146C20.2008 23.0912 20.4013 22.9915 20.5925 22.895C20.7837 22.8 21.0366 22.663 21.1553 22.5929C21.2741 22.5228 21.4545 22.4091 21.5563 22.3406C21.6581 22.2721 21.8215 22.1537 21.9187 22.079C22.0158 22.0042 22.1546 21.8906 22.2271 21.8267C22.2996 21.7629 22.4075 21.6632 22.4661 21.604C22.5263 21.5449 22.6064 21.4623 22.645 21.4187C22.6835 21.3767 22.7622 21.2817 22.8208 21.2085C22.8794 21.1353 22.9719 21.0061 23.0274 20.9204C23.0829 20.8348 23.1739 20.6744 23.231 20.5622C23.2865 20.4501 23.3605 20.2726 23.3944 20.1651C23.4299 20.0577 23.4685 19.9175 23.4823 19.8537C23.4947 19.7899 23.5132 19.6777 23.5209 19.6045C23.5302 19.5313 23.5379 19.3772 23.5379 19.2619C23.5379 19.1467 23.5271 18.9785 23.5132 18.8882C23.5009 18.7979 23.47 18.6468 23.4453 18.5534C23.4207 18.46 23.3713 18.312 23.3358 18.2264C23.3019 18.1407 23.2433 18.0115 23.2063 17.9383C23.1693 17.8651 23.0968 17.739 23.0444 17.658C22.9904 17.577 22.9071 17.4571 22.8593 17.3933C22.81 17.3294 22.7159 17.2142 22.6465 17.1363L22.5232 16.9962C22.6681 16.8389 22.7606 16.7314 22.8223 16.6536C22.884 16.5757 22.9873 16.4293 23.0521 16.3265C23.1169 16.2238 23.2048 16.0696 23.2464 15.984C23.2865 15.8983 23.322 15.8158 23.322 15.8018C23.322 15.7862 23.3358 15.7504 23.3513 15.7239C23.3682 15.6959 23.4022 15.6024 23.4268 15.5168C23.4515 15.4311 23.4854 15.291 23.5009 15.2053C23.524 15.0839 23.5302 14.9764 23.5302 14.7148C23.5302 14.4267 23.5255 14.3551 23.4947 14.2009C23.4746 14.1028 23.4299 13.9377 23.396 13.835C23.3621 13.7322 23.2942 13.564 23.2449 13.4612C23.1955 13.3584 23.1045 13.1965 23.0444 13.1031C22.9827 13.0096 22.8809 12.8648 22.8162 12.7838C22.7514 12.7029 22.6249 12.5596 22.5355 12.4662C22.4461 12.3743 22.3042 12.2372 22.2194 12.1625C22.1346 12.0893 21.9958 11.9741 21.911 11.9102C21.8261 11.8448 21.6565 11.7249 21.5331 11.6424C21.4098 11.5598 21.2047 11.4337 21.0782 11.359C20.9502 11.2858 20.7158 11.1596 20.5539 11.0786C20.392 10.9992 20.136 10.8793 19.9833 10.8139C19.8307 10.747 19.6148 10.6582 19.5053 10.6161C19.3958 10.5725 19.166 10.4885 18.9964 10.4293C18.8268 10.3701 18.5384 10.2751 18.3564 10.2206C18.1745 10.1645 17.8691 10.0773 17.6779 10.026C17.4867 9.97457 17.1644 9.89515 16.9608 9.84843C16.7573 9.80327 16.4489 9.73631 16.2746 9.70205C16.1004 9.66779 15.8166 9.61484 15.6424 9.58526C15.4681 9.55411 15.1597 9.50584 14.9561 9.47625C14.7526 9.44666 14.4056 9.4015 14.1851 9.37503C13.9646 9.34856 13.6315 9.3143 13.4449 9.29561C13.2583 9.27848 12.9591 9.25512 12.7818 9.24266C12.6029 9.23021 12.3778 9.21463 12.2806 9.20996C12.1835 9.20529 12.037 9.1975 11.9568 9.19439C11.8766 9.18972 11.7131 9.18349 11.5944 9.17882C11.4756 9.1757 11.1734 9.16636 10.922 9.16169L10.464 9.15234L10.4609 11.1799Z" fill="black"/>
+                        <path d="M41.8438 26.8365V7.84443H49.0963C50.9398 7.84443 52.4194 8.28103 53.5352 9.17849C54.6509 10.0759 55.2088 11.2887 55.2088 12.8411C55.2088 13.2534 55.136 13.69 55.0148 14.1509C54.748 15.0241 53.8505 16.3339 52.4679 16.9403C53.7777 17.3526 54.6994 18.0075 55.2573 18.8565C55.8152 19.7054 56.082 20.6029 56.082 21.5246C56.082 24.7263 53.7292 26.8365 49.3389 26.8365H41.8438ZM44.803 10.5368V15.873H48.5384C50.9883 15.873 52.2253 14.733 52.2253 13.1564C52.2253 11.5798 51.1338 10.5368 48.7082 10.5368H44.803ZM44.803 18.4926V24.1442H49.3874C51.7887 24.1442 53.0985 23.0042 53.0985 21.282C53.0985 19.6326 51.813 18.4926 49.1933 18.4926H44.803Z" fill="white"/>
+                        <path d="M71.7352 21.3379H61.9115C61.9358 22.3082 62.3239 23.1086 63.0758 23.7635C63.8277 24.3941 64.701 24.7095 65.6955 24.7095C67.3206 24.7095 68.4849 24.0303 69.1883 22.6962L71.2743 24.0788C70.1828 26.092 68.0725 27.2078 65.744 27.2078C63.8277 27.2078 62.2026 26.5771 60.8928 25.2916C59.6072 24.006 58.9523 22.3809 58.9523 20.4647C58.9523 18.5971 59.5829 17.0204 60.82 15.7106C62.0571 14.4008 63.6094 13.7459 65.4772 13.7459C67.4419 13.7459 68.9943 14.3523 70.1101 15.5894C71.2258 16.8264 71.7837 18.4273 71.7837 20.4405C71.7837 20.8286 71.7595 21.1196 71.7352 21.3379ZM65.4772 16.22C63.7065 16.22 62.3239 17.3843 62.0571 19.1549H68.8487C68.7517 17.3358 67.3206 16.22 65.4772 16.22Z" fill="white"/>
+                        <path d="M72.6994 14.0128H75.8284L79.6366 23.5937L83.4448 14.0128H86.4768L81.0677 26.9652H78.1812L72.6994 14.0128Z" fill="white"/>
+                        <path d="M100.302 21.3379H90.4787C90.5029 22.3082 90.891 23.1086 91.643 23.7635C92.3949 24.3941 93.2681 24.7095 94.2626 24.7095C95.8878 24.7095 97.052 24.0303 97.7555 22.6962L99.8415 24.0788C98.75 26.092 96.6397 27.2078 94.3111 27.2078C92.3949 27.2078 90.7697 26.5771 89.4599 25.2916C88.1743 24.006 87.5194 22.3809 87.5194 20.4647C87.5194 18.5971 88.1501 17.0204 89.3871 15.7106C90.6242 14.4008 92.1766 13.7459 94.0443 13.7459C96.009 13.7459 97.5614 14.3523 98.6772 15.5894C99.793 16.8264 100.351 18.4273 100.351 20.4405C100.351 20.8286 100.327 21.1196 100.302 21.3379ZM94.0443 16.22C92.2736 16.22 90.891 17.3843 90.6242 19.1549H97.4159C97.3189 17.3358 95.8878 16.22 94.0443 16.22Z" fill="white"/>
+                        <path d="M103.316 26.9652V7.2212H106.202V26.9652H103.316Z" fill="white"/>
+                        <path d="M110.164 11.1506C109.412 10.3987 109.412 9.23441 110.164 8.48249C110.916 7.70631 112.08 7.70631 112.832 8.48249C113.584 9.23441 113.584 10.3987 112.832 11.1506C112.08 11.9025 110.916 11.9025 110.164 11.1506ZM112.953 14.0128V26.9652H110.067V14.0128H112.953Z" fill="white"/>
+                        <path d="M124.337 7.34248V9.81655C124.046 9.74378 123.706 9.71953 123.294 9.71953C121.645 9.71953 120.82 10.5685 120.82 12.2906V14.0128H124.264V16.5596H120.82V26.9652H117.909V16.5596H115.532V14.0128H117.909V12.1936C117.909 8.99186 119.825 7.14844 123.003 7.14844C123.44 7.14844 123.876 7.2212 124.337 7.34248Z" fill="white"/>
+                        <path d="M128.371 14.0128L132.397 22.5022L136.133 14.0128H139.262L130.36 33.3444H127.279L130.845 25.5099L125.072 14.0128H128.371Z" fill="white"/>
+                        </svg>
+                         
+                </a>
+                <ul class="lg:flex hidden items-center gap-7">
+                    <li><a href="#" class="header-links active">Apps</a></li>
+                    <li><a href="#" class="header-links">Models</a></li>
+                    <li><a href="#" class="header-links">Threads</a></li>
+                    <li><a href="#" class="header-links">Articles</a></li>
+                    <li class="flex items-center gap-2"><a href="#" class="header-links  gap-1.5">Trainings</a><span class="bg-limegreen rounded-full px-1.5 py-0.5 text-xs text-black-0a0a0a leading-5 font-medium">New</span></li>
+                </ul>
+                <div class="flex items-center gap-2">
+                    <div class="wrapper-dropdown w-full relative" id="dropdown">
+                        <button class="dropbtn w-full flex items-center justify-between   rounded-lg font-medium  text-base text-white transition-all duration-300  ">
+                            <div class="w-full bg-black rounded-[7px]">
+                                <div class="flex items-center justify-between rounded-lg  w-full ">
+                                    <img src="assets/images/nav-user-avatar.png" alt="image">
+                                  
+                                </div>
+                            </div>
+
+                        </button>
+
+                        <div class="dropdown absolute top-[57px] left-[-290px] w-[326px] z-20 invisible opacity-0  rounded-xl ">
+                            <div class="flex flex-col gap-1 rounded-lg p-3 bg-[#0C0C0C] w-full border border-[#99999933]">
+                                <div class="flex items-center justify-between pb-3">
+                                    <div class="block">
+                                        <h5 class="text-base font-semibold leading-5 text-white">Cameronwa</h5>
+                                        <span class="text-xs font-normal leading-4 text-[#B1B1B1]">cameronwa@gmail.com</span>
+                                    </div>
+                                    <button class="border border-[rgba(249,157,26,0.50)] bg-[rgba(249,157,26,0.10)] rounded-[34px] py-2 px-3 text-sm font-medium leading-5"><span class="text-transparent bg-clip-text bg-[linear-gradient(263deg,#F99D1A_13.95%,#FFD79D_46.91%,#F99D1A_76.61%)]">Gold Member</span></button>
+                                </div>
+                                <div class="border-t border-b border-[#161616] py-3">
+                                    <ul class="block">
+                                        <li><a href="#" class="group flex items-center gap-1.5 text-xs font-medium leading-5 text-white hover:text-[#F99D1A] py-2 px-3 rounded-lg bg-transparent hover:bg-[rgba(249,157,26,0.10)] transition-all duration-500">
+                                            <svg class="text-white group-hover:text-[#F99D1A]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.75 15V14.25C3.75 11.3505 6.10051 9 9 9C11.8995 9 14.25 11.3505 14.25 14.25V15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M9 9C10.6568 9 12 7.65683 12 6C12 4.34314 10.6568 3 9 3C7.34314 3 6 4.34314 6 6C6 7.65683 7.34314 9 9 9Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                                
+                                                My Profile    
+                                        </a></li>
+                                        <li><a href="#" class="group flex items-center gap-1.5 text-xs font-medium leading-5 text-white hover:text-[#F99D1A] py-2 px-3 rounded-lg bg-transparent hover:bg-[rgba(249,157,26,0.10)] transition-all duration-500">
+                                            <svg class="text-white group-hover:text-[#F99D1A]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.45027 2.69995C10.8229 2.69995 11.3094 3.43838 11.4461 4.20019C11.5232 4.62967 12.3288 5.11123 12.7439 4.9768C13.44 4.75139 14.2664 4.81332 14.9062 5.84995C15.5436 7.06251 14.9732 7.89404 14.3305 8.39692C14.0127 8.64567 14.0127 9.35423 14.3305 9.60298C14.9732 10.1059 15.5436 10.9374 14.9062 12.15C14.2664 13.1866 13.44 13.2485 12.7439 13.0231C12.3288 12.8887 11.5232 13.3702 11.4461 13.7997C11.3094 14.5615 10.8229 15.3 9.45027 15.3C8.07764 15.3 7.59113 14.5615 7.45445 13.7997C7.37739 13.3702 6.57173 12.8887 6.15661 13.0231C5.46051 13.2485 4.63413 13.1866 3.9943 12.15C3.43914 11.0938 3.80033 10.3267 4.3274 9.81406C4.63615 9.51378 4.58006 8.6147 4.24582 8.34307C3.66098 7.86778 3.27109 7.08635 3.9943 5.84995C4.60083 4.81304 5.34665 4.66962 5.99916 4.84226C6.43294 4.95703 7.38306 4.42388 7.50147 3.99108C7.68815 3.30876 8.20392 2.69995 9.45027 2.69995Z" stroke="currentColor" stroke-width="1.2"></path>
+                                                <circle cx="9.4525" cy="8.99998" r="1.29" stroke="currentColor" stroke-width="1.2"></circle>
+                                                </svg>
+                                                
+                                                Settings   
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <button class="mt-3 w-full bg-[#191919] rounded-lg py-2 px-3 flex justify-center gap-1.5 text-sm font-medium text-white transition-all duration-500 hover:bg-[#2d2d2d]">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 15H13.5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M9 3V12M9 12L11.625 9.375M9 12L6.375 9.375" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        
+                                        Log Out
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-limegreen py-2 px-3 rounded-lg flex items-center transition-all duration-500 hover:bg-[#a8d609] text-sm font-medium leading-5 text-black">
+                        Generate
+                    </button>
+                    <button class="bg-transparent border border-white/20 py-2 px-3 rounded-lg flex items-center transition-all duration-500 hover:bg-white/10 text-sm font-medium leading-5 text-white whitespace-nowrap">
+                       Sign In
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!--SideBar-->
+        <div class="relative flex h-full gap-5 overflow-hidden p-5 pb-0 pr-0 pt-0">
+        <aside
+            class="fixed  left-3 top-[85px] xl:w-[370px] lg:w-[280px] w-[250px] h-[calc(100vh-100px)] overflow-y-auto scrollbar-hide z-50 flex justify-between flex-col bg-black-1B1B1B nav-list rounded-xl p-3.5 border border-white/20">
+            <div class="flex flex-col pb-8">
+               
+                <ul class="flex flex-col gap-5 ">
+                    <li class="">
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center justify-between relative">
+                                <label for="user-input" class=" xl:text-sm text-xs text-white font-normal">Prompt
+                                </label>
+                            </div>
+                            <div class=" relative z-[2] rounded-xl transition-all duration-500 ">
+                                    <textarea name="prompt" id="user-input" class="border border-white/10 hover:border-limegreen transition-all duration-500 outline-none bg-black-0a0a0a w-full h-36 resize-none pt-3 px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-xl" placeholder="Describe your image here..."></textarea>
+                                    <p id="character-count-paragraph" class="absolute bottom-4 right-4 text-xs  text-[#4D4D4D] text-right  bg-black-0a0a0a">
+                                        0/50
+                                    </p>                               
+                            </div>
+                            <div class="-mt-[25px] rounded-b-xl bg-white/5 pt-5 pb-0 xl:px-3.5 px-2  flex items-center justify-center xl:gap-7 lg:gap-2">
+                                <button class=" flex pt-1.5 pb-4 items-start gap-1.5 text-xs text-white transition-all duration-500 hover:text-[#c6ff00] " data-modal-target="modal1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M6.66667 5.33334C6.66667 6.06972 6.06971 6.66668 5.33333 6.66668C4.59695 6.66668 4 6.06972 4 5.33334C4 4.59696 4.59695 4.00001 5.33333 4.00001C6.06971 4.00001 6.66667 4.59696 6.66667 5.33334Z" stroke="#c6ff00" stroke-width="1.4"></path>
+                                        <rect x="1.33334" y="1.33334" width="13.3333" height="13.3333" rx="3" stroke="#c6ff00" stroke-width="1.4"></rect>
+                                        <path d="M1.33334 9.66667L3.39312 10.7592C4.40981 11.2984 5.64538 11.2085 6.57331 10.5278L7.93845 9.52632C9.1347 8.64876 10.7928 8.7774 11.8393 9.82898L14 12" stroke="#c6ff00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>Image to Prompt
+                                </button>
+
+
+                                <p class="w-px h-7 bg-[#424242] pb-2.5 -mt-1.5"></p>
+                                <button class="flex pt-1.5 pb-4 items-center gap-1.5 text-xs text-white  transition-all duration-500 hover:text-[#c6ff00] ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M7.34666 13H4.99999C4.58666 13 4.21999 12.9867 3.89332 12.94C2.13999 12.7467 1.66666 11.92 1.66666 9.66667V6.33333C1.66666 4.08 2.13999 3.25333 3.89332 3.06C4.21999 3.01333 4.58666 3 4.99999 3H7.30666" stroke="#c6ff00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M10.0133 3H11C11.4133 3 11.78 3.01333 12.1067 3.06C13.86 3.25333 14.3333 4.08 14.3333 6.33333V9.66667C14.3333 11.92 13.86 12.7467 12.1067 12.94C11.78 12.9867 11.4133 13 11 13H10.0133" stroke="#c6ff00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M10 1.33334V14.6667" stroke="#c6ff00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M5.33334 5.66666V10.3333" stroke="#c6ff00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>Surprise Me
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                   
+                    <li class="pb-4 border-b border-white/10">
+                        <div class="relative flex flex-col gap-3.5">
+                            <div class="flex flex-col gap-3.5">
+                                <div class="flex flex-col gap-2">
+                                    <label class="xl:text-sm text-xs text-white font-normal">Modes</label>
+                                    <button class="dropdown-btn flex justify-between items-center py-2.5 px-4 rounded-xl bg-black-0a0a0a border border-white/10">
+                                        <div class="flex items-center gap-2.5 flex-1">
+                                            <div class="relative size-5 shrink-0 overflow-hidden rounded ">
+                                                <img src="assets/images/small-img.png" alt="image"/>
+                                            </div>
+                                            <span class="text-sm text-white leading-8">Flux</span>
+                                        </div>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.42188 16.5984L12.8552 11.1651C13.4969 10.5234 13.4969 9.47344 12.8552 8.83177L7.42188 3.39844" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3.5">
+                                <div class="flex flex-col gap-2">
+                                    <label class="xl:text-sm text-xs text-white font-normal">Styles</label>
+                                    <button class="dropdown-btn flex justify-between items-center py-2.5 px-4 rounded-xl bg-black-0a0a0a border border-white/10">
+                                        <div class="flex items-center gap-2.5 flex-1">
+                                            <div class="relative size-5 shrink-0 overflow-hidden rounded ">
+                                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.16927 4.1237V16.4987C9.16927 17.4887 8.76592 18.3962 8.12426 19.0562L8.08761 19.0929C8.00511 19.1754 7.91345 19.2579 7.83095 19.322C7.55595 19.5604 7.24426 19.7437 6.92343 19.872C6.82259 19.9179 6.72177 19.9545 6.62094 19.9912C6.26344 20.1104 5.87844 20.1654 5.5026 20.1654C5.2551 20.1654 5.00762 20.1379 4.76928 20.092C4.65012 20.0645 4.53094 20.037 4.41177 20.0004C4.2651 19.9545 4.12761 19.9087 3.99011 19.8445C3.99011 19.8354 3.9901 19.8354 3.98093 19.8445C3.72427 19.7162 3.47678 19.5695 3.24761 19.3954L3.23844 19.3862C3.11927 19.2945 3.00928 19.2029 2.90845 19.0929C2.80762 18.9829 2.70677 18.8729 2.60593 18.7537C2.43177 18.5245 2.28511 18.277 2.15678 18.0204C2.16594 18.0112 2.16594 18.0112 2.15678 18.0112C2.15678 18.0112 2.15677 18.002 2.1476 17.9929C2.0926 17.8645 2.04676 17.727 2.00093 17.5895C1.96426 17.4704 1.93676 17.3512 1.90926 17.232C1.86343 16.9937 1.83594 16.7462 1.83594 16.4987V4.1237C1.83594 2.7487 2.7526 1.83203 4.1276 1.83203H6.8776C8.2526 1.83203 9.16927 2.7487 9.16927 4.1237Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M20.1667 15.1237V17.8737C20.1667 19.2487 19.25 20.1654 17.875 20.1654H5.5C5.87583 20.1654 6.26083 20.1104 6.61833 19.9912C6.71917 19.9545 6.81999 19.9179 6.92082 19.872C7.24166 19.7437 7.55334 19.5604 7.82834 19.322C7.91084 19.2579 8.00251 19.1754 8.08501 19.0929L8.12165 19.0562L14.355 12.832H17.875C19.25 12.832 20.1667 13.7487 20.1667 15.1237Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M4.41084 20.0007C3.86084 19.8357 3.33835 19.5332 2.90752 19.0932C2.46752 18.6623 2.165 18.1398 2 17.5898C2.3575 18.7357 3.265 19.6432 4.41084 20.0007Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M16.8425 10.3507L14.3583 12.8348L8.125 19.059C8.76667 18.399 9.17001 17.4915 9.17001 16.5015V7.6465L11.6542 5.16234C12.6258 4.19068 13.9275 4.19068 14.8992 5.16234L16.8425 7.10567C17.8142 8.07734 17.8142 9.379 16.8425 10.3507Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M5.5026 17.4154C6.00887 17.4154 6.41927 17.005 6.41927 16.4987C6.41927 15.9924 6.00887 15.582 5.5026 15.582C4.99634 15.582 4.58594 15.9924 4.58594 16.4987C4.58594 17.005 4.99634 17.4154 5.5026 17.4154Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    
+                                            </div>
+                                            <span class="text-sm text-white leading-8">Styles</span>
+                                        </div>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.42188 16.5984L12.8552 11.1651C13.4969 10.5234 13.4969 9.47344 12.8552 8.83177L7.42188 3.39844" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-1/2">
+                                    <div class="flex flex-col gap-3.5">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="xl:text-sm text-xs text-white font-normal">Number of Images</label>
+                                            <div class="flex justify-between items-center py-2.5 px-4 rounded-xl bg-black-0a0a0a border border-white/10">
+                                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.9231 2.675L17.3315 5.07667C18.8898 5.76417 18.8898 6.90083 17.3315 7.58833L11.9231 9.99C11.309 10.265 10.3006 10.265 9.68646 9.99L4.27813 7.58833C2.71979 6.90083 2.71979 5.76417 4.27813 5.07667L9.68646 2.675C10.3006 2.4 11.309 2.4 11.9231 2.675Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M2.75 10.082C2.75 10.852 3.3275 11.7412 4.03333 12.0529L10.2575 14.8212C10.7342 15.032 11.275 15.032 11.7425 14.8212L17.9667 12.0529C18.6725 11.7412 19.25 10.852 19.25 10.082" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M2.75 14.668C2.75 15.5205 3.25417 16.2905 4.03333 16.6388L10.2575 19.4071C10.7342 19.618 11.275 19.618 11.7425 19.4071L17.9667 16.6388C18.7458 16.2905 19.25 15.5205 19.25 14.668" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    <div class="flex items-center w-auto gap-2">
+                                                        <button class="transition-all duration-500 text-white/40 hover:text-white minus">
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M15.8283 10H4.16406" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </svg>
+                                                                
+                                                        </button>
+                                                        <input type="text" class="text-center text-xs text-white lg:w-6 w-6 text bg-transparent focus:outline-none outline-none" value="1"/>
+                                                        <button class="transition-all duration-500 text-white/40 hover:text-white plus">
+                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g >
+                                                                <path d="M9.9974 4.16797V15.8346M15.8307 10.0013H4.16406" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"/>
+                                                                </g>
+                                                                </svg>
+                                                                
+                                                        </button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-1/2">
+                                    <div class="flex flex-col gap-3.5">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="xl:text-sm text-xs text-white font-normal">Aspect Ratio</label>
+                                            <button class="dropdown-btn  flex justify-between items-center py-2.5 px-4 rounded-xl bg-black-0a0a0a border border-white/10">
+                                                <div class="flex items-center gap-2.5 flex-1">
+                                                    <div class="relative  shrink-0 overflow-hidden rounded ">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect x="1" y="1" width="22" height="22" rx="4" stroke="white"/>
+                                                            </svg>
+                                                            
+                                                    </div>
+                                                    <span class="text-sm text-white ">1:1</span>
+                                                </div>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.42188 16.5984L12.8552 11.1651C13.4969 10.5234 13.4969 9.47344 12.8552 8.83177L7.42188 3.39844" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    
+                                                </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                   
+                   <button class="py-2.5 px-4 rounded-xl flex justify-center items-center gap-2 text-lg text-black font-semibold bg-[linear-gradient(180deg,#E6FF8D_0%,#C6FF00_100%)] shadow-[0px_0px_10px_3px_rgba(198,255,0,0.16)] hover:shadow-none transition-all duration-500">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2315_3680)">
+                        <path d="M6 9H9M9 9H12M9 9V6M9 9V12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_2315_3680">
+                        <rect width="18" height="18" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        Generate
+                   </button>
+                </ul>
+
+            </div>
+            
+        </aside>
+    </div>
+        <div class="xl:w-[calc(100%-380px)] lg:w-[calc(100%-290px)] md:w-[calc(100%-260px)] w-full ml-auto relative h-screen overflow-y-auto pt-[90px] px-4">
+            <!--Main Content Page-->
+            <div class="w-full h-full relative">
+                    <div class="flex items-center gap-2.5 mb-5">
+                        <div class="relative ">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M12.75 12.75L15.75 15.75" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25C9.90975 14.25 11.4121 13.5761 12.4983 12.487C13.5808 11.4016 14.25 9.90397 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                            </div>
+                            <input type="text" id="default-search" class="block w-[330px] pr-3.5 pl-10 py-3 text-sm leading-[18px] font-normal text-white bg-transparent border border-white/20 rounded-lg placeholder-white/80 transition-all duration-500 hover:border-white/50 outline-none focus-within:outline-offset-0 focus-within:outline focus-within:!outline-0 focus-within:outline-none " placeholder="Search by prompt">
+                        </div>
+                            <button class="w-[42px] h-[42px] flex items-center justify-between   rounded-lg border border-white/20 font-medium text-base text-white  bg-transparent p-3 transition-all duration-500 hover:border-white/50 outline-none focus-within:outline-offset-0 focus-within:outline focus-within:!outline-1 focus-within:outline-none focus-within:border-transparent">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 2.25H15.0001C15.4143 2.25 15.7501 2.58573 15.7501 2.9999L15.7502 4.18927C15.7503 4.38823 15.6712 4.57904 15.5305 4.71971L10.7197 9.53032C10.579 9.67095 10.5 9.86175 10.5 10.0606V14.7894C10.5 15.2774 10.0414 15.6354 9.56812 15.517L8.06812 15.142C7.73422 15.0586 7.5 14.7586 7.5 14.4144V10.0606C7.5 9.86175 7.42098 9.67095 7.28033 9.53032L2.46967 4.71967C2.32901 4.57902 2.25 4.38825 2.25 4.18934V3C2.25 2.58579 2.58578 2.25 3 2.25Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </button>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <div class="relative">
+                        <div class="flex md:flex-row flex-col gap-4 justify-between items-center mb-5">
+                            <h4 class="text-base text-white font-medium">Fruits</h4>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="bg-black-1B1B1B rounded-md py-2 px-2.5 border border-white/20 text-sm text-white">1.1</span>
+                                    <span class="bg-black-1B1B1B rounded-md py-2 px-2.5 border border-white/20 text-sm text-white">Flux</span>
+                                    <span class="bg-black-1B1B1B rounded-md py-2 px-2.5 border border-white/20 text-sm text-white">Custom prompt</span>
+                                </div>
+                                <div class="text-sm text-white font-medium">Today</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-5 mb-5">
+                            <div class="border border-white/20 bg-black-1B1B1B rounded-2xl p-2">
+                                <div class="grid grid-cols-4 gap-2.5">
+                                    <div class="relative">
+                                        <img src="assets/images/grid-img1.png" alt="image" class="w-full h-full rounded-lg"/>
+                                    </div>
+                                    <div class="relative">
+                                        <img src="assets/images/grid-img2.png" alt="image" class="w-full h-full rounded-lg"/>
+                                    </div>
+                                    <div class="relative">
+                                        <img src="assets/images/grid-img3.png" alt="image" class="w-full h-full rounded-lg"/>
+                                    </div>
+                                    <div class="relative">
+                                        <img src="assets/images/grid-img4.png" alt="image" class="w-full h-full rounded-lg"/>
+                                    </div>
+                                    <div class="relative">
+                                        <img src="assets/images/grid-img5.png" alt="image" class="w-full h-full rounded-lg"/>
+                                    </div>
+                                    <div class="relative">
+                                        <img src="assets/images/grid-img6.png" alt="image" class="w-full h-full rounded-lg"/>
+                                    </div>
+                                    <div class="relative">
+                                        <img src="assets/images/grid-img7.png" alt="image" class="w-full h-full rounded-lg"/>
+                                    </div>
+                                    <div class="relative">
+                                        <img src="assets/images/grid-img8.png" alt="image" class="w-full h-full rounded-lg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center">
+                            <button class="py-2.5 px-3 border border-white/20 rounded-lg flex items-center gap-1.5 text-sm text-white font-medium transition-all duration-500 hover:bg-white/5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 3.75V14.25M14.25 9H3.75" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                    Generate More                                
+                            </button>
+                        </div>
+                        </div>
+                        
+                        </div> 
+                        <div class="relative">
+                            <div class="flex md:flex-row flex-col gap-4 justify-between items-center mb-5">
+                                <h4 class="text-base text-white font-medium">Fruits</h4>
+                                <div class="flex items-center gap-4">
+                                    <div class="flex items-center gap-3">
+                                        <span class="bg-black-1B1B1B rounded-md py-2 px-2.5 border border-white/20 text-sm text-white">1.1</span>
+                                        <span class="bg-black-1B1B1B rounded-md py-2 px-2.5 border border-white/20 text-sm text-white">Flux</span>
+                                        <span class="bg-black-1B1B1B rounded-md py-2 px-2.5 border border-white/20 text-sm text-white">Custom prompt</span>
+                                    </div>
+                                    <div class="text-sm text-white font-medium">Today</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-5 mb-5">
+                                <div class="border border-white/20 bg-black-1B1B1B rounded-2xl p-2">
+                                    <div class="grid grid-cols-4 gap-2.5">
+                                        <div class="relative">
+                                            <img src="assets/images/grid-img1.png" alt="image" class="w-full h-full rounded-lg"/>
+                                        </div>
+                                        <div class="relative">
+                                            <img src="assets/images/grid-img2.png" alt="image" class="w-full h-full rounded-lg"/>
+                                        </div>
+                                        <div class="relative">
+                                            <img src="assets/images/grid-img3.png" alt="image" class="w-full h-full rounded-lg"/>
+                                        </div>
+                                        <div class="relative">
+                                            <img src="assets/images/grid-img4.png" alt="image" class="w-full h-full rounded-lg"/>
+                                        </div>
+                                        <div class="relative">
+                                            <img src="assets/images/grid-img5.png" alt="image" class="w-full h-full rounded-lg"/>
+                                        </div>
+                                        <div class="relative">
+                                            <img src="assets/images/grid-img6.png" alt="image" class="w-full h-full rounded-lg"/>
+                                        </div>
+                                        <div class="relative">
+                                            <img src="assets/images/grid-img7.png" alt="image" class="w-full h-full rounded-lg"/>
+                                        </div>
+                                        <div class="relative">
+                                            <img src="assets/images/grid-img8.png" alt="image" class="w-full h-full rounded-lg"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center">
+                                <button class="py-2.5 px-3 border border-white/20 rounded-lg flex items-center gap-1.5 text-sm text-white font-medium transition-all duration-500 hover:bg-white/5">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 3.75V14.25M14.25 9H3.75" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                        </svg>
+                                        Generate More                                
+                                </button>
+                            </div>
+                            </div>
+                            
+                            </div>  
+                    </div>
+            </div>
+        </div>
+       
+    </div>
+   <!--model dropdown-->
+    <div 
+class="dropdown-menu  absolute left-[400px] top-[40%] z-50 mt-2 w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+<div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+    <span class="text-sm font-medium text-white">Models</span>
+    <button class="close-dropdown text-gray-500 hover:text-red-500">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+            <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+        </svg>
+    </button>
+</div>
+<ul class="p-3 pb-[15px] flex flex-col gap-[15px]">
+    <li class="relative">
+        <button class="submenu-btn w-full flex items-center justify-between cursor-pointer">
+            <div class="flex items-center gap-2">
+                <img src="assets/images/mystic.png" alt="">
+                <div class="text-left">
+                    <p class="text-xs font-medium text-white mb-1">Mystic</p>
+                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">High-detail
+                        at 2k resolution</p>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M5.9375 13.2788L10.2842 8.93208C10.7975 8.41875 10.7975 7.57875 10.2842 7.06542L5.9375 2.71875"
+                    stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <!-- mystic submenu  -->
+        <div
+            class="submenu absolute left-120 top-0 mt-2 w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+            <div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+                <span class="text-sm font-medium text-white">Mystic</span>
+                <button class="close-submenu text-gray-500 hover:text-red-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                        fill="none">
+                        <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+                        <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="p-3 pb-[15px] flex flex-col gap-[15px]">
+                <li class="relative">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/1mystic1.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Mystic 2.5</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Versatile with strong prompt adherence.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/1mystic2.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Mystic 2.5 Flexible</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Unmatched quality, top adherence.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/1mystic3.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Mystic 1.0</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Very good quality and textures.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li class="flex items-center justify-between cursor-pointer">
+        <div class="flex items-center gap-2">
+            <img src="assets/images/mystic2.png" alt="">
+            <div class="">
+                <p class="text-xs font-medium text-white mb-1">Goggle Imagen 3</p>
+                <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">High quality
+                    image generation</p>
+            </div>
+        </div>
+
+    </li>
+    <!-- Submenu 1 -->
+    <li class="relative">
+        <button class="submenu-btn w-full text-left  cursor-pointer flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="assets/images/mystic3.png" alt="">
+                <div class="">
+                    <p class="text-xs font-medium text-white mb-1">Flux</p>
+                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Many styles
+                        with text support</p>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M5.9375 13.2788L10.2842 8.93208C10.7975 8.41875 10.7975 7.57875 10.2842 7.06542L5.9375 2.71875"
+                    stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <!-- flux submenu  -->
+        <div
+            class="submenu absolute left-120 top-0 mt-2 w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+            <div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+                <span class="text-sm font-medium text-white">Flux</span>
+                <button class="close-submenu text-gray-500 hover:text-red-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                        fill="none">
+                        <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+                        <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="p-3 pb-[15px] flex flex-col gap-[15px]">
+                <li class="relative">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/2mystic1.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Flux 1.0</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Versatile with strong prompt & tailoring</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/2mystic2.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Flux 1.0 Fast</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Balances prompt adherence with agility</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/2mystic3.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Flux 1.0 Realism</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Best at ultra-realistic images</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/2mystic4.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Flux 1.1</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Pure precision</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </li>
+
+    <!-- Submenu 2 -->
+    <li class="relative">
+        <button class="submenu-btn w-full text-left cursor-pointer flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="assets/images/mystic4.png" alt="">
+                <div class="">
+                    <p class="text-xs font-medium text-white mb-1">Classic</p>
+                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Fast with
+                        infinite variations</p>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M5.9375 13.2788L10.2842 8.93208C10.7975 8.41875 10.7975 7.57875 10.2842 7.06542L5.9375 2.71875"
+                    stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <!-- classic submenu  -->
+        <div
+            class="submenu absolute left-120 top-0 mt-2 w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+            <div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+                <span class="text-sm font-medium text-white">Classic</span>
+                <button class="close-submenu text-gray-500 hover:text-red-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                        fill="none">
+                        <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+                        <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="p-3 pb-[15px] flex flex-col gap-[15px]">
+                <li class="relative">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/3mystic-1.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Classic Fast</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Faster with enhanced personalization.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/3mystic-2.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Classic</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Our legacy high quality model.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/1mystic3.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Mystic 1.0</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Very good quality and textures.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </li>
+</ul>
+</div>
+<!--style dropdown-->
+<div 
+class="dropdown-menu  absolute left-[395px]  top-[15%] z-50 mt-2 2xl:w-[75%] xl:w-[68%] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+<div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+    <span class="text-sm font-medium text-white">Styles (Loras)</span>
+    <button class="close-dropdown text-gray-500 hover:text-red-500">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+            <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+        </svg>
+    </button>
+</div>
+<div class="flex lg:flex-row flex-col">
+    <div class="w-3/5 border-r border-white/10 px-5 pt-5">
+        <div class="relative mb-5 ml-auto w-max">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M12.75 12.75L15.75 15.75" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25C9.90975 14.25 11.4121 13.5761 12.4983 12.487C13.5808 11.4016 14.25 9.90397 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+            </div>
+            <input type="text" id="drop-default-search" class="block w-[330px] pr-3.5 pl-10 py-3 text-sm leading-[18px] font-normal text-white bg-transparent border border-white/20 rounded-lg placeholder-white/80 transition-all duration-500 hover:border-white/50 outline-none focus-within:outline-offset-0 focus-within:outline focus-within:!outline-0 focus-within:outline-none " placeholder="Search by prompt">
+        </div>
+        <div class="overflow-y-auto h-full max-h-[560px] modal-style-list pr-2">
+            <ul class="grid 2xl:grid-cols-6 xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-5">
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img1.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Flux
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img2.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Flux Dev
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img3.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Realistic
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img4.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Anime
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img5.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        PNG
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img6.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Pencil Sketch
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img7.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Casting Shadows
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img8.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Chibi Character
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img9.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Concept Art
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img10.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Cyberpunk Anime
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img11.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Illustration Style
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img12.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Dark Fantasy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img13.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Japanese Poster
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img14.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Midjourney Style
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img15.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Vector Art
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img16.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Neon Cyperpunk
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img17.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Pixel Art
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img18.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Mythic Fantasy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img19.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Mythic Fantasy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img20.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Mythic Fantasy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img21.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Mythic Fantasy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img22.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Mythic Fantasy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img23.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Mythic Fantasy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                        <img src="assets/images/style/style-img24.png" alt="image" class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg"/>
+                        Mythic Fantasy
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="w-2/5 py-5 px-8">
+        <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-4">
+                <div class="relative">
+                    <img src="assets/images/style/style-img-big.png" alt="image"/>
+                </div>
+                <div class="block">
+                    <h6 class="mb-1.5 text-sm text-white ">Flux</h6>
+                    <p class="text-sm text-white/60 font-light">Fast-paced, dynamic rendering</p>
+                </div>
+            </div>
+            <div class="block">
+                <h5 class="text-lg font-medium text-white mb-4">Sample Results</h5>
+                <ul class="flex gap-1.5 items-center">
+                    <li><a href="#" class="w-[70px] h-[70px] block rounded-lg"><img src="assets/images/style/style-img1.png" class="w-full h-full rounded-lg"/></a></li>
+                    <li><a href="#" class="w-[70px] h-[70px] block rounded-lg"><img src="assets/images/style/style-img2.png" class="w-full h-full rounded-lg"/></a></li>
+                    <li><a href="#" class="w-[70px] h-[70px] block rounded-lg"><img src="assets/images/style/style-img3.png" class="w-full h-full rounded-lg"/></a></li>
+                    <li><a href="#" class="w-[70px] h-[70px] block rounded-lg"><img src="assets/images/style/style-img4.png" class="w-full h-full rounded-lg"/></a></li>
+                    <li><a href="#" class="w-[70px] h-[70px] block rounded-lg"><img src="assets/images/style/style-img5.png" class="w-full h-full rounded-lg"/></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--aspect ratio dropdown-->
+<div 
+class="dropdown-menu  absolute left-[400px] top-[50%] z-50 mt-2 w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+<div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+    <span class="text-sm font-medium text-white">Aspect Ratio</span>
+    <button class="close-dropdown text-gray-500 hover:text-red-500">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+            <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+        </svg>
+    </button>
+</div>
+    <div class="p-3 pb-[15px] flex flex-wrap gap-x-1.5 gap-y-4 aspect-ratio">
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="20" height="20" rx="2" stroke="white"/>
+                    </svg>            
+            </div>
+            <span class="text-xs text-white">1:1</span>
+        </button>
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="12" height="20" rx="2" stroke="white"/>
+                    </svg>
+                            
+            </div>
+            <span class="text-xs text-white">9:16</span>
+        </button>
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="20" height="12" rx="2" stroke="white"/>
+                    </svg>
+                          
+            </div>
+            <span class="text-xs text-white">16:9</span>
+        </button>
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="20" height="16" rx="4" stroke="white"/>
+                    </svg>                          
+            </div>
+            <span class="text-xs text-white">4:3</span>
+        </button>
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="16" height="20" rx="2" stroke="white"/>
+                    </svg>
+                                             
+            </div>
+            <span class="text-xs text-white">3:4</span>
+        </button>
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="20" height="14" rx="2" stroke="white"/>
+                    </svg>
+                                       
+            </div>
+            <span class="text-xs text-white">3:2</span>
+        </button>
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="14" height="20" rx="2" stroke="white"/>
+                    </svg>
+                                    
+            </div>
+            <span class="text-xs text-white">2:3</span>
+        </button>
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="14" height="20" rx="4" stroke="white"/>
+                    </svg>
+                                  
+            </div>
+            <span class="text-xs text-white">4:5</span>
+        </button>
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="14" height="20" rx="4" stroke="white"/>
+                    </svg>
+                                  
+            </div>
+            <span class="text-xs text-white">4:5</span>
+        </button>
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="20" height="14" rx="2" stroke="white"/>
+                    </svg>
+                                
+            </div>
+            <span class="text-xs text-white">5:4</span>
+        </button>
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="10" height="20" rx="2" stroke="white"/>
+                    </svg>
+                                  
+            </div>
+            <span class="text-xs text-white">5:12</span>
+        </button>
+        <button class="group flex flex-col justify-center items-center gap-2">
+            <div class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="20" height="10" rx="2" stroke="white"/>
+                    </svg>
+                             
+            </div>
+            <span class="text-xs text-white">12:5</span>
+        </button>
+    </div>
+</div>
+
+    <div class="modal modalTrigger bg-[#131313] border border-[#3C3C3C] max-h-max rounded-lg p-4" id="modal1">
+        <div class="modal-content">
+            <div class="flex justify-between items-center pb-4 mb-4 border-b border-[#3C3C3C]">
+                <h5 class="flex items-center gap-1.5 text-[#c6ff00] text-xs font-medium leading-4"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66667 5.33334C6.66667 6.06972 6.06971 6.66668 5.33333 6.66668C4.59695 6.66668 4 6.06972 4 5.33334C4 4.59696 4.59695 4.00001 5.33333 4.00001C6.06971 4.00001 6.66667 4.59696 6.66667 5.33334Z" stroke="#c6ff00" stroke-width="1.4"></path>
+                        <rect x="1.33325" y="1.33334" width="13.3333" height="13.3333" rx="3" stroke="#c6ff00" stroke-width="1.4"></rect>
+                        <path d="M1.33325 9.66667L3.39303 10.7592C4.40972 11.2984 5.64529 11.2085 6.57322 10.5278L7.93836 9.52632C9.13461 8.64876 10.7927 8.7774 11.8392 9.82898L13.9999 12" stroke="#c6ff00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    Image to Prompt</h5>
+                <span class="modal-close cursor-pointer text-white transition-all duration-300 hover:text-[#c6ff00]">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_12246_889)">
+                            <path d="M12.2 3.80667C11.94 3.54667 11.52 3.54667 11.26 3.80667L7.99998 7.06L4.73998 3.8C4.47998 3.54 4.05998 3.54 3.79998 3.8C3.53998 4.06 3.53998 4.48 3.79998 4.74L7.05998 8L3.79998 11.26C3.53998 11.52 3.53998 11.94 3.79998 12.2C4.05998 12.46 4.47998 12.46 4.73998 12.2L7.99998 8.94L11.26 12.2C11.52 12.46 11.94 12.46 12.2 12.2C12.46 11.94 12.46 11.52 12.2 11.26L8.93998 8L12.2 4.74C12.4533 4.48667 12.4533 4.06 12.2 3.80667Z" fill="currentColor"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_12246_889">
+                                <rect width="16" height="16" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </span>
+            </div>
+            <div class="w-full py-9 bg-black-0a0a0a rounded-xl h-[330px] flex justify-center">
+                <div class="flex justify-center items-center text-center flex-col">
+                    <div class="mb-2.5 mx-auto text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+                            <path d="M21.9999 40.3333V23.8333M21.9999 23.8333L28.4166 30.25M21.9999 23.8333L15.5833 30.25" stroke="#c6ff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M36.6666 32.2801C39.405 31.2072 42.1666 28.763 42.1666 23.8333C42.1666 16.5 36.0555 14.6667 32.9999 14.6667C32.9999 11 32.9999 3.66667 21.9999 3.66667C10.9999 3.66667 10.9999 11 10.9999 14.6667C7.94436 14.6667 1.83325 16.5 1.83325 23.8333C1.83325 28.763 4.59477 31.2072 7.33325 32.2801" stroke="#c6ff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-center text-white font-medium  text-sm leading-4 mb-1">Drag and drop image here or
+                        click to upload</h2>
+                    <p class="text-xs font-normal leading-5 text-[#B1B1B1] max-w-xs mx-auto">Compatible image format:
+                        .png / .jpg / .jpeg /
+
+                        .webp,
+                        Maximum file size: 20MB</p>
+                    <div class="flex items-center justify-center">
+                        <label>
+                            <input type="file" hidden="">
+                            <div class="mt-2 flex w-28 h-9 px-2 flex-col bg-[#c6ff00] rounded-lg shadow text-black text-xs font-semibold leading-4 items-center justify-center cursor-pointer focus:outline-none">
+                                Choose File</div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- MAIN JS-->
+    <script src="assets/js/main.js"></script>   
+</body>
+</html>
