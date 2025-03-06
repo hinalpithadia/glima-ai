@@ -99,7 +99,7 @@
     }
     .modal {
       position: fixed;
-      left: 29.5%;
+      left: 28.5%;
       top: 50%;
       transform: translate(-50%, -50%);
       width: 100%;
@@ -110,6 +110,100 @@
       z-index: 1000;
       overflow: auto;
       max-width: max-content;
+    }
+    .modal-home{
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 475px;
+      height: 100%;
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      overflow: auto;
+    }
+    .modal-pricing{ 
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 1170px;
+      height: 100%;
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      overflow: auto;
+    }
+    .overlay-modal{
+      position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    input:checked ~ .toggle-labels .monthly {
+      color: white;
+  }
+
+  input:checked ~ .toggle-labels .yearly {
+      color: #000;
+      font-weight: 600;
+  }
+
+  input:not(:checked) ~ .toggle-labels .monthly {
+      color: #000;
+      font-weight: 600;
+  }
+
+  input:not(:checked) ~ .toggle-labels .yearly {
+      color: white;
+  }
+    .toggle-container input:checked ~ .toggle-slider {
+      transform: translateX(110%);
+    }
+    
+    .rangeslider{
+    background: rgba(255, 255, 255, 0.2)!important;
+    position: relative!important;
+    border-radius: 100px!important;
+    box-shadow: none!important;
+    width: 100%!important;
+    height: 10px!important;
+    max-width: 300px!important;
+    margin: auto;
+   }
+   .rangeslider__fill {
+      background: #C6FF00!important;
+  }
+  .rangeslider--horizontal .rangeslider__handle{
+    top: -4px!important;
+  }
+  .rangeslider__handle{
+    width: 18px!important;
+    height: 18px!important;
+    background: #C6FF00!important;
+  }
+
+    .rangeslider__handle:after{
+      width: 12px!important;
+      height:12px !important;
+      background: #000!important;
     }
     .dropdown-enter {
       opacity: 0;
@@ -179,5 +273,36 @@
         overflow: hidden;
         transition: max-height 0.5s ease-in-out;
       }
-      
+      .pricing-list::-webkit-scrollbar-track
+      {
+        border-radius: 100px;
+        background-color: transparent;
+      }
+
+      .pricing-list::-webkit-scrollbar
+      {
+        width: 6px;
+        background-color: transparent;
+      }
+
+      .pricing-list::-webkit-scrollbar-thumb
+      {
+        border-radius: 100px;
+        background-color: rgba(255,255,255,0.2);
+      }
+      @media(max-width:990px){
+        .modal-pricing{
+        padding: 20px;
+      }
+      }
+      @media(max-width:767px){
+        .modal {
+          left: 49.5%;
+          top: 50%;
+        }
+        .modal-home,.modal-pricing{
+          max-width: 100%;
+          padding: 10px;
+        }
+      }
 }

@@ -1,3 +1,56 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.getElementById("toggleButton");
+  const mobileMenu = document.getElementById("navbar-default");
+  const nav = document.getElementById("navbar");
+  const inner = document.getElementById("inner");
+  toggleButton.addEventListener("click", () => {
+      const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+      toggleButton.setAttribute("aria-expanded", !isExpanded);
+
+      // Toggle multiple classes
+      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("opacity-0");  // Example of another class to toggle
+      mobileMenu.classList.toggle("transition-all"); // Smooth transition
+      inner.classList.toggle("pb-[19px]");
+      nav.classList.toggle("h-auto");
+      nav.classList.toggle("bg-black/25");
+      nav.classList.toggle("bg-transparent");
+      nav.classList.toggle("backdrop-blur-lg"); // Example of adding/removing a background color
+  });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+
+  if (!navbar) {
+      console.error("Navbar element not found! Make sure #navbar exists in the DOM.");
+      return;
+  }
+
+  function updateNavbar() {
+      console.log("Window Width:", window.innerWidth); // Debugging log
+
+      if (window.innerWidth > 1024 ) {
+          if (window.scrollY > 100) {
+              navbar.classList.add("backdrop-blur-lg", "bg-black/25");
+          } else {
+              navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
+          }
+      } else {
+          navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
+      }
+  }
+
+  window.addEventListener("scroll", updateNavbar);
+  window.addEventListener("resize", updateNavbar);
+  updateNavbar(); // Run once on page load
+});
+
+
+
+
 /*=======input character count===========*/
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -354,3 +407,68 @@ function alwaysOpenAccordion(alwaysOpenAccordionGroup) {
       });
   }
 }
+/*============images change on click==========*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  const mainImage = document.querySelector(".main-image");
+  const thumbnailsContainer = document.querySelector(".max-w-sm");
+
+  thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener("click", function () {
+          // Change main image source
+          mainImage.src = this.querySelector("img").src;
+
+          // Remove active border from all thumbnails
+          thumbnails.forEach(thumb => thumb.classList.remove("border-blue-500"));
+
+          // Add active border to clicked thumbnail
+          this.classList.add("border-blue-500");
+
+          // Scroll the active button to the center
+          this.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+      });
+  });
+
+  // Set first thumbnail as active on load
+  if (thumbnails.length > 0) {
+      thumbnails[0].classList.add("border-blue-500");
+      mainImage.src = thumbnails[0].querySelector("img").src;
+  }
+});
+
+// Select all the radio buttons in the group
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all the buttons with the aspect-square class (your radio buttons)
+  const radioButtons = document.querySelectorAll('.aspect-square');
+
+  // Iterate over each radio button and add event listeners
+  radioButtons.forEach(button => {
+      button.addEventListener('click', function() {
+          // If the clicked button is already checked, do nothing
+          if (button.getAttribute('aria-checked') === 'true') return;
+
+          // Uncheck all radio buttons and reset data-state & aria-checked
+          radioButtons.forEach(radio => {
+              radio.setAttribute('aria-checked', 'false');
+              radio.setAttribute('data-state', 'unchecked');
+          });
+
+          // Check the clicked radio button
+          button.setAttribute('aria-checked', 'true');
+          button.setAttribute('data-state', 'checked');
+      });
+  });
+});
+/*=======range slider==========*/
+  // Initialize the range slider and update the display dynamically
+  $(document).ready(function() {
+    // Initialize the range slider
+    $('#downPayment').rangeslider({
+      polyfill: false,
+      onSlide: function(position, value) {
+        // Update the display with the slider's value
+        $('#sliderValue').text(value.toLocaleString());
+      }
+    });
+  });
