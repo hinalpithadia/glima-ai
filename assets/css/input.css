@@ -47,6 +47,12 @@
     [data-tab].active.tab-active\:text-black{ 
         @apply  text-black;
     }
+    .group.active .group-active\:border-limegreen{ 
+      @apply border-limegreen ;
+  }
+  .group.active .group-active\:border-limegreen:hover{ 
+    @apply border-limegreen ;
+}
     .header-links {
         @apply flex items-center pt-2 gap-3 text-sm leading-[18px] font-normal text-gray-B1B1B1 pb-[10px] border-b border-transparent transition-all duration-500 hover:text-white hover:border-limegreen;
     }
@@ -210,6 +216,13 @@
       height:12px !important;
       background: #000!important;
     }
+    #drop-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+      z-index: 50; /* Makes sure overlay is above other elements */
+    }
+    
     .dropdown-enter {
       opacity: 0;
       transform: translateY(-10px);
@@ -326,6 +339,7 @@
     .slider-bottom .slick-slide {
       transform: rotate(-180deg);
     }
+   
     @media(max-width:1024px){
       .slick-dupe {
         min-height: auto!important;

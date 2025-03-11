@@ -625,6 +625,16 @@ body ::-webkit-scrollbar-thumb
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
+.group.active .group-active\:border-limegreen {
+  --tw-border-opacity: 1;
+  border-color: rgb(198 255 0 / var(--tw-border-opacity, 1));
+}
+
+.group.active .group-active\:border-limegreen:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(198 255 0 / var(--tw-border-opacity, 1));
+}
+
 .header-links {
   display: flex;
   align-items: center;
@@ -801,6 +811,15 @@ input:not(:checked) ~ .toggle-labels .yearly {
   margin: auto;
 }
 
+#drop-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* semi-transparent black */
+  z-index: 50;
+  /* Makes sure overlay is above other elements */
+}
+
 .aspect-ratio button.active .group-active\:border-white{
   background: #000;
   border:1px solid white;
@@ -957,6 +976,14 @@ input:not(:checked) ~ .toggle-labels .yearly {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
+.inset-0 {
+  inset: 0px;
+}
+
 .inset-y-0 {
   top: 0px;
   bottom: 0px;
@@ -988,6 +1015,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .-top-8 {
   top: -2rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .bottom-4 {
@@ -1164,6 +1195,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .z-\[500\] {
   z-index: 500;
+}
+
+.z-\[100\] {
+  z-index: 100;
 }
 
 .col-span-12 {
@@ -1892,6 +1927,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   gap: 30px;
 }
 
+.gap-\[3px\] {
+  gap: 3px;
+}
+
 .gap-\[5px\] {
   gap: 5px;
 }
@@ -2228,6 +2267,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .bg-white\/\[\.03\] {
   background-color: rgb(255 255 255 / .03);
+}
+
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
 }
 
 .bg-\[linear-gradient\(180deg\2c \#E6FF8D_0\%\2c \#C6FF00_100\%\)\] {
@@ -2716,6 +2759,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .pt-\[68px\] {
   padding-top: 68px;
+}
+
+.pt-\[86px\] {
+  padding-top: 86px;
 }
 
 .pt-\[90px\] {
@@ -3327,6 +3374,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   background-color: rgb(215 255 77 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[\#a8d50c\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 213 12 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-\[\#a8d609\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(168 214 9 / var(--tw-bg-opacity, 1));
@@ -3343,6 +3395,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .hover\:bg-black:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-black-0a0a0a:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-gray-100:hover {
@@ -3551,9 +3608,9 @@ input:not(:checked) ~ .toggle-labels .yearly {
   opacity: 1;
 }
 
-.group:active .group-active\:border-white {
+.group:active .group-active\:border-limegreen {
   --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+  border-color: rgb(198 255 0 / var(--tw-border-opacity, 1));
 }
 
 .peer:disabled ~ .peer-disabled\:cursor-not-allowed {
