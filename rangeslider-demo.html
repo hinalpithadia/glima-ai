@@ -9,23 +9,114 @@
     <link rel="stylesheet" href="assets/css/styles-output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
     <style>
-        .coco-slider {
-    position: relative;
+     .coco-slider-rail {
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      background-color: rgba(255,255,255,0.2);
+      border-radius: 4px;
+    }
+    .rangeSlider .coco-slider-dot {
+    width: 0;
+    height: 0;
+    border-width: 0;
+}
+    .coco-slider-track {
+      position: absolute;
+      height: 100%;
+      background-color: #C6FF00;
+      border-radius: 4px;
+    }
+
+    .coco-slider-handle {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top:-6px;
+      background-color: #000;
+      border-radius: 50%;
+      border: 3px solid #C6FF00;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+  
+    .coco-slider-mark {
+        position: absolute;
+        font-size: 16px;
+        pointer-events: none;
+    top: 24px;
     width: 100%;
-    height: 10px;
-    background: #ddd;
-    border-radius: 5px;
+    }
+    .rangeSlider .coco-slider-mark-text {
+    top: 0;
+}
+    .coco-slider-mark-text{
+        position: absolute;
+    display: inline-block;
+    color: #ffffff73;
+    text-align: center;
+    word-break: keep-all;
+    cursor: pointer;
+    user-select: none;
+    }
+
+    .plan-slider-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.coco-slider-handle {
-    position: absolute;
-    top: -5px;
-    width: 20px;
-    height: 20px;
-    background: #007bff;
-    border-radius: 50%;
-    cursor: pointer;
+/* Tooltip content styling */
+.plan-slider {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+  transform: translateY(-100%);
+  white-space: nowrap;
+  transition: opacity 0.3s ease, visibility 0s ease 0.3s;
 }
+
+.plan-slider .plan-slider-inner {
+    background-color: #3b3b3b;
+    color: #f3f3f3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(0%);
+}
+.plan-slider .plan-slider-content{
+    position: relative;
+}
+.plan-slider-arrow {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    pointer-events: none;
+    width: 16px;
+    height: 16px;
+}
+.plan-slider-placement-top>.plan-slider-arrow {
+    left: 50%;
+}
+
+.plan-slider .plan-slider-arrow::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0px;
+    left: 38px;
+    bottom: 33px;
+    border: 8px solid transparent;
+    border-bottom: 0;
+    border-top: 8px solid #3b3b3b;
+
+}
+
     </style>
 </head>
 
@@ -1094,25 +1185,42 @@
                         <h4 class="text-xl font-medium text-white">Pro</h4>
                         <div class="flex flex-col gap-1">
                             <h3 class="font-semibold text-limegreen text-[50px] leading-[78px] flex items-center gap-3">$25 <span class="text-xl font-normal leading-8 text-white/70">/ Monthly</span></h3>
-                            <div class="PlanSlider_slider__XNm0_"><div class="coco-slider css-1ec1jc6 coco-slider-horizontal coco-slider-with-marks"><div class="coco-slider-rail"></div><div class="coco-slider-track" style="left: 0%; width: 12.5%;"></div><div class="coco-slider-step"><span class="coco-slider-dot coco-slider-dot-active" style="left: 0%; transform: translateX(-50%);"></span><span class="coco-slider-dot coco-slider-dot-active" style="left: 12.5%; transform: translateX(-50%);"></span><span class="coco-slider-dot" style="left: 25%; transform: translateX(-50%);"></span><span class="coco-slider-dot" style="left: 37.5%; transform: translateX(-50%);"></span><span class="coco-slider-dot" style="left: 50%; transform: translateX(-50%);"></span><span class="coco-slider-dot" style="left: 62.5%; transform: translateX(-50%);"></span><span class="coco-slider-dot" style="left: 75%; transform: translateX(-50%);"></span><span class="coco-slider-dot" style="left: 87.5%; transform: translateX(-50%);"></span><span class="coco-slider-dot" style="left: 100%; transform: translateX(-50%);"></span></div><div class="coco-slider-handle" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="8" aria-valuenow="1" aria-disabled="false" aria-orientation="horizontal" style="left: 12.5%; transform: translateX(-50%);"></div><div class="coco-slider-mark"><span class="coco-slider-mark-text coco-slider-mark-text-active" style="left: 0%; transform: translateX(-50%); pointer-events: none; font-size: 12px; color: rgba(255, 255, 255, 0.45);">800</span><span class="coco-slider-mark-text coco-slider-mark-text-active" style="left: 12.5%; transform: translateX(-50%); pointer-events: none; font-size: 12px; color: transparent;">2K</span><span class="coco-slider-mark-text" style="left: 25%; transform: translateX(-50%); pointer-events: none; font-size: 12px; color: transparent;">3K</span><span class="coco-slider-mark-text" style="left: 37.5%; transform: translateX(-50%); pointer-events: none; font-size: 12px; color: transparent;">5K</span><span class="coco-slider-mark-text" style="left: 50%; transform: translateX(-50%); pointer-events: none; font-size: 12px; color: transparent;">7.5K</span><span class="coco-slider-mark-text" style="left: 62.5%; transform: translateX(-50%); pointer-events: none; font-size: 12px; color: transparent;">10K</span><span class="coco-slider-mark-text" style="left: 75%; transform: translateX(-50%); pointer-events: none; font-size: 12px; color: transparent;">15K</span><span class="coco-slider-mark-text" style="left: 87.5%; transform: translateX(-50%); pointer-events: none; font-size: 12px; color: transparent;">20K</span><span class="coco-slider-mark-text" style="left: 100%; transform: translateX(-50%); pointer-events: none; font-size: 12px; color: rgba(255, 255, 255, 0.45);">50K</span></div></div><div class="plan-slider plan-slider-hidden coco-slider-tooltip css-1ec1jc6 plan-slider-placement-top" style="--arrow-x: 51.890625px; --arrow-y: 24px; inset: auto auto 433px 16px; box-sizing: border-box; z-index: 1200; pointer-events: none;"><div class="plan-slider-arrow" style="position: absolute; bottom: 0px; left: 51.8906px;"></div><div class="plan-slider-content"><div class="plan-slider-inner" role="tooltip"><span class="text-xs font-semibold">2,000 credits</span></div></div></div></div>
-                            <div class="pb-2 w-full">
-                                    <input
-                                      id="downPayment"
-                                      class="rangeslider"
-                                      type="range"
-                                      min="800"
-                                      max="50000"
-                                      step="100"
-                                      value="800"
-                                    />
-                              
-                                    <div class="mt-4 flex items-center justify-between">
-                                      <span class="text-xs font-normal text-white/50" id="downPaymentValue">800</span>
-                                      <span class="text-xs font-normal text-white/50" id="sliderValue">50k</span>
+                           
+                            <div class="rangeSlider pb-4">
+                                <div class="coco-slider css-1ec1jc6 coco-slider-horizontal coco-slider-with-marks relative w-full h-2 rounded-lg max-w-[300px] mx-auto">
+                                    <!-- Slider Rail -->
+                                    <div class="coco-slider-rail"></div>
+                            
+                                    <!-- Slider Track -->
+                                    <div class="coco-slider-track"></div>
+                            
+                                    <!-- Slider Steps (Dots) -->
+                                    <div class="coco-slider-step" id="slider-dots-container"></div>
+                            
+                                    <!-- Slider Handle -->
+                                    <div class="coco-slider-handle absolute w-5 h-5 bg-green-500 border-2 border-white rounded-full transform -translate-x-2.5 transition duration-300 ease-in-out"
+                                         tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="8" aria-valuenow="1" aria-disabled="false" aria-orientation="horizontal"
+                                         style="left: 12.5%; transform: translateX(-50%);"></div>
+                            
+                                    <!-- Slider Marks -->
+                                    <div class="coco-slider-mark" id="slider-marks-container"></div>
+                                </div>
+                            
+                                <!-- Tooltip for the slider -->
+                                <div class="plan-slider plan-slider-hidden coco-slider-tooltip plan-slider-placement-top">
+                                    <div class="plan-slider-arrow"></div>
+                                    <div class="plan-slider-content">
+                                        <div class="plan-slider-inner" role="tooltip">
+                                            <span class="text-xs font-semibold">800 credits</span>
+                                        </div>
                                     </div>
-                                 
-                                 
+                                </div>
+                                <div class="flex items-center justify-between mt-3">
+                                    <span class="text-xs font-normal text-white/50">800</span>
+                                    <span class="text-xs font-normal text-white/50">50k</span>
+                                </div>
                             </div>
+                          
                             <p class="text-white/50 text-base font-normal leading-7">20% off (equivalent to $47/m). Credits are accumulated monthly and carry over, never resetting.</p>
                         </div>
                         
@@ -1124,7 +1232,7 @@
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3634 6.98433C14.6238 7.24468 14.6238 7.66678 14.3634 7.92713L10.7723 11.5182C10.7631 11.5274 10.7539 11.5367 10.7448 11.5458C10.4908 11.7998 10.2553 12.0354 10.0372 12.2018C9.79584 12.386 9.49942 12.5468 9.12242 12.5468C8.74542 12.5468 8.449 12.386 8.20767 12.2018C7.9896 12.0354 7.754 11.7998 7.5001 11.5458C7.49093 11.5367 7.48173 11.5274 7.4725 11.5182L6.19526 10.241C5.93491 9.98067 5.93491 9.5585 6.19526 9.29817C6.45561 9.03783 6.87772 9.03783 7.13807 9.29817L8.41534 10.5754C8.70642 10.8665 8.87834 11.0364 9.01642 11.1418C9.07184 11.1841 9.10534 11.2028 9.12242 11.2106C9.1395 11.2028 9.173 11.1841 9.22842 11.1418C9.3665 11.0364 9.53842 10.8665 9.8295 10.5754L13.4206 6.98433C13.681 6.72398 14.1031 6.72398 14.3634 6.98433ZM9.10809 11.2157C9.10809 11.2157 9.11034 11.2146 9.11425 11.214C9.10992 11.2157 9.10809 11.2157 9.10809 11.2157ZM9.13059 11.214C9.1345 11.2146 9.13675 11.2157 9.13675 11.2157C9.13675 11.2157 9.13492 11.2157 9.13059 11.214Z" fill="#C6FF00"/>
                                 </svg>
                                  
-                                800 Credits 
+                               <span class="credit-value"> 800 </span> Credits 
                         </li>
                         <li class="flex items-center gap-3 text-base font-normal text-white leading-6">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1275,65 +1383,97 @@
       </div>
     </div>  
       <div class="overlay-modal w-full h-screen z-[500] bg-black/50 backdrop-blur-xl fixed top-0 left-0 opacity-0 invisible"></div>
+      <div class="text-3xl text-limegreen">hi ishita sdfgsdjfgsdjfgj</div>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector(".coco-slider-handle");
-    const track = document.querySelector(".coco-slider-track");
-    const dots = document.querySelectorAll(".coco-slider-dot");
-    const marks = document.querySelectorAll(".coco-slider-mark-text");
-    const tooltip = document.querySelector(".plan-slider-inner span");
-    
-    const steps = 9;
-    const values = [800, 2000, 3000, 5000, 7500, 10000, 15000, 20000, 50000];
-    
-    let currentStep = 1;
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".coco-slider-handle");
+  const track = document.querySelector(".coco-slider-track");
+  const dots = document.querySelectorAll(".coco-slider-dot");
+  const marks = document.querySelectorAll(".coco-slider-mark-text");
+  const tooltipContainer = document.querySelector(".plan-slider"); // Tooltip container
+  const tooltipContent = document.querySelector(".plan-slider-inner span"); // Tooltip content
 
-    function updateSlider(position) {
-        const percentage = (position / (steps - 1)) * 100;
-        slider.style.left = `${percentage}%`;
-        slider.setAttribute("aria-valuenow", position);
-        track.style.width = `${percentage}%`;
-        
-        dots.forEach((dot, index) => {
-            dot.classList.toggle("coco-slider-dot-active", index <= position);
-        });
-        
-        marks.forEach((mark, index) => {
-            mark.style.color = index === position ? "#fff" : "transparent";
-        });
-        
-        tooltip.textContent = values[position].toLocaleString() + " credits";
-    }
-    
-    slider.addEventListener("mousedown", function (event) {
-        event.preventDefault();
-        
-        function onMouseMove(event) {
-            const rect = slider.parentElement.getBoundingClientRect();
-            let offsetX = event.clientX - rect.left;
-            let percentage = Math.max(0, Math.min(100, (offsetX / rect.width) * 100));
-            let stepIndex = Math.round((percentage / 100) * (steps - 1));
-            
-            if (stepIndex !== currentStep) {
-                currentStep = stepIndex;
-                updateSlider(currentStep);
-            }
-        }
-        
-        function onMouseUp() {
-            document.removeEventListener("mousemove", onMouseMove);
-            document.removeEventListener("mouseup", onMouseUp);
-        }
-        
-        document.addEventListener("mousemove", onMouseMove);
-        document.addEventListener("mouseup", onMouseUp);
+  const steps = 9;  // Number of steps in the slider
+  const values = [800, 2000, 3000, 5000, 7500, 10000, 15000, 20000, 50000];  // Credit values for each step
+
+  let currentStep = 1;  // Initially start at step 1 (second step in the array)
+
+  // Initially hide the tooltip
+  tooltipContainer.classList.add("plan-slider-hidden");
+
+  // Update slider, tooltip, and credit-value class in the list based on the current step
+  function updateSlider(position) {
+    const percentage = (position / (steps - 1)) * 100;
+    slider.style.left = `${percentage}%`;
+    slider.setAttribute("aria-valuenow", position);
+    track.style.width = `${percentage}%`;
+
+    // Update dots (add active class for dots less than or equal to the current step)
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("coco-slider-dot-active", index <= position);
     });
-    
-    updateSlider(currentStep);
+
+    // Update marks (highlight the mark corresponding to the current step)
+    marks.forEach((mark, index) => {
+      mark.style.backgroundColor = "transparent";
+      mark.style.color = "transparent";
+
+      if (index === position) {
+        mark.style.backgroundColor = "rgba(0, 123, 255, 0.7)";  // Highlight active mark
+        mark.style.color = "#fff";
+      }
+    });
+
+    // Update tooltip content with the corresponding credit value
+    tooltipContent.textContent = values[position].toLocaleString() + " credits"; // Display value with commas for readability
+
+    // Position the tooltip (relative to the slider handle)
+    tooltipContainer.style.left = `calc(${percentage}% - 50px)`; // Adjust tooltip position to follow slider
+    tooltipContainer.classList.remove("plan-slider-hidden"); // Show tooltip when slider updates
+  }
+
+  // Slider mouse movement functionality (dragging)
+  slider.addEventListener("mousedown", function (event) {
+    event.preventDefault();
+
+    function onMouseMove(event) {
+      const rect = slider.parentElement.getBoundingClientRect();
+      let offsetX = event.clientX - rect.left;
+      let percentage = Math.max(0, Math.min(100, (offsetX / rect.width) * 100));  // Ensure within 0-100%
+      let stepIndex = Math.round((percentage / 100) * (steps - 1));  // Calculate which step is closest
+
+      if (stepIndex !== currentStep) {
+        currentStep = stepIndex;
+        updateSlider(currentStep);  // Update slider, tooltip, and list item
+      }
+    }
+
+    function onMouseUp() {
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+    }
+
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+  });
+
+  // When mouse enters slider handle, show tooltip
+  slider.addEventListener("mouseenter", function () {
+    tooltipContainer.classList.remove("plan-slider-hidden");
+  });
+
+  // When mouse leaves slider handle, hide tooltip
+  slider.addEventListener("mouseleave", function () {
+    tooltipContainer.classList.add("plan-slider-hidden");
+  });
+
+  // Initialize the slider to the first step (step 1)
+  updateSlider(currentStep);
 });
+
     </script>
 </body>
 

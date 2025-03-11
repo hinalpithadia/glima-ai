@@ -41,7 +41,12 @@
 }
 
 @layer components {
-
+      [data-tab].active.tab-active\:bg-limegreen{ 
+        @apply bg-limegreen ;
+    }
+    [data-tab].active.tab-active\:text-black{ 
+        @apply  text-black;
+    }
     .header-links {
         @apply flex items-center pt-2 gap-3 text-sm leading-[18px] font-normal text-gray-B1B1B1 pb-[10px] border-b border-transparent transition-all duration-500 hover:text-white hover:border-limegreen;
     }
@@ -290,6 +295,42 @@
         border-radius: 100px;
         background-color: rgba(255,255,255,0.2);
       }
+      .slick-dupe {
+        border-radius: 18px;
+        width: 100%;
+        position: relative;
+        min-height: 530px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%);
+      }
+     
+      .slider-top, .slider-bottom {
+        height: 100%; 
+        overflow: hidden; 
+    }
+    
+    .slick-slide {
+        height: 100%;
+    }
+    
+    .slick-track {
+        display: flex; 
+        flex-direction: column; 
+    }
+    .slider-bottom {
+      transform: rotate(180deg);
+    }
+    .slider-bottom .slick-slide {
+      transform: rotate(-180deg);
+    }
+    @media(max-width:1024px){
+      .slick-dupe {
+        min-height: auto!important;
+      }
+    }
       @media(max-width:990px){
         .modal-pricing{
         padding: 20px;
@@ -303,6 +344,9 @@
         .modal-home,.modal-pricing{
           max-width: 100%;
           padding: 10px;
+        }
+        .hero-slider-left .slick-track>div,.hero-slider-right .slick-track>div{
+          margin: auto 10px;
         }
       }
 }
