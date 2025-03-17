@@ -41,12 +41,7 @@
 }
 
 @layer components {
-      [data-tab].active.tab-active\:bg-limegreen{ 
-        @apply bg-limegreen ;
-    }
-    [data-tab].active.tab-active\:text-black{ 
-        @apply  text-black;
-    }
+   
     .group.active .group-active\:border-limegreen{ 
       @apply border-limegreen ;
   }
@@ -139,6 +134,11 @@
       z-index: 1000;
       overflow: auto;
     }
+    @media (max-width: 600px) {
+      .modal-home {
+        margin: 10px;
+      }
+    }
     .modal-pricing{ 
       position: fixed;
       left: 50%;
@@ -216,13 +216,7 @@
       height:12px !important;
       background: #000!important;
     }
-    #drop-overlay {
-      position: fixed;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-      z-index: 50; /* Makes sure overlay is above other elements */
-    }
-    
+   
     .dropdown-enter {
       opacity: 0;
       transform: translateY(-10px);
