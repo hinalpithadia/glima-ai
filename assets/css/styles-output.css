@@ -835,45 +835,28 @@ input:not(:checked) ~ .toggle-labels .yearly {
   margin: auto;
 }
 
+.rangeslider-zoom .rangeslider, .rangeslider-zoom .rangeslider__fill{
+  border-radius: 10px 0 0 10px;
+}
+
 .rangeslider-zoom .rangeslider__handle {
-  background: white;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  display: inline-block;
-  width: 12px;
-  height: 16px;
+  cursor: pointer!important;
+  display: inline-block!important;
+  width: 12px!important;
+  height: 16px!important;
   position: absolute;
-  background: #fff;
-  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
-  border-radius: 50%;
+  background: #fff!important;
 }
 
 .rangeslider-zoom .rangeslider--horizontal .rangeslider__handle {
-  top: -1px;
-  border-radius: 4px;
-  box-shadow: -2px 1px 12px 4px rgba(27, 27, 27, 0.20);
+  top: -1px!important;
+  border-radius: 4px!important;
+  box-shadow: -2px 1px 12px 4px rgba(27, 27, 27, 0.20)!important;
 }
 
 .rangeslider-zoom  .rangeslider__fill {
-  background: #C6FF00;
-  position: absolute;
-}
-
-.rangeslider-zoom .rangeslider__handle:after {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 14px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: none;
-  background-size: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
-  border-radius: 50%;
+  background: #C6FF00!important;
+  position: absolute!important;
 }
 
 .aspect-ratio button.active .group-active\:border-white{
@@ -1040,7 +1023,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s;
-  z-index: 1;
   right: auto;
   left: auto;
   border-right: 0px;
@@ -1434,6 +1416,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .z-50 {
   z-index: 50;
+}
+
+.z-\[-1\] {
+  z-index: -1;
 }
 
 .z-\[10000\] {

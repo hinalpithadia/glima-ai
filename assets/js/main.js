@@ -484,6 +484,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update the display with the slider's value
         $('#zoomValue').text(value + '%');  // Display value as percentage
 
+        // Update the fill width dynamically based on the slider's value
+        var fillWidth = (value - 100) / (500 - 100) * 100; // Calculates percentage of the slider fill
+        $('.rangeslider__fill').css('width', fillWidth + '%');
+        
+       // Calculate the position for the handle based on the value
+      var handlePosition = (value - 100) / (500 - 85) * 100; // Calculate position for handle
+      $('.rangeslider__handle').css('left', handlePosition + '%'); // Update the left position of the handle
+
         // Zoom the image based on the slider's value
         var scaleValue = value / 100;  // Convert value to scale percentage (100% = 1, 200% = 2, etc.)
         $('#zoomImage').css('transform', 'scale(' + scaleValue + ')');  // Apply scale transform to image

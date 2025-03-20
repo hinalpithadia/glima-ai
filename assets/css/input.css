@@ -246,50 +246,30 @@
     width: 100% !important;
     height: 14px !important;
     margin: auto;
+    
   
     }
+    .rangeslider-zoom .rangeslider, .rangeslider-zoom .rangeslider__fill{
+      border-radius: 10px 0 0 10px;
+    }
     .rangeslider-zoom .rangeslider__handle {
-      background: white;
-      border: 1px solid #ccc;
-      cursor: pointer;
-      display: inline-block;
-      width: 12px;
-      height: 16px;
+      cursor: pointer!important;
+      display: inline-block!important;
+      width: 12px!important;
+      height: 16px!important;
       position: absolute;
-      background: #fff;
-      background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
-      border-radius: 50%;
+      background: #fff!important;
   }
   .rangeslider-zoom .rangeslider--horizontal .rangeslider__handle {
-    top: -1px;
-    border-radius: 4px;
-    box-shadow: -2px 1px 12px 4px rgba(27, 27, 27, 0.20);
+    top: -1px!important;
+    border-radius: 4px!important;
+    box-shadow: -2px 1px 12px 4px rgba(27, 27, 27, 0.20)!important;
   }
   .rangeslider-zoom  .rangeslider__fill {
-    background: #C6FF00;
-    position: absolute;
+    background: #C6FF00!important;
+    position: absolute!important;
 }
-    .rangeslider-zoom .rangeslider__handle:after {
-      content: "";
-      display: block;
-      width: 10px;
-      height: 14px;
-      margin: auto;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-image: none;
-      background-size: 100%;
-      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.13)), color-stop(100%, rgba(255, 255, 255, 0)));
-      background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
-      background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
-      background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
-      -moz-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-  }
+    
     .dropdown-enter-active {
       opacity: 1;
       transform: translateY(0);
@@ -470,7 +450,6 @@
       transform: translateX(-50%);
       opacity: 0;
       transition: opacity 0.3s;
-      z-index: 1;
       right: auto;
       left: auto;
      border-right: 0px;
