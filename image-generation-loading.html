@@ -1301,19 +1301,21 @@
         <div class="relative bg-black-1B1B1B p-3.5 rounded-3xl lg:h-auto h-full overflow-auto" >
             <div class="flex lg:flex-row flex-col-reverse gap-3.5  w-full">
             <div class="bg-black-0a0a0a rounded-xl xl:max-w-[1294px] lg:max-w-[1180px] lg:w-[75%] relative">
-             <img src="assets/images/big-image.png" alt="image" class="w-full h-full max-h-[800px] rounded-xl"/>
+             <div class="w-full h-full max-h-[800px] rounded-xl overflow-hidden">
+                <img id="zoomImage" src="assets/images/big-image.png" alt="image" class="w-full h-full rounded-xl"/>
+            </div>   
              <div class="absolute bottom-0 left-0 right-0 m-auto bg-[rgba(255,255,255,0.12)] backdrop-blur-sm p-3 rounded-t-lg max-w-[385px] flex items-center gap-2.5 justify-between rangeslider-zoom">
                 <span class="text-xs text-white">100%</span>
                 <input
                 id="zoom"
                 class="rangeslider-zoom"
                 type="range"
-                min="800"
-                max="50000"
-                step="100"
-                value="800"
+                min="100"
+                max="500"
+                step="5"
+                value="100"
               />
-                <span class="text-xs text-white">500%</span>
+                <span class="text-xs text-white" id="zoomValue">500%</span>
              </div>
             </div>
             <div class="relative  lg:w-[25%]">

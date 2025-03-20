@@ -832,7 +832,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
   box-shadow: none !important;
   width: 100% !important;
   height: 14px !important;
-  max-width: 300px !important;
   margin: auto;
 }
 
@@ -846,12 +845,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
   position: absolute;
   background: #fff;
   background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
-  /* background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1)); */
-  /* background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1)); */
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  /* -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); */
-  /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); */
-  /* -webkit-border-radius: 50%; */
   border-radius: 50%;
 }
 

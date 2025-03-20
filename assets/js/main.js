@@ -474,14 +474,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   $(document).ready(function() {
-    // Initialize the range slider
+    // Initialize the range slider with min, max, and step values
     $('#zoom').rangeslider({
       polyfill: false,
+      min: 100,  // Set the minimum value to 100% (can be considered as 100)
+      max: 500,  // Set the maximum value to 500% (can be considered as 500)
+      step: 100,   // Define the step value for increments (e.g., 1%)
       onSlide: function(position, value) {
         // Update the display with the slider's value
-        $('#zoomValue').text(value.toLocaleString());
+        $('#zoomValue').text(value + '%');  // Display value as percentage
+
+        // Zoom the image based on the slider's value
+        var scaleValue = value / 100;  // Convert value to scale percentage (100% = 1, 200% = 2, etc.)
+        $('#zoomImage').css('transform', 'scale(' + scaleValue + ')');  // Apply scale transform to image
       }
     });
+     // Optional: Zoom effect based on mouse position over the image
+  $('#zoomImage').on('mousemove', function(e) {
+    var $img = $(this);
+    var zoomLevel = $('#zoom').val(); // Get the current zoom level from the slider
+    var scaleValue = zoomLevel / 100; // Convert zoom level to scale value
+    var offsetX = e.offsetX;
+    var offsetY = e.offsetY;
+
+    // Get the position of the image inside the container
+    var imgWidth = $img.width();
+    var imgHeight = $img.height();
+
+    // Calculate the background position (zoom effect)
+    var x = (offsetX / imgWidth) * 100;
+    var y = (offsetY / imgHeight) * 100;
+
+    // Apply the zoom effect by setting the background-position and transform scale
+    $img.css({
+      'transform-origin': `${x}% ${y}%`, // Make sure the zoom follows the cursor
+      'transform': `scale(${scaleValue})`
+    });
+  });
+
+  // Reset the zoom when the mouse leaves the image
+  $('#zoomImage').on('mouseleave', function() {
+    $(this).css({
+      'transform': 'scale(1)',
+      'transform-origin': 'center center'  // Reset zoom position
+    });
+  });
   });
 
 
