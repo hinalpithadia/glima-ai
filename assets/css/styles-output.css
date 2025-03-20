@@ -825,6 +825,64 @@ input:not(:checked) ~ .toggle-labels .yearly {
   margin: auto;
 }
 
+.rangeslider-zoom .rangeslider {
+  background: #000000 !important;
+  position: relative !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  height: 14px !important;
+  max-width: 300px !important;
+  margin: auto;
+}
+
+.rangeslider-zoom .rangeslider__handle {
+  background: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: inline-block;
+  width: 12px;
+  height: 16px;
+  position: absolute;
+  background: #fff;
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+  /* background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1)); */
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1)); */
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  /* -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); */
+  /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); */
+  /* -webkit-border-radius: 50%; */
+  border-radius: 50%;
+}
+
+.rangeslider-zoom .rangeslider--horizontal .rangeslider__handle {
+  top: -1px;
+  border-radius: 4px;
+  box-shadow: -2px 1px 12px 4px rgba(27, 27, 27, 0.20);
+}
+
+.rangeslider-zoom  .rangeslider__fill {
+  background: #C6FF00;
+  position: absolute;
+}
+
+.rangeslider-zoom .rangeslider__handle:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 14px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: none;
+  background-size: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+}
+
 .aspect-ratio button.active .group-active\:border-white{
   background: #000;
   border:1px solid white;
@@ -970,8 +1028,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
   /* Border with slight transparency */
   background: #0A0A0A;
   /* Background color */
-  border-radius: 8px;
-  /* Rounded corners */
   padding: 6px 12px;
   /* Padding inside the tooltip */
   font-size: 12px;
@@ -994,28 +1050,43 @@ input:not(:checked) ~ .toggle-labels .yearly {
   z-index: 1;
   right: auto;
   left: auto;
-  border-right: 0;
+  border-right: 0px;
+  border-radius: 8px 0px 0px 8px;
 }
 
 .tooltip::after {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 26%;
+  /* Position the arrow vertically at the center */
   left: 100%;
   /* Position the arrow to the right */
   margin-top: -8px;
   /* Center the arrow vertically */
-  /* Arrow shape using clip-path to create a triangle */
   width: 0;
   height: 0;
-  border-style: solid;
-  border-width: 8px 0 8px 8px;
-  /* Arrow dimensions */
-  border-color: transparent transparent transparent #0A0A0A;
+  border: 15px solid transparent;
+  border-left-color: #0A0A0A;
   /* Arrow color */
-  /* Apply border around the arrow */
-  border-left: 8px solid #0A0A0A;
-  /* Matching tooltip background */
+  transform: rotate(0deg);
+  /* Ensure arrow is upright */
+}
+
+.tooltip::before{
+  content: '';
+  display: block;
+  top: 24%;
+  /* Position the border vertically */
+  left: 100%;
+  /* Position the border to the right */
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 16px solid transparent;
+  border-left-color: rgba(255, 255, 255, 0.20);
+  /* Border color for the arrow */
+  margin-top: -8px;
+  /* Center the border vertically with the arrow */
 }
 
 .image-content{
@@ -1028,14 +1099,41 @@ input:not(:checked) ~ .toggle-labels .yearly {
   visibility: visible;
 }
 
+@media(max-width:1500px) {
+  .modal-image{
+    max-width: 1300px;
+  }
+}
+
+@media(max-width:1400px) {
+  .modal-image{
+    max-width: 1200px;
+  }
+}
+
+@media(max-width:1300px) {
+  .modal-image{
+    max-width: 1100px;
+  }
+}
+
 @media(max-width:1024px){
   .slick-dupe {
     min-height: auto!important;
+  }
+
+  .modal-image{
+    max-width: 900px;
   }
 }
 
 @media(max-width:990px){
   .modal-pricing{
+    padding: 20px;
+  }
+
+  .modal-image{
+    height:auto;
     padding: 20px;
   }
 }
@@ -1117,16 +1215,20 @@ input:not(:checked) ~ .toggle-labels .yearly {
   bottom: -2.5rem;
 }
 
+.-left-12 {
+  left: -3rem;
+}
+
 .-left-20 {
   left: -5rem;
 }
 
-.-left-5 {
-  left: -1.25rem;
-}
-
 .-left-\[89px\] {
   left: -89px;
+}
+
+.-right-12 {
+  right: -3rem;
 }
 
 .-right-\[89px\] {
@@ -1319,22 +1421,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .top-\[auto\] {
   top: auto;
-}
-
-.-left-8 {
-  left: -2rem;
-}
-
-.-left-10 {
-  left: -2.5rem;
-}
-
-.-left-12 {
-  left: -3rem;
-}
-
-.-right-12 {
-  right: -3rem;
 }
 
 .z-0 {
@@ -1837,10 +1923,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
   width: 120px;
 }
 
-.w-\[25\%\] {
-  width: 25%;
-}
-
 .w-\[270px\] {
   width: 270px;
 }
@@ -1875,10 +1957,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .w-\[70px\] {
   width: 70px;
-}
-
-.w-\[75\%\] {
-  width: 75%;
 }
 
 .w-\[calc\(100\%-100px\)\] {
@@ -1970,6 +2048,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   max-width: 360px;
 }
 
+.max-w-\[385px\] {
+  max-width: 385px;
+}
+
 .max-w-\[392px\] {
   max-width: 392px;
 }
@@ -2052,6 +2134,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-x-2 {
+  --tw-translate-x: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .-translate-x-2\.5 {
   --tw-translate-x: -0.625rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2059,11 +2146,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-0 {
-  --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2134,6 +2216,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
 }
 
 .flex-wrap {
@@ -2384,6 +2470,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
   border-bottom-left-radius: 0.75rem;
 }
 
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -2569,6 +2660,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .bg-\[rgba\(255\2c 255\2c 255\2c 0\.03\)\] {
   background-color: rgba(255,255,255,0.03);
+}
+
+.bg-\[rgba\(255\2c 255\2c 255\2c 0\.12\)\] {
+  background-color: rgba(255,255,255,0.12);
 }
 
 .bg-black {
@@ -3559,6 +3654,12 @@ input:not(:checked) ~ .toggle-labels .yearly {
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 .backdrop-blur-xl {
   --tw-backdrop-blur: blur(24px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -4264,10 +4365,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
     min-width: 734px;
   }
 
-  .md\:max-w-\[1180px\] {
-    max-width: 1180px;
-  }
-
   .md\:max-w-\[325px\] {
     max-width: 325px;
   }
@@ -4390,12 +4487,20 @@ input:not(:checked) ~ .toggle-labels .yearly {
     width: 1.5rem;
   }
 
+  .lg\:w-\[25\%\] {
+    width: 25%;
+  }
+
   .lg\:w-\[280px\] {
     width: 280px;
   }
 
   .lg\:w-\[314px\] {
     width: 314px;
+  }
+
+  .lg\:w-\[75\%\] {
+    width: 75%;
   }
 
   .lg\:w-\[calc\(100\%-290px\)\] {
@@ -4410,8 +4515,8 @@ input:not(:checked) ~ .toggle-labels .yearly {
     min-width: 734px;
   }
 
-  .lg\:max-w-\[1294px\] {
-    max-width: 1294px;
+  .lg\:max-w-\[1180px\] {
+    max-width: 1180px;
   }
 
   .lg\:max-w-\[180px\] {
@@ -4691,6 +4796,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
   .xl\:min-w-\[734px\] {
     min-width: 734px;
+  }
+
+  .xl\:max-w-\[1294px\] {
+    max-width: 1294px;
   }
 
   .xl\:max-w-\[200px\] {

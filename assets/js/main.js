@@ -473,4 +473,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+  $(document).ready(function() {
+    // Initialize the range slider
+    $('#zoom').rangeslider({
+      polyfill: false,
+      onSlide: function(position, value) {
+        // Update the display with the slider's value
+        $('#zoomValue').text(value.toLocaleString());
+      }
+    });
+  });
+
 

@@ -238,7 +238,65 @@
       opacity: 0;
       transform: translateY(-10px);
     }
-  
+    .rangeslider-zoom .rangeslider {
+      background: #000000 !important;
+    position: relative !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    height: 14px !important;
+    max-width: 300px !important;
+    margin: auto;
+    }
+    .rangeslider-zoom .rangeslider__handle {
+      background: white;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      display: inline-block;
+      width: 12px;
+      height: 16px;
+      position: absolute;
+      background: #fff;
+      background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+      /* background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1)); */
+      /* background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1)); */
+      -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      /* -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); */
+      /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); */
+      -moz-border-radius: 50%;
+      /* -webkit-border-radius: 50%; */
+      border-radius: 50%;
+  }
+  .rangeslider-zoom .rangeslider--horizontal .rangeslider__handle {
+    top: -1px;
+    border-radius: 4px;
+    box-shadow: -2px 1px 12px 4px rgba(27, 27, 27, 0.20);
+  }
+  .rangeslider-zoom  .rangeslider__fill {
+    background: #C6FF00;
+    position: absolute;
+}
+    .rangeslider-zoom .rangeslider__handle:after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 14px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: none;
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.13)), color-stop(100%, rgba(255, 255, 255, 0)));
+      background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
+      background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
+      background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+  }
     .dropdown-enter-active {
       opacity: 1;
       transform: translateY(0);
@@ -407,7 +465,6 @@
       visibility: hidden;
       border: 1px solid rgba(255, 255, 255, 0.20); /* Border with slight transparency */
       background: #0A0A0A; /* Background color */
-      border-radius: 8px; /* Rounded corners */
       padding: 6px 12px; /* Padding inside the tooltip */
       font-size: 12px; /* Font size */
       font-weight: 500; /* Font weight */
@@ -423,26 +480,33 @@
       z-index: 1;
       right: auto;
       left: auto;
-      border-right: 0;
+     border-right: 0px;
+     border-radius: 8px 0px 0px 8px;
     }
     
     .tooltip::after {
       content: '';
+  position: absolute;
+  top: 26%; /* Position the arrow vertically at the center */
+  left: 100%; /* Position the arrow to the right */
+  margin-top: -8px; /* Center the arrow vertically */
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-left-color: #0A0A0A; /* Arrow color */
+  transform: rotate(0deg); /* Ensure arrow is upright */
+    }
+    .tooltip::before{
+      content: '';
+      display: block;
+      top: 24%; /* Position the border vertically */
+      left: 100%; /* Position the border to the right */
       position: absolute;
-      top: 50%;
-      left: 100%; /* Position the arrow to the right */
-      margin-top: -8px; /* Center the arrow vertically */
-      
-      /* Arrow shape using clip-path to create a triangle */
       width: 0;
       height: 0;
-      border-style: solid;
-      border-width: 8px 0 8px 8px; /* Arrow dimensions */
-      border-color: transparent transparent transparent #0A0A0A; /* Arrow color */
-      
-      /* Apply border around the arrow */
-      border-left: 8px solid #0A0A0A; /* Matching tooltip background */
-      
+      border: 16px solid transparent;
+      border-left-color: rgba(255, 255, 255, 0.20); /* Border color for the arrow */
+      margin-top: -8px; /* Center the border vertically with the arrow */
     }
     .image-content{
       opacity: 0;
@@ -452,13 +516,35 @@
       opacity: 1;
       visibility: visible;
     }
+    @media(max-width:1500px) {
+      .modal-image{ 
+        max-width: 1300px;
+      }
+    }
+    @media(max-width:1400px) {
+      .modal-image{ 
+        max-width: 1200px;
+      }
+    }
+    @media(max-width:1300px) {
+      .modal-image{ 
+        max-width: 1100px;
+      }
+    }
     @media(max-width:1024px){
       .slick-dupe {
         min-height: auto!important;
       }
+      .modal-image{ 
+        max-width: 900px;
+      }
     }
       @media(max-width:990px){
         .modal-pricing{
+        padding: 20px;
+      }
+      .modal-image{ 
+        height:auto;
         padding: 20px;
       }
       }

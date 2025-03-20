@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Glima AI</title>
     <!--- MAIN CSS ---->
-    <link rel="stylesheet" href="assets/css/input.css">
     <link rel="stylesheet" href="assets/css/styles-output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
+
 </head>
 
 <body class="md:overflow-hidden">
@@ -464,10 +465,11 @@
                                                 </div>
                                             </li>
                                             <li class="relative"><a href="#" class="bg-black-0a0a0a w-9 h-9 flex justify-center items-center border-[0.8px] border-white/20 rounded-lg group tooltip-trigger" >
-                                                <svg class="stroke-white group-hover:stroke-limegreen" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M10.6693 8.5987V11.3987C10.6693 13.732 9.73594 14.6654 7.4026 14.6654H4.6026C2.26927 14.6654 1.33594 13.732 1.33594 11.3987V8.5987C1.33594 6.26536 2.26927 5.33203 4.6026 5.33203H7.4026C9.73594 5.33203 10.6693 6.26536 10.6693 8.5987Z" stroke="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M14.6693 4.5987V7.3987C14.6693 9.73203 13.7359 10.6654 11.4026 10.6654H10.6693V8.5987C10.6693 6.26536 9.73594 5.33203 7.4026 5.33203H5.33594V4.5987C5.33594 2.26536 6.26927 1.33203 8.6026 1.33203H11.4026C13.7359 1.33203 14.6693 2.26536 14.6693 4.5987Z" stroke="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>                                                         
+                                                   
+                                                    <svg class="stroke-white group-hover:stroke-limegreen" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16.25 11.25V14.25C16.25 14.6478 16.092 15.0294 15.8107 15.3107C15.5294 15.592 15.1478 15.75 14.75 15.75H4.25C3.85218 15.75 3.47064 15.592 3.18934 15.3107C2.90804 15.0294 2.75 14.6478 2.75 14.25V11.25M5.75 7.5L9.5 11.25M9.5 11.25L13.25 7.5M9.5 11.25V2.25" stroke="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                                                                            
                                             </a>
                                             <div class="tooltip absolute bottom-0  right-12  flex flex-col items-center translate-y-2 invisible opacity-0 mb-2 duration-300 transition-all ">
                                                 <p>Download HD</p>
@@ -1297,12 +1299,24 @@
                 
         </div>
         <div class="relative bg-black-1B1B1B p-3.5 rounded-3xl lg:h-auto h-full overflow-auto" >
-            <div class="flex lg:flex-row flex-col gap-3.5  w-full">
-            <div class="bg-black-0a0a0a rounded-xl lg:max-w-[1294px] md:max-w-[1180px] w-[75%] ">
-               
-            <img src="assets/images/big-image.png" alt="image" class="w-full h-full max-h-[800px] rounded-xl"/>
+            <div class="flex lg:flex-row flex-col-reverse gap-3.5  w-full">
+            <div class="bg-black-0a0a0a rounded-xl xl:max-w-[1294px] lg:max-w-[1180px] lg:w-[75%] relative">
+             <img src="assets/images/big-image.png" alt="image" class="w-full h-full max-h-[800px] rounded-xl"/>
+             <div class="absolute bottom-0 left-0 right-0 m-auto bg-[rgba(255,255,255,0.12)] backdrop-blur-sm p-3 rounded-t-lg max-w-[385px] flex items-center gap-2.5 justify-between rangeslider-zoom">
+                <span class="text-xs text-white">100%</span>
+                <input
+                id="zoom"
+                class="rangeslider-zoom"
+                type="range"
+                min="800"
+                max="50000"
+                step="100"
+                value="800"
+              />
+                <span class="text-xs text-white">500%</span>
+             </div>
             </div>
-            <div class="relative  w-[25%]">
+            <div class="relative  lg:w-[25%]">
               <div class="pb-5 mb-5 border-b border-white/10 flex justify-between items-center">
                 <h4 class="text-lg text-white font-medium">19 Mar. 2025</h4>
                 <div class="flex items-center gap-5">
@@ -1380,10 +1394,12 @@
     <div id="drop-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50"></div>
     <div class="overlay-modal w-full h-screen z-[10000] bg-black/50 backdrop-blur-xl fixed top-0 left-0 opacity-0 invisible"></div>
     <!-- MAIN JS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
         /*==============tooltip==================*/
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     const tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
   
     tooltipTriggers.forEach(trigger => {
@@ -1391,11 +1407,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
       const showTooltip = () => {
         tooltip.classList.remove('opacity-0', 'translate-x-2', 'invisible');
-        tooltip.classList.add('opacity-100' , 'translate-x-0', 'visible');
+        tooltip.classList.add('opacity-100' , '-translate-x-2', 'visible');
       };
   
       const hideTooltip = () => {
-        tooltip.classList.remove('opacity-100' , 'translate-x-0', 'visible');
+        tooltip.classList.remove('opacity-100' , '-translate-x-2', 'visible');
         tooltip.classList.add('opacity-0', 'translate-x-2', 'invisible');
       };
   
