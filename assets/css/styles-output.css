@@ -1623,6 +1623,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   margin-top: 40px;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .block {
   display: block;
 }
@@ -1755,6 +1759,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .h-\[70px\] {
   height: 70px;
+}
+
+.h-\[calc\(100\%-210px\)\] {
+  height: calc(100% - 210px);
 }
 
 .h-auto {
