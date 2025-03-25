@@ -1045,43 +1045,7 @@ input:not(:checked) ~ .toggle-labels .yearly {
   transition: opacity 0.3s;
   right: auto;
   left: auto;
-  border-right: 0px;
-  border-radius: 8px 0px 0px 8px;
-}
-
-.tooltip::after {
-  content: '';
-  position: absolute;
-  top: 26%;
-  /* Position the arrow vertically at the center */
-  left: 100%;
-  /* Position the arrow to the right */
-  margin-top: -8px;
-  /* Center the arrow vertically */
-  width: 0;
-  height: 0;
-  border: 15px solid transparent;
-  border-left-color: #0A0A0A;
-  /* Arrow color */
-  transform: rotate(0deg);
-  /* Ensure arrow is upright */
-}
-
-.tooltip::before{
-  content: '';
-  display: block;
-  top: 24%;
-  /* Position the border vertically */
-  left: 100%;
-  /* Position the border to the right */
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 16px solid transparent;
-  border-left-color: rgba(255, 255, 255, 0.20);
-  /* Border color for the arrow */
-  margin-top: -8px;
-  /* Center the border vertically with the arrow */
+  border-radius: 8px ;
 }
 
 .image-content{
@@ -1092,6 +1056,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .image-display:hover .image-content{
   opacity: 1;
   visibility: visible;
+}
+
+input[type='checkbox']:checked {
+  background-image: url(../images/tick.png);
 }
 
 @media(max-width:1500px) {
@@ -1250,6 +1218,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   bottom: 1rem;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
 .bottom-\[-152px\] {
   bottom: -152px;
 }
@@ -1322,8 +1294,8 @@ input:not(:checked) ~ .toggle-labels .yearly {
   right: 0px;
 }
 
-.right-12 {
-  right: 3rem;
+.right-10 {
+  right: 2.5rem;
 }
 
 .right-2\.5 {
@@ -1595,6 +1567,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   margin-left: auto;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mr-5 {
   margin-right: 1.25rem;
 }
@@ -1727,6 +1703,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .h-7 {
   height: 1.75rem;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .h-9 {
@@ -1922,6 +1902,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   width: 1.5rem;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .w-9 {
   width: 2.25rem;
 }
@@ -2003,6 +1987,18 @@ input:not(:checked) ~ .toggle-labels .yearly {
   min-width: 734px;
 }
 
+.min-w-\[200px\] {
+  min-width: 200px;
+}
+
+.min-w-\[150px\] {
+  min-width: 150px;
+}
+
+.min-w-\[110px\] {
+  min-width: 110px;
+}
+
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -2033,6 +2029,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .max-w-\[220px\] {
   max-width: 220px;
+}
+
+.max-w-\[287px\] {
+  max-width: 287px;
 }
 
 .max-w-\[300px\] {
@@ -2202,6 +2202,12 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .resize-none {
   resize: none;
+}
+
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .columns-3 {
@@ -2384,6 +2390,15 @@ input:not(:checked) ~ .toggle-labels .yearly {
   row-gap: 50px;
 }
 
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.gap-y-5 {
+  row-gap: 1.25rem;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -2466,6 +2481,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .rounded-xl {
@@ -2593,6 +2612,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   border-color: rgb(255 255 255 / 0.05);
 }
 
+.border-white\/80 {
+  border-color: rgb(255 255 255 / 0.8);
+}
+
 .bg-\[\#0A0A0A\] {
   --tw-bg-opacity: 1;
   background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
@@ -2652,9 +2675,18 @@ input:not(:checked) ~ .toggle-labels .yearly {
   background-color: rgb(198 255 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#FF3030\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 48 48 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#c6ff00\] {
   --tw-bg-opacity: 1;
   background-color: rgb(198 255 0 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[rgba\(10\2c 10\2c 10\2c 0\.80\)\] {
+  background-color: rgba(10,10,10,0.80);
 }
 
 .bg-\[rgba\(198\2c 255\2c 0\2c 0\.10\)\] {
@@ -2876,6 +2908,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   --tw-gradient-to: #000 var(--tw-gradient-to-position);
 }
 
+.to-white {
+  --tw-gradient-to: #fff var(--tw-gradient-to-position);
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -2937,6 +2973,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .p-\[15px\] {
   padding: 15px;
+}
+
+.p-\[1px\] {
+  padding: 1px;
 }
 
 .p-\[9px\] {
@@ -3138,6 +3178,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   padding-bottom: 1.25rem;
 }
 
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -3224,6 +3268,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 
 .pt-3\.5 {
   padding-top: 0.875rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .pt-5 {
@@ -3828,6 +3876,32 @@ input:not(:checked) ~ .toggle-labels .yearly {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.checked\:border-transparent:checked {
+  border-color: transparent;
+}
+
+.checked\:bg-\[\#C6FF00\]:checked {
+  --tw-bg-opacity: 1;
+  background-color: rgb(198 255 0 / var(--tw-bg-opacity, 1));
+}
+
+.checked\:bg-indigo-100:checked {
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 231 255 / var(--tw-bg-opacity, 1));
+}
+
+.checked\:bg-transparent:checked {
+  background-color: transparent;
+}
+
+.checked\:bg-center:checked {
+  background-position: center;
+}
+
+.checked\:bg-no-repeat:checked {
+  background-repeat: no-repeat;
+}
+
 .focus-within\:border-transparent:focus-within {
   border-color: transparent;
 }
@@ -3907,6 +3981,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .hover\:bg-\[\#a8d609\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(168 214 9 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#bb1e1e\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 30 30 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-\[rgba\(198\2c 255\2c 0\2c 0\.10\)\]:hover {
@@ -3997,6 +4076,11 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .hover\:text-\[\#F99D1A\]:hover {
   --tw-text-opacity: 1;
   color: rgb(249 157 26 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-\[\#FF3030\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 48 48 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-\[\#c6ff00\]:hover {
@@ -4283,6 +4367,22 @@ input:not(:checked) ~ .toggle-labels .yearly {
     width: 282px;
   }
 
+  .sm\:w-\[292px\] {
+    width: 292px;
+  }
+
+  .sm\:w-\[300px\] {
+    width: 300px;
+  }
+
+  .sm\:w-\[350px\] {
+    width: 350px;
+  }
+
+  .sm\:w-\[320px\] {
+    width: 320px;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4420,6 +4520,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
 @media (min-width: 1024px) {
   .lg\:-top-80 {
     top: -20rem;
+  }
+
+  .lg\:left-\[38\%\] {
+    left: 38%;
   }
 
   .lg\:left-\[400px\] {

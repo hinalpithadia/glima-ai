@@ -411,7 +411,7 @@
                             placeholder="Search by prompt">
                     </div>
                     <button
-                        class="w-[42px] h-[42px] flex items-center justify-between   rounded-lg border border-white/20 font-medium text-base text-white  bg-transparent p-3 transition-all duration-500 hover:border-white/50 outline-none focus-within:outline-offset-0 focus-within:outline focus-within:!outline-1 focus-within:outline-none focus-within:border-transparent">
+                        class="dropdown-btn w-[42px] h-[42px] flex items-center justify-between   rounded-lg border border-white/20 font-medium text-base text-white  bg-transparent p-3 transition-all duration-500 hover:border-white/50 outline-none focus-within:outline-offset-0 focus-within:outline focus-within:!outline-1 focus-within:outline-none ">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M3 2.25H15.0001C15.4143 2.25 15.7501 2.58573 15.7501 2.9999L15.7502 4.18927C15.7503 4.38823 15.6712 4.57904 15.5305 4.71971L10.7197 9.53032C10.579 9.67095 10.5 9.86175 10.5 10.0606V14.7894C10.5 15.2774 10.0414 15.6354 9.56812 15.517L8.06812 15.142C7.73422 15.0586 7.5 14.7586 7.5 14.4144V10.0606C7.5 9.86175 7.42098 9.67095 7.28033 9.53032L2.46967 4.71967C2.32901 4.57902 2.25 4.38825 2.25 4.18934V3C2.25 2.58579 2.58578 2.25 3 2.25Z"
@@ -441,6 +441,7 @@
                         <div class="flex flex-col gap-5 mb-5">
                             <div class="border border-white/20 bg-black-1B1B1B rounded-2xl p-2">
                                 <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-2.5">
+                                   
                                     <div class="relative">
                                         <div class="curtain">
                                             <div class="shine">
@@ -460,7 +461,7 @@
                                                         </svg>
                                                         
                                                 </a>
-                                                <div class="tooltip absolute bottom-0  right-12  flex flex-col items-center translate-y-2 invisible opacity-0 mb-2 duration-300 transition-all ">
+                                                <div class="tooltip absolute bottom-0  right-10  flex flex-col items-center translate-y-2 invisible opacity-0 mb-2 duration-300 transition-all ">
                                                     <p>Copy Prompt </p>
                                                 </div>
                                             </li>
@@ -471,7 +472,7 @@
                                                         </svg>
                                                                                                             
                                             </a>
-                                            <div class="tooltip absolute bottom-0  right-12  flex flex-col items-center translate-y-2 invisible opacity-0 mb-2 duration-300 transition-all ">
+                                            <div class="tooltip absolute bottom-0  right-10  flex flex-col items-center translate-y-2 invisible opacity-0 mb-2 duration-300 transition-all ">
                                                 <p>Download HD</p>
                                             </div>
                                         </li>
@@ -486,11 +487,11 @@
                                                     </svg>
                                                                                                             
                                         </a>
-                                        <div class="tooltip absolute bottom-0  right-12  flex flex-col items-center translate-y-2 invisible opacity-0 mb-2 duration-300 transition-all ">
+                                        <div class="tooltip absolute bottom-0  right-10  flex flex-col items-center translate-y-2 invisible opacity-0 mb-2 duration-300 transition-all ">
                                             <p>Publish to community</p>
                                         </div>
                                     </li>
-                                    <li class="relative"><a href="#" class="bg-black-0a0a0a w-9 h-9 flex justify-center items-center border-[0.8px] border-white/20 rounded-lg group tooltip-trigger z-50" >
+                                    <li class="relative"><a href="#" class="bg-black-0a0a0a w-9 h-9 flex justify-center items-center border-[0.8px] border-white/20 rounded-lg group tooltip-trigger z-50" data-modal-target="delete-modal">
                                     
                                             <svg class="stroke-white group-hover:stroke-limegreen"  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M2.5 5H4.16667H17.5" stroke="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -500,7 +501,7 @@
                                                 </svg>
                                                                                                     
                                 </a>
-                                <div class="tooltip absolute bottom-0  right-12  flex flex-col items-center translate-y-2 invisible opacity-0 mb-2 duration-300 transition-all ">
+                                <div class="tooltip absolute bottom-0  right-10  flex flex-col items-center translate-y-2 invisible opacity-0 mb-2 duration-300 transition-all ">
                                     <p>Delete</p>
                                 </div>
                             </li>
@@ -510,6 +511,23 @@
                                     <div class="relative">
                                         <img src="assets/images/grid-img3.png" alt="image"
                                             class="w-full h-full rounded-lg" />
+                                            <ul class="flex flex-col gap-1.5 absolute top-0 right-0">
+                                          
+                                    <li class="relative"><a href="#" class="bg-black-0a0a0a w-9 h-9 flex justify-center items-center border-[0.8px] border-white/20 rounded-lg group tooltip-trigger z-50" data-modal-target="delete-modal">
+                                    
+                                            <svg class="stroke-white group-hover:stroke-limegreen"  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2.5 5H4.16667H17.5" stroke="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M6.66406 5.0013V3.33464C6.66406 2.89261 6.83966 2.46868 7.15222 2.15612C7.46478 1.84356 7.8887 1.66797 8.33073 1.66797H11.6641C12.1061 1.66797 12.53 1.84356 12.8426 2.15612C13.1551 2.46868 13.3307 2.89261 13.3307 3.33464V5.0013M15.8307 5.0013V16.668C15.8307 17.11 15.6551 17.5339 15.3426 17.8465C15.03 18.159 14.6061 18.3346 14.1641 18.3346H5.83073C5.3887 18.3346 4.96478 18.159 4.65222 17.8465C4.33966 17.5339 4.16406 17.11 4.16406 16.668V5.0013H15.8307Z" stroke="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M8.33594 9.16797V14.168" stroke="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.6641 9.16797V14.168" stroke="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                                                                    
+                                </a>
+                                <div class="tooltip absolute bottom-0  right-10  flex flex-col items-center translate-y-2 invisible opacity-0 mb-2 duration-300 transition-all ">
+                                    <p>Delete</p>
+                                </div>
+                            </li>
+                                            </ul>
                                     </div>
                                     <div class="relative">
                                         <img src="assets/images/grid-img4.png" alt="image"
@@ -621,7 +639,7 @@
     </div>
     <!--model dropdown-->
     <div
-        class="dropdown-menu  z-[100]   absolute left-[25px] sm:left-1/3  md:left-[305px] xl:left-[400px] top-[40%]   mt-2 w-[calc(100%-50px)] sm:w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+        class="dropdown-menu  z-[100]   absolute left-[25px] sm:left-1/3  md:left-[305px] xl:left-[395px] top-[15%]   mt-2 w-[calc(100%-50px)] sm:w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
         <div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
             <span class="text-sm font-medium text-white">Models</span>
             <button class="close-dropdown text-gray-500 hover:text-red-500">
@@ -1093,6 +1111,20 @@
             </div>
         </div>
     </div>
+    <div class="backdrop-blur-sm rounded-xl   fixed bg-gradient-to-r from-[#C6FF00] to-white bottom-5 right-8 max-w-[287px] w-full p-[1px]">
+        <div class="bg-[rgba(10,10,10,0.80)] w-full rounded-xl flex items-center gap-2.5 p-3">
+        <div class="w-8 h-8 rounded-lg bg-limegreen flex justify-center items-center">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3307 9.2474V5.7474C18.3307 2.83073 17.1641 1.66406 14.2474 1.66406H10.7474C7.83073 1.66406 6.66406 2.83073 6.66406 5.7474V6.66406H9.2474C12.1641 6.66406 13.3307 7.83073 13.3307 10.7474V13.3307H14.2474C17.1641 13.3307 18.3307 12.1641 18.3307 9.2474Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.3307 14.2474V10.7474C13.3307 7.83073 12.1641 6.66406 9.2474 6.66406H5.7474C2.83073 6.66406 1.66406 7.83073 1.66406 10.7474V14.2474C1.66406 17.1641 2.83073 18.3307 5.7474 18.3307H9.2474C12.1641 18.3307 13.3307 17.1641 13.3307 14.2474Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.07031 12.5L6.69531 14.125L9.93698 10.875" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>  
+                             
+        </div>
+   
+        <span class="text-base text-white font-medium">Prompt Copied to Clipboard!</span> 
+    </div>
+    </div>
     <!--aspect ratio dropdown-->
     <div
         class="dropdown-menu  z-[100]   absolute left-[25px] md:left-[305px] lg:left-[400px] top-[50%]   mt-2 w-[calc(100%-50px)] sm:w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
@@ -1226,6 +1258,47 @@
             </button>
         </div>
     </div>
+     <!--filter ratio dropdown-->
+     <div
+     class="dropdown-menu  z-[100]   absolute left-[25px] md:left-[305px] lg:left-[38%] top-[15%]   mt-2 w-[calc(100%-50px)] sm:w-[320px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+     <div class="flex justify-between items-center p-4 pt-[15px] border-b border-white/10">
+        <span class="text-sm font-medium text-white">Models</span>
+    </div>
+    <div class="p-5 flex items-center flex-wrap justify-between gap-x-8 gap-y-5">
+        <div class="flex items-center gap-1 min-w-[110px]">
+            <input id="checkbox-flux" type="checkbox" value="" class="w-5 h-5 appearance-none border cursor-pointer border-white/80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+            <label for="checkbox-flux" class="text-sm font-normal cursor-pointer text-white">Flux</label>
+        </div>
+        <div class="flex items-center gap-1 min-w-[110px]">
+            <input id="checkbox-ideogram" type="checkbox" value="" class="w-5 h-5 appearance-none border cursor-pointer border-white/80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+            <label for="checkbox-ideogram" class="text-sm font-normal cursor-pointer text-white">Ideogram</label>
+        </div>
+        <div class="flex items-center gap-1 min-w-[110px]">
+            <input id="checkbox-minimax" type="checkbox" value="" class="w-5 h-5 appearance-none border cursor-pointer border-white/80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+            <label for="checkbox-minimax" class="text-sm font-normal cursor-pointer text-white">Minimax Image</label>
+        </div>
+        <div class="flex items-center gap-1 min-w-[110px]">
+            <input id="checkbox-bria" type="checkbox" value="" class="w-5 h-5 appearance-none border cursor-pointer border-white/80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+            <label for="checkbox-bria" class="text-sm font-normal cursor-pointer text-white">Bria</label>
+        </div>
+        <div class="flex items-center gap-1 min-w-[110px]">
+            <input id="checkbox-sana" type="checkbox" value="" class="w-5 h-5 appearance-none border cursor-pointer border-white/80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+            <label for="checkbox-sana" class="text-sm font-normal cursor-pointer text-white">Sana</label>
+        </div>
+        <div class="flex items-center gap-1 min-w-[110px]">
+            <input id="checkbox-imagen" type="checkbox" value="" class="w-5 h-5 appearance-none border cursor-pointer border-white/80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+            <label for="checkbox-imagen" class="text-sm font-normal cursor-pointer text-white">Imagen 3</label>
+        </div>
+        <div class="flex items-center gap-1 min-w-[110px]">
+            <input id="checkbox-recraft" type="checkbox" value="" class="w-5 h-5 appearance-none border cursor-pointer border-white/80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+            <label for="checkbox-recraft" class="text-sm font-normal cursor-pointer text-white">Recraft v3</label>
+        </div>
+        <div class="flex items-center gap-1 min-w-[110px]">
+            <input id="checkbox-janus" type="checkbox" value="" class="w-5 h-5 appearance-none border cursor-pointer border-white/80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+            <label for="checkbox-janus" class="text-sm font-normal cursor-pointer text-white">Janus</label>
+        </div>
+    </div>
+ </div>
     <!--image to prompt-->
     <div class="modal modalTrigger bg-[#131313] border border-[#3C3C3C] max-h-max rounded-lg p-4" id="modal1">
         <div class="modal-content">
@@ -1409,7 +1482,47 @@
                 
         </div>
         </div> 
-    <div id="drop-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50"></div>
+     <!--delete Modal-->
+     <div class="modalTrigger  modal-home " id="delete-modal">
+        <div class="relative w-full  py-5 px-5 2xl:px-6 rounded-[24px] bg-black-1B1B1B border-[0.8px] border-white/20  h-auto  overflow-auto" >
+            <div class="flex flex-col w-full">
+                <span
+              class="close-btn cursor-pointer p-1.5 rounded-full bg-[#0A0A0A] text-white transition-all duration-300 hover:text-[#FF3030] absolute top-4 right-4 ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path
+                  d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
+                  stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+        
+            </span>
+            <div class="w-full">
+                <div class="flex items-center  gap-2.5">
+                    <div class="w-8 h-8 rounded-md bg-[#FF3030] flex items-center justify-center">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.25 4.95312H15.75M3.6 4.95312H14.4V11.2531C14.4 13.3744 14.4 14.4351 13.741 15.0941C13.082 15.7531 12.0213 15.7531 9.9 15.7531H8.1C5.97868 15.7531 4.91802 15.7531 4.25901 15.0941C3.6 14.4351 3.6 13.3744 3.6 11.2531V4.95312Z" stroke="white" stroke-linecap="round"/>
+                            <path d="M5.625 4.95V3.75C5.625 2.92157 6.29657 2.25 7.125 2.25H10.875C11.7034 2.25 12.375 2.92157 12.375 3.75V4.95M12.375 4.95H2.25M12.375 4.95H15.75" stroke="white" stroke-linecap="round"/>
+                            <path d="M7.64844 8.32812V12.3781" stroke="white" stroke-linecap="round"/>
+                            <path d="M10.3516 8.32812V12.3781" stroke="white" stroke-linecap="round"/>
+                            </svg>
+                            
+                    </div>
+                    <h2 class="text-base font-medium text-white">Confirm Deletion?</h2>
+                </div>
+                <p class="pt-4 pb-6 text-sm text-white/80 leading-6">
+                    Are you sure you want to delete this Generation? It will permanently deleted from your account. 
+                </p>
+                <div class="flex items-center gap-3">
+                    <button class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm text-white font-medium bg-[#1B1B1B] border border-[rgba(255,255,255,0.20)] hover:bg-white/5 transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
+                        Cancel
+                  </button>
+                  <button class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm text-white font-medium bg-[#FF3030] border border-[rgba(255,255,255,0.20)] hover:bg-[#bb1e1e] transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
+                    Delete
+              </button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>     
     <div class="overlay-modal w-full h-screen z-[10000] bg-black/50 backdrop-blur-xl fixed top-0 left-0 opacity-0 invisible"></div>
     <!-- MAIN JS-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

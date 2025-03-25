@@ -134,6 +134,7 @@
       z-index: 1000;
       overflow: auto;
     }
+
     @media (max-width: 600px) {
       .modal-home {
         margin: 10px;
@@ -452,34 +453,10 @@
       transition: opacity 0.3s;
       right: auto;
       left: auto;
-     border-right: 0px;
-     border-radius: 8px 0px 0px 8px;
+     border-radius: 8px ;
     }
     
-    .tooltip::after {
-      content: '';
-  position: absolute;
-  top: 26%; /* Position the arrow vertically at the center */
-  left: 100%; /* Position the arrow to the right */
-  margin-top: -8px; /* Center the arrow vertically */
-  width: 0;
-  height: 0;
-  border: 15px solid transparent;
-  border-left-color: #0A0A0A; /* Arrow color */
-  transform: rotate(0deg); /* Ensure arrow is upright */
-    }
-    .tooltip::before{
-      content: '';
-      display: block;
-      top: 24%; /* Position the border vertically */
-      left: 100%; /* Position the border to the right */
-      position: absolute;
-      width: 0;
-      height: 0;
-      border: 16px solid transparent;
-      border-left-color: rgba(255, 255, 255, 0.20); /* Border color for the arrow */
-      margin-top: -8px; /* Center the border vertically with the arrow */
-    }
+    
     .image-content{
       opacity: 0;
       visibility: hidden;
@@ -488,6 +465,9 @@
       opacity: 1;
       visibility: visible;
     }
+    input[type='checkbox']:checked {
+      background-image: url(../images/tick.png);
+  }
     @media(max-width:1500px) {
       .modal-image{ 
         max-width: 1300px;
