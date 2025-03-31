@@ -2705,6 +2705,11 @@ input[type='checkbox']:checked {
   background-color: rgb(255 48 48 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#FFB800\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 184 0 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#c6ff00\] {
   --tw-bg-opacity: 1;
   background-color: rgb(198 255 0 / var(--tw-bg-opacity, 1));
@@ -2728,6 +2733,10 @@ input[type='checkbox']:checked {
 
 .bg-\[rgba\(255\2c 255\2c 255\2c 0\.12\)\] {
   background-color: rgba(255,255,255,0.12);
+}
+
+.bg-\[rgba\(255\2c 255\2c 255\2c 0\.2\)\] {
+  background-color: rgba(255,255,255,0.2);
 }
 
 .bg-black {
@@ -3269,6 +3278,10 @@ input[type='checkbox']:checked {
   padding-right: 0.5rem;
 }
 
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
 .pr-3\.5 {
   padding-right: 0.875rem;
 }
@@ -3363,6 +3376,10 @@ input[type='checkbox']:checked {
 
 .text-right {
   text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-start {
@@ -3580,6 +3597,10 @@ input[type='checkbox']:checked {
 .text-\[\#c6ff00\] {
   --tw-text-opacity: 1;
   color: rgb(198 255 0 / var(--tw-text-opacity, 1));
+}
+
+.text-\[rgba\(255\2c 255\2c 255\2c 0\.5\)\] {
+  color: rgba(255,255,255,0.5);
 }
 
 .text-black {
@@ -3889,9 +3910,19 @@ input[type='checkbox']:checked {
   right: -89px;
 }
 
+.after\:left-\[2px\]::after {
+  content: var(--tw-content);
+  left: 2px;
+}
+
 .after\:top-\[180px\]::after {
   content: var(--tw-content);
   top: 180px;
+}
+
+.after\:top-\[2px\]::after {
+  content: var(--tw-content);
+  top: 2px;
 }
 
 .after\:z-0::after {
@@ -3904,9 +3935,19 @@ input[type='checkbox']:checked {
   display: none;
 }
 
+.after\:h-4::after {
+  content: var(--tw-content);
+  height: 1rem;
+}
+
 .after\:h-\[278px\]::after {
   content: var(--tw-content);
   height: 278px;
+}
+
+.after\:w-4::after {
+  content: var(--tw-content);
+  width: 1rem;
 }
 
 .after\:w-\[278px\]::after {
@@ -3925,15 +3966,40 @@ input[type='checkbox']:checked {
   background-color: rgb(198 255 0 / var(--tw-bg-opacity, 1));
 }
 
+.after\:bg-\[\#CDCDCD\]::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(205 205 205 / var(--tw-bg-opacity, 1));
+}
+
 .after\:opacity-50::after {
   content: var(--tw-content);
   opacity: 0.5;
+}
+
+.after\:shadow-\[0px_1px_3px_0px_rgba\(16\2c 24\2c 40\2c 0\.08\)\]::after {
+  content: var(--tw-content);
+  --tw-shadow: 0px 1px 3px 0px rgba(16,24,40,0.08);
+  --tw-shadow-colored: 0px 1px 3px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .after\:blur-\[250px\]::after {
   content: var(--tw-content);
   --tw-blur: blur(250px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.after\:transition-all::after {
+  content: var(--tw-content);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.after\:content-\[\'\'\]::after {
+  --tw-content: '';
+  content: var(--tw-content);
 }
 
 .checked\:border-transparent:checked {
@@ -4043,6 +4109,15 @@ input[type='checkbox']:checked {
   background-color: rgb(187 30 30 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[\#c9940b\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(201 148 11 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[rgba\(198\2c 255\2c 0\2c 0\.1\)\]:hover {
+  background-color: rgba(198,255,0,0.1);
+}
+
 .hover\:bg-\[rgba\(198\2c 255\2c 0\2c 0\.10\)\]:hover {
   background-color: rgba(198,255,0,0.10);
 }
@@ -4094,6 +4169,10 @@ input[type='checkbox']:checked {
 
 .hover\:bg-white\/5:hover {
   background-color: rgb(255 255 255 / 0.05);
+}
+
+.hover\:bg-white\/80:hover {
+  background-color: rgb(255 255 255 / 0.8);
 }
 
 .hover\:bg-gradient-to-tr:hover {
@@ -4306,9 +4385,37 @@ input[type='checkbox']:checked {
   background-color: rgba(198,255,0,0.04);
 }
 
+.peer:checked ~ .peer-checked\:bg-\[rgba\(198\2c 255\2c 0\2c 0\.3\)\] {
+  background-color: rgba(198,255,0,0.3);
+}
+
 .peer:checked ~ .peer-checked\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.peer:checked ~ .peer-checked\:after\:translate-x-full::after {
+  content: var(--tw-content);
+  --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.peer:checked ~ .peer-checked\:after\:bg-\[\#C6FF00\]::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(198 255 0 / var(--tw-bg-opacity, 1));
+}
+
+.peer:checked ~ .hover\:peer-checked\:bg-\[rgba\(198\2c 255\2c 0\2c 0\.3\)\]:hover {
+  background-color: rgba(198,255,0,0.3);
+}
+
+.peer:focus ~ .peer-focus\:outline-0 {
+  outline-width: 0px;
+}
+
+.peer:focus ~ .peer-focus\:ring-transparent {
+  --tw-ring-color: transparent;
 }
 
 .peer:disabled ~ .peer-disabled\:cursor-not-allowed {
@@ -4556,6 +4663,10 @@ input[type='checkbox']:checked {
     gap: 3rem;
   }
 
+  .md\:gap-3 {
+    gap: 0.75rem;
+  }
+
   .md\:overflow-hidden {
     overflow: hidden;
   }
@@ -4568,8 +4679,17 @@ input[type='checkbox']:checked {
     padding: 1.25rem;
   }
 
+  .md\:px-2\.5 {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+
   .md\:pr-0 {
     padding-right: 0px;
+  }
+
+  .md\:pr-3 {
+    padding-right: 0.75rem;
   }
 }
 
@@ -4973,12 +5093,20 @@ input[type='checkbox']:checked {
     max-width: 200px;
   }
 
+  .xl\:max-w-\[480px\] {
+    max-width: 480px;
+  }
+
   .xl\:max-w-\[680px\] {
     max-width: 680px;
   }
 
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .xl\:flex-row {
+    flex-direction: row;
   }
 
   .xl\:gap-7 {
@@ -5015,6 +5143,10 @@ input[type='checkbox']:checked {
     max-width: 230px;
   }
 
+  .\32xl\:max-w-\[630px\] {
+    max-width: 630px;
+  }
+
   .\32xl\:max-w-\[732px\] {
     max-width: 732px;
   }
@@ -5036,6 +5168,11 @@ input[type='checkbox']:checked {
   .\32xl\:py-7 {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
+  }
+
+  .\32xl\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
