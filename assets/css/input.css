@@ -468,6 +468,9 @@
     input[type='checkbox']:checked {
       background-image: url(../images/tick.png);
   }
+  #scrollable-container{
+    overflow-y: auto;
+  }
     @media(max-width:1500px) {
       .modal-image{ 
         max-width: 1300px;
