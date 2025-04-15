@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["*"],
+  content: ["*",
+    "./style_lora_single_pages/**/*.html",   
+    "./video_template_pikka_Ai_pages/**/*.html", 
+    "./video_template_pollo_Ai_pages/**/*.html",  
+    "./video_Generator/**/*.html", 
+    "./text-to-video-generator/**/*.html", 
+  ],
   theme: {
     extend: {
       fontFamily: {
