@@ -471,6 +471,55 @@
   #scrollable-container{
     overflow-y: auto;
   }
+  .sidemenu ul>li>a.active,.sidemenu ul>li>a:hover{
+    background: #1B1B1B;
+    border-radius: 8px;
+    color: white;
+
+  }
+  .sidemenu ul>li>a.active svg,.sidemenu ul>li>a:hover svg{
+    color: white;
+  }
+  #mobileMenu.open{
+    transform: translateX(0);
+    display: flex;
+    visibility: visible;
+  }
+  #menuToggle{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    
+  }
+  #menuToggle span{
+    width: 16px;
+    height: 1px;
+    position: absolute;
+    background: white;
+    left: 0;
+    transition: all .6s ease-in-out;
+
+  }
+  #menuToggle span:nth-child(1){
+    top: 5px;
+  }
+  #menuToggle span:nth-child(2){
+    top: 10px;
+  }
+  #menuToggle span:nth-child(3){
+    top: 15px;
+  }
+  /* #menuToggle.active span:nth-child(2){
+    opacity: 0;
+  }
+  #menuToggle.active span:nth-child(1){
+    rotate: 130deg;
+    top:12px;
+  }
+  #menuToggle.active span:nth-child(3){
+    rotate: 230deg;
+    top:12px;
+  } */
     @media(max-width:1500px) {
       .modal-image{ 
         max-width: 1300px;
