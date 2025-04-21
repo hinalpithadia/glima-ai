@@ -2264,6 +2264,10 @@ input[type='checkbox']:checked {
   max-width: 20rem;
 }
 
+.max-w-\[640px\] {
+  max-width: 640px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
