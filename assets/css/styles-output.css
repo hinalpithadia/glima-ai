@@ -1896,6 +1896,10 @@ input[type='checkbox']:checked {
   max-height: 194px;
 }
 
+.max-h-\[230px\] {
+  max-height: 230px;
+}
+
 .max-h-\[350px\] {
   max-height: 350px;
 }
@@ -1931,6 +1935,10 @@ input[type='checkbox']:checked {
 .max-h-max {
   max-height: -moz-max-content;
   max-height: max-content;
+}
+
+.max-h-\[240px\] {
+  max-height: 240px;
 }
 
 .min-h-\[120px\] {
@@ -2262,10 +2270,6 @@ input[type='checkbox']:checked {
 
 .max-w-xs {
   max-width: 20rem;
-}
-
-.max-w-\[640px\] {
-  max-width: 640px;
 }
 
 .flex-1 {
