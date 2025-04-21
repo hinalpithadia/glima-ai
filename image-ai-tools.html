@@ -11,7 +11,76 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
-  
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
+    <style>
+       .ba-slider, .ba-slider2 {
+    position: relative;
+    overflow: hidden;
+}
+ 
+.ba-slider img, .ba-slider2 img {
+    width: 100%;
+    display:block;
+    max-width:none;
+}
+ 
+.ba-slider .resize, .ba-slider2 .resize {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+
+.ba-slider .handle, .ba-slider2 .handle { /* Thin line seperator */
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    margin-left: -2px;
+    background: #000;
+    cursor: ew-resize;
+}
+ 
+.ba-slider .handle:after, .ba-slider2 .handle:after {  /* Big orange knob  */
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+ 
+    /*content:'↔';*/
+    content:'';
+    background-image: url("assets/images/image-ai-tools/handle.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
+    font-weight:bold;
+    font-size:30px;
+    text-align:center;
+    line-height:60px;
+    margin: -13px 0px 0px -13px;
+    background-color: #000; /* @orange */
+    border-radius: 50%;
+    transition:all 0.3s ease;
+}
+
+.ba-slider .handle.ba-draggable:after, .ba-slider2 .handle.ba-draggable:after {
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+    line-height:45px;
+    font-size:23px;
+}
+.resize img{
+    height: 100%;
+}
+.resize {
+    resize: none;
+}
+    </style>
 </head>
 
 <body >
@@ -216,7 +285,7 @@
                     <div class="flex-shrink-0 border-b border-white/10 pb-2.5 mb-4">
                         <ul class=" overflow-hidden flex flex-col gap-1.5">
                           <li>
-                            <a href="#" class="active flex items-center gap-3 text-[#B1B1B1] text-sm font-semibold py-2.5 px-3 rounded-lg group transition-all duration-300">
+                            <a href="#" class=" flex items-center gap-3 text-[#B1B1B1] text-sm font-semibold py-2.5 px-3 rounded-lg group transition-all duration-300">
                                 <svg class="text-[#B1B1B1]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.765 2.12866L2.7225 5.27866C2.0475 5.80366 1.5 6.92116 1.5 7.76866V13.3262C1.5 15.0662 2.9175 16.4912 4.6575 16.4912H13.3425C15.0825 16.4912 16.5 15.0662 16.5 13.3337V7.87366C16.5 6.96616 15.8925 5.80366 15.15 5.28616L10.515 2.03866C9.465 1.30366 7.7775 1.34116 6.765 2.12866Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M9 13.4922V11.2422" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -288,7 +357,7 @@
                             </a>
                           </li>
                           <li>
-                            <a href="#" class=" flex items-center gap-3 text-[#B1B1B1] text-sm font-semibold py-2.5 px-3 rounded-lg group transition-all duration-300">
+                            <a href="#" class="active flex items-center gap-3 text-[#B1B1B1] text-sm font-semibold py-2.5 px-3 rounded-lg group transition-all duration-300">
                                 <svg class="text-[#B1B1B1]"  width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.62313 15.3731C3.24562 15.9956 4.25062 15.9956 4.87312 15.3731L14.6231 5.62312C15.2456 5.00062 15.2456 3.99562 14.6231 3.37313C14.0006 2.75063 12.9956 2.75063 12.3731 3.37313L2.62313 13.1231C2.00063 13.7456 2.00063 14.7506 2.62313 15.3731Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M13.5078 6.74219L11.2578 4.49219" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -368,84 +437,144 @@
             class="2xl:w-[calc(100%-280px)] lg:w-[calc(100%-230px)] md:w-[calc(100%-250px)] w-full ml-auto relative  md:overflow-y-auto pt-[70px] px-4">
             <!--Main Content Page-->
             <div class="w-full h-full relative">
-                    <div class="border border-white/20 bg-black-1B1B1B rounded-2xl p-6 mb-8">
-                       <div class="flex  lg:flex-row justify-between flex-col gap-5">
-                        <div class="flex flex-col lg:items-start items-center gap-8 lg:gap-[150px] lg:w-1/2 2xl:max-w-[720px] xl:max-w-[680px] lg:max-w-[600px] ">
-                            <div class="block lg:text-left text-center">
-                                <h2 class="mb-3 bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent text-[32px] lg:text-[40px] leading-[50px] font-medium">
-                                    Image to Video<br>
-                                    Generator</h2>
-                                <p class="lg:text-lg text-base text-gray-B1B1B1 leading-7 font-normal">Our AI-powered image transformation tool makes it easy to give your pictures a fresh new look. Whether you want to add vibrant colors</p>
-                            </div>
-                            <button class="py-3.5 px-8 bg-limegreen rounded-lg w-max text-lg font-semibold text-black transition-all duration-500 hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);]">Start
-                                Generating Now!</button>
+                    <div class="border border-white/20 bg-[radial-gradient(50%_80.03%_at_49.97%_0%,rgba(198,255,0,0.14)_0%,rgba(27,27,27,0.00)_100%)] rounded-2xl py-[60px] px-6 mb-8 relative">
+                        <div class="block text-center">
+                            <h2 class="mb-3 bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent text-[32px] lg:text-[40px] leading-[50px] font-medium">
+                                Image AI Tools</h2>
+                            <p class="lg:text-lg text-base text-gray-B1B1B1 leading-7 font-normal">Our AI-powered image transformation tool makes it easy to give your pictures a fresh new look. Whether you want to add vibrant colors</p>
                         </div>
-                        <div class="relative lg:w-1/2 w-full flex flex-col gap-5">
-                            <div class="lg:block hidden absolute w-[100px] h-full bg-[linear-gradient(270deg,rgba(19,19,19,0.00)_0%,#1b1b1b_40.73%,#1b1b1b_100%)]  left-0 z-30"></div>
-                            <div class="dashboard-slider-left">
-                                <div class="relative">
-                                    <img src="https://glima.ai/storage/media/1744797746_YkWcphphHv1kb.webp" alt="image"/>
-                                </div>
-                                <div class="relative">
-                                    <img src="https://glima.ai/storage/media/1744797760_GZ2pphpIhHMsj.webp" alt="image"/>
-                                </div>
-                                <div class="relative">
-                                    <img src="https://glima.ai/storage/media/1744797772_98YMphpfzqsbc.webp" alt="image"/>
-                                </div>
-                                <div class="relative">
-                                    <img src="https://glima.ai/storage/media/1744797782_9yELphp6wy2qo.webp" alt="image"/>
-                                </div>
-                                <div class="relative">
-                                    <img src="https://glima.ai/storage/media/1744797746_YkWcphphHv1kb.webp" alt="image"/>
-                                </div>
-                                <div class="relative">
-                                    <img src="https://glima.ai/storage/media/1744797760_GZ2pphpIhHMsj.webp" alt="image"/>
-                                </div>
-                            </div>
-                            <div class="dashboard-slider-right" dir="rtl">
-                                <div class="relative">
-                                    <img src="https://glima.ai/storage/media/1744797793_cM3Wphp7LKv2W.webp" alt="image"/>
-                                </div>
-                                <div class="relative">
-                                    <img src="https://glima.ai/storage/media/1744797801_COgsphpkuCm6z.webp" alt="image"/>
-                                </div>
-                                <div class="relative">
-                                    <img src="https://glima.ai/storage/media/1744797816_4vh6phpeDrMVq.webp" alt="image"/>
-                                </div>
-                                <div class="relative">
-                                    <img src="assets/images/img-to-video-dashboard/hero-slide-right-4.png" alt="image"/>
-                                </div>
-                                <div class="relative">
-                                    <img src="https://glima.ai/storage/media/1744797826_8fCGphp98FLnZ.webp" alt="image"/>
-                                </div>
-                                <div class="relative">
-                                    <img src="https://glima.ai/storage/media/1744797801_COgsphpkuCm6z.webp" alt="image"/>
-                                </div>
-                            </div>
-                            <div class="lg:block hidden absolute w-[200px] h-full bg-[linear-gradient(90deg,rgba(16,16,16,0.00),#101010_100%)]  right-0 z-30"></div>
+                        <div class="absolute top-0 left-0 right-0 flex justify-center">
+                            <img src="assets/images/pattern.png" alt="image"/>
+                                
                         </div>
-                       </div>
                     </div>
                     <div class="flex flex-col gap-8">
                         <div class="flex flex-col gap-4">
                             <div class="block">
-                                <h4 class="text-xl text-white mb-1 font-semibold">Image Generation</h4>
+                                <h4 class="text-xl text-white mb-1 font-semibold">Image AI Tools</h4>
                                 <p class="text-base text-[#B1B1B1] font-normal">Create and explore image, video and audio AI powered tools</p>
                             </div>
                             <div class="grid 2xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
                                 <div class="bg-black-1B1B1B rounded-xl">
                                     <div class="rounded-t-xl max-h-[394px] relative">
-                                        <img class="w-full" src="https://glima.ai/storage/media/1744797613_Q8lgphpRK3CU1.webp" alt="image"/>
-                                        <div class="absolute left-0 right-0 m-auto bottom-[30px] rounded-xl bg-black-[.02] border-[6px] border-black/10 backdrop-blur-md flex items-center justify-between w-[calc(100%-30px)] p-2 translate-y-3  transition-all duration-300">
-                                            <p class="text-sm text-white font-medium ">Dog On Street</p>
+                                        <img class="w-full" src="assets/images/image-ai-tools/img-ai-tools-logo-generator.webp" alt="image"/>
+                                        <div class="absolute left-0 right-0 m-auto bottom-[30px] rounded-xl bg-white-[.02] border-[6px] border-white/10 backdrop-blur-md flex items-center justify-between w-[calc(100%-30px)] p-2 translate-y-3  transition-all duration-300">
+                                            <p class="text-sm text-white font-medium ">Sparrow logo with a colorful BG</p>
                                             <button class="py-2 px-6 bg-limegreen rounded-lg text-black font-semibold hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);] transition-all duration-300 text-xs">Generate</button>
                                         </div>
                                     </div>
                                     <div class="p-4">
-                                        <h4 class="text-base text-white font-semibold mb-2">Text to Image</h4>
+                                        <h4 class="text-base text-white font-semibold mb-2">Logo Generator</h4>
                                         <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
-                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">All-In-One Studio for image generation,
-                                                AI editing & more.</p>
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">AI powered logo creation tailored to your brand.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative ba-slider2">
+                                        <img class="w-full" src="assets/images/image-ai-tools/img-ai-tools-logo-bg.webp" alt="image"/>
+                                        <div class="resize" style="width: 50%;">
+                                            <img src="assets/images/image-ai-tools/img-ai-tools-logo-bg_1.webp" style="width: 540px;">
+                                         </div>
+                                         <span class="handle" style="left: 50%;"></span>
+                                        
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Logo Background Remover</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Remove backgrounds from logos with one click.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative">
+                                       
+                                            <img class="w-full" src="assets/images/image-ai-tools/img-ai-tools-tatto-generator.webp" alt="image"/>
+                                      
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Tattoo Generator</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Design custom tattoos effortlessly and instantly.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative ba-slider2">
+                                        <img class="w-full" src="assets/images/image-ai-tools/img-ai-tools-img-bg-remover.webp" alt="image"/>
+                                        <div class="resize" style="width: 50%;">
+                                            <img src="assets/images/image-ai-tools/img-ai-tools-img-bg-remover_1.webp" style="width: 540px;">
+                                         </div>
+                                         <span class="handle" style="left: 50%;"></span>
+                                        
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Image Background Remover</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Remove image backgrounds instantly and cleanly.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative ba-slider2">
+                                        <img class="w-full" src="assets/images/image-ai-tools/img-ai-tools-img-bg-remover.webp" alt="image"/>
+                                        <div class="resize" style="width: 50%;">
+                                            <img src="assets/images/image-ai-tools/img-ai-tools-img-bg-remover_1.webp" style="width: 540px;">
+                                         </div>
+                                         <span class="handle" style="left: 50%;"></span>
+                                        
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Image Upscaler</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Enhance image quality without losing detail.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative flex items-center">
+                                        <img class="w-1/2" src="assets/images/image-ai-tools/img-ai-tools-img-denoise_1.webp" alt="image"/>
+                                        <img class="w-1/2" src="assets/images/image-ai-tools/img-ai-tools-img-denoise_2.webp" alt="image"/>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Image Denoise</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Remove noise and enhance image clarity instantly.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative flex items-center">
+                                        <img class="w-1/2" src="assets/images/image-ai-tools/img-ai-tools-img-sharpner_1.webp" alt="image"/>
+                                        <img class="w-1/2" src="assets/images/image-ai-tools/img-ai-tools-img-sharpner_2.webp" alt="image"/>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Image Sharpner</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Sharpen your images for crisp, clear detail.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative ba-slider2">
+                                        <img class="w-full" src="assets/images/image-ai-tools/img-ai-tools-img-bg-remover.webp" alt="image"/>
+                                        <div class="resize" style="width: 50%;">
+                                            <img src="assets/images/image-ai-tools/img-ai-tools-img-bg-remover_1.webp" style="width: 540px;">
+                                         </div>
+                                         <span class="handle" style="left: 50%;"></span>
+                                        
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Image Unblur</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Recover sharpness and clarity from any image.</p>
                                              <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
                                         </div>
                                     </div>
@@ -458,10 +587,83 @@
                                         </div>
                                     </div>
                                     <div class="p-4">
-                                        <h4 class="text-base text-white font-semibold mb-2">Image to Image</h4>
+                                        <h4 class="text-base text-white font-semibold mb-2">Image Background Changer</h4>
                                         <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
-                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">All-In-One Studio for image generation,
-                                                AI editing & more.</p>
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">AI-powered background replacement with precision.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative">
+                                        <img class="w-full" src="https://glima.ai/storage/media/1744797636_9cjQphpJlOvH7.webp" alt="image"/>
+                                        <div class="absolute left-auto right-[15px]  bottom-[15px] rounded-xl flex items-center justify-between transition-all duration-300 w-fit" >
+                                            <img src="https://glima.ai/storage/media/1744797686_lopVphpHsFZ1V.webp" alt="image"/>
+                                            <img src="https://glima.ai/storage/media/1744797686_lopVphpHsFZ1V.webp" alt="image"/>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Face Swap</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">AI-driven face swaps that look real, feel magical.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative flex items-center">
+                                        <img class="w-1/2" src="assets/images/image-ai-tools/img-ai-tools-img-sharpner_1.webp" alt="image"/>
+                                        <img class="w-1/2" src="assets/images/image-ai-tools/img-ai-tools-img-sharpner_2.webp" alt="image"/>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Photo Restoration</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">AI-powered photo restoration for flawless results.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative">
+                                        <img class="w-full" src="https://glima.ai/storage/media/1744797636_9cjQphpJlOvH7.webp" alt="image"/>
+                                        <div class="absolute left-auto right-[15px]  bottom-[15px] rounded-xl flex items-center justify-between transition-all duration-300 w-fit" >
+                                            <img src="https://glima.ai/storage/media/1744797686_lopVphpHsFZ1V.webp" alt="image"/>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Object Remover</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Erase anything. Keep everything else perfect.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative">
+                                        <img class="w-full" src="https://glima.ai/storage/media/1744797636_9cjQphpJlOvH7.webp" alt="image"/>
+                                        <div class="absolute left-auto right-[15px]  bottom-[15px] rounded-xl flex items-center justify-between transition-all duration-300 w-fit" >
+                                            <img src="https://glima.ai/storage/media/1744797686_lopVphpHsFZ1V.webp" alt="image"/>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Image Extender</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Expand your visuals without losing quality.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl">
+                                    <div class="rounded-t-xl max-h-[394px] relative">
+                                        <img class="w-full" src="https://glima.ai/storage/media/1744797636_9cjQphpJlOvH7.webp" alt="image"/>
+                                        <div class="absolute left-auto right-[15px]  bottom-[15px] rounded-xl flex items-center justify-between transition-all duration-300 w-fit" >
+                                            <img src="https://glima.ai/storage/media/1744797686_lopVphpHsFZ1V.webp" alt="image"/>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Watermark Remover</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Polish your images by removing unwanted marks instantly.</p>
                                              <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
                                         </div>
                                     </div>
@@ -469,124 +671,53 @@
                                 <div class="bg-black-1B1B1B rounded-xl">
                                     <div class="rounded-t-xl max-h-[394px] relative">
                                        
-                                            <img class="w-full" src="https://glima.ai/storage/media/1744797705_S9WhphpZoOzVD.webp" alt="image"/>
+                                            <img class="w-full" src="assets/images/image-ai-tools/img-ai-tools-tatto-generator.webp" alt="image">
                                       
                                     </div>
                                     <div class="p-4">
-                                        <h4 class="text-base text-white font-semibold mb-2">Image Styles</h4>
+                                        <h4 class="text-base text-white font-semibold mb-2">Colorize Image</h4>
                                         <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
-                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">All-In-One Studio for image generation,
-                                                AI editing & more.</p>
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">AI-powered colorization smart, stunning, seamless.</p>
                                              <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-black-1B1B1B rounded-xl">
                                     <div class="rounded-t-xl max-h-[394px] relative">
-                                        <img class="w-full" src="https://glima.ai/storage/media/1744797724_sI7Bphp8g1M8F.webp" alt="image"/>
-                                    </div>
-                                    <div class="p-4">
-                                        <h4 class="text-base text-white font-semibold mb-2">Image AI Tools</h4>
-                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
-                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">All-In-One Studio for image generation,
-AI editing & more.</p>
-                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <div class="block">
-                                <h4 class="text-xl text-white mb-1 font-semibold">Video Generation</h4>
-                                <p class="text-base text-[#B1B1B1] font-normal">Create and explore image, video and audio AI powered tools</p>
-                            </div>
-                            <div class="grid 2xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
-                                <div class="bg-black-1B1B1B rounded-xl">
-                                    <div class="rounded-t-xl max-h-[394px] relative">
-                                        <img class="w-full" src="assets/images/img-to-video-dashboard/img-generator-1.png" alt="image"/>
-                                        <div class="absolute left-0 right-0 m-auto bottom-[30px] rounded-xl bg-black-[.02] border-[6px] border-black/10 backdrop-blur-md flex items-center justify-between w-[calc(100%-30px)] p-2 translate-y-3  transition-all duration-300">
-                                            <p class="text-sm text-white font-medium ">Girl take award</p>
+                                        <img class="w-full" src="assets/images/image-ai-tools/img-ai-tools-logo-generator.webp" alt="image">
+                                        <div class="absolute left-0 right-0 m-auto bottom-[30px] rounded-xl bg-white-[.02] border-[6px] border-white/10 backdrop-blur-md flex items-center justify-between w-[calc(100%-30px)] p-2 translate-y-3  transition-all duration-300">
+                                            <p class="text-sm text-white font-medium ">Baby fox on a stone path with...</p>
                                             <button class="py-2 px-6 bg-limegreen rounded-lg text-black font-semibold hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);] transition-all duration-300 text-xs">Generate</button>
                                         </div>
                                     </div>
                                     <div class="p-4">
-                                        <h4 class="text-base text-white font-semibold mb-2">Text to Video</h4>
+                                        <h4 class="text-base text-white font-semibold mb-2">Image to Prompt Generator</h4>
                                         <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
-                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">All-In-One Studio for image generation,
-                                                AI editing & more.</p>
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn any image into a detailed text prompt instantly.</p>
                                              <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-black-1B1B1B rounded-xl">
-                                    <div class="rounded-t-xl max-h-[394px] relative">
-                                        <img class="w-full" src="assets/images/img-to-video-dashboard/img-generator-2.png" alt="image"/>
-                                        <div class="absolute left-auto right-[15px]  bottom-[15px] rounded-xl flex items-center justify-between transition-all duration-300 w-fit" >
-                                            <img src="assets/images/img-to-video-dashboard/img-generator-2_small.png" alt="image"/>
-                                        </div>
+                                    <div class="rounded-t-xl max-h-[394px] relative ba-slider2">
+                                        <img class="w-full" src="assets/images/image-ai-tools/img-ai-tools-logo-bg.webp" alt="image"/>
+                                        <div class="resize" style="width: 50%;">
+                                            <img src="assets/images/image-ai-tools/img-ai-tools-logo-bg_1.webp" style="width: 540px;">
+                                         </div>
+                                         <span class="handle" style="left: 50%;"></span>
+                                        
                                     </div>
                                     <div class="p-4">
-                                        <h4 class="text-base text-white font-semibold mb-2">Image to Video</h4>
+                                        <h4 class="text-base text-white font-semibold mb-2">Face Retoucher</h4>
                                         <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
-                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">All-In-One Studio for image generation,
-                                                AI editing & more.</p>
-                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bg-black-1B1B1B rounded-xl">
-                                    <div class="rounded-t-xl max-h-[394px] relative">
-                                        <img class="w-full" src="assets/images/img-to-video-dashboard/img-generator-2.png" alt="image"/>
-                                        <div class="absolute left-auto right-[15px]  bottom-[15px] rounded-xl flex items-center justify-between transition-all duration-300 w-fit" >
-                                            <img src="assets/images/img-to-video-dashboard/img-generator-2_small.png" alt="image"/>
-                                        </div>
-                                    </div>
-                                    <div class="p-4">
-                                        <h4 class="text-base text-white font-semibold mb-2">Video AI Tools</h4>
-                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
-                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">All-In-One Studio for image generation,
-                                                AI editing & more.</p>
-                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bg-black-1B1B1B rounded-xl">
-                                    <div class="rounded-t-xl max-h-[394px] relative">
-                                        <video class="rounded-t-xl" width="100%" height="100%" autoplay loop>
-                                            <source src="assets/images/Explode-it.mp4" type="video/mp4">
-                                          </video>
-                                    </div>
-                                    <div class="p-4">
-                                        <h4 class="text-base text-white font-semibold mb-2">Video Template </h4>
-                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
-                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">All-In-One Studio for image generation,
-                                                AI editing & more.</p>
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Expand your visuals without losing quality.</p>
                                              <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-col gap-4">
-                            <div class="block">
-                                <h4 class="text-xl text-white mb-1 font-semibold">Explore Imagine by community</h4>
-                                <p class="text-base text-[#B1B1B1] font-normal">Create and explore image, video and audio AI powered tools</p>
-                            </div>
-                            <div class="flex flex-col gap-[2px]">
-                                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-[2px]">
-                                <img src="https://glima.ai/storage/media/1744797863_eX3Zphp6yO70o.webp" alt="image"/>
-                                <img src="https://glima.ai/storage/media/1744797871_IHVcphp22TB6V.webp" alt="image"/>
-                                <img src="https://glima.ai/storage/media/1744797879_Mcb7phpeEyXcu.webp" alt="image"/>
-                                <img src="https://glima.ai/storage/media/1744797887_Kua5php3VSyL8.webp" alt="image"/>
-                                </div>
-                                <div class="grid md:grid-cols-3 grid-cols-1 gap-[2px]">
-                                    <img src="https://glima.ai/storage/media/1744797895_DwZRphpkWr1gh.webp" alt="image"/>
-                                    <img src="https://glima.ai/storage/media/1744797904_aIzdphpjYYQKE.webp" alt="image"/>
-                                    <img src="https://glima.ai/storage/media/1744797912_qvWEphpU6mupT.webp" alt="image"/>
-                                </div>
-                            </div>    
-                        </div>
+                       
                     </div>
             </div>
         </div>
@@ -1267,7 +1398,9 @@ AI editing & more.</p>
 
     <!-- MAIN JS-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script>
 
     <script src="assets/js/main.js"></script>
     
@@ -1339,6 +1472,83 @@ $('.dashboard-slider-right').slick({
                 }
             },
             ]           
+});
+
+
+  </script>
+  <script>
+ (function($) {
+  function drags(dragElement, resizeElement, container) {
+    dragElement.on('mousedown.ba-events touchstart.ba-events', function(e) {
+      e.preventDefault();
+
+      // Add active class for styling (if needed)
+      dragElement.addClass('ba-draggable');
+      resizeElement.addClass('ba-resizable');
+
+      var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+      var dragWidth = dragElement.outerWidth(),
+          posX = dragElement.offset().left + dragWidth - startX,
+          containerOffset = container.offset().left,
+          containerWidth = container.outerWidth();
+
+      var minLeft = containerOffset;
+      var maxLeft = containerOffset + containerWidth - dragWidth;
+
+      // Mouse move
+      $(document).on('mousemove.ba-events touchmove.ba-events', function(e) {
+        var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+        var leftValue = moveX + posX - dragWidth;
+
+        // Keep handle within bounds
+        if (leftValue < minLeft) leftValue = minLeft;
+        if (leftValue > maxLeft) leftValue = maxLeft;
+
+        // Calculate percentage position
+        var widthValue = ((leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth) + '%';
+
+        // ✅ Update only this instance
+        dragElement.css('left', widthValue);
+        resizeElement.css('width', widthValue);
+      });
+
+      // Mouse up
+      $(document).on('mouseup.ba-events touchend.ba-events touchcancel.ba-events', function() {
+        // Remove active classes
+        dragElement.removeClass('ba-draggable');
+        resizeElement.removeClass('ba-resizable');
+
+        // Unbind events
+        $(document).off('.ba-events');
+      });
+    });
+  }
+
+  // Plugin definition
+  $.fn.beforeAfter = function() {
+    return this.each(function() {
+      var cur = $(this);
+      var width = cur.width() + 'px';
+      cur.find('.resize img').css('width', width);
+
+      // Bind drag functionality
+      drags(cur.find('.handle'), cur.find('.resize'), cur);
+
+      // Handle resize
+      $(window).on('resize', function() {
+        var width = cur.width() + 'px';
+        cur.find('.resize img').css('width', width);
+      });
+    });
+  };
+})(jQuery);
+
+// ✅ Initialize all sliders
+$(function() {
+  $('.ba-slider').beforeAfter();
+  $('.ba-slider2').beforeAfter();
+  $('.ba-slider3').beforeAfter(); // add more as needed
 });
 
 

@@ -2151,6 +2151,10 @@ input[type='checkbox']:checked {
   max-width: 190px;
 }
 
+.max-w-\[196px\] {
+  max-width: 196px;
+}
+
 .max-w-\[220px\] {
   max-width: 220px;
 }
@@ -2189,6 +2193,10 @@ input[type='checkbox']:checked {
 
 .max-w-\[392px\] {
   max-width: 392px;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .max-w-\[562px\] {
@@ -2343,6 +2351,10 @@ input[type='checkbox']:checked {
 
 .resize-none {
   resize: none;
+}
+
+.resize {
+  resize: both;
 }
 
 .appearance-none {
@@ -2993,6 +3005,10 @@ input[type='checkbox']:checked {
   background-image: radial-gradient(50% 50% at 50% 50%,rgba(198,255,0,0) 0%,rgba(198,255,0,0.1) 100%);
 }
 
+.bg-\[radial-gradient\(50\%_80\.03\%_at_49\.97\%_0\%\2c rgba\(198\2c 255\2c 0\2c 0\.14\)_0\%\2c rgba\(27\2c 27\2c 27\2c 0\.00\)_100\%\)\] {
+  background-image: radial-gradient(50% 80.03% at 49.97% 0%,rgba(198,255,0,0.14) 0%,rgba(27,27,27,0.00) 100%);
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -3343,6 +3359,11 @@ input[type='checkbox']:checked {
 .py-\[5px\] {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.py-\[60px\] {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .py-\[70px\] {
