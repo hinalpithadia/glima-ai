@@ -1182,6 +1182,14 @@ input[type='checkbox']:checked {
   height: 100%;
 }
 
+.landing-slider-bottom {
+  transform: rotate(180deg);
+}
+
+.landing-slider-bottom .slick-slide {
+  transform: rotate(-180deg);
+}
+
 /* #menuToggle.active span:nth-child(2){
     opacity: 0;
   }
@@ -1354,6 +1362,10 @@ input[type='checkbox']:checked {
   bottom: 0px;
 }
 
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
 .bottom-4 {
   bottom: 1rem;
 }
@@ -1408,6 +1420,10 @@ input[type='checkbox']:checked {
 
 .left-2\.5 {
   left: 0.625rem;
+}
+
+.left-3 {
+  left: 0.75rem;
 }
 
 .left-4 {
@@ -1560,6 +1576,46 @@ input[type='checkbox']:checked {
 
 .top-full {
   top: 100%;
+}
+
+.left-\[200px\] {
+  left: 200px;
+}
+
+.left-\[150px\] {
+  left: 150px;
+}
+
+.top-\[\] {
+  top: ;
+}
+
+.top-\[100px\] {
+  top: 100px;
+}
+
+.top-\[150px\] {
+  top: 150px;
+}
+
+.left-\[\] {
+  left: ;
+}
+
+.left-\[220px\] {
+  left: 220px;
+}
+
+.top-\[350px\] {
+  top: 350px;
+}
+
+.left-\[50px\] {
+  left: 50px;
+}
+
+.top-\[260px\] {
+  top: 260px;
 }
 
 .z-0 {
@@ -1819,6 +1875,10 @@ input[type='checkbox']:checked {
   margin-top: auto;
 }
 
+.ml-\[220px\] {
+  margin-left: 220px;
+}
+
 .block {
   display: block;
 }
@@ -1997,6 +2057,14 @@ input[type='checkbox']:checked {
   height: 100vh;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
+.h-\[220px\] {
+  height: 220px;
+}
+
 .max-h-96 {
   max-height: 24rem;
 }
@@ -2056,6 +2124,18 @@ input[type='checkbox']:checked {
 .max-h-max {
   max-height: -moz-max-content;
   max-height: max-content;
+}
+
+.max-h-\[\] {
+  max-height: ;
+}
+
+.max-h-\[220px\] {
+  max-height: 220px;
+}
+
+.max-h-\[500px\] {
+  max-height: 500px;
 }
 
 .min-h-\[120px\] {
@@ -2246,6 +2326,14 @@ input[type='checkbox']:checked {
 
 .w-px {
   width: 1px;
+}
+
+.w-\[104px\] {
+  width: 104px;
+}
+
+.w-\[350px\] {
+  width: 350px;
 }
 
 .min-w-\[110px\] {
@@ -2503,6 +2591,16 @@ input[type='checkbox']:checked {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-x-3 {
+  --tw-translate-x: 0.75rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-10 {
+  --tw-translate-x: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .rotate-3 {
   --tw-rotate: 3deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2547,6 +2645,10 @@ input[type='checkbox']:checked {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -2859,6 +2961,10 @@ input[type='checkbox']:checked {
   border-radius: 0.75rem;
 }
 
+.rounded-\[19px\] {
+  border-radius: 19px;
+}
+
 .rounded-b-xl {
   border-bottom-right-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
@@ -2884,6 +2990,10 @@ input[type='checkbox']:checked {
 
 .border-\[0\.8px\] {
   border-width: 0.8px;
+}
+
+.border-\[2px\] {
+  border-width: 2px;
 }
 
 .border-\[6px\] {

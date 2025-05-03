@@ -575,6 +575,12 @@
 {
     height: 100%;
 }
+.landing-slider-bottom {
+  transform: rotate(180deg);
+}
+.landing-slider-bottom .slick-slide {
+  transform: rotate(-180deg);
+}
 
   /* #menuToggle.active span:nth-child(2){
     opacity: 0;
