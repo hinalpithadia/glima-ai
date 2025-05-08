@@ -71,27 +71,7 @@
       color: #fff;
     }
   
-    .nav-link::before {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      width: 100%;
-      opacity: 0;
-      height: 2px;
-      background-color: #C6FF00;
-      left: 50%;
-      transform: translate(-50%, 0);
-      transition: 0.3s all ease-out;
-    }
-  
-    .navbar ul>li>a:hover:before {
-      opacity: 1;
-      -webkit-transition: 0.3s all ease-out;
-      -moz-transition: 0.3s all ease-out;
-      -ms-transition: 0.3s all ease-out;
-      -o-transition: 0.3s all ease-out;
-      transition: 0.3s all ease-out;
-    }
+   
   
     /*========modal css======*/
     .modalTrigger.modal-show {
@@ -486,7 +466,6 @@
     visibility: visible;
   }
   #menuToggle{
-    position: relative;
     width: 20px;
     height: 20px;
     
