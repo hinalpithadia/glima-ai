@@ -2219,6 +2219,10 @@ input[type='checkbox']:checked {
   width: 46%;
 }
 
+.w-\[50px\] {
+  width: 50px;
+}
+
 .w-\[58px\] {
   width: 58px;
 }
@@ -2271,14 +2275,6 @@ input[type='checkbox']:checked {
 
 .w-px {
   width: 1px;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[50px\] {
-  width: 50px;
 }
 
 .min-w-\[110px\] {
@@ -5327,12 +5323,21 @@ input[type='checkbox']:checked {
     padding-bottom: 0.5rem;
   }
 
+  .md\:py-2\.5 {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+
   .md\:pr-0 {
     padding-right: 0px;
   }
 
   .md\:pr-3 {
     padding-right: 0.75rem;
+  }
+
+  .md\:pt-\[70px\] {
+    padding-top: 70px;
   }
 
   .md\:text-sm {
@@ -5352,6 +5357,10 @@ input[type='checkbox']:checked {
 
   .lg\:left-\[400px\] {
     left: 400px;
+  }
+
+  .lg\:top-\[90px\] {
+    top: 90px;
   }
 
   .lg\:col-span-2 {
