@@ -672,6 +672,11 @@ body ::-webkit-scrollbar-thumb
   color: #fff;
 }
 
+.landing-hero-slider-left .slick-slide , .landing-hero-slider-right .slick-slide {
+  margin-right: 8px;
+  /* or your preferred spacing */
+}
+
 /*========modal css======*/
 
 .modalTrigger.modal-show {
@@ -943,10 +948,6 @@ input:not(:checked) ~ .toggle-labels .yearly {
 .slider-top, .slider-bottom {
   height: 100%;
   overflow: hidden;
-}
-
-.slick-slide {
-  height: 100%;
 }
 
 .slider-bottom {
@@ -1780,6 +1781,10 @@ input[type='checkbox']:checked {
   margin-top: 0.375rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -2309,6 +2314,10 @@ input[type='checkbox']:checked {
   max-width: 1170px;
 }
 
+.max-w-\[1200px\] {
+  max-width: 1200px;
+}
+
 .max-w-\[1260px\] {
   max-width: 1260px;
 }
@@ -2335,6 +2344,10 @@ input[type='checkbox']:checked {
 
 .max-w-\[220px\] {
   max-width: 220px;
+}
+
+.max-w-\[230px\] {
+  max-width: 230px;
 }
 
 .max-w-\[260px\] {
@@ -3775,6 +3788,10 @@ input[type='checkbox']:checked {
   padding-top: 0.375rem;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
 .pt-16 {
   padding-top: 4rem;
 }
@@ -3849,6 +3866,10 @@ input[type='checkbox']:checked {
 
 .pt-\[90px\] {
   padding-top: 90px;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .text-left {
@@ -5208,6 +5229,14 @@ input[type='checkbox']:checked {
 
   .md\:h-screen {
     height: 100vh;
+  }
+
+  .md\:max-h-\[650px\] {
+    max-height: 650px;
+  }
+
+  .md\:max-h-\[750px\] {
+    max-height: 750px;
   }
 
   .md\:w-\[240px\] {

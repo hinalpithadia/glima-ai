@@ -72,7 +72,9 @@
     }
   
    
-  
+   .landing-hero-slider-left .slick-slide , .landing-hero-slider-right .slick-slide {
+    margin-right: 8px; /* or your preferred spacing */
+}
     /*========modal css======*/
     .modalTrigger.modal-show {
       display: flex;
