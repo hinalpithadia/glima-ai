@@ -7,6 +7,9 @@ module.exports = {
     "./video_Generator/**/*.html", 
     "./text-to-video-generator/**/*.html",
     "./image-to-video-generator/**/*.html", 
+    "./Image_style_menual_single_pager/**/*.html",
+    "./nsfw/**/*.html", 
+    "./Image_Ai_Tool_Single_page/**/*.html", 
   ],
   theme: {
     extend: {
