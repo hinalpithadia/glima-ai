@@ -417,26 +417,52 @@
           background-position: -135% 0%;
       }
     }
-    .tooltip {
-      visibility: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.20); /* Border with slight transparency */
-      background: #0A0A0A; /* Background color */
-      padding: 6px 12px; /* Padding inside the tooltip */
-      font-size: 12px; /* Font size */
-      font-weight: 500; /* Font weight */
-      line-height: 18px; /* Line height */
-      color: #fff; /* Text color */
-      white-space: nowrap; /* Prevent text from wrapping */
-      position: absolute;
-      bottom: 100%; /* Position above the element */
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      transition: opacity 0.3s;
-      right: auto;
-      left: auto;
-     border-radius: 8px ;
-    }
+  .tooltip{
+  border: 1px solid rgba(153, 153, 153, 0.20) !important;
+  background: #000000 !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 18px !important;
+  color: #fff !important;
+  white-space: nowrap;
+}
+.tooltip:before {
+  content: '';
+  position: absolute;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  bottom: -6px;
+  margin: 0 6px;
+  transform-origin: 50% 0;
+}
+  .tippy-tooltip{
+    border: 1px solid rgba(153, 153, 153, 0.20) !important;
+    background: #000000 !important;
+    border-radius: 8px !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+    color: #fff !important;
+  }
+  .tippy-popper{
+    left:5px;
+  }
+  .tippy-arrow{
+    left: 55px;
+  }
+  .tippy-popper[x-placement^=top] .tippy-arrow {
+    border-top: 5px solid #000000;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    bottom: -6px;
+    margin: 0 6px;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
     
     
     .image-content{
