@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Window Width:", window.innerWidth); // Debugging log
 
       if (window.innerWidth > 1024 ) {
-          if (window.scrollY > 100) {
+          if (window.scrollY > 10) {
               navbar.classList.add("backdrop-blur-lg", "bg-black/25");
           } else {
               navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
