@@ -10,6 +10,7 @@ module.exports = {
     "./Image_style_menual_single_pager/**/*.html",
     "./nsfw/**/*.html", 
     "./Image_Ai_Tool_Single_page/**/*.html", 
+    "./Image-models-template/**/*.html", 
   ],
   theme: {
     extend: {
