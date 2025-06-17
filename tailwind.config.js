@@ -3,6 +3,7 @@ module.exports = {
   content: ["*",
     "./style_lora_single_pages/**/*.html",   
     "./video_template_generator/**/*.html", 
+    "./Video-models-template/**/*.html", 
     "./video_template_pikka_Ai_pages/**/*.html", 
     "./video_template_pollo_Ai_pages/**/*.html",  
     "./video_Generator/**/*.html", 

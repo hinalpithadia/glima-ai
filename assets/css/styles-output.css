@@ -1178,6 +1178,10 @@ input[type='checkbox']:checked {
   height: 100%;
 }
 
+.video-slider .slide {
+  margin: 0 10px;
+}
+
 /* #menuToggle.active span:nth-child(2){
     opacity: 0;
   }
@@ -1506,6 +1510,10 @@ input[type='checkbox']:checked {
   right: 14rem;
 }
 
+.right-6 {
+  right: 1.5rem;
+}
+
 .right-8 {
   right: 2rem;
 }
@@ -1644,6 +1652,14 @@ input[type='checkbox']:checked {
 
 .top-full {
   top: 100%;
+}
+
+.left-0\.5 {
+  left: 0.125rem;
+}
+
+.-right-0 {
+  right: -0px;
 }
 
 .isolate {
@@ -1943,6 +1959,10 @@ input[type='checkbox']:checked {
   display: inline-flex;
 }
 
+.table {
+  display: table;
+}
+
 .grid {
   display: grid;
 }
@@ -1985,6 +2005,14 @@ input[type='checkbox']:checked {
 
 .aspect-\[2\/1\.4\] {
   aspect-ratio: 2/1.4;
+}
+
+.aspect-\[643\/476\] {
+  aspect-ratio: 643/476;
+}
+
+.aspect-\[734\/522\] {
+  aspect-ratio: 734/522;
 }
 
 .aspect-square {
@@ -2246,6 +2274,10 @@ input[type='checkbox']:checked {
   min-height: 264px;
 }
 
+.min-h-\[400px\] {
+  min-height: 400px;
+}
+
 .min-h-\[498px\] {
   min-height: 498px;
 }
@@ -2400,6 +2432,10 @@ input[type='checkbox']:checked {
 
 .w-\[calc\(100\%-30px\)\] {
   width: calc(100% - 30px);
+}
+
+.w-\[calc\(100\%-48px\)\] {
+  width: calc(100% - 48px);
 }
 
 .w-\[calc\(100\%-50px\)\] {
@@ -2564,6 +2600,10 @@ input[type='checkbox']:checked {
   max-width: 400px;
 }
 
+.max-w-\[460px\] {
+  max-width: 460px;
+}
+
 .max-w-\[470px\] {
   max-width: 470px;
 }
@@ -2606,6 +2646,14 @@ input[type='checkbox']:checked {
 
 .max-w-\[638px\] {
   max-width: 638px;
+}
+
+.max-w-\[643px\] {
+  max-width: 643px;
+}
+
+.max-w-\[682px\] {
+  max-width: 682px;
 }
 
 .max-w-\[700px\] {
@@ -3483,6 +3531,10 @@ input[type='checkbox']:checked {
   background-image: linear-gradient(263deg,#F99D1A 13.95%,#FFD79D 46.91%,#F99D1A 76.61%);
 }
 
+.bg-\[linear-gradient\(270deg\2c _\#0A0A0A_0\%\2c _rgba\(10\2c 10\2c 10\2c 0\)_25\%\2c _rgba\(10\2c 10\2c 10\2c 0\)_50\%\2c _rgba\(10\2c 10\2c 10\2c 0\.5\)_75\%\2c _\#0A0A0A_100\%\)\] {
+  background-image: linear-gradient(270deg, #0A0A0A 0%, rgba(10,10,10,0) 25%, rgba(10,10,10,0) 50%, rgba(10,10,10,0.5) 75%, #0A0A0A 100%);
+}
+
 .bg-\[linear-gradient\(270deg\2c rgba\(10\2c 10\2c 10\2c 0\.00\)_0\%\2c \#0A0A0A_40\.73\%\2c \#0A0A0A_100\%\)\] {
   background-image: linear-gradient(270deg,rgba(10,10,10,0.00) 0%,#0A0A0A 40.73%,#0A0A0A 100%);
 }
@@ -3505,6 +3557,10 @@ input[type='checkbox']:checked {
 
 .bg-\[linear-gradient\(90deg\2c rgba\(227\2c 255\2c 128\2c 0\.10\)0\%\2c rgb\(0\2c 0\2c 0\2c 0\.10\)50\%\2c rgba\(227\2c 255\2c 128\2c 0\.10\)100\%\)\] {
   background-image: linear-gradient(90deg,rgba(227,255,128,0.10)0%,rgb(0,0,0,0.10)50%,rgba(227,255,128,0.10)100%);
+}
+
+.bg-\[radial-gradient\(22\.64\%_41\.12\%_at_50\%_0\%\2c rgba\(255\2c 255\2c 255\2c 0\.04\)_0\%\2c rgba\(255\2c 255\2c 255\2c 0\.00\)_100\%\)\] {
+  background-image: radial-gradient(22.64% 41.12% at 50% 0%,rgba(255,255,255,0.04) 0%,rgba(255,255,255,0.00) 100%);
 }
 
 .bg-\[radial-gradient\(37\.31\%_67\.78\%_at_50\%_0\%\2c rgba\(198\2c 255\2c 0\2c 0\.08\)_0\%\2c rgba\(198\2c 255\2c 0\2c 0\)_100\%\)\] {
@@ -4154,6 +4210,10 @@ input[type='checkbox']:checked {
 
 .pt-\[90px\] {
   padding-top: 90px;
+}
+
+.pt-px {
+  padding-top: 1px;
 }
 
 .text-left {
@@ -5840,6 +5900,10 @@ input[type='checkbox']:checked {
     top: -20rem;
   }
 
+  .lg\:left-3 {
+    left: 0.75rem;
+  }
+
   .lg\:left-\[38\%\] {
     left: 38%;
   }
@@ -5866,10 +5930,6 @@ input[type='checkbox']:checked {
 
   .lg\:top-\[90px\] {
     top: 90px;
-  }
-
-  .lg\:left-3 {
-    left: 0.75rem;
   }
 
   .lg\:col-span-2 {
@@ -5932,20 +5992,20 @@ input[type='checkbox']:checked {
     height: 500px;
   }
 
-  .lg\:h-auto {
-    height: auto;
-  }
-
-  .lg\:h-screen {
-    height: 100vh;
-  }
-
   .lg\:h-\[calc\(100vh-100px\)\] {
     height: calc(100vh - 100px);
   }
 
+  .lg\:h-auto {
+    height: auto;
+  }
+
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:h-screen {
+    height: 100vh;
   }
 
   .lg\:max-h-none {
@@ -6256,16 +6316,16 @@ input[type='checkbox']:checked {
     padding-left: 2rem;
   }
 
+  .lg\:pr-0 {
+    padding-right: 0px;
+  }
+
   .lg\:pt-0 {
     padding-top: 0px;
   }
 
   .lg\:pt-44 {
     padding-top: 11rem;
-  }
-
-  .lg\:pr-0 {
-    padding-right: 0px;
   }
 
   .lg\:text-left {
