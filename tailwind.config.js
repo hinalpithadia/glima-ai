@@ -13,6 +13,9 @@ module.exports = {
     "./nsfw/**/*.html", 
     "./Image_Ai_Tool_Single_page/**/*.html", 
     "./Image-models-template/**/*.html", 
+    "./Imagine-art-image/**/*.html",
+    "./Imagine-Art-Video-template/**/*.html", 
+    "./LLM-pages/**/*.html", 
   ],
   theme: {
     extend: {

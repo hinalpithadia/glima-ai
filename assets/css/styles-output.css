@@ -1182,6 +1182,151 @@ input[type='checkbox']:checked {
   margin: 0 10px;
 }
 
+.select-box .select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+
+.select-sort .select {
+  padding: 14px;
+  border-radius: 8px;
+  border: 0.8px solid rgba(255, 255, 255, 0.10);
+  background: #0A0A0A;
+}
+
+.city-select-sort .select {
+  padding: 10px 14px;
+  background: white;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+}
+
+.select-box .select {
+  position: relative;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  margin-bottom: 0px !important;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.select-box .select-styled {
+  position: relative;
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  margin-bottom: 0px !important;
+  width: 100%;
+  background: transparent;
+  padding-right: 50px;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.5s ease-in-out;
+}
+
+.select-box .select-styled:after {
+  content: url(../images/drop-arrow-select.png);
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 4px;
+  right: 20px;
+}
+
+.select-box .select-options {
+  display: none;
+  position: absolute;
+  top: 105%;
+  min-width: 150px;
+  right: 0;
+  left: 0px;
+  z-index: 999;
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+  border-radius: 8px;
+  border: 0.8px solid rgba(255, 255, 255, 0.10);
+  background: #0A0A0A;
+  transition: all 0.5s ease-in-out;
+}
+
+.select-box .select-options li {
+  display: block;
+  position: relative;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.select-box .select-options li:hover {
+  color: #C6FF00;
+  background: rgba(198, 255, 0, 0.10);
+}
+
+.select-box .select-options li[rel="hide"] {
+  display: none;
+}
+
+.text-area-prompt {
+  border-radius: 8px;
+  border: 0.8px solid rgba(255, 255, 255, 0.10);
+  background: #0A0A0A;
+  padding: 14px;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  min-height: 130px;
+  line-height: 19px
+}
+
+.text-area-prompt::-moz-placeholder {
+  color: rgb(255 255 255 / 0.5);
+}
+
+.text-area-prompt::placeholder {
+  color: rgb(255 255 255 / 0.5);
+}
+
+.text-input-prompt {
+  border-radius: 8px;
+  border: 0.8px solid rgba(255, 255, 255, 0.10);
+  background: #0A0A0A;
+  padding: 14px;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  line-height: 19px
+}
+
+.text-input-prompt::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-input-prompt::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 /* #menuToggle.active span:nth-child(2){
     opacity: 0;
   }
@@ -1654,14 +1799,6 @@ input[type='checkbox']:checked {
   top: 100%;
 }
 
-.left-0\.5 {
-  left: 0.125rem;
-}
-
-.-right-0 {
-  right: -0px;
-}
-
 .isolate {
   isolation: isolate;
 }
@@ -1781,6 +1918,10 @@ input[type='checkbox']:checked {
 
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
 .mb-2 {
@@ -2217,6 +2358,10 @@ input[type='checkbox']:checked {
   max-height: 498px;
 }
 
+.max-h-\[500px\] {
+  max-height: 500px;
+}
+
 .max-h-\[550px\] {
   max-height: 550px;
 }
@@ -2288,6 +2433,10 @@ input[type='checkbox']:checked {
 
 .min-h-\[550px\] {
   min-height: 550px;
+}
+
+.min-h-\[590px\] {
+  min-height: 590px;
 }
 
 .min-h-\[94px\] {
@@ -2693,6 +2842,10 @@ input[type='checkbox']:checked {
   max-width: 1536px;
 }
 
+.max-w-screen-lg {
+  max-width: 1024px;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }
@@ -2770,6 +2923,11 @@ input[type='checkbox']:checked {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-5 {
+  --tw-translate-y: 1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-\[-10px\] {
   --tw-translate-y: -10px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2800,6 +2958,14 @@ input[type='checkbox']:checked {
 
 .resize {
   resize: both;
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-decimal {
+  list-style-type: decimal;
 }
 
 .list-disc {
@@ -3198,6 +3364,10 @@ input[type='checkbox']:checked {
   border-width: 4px;
 }
 
+.border-\[0\.7px\] {
+  border-width: 0.7px;
+}
+
 .border-\[0\.8px\] {
   border-width: 0.8px;
 }
@@ -3264,6 +3434,11 @@ input[type='checkbox']:checked {
 .border-\[\#C6FF00\] {
   --tw-border-opacity: 1;
   border-color: rgb(198 255 0 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#D0D5DD\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(208 213 221 / var(--tw-border-opacity, 1));
 }
 
 .border-\[rgba\(198\2c 255\2c 0\2c 0\.30\)\] {
@@ -4236,6 +4411,10 @@ input[type='checkbox']:checked {
   text-align: start;
 }
 
+.font-inter {
+  font-family: inter;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -4391,6 +4570,10 @@ input[type='checkbox']:checked {
 
 .leading-\[18px\] {
   line-height: 18px;
+}
+
+.leading-\[19px\] {
+  line-height: 19px;
 }
 
 .leading-\[20px\] {
@@ -4834,6 +5017,11 @@ input[type='checkbox']:checked {
   top: 0px;
 }
 
+.before\:top-\[57px\]::before {
+  content: var(--tw-content);
+  top: 57px;
+}
+
 .before\:top-\[70px\]::before {
   content: var(--tw-content);
   top: 70px;
@@ -5175,6 +5363,10 @@ input[type='checkbox']:checked {
 .hover\:bg-limegreen:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(198 255 0 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-limegreen\/10:hover {
+  background-color: rgb(198 255 0 / 0.1);
 }
 
 .hover\:bg-limegreen\/20:hover {

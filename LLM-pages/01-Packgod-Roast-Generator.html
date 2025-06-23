@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/styles-output.css">
+   <link rel="stylesheet" href="../assets/css/styles-output.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
@@ -133,85 +133,131 @@
 
     <!--hero section-->
     <div class="hero relative w-full overflow-hidden pb-[120px] pt-[140px]">
-        <div class="flex lg:flex-row flex-col  lg:gap-8 gap-20 items-center justify-between ">
-            <div
-                class="flex flex-col lg:items-start items-center gap-6 lg:w-1/2 2xl:max-w-[740px] xl:max-w-[680px] lg:max-w-[600px] ml-auto lg:pl-8 lg:px-0 px-5">
-                <div class="block lg:text-left text-center">
-                    <h2
-                        class="mb-5 bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent text-[48px] lg:text-[64px] leading-[80px] font-medium">
-                        AI Barbie Selfie Generator
-                    </h2>
-                    <p class="lg:text-lg text-base text-gray-B1B1B1 leading-7 font-normal">
-                        Introducing the AI Barbie Selfie Generator, a fun and innovative tool that allows you to create
-                        personalized Barbie-style selfies in just a few clicks! Whether you want to add a touch of
-                        glamour to your social media profile or simply have a blast with friends, this generator helps
-                        you design vibrant images.
-                    </p>
-                </div>
-                <button
-                    class="py-3.5 px-8 bg-limegreen rounded-lg w-max text-lg font-semibold text-black transition-all duration-500 hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);]">Start
-                    Generating Now!</button>
+        <div class="w-full max-w-screen-2xl px-5 lg:px-8 mx-auto relative z-10">
+            <div class="block lg:text-left text-center w-full max-w-screen-lg mx-auto mb-16">
+                <h1
+                    class="mb-4 bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent text-[48px] lg:text-[64px] leading-[70px] font-medium text-center">
+                    Packgod Roast Generator
+                </h1>
+                <p class="text-base text-center text-gray-B1B1B1 leading-7 font-normal">
+                    Need the perfect roast? Glima AI’s Packgod Roast Generator gives you funny, smart, and savage roast
+                    lines made just for you. Whether it’s a quick comeback, a clever insult, or a bold lyric, Glima AI
+                    has you covered.
+                </p>
             </div>
-            <div class="relative lg:w-1/2 w-full flex flex-col gap-5">
-                <div
-                    class="lg:block hidden absolute w-[270px] h-full bg-[linear-gradient(270deg,rgba(10,10,10,0.00)_0%,#0A0A0A_40.73%,#0A0A0A_100%)]  left-0 z-30">
-                </div>
-                <div class="hero-slider-left">
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013838_UQ28php5K1uxj.webp" alt="image" />
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <form
+                    class="w-full h-full min-h-[590px] bg-[#1B1B1B] rounded-2xl border-[0.8px] border-white/20 p-5 flex justify-between flex-col">
+                    <div class="flex flex-col gap-5">
+                        <div class="block w-full">
+                            <label for="Roast-Type"
+                                class="block mb-2.5 text-base leading-[19px] font-medium text-white w-full">Roast
+                                Type</label>
+                            <div class="select-box select-sort input-field border-[#D0D5DD]">
+                                <select name="Roast-Type" id="Roast-Type" class=" font-normal text-base text-black ">
+                                    <option value="default">Default</option>
+                                    <option value="Playful-Banter">Playful Banter</option>
+                                    <option value="Rap-Battle">Rap Battle</option>
+                                    <option value="Friendly-Teasing">Friendly Teasing</option>
+                                    <option value="Clever-Comeback">Clever Comeback</option>
+                                    <option value="Quick-Wit">Quick Wit</option>
+                                    <option value="Lyrical-Diss">Lyrical Diss</option>
+                                    <option value="Humorous-Jab">Humorous Jab</option>
+                                    <option value="Sharp-Reply">Sharp Reply</option>
+                                    <option value="Casual-Roast">Casual Roast</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="block w-full">
+                            <label for="Style-Focus"
+                                class="block mb-2.5 text-base leading-[19px] font-medium text-white w-full">
+                                Style Focus</label>
+                            <div class="select-box select-sort input-field border-[#D0D5DD]">
+                                <select name="Style-Focus" id="Style-Focus" class=" font-normal text-base text-black ">
+                                    <option value="default">Default</option>
+                                    <option value="Funny">Funny</option>
+                                    <option value="Clever">Clever</option>
+                                    <option value="Sharp">Sharp</option>
+                                    <option value="Lighthearted ">Lighthearted </option>
+                                    <option value="Bold">Bold</option>
+                                    <option value="Creative">Creative</option>
+                                    <option value="Classic">Classic</option>
+                                    <option value="Modern">Modern</option>
+                                    <option value="Subtle">Subtle</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="block w-full">
+                            <label for="prompt"
+                                class="block mb-2.5 text-base leading-[19px] font-medium text-white w-full">
+                                What would you like to create?</label>
+                            <textarea name="prompt" id="prompt" class="text-area-prompt"
+                                placeholder="Write your prompt here"></textarea>
+                        </div>
                     </div>
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013851_7aeyphpOco9di.webp" alt="image" />
+                    <button
+                        class="py-2.5 px-4 rounded-lg flex justify-center items-center gap-2 text-lg text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2315_3680)">
+                                <path d="M6 9H9M9 9H12M9 9V6M9 9V12" stroke="black" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
+                                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2315_3680">
+                                    <rect width="18" height="18" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Generate
+                    </button>
+                </form>
+                <div class="w-full h-full min-h-[590px] bg-[#1B1B1B] rounded-2xl border-[0.8px] border-white/20 p-5">
+                    <div class="flex items-center justify-between mb-5">
+                        <h4 class="text-lg leading-[22px] font-medium font-inter text-limegreen">Your Generation</h4>
+                        <button
+                            class="p-[9px] rounded-md bg-[#0A0A0A] border-[0.7px] border-white/10 transition-all duration-500 hover:bg-limegreen/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path
+                                    d="M10.6654 8.59479V11.3948C10.6654 13.7281 9.73203 14.6615 7.3987 14.6615H4.5987C2.26536 14.6615 1.33203 13.7281 1.33203 11.3948V8.59479C1.33203 6.26146 2.26536 5.32812 4.5987 5.32812H7.3987C9.73203 5.32812 10.6654 6.26146 10.6654 8.59479Z"
+                                    stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M14.6673 4.6026V7.4026C14.6673 9.73594 13.734 10.6693 11.4007 10.6693H10.6673V8.6026C10.6673 6.26927 9.73398 5.33594 7.40065 5.33594H5.33398V4.6026C5.33398 2.26927 6.26732 1.33594 8.60065 1.33594H11.4007C13.734 1.33594 14.6673 2.26927 14.6673 4.6026Z"
+                                    stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013872_qrDQphp7cS6Md.webp" alt="image" />
-                    </div>
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013879_onLzphproE0E8.webp" alt="image" />
-                    </div>
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013838_UQ28php5K1uxj.webp" alt="image" />
-                    </div>
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013851_7aeyphpOco9di.webp" alt="image" />
-                    </div>
-                </div>
-                <div class="hero-slider-right" dir="rtl">
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013893_YGFxphpkiu7tc.webp" alt="image" />
-                    </div>
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013901_WkMlphpSTsU1y.webp" alt="image" />
-                    </div>
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013908_5yKbphpxGopoL.webp" alt="image" />
-                    </div>
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013916_ESwcphp13R2cL.webp" alt="image" />
-                    </div>
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013893_YGFxphpkiu7tc.webp" alt="image" />
-                    </div>
-                    <div class="relative">
-                        <img src="https://glima.ai/storage/media/1749013901_WkMlphpSTsU1y.webp" alt="image" />
-                    </div>
+                    <p class="text-base leading-7 font-inter text-white/80 max-h-[500px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+                        Sure, I'll give it a try! <br><br>
+
+                        "Your dog's the only one I know who can throw shade faster than they can fetch a ball!"
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum
+                    </p>
                 </div>
             </div>
         </div>
-
     </div>
 
     <!--unstability section-->
-    <div class="pt-16 pb-16 relative w-full">
+    <div class=" pb-16 relative w-full">
         <div class="w-full max-w-screen-2xl px-5 lg:px-8 mx-auto relative z-10">
             <div class="flex flex-col lg:items-start items-center lg:text-left text-center gap-5 mb-[70px]">
                 <h2
                     class="lg:text-[54px] text-[40px] lg:leading-[70px] leading-[60px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                    How to use AI Barbie Selfie Generator
+                    How to use Packgod Roast Generator
                 </h2>
                 <p class="lg:text-lg text-base leading-7 text-gray-B1B1B1">
-                    The AI Image Generator is a tool that transforms text descriptions or image into visual art using
-                    advanced artificial intelligence.
+                    The AI Image Generator is a tool that transforms text descriptions into visual art using advanced
+                    artificial intelligence.
                 </p>
 
             </div>
@@ -1093,10 +1139,11 @@
                     </div>
                     <div class="flex flex-col gap-3.5">
                         <h4 class="text-2xl font-medium text-white text-center leading-8">
-                            Upload Your Selfie
+                            Enter Your Target
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                            Choose a clear photo of yourself to start your transformation.
+                            Type the name, nickname, or short description of the person, object, or topic you want to
+                            roast.
                         </p>
                     </div>
                 </div>
@@ -1977,10 +2024,10 @@
                     </div>
                     <div class="flex flex-col gap-3.5">
                         <h4 class="text-2xl font-medium text-white text-center leading-8">
-                            Select Your Barbie Style
+                            Pick a Roast Style
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                            Pick your favorite hairstyle, makeup, and accessories to customize your look.
+                            Mix in extra keywords like “gaming,” “fashion,” or “school” for added punch.
                         </p>
                     </div>
                 </div>
@@ -2861,10 +2908,11 @@
                     </div>
                     <div class="flex flex-col gap-3.5">
                         <h4 class="text-2xl font-medium text-white text-center leading-8">
-                            Generate & Store
+                            Generate & Copy
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                            Let the AI work its magic, then download or share your fabulous Barbie portrait instantly!
+                            Hit “Roast Me” and let the AI craft savage, clever lines in seconds. Preview, copy your
+                            favorites, and unleash them wherever you need that perfect burn.
                         </p>
                     </div>
                 </div>
@@ -2878,190 +2926,45 @@
             <div class="flex flex-col lg:gap-[120px] gap-16">
                 <div class="flex lg:flex-row flex-col gap-10 lg:justify-between justify-center items-center">
                     <div class="block relative lg:w-1/2 group">
-                        <img src="https://glima.ai/storage/media/1749013931_xjy1phpaKJu6m.webp" alt="image"
+                        <img src="https://glima.ai/storage/media/1748945179_xTzaphpbfUZ2S.webp" alt="image"
                             class="w-full" />
-                        <div
-                            class="absolute left-0 right-0 m-auto bottom-[25px] rounded-xl bg-black-[.02] border-[6px] border-black/10 backdrop-blur-md flex items-center justify-between w-[calc(100%-30px)] p-2.5  ">
-                            <p class="text-lg text-white font-medium ">Turn Your Photos into ghibli style
-                            </p>
-                            <button
-                                class="py-2 px-6 bg-limegreen rounded-lg text-black font-semibold hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);] transition-all duration-300">Generate</button>
-                        </div>
                     </div>
                     <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center lg:text-left text-center">
                         <h3
                             class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                            Your Barbie Look Is Just One Click Away
+                            Ultimate Roast Engine – Powered by Packgod
                         </h3>
                         <p class="text-lg text-white/70 leading-8 font-normal">
-                            Step into a world of glam, glitter, and iconic style. Whether you're channeling classic
-                            pink, bold fashion, or modern Barbie vibes, we’ve got everything you need to create your
-                            perfect Barbie-inspired look. From head-turning outfits to flawless accessories it's all
-                            waiting for you.
+                            Fire up the engine and watch brutal comebacks roll out in seconds. Fueled by Packgod‑level
+                            wit, this AI turns any prompt into savage one‑liners, ready to scorch chats, streams, or
+                            friendly trash‑talk sessions—no mercy, all heat.
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!--image slider section-->
-    <div class="lg:py-16 py-16  relative w-full">
-        <div class="flex flex-col gap-5 w-full max-w-screen-2xl px-5 lg:px-8 mx-auto relative z-10 pb-9 lg:pb-[70px]">
-            <h2
-                class="text-[54px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-center">
-                Instant Barbie Vibes – Just Upload, Click, and Slay
-            </h2>
-            <p class="text-lg leading-[28px] text-[#B1B1B1] text-center">
-                Turn your everyday selfie into a glamorous Barbie-inspired masterpiece with the power of AI – fast, fun,
-                and fabulously flawless.
-            </p>
-        </div>
-        <div
-            class="grid relative md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[30px] max-h-[1080px] overflow-y-hidden px-6  mx-auto">
-            <div class=" slider-top" id="">
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749013972_XJCzphp1yPgwY.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749013980_x35FphpIYGtet.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749013987_pMxgphp13hnci.webp" alt="" class="img-1">
-                </div>
-                 <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749013972_XJCzphp1yPgwY.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749013980_x35FphpIYGtet.webp" alt="" class="img-1">
-                </div>
-
-            </div>
-            <div class=" slider-bottom max-md:hidden" id="">
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749013994_DgWSphpw2k5gA.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014000_YOpbphpDcDmJ8.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014007_lJEGphpBsdX3M.webp" alt="" class="img-1">
-                </div>
-                 <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749013994_DgWSphpw2k5gA.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014000_YOpbphpDcDmJ8.webp" alt="" class="img-1">
-                </div>
-
-            </div>
-            <div class=" slider-top max-lg:hidden" id="">
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014020_0L2Bphp8uP2na.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014027_HCFyphpLozfLU.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014033_EI0ephpNgnRIf.webp" alt="" class="img-1">
-                </div>
-                 <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014020_0L2Bphp8uP2na.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014027_HCFyphpLozfLU.webp" alt="" class="img-1">
-                </div>
-
-            </div>
-            <div class=" slider-bottom max-xl:hidden" id="">
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014042_Yb2rphpQiwdyN.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014051_2P6VphpxRsXDt.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014059_H72yphpd0dG3Q.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014042_Yb2rphpQiwdyN.webp" alt="" class="img-1">
-                </div>
-                <div class="slick-dupe">
-                    <img src="https://glima.ai/storage/media/1749014051_2P6VphpxRsXDt.webp" alt="" class="img-1">
-                </div>
-            </div>
-            <div class="w-full h-full absolute top-0 left-0 bg-cover z-[1] pointer-events-none "
-                style="background: linear-gradient(180deg, #0A0A0A 0%, rgba(10, 10, 10, 0.00) 25%, rgba(10, 10, 10, 0.00) 50%, rgba(10, 10, 10, 0.50) 75%, #0A0A0A 100%);">
             </div>
         </div>
     </div>
 
     <!--feature section-->
     <div class="py-16 relative w-full">
-
         <div class="w-full max-w-screen-2xl px-5 lg:px-8 mx-auto relative z-10">
             <div class="flex flex-col lg:gap-[120px] gap-16">
                 <div class="flex lg:flex-row-reverse flex-col gap-20 lg:justify-between justify-center items-center">
                     <div class="block relative lg:w-1/2 group">
-                        <img src="https://glima.ai/storage/media/1749013944_tujyphpJFdM3U.webp" alt="image"
+                        <img src="https://glima.ai/storage/media/1748945186_wH4tphp9lyJPE.webp" alt="image"
                             class="w-full" />
                     </div>
                     <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center lg:text-left text-center">
                         <h3
                             class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                            Turn Any Selfie Into a Fabulous Barbie Portrait Instantly
+                            Roast Reactor – Unleash Packgod Power
                         </h3>
                         <p class="text-lg text-white/70 leading-8 font-normal">
-                            Upload your selfie and watch the magic happen as our AI transforms you into a dazzling,
-                            Barbie-inspired version of yourself. From flawless skin to iconic glam, your dream look is
-                            just seconds away. No filters, no fuss - just pure Barbie perfection in one click!
+                            Drop your target into the reactor and let the Packgod algorithms go nuclear. In an instant,
+                            you’ll have razor‑sharp roasts, perfect for owning the moment, dominating debates, or just
+                            flexing verbal supremacy.
                         </p>
-                        <button
-                            class="py-3.5 mt-9 px-[30px] w-max  bg-limegreen rounded-lg text-lg leading-[26px] text-black font-semibold hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);] transition-all duration-300">
-                            Start Generating Now!</button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="py-16 relative w-full">
-        <svg class="lg:block hidden absolute left-0 top-full bottom-[-400px]" width="689" height="1278"
-            viewBox="0 0 689 1278" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.5" filter="url(#filter0_f_2607_3086)">
-                <circle cx="50" cy="639" r="139" fill="#C6FF00" />
-            </g>
-            <defs>
-                <filter id="filter0_f_2607_3086" x="-589" y="0" width="1278" height="1278" filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                    <feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_2607_3086" />
-                </filter>
-            </defs>
-        </svg>
-
-        <div class="w-full max-w-screen-2xl px-5 lg:px-8 mx-auto relative z-10">
-            <div class="flex flex-col lg:gap-[120px] gap-16">
-                <div class="flex lg:flex-row-reverse flex-col gap-20 lg:justify-between justify-center items-center">
-                    <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center lg:text-left text-center">
-                        <h3
-                            class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                            Experience the Magic of AI and See Yourself as Barbie in Seconds
-                        </h3>
-                        <p class="text-lg text-white/70 leading-8 font-normal">
-                            Transform your photo into a stunning Barbie masterpiece with our AI Barbie Selfie Generator.
-                            In seconds, our technology reimagines your features with iconic Barbie style.
-                        </p>
-                        <button
-                            class="py-3.5 mt-9 px-[30px] w-max  bg-limegreen rounded-lg text-lg leading-[26px] text-black font-semibold hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);] transition-all duration-300">
-                            Start Generating Now!</button>
-                    </div>
-                    <div class="block relative lg:w-1/2 group">
-                        <img src="https://glima.ai/storage/media/1749013955_z1G9phpRz703X.webp" alt="image"
-                            class="w-full" />
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -3076,8 +2979,7 @@
                     Frequently Asked Questions
                 </h2>
                 <p class="text-lg leading-7 text-gray-B1B1B1 lg:text-left text-center">
-                    Explore our amazing AI Barbie Selfie Generator! Discover how to easily craft one-of-a-kind Barbie
-                    selfies for your personalized creations.
+                    Find answers to common questions about our Packgod Roast Generator.
                 </p>
 
             </div>
@@ -3089,7 +2991,7 @@
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-one-with-arrow-always-open">
                         <h5 class="text-start">
-                            What is the AI Barbie Selfie Generator?
+                            What is the Packgod Roast Generator?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -3105,8 +3007,9 @@
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-one-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            It’s a fun and easy tool that uses artificial intelligence to transform your selfie into a
-                            glamorous Barbie-inspired portrait in just seconds.
+                            It’s an AI‑powered tool that instantly creates savage, clever, or comedic roast lines in the
+                            over‑the‑top “Packgod” style. Just supply a name or scenario and get tailor‑made clap‑backs
+                            in seconds.
                         </p>
                     </div>
                 </div>
@@ -3116,7 +3019,7 @@
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-two-with-arrow-always-open">
                         <h5 class="text-start">
-                            How do I create my Barbie selfie?
+                            Do I have to pay to use it?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -3132,8 +3035,8 @@
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-two-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            Simply upload a clear selfie, and our AI technology will automatically apply the iconic
-                            Barbie style, giving you a flawless, fashionable look.
+                            The core generator is free for a set number of roasts each day. Upgrading to Packgod Pro
+                            unlocks unlimited burns, longer diss tracks, and premium rhyme schemes.
                         </p>
                     </div>
                 </div>
@@ -3144,7 +3047,7 @@
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-four-with-arrow-always-open">
                         <h5 class="text-start">
-                            What kind of selfies work best?
+                           Is the generator safe for work?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -3160,8 +3063,7 @@
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-four-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            Clear, well-lit photos with your face fully visible work best for the most accurate and
-                            stunning Barbie transformation.
+                            By default, it produces PG‑13 burns. Toggle “NSFW Mode” for unfiltered heat (profanity and harsher insults).
                         </p>
                     </div>
                 </div>
@@ -3171,7 +3073,7 @@
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-five-with-arrow-always-open">
                         <h5 class="text-start">
-                            How long does the transformation take?
+                           Can I roast myself?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -3187,61 +3089,15 @@
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-five-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            Usually less than 10 seconds! The AI works quickly to deliver your Barbie look almost
-                            instantly.
+                           Absolutely. Enter your own name or quirks, and the tool will self‑pack you just as brutally.
                         </p>
                     </div>
                 </div>
-                <div class="accordion rounded-xl bg-black-1B1B1B accordion-active:border-gray-900 p-6"
-                    id="basic-heading-five-with-arrow-always-open">
-                    <button
-                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
-                        aria-controls="basic-collapse-five-with-arrow-always-open">
-                        <h5 class="text-start">
-                            Can I customize my Barbie look?
-                        </h5>
-                        <a href=""
-                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
-                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
-                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </button>
-                    <div id="basic-collapse-five-with-arrow-always-open"
-                        class="accordion-content w-full px-0 overflow-hidden active"
-                        aria-labelledby="basic-heading-five-with-arrow-always-open">
-                        <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            Yes! Depending on the version, you may be able to select different Barbie styles, makeup,
-                            hairstyles, and accessories.
-                        </p>
-                    </div>
-                </div>
+                
             </div>
         </div>
         <div
             class="absolute -right-[89px] bottom-[-152px] w-[278px] aspect-square rounded-full blur-[250px] bg-[#C6FF00] opacity-50 hidden lg:block">
-        </div>
-    </div>
-
-    <div class="pt-16  pb-16 relative w-full">
-        <div class="w-full max-w-screen-2xl px-5 lg:px-8 mx-auto relative z-10">
-            <div
-                class="w-full rounded-[26px] border-[0.8px] border-white/20 bg-[#1B1B1B] lg:py-[90px] py-8 px-9 flex flex-col items-center">
-                <h2
-                    class="lg:text-[44px] text-[32px] lg:leading-[70px] leading-[52px] font-medium text-transparent text-center bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                    The Barbie Filter You’ve Been Waiting For
-                </h2>
-                <p class="lg:text-lg text-base mt-[15px] mb-8 leading-[35px] text-center text-white/70 max-w-[1260px] ">
-                    Transform your selfie instantly with the ultimate Barbie filter that brings out your most glamorous,
-                    iconic look!
-                </p>
-                <button
-                    class="py-3.5 px-[30px] w-max mx-auto bg-limegreen rounded-lg text-lg leading-[26px] text-black font-semibold hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);] transition-all duration-300">
-                    Start Generating</button>
-            </div>
         </div>
     </div>
 
@@ -3338,103 +3194,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script>
-        $(document).ready(function () {
-            // First slider - moves downward
-            $('.slider-top').slick({
-                vertical: true,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                speed: 24000,
-                cssEase: "linear",
-                infinite: true,
-                arrows: false,
-                dots: false,
-                slidesToShow: 3,
-                pauseOnHover: false,
-                swipe: false,
-                touchMove: false,
-            });
-
-            // Second slider - moves upward (by rotating)
-            $('.slider-bottom').slick({
-                vertical: true,
-                autoplay: true,
-                autoplaySpeed: 0,
-                speed: 24000,
-                cssEase: "linear",
-                infinite: true,
-                arrows: false,
-                dots: false,
-                slidesToShow: 3,
-                pauseOnHover: false,
-                swipe: false,
-                touchMove: false,
-            });
-        });
-    </script>
-    <script>
-        $('.hero-slider-left').slick({
-            autoplay: true,
-            autoplaySpeed: 0,
-            speed: 24000,
-            cssEase: "linear",
-            infinite: true,
-            arrows: false,
-            dots: false,
-            slidesToShow: 3.5,
-            pauseOnHover: false,
-            swipe: false,
-            touchMove: false,
-            rtl: false,
-            responsive: [
-                {
-                    breakpoint: 1700,   // Screens smaller than 1200px
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
-                    breakpoint: 1500,   // Screens smaller than 1200px
-                    settings: {
-                        slidesToShow: 2.5,
-                    }
-                },
-            ]
-        });
-
-
-        // Initialize the Slick slider
-        $('.hero-slider-right').slick({
-            rtl: true,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 0,
-            speed: 24000,
-            slidesToShow: 3.5,
-            pauseOnHover: false,
-            arrows: false,
-            dots: false,
-            swipe: true,
-            touchMove: true,
-            responsive: [
-                {
-                    breakpoint: 1700,   // Screens smaller than 1200px
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
-                    breakpoint: 1500,   // Screens smaller than 1200px
-                    settings: {
-                        slidesToShow: 2.5,
-                    }
-                },
-            ]
-        });
-
-
-    </script>
 </body>
 
 </html>
