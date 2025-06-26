@@ -607,8 +607,38 @@ height: 100%;
     visibility: hidden;
     padding-right: 10px;
   }
+   .select-box .select-options::-webkit-scrollbar-track
+      {
+        background-color: transparent!important;
+          border-left: 8px solid transparent;
+      }
+
+      .select-box .select-options::-webkit-scrollbar
+      {
+        width: 5px;
+        background-color: transparent!important;
+        border-radius: 6px;
+        
+      }
+
+      .select-box .select-options::-webkit-scrollbar-thumb
+      {
+        background-color: rgba(255, 255, 255, 0.3)!important;
+         border-radius: 6px;
+         padding-right: 10px;
+      }
+  
+  .select-sort .select .select-styled{
+    padding: 12px;
+  }
+     .select-sort .select .select-styled:hover{
+    border-color:#C6FF00;
+  }
+ .select-sort .select .select-styled:focus{
+    border-color:#C6FF00;
+  }
   .select-sort .select {
-    padding: 14px;
+   
     border-radius: 8px;
     border: 0.8px solid rgba(255, 255, 255, 0.10);
     background: #0A0A0A;
@@ -651,21 +681,23 @@ height: 100%;
     padding-right: 50px;
     font-size: 16px;
     color: white;
+    border-radius: 8px;
     font-weight: 500;
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    border:1px solid transparent;
   }
 
 
 
   .select-box .select-styled:after {
-    content: url(../images/drop-arrow-select.png);
+    content: url(https://glima.ai/storage/media/1750914348_vpjKphpMwVt1B.png);
     width: 0;
     height: 0;
     position: absolute;
-    top: 4px;
-    right: 20px;
+    top: 15px;
+    right: 35px;
   }
   .select-box .select-options {
     display: none;
@@ -675,8 +707,9 @@ height: 100%;
     right: 0;
     left: 0px;
     z-index: 999;
-    margin: 0;
+    margin: 0px;
     padding: 5px;
+        border-right: 5px solid transparent!important;
     list-style: none;
     border-radius: 8px;
     border: 0.8px solid rgba(255, 255, 255, 0.10);
@@ -684,6 +717,8 @@ height: 100%;
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    max-height: 200px;
+    overflow-y: auto;
   }
   .select-box .select-options li {
     position: relative;
@@ -736,12 +771,58 @@ height: 100%;
     font-weight: 400;
     width: 100%;
     line-height: 19px;
+    transition:all .6s ease-in-out;
+    outline: none;
     @apply placeholder:text-white
   }
-
-
-
-
+  .text-input-prompt:hover{
+    border-color:#686767;
+  }
+.text-input-prompt:focus{
+    border-color:#C6FF00;
+  }
+/*==dashboard css====*/
+.dashboard-slider .slick-list.draggable,
+  .dashboard-slider .slick-track {
+    overflow: visible !important;
+     cursor: grab;
+  }
+  .dashboard-slider .slide {
+    height: auto;
+    margin: 0px 15px;
+  }
+ .dashboard-slider .slick-dots{
+  background: #1D1D1D;
+  border-radius: 4px;
+  max-width: 200px;
+  height: 2px;
+  display: flex;
+  margin: auto;
+    left: 0;
+    right: 0;
+ }
+  .dashboard-slider  .slick-track{
+    display: flex;
+ }
+ .dahboard-slider .slick-slide {
+  float: none !important;
+}
+  .dashboard-slider .slick-dots li button,.dashboard-slider .slick-dots li{
+    height: 2px;
+    width: 51px;
+    padding: 0;
+    border-radius: 4px;
+    margin: 0;
+ }
+ .dashboard-slider .slick-dots li.slick-active button{
+      background: #C6FF00;
+ }
+ .dashboard-slider .slick-dots li button:before{
+  content:none;
+ }
+.dashboard-slider .slide:nth-child(1){
+  margin-left: 0;
+}
   /* #menuToggle.active span:nth-child(2){
     opacity: 0;
   }
@@ -753,6 +834,40 @@ height: 100%;
     rotate: 230deg;
     top:12px;
   } */
+
+  /*===placeholder loading=====*/
+  .bar {
+  position: relative;
+  width: 80%;
+  height: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #0A0A0A;
+  opacity: 0;
+  animation: fadeInOut 1.5s ease-in-out infinite;
+}
+.bar-1 {
+  width: 20%;
+}
+.bar-2 {
+  width: 45%;
+  animation-delay: 0.2s;
+}
+.bar-3 {
+  width: 100%;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
     @media(max-width:1500px) {
       .modal-image{ 
         max-width: 1300px;
@@ -784,6 +899,12 @@ height: 100%;
         height:auto;
         padding: 20px;
       }
+      .dashboard-slider {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden!important;
+}
+.dashboard-slider .slick-list.draggable, .dashboard-slider .slick-track{}
       }
       @media(max-width:767px){
         .modal {
