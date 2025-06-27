@@ -757,6 +757,8 @@ height: 100%;
     width: 100%;
     min-height: 130px;
     line-height: 19px;
+      transition:all .6s ease-in-out;
+    outline: none;
     @apply placeholder:text-white/50
   }
   .text-input-prompt {
@@ -775,10 +777,10 @@ height: 100%;
     outline: none;
     @apply placeholder:text-white
   }
-  .text-input-prompt:hover{
+  .text-input-prompt:hover, .text-area-prompt:hover{
     border-color:#686767;
   }
-.text-input-prompt:focus{
+.text-input-prompt:focus,.text-area-prompt:focus{
     border-color:#C6FF00;
   }
 /*==dashboard css====*/

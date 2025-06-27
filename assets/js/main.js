@@ -104,13 +104,20 @@ $(document).ready(function () {
                 .toggle();
         });
 
-        $listItems.on('click', function (e) {
-            e.stopPropagation();
-            $styledSelect.text($(this).text()).removeClass("active");
-            $this.val($(this).attr("rel"));
-            $list.hide();
-            //console.log($this.val());
-        });
+      $listItems.on('click', function (e) {
+    e.stopPropagation();
+
+    const selectedText = $(this).text();
+    const selectedValue = $(this).attr("rel");
+
+    $styledSelect.text(selectedText).removeClass("active");
+
+    // Set the <select> value and trigger change
+    $this.val(selectedValue).trigger("change");
+
+    $list.hide();
+});
+        
 
         $(document).on('click', function () {
             $styledSelect.removeClass("active");
@@ -119,7 +126,9 @@ $(document).ready(function () {
     });
 });
 
-
+$("select").on("change", function () {
+    console.log("Changed:", $(this).attr("name"), "→", $(this).val());
+});
 
 
 
