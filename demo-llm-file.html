@@ -1,24 +1,20 @@
-slug:test-nickname
+slug:generator/ai-quirk
 
-meta title:Meta title goes here for test nickname
+meta title:Quirk Generator
 
-meta description:Meta Description goes here for test nickname
+meta description:Discover fun, unique character quirks in seconds with our AI Quirk Generator — perfect for superheroes, avatars, or creative storytelling!
 
 /*=========================================add prompt here========================================*/
-Prompt:If the user input is:
-
-Hello ,
-
 /*=========================================add field here (variable should match with fields id and name) ======================================== */
-Generate a Packgod Roast for me Roast type is {$Roast-Type}, Style Focus is {$Style-Focus} with additional details {$prompt}
-My name is {$name}. 
-My Style for Nickname is {$Style_of_Nickname}. 
-My  Prefernece for Nickname is {$preferences_or_Themes}. 
+If the user input is:
 
+My Type of Quirk is {$Type_of_Quick}. 
+My Select Traits is {$Select_Traits} .
+My Hero or Villain is {$Hero_or_Villain} . 
+also additional detail is {$quirks_additional_details}.
 
-/*=========================================add prompt with fields here========================================*/
-
-Create a list of 10 unique and creative nicknames for someone whose name is Aanya. The nicknames should follow the style: Cool and Modern. The user prefers nicknames inspired by the following themes or preferences: Nature, Stars, and Fantasy.
+Please,
+Generate a Quirk for me Type of Quirk is {$Type_of_Quick}, Select Traits is {$Select_Traits}, Hero or Villain is{$Hero_or_Villain} with additional details {$quirks_additional_details} 
 
 /*=========================================add html here========================================*/
 html:<!--hero section-->
@@ -27,64 +23,72 @@ html:<!--hero section-->
             <div class="block lg:text-left text-center w-full max-w-screen-lg mx-auto mb-16">
                 <h1
                     class="mb-4 bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent text-[48px] lg:text-[64px] leading-[70px] font-medium text-center">
-                   Packgod Roast Generator
+                   Quirk Generator
                 </h1>
                 <p class="text-base text-center text-gray-B1B1B1 leading-7 font-normal">
-                    Need the perfect roast? Glima AI’s Packgod Roast Generator gives you funny, smart, and savage roast lines made just for you. Whether it’s a quick comeback, a clever insult, or a bold lyric, Glima AI has you covered.
+                   Discover unique and imaginative quirks for your characters, stories, or personas with our AI-powered Quirk Generator. Whether you're building a superhero, a role-playing avatar, or just need a creative twist, this tool delivers personalized quirks in seconds to spark originality and fun.
                 </p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                <form
+                <form  id="myForm"
                     class="w-full h-full min-h-max lg:min-h-[590px] bg-[#1B1B1B] rounded-2xl border-[0.8px] border-white/20 p-5 flex justify-between flex-col gap-5">
                     <div class="flex flex-col gap-5">
                         <!--select-->
                          <div class="block w-full">
                             <!--add lable name here-->
-                            <label for="Roast-Type"
+                            <label for="Type_of_Quick"
                                 class="block mb-2.5 text-base leading-[19px] font-medium text-white w-full">
-                                Roast Type
+                                Type of Quirk
                             </label>
                             <div class="select-box select-sort input-field border-[#D0D5DD]">
-                               <select name="Roast-Type" id="Roast-Type" class="font-normal text-base text-black">
-                                        <option value="Playful-Banter">Playful Banter</option>
-                                        <option value="Rap-Battle">Rap Battle</option>
-                                        <option value="Friendly-Teasing">Friendly Teasing</option>
-                                        <option value="Clever-Comeback">Clever Comeback</option>
-                                        <option value="Quick-Wit">Quick Wit</option>
-                                        <option value="Lyrical-Diss">Lyrical Diss</option>
-                                        <option value="Humorous-Jab">Humorous Jab</option>
-                                        <option value="Sharp-Reply">Sharp Reply</option>
-                                        <option value="Casual-Roast">Casual Roast</option>
+                               <select name="Type_of_Quick" id="Type_of_Quick" class="font-normal text-base text-black">
+                                         <option value="Offensive">Offensive</option>
+                                        <option value="Defensive">Defensive</option>
+                                        <option value="Support">Support</option>
+                                        <option value="Mobility">Mobility</option>
+                                        <option value="Transformation">Transformation</option>
                                 </select>
                             </div>
                         </div>
                          <!--select-->
                          <div class="block w-full">
                             <!--add lable name here-->
-                            <label for="Style Focus"
+                            <label for="Select_Traits"
                                 class="block mb-2.5 text-base leading-[19px] font-medium text-white w-full">
-                                Style Focus
+                                Select Traits
                             </label>
                             <div class="select-box select-sort input-field border-[#D0D5DD]">
-                               <select name="Style-Focus" id="Style-Focus" class="font-normal text-base text-black">
-                                        <option value="Funny">Funny</option>
-                                                <option value="Clever">Clever</option>
-                                                <option value="Sharp">Sharp</option>
-                                                <option value="Lighthearted">Lighthearted</option>
-                                                <option value="Bold">Bold</option>
-                                                <option value="Creative">Creative</option>
-                                                <option value="Classic">Classic</option>
-                                                <option value="Modern">Modern</option>
-                                                <option value="Subtle">Subtle</option>
+                               <select name="Select_Traits" id="Select_Traits" class="font-normal text-base text-black">
+                                        <option value="Fire-based">Fire-based</option>
+                                        <option value="Ice-based">Ice-based</option>
+                                        <option value="Electric-based">Electric-based</option>
+                                        <option value="Wind-based">Wind-based</option>
+                                        <option value="Earth-based">Earth-based</option>
+                                </select>
+                            </div>
+                        </div>
+                         <!--select-->
+                         <div class="block w-full">
+                            <!--add lable name here-->
+                            <label for="Hero_or_Villain"
+                                class="block mb-2.5 text-base leading-[19px] font-medium text-white w-full">
+                                Hero or Villain
+                            </label>
+                            <div class="select-box select-sort input-field border-[#D0D5DD]">
+                               <select name="Hero_or_Villain" id="Hero_or_Villain" class="font-normal text-base text-black">
+                                      <option value="Hero-Quirk">Hero Quirk</option>
+                                        <option value="Villain-Quirk">Villain Quirk</option>
+                                        <option value="Support-Quirk">Support Quirk</option>
+                                        <option value="Unique-Quirk">Unique Quirk</option>
                                 </select>
                             </div>
                         </div>
                          <div class="block w-full">
-                            <label for="prompt"
+                            <label for="quirks_additional_details"
                                 class="block mb-2.5 text-base leading-[19px] font-medium text-white w-full">
-                               What would you like to create?</label>
-                            <textarea name="prompt" id="prompt" class="text-area-prompt"
-                                placeholder="Write your prompt here"></textarea>
+                               Any additional details or preferences?</label>
+                            <textarea name="quirks_additional_details" id="quirks_additional_details" class="text-area-prompt"
+                                placeholder="No"></textarea>
                         </div>
                     </div>
 
@@ -137,7 +141,7 @@ html:<!--hero section-->
             <div class="flex flex-col lg:items-start items-center lg:text-left text-center gap-5 mb-[70px]">
                 <h2
                     class="lg:text-[54px] text-[40px] lg:leading-[70px] leading-[60px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                    How to use Packgod Roast Generator
+                   How to use Quirk Generator
                 </h2>
                 <p class="lg:text-lg text-base leading-7 text-gray-B1B1B1">
                    The AI Image Generator is a tool that transforms text descriptions into visual art using advanced artificial intelligence.
@@ -1022,10 +1026,10 @@ html:<!--hero section-->
                     </div>
                     <div class="flex flex-col gap-3.5">
                         <h4 class="text-2xl font-medium text-white text-center leading-8">
-                            Enter Your Target
+                            Input a Name or Concept
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                           Type the name, nickname, or short description of the person, object, or topic you want to roast.
+                          Enter a character name, keyword, or theme to guide the quirk creation.
                         </p>
                     </div>
                 </div>
@@ -1906,10 +1910,10 @@ html:<!--hero section-->
                     </div>
                     <div class="flex flex-col gap-3.5">
                         <h4 class="text-2xl font-medium text-white text-center leading-8">
-                            Pick a Roast Style
+                            Click Generate
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                            Mix in extra keywords like “gaming,” “fashion,” or “school” for added punch.
+                           Hit the generate button and watch the AI create unique quirks for you.
                         </p>
                     </div>
                 </div>
@@ -2790,10 +2794,10 @@ html:<!--hero section-->
                     </div>
                     <div class="flex flex-col gap-3.5">
                         <h4 class="text-2xl font-medium text-white text-center leading-8">
-                           Generate & Copy
+                           Review and Use
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                            Hit “Roast Me” and let the AI craft savage, clever lines in seconds. Preview, copy your favorites, and unleash them wherever you need that perfect burn.
+                           Explore your new quirks and use them for storytelling, games, or creative projects!
                         </p>
                     </div>
                 </div>
@@ -2807,16 +2811,16 @@ html:<!--hero section-->
             <div class="flex flex-col lg:gap-[120px] gap-16">
                 <div class="flex lg:flex-row flex-col gap-10 lg:justify-between justify-center items-center">
                     <div class="block relative lg:w-1/2 group">
-                        <img src="https://glima.ai/storage/media/1748945179_xTzaphpbfUZ2S.webp" alt="image"
+                        <img src="https://glima.ai/storage/media/1751016042_E1qaphp9qSDef.webp" alt="image"
                             class="w-full" />
                     </div>
                     <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center lg:text-left text-center">
                         <h3
                             class="lg:text-[44px] text-[38px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                           Ultimate Roast Engine – Powered by Packgod
+                           Generate Fun and Memorable Quirks for Any Story
                         </h3>
                         <p class="text-lg text-white/70 leading-8 font-normal">
-                            Fire up the engine and watch brutal comebacks roll out in seconds. Fueled by Packgod‑level wit, this AI turns any prompt into savage one‑liners, ready to scorch chats, streams, or friendly trash‑talk sessions—no mercy, all heat.
+                          Whether you're crafting a comic book hero, a fantasy villain, or a quirky sidekick, our AI Quirk Generator helps you develop unforgettable character traits in seconds. Add personality, charm, and uniqueness to your story with AI-generated quirks that make every character stand out.
                         </p>
                     </div>
                 </div>
@@ -2830,16 +2834,16 @@ html:<!--hero section-->
             <div class="flex flex-col lg:gap-[120px] gap-16">
                 <div class="flex lg:flex-row-reverse flex-col gap-20 lg:justify-between justify-center items-center">
                     <div class="block relative lg:w-1/2 group">
-                        <img src="https://glima.ai/storage/media/1748945186_wH4tphp9lyJPE.webp" alt="image"
+                        <img src="https://glima.ai/storage/media/1751016056_0tNbphpPE8bbv.webp" alt="image"
                             class="w-full" />
                     </div>
                     <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center lg:text-left text-center">
                         <h3
                             class="lg:text-[44px] text-[38px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                            Roast Reactor – Unleash Packgod Power
+                            Build Distinctive Traits for Characters Quickly
                         </h3>
                         <p class="text-lg text-white/70 leading-8 font-normal">
-                          Drop your target into the reactor and let the Packgod algorithms go nuclear. In an instant, you’ll have razor‑sharp roasts, perfect for owning the moment, dominating debates, or just flexing verbal supremacy.
+                         Create original characters in no time with our AI Quirk Generator. Whether you're a writer, game developer, or storyteller, generate unique habits, ticks, and personality details that breathe life into your creations and set them apart from the crowd.
                         </p>
                     </div>
                 </div>
@@ -2856,7 +2860,7 @@ html:<!--hero section-->
                     Frequently Asked Questions
                 </h2>
                 <p class="text-lg leading-7 text-gray-B1B1B1 lg:text-left text-center">
-                    Find answers to common questions about our Nickname Generator.
+                   Find answers to common questions about our Quirk Generator. 
                 </p>
 
             </div>
@@ -2868,7 +2872,7 @@ html:<!--hero section-->
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-one-with-arrow-always-open">
                         <h5 class="text-start">
-                           What is the Packgod Roast Generator?
+                          What is an AI Quirk Generator?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -2884,7 +2888,7 @@ html:<!--hero section-->
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-one-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            It’s an AI‑powered tool that instantly creates savage, clever, or comedic roast lines in the over‑the‑top “Packgod” style. Just supply a name or scenario and get tailor‑made clap‑backs in seconds.
+                          An AI Quirk Generator is a tool that uses artificial intelligence to create unique and interesting character traits or quirks automatically, helping writers and creators add depth and personality to their characters.
                         </p>
                     </div>
                 </div>
@@ -2894,7 +2898,7 @@ html:<!--hero section-->
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-two-with-arrow-always-open">
                         <h5 class="text-start">
-                           Do I have to pay to use it?
+                          How does the AI Quirk Generator work?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -2910,7 +2914,7 @@ html:<!--hero section-->
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-two-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                           The core generator is free for a set number of roasts each day. Upgrading to Packgod Pro unlocks unlimited burns, longer diss tracks, and premium rhyme schemes.
+                           The generator analyzes input prompts or randomly combines traits using AI algorithms to produce fun, memorable, and sometimes unexpected quirks that fit different character profiles or story contexts.
                         </p>
                     </div>
                 </div>
@@ -2921,7 +2925,7 @@ html:<!--hero section-->
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-four-with-arrow-always-open">
                         <h5 class="text-start">
-                           Is the generator safe for work?
+                           Is the AI Quirk Generator suitable for all genres?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -2937,7 +2941,7 @@ html:<!--hero section-->
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-four-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                           By default, it produces PG‑13 burns. Toggle “NSFW Mode” for unfiltered heat (profanity and harsher insults).
+                          Absolutely! Whether you’re writing fantasy, sci-fi, romance, or comedy, the AI Quirk Generator can adapt to create quirks fitting any genre or style.
                         </p>
                     </div>
                 </div>
@@ -2947,7 +2951,7 @@ html:<!--hero section-->
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-five-with-arrow-always-open">
                         <h5 class="text-start">
-                            Can I roast myself?
+                           How do I get started with the AI Quirk Generator?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -2963,7 +2967,7 @@ html:<!--hero section-->
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-five-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                           Absolutely. Enter your own name or quirks, and the tool will self‑pack you just as brutally.
+                          Simply enter some basic info about your character or choose to generate quirks randomly. The AI will then provide you with a list of unique quirks to choose from.
                         </p>
                     </div>
                 </div>

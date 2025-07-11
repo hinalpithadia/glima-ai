@@ -21,6 +21,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'inter': ['inter'],
+        'inter-tight': ['inter tight'],
         'playfair': ['playfair'],
       },
       colors: {
