@@ -1157,7 +1157,40 @@ height: 100%;
     opacity: 1;
   }
 }
-
+.tab-buttons li {
+    padding: 8px 16px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+  }
+  .tab-buttons li.active {
+    background: #C6FF00;
+    color: #0A0A0A;
+  }
+  .tab-panel {
+    display: none;
+    padding-top: 15px;
+  }
+  .tab-panel.active {
+    display: block;
+  }
+  .wrapper-dropdown.active .arrow {
+        transform: rotate(0deg) !important;
+    }
+    .wrapper-dropdown.active .dropbtn{
+      opacity: 1;
+    }
+    .wrapper-dropdown.active .dropdown {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+    
+    .wrapper-dropdown1.active .dropdown {
+      opacity: 1;
+      visibility: visible;
+      display: block;
+  }
     @media(max-width:1500px) {
       .modal-image{ 
         max-width: 1300px;
