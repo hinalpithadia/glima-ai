@@ -1,0 +1,1731 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- REQUIRED META TAGS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Glima AI</title>
+    <!--- MAIN CSS ---->
+    <link rel="stylesheet" href="assets/css/styles-output.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
+ 
+</head>
+
+<body >
+    <div class="flex flex-col max-md:gap-8 md:flex-row bg-black-0a0a0a relative min-h-screen">
+        <div class="fixed left-0  -bottom-[550px]">
+            <svg width="689" height="1278" viewBox="0 0 689 1278" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5" filter="url(#filter0_f_3266_16707)">
+                <circle cx="50" cy="639" r="139" fill="#C6FF00"/>
+                </g>
+                <defs>
+                <filter id="filter0_f_3266_16707" x="-589" y="0" width="1278" height="1278" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_3266_16707"/>
+                </filter>
+                </defs>
+                </svg>
+                
+        </div>
+        <!--Header--->
+        <header class="py-4 px-3 fixed top-0 z-[1000] w-full bg-black-0a0a0a">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <button id="menuToggle" class="menu-toggle md:hidden p-2 text-white">
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                    </button>
+                    <a href="#" class=" 2xl:max-w-[230px] xl:max-w-[200px] lg:max-w-[180px]">
+                        <svg width="113" height="36" viewBox="0 0 113 36" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="35.7268" height="35.7268" rx="7.58393" fill="#C6FF00" />
+                        <path
+                            d="M110.103 14.0696H113.002V27.4879H110.103V25.5556C109.084 26.978 107.5 27.8367 105.407 27.8367C101.757 27.8367 98.7246 24.7505 98.7246 20.7787C98.7246 16.7801 101.757 13.7207 105.407 13.7207C107.5 13.7207 109.084 14.5795 110.103 15.975V14.0696ZM105.863 25.0726C108.278 25.0726 110.103 23.2745 110.103 20.7787C110.103 18.2829 108.278 16.4849 105.863 16.4849C103.448 16.4849 101.623 18.2829 101.623 20.7787C101.623 23.2745 103.448 25.0726 105.863 25.0726Z"
+                            fill="white" />
+                        <path
+                            d="M91.3012 13.7207C94.3337 13.7207 96.3733 15.814 96.3733 19.1685V27.4879H93.475V19.3564C93.475 17.4778 92.4552 16.4312 90.8718 16.4312C89.1543 16.4312 87.9466 17.5315 87.9466 19.9736V27.4879H85.0483V19.3564C85.0483 17.4778 84.109 16.4312 82.5256 16.4312C80.8886 16.4312 79.5468 17.5315 79.5468 19.9736V27.4879H76.6484V14.0696H79.5468V15.6798C80.4056 14.3648 81.7205 13.7207 83.3844 13.7207C85.1288 13.7207 86.4169 14.499 87.1952 15.8408C88.0808 14.4453 89.5031 13.7207 91.3012 13.7207Z"
+                            fill="white" />
+                        <path
+                            d="M71.8341 12.057C70.8144 12.057 69.9824 11.1982 69.9824 10.2052C69.9824 9.18545 70.8144 8.35352 71.8341 8.35352C72.8539 8.35352 73.6859 9.18545 73.6859 10.2052C73.6859 11.1982 72.8539 12.057 71.8341 12.057ZM70.385 27.488V14.0697H73.2833V27.488H70.385Z"
+                            fill="white" />
+                        <path d="M64.1211 27.4881V7.89746H67.0194V27.4881H64.1211Z" fill="white" />
+                        <path
+                            d="M61.4884 17.7731V19.0613C61.4884 24.1871 57.785 27.8369 52.2835 27.8369C46.4331 27.8369 42.2734 23.4893 42.2734 18.0952C42.2734 12.701 46.4868 8.35352 52.1225 8.35352C55.6917 8.35352 58.7242 10.1516 60.3076 12.8084L57.6508 14.3381C56.6847 12.5937 54.5914 11.3592 52.1225 11.3592C48.1506 11.3592 45.3596 14.2844 45.3596 18.122C45.3596 21.906 48.097 24.8312 52.3103 24.8312C55.7186 24.8312 57.8118 23.0599 58.3754 20.5373H52.0956V17.7731H61.4884Z"
+                            fill="white" />
+                        <path
+                            d="M12.9968 15.7929L7.69141 15.7897L7.69338 19.8093L12.8168 19.8123C13.3727 19.8121 13.8857 19.5159 14.1619 19.0357L17.0516 14.0292C17.3297 13.5479 17.3286 12.9558 17.0497 12.4728L14.4843 8.02932L11.0062 10.0374L13.6627 14.6386C13.9613 15.1513 13.5904 15.7914 12.9968 15.7929Z"
+                            fill="black" />
+                        <path
+                            d="M22.0295 14.6304L24.6849 10.0374L21.2029 8.0293L18.6386 12.4648C18.3608 12.9463 18.3608 13.5387 18.6386 14.018L21.5295 19.0238C21.8073 19.5053 22.3206 19.8004 22.8784 19.8004H28.0092V15.7842H22.6961C22.1028 15.7865 21.734 15.1452 22.0295 14.6304Z"
+                            fill="black" />
+                        <path
+                            d="M18.4029 23.0992L21.0529 27.6954L24.533 25.6839L21.9739 21.2454C21.6958 20.7641 21.1827 20.4679 20.6288 20.4688L14.8482 20.4695C14.2923 20.4693 13.7801 20.7663 13.5012 21.2493L10.9358 25.6928L14.4139 27.7009L17.0704 23.0996C17.3651 22.5847 18.1049 22.5859 18.4029 23.0992Z"
+                            fill="black" />
+                    </svg>
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button
+                    class="bg-transparent border border-limegreen md:py-2 py-1.5 md:px-3 px-2 rounded-lg flex items-center gap-1 transition-all duration-500 hover:bg-white/10 md:text-sm text-xs font-medium leading-5 text-white whitespace-nowrap">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 8.02488L8 0.144531V8.02488H16Z" fill="url(#paint0_linear_3266_16671)"/>
+                        <path d="M0 8.02344L7.99993 15.9037V8.02344H0Z" fill="url(#paint1_linear_3266_16671)"/>
+                        <path d="M7.99993 0.144531L0 8.02488H7.99993V0.144531Z" fill="url(#paint2_linear_3266_16671)"/>
+                        <path d="M8 8.02344V15.9037L16 8.02344H8Z" fill="url(#paint3_linear_3266_16671)"/>
+                        <path opacity="0.25" d="M7.98047 1.14453V2.01597L14.6157 7.92621L7.98047 1.14453Z" fill="#C6FF00"/>
+                        <path opacity="0.5" d="M7.78192 2.87891L7.69724 7.69054L2.99609 7.78512L7.31171 7.22891L7.78192 2.87891Z" fill="#C6FF00"/>
+                        <path opacity="0.5" d="M5.92578 8.22656H7.74695L7.78223 14.8113L7.48578 8.5464L5.92578 8.22656Z" fill="#C6FF00"/>
+                        <path opacity="0.5" d="M0.441406 7.78547C0.441406 7.78547 5.52588 4.02483 6.54831 2.02799L6.59666 1.93359L0.441406 7.78547Z" fill="#C6FF00 "/>
+                        <path d="M7.99998 9.83135C8.07087 9.27429 8.10347 8.71727 8.12879 8.1602C8.46861 8.17029 8.80843 8.17826 9.1482 8.17906C9.53096 8.18208 9.91368 8.17774 10.2964 8.16916C10.6791 8.1603 11.0619 8.1454 11.4447 8.12272C11.8274 8.10037 12.2101 8.07019 12.5929 8.02351C12.2101 7.97683 11.8274 7.94669 11.4447 7.9243C11.0619 7.90157 10.6792 7.88667 10.2964 7.87785C9.91368 7.86922 9.53096 7.86488 9.1482 7.86795C8.81853 7.8687 8.48891 7.87634 8.15924 7.88601C8.15627 6.61844 8.14938 5.35092 8.12482 4.08336C8.11405 3.42666 8.0971 2.76995 8.07838 2.1133C8.05373 1.50456 8.03717 0.895767 8.0062 0.287022C8.28523 0.546269 8.56411 0.805613 8.84778 1.06029C9.15682 1.3399 9.4639 1.6215 9.77878 1.89541C9.50071 1.58524 9.21484 1.28275 8.93098 0.978332C8.64822 0.672781 8.36033 0.372324 8.0725 0.0717713L8.00376 0L7.92746 0.0717713L6.90445 1.03416L5.89159 2.0065C5.22081 2.65914 4.55242 3.3141 3.89078 3.97575C2.56682 5.29835 1.26134 6.63919 4.67469e-05 8.02351C1.40538 6.78103 2.76658 5.49511 4.10925 4.19096C4.78089 3.53916 5.44584 2.88077 6.10839 2.22006L7.0955 1.22235L7.58093 0.721633C7.72401 0.574044 7.97527 0.679993 7.96723 0.883882C7.9511 1.29369 7.93813 1.70345 7.92152 2.1133C7.9028 2.77 7.88591 3.4267 7.87509 4.08336C7.85364 5.18956 7.86264 6.29582 7.86436 7.40203C7.8648 7.67151 7.64254 7.89049 7.36897 7.89016C6.24597 7.8887 5.12297 7.87988 3.99997 7.90105C3.3333 7.91161 2.66663 7.9283 2.00001 7.94674C1.33334 7.97272 0.666669 7.98805 0 8.02355C0.666669 8.05906 1.33334 8.07439 2.00001 8.10037C2.66667 8.1188 3.33334 8.1355 3.99997 8.14606C5.29065 8.17039 6.58139 8.17718 7.87207 8.18048C7.89735 8.73071 7.92994 9.28103 7.99998 9.83135Z" fill="white"/>
+                        <path d="M13.9668 9.9602C13.2933 10.6102 12.6173 11.2577 11.9504 11.9141L9.94473 13.8786L8.01097 15.7971C8.06544 15.1888 8.07841 14.1364 8.08052 13.586C8.07794 13.0019 8.06348 12.4178 8.00058 11.8338C7.93768 12.4179 7.92323 13.0019 7.92064 13.586C7.92236 14.0306 7.93117 14.8026 7.96315 15.4035C7.97052 15.542 7.80102 15.6168 7.70035 15.5199L6.24859 14.1227C5.64678 13.5466 5.0421 12.9734 4.43359 12.404C5.0141 13.0011 5.59838 13.5945 6.18559 14.185L7.952 15.9518L8.0001 15.9999L8.04936 15.9517L10.0565 13.9887L12.0508 12.013C12.7172 11.356 13.3745 10.6902 14.0344 10.0268C14.6952 9.36428 15.3487 8.69461 16.0006 8.02344C15.3191 8.66561 14.6393 9.30935 13.9668 9.9602Z" fill="white"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_3266_16671" x1="7.09999" y1="3.41411" x2="15.0423" y2="9.51278" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#C6FF00"/>
+                        <stop offset="0.2162" stop-color="#C6FF00"/>
+                        <stop offset="0.2473" stop-color="#C6FF00"/>
+                        <stop offset="0.5453" stop-color="#C6FF00"/>
+                        <stop offset="0.7807" stop-color="#C6FF00"/>
+                        <stop offset="0.9229" stop-color="#C6FF00"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_3266_16671" x1="2.06115" y1="13.8734" x2="7.77409" y2="8.07373" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#C6FF00"/>
+                        <stop offset="0.4077" stop-color="#C6FF00"/>
+                        <stop offset="1" stop-color="#C77C11"/>
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_3266_16671" x1="3.99996" y1="4.0847" x2="7.93968" y2="8.08422" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#C6FF00"/>
+                        <stop offset="0.9804" stop-color="#C6FF00"/>
+                        </linearGradient>
+                        <linearGradient id="paint3_linear_3266_16671" x1="8" y1="11.9636" x2="16" y2="11.9636" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#C6FF00"/>
+                        <stop offset="0.3939" stop-color="#C6FF00"/>
+                        <stop offset="0.9804" stop-color="#C6FF00"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                         200
+                </button>
+                    <button
+                        class="border border-limegreen md:py-2 py-1.5 md:px-3 px-2 rounded-lg flex items-center transition-all duration-500 hover:bg-[#c6ff001a] md:text-sm text-xs font-medium leading-5 whitespace-nowrap text-limegreen gap-1">
+                        Get Credits 
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_3266_16691)">
+                            <path d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z" stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 6V12" stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 9H12" stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_3266_16691">
+                            <rect width="18" height="18" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                    </button>
+                   
+                    <div class="wrapper-dropdown w-full relative" id="dropdown">
+                        <button
+                            class="dropbtn w-full flex items-center justify-between   rounded-lg font-medium  text-base text-white transition-all duration-300  ">
+                            <div class="w-full bg-black rounded-[7px]">
+                                <div class="flex items-center justify-between rounded-lg  w-full ">
+                                    <img src="assets/images/nav-user-avatar.png" alt="image">
+
+                                </div>
+                            </div>
+
+                        </button>
+                        <div
+                            class="dropdown absolute top-[57px] left-[-290px] w-[326px] z-20 invisible opacity-0  rounded-xl ">
+                            <div
+                                class="flex flex-col gap-1 rounded-lg p-3 bg-[#0C0C0C] w-full border border-[#99999933]">
+                                <div class="flex items-center justify-between pb-3">
+                                    <div class="block">
+                                        <h5 class="text-base font-semibold leading-5 text-white">Cameronwa</h5>
+                                        <span
+                                            class="text-xs font-normal leading-4 text-[#B1B1B1]">cameronwa@gmail.com</span>
+                                    </div>
+                                    <button
+                                        class="border border-[rgba(249,157,26,0.50)] bg-[rgba(249,157,26,0.10)] rounded-[34px] py-2 px-3 text-sm font-medium leading-5"><span
+                                            class="text-transparent bg-clip-text bg-[linear-gradient(263deg,#F99D1A_13.95%,#FFD79D_46.91%,#F99D1A_76.61%)]">Gold
+                                            Member</span></button>
+                                </div>
+                                <div class="border-t border-b border-[#161616] py-3">
+                                    <ul class="block">
+                                        <li><a href="#"
+                                                class="group flex items-center gap-1.5 text-xs font-medium leading-5 text-white hover:text-[#F99D1A] py-2 px-3 rounded-lg bg-transparent hover:bg-[rgba(249,157,26,0.10)] transition-all duration-500">
+                                                <svg class="text-white group-hover:text-[#F99D1A]" width="18"
+                                                    height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.75 15V14.25C3.75 11.3505 6.10051 9 9 9C11.8995 9 14.25 11.3505 14.25 14.25V15"
+                                                        stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M9 9C10.6568 9 12 7.65683 12 6C12 4.34314 10.6568 3 9 3C7.34314 3 6 4.34314 6 6C6 7.65683 7.34314 9 9 9Z"
+                                                        stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round"></path>
+                                                </svg>
+
+                                                My Profile
+                                            </a></li>
+                                        <li><a href="#"
+                                                class="group flex items-center gap-1.5 text-xs font-medium leading-5 text-white hover:text-[#F99D1A] py-2 px-3 rounded-lg bg-transparent hover:bg-[rgba(249,157,26,0.10)] transition-all duration-500">
+                                                <svg class="text-white group-hover:text-[#F99D1A]" width="18"
+                                                    height="18" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.45027 2.69995C10.8229 2.69995 11.3094 3.43838 11.4461 4.20019C11.5232 4.62967 12.3288 5.11123 12.7439 4.9768C13.44 4.75139 14.2664 4.81332 14.9062 5.84995C15.5436 7.06251 14.9732 7.89404 14.3305 8.39692C14.0127 8.64567 14.0127 9.35423 14.3305 9.60298C14.9732 10.1059 15.5436 10.9374 14.9062 12.15C14.2664 13.1866 13.44 13.2485 12.7439 13.0231C12.3288 12.8887 11.5232 13.3702 11.4461 13.7997C11.3094 14.5615 10.8229 15.3 9.45027 15.3C8.07764 15.3 7.59113 14.5615 7.45445 13.7997C7.37739 13.3702 6.57173 12.8887 6.15661 13.0231C5.46051 13.2485 4.63413 13.1866 3.9943 12.15C3.43914 11.0938 3.80033 10.3267 4.3274 9.81406C4.63615 9.51378 4.58006 8.6147 4.24582 8.34307C3.66098 7.86778 3.27109 7.08635 3.9943 5.84995C4.60083 4.81304 5.34665 4.66962 5.99916 4.84226C6.43294 4.95703 7.38306 4.42388 7.50147 3.99108C7.68815 3.30876 8.20392 2.69995 9.45027 2.69995Z"
+                                                        stroke="currentColor" stroke-width="1.2"></path>
+                                                    <circle cx="9.4525" cy="8.99998" r="1.29" stroke="currentColor"
+                                                        stroke-width="1.2"></circle>
+                                                </svg>
+
+                                                Settings
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <button
+                                    class="mt-3 w-full bg-[#191919] rounded-lg py-2 px-3 flex justify-center gap-1.5 text-sm font-medium text-white transition-all duration-500 hover:bg-[#2d2d2d]">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 15H13.5" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M9 3V12M9 12L11.625 9.375M9 12L6.375 9.375" stroke="white"
+                                            stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+
+                                    Log Out
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+      
+        <div
+            class=" w-full max-w-[1700px] px-4 lg:px-5 mx-auto relative  md:overflow-y-auto pt-[70px] ">
+            <!--Main Content Page-->
+            <div class="w-full h-full relative">
+                    <div class="border border-white/20 bg-[radial-gradient(50%_80.03%_at_49.97%_0%,rgba(198,255,0,0.14)_0%,rgba(27,27,27,0.00)_100%)] rounded-2xl py-[60px] px-6 mb-8 relative">
+                        <div class="block text-center">
+                            <h2 class="mb-3 bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent text-[32px] lg:text-[40px] leading-[50px] font-medium">
+                                Video AI Templates</h2>
+                            <p class="lg:text-lg text-base text-gray-B1B1B1 leading-7 font-normal">Our AI-powered image transformation tool makes it easy to give your pictures a fresh new look. Whether you want to add vibrant colors</p>
+                        </div>
+                        <div class="absolute top-0 left-0 right-0 flex justify-center">
+                            <img src="assets/images/pattern.png" alt="image"/>
+                                
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <div class="flex flex-col gap-4">
+                            <div class="block">
+                                <h4 class="text-xl text-white mb-1 font-semibold">Video AI Templates</h4>
+                                <p class="text-base text-[#B1B1B1] font-normal">Turn ideas into stunning videos</p>
+                            </div>
+                            <div class="grid 2xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
+                                <div onclick="window.location.href=''" class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973384_iuegphpGIxyF2.mp4" type="video/mp4">
+                                          </video>
+                                          
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Crush</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn anything into a crushed masterpiece.</p>
+                                             <a href="https://glima.ai/video-effects/ai-crush-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038538_OJoephpQO2aQY.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Ta da it</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn ideas into instant ta-da moments.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038556_maQkphphHMzBA.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Tear it</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Tear through ideas. Generate in seconds.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974388_RkO8phpfQULK5.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Squish It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Squeeze out something amazing.</p>
+                                             <a href="https://glima.ai/video-effects/ai-squish-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973421_6LGMphp823OZl.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Decapitate</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Seamless head removal with cinematic precision.</p>
+                                             <a href="https://glima.ai/video-effects/ai-decapitate-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038433_Kii5phpXbgs5k.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Eye pop</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Amplify the gaze. Let your eyes do the talking.</p>
+                                             <a href="https://glima.ai/video-effects/ai-eye-pop" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038387_x2JZphp6mEj5x.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Dissolve</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Fade it away with stunning AI precision.</p>
+                                             <a href="#" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls  h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038410_kWdXphpBLXgJm.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Explode it</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Blast it apart with cinematic AI power.</p>
+                                             <a href="https://glima.ai/video-effects/ai-exlpode-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls  h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974148_SRfcphpkgyQx2.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Levitate it</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Amplify the gaze. Let your eyes do the talking.</p>
+                                             <a href="https://glima.ai/video-effects/ai-levitate-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls  h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974163_4CmHphpDBfeZu.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Melt it</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Surreal visuals that bend form and flow like liquid dreams.</p>
+                                             <a href="https://glima.ai/video-effects/ai-melt-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974215_k5ZWphplb1ey6.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Peel it</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Uncover creativity, one layer at a time.</p>
+                                             <a href="https://glima.ai/video-effects/ai-peel-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038475_aWOhphp27yuUN.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Poke it</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Just poke it, watch the magic unfold.</p>
+                                             <a href="https://glima.ai/video-effects/ai-poke-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973088_kZ7TphpK1lMF9.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">360 Degree Rotation</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Explore your creations from all sides using smart 360 degree rendering.</p>
+                                             <a href="https://glima.ai/video-effects/ai-360-degree-rotation" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video" >
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973117_2nF1phpFUZaYo.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Angry</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Make yourself angry.</p>
+                                             <a href="https://glima.ai/video-effects/ai-angry-face" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973155_m7zzphp4Vbpop.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">animeify</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn any image into a lifelike animal animation.</p>
+                                             <a href="https://glima.ai/video-effects/ai-animeify" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973165_KI1ephpKirvte.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Assassin It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn yourself into a legendary assassin.</p>
+                                             <a href="https://glima.ai/video-effects/ai-assassin" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973177_DZnYphpnwQMyx.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Baby It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn yourself into a baby.</p>
+                                             <a href="https://glima.ai/video-effects/ai-baby-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973194_mEz2phpW4omfd.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Bride It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn yourself into a bride.</p>
+                                             <a href="https://glima.ai/video-effects/ai-bride-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973208_4HoYphpwdQVqZ.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Cakeify Effect</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Transform anything into a delicious cake creation.</p>
+                                             <a href="https://glima.ai/video-effects/ai-cakeify-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973344_6SFjphp7ZnPEJ.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Cartoon Jaw Drop</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Looney Tunes Jaw Drop.</p>
+                                             <a href="https://glima.ai/video-effects/ai-cartoon-jaw-drop" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973357_kym1phpyxRJlx.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Classy It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Become Classier.</p>
+                                             <a href="https://glima.ai/video-effects/ai-classy-effect" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative  aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973373_DDlfphpNvUcyw.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Crumble</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Watch it break down beautifully with AI.</p>
+                                             <a href="https://glima.ai/video-effects/ai-crumble-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973407_wP57phpICMT7q.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Crying</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Transform any face with lifelike crying effects.</p>
+                                             <a href="https://glima.ai/video-effects/ai-crying" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973436_LODOphphEjOBR.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Deflate it</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Watch it lose air — instantly, hilariously</p>
+                                             <a href="https://glima.ai/video-effects/ai-deflate-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744973449_XIXephpNJfxDc.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Disney Princess It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Transform into a Disney Princess.</p>
+                                             <a href="https://glima.ai/video-effects/ai-disney-princess-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038456_EnIlphpP305HC.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Hug Jesus</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Create a powerful moment of peace and comfort.</p>
+                                             <a href="https://glima.ai/video-effects/ai-hug-Jesus" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls  h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974031_ZrmIphpIVvyz8.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Hulk Transformation</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Transform into the Incredible Hulk.</p>
+                                             <a href="https://glima.ai/video-effects/ai-hulk-transformation" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974200_mCSHphpApmL1w.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Muscle show off</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Instant gains. AI-powered muscle boost.</p>
+                                             <a href="https://glima.ai/video-effects/ai-muscle-show-off" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls  h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974045_ewVVphpylzsms.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Inflate it Effect</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Inflate faces or objects with fun, animated volume.</p>
+                                             <a href="https://glima.ai/video-effects/ai-inflate-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974061_l0APphpKn5N3k.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Jumpscare</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn calm into chaos with one AI-powered scare.</p>
+                                             <a href="https://glima.ai/video-effects/ai-jumpscare-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                               
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974090_nxVAphps0mpBS.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Kissing</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Create a romantic moment from a single photo.</p>
+                                             <a href="https://glima.ai/video-effects/ai-kissing" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974111_rPJfphpY3GgSm.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Laughing</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Add natural laughter to your image in seconds.</p>
+                                             <a href="https://glima.ai/video-effects/ai-laughing-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="
+                                            https://glima.ai/storage/media/1744974182_gilyphpA9xiis.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Mona Lisa It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">AI transforms you into the Mona Lisa.</p>
+                                             <a href="https://glima.ai/video-effects/ai-mona-lisa-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974230_FT8rphpEXxrIL.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Pirate Captain</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn yourself into a pirate captain.</p>
+                                             <a href="https://glima.ai/video-effects/ai-pirate-captain" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038486_o9xwphpeL9DjD.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Princess It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn yourself into a princess.</p>
+                                             <a href="https://glima.ai/video-effects/ai-princess-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974018_vWqephpKc67KS.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Gun shooting</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Explosive action and lifelike gunfire, all crafted by AI.</p>
+                                             <a href="https://glima.ai/video-effects/ai-gun-shooting" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038497_uZy8phpTulU0E.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Puppy it</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Get surrounded by puppies</p>
+                                             <a href="https://glima.ai/video-effects/ai-puppy-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038515_vLLNphpnbd7VL.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Realistic Tsunamis</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Unleash cinematic tsunami waves with AI</p>
+                                             <a href="https://glima.ai/video-effects/ai-realistic-tsunamis" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974074_taSYphpwBKpjz.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Jungle It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Transform into the Tarzan version of yourself.</p>
+                                             <a href="https://glima.ai/video-effects/ai-jungle-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974290_Z9AYphpNGj6Bs.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Robotic Face Reveal</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">AI-generated robotic face reveals in seconds</p>
+                                             <a href="https://glima.ai/video-effects/ai-robotic-face-reveal" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974329_votZphpBrBESw.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Samurai It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Become a legendary Samurai.</p>
+                                             <a href="https://glima.ai/video-effects/ai-samurai-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974345_krRxphp6vLkv6.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Selfie younger self</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Take a selfie with your younger self </p>
+                                             <a href="https://glima.ai/video-effects/ai-selfie-younger-self" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls  h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974357_rtMnphpTGrwCo.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Skyrim Fus-Ro-Dah</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Fus-Ro-Dah Force Push Effect</p>
+                                             <a href="https://glima.ai/video-effects/ai-skyrim-fus-ro-dah" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974373_PmWJphp8AngnN.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Snow White It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Transform yourself into Snow White!</p>
+                                             <a href="https://glima.ai/video-effects/ai-snow-white-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative  aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038527_0A5gphpMqnsm1.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Super Saiyan</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Golden aura, spiked hair, and raw energy, all ignited by AI.</p>
+                                             <a href="https://glima.ai/video-effects/ai-super-saiyan" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls  h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974549_jXsTphpB5YlO4.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">VIP It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Transform yourself into a VIP!</p>
+                                             <a href="https://glima.ai/video-effects/ai-vip-it" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038569_Mvtwphp6A7ctE.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Warrior It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn into a warrior!</p>
+                                             <a href="https://glima.ai/video-effects/ai-warrior" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls  h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1745038582_9ANMphpjpfVXt.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Zen It</h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Turn yourself into a Zen version.</p>
+                                             <a href="https://glima.ai/video-effects/ai-zen" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-black-1B1B1B rounded-xl hover-play cursor-pointer">
+                                    <div class="rounded-t-xl max-h-[394px] relative aspect-video">
+                                        <video class="rounded-t-xl card-video no-controls h-full w-full  object-cover"  width="100%" height="100%" controls="false" muted playsinline>
+                                            <source src="https://glima.ai/storage/media/1744974499_WNJKphpNIuzhb.mp4" type="video/mp4">
+                                          </video>
+                                    </div>
+                                    <div class="p-4">
+                                        <h4 class="text-base text-white font-semibold mb-2">Zoom call </h4>
+                                        <div class="flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-2">
+                                            <p class="2xl:text-sm text-xs text-white max-w-[260px]">Videos of Zoom calls.</p>
+                                             <a href="https://glima.ai/video-effects/ai-zoom-call" class="text-xs text-limegreen font-medium">Know More</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+            </div>
+        </div>
+
+    </div>
+    <!--model dropdown-->
+    <div
+        class="dropdown-menu  z-[100]   absolute left-[25px] sm:left-1/3  md:left-[305px] xl:left-[400px] top-[40%]   mt-2 w-[calc(100%-50px)] sm:w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+        <div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+            <span class="text-sm font-medium text-white">Models</span>
+            <button class="close-dropdown text-gray-500 hover:text-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+                    <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <ul class="p-2  flex flex-col gap-[3px]">
+            <li class="relative">
+                <button class="submenu-btn w-full flex items-center justify-between p-1.5 rounded-lg cursor-pointer hover:bg-black-0a0a0a transition-all duration-500">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/mystic.png" alt="">
+                        <div class="text-left">
+                            <p class="text-xs font-medium text-white mb-1">Mystic</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">High-detail
+                                at 2k resolution</p>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M5.9375 13.2788L10.2842 8.93208C10.7975 8.41875 10.7975 7.57875 10.2842 7.06542L5.9375 2.71875"
+                            stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <!-- mystic submenu  -->
+                <div
+                    class="submenu absolute left-0 z-20  lg:left-120 top-0 mt-2 w-full sm:w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+                    <div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+                        <span class="text-sm font-medium text-white">Mystic</span>
+                        <button class="close-submenu text-gray-500 hover:text-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                fill="none">
+                                <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+                                <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="p-2  flex flex-col gap-[3px]">
+                        <li class="relative">
+                            <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black-0a0a0a transition-all duration-500 cursor-pointer">
+                                <img src="assets/images/1mystic1.png" alt="">
+                                <div class="">
+                                    <p class="text-xs font-medium text-white mb-1">Mystic 2.5</p>
+                                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">
+                                        Versatile with strong prompt adherence.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black-0a0a0a transition-all duration-500 cursor-pointer">
+                                <img src="assets/images/1mystic2.png" alt="">
+                                <div class="">
+                                    <p class="text-xs font-medium text-white mb-1">Mystic 2.5 Flexible</p>
+                                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">
+                                        Unmatched quality, top adherence.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black-0a0a0a transition-all duration-500 cursor-pointer">
+                                <img src="assets/images/1mystic3.png" alt="">
+                                <div class="">
+                                    <p class="text-xs font-medium text-white mb-1">Mystic 1.0</p>
+                                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Very
+                                        good quality and textures.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="flex items-center justify-between cursor-pointer p-1.5 rounded-lg cursor-pointer hover:bg-black-0a0a0a transition-all duration-500">
+                <div class="flex items-center gap-2">
+                    <img src="assets/images/mystic2.png" alt="">
+                    <div class="">
+                        <p class="text-xs font-medium text-white mb-1">Goggle Imagen 3</p>
+                        <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">High quality
+                            image generation</p>
+                    </div>
+                </div>
+
+            </li>
+            <!-- Submenu 1 -->
+            <li class="relative">
+                <button class="submenu-btn w-full text-left  cursor-pointer flex justify-between items-center p-1.5 rounded-lg cursor-pointer hover:bg-black-0a0a0a transition-all duration-500">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/mystic3.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Flux</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Many styles
+                                with text support</p>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M5.9375 13.2788L10.2842 8.93208C10.7975 8.41875 10.7975 7.57875 10.2842 7.06542L5.9375 2.71875"
+                            stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <!-- flux submenu  -->
+                <div
+                    class="submenu absolute left-0 z-20 lg:left-120 top-0 mt-2 w-full sm:w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+                    <div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+                        <span class="text-sm font-medium text-white">Flux</span>
+                        <button class="close-submenu text-gray-500 hover:text-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                fill="none">
+                                <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+                                <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="p-2  flex flex-col gap-[3px]">
+                        <li class="relative">
+                            <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black-0a0a0a transition-all duration-500 cursor-pointer">
+                                <img src="assets/images/2mystic1.png" alt="">
+                                <div class="">
+                                    <p class="text-xs font-medium text-white mb-1">Flux 1.0</p>
+                                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">
+                                        Versatile with strong prompt & tailoring</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black-0a0a0a transition-all duration-500 cursor-pointer">
+                                <img src="assets/images/2mystic2.png" alt="">
+                                <div class="">
+                                    <p class="text-xs font-medium text-white mb-1">Flux 1.0 Fast</p>
+                                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Balances
+                                        prompt adherence with agility</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black-0a0a0a transition-all duration-500 cursor-pointer">
+                                <img src="assets/images/2mystic3.png" alt="">
+                                <div class="">
+                                    <p class="text-xs font-medium text-white mb-1">Flux 1.0 Realism</p>
+                                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Best at
+                                        ultra-realistic images</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black-0a0a0a transition-all duration-500 cursor-pointer">
+                                <img src="assets/images/2mystic4.png" alt="">
+                                <div class="">
+                                    <p class="text-xs font-medium text-white mb-1">Flux 1.1</p>
+                                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Pure
+                                        precision</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Submenu 2 -->
+            <li class="relative">
+                <button class="submenu-btn w-full text-left cursor-pointer flex justify-between items-center p-1.5 rounded-lg cursor-pointer hover:bg-black-0a0a0a transition-all duration-500">
+                    <div class="flex items-center gap-2">
+                        <img src="assets/images/mystic4.png" alt="">
+                        <div class="">
+                            <p class="text-xs font-medium text-white mb-1">Classic</p>
+                            <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Fast with
+                                infinite variations</p>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M5.9375 13.2788L10.2842 8.93208C10.7975 8.41875 10.7975 7.57875 10.2842 7.06542L5.9375 2.71875"
+                            stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <!-- classic submenu  -->
+                <div
+                    class="submenu absolute left-0 z-20 lg:left-120 top-0 mt-2 w-full sm:w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+                    <div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+                        <span class="text-sm font-medium text-white">Classic</span>
+                        <button class="close-submenu text-gray-500 hover:text-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                fill="none">
+                                <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+                                <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="p-2  flex flex-col gap-[3px]">
+                        <li class="relative">
+                            <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black-0a0a0a transition-all duration-500 cursor-pointer">
+                                <img src="assets/images/3mystic-1.png" alt="">
+                                <div class="">
+                                    <p class="text-xs font-medium text-white mb-1">Classic Fast</p>
+                                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Faster
+                                        with enhanced personalization.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black-0a0a0a transition-all duration-500 cursor-pointer">
+                                <img src="assets/images/3mystic-2.png" alt="">
+                                <div class="">
+                                    <p class="text-xs font-medium text-white mb-1">Classic</p>
+                                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Our
+                                        legacy high quality model.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-black-0a0a0a transition-all duration-500 cursor-pointer">
+                                <img src="assets/images/1mystic3.png" alt="">
+                                <div class="">
+                                    <p class="text-xs font-medium text-white mb-1">Mystic 1.0</p>
+                                    <p class="text-[11px] font-light leading-3 text-opacity-70 text-white mb-1">Very
+                                        good quality and textures.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--style dropdown-->
+    <div
+        class="dropdown-menu  z-[100]  max-md:w-[calc(100%-60px)] md:w-[calc(100%-320px)] left-[30px] absolute md:left-[305px] xl:left-[395px]  top-[15%]   mt-2 2xl:w-[75%] xl:w-[68%] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+        <div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+            <span class="text-sm font-medium text-white">Styles (Loras)</span>
+            <button class="close-dropdown text-gray-500 hover:text-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+                    <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <div class="flex lg:flex-row flex-col">
+            <div class="lg:w-3/5 border-r border-white/10 px-5 pt-5 max-md:pb-8">
+                <div class="relative mb-5 ml-auto w-max">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M12.75 12.75L15.75 15.75" stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path
+                                d="M2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25C9.90975 14.25 11.4121 13.5761 12.4983 12.487C13.5808 11.4016 14.25 9.90397 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25Z"
+                                stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <input type="text" id="drop-default-search"
+                        class="block w-full max-w-[330px] pr-3.5 pl-10 py-3 text-sm leading-[18px] font-normal text-white bg-transparent border border-white/20 rounded-lg placeholder-white/80 transition-all duration-500 hover:border-white/50 outline-none focus-within:outline-offset-0 focus-within:outline focus-within:!outline-0 focus-within:outline-none "
+                        placeholder="Search by prompt">
+                </div>
+                <div class="overflow-y-auto h-full max-h-[560px]  modal-style-list pr-2">
+                    <ul class="flex items-center justify-center flex-wrap lg:grid 2xl:grid-cols-6 xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-5">
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img1.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Flux
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img2.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Flux Dev
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img3.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Realistic
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img4.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Anime
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img5.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                PNG
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img6.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Pencil Sketch
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img7.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Casting Shadows
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img8.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Chibi Character
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img9.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Concept Art
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img10.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Cyberpunk Anime
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img11.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Illustration Style
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img12.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Dark Fantasy
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img13.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Japanese Poster
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img14.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Midjourney Style
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img15.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Vector Art
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img16.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Neon Cyperpunk
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img17.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Pixel Art
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img18.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Mythic Fantasy
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img19.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Mythic Fantasy
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img20.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Mythic Fantasy
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img21.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Mythic Fantasy
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img22.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Mythic Fantasy
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img23.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Mythic Fantasy
+                            </a>
+                        </li>
+                        <li class="max-md:w-[135px] flex items-center justify-center">
+                            <a href="#" class="flex flex-col gap-2.5 rounded-lg text-sm text-white items-center ">
+                                <img src="assets/images/style/style-img24.png" alt="image"
+                                    class="border border-transparent hover:border-limegreen transition-all duration-500 rounded-lg" />
+                                Mythic Fantasy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden md:block lg:w-2/5 py-5 px-8">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-4">
+                        <div class="relative">
+                            <img src="assets/images/style/style-img-big.png" alt="image" class="main-image w-full h-auto max-w-sm" />
+                        </div>
+                        <div class="block">
+                            <h6 class="mb-1.5 text-sm text-white ">Flux</h6>
+                            <p class="text-sm text-white/60 font-light">Fast-paced, dynamic rendering</p>
+                        </div>
+                    </div>
+                    <div class="block overflow-hidden">
+                        <h5 class="text-lg font-medium text-white mb-4">Sample Results</h5>
+                        <div class="flex gap-1.5 items-center w-full  overflow-x-scroll">
+                            <button class="thumbnail w-[70px] aspect-square h-[70px] block rounded-lg"><img
+                                    src="assets/images/style/style-img1.png"
+                                    class="w-full h-full rounded-lg" /></button>
+    
+                            <button class="thumbnail w-[70px] aspect-square h-[70px] block rounded-lg"><img
+                                    src="assets/images/style/style-img2.png"
+                                    class="w-full h-full rounded-lg" /></button>
+    
+                            <button class="thumbnail w-[70px] aspect-square h-[70px] block rounded-lg"><img
+                                    src="assets/images/style/style-img3.png"
+                                    class="w-full h-full rounded-lg" /></button>
+    
+                            <button class="thumbnail w-[70px] aspect-square h-[70px] block rounded-lg"><img
+                                    src="assets/images/style/style-img4.png"
+                                    class="w-full h-full rounded-lg" /></button>
+    
+                            <button class="thumbnail w-[70px] aspect-square h-[70px] block rounded-lg"><img
+                                    src="assets/images/style/style-img5.png"
+                                    class="w-full h-full rounded-lg" /></button>
+    
+                            
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--aspect ratio dropdown-->
+    <div
+        class="dropdown-menu  z-[100]   absolute left-[25px] md:left-[305px] lg:left-[400px] top-[50%]   mt-2 w-[calc(100%-50px)] sm:w-[282px] bg-[#1B1B1B] border-[0.8px] border-white/20  shadow-lg rounded-[15px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+        <div class="flex justify-between items-center p-3 pt-[15px] border-b border-white/10">
+            <span class="text-sm font-medium text-white">Aspect Ratio</span>
+            <button class="close-dropdown text-gray-500 hover:text-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M5.82031 5.81641L12.1843 12.1803" stroke="white" stroke-linecap="round" />
+                    <path d="M12.1843 5.81641L5.82031 12.1803" stroke="white" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <div class="p-3 pb-[15px] flex flex-wrap gap-x-1.5 gap-y-4 aspect-ratio">
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-limegreen transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="20" height="20" rx="2" stroke="white" />
+                    </svg>
+                </div>
+                <span class="text-xs text-white">1:1</span>
+            </button>
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-limegreen transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="12" height="20" rx="2" stroke="white" />
+                    </svg>
+
+                </div>
+                <span class="text-xs text-white">9:16</span>
+            </button>
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-limegreen transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="20" height="12" rx="2" stroke="white" />
+                    </svg>
+
+                </div>
+                <span class="text-xs text-white">16:9</span>
+            </button>
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-limegreen transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="20" height="16" rx="4" stroke="white" />
+                    </svg>
+                </div>
+                <span class="text-xs text-white">4:3</span>
+            </button>
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-limegreen transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="16" height="20" rx="2" stroke="white" />
+                    </svg>
+
+                </div>
+                <span class="text-xs text-white">3:4</span>
+            </button>
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-limegreen transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="20" height="14" rx="2" stroke="white" />
+                    </svg>
+
+                </div>
+                <span class="text-xs text-white">3:2</span>
+            </button>
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-limegreen transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="14" height="20" rx="2" stroke="white" />
+                    </svg>
+
+                </div>
+                <span class="text-xs text-white">2:3</span>
+            </button>
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-limegreen transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="14" height="20" rx="4" stroke="white" />
+                    </svg>
+
+                </div>
+                <span class="text-xs text-white">4:5</span>
+            </button>
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-limegreen transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="14" height="20" rx="4" stroke="white" />
+                    </svg>
+
+                </div>
+                <span class="text-xs text-white">4:5</span>
+            </button>
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="20" height="14" rx="2" stroke="white" />
+                    </svg>
+
+                </div>
+                <span class="text-xs text-white">5:4</span>
+            </button>
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="10" height="20" rx="2" stroke="white" />
+                    </svg>
+
+                </div>
+                <span class="text-xs text-white">5:12</span>
+            </button>
+            <button class="group flex flex-col justify-center items-center gap-2">
+                <div
+                    class="bg-black-0a0a0a group-hover:bg-black group-hover:border-white/50 group-active:border-limegreen transition-all duration-500 border border-white/10 w-[58px] h-[58px] flex justify-center items-center rounded-xl">
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="20" height="10" rx="2" stroke="white" />
+                    </svg>
+
+                </div>
+                <span class="text-xs text-white">12:5</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal modalTrigger bg-[#131313] border border-[#3C3C3C] max-h-max rounded-lg p-4" id="modal1">
+        <div class="modal-content">
+            <div class="flex justify-between items-center pb-4 mb-4 border-b border-[#3C3C3C]">
+                <h5 class="flex items-center gap-1.5 text-[#c6ff00] text-xs font-medium leading-4"><svg width="16"
+                        height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.66667 5.33334C6.66667 6.06972 6.06971 6.66668 5.33333 6.66668C4.59695 6.66668 4 6.06972 4 5.33334C4 4.59696 4.59695 4.00001 5.33333 4.00001C6.06971 4.00001 6.66667 4.59696 6.66667 5.33334Z"
+                            stroke="#c6ff00" stroke-width="1.4"></path>
+                        <rect x="1.33325" y="1.33334" width="13.3333" height="13.3333" rx="3" stroke="#c6ff00"
+                            stroke-width="1.4"></rect>
+                        <path
+                            d="M1.33325 9.66667L3.39303 10.7592C4.40972 11.2984 5.64529 11.2085 6.57322 10.5278L7.93836 9.52632C9.13461 8.64876 10.7927 8.7774 11.8392 9.82898L13.9999 12"
+                            stroke="#c6ff00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    Image to Prompt</h5>
+                <span class="modal-close cursor-pointer text-white transition-all duration-300 hover:text-[#c6ff00]">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_12246_889)">
+                            <path
+                                d="M12.2 3.80667C11.94 3.54667 11.52 3.54667 11.26 3.80667L7.99998 7.06L4.73998 3.8C4.47998 3.54 4.05998 3.54 3.79998 3.8C3.53998 4.06 3.53998 4.48 3.79998 4.74L7.05998 8L3.79998 11.26C3.53998 11.52 3.53998 11.94 3.79998 12.2C4.05998 12.46 4.47998 12.46 4.73998 12.2L7.99998 8.94L11.26 12.2C11.52 12.46 11.94 12.46 12.2 12.2C12.46 11.94 12.46 11.52 12.2 11.26L8.93998 8L12.2 4.74C12.4533 4.48667 12.4533 4.06 12.2 3.80667Z"
+                                fill="currentColor"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_12246_889">
+                                <rect width="16" height="16" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </span>
+            </div>
+            <div class="w-full py-9 bg-black-0a0a0a rounded-xl h-[330px] flex justify-center">
+                <div class="flex justify-center items-center text-center flex-col">
+                    <div class="mb-2.5 mx-auto text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+                            <path
+                                d="M21.9999 40.3333V23.8333M21.9999 23.8333L28.4166 30.25M21.9999 23.8333L15.5833 30.25"
+                                stroke="#c6ff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M36.6666 32.2801C39.405 31.2072 42.1666 28.763 42.1666 23.8333C42.1666 16.5 36.0555 14.6667 32.9999 14.6667C32.9999 11 32.9999 3.66667 21.9999 3.66667C10.9999 3.66667 10.9999 11 10.9999 14.6667C7.94436 14.6667 1.83325 16.5 1.83325 23.8333C1.83325 28.763 4.59477 31.2072 7.33325 32.2801"
+                                stroke="#c6ff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-center text-white font-medium  text-sm leading-4 mb-1">Drag and drop image here or
+                        click to upload</h2>
+                    <p class="text-xs font-normal leading-5 text-[#B1B1B1] max-w-xs mx-auto">Compatible image format:
+                        .png / .jpg / .jpeg /
+
+                        .webp,
+                        Maximum file size: 20MB</p>
+                    <div class="flex items-center justify-center">
+                        <label>
+                            <input type="file" hidden="">
+                            <div
+                                class="mt-2 flex w-28 h-9 px-2 flex-col bg-[#c6ff00] rounded-lg shadow text-black text-xs font-semibold leading-4 items-center justify-center cursor-pointer focus:outline-none">
+                                Choose File</div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="drop-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50"></div>
+
+    <!-- MAIN JS-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    menuToggle.classList.toggle('active');
+  });
+</script>
+
+  <script>
+     $('.dashboard-slider-left').slick({
+        autoplay: true,
+         autoplaySpeed: 0,
+         speed: 24000,
+        cssEase: "linear",
+        infinite: true,
+        arrows: false,
+        dots: false,
+        slidesToShow: 4,
+        pauseOnHover: false,
+        swipe: false,
+        touchMove: false,
+        rtl:false,
+        responsive: [
+            {
+                breakpoint: 1700,   // Screens smaller than 1200px
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1500,   // Screens smaller than 1200px
+                settings: {
+                    slidesToShow: 2.5,
+                }
+            },
+            ]
+      });
+    
+
+// Initialize the Slick slider
+$('.dashboard-slider-right').slick({
+    rtl: true,                  
+    infinite: true,             
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 24000,                
+    slidesToShow: 4,         
+    pauseOnHover: false,       
+    arrows: false,             
+    dots: false,               
+    swipe: true,              
+    touchMove: true,
+    responsive: [
+            {
+                breakpoint: 1700,   // Screens smaller than 1200px
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1500,   // Screens smaller than 1200px
+                settings: {
+                    slidesToShow: 2.5,
+                }
+            },
+            ]           
+});
+
+
+  </script>
+<script>
+//    document.querySelectorAll('.hover-play').forEach(video => {
+//     video.removeAttribute('controls');
+//     // On mouse hover — play & loop
+//     video.addEventListener('mouseenter', () => {
+//       video.loop = true;
+//       video.currentTime = 0;
+//       video.play();
+//     });
+
+//     // On mouse leave — pause & reset
+//     video.addEventListener('mouseleave', () => {
+//       video.loop = false;
+//       video.pause();
+//       video.currentTime = 0;
+//     });
+//   });
+document.querySelectorAll('.card-video').forEach(video => {
+    // ✅ Remove controls on load using JavaScript
+    video.removeAttribute('controls');
+
+    // ✅ Get the card container (assumes parent or grandparent is card)
+    const card = video.closest('.hover-play');
+
+    if (!card) return;
+
+    // Hover behavior
+    card.addEventListener('mouseenter', () => {
+      video.currentTime = 0;
+      video.loop = true;
+      video.play();
+    });
+
+    card.addEventListener('mouseleave', () => {
+      video.loop = false;
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+  </script>
+</body>
+
+</html>

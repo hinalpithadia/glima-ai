@@ -1191,6 +1191,10 @@ height: 100%;
       visibility: visible;
       display: block;
   }
+  .wrapper-dropdown .selected-display .drop-link{
+    padding: 0;
+
+  }
     @media(max-width:1500px) {
       .modal-image{ 
         max-width: 1300px;

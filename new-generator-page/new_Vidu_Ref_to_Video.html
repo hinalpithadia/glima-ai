@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Glima AI</title>
     <!--- MAIN CSS ---->
-     <link rel="stylesheet" href="assets/css/styles-output.css">
+    <link rel="stylesheet" href="../assets/css/styles-output.css">
 </head>
 
 <body class="md:overflow-hidden">
@@ -215,103 +215,52 @@
 
                             </div>
                         </li>
-<div class="flex gap-4">
-  <!-- Button 1 -->
-  <div class="relative flex-1">
-    <button type="button" role="radio" name="aspect-Ratio" aria-checked="true"
-      class="radio-btn peer hidden" id="radio-16-9" value="16:9" tabindex="-1">
-    </button>
-    <label for="radio-16-9"
-      class="radio-label peer-aria-[checked=true]:border-limegreen peer-aria-[checked=true]:text-white">
-      <svg width="22" height="13"><rect x="1" y="0.5" width="20" height="12" rx="2" stroke="white"/></svg>
-      <span>16:9</span>
-    </label>
-  </div>
-
-  <!-- Button 2 -->
-  <div class="relative flex-1">
-    <button type="button" role="radio" name="aspect-Ratio" aria-checked="false"
-      class="radio-btn peer hidden" id="radio-1-1" value="1:1" tabindex="-1">
-    </button>
-    <label for="radio-1-1"
-      class="radio-label peer-aria-[checked=true]:border-limegreen peer-aria-[checked=true]:text-white">
-      <svg width="13" height="13"><rect x="1" y="0.5" width="11" height="11" rx="2" stroke="white"/></svg>
-      <span>1:1</span>
-    </label>
-  </div>
-</div>
 
                         <li>
                             <div class="flex flex-col gap-3.5">
                                 <label class="xl:text-sm text-xs text-white font-normal">Aspect
-                                    Ratio</label>
-                                <div role="radiogroup" id="aspect-Ratio" aria-required="false" dir="ltr"
-                                    class="group flex w-full flex-2 flex-wrap gap-2" tabindex="0"
-                                    style="outline: none;">
-                                    <div class="relative flex-1">
-                                        <button type="button" role="radio" name="aspect-Ratio" aria-checked="true" data-state="checked"
-                                            value="16:9"
-                                            class="group aspect-square h-4 w-4 rounded-full ring-offset-system-bg06 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 peer hidden"
-                                            id="16:9" tabindex="-1" data-radix-collection-item="">
-                                            <div
-                                                class="relative flex h-4 w-4 items-center justify-center rounded-full border border-system-white">
-                                            </div>
-                                        </button>
-                                        <label
-                                            class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex h-[52px] cursor-pointer select-none flex-wrap items-center gap-1.5 rounded-lg border border-white/10 bg-black-0a0a0a p-2 text-sm text-white hover:border-white/30 hover:bg-black  group-aria-disabled:cursor-not-allowed peer-aria-[checked=true]:border-limegreen peer-aria-[checked=true]:text-white justify-center transition-all duration-500"
-                                            for="16:9">
+                                    Ratio
+                                </label>
+                                <div class="flex gap-x-2 flex-wrap justify-start gap-y-2.5">
+                                    <!-- Radio Button for aspect ration -->
+                                    <label for="radio-16:9" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="radio-16:9" name="Aspect-Ratio" value="5"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-[78px] h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
                                             <svg width="22" height="13" viewBox="0 0 22 13" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-                                                 <rect x="1" y="0.5" width="20" height="12" rx="2" stroke="white" />
+                                                <rect x="1" y="0.5" width="20" height="12" rx="2" stroke="white" />
                                             </svg>
-                                            <span>16:9</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="relative flex-1">
-                                        <button type="button" role="radio" name="aspect-Ratio" aria-checked="false" data-state="unchecked"
-                                            value="9:16"
-                                            class="group aspect-square h-4 w-4 rounded-full ring-offset-system-bg06 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 peer hidden"
-                                            id="9:16" tabindex="-1" data-radix-collection-item="">
-                                            <div
-                                                class="relative flex h-4 w-4 items-center justify-center rounded-full border border-system-white">
-                                            </div>
-                                        </button>
-                                        <label
-                                            class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex h-[52px] cursor-pointer select-none flex-wrap items-center gap-1.5 rounded-lg border border-white/10 bg-black-0a0a0a p-2 text-sm text-white hover:border-white/30 hover:bg-black  group-aria-disabled:cursor-not-allowed peer-aria-[checked=true]:border-limegreen peer-aria-[checked=true]:text-white justify-center transition-all duration-500"
-                                            for="9:16">
+                                            16:9
+                                        </span>
+                                    </label>
+                                    <label for="radio-9:16" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="radio-9:16" name="Aspect-Ratio" value="5"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-[78px] h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
                                             <svg width="14" height="22" viewBox="0 0 14 22" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <rect x="1" y="1" width="12" height="20" rx="2" stroke="white" />
                                             </svg>
-                                            <span>9:16</span>
-                                        </label>
-                                    </div>
-                                    <div class="relative flex-1">
-                                        <button type="button" role="radio" name="aspect-Ratio" aria-checked="false" data-state="unchecked"
-                                            value="1:1"
-                                            class="group aspect-square h-4 w-4 rounded-full ring-offset-system-bg06 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 peer hidden"
-                                            id="1:1" tabindex="-1" data-radix-collection-item="">
-                                            <div
-                                                class="relative flex h-4 w-4 items-center justify-center rounded-full border border-system-white">
-                                                <span data-state="unchecked" class="">
-                                                    <div class="h-1.5 w-1.5 rounded-full bg-system-white"></div>
-                                                </span>
-                                            </div>
-                                        </button>
-                                        <label
-                                            class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex h-[52px] cursor-pointer select-none flex-wrap items-center gap-1.5 rounded-lg border border-white/10 bg-black-0a0a0a p-2 text-sm text-white hover:border-white/30 hover:bg-black  group-aria-disabled:cursor-not-allowed peer-aria-[checked=true]:border-limegreen peer-aria-[checked=true]:text-white justify-center transition-all duration-500"
-                                            for="1:1">
-                                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none"
+
+                                            9:16
+                                        </span>
+                                    </label>
+                                    <label for="radio-1:1" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="radio-1:1" name="Aspect-Ratio" value="5"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-[78px] h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+                                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="0.5" y="1" width="22" height="22" rx="4" stroke="white" />
+                                                <rect x="1" y="0.5" width="19" height="19" rx="1.5" stroke="white" />
                                             </svg>
 
-                                            <span>1:1</span>
-                                        </label>
-                                    </div>
-
-
+                                            1:1
+                                        </span>
+                                    </label>
                                 </div>
 
                             </div>
@@ -358,82 +307,50 @@
                             <div class="flex flex-col gap-3.5">
                                 <label class="xl:text-sm text-xs text-white font-normal">Movement Amplitude</label>
 
-                                <div role="radiogroup" name="movement" id="Movement" aria-required="false" dir="ltr"
-                                    class="group grid grid-cols-2 gap-2.5" tabindex="1" style="outline: none;">
-                                    <div class="relative flex-1">
-                                        <button type="button" role="radio" name="movement" aria-checked="false" data-state="unchecked"
-                                            value="Auto"
-                                            class="group aspect-square h-4 w-4 rounded-full ring-offset-system-bg06 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 peer hidden"
-                                            id="Auto" tabindex="-1" data-radix-collection-item="">
-                                            <div
-                                                class="relative flex h-4 w-4 items-center justify-center rounded-full border border-system-white">
-                                            </div>
-                                        </button>
-                                        <label
-                                            class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex h-[52px] cursor-pointer select-none flex-wrap items-center gap-1.5 rounded-lg border border-white/10 bg-black-0a0a0a p-2 text-sm text-white hover:border-white/30 hover:bg-black  group-aria-disabled:cursor-not-allowed peer-aria-[checked=true]:border-limegreen peer-aria-[checked=true]:text-white justify-center transition-all duration-500"
-                                            for="Auto">
-                                            <span>Auto</span>
-                                        </label>
-                                    </div>
+                                <div class="grid grid-cols-2 gap-2.5">
+                                    <!-- Radio Button for aspect ration -->
+                                    <label for="Auto" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="Auto" name="Movement-Amplitude" value="Auto"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+                                           
+                                           Auto
+                                        </span>
+                                    </label>
+                                    <label for="Small" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="Small" name="Movement-Amplitude" value="Small"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
+                                        
+                                           Small
+                                        </span>
+                                    </label>
+                                    <label for="Medium" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="Medium" name="Movement-Amplitude" value="Medium"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
 
-                                    <div class="relative flex-1">
-                                        <button type="button" role="radio" name="movement" aria-checked="false" data-state="unchecked"
-                                            value="Small"
-                                            class="group aspect-square h-4 w-4 rounded-full ring-offset-system-bg06 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 peer hidden"
-                                            id="Small" tabindex="-1" data-radix-collection-item="">
-                                            <div
-                                                class="relative flex h-4 w-4 items-center justify-center rounded-full border border-system-white">
-                                            </div>
-                                        </button>
-                                        <label
-                                            class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex h-[52px] cursor-pointer select-none flex-wrap items-center gap-1.5 rounded-lg border border-white/10 bg-black-0a0a0a p-2 text-sm text-white hover:border-white/30 hover:bg-black  group-aria-disabled:cursor-not-allowed peer-aria-[checked=true]:border-limegreen peer-aria-[checked=true]:text-white justify-center transition-all duration-500"
-                                            for="Small">
-                                            <span>Small</span>
-                                        </label>
-                                    </div>
-                                    <div class="relative flex-1">
-                                        <button type="button" role="radio" name="movement" aria-checked="false" data-state="unchecked"
-                                            value="Medium"
-                                            class="group aspect-square h-4 w-4 rounded-full ring-offset-system-bg06 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 peer hidden"
-                                            id="Medium" tabindex="-1" data-radix-collection-item="">
-                                            <div
-                                                class="relative flex h-4 w-4 items-center justify-center rounded-full border border-system-white">
-                                                <span data-state="unchecked" class="">
-                                                    <div class="h-1.5 w-1.5 rounded-full bg-system-white"></div>
-                                                </span>
-                                            </div>
-                                        </button>
-                                        <label
-                                            class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex h-[52px] cursor-pointer select-none flex-wrap items-center gap-1.5 rounded-lg border border-white/10 bg-black-0a0a0a p-2 text-sm text-white hover:border-white/30 hover:bg-black  group-aria-disabled:cursor-not-allowed peer-aria-[checked=true]:border-limegreen peer-aria-[checked=true]:text-white justify-center transition-all duration-500"
-                                            for="Medium">
-                                            <span>Medium</span>
-                                        </label>
-                                    </div>
-                                    <div class="relative flex-1">
-                                        <button type="button" role="radio" name="movement" aria-checked="false" data-state="unchecked"
-                                            value="Large"
-                                            class="group aspect-square h-4 w-4 rounded-full ring-offset-system-bg06 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 peer hidden"
-                                            id="Large" tabindex="-1" data-radix-collection-item="">
-                                            <div
-                                                class="relative flex h-4 w-4 items-center justify-center rounded-full border border-system-white">
-                                                <span data-state="unchecked" class="">
-                                                    <div class="h-1.5 w-1.5 rounded-full bg-system-white"></div>
-                                                </span>
-                                            </div>
-                                        </button>
-                                        <label
-                                            class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex h-[52px] cursor-pointer select-none flex-wrap items-center gap-1.5 rounded-lg border border-white/10 bg-black-0a0a0a p-2 text-sm text-white hover:border-white/30 hover:bg-black  group-aria-disabled:cursor-not-allowed peer-aria-[checked=true]:border-limegreen peer-aria-[checked=true]:text-white justify-center transition-all duration-500"
-                                            for="Large">
-                                            <span>Large</span>
-                                        </label>
-                                    </div>
+                                           Medium
+                                        </span>
+                                    </label>
+                                    <label for="Large" class="relative inline-flex items-center cursor-pointer">
+                                        <input type="radio" id="Large" name="Movement-Amplitude" value="Large"
+                                            class="sr-only peer" />
+                                        <span
+                                            class="w-full h-[42px] py-2 px-2  rounded-lg bg-black-0a0a0a border-2 border-transparent peer-checked:bg-[rgba(198,255,0,0.04)] peer-checked:text-white peer-checked:border-[rgba(198,255,0,0.40)] text-center flex items-center gap-2 justify-center transition-all duration-500 text-sm text-white hover:border-[rgba(198,255,0,0.40)]">
 
+                                           Large
+                                        </span>
+                                    </label>
                                 </div>
 
                             </div>
                         </li>
 
-                       
+
                     </ul>
 
                 </div>
@@ -459,14 +376,14 @@
                         Generate
                     </button>
                 </div>
-               
+
             </aside>
         </div>
         <div
             class="xl:w-[calc(100%-380px)] lg:w-[calc(100%-290px)] md:w-[calc(100%-290px)] w-full ml-auto relative md:h-screen md:overflow-y-auto pt-[86px] px-4">
             <!--Main Content Page-->
             <div class="w-full h-full relative">
-                
+
             </div>
         </div>
 
@@ -936,7 +853,7 @@
             </div>
         </div>
     </div>
-   
+
     <!-- MAIN JS-->
     <script src="assets/js/main.js"></script>
     <!-- <script>
