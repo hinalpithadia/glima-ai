@@ -1823,6 +1823,10 @@ pre{
   padding: 0;
 }
 
+.image-content .tooltip:before{
+  content:none!important;
+}
+
 @media(max-width:1500px) {
   .modal-image{
     max-width: 1300px;
@@ -2949,10 +2953,6 @@ pre{
 
 .h-\[80px\] {
   height: 80px;
-}
-
-.h-\[calc\(100\%-210px\)\] {
-  height: calc(100% - 210px);
 }
 
 .h-auto {
