@@ -2507,6 +2507,11 @@ pre{
   margin-bottom: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .-mb-1 {
   margin-bottom: -0.25rem;
 }
@@ -6856,6 +6861,10 @@ pre{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -7016,6 +7025,10 @@ pre{
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -7845,6 +7858,10 @@ pre{
     max-width: 680px;
   }
 
+  .xl\:max-w-\[350px\] {
+    max-width: 350px;
+  }
+
   .xl\:columns-5 {
     -moz-columns: 5;
          columns: 5;
@@ -7947,6 +7964,10 @@ pre{
 
   .\32xl\:max-w-\[740px\] {
     max-width: 740px;
+  }
+
+  .\32xl\:max-w-\[400px\] {
+    max-width: 400px;
   }
 
   .\32xl\:grid-cols-3 {
