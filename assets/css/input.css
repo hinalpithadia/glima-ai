@@ -1157,7 +1157,10 @@ height: 100%;
     rotate: 230deg;
     top:12px;
   } */
-
+.like-btn.active svg path{
+  fill:red;
+  stroke:red;
+}
   /*===placeholder loading=====*/
   .bar {
   position: relative;
