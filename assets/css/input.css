@@ -1161,6 +1161,30 @@ height: 100%;
   fill:red;
   stroke:red;
 }
+  .grid-item {
+   width: 352px;
+  float: left;
+}
+@media(max-width:1500px){
+    .grid-item {
+    width: 325px;
+}
+}
+@media(max-width:1280px){
+    .grid-item {
+    width: 285px;
+}
+}
+@media(max-width:990px){
+    .grid-item {
+    width: 220px;
+}
+}
+@media(max-width:767px){
+    .grid-item {
+    width: 170px;
+}
+}
   /*===placeholder loading=====*/
   .bar {
   position: relative;
