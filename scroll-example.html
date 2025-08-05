@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Alert</title>
+  <style>
+    body {
+      height: 2000px; /* Just to make page scrollable */
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  window.addEventListener('scroll', function () {
+    alert("You scrolled the page!");
+    // Remove listener after first alert (optional)
+    window.removeEventListener('scroll', arguments.callee);
+  });
+</script>
+
+</body>
+</html>
