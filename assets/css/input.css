@@ -466,7 +466,21 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
       background: #000;
       border:1px solid white;
     }
-    
+    .prompt-scroll::-webkit-scrollbar-track
+    {
+      background-color: transparent;
+    }
+    .prompt-scroll::-webkit-scrollbar
+      {
+        width: 6px;
+        background-color: transparent;
+        border-radius: 12px;
+      }
+       .prompt-scroll::-webkit-scrollbar-thumb
+      {
+        border-radius: 30px;
+        background-color: rgba(255,255,255,0.2);
+      }
     .modal-style-list::-webkit-scrollbar-track
     {
       background-color: transparent;
@@ -1256,7 +1270,31 @@ height: 100%;
 
   }
   .image-content .tooltip:before{
-    content:none!important;
+    content:none!important; 
+  }
+  .tools-card img{
+   height: 230px!important;
+    height: 100%;
+    object-fit: cover;
+        border-radius: 15px;
+  }
+  .tools-card h4{
+    overflow: hidden; 
+  display: -webkit-box;
+  -webkit-line-clamp: 1;     /* Show max 2 lines */
+  -webkit-box-orient: vertical;
+  line-height: 1.25rem;      /* Similar to leading-snug */
+  word-break: break-word;  
+  }
+  .tools-para{
+ 
+  overflow: hidden; 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;     /* Show max 2 lines */
+  -webkit-box-orient: vertical;
+  line-height: 1.25rem;      /* Similar to leading-snug */
+  word-break: break-word;
+  color: rgba(255, 255, 255, 0.6)!important;
   }
     @media(max-width:1500px) {
       .modal-image{ 

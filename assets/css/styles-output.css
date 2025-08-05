@@ -1068,6 +1068,24 @@ input:not(:checked) ~ .toggle-labels .yearly {
   border:1px solid white;
 }
 
+.prompt-scroll::-webkit-scrollbar-track
+    {
+  background-color: transparent;
+}
+
+.prompt-scroll::-webkit-scrollbar
+      {
+  width: 6px;
+  background-color: transparent;
+  border-radius: 12px;
+}
+
+.prompt-scroll::-webkit-scrollbar-thumb
+      {
+  border-radius: 30px;
+  background-color: rgba(255,255,255,0.2);
+}
+
 .modal-style-list::-webkit-scrollbar-track
     {
   background-color: transparent;
@@ -1877,6 +1895,37 @@ pre{
 
 .image-content .tooltip:before{
   content:none!important;
+}
+
+.tools-card img{
+  height: 230px!important;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+
+.tools-card h4{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* Show max 2 lines */
+  -webkit-box-orient: vertical;
+  line-height: 1.25rem;
+  /* Similar to leading-snug */
+  word-break: break-word;
+}
+
+.tools-para{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Show max 2 lines */
+  -webkit-box-orient: vertical;
+  line-height: 1.25rem;
+  /* Similar to leading-snug */
+  word-break: break-word;
+  color: rgba(255, 255, 255, 0.6)!important;
 }
 
 @media(max-width:1500px) {
@@ -2946,6 +2995,10 @@ pre{
 
 .h-\[220px\] {
   height: 220px;
+}
+
+.h-\[225px\] {
+  height: 225px;
 }
 
 .h-\[28px\] {
@@ -5740,6 +5793,11 @@ pre{
   color: rgb(177 177 177 / var(--tw-text-opacity, 1));
 }
 
+.text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity, 1));
+}
+
 .text-lime-400 {
   --tw-text-opacity: 1;
   color: rgb(163 230 53 / var(--tw-text-opacity, 1));
@@ -5748,6 +5806,11 @@ pre{
 .text-limegreen {
   --tw-text-opacity: 1;
   color: rgb(198 255 0 / var(--tw-text-opacity, 1));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .text-transparent {
