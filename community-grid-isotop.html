@@ -1310,8 +1310,7 @@
       <div class="overlay-modal w-full h-screen z-[500] bg-black/50 backdrop-blur-xl fixed top-0 left-0 opacity-0 invisible"></div>
       
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-       <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+      <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
@@ -1522,92 +1521,19 @@
     });
 
    </script>   
-   <script>
-   
-    $(document).ready(function () {
-      // First slider - moves downward
-      $('.landing-slider-top').slick({
-        vertical: true,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 24000,
-        cssEase: "linear",
-        infinite: true,
-        arrows: false,
-        dots: false,
-        slidesToShow: 3,
-        pauseOnHover: false,
-        swipe: false,
-        touchMove: false,
-      });
-
-      // Second slider - moves upward (by rotating)
-      $('.landing-slider-bottom').slick({
-        vertical: true,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 24000,
-        cssEase: "linear",
-        infinite: true,
-        arrows: false,
-        dots: false,
-        slidesToShow: 3,
-        pauseOnHover: false,
-        swipe: false,
-        touchMove: false,
-      });
-    });
-  
-   </script>  
   <script>
-  let allItems = [];         // Store all items
-  let itemsPerLoad = 20;     // Load 20 items at a time
-  let currentIndex = 0;      // Track how many items are shown
-
-  // Mock: Generate 100 items
-  for (let i = 1; i <= 100; i++) {
-    allItems.push(`<div class="grid-item">Item ${i}</div>`);
-  }
-
-  // Function to load next batch
-  function loadNextBatch() {
-    if (currentIndex >= allItems.length) return;
-
-    let itemsToAdd = allItems.slice(currentIndex, currentIndex + itemsPerLoad);
-    let $newElems = $(itemsToAdd.join(''));
-
-    $('.column-grid').append($newElems)
-      .masonry('appended', $newElems);
-
-    currentIndex += itemsPerLoad;
-  }
-
-  // Initialize Masonry
-  $(document).ready(function () {
-    $('.column-grid').masonry({
-      itemSelector: '.grid-item',
-      percentPosition: true,
+  const $grid = $('.column-grid').isotope({
+    itemSelector: '.grid-item',
+    layoutMode: 'masonry',
+     horizontalOrder: true,
+    masonry: {
+      columnWidth: '.grid-item',
       gutter: 20
-    });
-
-    // Load first batch
-    loadNextBatch();
-
-    // Scroll event
-    $(window).on('scroll', function () {
-      if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
-        loadNextBatch();
-      }
-    });
+    }
   });
-</script>
-
-<script>
-  $newElems.imagesLoaded(function () {
-  $('.column-grid').append($newElems).masonry('appended', $newElems);
-});
 
 </script>
+
 </body>
 
-</html>
+</html>   
