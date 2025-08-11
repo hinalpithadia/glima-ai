@@ -1202,6 +1202,11 @@ height: 100%;
     width: 170px;
 }
 }
+@media(max-width:500px){
+    .grid-item {
+    width: 100%!important;
+}
+}
   /*===placeholder loading=====*/
   .bar {
   position: relative;
