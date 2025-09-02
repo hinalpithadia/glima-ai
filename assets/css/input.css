@@ -1121,6 +1121,101 @@ height: 100%;
   .editor-list a.active svg circle{
     stroke:#000;
   }
+  /*===select editor count====*/
+   .select-box-count  .select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+  .select-box-count  .select {
+    position: relative;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 0px !important;
+    width: 100%;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .select-box-count  .select-styled {
+    position: relative;
+    display: flex;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 0px !important;
+    width: 100%;
+    background: transparent;
+    padding-right: 20px;
+    font-size: 16px;
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    border:1px solid transparent;
+  }
+
+
+
+  .select-box-count  .select-styled:after {
+    content: url(https://glima.ai/storage/media/1756808046_JLgLphp0dfueX.png);
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -2px;
+    right: 10px;
+  }
+  .select-box-count  .select-options {
+    display: none;
+    position: absolute;
+    top: auto;
+    bottom: 40px;
+    left: auto;
+    right:0;
+    z-index: 999;
+    margin: 0px;
+    padding: 5px;
+    list-style: none;
+    border-radius: 12px;
+    background: #111;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    
+    overflow-y: auto;
+  }
+  .select-box-count  .select-options li {
+    position: relative;
+  
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: white;
+    cursor: pointer;
+    background: #000;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .select-box-count  .select-options li:hover {
+    color: #C6FF00;
+    
+  }
+  .select-box-count .select-options li[rel="hide"] {
+    display: none;
+  }
 /*==dashboard css====*/
 .dashboard-slider .slick-list.draggable,
   .dashboard-slider .slick-track {

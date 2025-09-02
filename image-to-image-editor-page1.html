@@ -271,7 +271,22 @@ Create Image
                             </select>
                             </div>
                             <div class="px-3.5 border-r border-[#2B2B2B]">aspect ratio</div>
-                            <div class="px-3.5 border-r border-[#2B2B2B]">01</div>
+                            <div class="px-3 py-2 mx-3.5 flex items-center gap-2 transition-all duration-300 rounded-lg hover:bg-black cursor-pointer text-[#858585] hover:text-white">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.67367 1.94663L12.607 3.6933C13.7403 4.1933 13.7403 5.01996 12.607 5.51996L8.67367 7.26663C8.22701 7.46663 7.49367 7.46663 7.04701 7.26663L3.11367 5.51996C1.98034 5.01996 1.98034 4.1933 3.11367 3.6933L7.04701 1.94663C7.49367 1.74663 8.22701 1.74663 8.67367 1.94663Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 7.33325C2 7.89325 2.42 8.53992 2.93333 8.76659L7.46 10.7799C7.80667 10.9333 8.2 10.9333 8.54 10.7799L13.0667 8.76659C13.58 8.53992 14 7.89325 14 7.33325" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 10.6667C2 11.2867 2.36667 11.8467 2.93333 12.1001L7.46 14.1134C7.80667 14.2667 8.2 14.2667 8.54 14.1134L13.0667 12.1001C13.6333 11.8467 14 11.2867 14 10.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                                 <div class="select-box-count"> 
+                                <select id="sources" name="service">
+                                <option value="01">01</option>
+                                <option value="02" >02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                            </select>
+                            </div>
+                            </div>
                            </div>
                            <a href="#" class="flex items-center gap-1.5 text-base text-[#858585] px-3.5">
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -385,7 +400,16 @@ Image</span>
   <span class="text-lime-400">black</span>, ensure realistic shading, shine, and texture, maintain original hair flow and lighting, and blend the new color seamlessly for a natural and polished look.
 </div>
                         </div>
-                        <div class="flex items-center justify-end gap-3.5">
+                       <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-1">
+                            <button class="relative flex-shrink-0 h-10 w-10 rounded-lg bg-black text-white  flex items-center justify-center cursor-pointer ">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-undo h-4 w-4" aria-hidden="true"><path d="M3 7v6h6"></path><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"></path></svg>
+                            </button>
+                             <button class="relative flex-shrink-0 h-10 w-10 rounded-lg bg-black text-white flex items-center justify-center cursor-pointer ">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-redo h-4 w-4" aria-hidden="true"><path d="M21 7v6h-6"></path><path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"></path></svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center  gap-3.5">
                             <div class="flex items-center gap-1.5">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_4139_46031)">
@@ -424,6 +448,7 @@ Image</span>
 </defs>
 </svg>
 Generate</a>
+                        </div>
                         </div>
                     </div>
                 </div>
