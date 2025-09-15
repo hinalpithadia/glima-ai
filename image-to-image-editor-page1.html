@@ -242,11 +242,11 @@
                     <p class="text-base leading-[26px] text-[#858585] w-full max-w-[735px]">
                         Change the hair color of the human subject in the image to a different style: apply a natural or
                         creative color black, ensure realistic shading, shine, and texture, maintain... <a href="#"
-                            class="text-[#C6FF00]"> COPY PROMPT</a>
+                            class="text-[#C6FF00] text-sm"> COPY PROMPT</a>
                     </p>
                     <div class="flex items-center gap-0.5">
                         <img src="assets/images/abs-box/client-img-1.png" alt=""
-                            class="w-12 aspect-square rounded-[10px]">
+                            class="w-12 h-12 aspect-square rounded-[10px]">
                         <img src="assets/images/abs-box/client-img-2.png" alt=""
                             class="w-12 aspect-square rounded-[10px]">
                         <img src="assets/images/abs-box/client-img-3.png" alt=""
@@ -686,7 +686,7 @@
 
              <div class="bg-[#111111] rounded-xl w-full p-0.5 pt-3">
                 <div class="flex items-center justify-between mb-3 pl-3.5 pr-2.5">
-                    <p class="text-base leading-[26px] text-[#858585] w-full max-w-[735px]">
+                    <p class="text-base leading-[26px] text-[#858585] w-full max-w-[735px] overflow-hidden text-ellipsis line-clamp-2">
                         Change the hair color of the human subject in the image to a different style: apply a natural or
                         creative color black, ensure realistic shading, shine, and texture, maintain... <a href="#"
                             class="text-[#C6FF00]"> COPY PROMPT</a>
@@ -2580,9 +2580,16 @@
                 </div>
                 <!-- text area or box  -->
                 <div class="flex items-center gap-1 mb-1">
-
-                    <div contenteditable="true"
-                        class="bg-black rounded-xl py-3 px-4 w-full text-base leading-[22px] text-white font-normal min-h-[90px] h-auto focus:outline-none">
+<div contenteditable="true" id="user-prompt"
+  data-placeholder="Enter your Prompt here"
+  class="relative bg-black rounded-xl py-3 px-4 w-full text-base leading-[22px] text-white font-normal min-h-[90px] h-auto focus:outline-none
+         before:absolute before:content-[attr(data-placeholder)] before:text-[#858585] before:pointer-events-none 
+         before:transition-opacity before:duration-300 before:top-3 before:left-4
+         before:opacity-0 empty:before:opacity-100">
+</div>
+                    <div contenteditable="true" data-placeholder="Enter your Prompt here"
+                        class="bg-black rounded-xl py-3 px-4 w-full text-base leading-[22px] text-white font-normal min-h-[90px] h-auto focus:outline-none before:absolute before:text-[#858585] before:content-[attr(data-placeholder)] before:pointer-events-none
+         empty:before:block empty:before:top-3 empty:before:left-4" id="user-prompt">
                         Change the hair color of the human subject in the image to a different style: apply
                         a
                         natural or creative color
@@ -2591,6 +2598,7 @@
                         maintain original hair flow and lighting, and blend the new color seamlessly for a
                         natural and polished look.
                     </div>
+                  
                 </div>
                 <!-- bottom  -->
                 <div class="flex items-center justify-between">
@@ -2779,20 +2787,20 @@
     </div>
 
     <div class="modalTrigger  modal-home w-full max-w-[1159px] " id="popularEdit">
-        
-        <div class="relative w-full  p-1  rounded-xl bg-[#111111]   h-[700px]  overflow-y-auto">
-            <div class="relative">
-                 <span
-              class="close-btn cursor-pointer p-1.5 rounded-full bg-[#1D1D1D] text-white transition-all duration-300 hover:text-limegreen absolute top-4 right-4 ">
+       
+                 <button
+              class="close-btn cursor-pointer p-1.5 rounded-full bg-[#1D1D1D] text-white transition-all duration-300 hover:text-limegreen absolute top-20 right-0 ">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                 <path
                   d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
                   stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
         
-            </span>
-          </div>
-            <div class="w-full flex items-start gap-2 mt-[60px]" >
+            </button>
+       
+        <div class="relative w-full  p-1  rounded-xl bg-[#111111]   h-[700px]  overflow-y-auto">
+           
+            <div class="w-full flex items-start gap-2 " >
                 <div class="flex flex-col gap-2 w-full max-w-[240px] sticky top-0 h-full overflow-y-auto">
                     <button
                         class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-base leading-5 text-white transition-all duration-500 hover:bg-black active">
@@ -2852,12 +2860,13 @@
                         </div>
                         <div class="p-1 pt-3 ">
                             <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 overflow-hidden text-ellipsis line-clamp-3">
                                 Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                shadows and reflections Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
                                 shadows and reflections
                             </p>
                             <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                     fill="none">
                                     <path
@@ -3230,7 +3239,7 @@
           </div>
             <div class="w-full flex items-start gap-x-1 gap-y-2 flex-wrap mt-[60px]">
                 <div class="">
-                    <img src="assets/images/abs-box/abs-box-style-1.png" alt="style-image">
+                    <img src="assets/images/abs-box/abs-box-style-1.png" alt="style-image" class="w-[160px] h-[120px]">
                     <p class="text-sm leading-5 text-white text-center">Super Realistic
                     </p>
                 </div>
@@ -3375,7 +3384,21 @@
         // Click to open file dialog
         dropArea.addEventListener('click', () => fileInput.click());
     </script>
+<script>
+const editable = document.getElementById('user-prompt');
 
+// Clean up on load
+if (editable.innerHTML.trim() === '<br>' || editable.textContent.trim() === '') {
+  editable.innerHTML = '';
+}
+
+// Keep it clean when typing/deleting
+editable.addEventListener('input', () => {
+  if (editable.textContent.trim() === '') {
+    editable.innerHTML = ''; // ensure truly empty so :empty works
+  }
+});
+</script>
 </body>
 
 </html>

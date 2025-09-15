@@ -1277,6 +1277,16 @@ height: 100%;
    width: 352px;
   float: left;
 }
+/*======tabs css=======*/
+
+  
+    .tablink.active{
+      color:#000;
+      background: #C6FF00;
+    }
+   
+   
+    
 @media(max-width:1500px){
     .grid-item {
     width: 325px;
