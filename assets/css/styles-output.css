@@ -2211,6 +2211,10 @@ pre{
   bottom: 3rem;
 }
 
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
 .bottom-2\.5 {
   bottom: 0.625rem;
 }
@@ -2533,10 +2537,6 @@ pre{
 
 .top-full {
   top: 100%;
-}
-
-.bottom-2 {
-  bottom: 0.5rem;
 }
 
 .isolate {
@@ -3138,6 +3138,10 @@ pre{
   height: 550px;
 }
 
+.h-\[55px\] {
+  height: 55px;
+}
+
 .h-\[58px\] {
   height: 58px;
 }
@@ -3190,10 +3194,6 @@ pre{
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[55px\] {
-  height: 55px;
 }
 
 .max-h-96 {
@@ -3283,6 +3283,18 @@ pre{
 .max-h-max {
   max-height: -moz-max-content;
   max-height: max-content;
+}
+
+.max-h-\[450px\] {
+  max-height: 450px;
+}
+
+.max-h-\[480px\] {
+  max-height: 480px;
+}
+
+.max-h-\[470px\] {
+  max-height: 470px;
 }
 
 .min-h-\[110px\] {
@@ -3510,6 +3522,10 @@ pre{
   width: 50px;
 }
 
+.w-\[55px\] {
+  width: 55px;
+}
+
 .w-\[58px\] {
   width: 58px;
 }
@@ -3536,10 +3552,6 @@ pre{
 
 .w-\[78px\] {
   width: 78px;
-}
-
-.w-\[80px\] {
-  width: 80px;
 }
 
 .w-\[calc\(100\%-100px\)\] {
@@ -3586,10 +3598,6 @@ pre{
 
 .w-px {
   width: 1px;
-}
-
-.w-\[55px\] {
-  width: 55px;
 }
 
 .min-w-\[153px\] {
@@ -4588,6 +4596,10 @@ pre{
   border-color: rgba(255,255,255,0.10);
 }
 
+.border-\[rgba\(255\2c 255\2c 255\2c 0\.2\)\] {
+  border-color: rgba(255,255,255,0.2);
+}
+
 .border-\[rgba\(255\2c 255\2c 255\2c 0\.20\)\] {
   border-color: rgba(255,255,255,0.20);
 }
@@ -4638,10 +4650,6 @@ pre{
 
 .border-white\/80 {
   border-color: rgb(255 255 255 / 0.8);
-}
-
-.border-\[rgba\(255\2c 255\2c 255\2c 0\.2\)\] {
-  border-color: rgba(255,255,255,0.2);
 }
 
 .bg-\[\#000000\] {
@@ -5079,20 +5087,16 @@ pre{
           background-clip: text;
 }
 
+.stroke-\[\#C6FF00\] {
+  stroke: #C6FF00;
+}
+
 .stroke-current {
   stroke: currentColor;
 }
 
 .stroke-white {
   stroke: #fff;
-}
-
-.stroke-indigo-600 {
-  stroke: #4f46e5;
-}
-
-.stroke-\[\#C6FF00\] {
-  stroke: #C6FF00;
 }
 
 .object-contain {
@@ -5717,6 +5721,14 @@ pre{
 
 .pt-px {
   padding-top: 1px;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .text-left {
