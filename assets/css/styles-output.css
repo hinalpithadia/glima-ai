@@ -2293,6 +2293,10 @@ pre{
   bottom: 59px;
 }
 
+.bottom-\[72px\] {
+  bottom: 72px;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -2557,12 +2561,8 @@ pre{
   top: 100%;
 }
 
-.bottom-\[75px\] {
-  bottom: 75px;
-}
-
-.bottom-\[72px\] {
-  bottom: 72px;
+.top-\[64px\] {
+  top: 64px;
 }
 
 .isolate {
@@ -2820,6 +2820,10 @@ pre{
   margin-top: 0.125rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-1\.5 {
   margin-top: 0.375rem;
 }
@@ -2890,10 +2894,6 @@ pre{
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
 }
 
 .line-clamp-2 {
@@ -3710,6 +3710,10 @@ pre{
   max-width: 1260px;
 }
 
+.max-w-\[1315px\] {
+  max-width: 1315px;
+}
+
 .max-w-\[1500px\] {
   max-width: 1500px;
 }
@@ -3937,10 +3941,6 @@ pre{
 
 .max-w-xs {
   max-width: 20rem;
-}
-
-.max-w-\[1315px\] {
-  max-width: 1315px;
 }
 
 .flex-1 {
@@ -4732,6 +4732,11 @@ pre{
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#000\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#0A0A0A\] {
   --tw-bg-opacity: 1;
   background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
@@ -4931,11 +4936,6 @@ pre{
 
 .bg-white\/\[\.03\] {
   background-color: rgb(255 255 255 / .03);
-}
-
-.bg-\[\#000\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-50 {
@@ -5526,11 +5526,6 @@ pre{
   padding-bottom: 7px;
 }
 
-.py-40 {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -5727,6 +5722,10 @@ pre{
   padding-top: 4rem;
 }
 
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
 .pt-2\.5 {
   padding-top: 0.625rem;
 }
@@ -5837,10 +5836,6 @@ pre{
 
 .pt-px {
   padding-top: 1px;
-}
-
-.pt-2 {
-  padding-top: 0.5rem;
 }
 
 .text-left {
@@ -6932,6 +6927,11 @@ pre{
   border-color: rgb(255 255 255 / 0.5);
 }
 
+.hover\:bg-\[\#0A0A0A\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-\[\#0f0f0f\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(15 15 15 / var(--tw-bg-opacity, 1));
@@ -7068,11 +7068,6 @@ pre{
 
 .hover\:bg-white\/80:hover {
   background-color: rgb(255 255 255 / 0.8);
-}
-
-.hover\:bg-\[\#0A0A0A\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-gradient-to-tr:hover {
@@ -7317,11 +7312,6 @@ pre{
 
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
-}
-
-.group:hover .group-hover\:hover\:text-\[\#C6FF00\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(198 255 0 / var(--tw-text-opacity, 1));
 }
 
 .group:active .group-active\:border-limegreen {
