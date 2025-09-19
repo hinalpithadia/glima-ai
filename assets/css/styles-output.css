@@ -5838,6 +5838,10 @@ pre{
   padding-top: 1px;
 }
 
+.pt-\[64px\] {
+  padding-top: 64px;
+}
+
 .text-left {
   text-align: left;
 }
