@@ -7,6 +7,10 @@
     <title></title>
     <link rel="stylesheet" href="../assets/css/input.css">
   <link rel="stylesheet" href="../assets/css/styles-output.css">
+      <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
+<style>
+ 
+</style>
 </head>
 
 <body class="relative bg-[#0A0A0A]">
@@ -129,13 +133,13 @@
                             grey, preserving texture, depth, and detail all in a single click. Give your photos a
                             timeless, classic look effortlessly.
                         </p>
-                        <a href=""
+                        <a href="https://glima.ai/image-editing?popular-prompt=color-to-black-and-white"
                             class="py-3.5 px-[30px] w-max rounded-lg bg-[#C6FF00] text-lg font-semibold leading-[26px] text-black transition-all duration-500 hover:shadow-md hover:shadow-[#c8ff00bd]">Start
                             Generating Now!</a>
                     </div>
                 </div>
                 <div class="relative w-max mx-auto lg:w-full  max-h-max">
-                    <img src="https://glima.ai/storage/media/1757567141_oToVphptGbR9S.webp" alt="">
+                    <img src="https://glima.ai/storage/media/1757567141_oToVphptGbR9S.webp" alt="image">
                     <div class="absolute right-[20px] bottom-[20px] rounded-[15px] flex gap-0">
                         <img src="https://glima.ai/storage/media/1757567178_H3MDphp1zDWVL.webp" alt="360 degree Rotation poster image"
                             class="w-full max-w-[180px] rounded-xl">
@@ -2822,12 +2826,12 @@
             <div class="flex flex-col gap-[120px]">
                 <div class="flex lg:flex-row flex-col lg:gap-10 gap-20 lg:justify-between justify-center items-center">
                     <div class="relative lg:w-1/2 group flex flex-col gap-3">
-                        <img src="https://glima.ai/storage/media/1757567193_iHOgphpg3b1qx.webp" alt="">
+                        <img src="https://glima.ai/storage/media/1757567193_iHOgphpg3b1qx.webp" alt="image">
                         <div
                             class="absolute left-0 right-0 m-auto bottom-24 rounded-xl bg-black-[.02] border-[6px] border-black/10 backdrop-blur-md flex items-center justify-between w-[calc(100%-30px)] p-2.5  ">
                             <p class="text-lg text-white font-medium ">Convert this photo to classic black and white.
                             </p>
-                            <a  href=""
+                            <a  href="https://glima.ai/image-editing?popular-prompt=color-to-black-and-white"
                                 class="py-2 px-6 bg-limegreen rounded-lg text-black font-semibold hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);] transition-all duration-300">Generate</a>
                         </div>
                     </div>
@@ -2867,7 +2871,7 @@
                             effortlessly convert any picture into a rich black and white masterpiece perfect for adding
                             a classic, dramatic, or timeless touch.
                         </p>
-                        <a  href=""
+                        <a  href="https://glima.ai/image-editing?popular-prompt=color-to-black-and-white"
                             class="py-3.5 mt-3.5 px-[30px] w-max rounded-lg bg-[#C6FF00] text-lg font-semibold leading-[26px] text-black transition-all duration-500 hover:shadow-md hover:shadow-[#c8ff00bd]">
                             Generating Now!</a>
                     </div>
@@ -2875,7 +2879,7 @@
                 <div class="flex lg:flex-row flex-col gap-10 lg:justify-between justify-center items-center">
                     <div class="flex relative lg:w-1/2 group">
                         <div class="relative">
-                            <img src="https://glima.ai/storage/media/1757567249_X2q2phpwnL4JD.webp" alt="">
+                            <img src="https://glima.ai/storage/media/1757567249_X2q2phpwnL4JD.webp" alt="image">
                         </div>
 
                     </div>
@@ -2889,7 +2893,7 @@
                             sharpens details, adjusts contrast, and adds depth transforming ordinary monochrome shots
                             into rich, dramatic images in seconds.
                         </p>
-                        <a  href=""
+                        <a  href="https://glima.ai/image-editing?popular-prompt=color-to-black-and-white"
                             class="py-3.5 mt-3.5 px-[30px] w-max rounded-lg bg-[#C6FF00] text-lg font-semibold leading-[26px] text-black transition-all duration-500 hover:shadow-md hover:shadow-[#c8ff00bd]">
                             Generating Now!
                         </a>
@@ -3070,7 +3074,7 @@
                     automatically enhances contrast and detail, giving you clean, timeless results no editing experience
                     needed.
                 </p>
-                <a  href=""
+                <a  href="https://glima.ai/image-editing?popular-prompt=color-to-black-and-white"
                     class="py-3.5 px-[30px] w-max mx-auto bg-limegreen rounded-lg text-lg leading-[26px] text-black font-semibold hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);] transition-all duration-300">
                     Start Generating
                 </a>
@@ -3168,7 +3172,9 @@
             </div>
         </div>
     </footer>
-    <script src="../assets/js/jquery-min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script>
+
     <script src="../assets/js/main.js"></script>
     <script>
         var vid = document.getElementsByClassName(".myVideo");
@@ -3176,6 +3182,69 @@
         function play() {
             vid.play();
         }
+    </script>
+    <script>
+        // filter effect code 
+(function ($) {
+    function drags(dragElement, resizeElement, container) {
+        dragElement.on('mousedown.ba-events touchstart.ba-events', function (e) {
+            e.preventDefault();
+            // Add active class for styling (if needed)
+            dragElement.addClass('ba-draggable');
+            resizeElement.addClass('ba-resizable');
+            var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+            var dragWidth = dragElement.outerWidth(),
+                posX = dragElement.offset().left + dragWidth - startX,
+                containerOffset = container.offset().left,
+                containerWidth = container.outerWidth();
+            var minLeft = containerOffset;
+            var maxLeft = containerOffset + containerWidth - dragWidth;
+            // Mouse move
+            $(document).on('mousemove.ba-events touchmove.ba-events', function (e) {
+                var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+                var leftValue = moveX + posX - dragWidth;
+                // Keep handle within bounds
+                if (leftValue < minLeft) leftValue = minLeft;
+                if (leftValue > maxLeft) leftValue = maxLeft;
+                // Calculate percentage position
+                var widthValue = ((leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth) + '%';
+                // :white_check_mark: Update only this instance
+                dragElement.css('left', widthValue);
+                resizeElement.css('width', widthValue);
+            });
+            // Mouse up
+            $(document).on('mouseup.ba-events touchend.ba-events touchcancel.ba-events', function () {
+                // Remove active classes
+                dragElement.removeClass('ba-draggable');
+                resizeElement.removeClass('ba-resizable');
+                // Unbind events
+                $(document).off('.ba-events');
+            });
+        });
+    }
+    // Plugin definition
+    $.fn.beforeAfter = function () {
+        return this.each(function () {
+            var cur = $(this);
+            var width = cur.width() + 'px';
+            cur.find('.resize img').css('width', width);
+            // Bind drag functionality
+            drags(cur.find('.handle'), cur.find('.resize'), cur);
+            // Handle resize
+            $(window).on('resize', function () {
+                var width = cur.width() + 'px';
+                cur.find('.resize img').css('width', width);
+            });
+        });
+    };
+})(jQuery);
+// :white_check_mark: Initialize all sliders
+$(function () {
+    $('.ba-slider').beforeAfter();
+    $('.ba-slider2').beforeAfter();
+    $('.ba-slider3').beforeAfter(); // add more as needed
+});
+
     </script>
 </body>
 

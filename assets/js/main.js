@@ -722,3 +722,77 @@ document.querySelectorAll('.card-video').forEach(video => {
     });
   });
 
+/*======resizer===========*/
+(function($) {
+  function drags(dragElement, resizeElement, container) {
+    dragElement.on('mousedown.ba-events touchstart.ba-events', function(e) {
+      e.preventDefault();
+
+      // Add active class for styling (if needed)
+      dragElement.addClass('ba-draggable');
+      resizeElement.addClass('ba-resizable');
+
+      var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+      var dragWidth = dragElement.outerWidth(),
+          posX = dragElement.offset().left + dragWidth - startX,
+          containerOffset = container.offset().left,
+          containerWidth = container.outerWidth();
+
+      var minLeft = containerOffset;
+      var maxLeft = containerOffset + containerWidth - dragWidth;
+
+      // Mouse move
+      $(document).on('mousemove.ba-events touchmove.ba-events', function(e) {
+        var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+        var leftValue = moveX + posX - dragWidth;
+
+        // Keep handle within bounds
+        if (leftValue < minLeft) leftValue = minLeft;
+        if (leftValue > maxLeft) leftValue = maxLeft;
+
+        // Calculate percentage position
+        var widthValue = ((leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth) + '%';
+
+        // ✅ Update only this instance
+        dragElement.css('left', widthValue);
+        resizeElement.css('width', widthValue);
+      });
+
+      // Mouse up
+      $(document).on('mouseup.ba-events touchend.ba-events touchcancel.ba-events', function() {
+        // Remove active classes
+        dragElement.removeClass('ba-draggable');
+        resizeElement.removeClass('ba-resizable');
+
+        // Unbind events
+        $(document).off('.ba-events');
+      });
+    });
+  }
+
+  // Plugin definition
+  $.fn.beforeAfter = function() {
+    return this.each(function() {
+      var cur = $(this);
+      var width = cur.width() + 'px';
+      cur.find('.resize img').css('width', width);
+
+      // Bind drag functionality
+      drags(cur.find('.handle'), cur.find('.resize'), cur);
+
+      // Handle resize
+      $(window).on('resize', function() {
+        var width = cur.width() + 'px';
+        cur.find('.resize img').css('width', width);
+      });
+    });
+  };
+})(jQuery);
+
+// ✅ Initialize all sliders
+$(function() {
+  $('.ba-slider').beforeAfter();
+  $('.ba-slider2').beforeAfter();
+  $('.ba-slider3').beforeAfter(); // add more as needed
+});

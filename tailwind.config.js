@@ -17,6 +17,7 @@ module.exports = {
     "./Imagine-Art-Video-template/**/*.html", 
     "./LLM-pages/**/*.html", 
     "./new-generator-page/**/*.html", 
+    "./editor-pages/**/*.html", 
   ],
   theme: {
     extend: {
