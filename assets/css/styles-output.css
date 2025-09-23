@@ -3335,6 +3335,22 @@ pre{
   max-height: max-content;
 }
 
+.max-h-\[420px\] {
+  max-height: 420px;
+}
+
+.max-h-\[430px\] {
+  max-height: 430px;
+}
+
+.max-h-\[450px\] {
+  max-height: 450px;
+}
+
+.max-h-\[480px\] {
+  max-height: 480px;
+}
+
 .min-h-\[110px\] {
   min-height: 110px;
 }
@@ -3620,6 +3636,10 @@ pre{
   width: calc(100% - 30px);
 }
 
+.w-\[calc\(100\%-32px\)\] {
+  width: calc(100% - 32px);
+}
+
 .w-\[calc\(100\%-48px\)\] {
   width: calc(100% - 48px);
 }
@@ -3656,10 +3676,6 @@ pre{
 
 .w-px {
   width: 1px;
-}
-
-.w-\[calc\(100\%-32px\)\] {
-  width: calc(100% - 32px);
 }
 
 .min-w-\[153px\] {
