@@ -2625,6 +2625,10 @@ pre{
   z-index: 500;
 }
 
+.z-\[5\] {
+  z-index: 5;
+}
+
 .col-span-12 {
   grid-column: span 12 / span 12;
 }
@@ -3335,22 +3339,6 @@ pre{
   max-height: max-content;
 }
 
-.max-h-\[420px\] {
-  max-height: 420px;
-}
-
-.max-h-\[430px\] {
-  max-height: 430px;
-}
-
-.max-h-\[450px\] {
-  max-height: 450px;
-}
-
-.max-h-\[480px\] {
-  max-height: 480px;
-}
-
 .min-h-\[110px\] {
   min-height: 110px;
 }
@@ -3746,12 +3734,20 @@ pre{
   max-width: 1534px;
 }
 
+.max-w-\[1580px\] {
+  max-width: 1580px;
+}
+
 .max-w-\[1700px\] {
   max-width: 1700px;
 }
 
 .max-w-\[1760px\] {
   max-width: 1760px;
+}
+
+.max-w-\[178px\] {
+  max-width: 178px;
 }
 
 .max-w-\[180px\] {
@@ -3806,6 +3802,10 @@ pre{
   max-width: 300px;
 }
 
+.max-w-\[301px\] {
+  max-width: 301px;
+}
+
 .max-w-\[316px\] {
   max-width: 316px;
 }
@@ -3832,6 +3832,10 @@ pre{
 
 .max-w-\[360px\] {
   max-width: 360px;
+}
+
+.max-w-\[370px\] {
+  max-width: 370px;
 }
 
 .max-w-\[385px\] {
@@ -3870,6 +3874,10 @@ pre{
   max-width: 562px;
 }
 
+.max-w-\[566px\] {
+  max-width: 566px;
+}
+
 .max-w-\[570px\] {
   max-width: 570px;
 }
@@ -3884,6 +3892,10 @@ pre{
 
 .max-w-\[590px\] {
   max-width: 590px;
+}
+
+.max-w-\[604px\] {
+  max-width: 604px;
 }
 
 .max-w-\[628px\] {
@@ -4482,6 +4494,10 @@ pre{
   border-radius: 16px;
 }
 
+.rounded-\[18px\] {
+  border-radius: 18px;
+}
+
 .rounded-\[19px\] {
   border-radius: 19px;
 }
@@ -4796,6 +4812,16 @@ pre{
   background-color: rgb(18 18 18 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#122225\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 34 37 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#131225\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(19 18 37 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#131313\] {
   --tw-bg-opacity: 1;
   background-color: rgb(19 19 19 / var(--tw-bg-opacity, 1));
@@ -4816,9 +4842,39 @@ pre{
   background-color: rgb(29 29 29 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#1E2512\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 37 18 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#22232B\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 35 43 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#243025\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 48 37 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#251220\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 18 32 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#28141A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(40 20 26 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#2A2A2A\] {
   --tw-bg-opacity: 1;
   background-color: rgb(42 42 42 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#2D1F14\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 31 20 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#303030\] {
@@ -4843,6 +4899,14 @@ pre{
 .bg-\[\#C6FF00\] {
   --tw-bg-opacity: 1;
   background-color: rgb(198 255 0 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#C6FF00\]\/10 {
+  background-color: rgb(198 255 0 / 0.1);
+}
+
+.bg-\[\#F5F5F5\]\/10 {
+  background-color: rgb(245 245 245 / 0.1);
 }
 
 .bg-\[\#FF3030\] {
@@ -5034,6 +5098,10 @@ pre{
   background-image: radial-gradient(50% 80.03% at 49.97% 0%,rgba(198,255,0,0.14) 0%,rgba(27,27,27,0.00) 100%);
 }
 
+.bg-\[radial-gradient\(50\.73\%_66\.26\%_at_50\%_50\%\2c rgba\(45\2c 31\2c 20\2c 0\)_0\%\2c \#2D1F14_72\.37\%\)\] {
+  background-image: radial-gradient(50.73% 66.26% at 50% 50%,rgba(45,31,20,0) 0%,#2D1F14 72.37%);
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -5063,6 +5131,18 @@ pre{
 .from-\[\#0A0A0A\]\/0 {
   --tw-gradient-from: rgb(10 10 10 / 0) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(10 10 10 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#131313\] {
+  --tw-gradient-from: #131313 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(19 19 19 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#151515\] {
+  --tw-gradient-from: #151515 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(21 21 21 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -5137,6 +5217,11 @@ pre{
   --tw-gradient-stops: var(--tw-gradient-from), rgb(10 10 10 / 0.75) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-\[\#131313\] {
+  --tw-gradient-to: rgb(19 19 19 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #131313 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .via-\[\#C6FF0029\] {
   --tw-gradient-to: rgb(198 255 0 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #C6FF0029 var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -5158,6 +5243,14 @@ pre{
 
 .to-\[\#0A0A0A\]\/0 {
   --tw-gradient-to: rgb(10 10 10 / 0) var(--tw-gradient-to-position);
+}
+
+.to-\[\#101010\] {
+  --tw-gradient-to: #101010 var(--tw-gradient-to-position);
+}
+
+.to-\[\#131313\]\/0 {
+  --tw-gradient-to: rgb(19 19 19 / 0) var(--tw-gradient-to-position);
 }
 
 .to-\[\#4D4D4D\] {
@@ -5300,6 +5393,10 @@ pre{
 
 .p-\[2px\] {
   padding: 2px;
+}
+
+.p-\[5px\] {
+  padding: 5px;
 }
 
 .p-\[9px\] {
@@ -7006,9 +7103,17 @@ pre{
   background-color: rgb(198 255 0 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[\#C6FF00\]\/20:hover {
+  background-color: rgb(198 255 0 / 0.2);
+}
+
 .hover\:bg-\[\#D7FF4D\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(215 255 77 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#F5F5F5\]\/20:hover {
+  background-color: rgb(245 245 245 / 0.2);
 }
 
 .hover\:bg-\[\#a8d50c\]:hover {
@@ -7353,6 +7458,10 @@ pre{
   opacity: 1;
 }
 
+.group:hover .group-hover\:opacity-75 {
+  opacity: 0.75;
+}
+
 .group:active .group-active\:border-limegreen {
   --tw-border-opacity: 1;
   border-color: rgb(198 255 0 / var(--tw-border-opacity, 1));
@@ -7560,6 +7669,10 @@ pre{
     max-width: 520px;
   }
 
+  .sm\:max-w-full {
+    max-width: 100%;
+  }
+
   .sm\:columns-2 {
     -moz-columns: 2;
          columns: 2;
@@ -7593,6 +7706,10 @@ pre{
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .sm\:text-left {
+    text-align: left;
   }
 
   .sm\:text-lg {
