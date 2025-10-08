@@ -236,13 +236,30 @@
                             <p class="text-lg leading-6 font-semibold text-white mb-1.5">Delete Account</p>
                             <p class="text-xs leading-4 text-[#B1B1B1]">Deleting your account will permanently erase all your assets and cannot be reversed.</p>
                         </div>
-                        <button class="py-2 px-3.5 rounded-lg bg-[#A51919] w-max text-sm font-medium leading-[18px] text-white transition-all duration-500 hover:bg-red-600 whitespace-nowrap">Delete Account</button>
+                        <button id="open-modal"
+                            class="py-2 px-3.5 rounded-lg bg-[#A51919] w-max text-sm font-medium leading-[18px] text-white transition-all duration-500 hover:bg-red-600 whitespace-nowrap">Delete
+                            Account</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
+ <!-- Modal -->
+    <div id="cancel-modal"
+        class="fixed inset-0 bg-black/15 backdrop-blur-sm bg-opacity-40 flex items-center justify-center z-50 hidden">
+        <div class="bg-[#1B1B1B] shadow-lg w-full max-w-[570px] rounded-3xl relative">
+            <button id="close-modal"
+                class="absolute  z-40 right-9 top-9 w-9 h-9 flex items-center justify-center rounded-xl bg-[#1B1B1B] transition-all duration-500 hover:bg-theme-border">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M6.75781 17.2431L12.0004 12.0005M12.0004 12.0005L17.243 6.75781M12.0004 12.0005L6.75781 6.75781M12.0004 12.0005L17.243 17.2431"
+                        stroke="#FFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div id="step-container" class="w-full max-w-[570px] rounded-3xl"></div>
+        </div>
+    </div>
 
     <!-- MAIN JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/2.5.3/tippy.all.min.js"></script>
@@ -259,6 +276,308 @@
 
         });
 
+    </script>
+      <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            let step = 1;
+            let cancelReason = "";
+            let showOffer = false;
+
+            const modal = document.getElementById("cancel-modal");
+            const stepContainer = document.getElementById("step-container");
+
+            function showStep() {
+                stepContainer.innerHTML = ""; // Clear previous content
+
+                if (step === 1) {
+                    stepContainer.innerHTML = `
+          <div class="p-[12px] rounded-3xl">
+            <div class="block relative w-full p-6 rounded-[18px] bg-white/5 mb-3">
+                <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 16C4 9.37258 9.37258 4 16 4H46C52.6274 4 58 9.37258 58 16V46C58 52.6274 52.6274 58 46 58H16C9.37258 58 4 52.6274 4 46V16Z" fill="#C6FF00"/>
+                    <path d="M46 2L46.3613 2.00488C53.9263 2.19654 60 8.38882 60 16V46C60 53.732 53.732 60 46 60H16C8.26801 60 2 53.732 2 46V16L2.00488 15.6387C2.19654 8.07368 8.38882 2 16 2H46Z" stroke="#C6FF00" stroke-opacity="0.1" stroke-width="4"/>
+                    <g clip-path="url(#clip0_5366_1388)">
+                    <path d="M37.2722 26.7671C37.2722 27.1384 37.162 27.5014 36.9557 27.8102C36.7494 28.119 36.4561 28.3596 36.113 28.5017C35.7699 28.6438 35.3924 28.681 35.0282 28.6086C34.664 28.5361 34.3294 28.3573 34.0668 28.0947C33.8042 27.8321 33.6254 27.4975 33.553 27.1333C33.4805 26.7691 33.5177 26.3915 33.6598 26.0485C33.8019 25.7054 34.0426 25.4121 34.3514 25.2058C34.6602 24.9995 35.0232 24.8894 35.3945 24.8894C35.8924 24.8899 36.3696 25.0879 36.7216 25.44C37.0736 25.792 37.2716 26.2693 37.2722 26.7671ZM46 31C46 39.271 39.271 46 31 46C22.729 46 16 39.271 16 31C16 22.729 22.729 16 31 16C39.271 16 46 22.729 46 31ZM44.125 31C44.125 23.7629 38.2371 17.875 31 17.875C23.7629 17.875 17.875 23.7629 17.875 31C17.875 38.2371 23.7629 44.125 31 44.125C38.2371 44.125 44.125 38.2371 44.125 31ZM28.4831 26.7671C28.4831 26.3957 28.373 26.0327 28.1668 25.7239C27.9605 25.4151 27.6672 25.1744 27.3241 25.0322C26.981 24.8901 26.6035 24.8529 26.2393 24.9253C25.875 24.9977 25.5405 25.1766 25.2778 25.4391C25.0152 25.7017 24.8364 26.0363 24.7639 26.4005C24.6915 26.7648 24.7286 27.1423 24.8707 27.4854C25.0129 27.8285 25.2535 28.1218 25.5623 28.3281C25.8711 28.5344 26.2341 28.6445 26.6055 28.6445C27.1032 28.644 27.5805 28.446 27.9325 28.094C28.2845 27.742 28.4825 27.2648 28.4831 26.7671ZM35.3558 33.9601L26.1588 36.4244C26.0399 36.4563 25.9284 36.5113 25.8307 36.5862C25.7331 36.6612 25.6511 36.7546 25.5896 36.8613C25.528 36.9679 25.488 37.0856 25.472 37.2076C25.4559 37.3297 25.464 37.4537 25.4959 37.5727C25.5603 37.8128 25.7174 38.0176 25.9327 38.1419C26.0394 38.2035 26.1571 38.2434 26.2791 38.2595C26.4012 38.2756 26.5252 38.2674 26.6441 38.2356L35.8411 35.7712C36.0813 35.7069 36.2861 35.5497 36.4104 35.3344C36.5347 35.1191 36.5684 34.8632 36.504 34.623C36.4397 34.3828 36.2825 34.1781 36.0672 34.0537C35.8519 33.9294 35.596 33.8957 35.3558 33.9601Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5366_1388">
+                    <rect width="30" height="30" fill="white" transform="translate(16 16)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+
+                <h3 class="text-[22px] font-semibold leading-9 text-white mt-14 mb-0.5">We’re sorry to hear
+                    you’d like to cancel.</h3>
+                <p class="text-lg leading-[22px] text-[#7D7D7D]">Can you help us understand why?</p>
+            </div>
+            <div class="p-3">
+            <div class="flex flex-col gap-3">
+              ${["Too expensive", "Didn't meet my expectations", "Missing features I need", "Technical issues or bugs", "Switching to another tool", "Other"]
+                            .map((reason, index) => `
+                  <label class="flex items-center p-5 py-[18px] border border-[#2A2A2A] rounded-[10px] cursor-pointer transition-all duration-500 hover:border-[#4E4D4D]">
+                    <input type="radio" name="reason" value="${reason}" class="peer sr-only" ${index === 0 ? "checked" : ""}>
+                    <div class="w-5 h-5 border border-[#3A3A3A] rounded-full mr-3 flex items-center justify-center transition-colors duration-150 peer-checked:bg-[#000000] peer-checked:border-4 peer-checked:border-[#C6FF00]">
+                      <div class="w-2 h-2 rounded-full scale-0 peer-checked:scale-100 transform transition-transform bg-white">
+                      </div>
+                    </div>
+                    <span class="text-white text-lg leading-[26px] font-medium">${reason}</span>
+                  </label>
+                `).join("")}
+            </div>
+            <button id="step1-next" class="mt-6 bg-[#C6FF00] w-full text-center text-base font-medium text-black leading-5 py-3.5 rounded-lg transition-all duration-500 hover:bg-[#D7FF4D]">Proceed</button>
+            </div>
+            </div>
+          `;
+
+                    document.getElementById("step1-next").onclick = () => {
+                        const selected = document.querySelector('input[name="reason"]:checked');
+                        cancelReason = selected ? selected.value : "";
+                        step = 2;
+                        showStep();
+                    };
+                }
+
+                else if (step === 2) {
+                    stepContainer.innerHTML = `
+          <div class="p-[12px] rounded-3xl">
+            <div class="block relative w-full p-6 rounded-[18px] bg-white/5 mb-3">
+                <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 16C4 9.37258 9.37258 4 16 4H46C52.6274 4 58 9.37258 58 16V46C58 52.6274 52.6274 58 46 58H16C9.37258 58 4 52.6274 4 46V16Z" fill="#C6FF00"/>
+                    <path d="M46 2L46.3613 2.00488C53.9263 2.19654 60 8.38882 60 16V46C60 53.732 53.732 60 46 60H16C8.26801 60 2 53.732 2 46V16L2.00488 15.6387C2.19654 8.07368 8.38882 2 16 2H46Z" stroke="#C6FF00" stroke-opacity="0.1" stroke-width="4"/>
+                    <g clip-path="url(#clip0_5366_1388)">
+                    <path d="M37.2722 26.7671C37.2722 27.1384 37.162 27.5014 36.9557 27.8102C36.7494 28.119 36.4561 28.3596 36.113 28.5017C35.7699 28.6438 35.3924 28.681 35.0282 28.6086C34.664 28.5361 34.3294 28.3573 34.0668 28.0947C33.8042 27.8321 33.6254 27.4975 33.553 27.1333C33.4805 26.7691 33.5177 26.3915 33.6598 26.0485C33.8019 25.7054 34.0426 25.4121 34.3514 25.2058C34.6602 24.9995 35.0232 24.8894 35.3945 24.8894C35.8924 24.8899 36.3696 25.0879 36.7216 25.44C37.0736 25.792 37.2716 26.2693 37.2722 26.7671ZM46 31C46 39.271 39.271 46 31 46C22.729 46 16 39.271 16 31C16 22.729 22.729 16 31 16C39.271 16 46 22.729 46 31ZM44.125 31C44.125 23.7629 38.2371 17.875 31 17.875C23.7629 17.875 17.875 23.7629 17.875 31C17.875 38.2371 23.7629 44.125 31 44.125C38.2371 44.125 44.125 38.2371 44.125 31ZM28.4831 26.7671C28.4831 26.3957 28.373 26.0327 28.1668 25.7239C27.9605 25.4151 27.6672 25.1744 27.3241 25.0322C26.981 24.8901 26.6035 24.8529 26.2393 24.9253C25.875 24.9977 25.5405 25.1766 25.2778 25.4391C25.0152 25.7017 24.8364 26.0363 24.7639 26.4005C24.6915 26.7648 24.7286 27.1423 24.8707 27.4854C25.0129 27.8285 25.2535 28.1218 25.5623 28.3281C25.8711 28.5344 26.2341 28.6445 26.6055 28.6445C27.1032 28.644 27.5805 28.446 27.9325 28.094C28.2845 27.742 28.4825 27.2648 28.4831 26.7671ZM35.3558 33.9601L26.1588 36.4244C26.0399 36.4563 25.9284 36.5113 25.8307 36.5862C25.7331 36.6612 25.6511 36.7546 25.5896 36.8613C25.528 36.9679 25.488 37.0856 25.472 37.2076C25.4559 37.3297 25.464 37.4537 25.4959 37.5727C25.5603 37.8128 25.7174 38.0176 25.9327 38.1419C26.0394 38.2035 26.1571 38.2434 26.2791 38.2595C26.4012 38.2756 26.5252 38.2674 26.6441 38.2356L35.8411 35.7712C36.0813 35.7069 36.2861 35.5497 36.4104 35.3344C36.5347 35.1191 36.5684 34.8632 36.504 34.623C36.4397 34.3828 36.2825 34.1781 36.0672 34.0537C35.8519 33.9294 35.596 33.8957 35.3558 33.9601Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5366_1388">
+                    <rect width="30" height="30" fill="white" transform="translate(16 16)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+
+                <h3 class="text-[22px] font-semibold leading-9 text-white mt-14 mb-0.5">Anything we could have done better?</h3>
+                <p class="text-lg leading-[22px] text-[#7D7D7D]">Your honest feedback helps us improve Glima.</p>
+            </div>
+            <div class="p-3">
+            <textarea id="feedback" class="w-full h-auto min-h-[192px] bg-[#1B1B1B] border border-[#2A2A2A] rounded-[10px] text-lg leading-[26px] text-white placeholder:text-white py-4 px-[18px] transition-all duration-500 hover:border-[#4E4D4D] focus:outline-0 focus:border-[#4E4D4D]" rows="4" placeholder="Yes I think that..."></textarea>
+            <button id="step2-next" class="mt-6 bg-[#C6FF00] w-full text-center text-base font-medium text-black leading-5 py-3.5 rounded-lg transition-all duration-500 hover:bg-[#D7FF4D]">Proceed</button>
+            </div>
+            </div>
+          `;
+
+                    document.getElementById("step2-next").onclick = () => {
+                        step = 3;
+                        showStep();
+                    };
+                }
+
+                else if (step === 3) {
+                    stepContainer.innerHTML = `
+          <div class="p-[12px] rounded-3xl">
+            <div class="block relative w-full p-6 rounded-[18px] bg-white/5 mb-3">
+                <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 16C4 9.37258 9.37258 4 16 4H46C52.6274 4 58 9.37258 58 16V46C58 52.6274 52.6274 58 46 58H16C9.37258 58 4 52.6274 4 46V16Z" fill="#C6FF00"/>
+                    <path d="M46 2L46.3613 2.00488C53.9263 2.19654 60 8.38882 60 16V46C60 53.732 53.732 60 46 60H16C8.26801 60 2 53.732 2 46V16L2.00488 15.6387C2.19654 8.07368 8.38882 2 16 2H46Z" stroke="#C6FF00" stroke-opacity="0.1" stroke-width="4"/>
+                    <g clip-path="url(#clip0_5366_1388)">
+                    <path d="M37.2722 26.7671C37.2722 27.1384 37.162 27.5014 36.9557 27.8102C36.7494 28.119 36.4561 28.3596 36.113 28.5017C35.7699 28.6438 35.3924 28.681 35.0282 28.6086C34.664 28.5361 34.3294 28.3573 34.0668 28.0947C33.8042 27.8321 33.6254 27.4975 33.553 27.1333C33.4805 26.7691 33.5177 26.3915 33.6598 26.0485C33.8019 25.7054 34.0426 25.4121 34.3514 25.2058C34.6602 24.9995 35.0232 24.8894 35.3945 24.8894C35.8924 24.8899 36.3696 25.0879 36.7216 25.44C37.0736 25.792 37.2716 26.2693 37.2722 26.7671ZM46 31C46 39.271 39.271 46 31 46C22.729 46 16 39.271 16 31C16 22.729 22.729 16 31 16C39.271 16 46 22.729 46 31ZM44.125 31C44.125 23.7629 38.2371 17.875 31 17.875C23.7629 17.875 17.875 23.7629 17.875 31C17.875 38.2371 23.7629 44.125 31 44.125C38.2371 44.125 44.125 38.2371 44.125 31ZM28.4831 26.7671C28.4831 26.3957 28.373 26.0327 28.1668 25.7239C27.9605 25.4151 27.6672 25.1744 27.3241 25.0322C26.981 24.8901 26.6035 24.8529 26.2393 24.9253C25.875 24.9977 25.5405 25.1766 25.2778 25.4391C25.0152 25.7017 24.8364 26.0363 24.7639 26.4005C24.6915 26.7648 24.7286 27.1423 24.8707 27.4854C25.0129 27.8285 25.2535 28.1218 25.5623 28.3281C25.8711 28.5344 26.2341 28.6445 26.6055 28.6445C27.1032 28.644 27.5805 28.446 27.9325 28.094C28.2845 27.742 28.4825 27.2648 28.4831 26.7671ZM35.3558 33.9601L26.1588 36.4244C26.0399 36.4563 25.9284 36.5113 25.8307 36.5862C25.7331 36.6612 25.6511 36.7546 25.5896 36.8613C25.528 36.9679 25.488 37.0856 25.472 37.2076C25.4559 37.3297 25.464 37.4537 25.4959 37.5727C25.5603 37.8128 25.7174 38.0176 25.9327 38.1419C26.0394 38.2035 26.1571 38.2434 26.2791 38.2595C26.4012 38.2756 26.5252 38.2674 26.6441 38.2356L35.8411 35.7712C36.0813 35.7069 36.2861 35.5497 36.4104 35.3344C36.5347 35.1191 36.5684 34.8632 36.504 34.623C36.4397 34.3828 36.2825 34.1781 36.0672 34.0537C35.8519 33.9294 35.596 33.8957 35.3558 33.9601Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5366_1388">
+                    <rect width="30" height="30" fill="white" transform="translate(16 16)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+
+                <h3 class="text-[22px] font-semibold leading-9 text-white mt-14 mb-0.5">Why Glima didn’t meet your expectations?</h3>
+                <p class="text-lg leading-[22px] text-[#7D7D7D]">Anything we could have done better?</p>
+            </div>
+            <div class="p-3">
+            <textarea id="expectation-feedback" class="w-full h-auto min-h-[192px] bg-[#1B1B1B] border border-[#2A2A2A] rounded-[10px] text-lg leading-[26px] text-white placeholder:text-white py-4 px-[18px] transition-all duration-500 hover:border-[#4E4D4D] focus:outline-0 focus:border-[#4E4D4D]" rows="4" placeholder="I think that..."></textarea>
+            <button id="step3-next" class="mt-6 bg-[#C6FF00] w-full text-center text-base font-medium text-black leading-5 py-3.5 rounded-lg transition-all duration-500 hover:bg-[#D7FF4D]">Proceed</button>
+            </div>
+            </div>
+            `;
+
+                    document.getElementById("step3-next").onclick = () => {
+                        step = 4;
+                        showStep();
+                    };
+                }
+
+                else if (step === 4) {
+                    // Always show offer
+                    stepContainer.innerHTML = `
+          <div class="p-[12px] rounded-3xl">
+            <div class="block relative w-full p-6 rounded-[18px] bg-white/5 mb-3">
+                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_893_823)">
+<path d="M25.0376 51.546C38.5937 51.546 49.5831 40.5566 49.5831 27.0005C49.5831 13.4445 38.5937 2.45508 25.0376 2.45508C11.4816 2.45508 0.492188 13.4445 0.492188 27.0005C0.492188 40.5566 11.4816 51.546 25.0376 51.546Z" fill="white" fill-opacity="0.04"/>
+<path d="M10.8009 3.43667C11.6142 3.43667 12.2736 2.7773 12.2736 1.96394C12.2736 1.15057 11.6142 0.491211 10.8009 0.491211C9.98749 0.491211 9.32812 1.15057 9.32812 1.96394C9.32812 2.7773 9.98749 3.43667 10.8009 3.43667Z" fill="#FF4D69"/>
+<path d="M52.0391 4.41811C52.8525 4.41811 53.5119 3.75875 53.5119 2.94538C53.5119 2.13202 52.8525 1.47266 52.0391 1.47266C51.2258 1.47266 50.5664 2.13202 50.5664 2.94538C50.5664 3.75875 51.2258 4.41811 52.0391 4.41811Z" fill="#00C99F"/>
+<path d="M45.6563 53.5089C46.4697 53.5089 47.129 52.8496 47.129 52.0362C47.129 51.2228 46.4697 50.5635 45.6563 50.5635C44.843 50.5635 44.1836 51.2228 44.1836 52.0362C44.1836 52.8496 44.843 53.5089 45.6563 53.5089Z" fill="#FFA100"/>
+<path d="M5.8907 50.5636C6.70406 50.5636 7.36342 49.9043 7.36342 49.0909C7.36342 48.2775 6.70406 47.6182 5.8907 47.6182C5.07733 47.6182 4.41797 48.2775 4.41797 49.0909C4.41797 49.9043 5.07733 50.5636 5.8907 50.5636Z" fill="#00C99F"/>
+<path d="M50.5661 14.2368V39.7641C50.5661 40.8057 50.1524 41.8046 49.4158 42.5411C48.6793 43.2776 47.6804 43.6914 46.6388 43.6914H7.04703C5.12276 41.6195 3.57003 39.2315 2.45703 36.6321V17.3688C3.57003 14.7695 5.12276 12.3814 7.04703 10.3096H46.6388C47.6804 10.3096 48.6793 10.7233 49.4158 11.4598C50.1524 12.1963 50.5661 13.1953 50.5661 14.2368Z" fill="#0F1400"/>
+<path d="M2.45703 24.5459H50.5661V29.455H2.45703V24.5459Z" fill="#3B4C00" fill-opacity="0.4"/>
+<path d="M30.875 10.3096H35.7841V43.6914H30.875V10.3096Z" fill="#3B4C00"/>
+<path d="M44.1106 33.166C43.8725 33.4044 43.5599 33.5539 43.2249 33.5896C42.8899 33.6254 42.5528 33.5451 42.2697 33.3624L33.3843 27.5844L24.4988 33.382C24.2158 33.5648 23.8787 33.645 23.5437 33.6093C23.2086 33.5735 22.896 33.424 22.6579 33.1856C21.0235 31.5499 20.1055 29.3322 20.1055 27.0198C20.1055 24.7075 21.0235 22.4898 22.6579 20.854C22.8912 20.6095 23.2014 20.4526 23.5366 20.4097C23.8718 20.3668 24.2115 20.4405 24.4988 20.6184L33.3843 26.416L42.2697 20.6184C42.5528 20.4356 42.8899 20.3554 43.2249 20.3911C43.5599 20.4269 43.8725 20.5764 44.1106 20.8147C44.9229 21.6251 45.5672 22.5876 46.0069 23.6473C46.4466 24.707 46.6729 25.8431 46.6729 26.9904C46.6729 28.1377 46.4466 29.2737 46.0069 30.3334C45.5672 31.3931 44.9229 32.3557 44.1106 33.166Z" fill="#3B4C00"/>
+<path d="M27.9826 29.4547C27.8739 29.4555 27.7681 29.4202 27.6816 29.3543C27.5952 29.2884 27.533 29.1956 27.5049 29.0906C27.4769 28.9856 27.4844 28.8743 27.5265 28.774C27.5685 28.6738 27.6426 28.5903 27.7372 28.5367L30.4372 27.0002L27.7372 25.4636C27.6811 25.4314 27.6319 25.3884 27.5924 25.3372C27.5529 25.286 27.5239 25.2274 27.5071 25.165C27.4902 25.1025 27.4858 25.0374 27.4941 24.9732C27.5024 24.9091 27.5233 24.8472 27.5555 24.7911C27.5878 24.735 27.6307 24.6858 27.682 24.6463C27.7332 24.6069 27.7917 24.5779 27.8542 24.561C27.9166 24.5441 27.9818 24.5397 28.046 24.548C28.1101 24.5563 28.172 24.5772 28.2281 24.6095L31.6644 26.5731C31.74 26.6159 31.8028 26.678 31.8465 26.753C31.8903 26.8281 31.9133 26.9133 31.9133 27.0002C31.9133 27.087 31.8903 27.1723 31.8465 27.2473C31.8028 27.3224 31.74 27.3845 31.6644 27.4273L28.2281 29.3909C28.1533 29.4333 28.0686 29.4553 27.9826 29.4547Z" fill="white"/>
+<path d="M38.7822 29.4547C38.6963 29.4553 38.6116 29.4333 38.5368 29.3909L35.1004 27.4273C35.0249 27.3845 34.962 27.3224 34.9183 27.2473C34.8746 27.1723 34.8516 27.087 34.8516 27.0002C34.8516 26.9133 34.8746 26.8281 34.9183 26.753C34.962 26.678 35.0249 26.6159 35.1004 26.5731L38.5368 24.6095C38.6501 24.5444 38.7846 24.5269 38.9107 24.561C39.0368 24.595 39.1442 24.6778 39.2093 24.7911C39.2744 24.9044 39.2919 25.0389 39.2578 25.165C39.2237 25.2911 39.141 25.3985 39.0277 25.4636L36.3277 27.0002L39.0179 28.5367C39.1117 28.5899 39.1855 28.6725 39.2277 28.7718C39.2699 28.871 39.2782 28.9814 39.2514 29.0859C39.2246 29.1904 39.1641 29.2831 39.0793 29.3498C38.9945 29.4165 38.8901 29.4533 38.7822 29.4547Z" fill="white"/>
+<path d="M35.3453 22.582H31.418C30.6047 22.582 29.9453 23.2414 29.9453 24.0548V29.9457C29.9453 30.759 30.6047 31.4184 31.418 31.4184H35.3453C36.1587 31.4184 36.818 30.759 36.818 29.9457V24.0548C36.818 23.2414 36.1587 22.582 35.3453 22.582Z" fill="#C6FF00"/>
+<path d="M10.3114 36.8184H6.38416C5.84192 36.8184 5.40234 37.2579 5.40234 37.8002V39.7638C5.40234 40.3061 5.84192 40.7456 6.38416 40.7456H10.3114C10.8537 40.7456 11.2933 40.3061 11.2933 39.7638V37.8002C11.2933 37.2579 10.8537 36.8184 10.3114 36.8184Z" fill="white"/>
+<path d="M16.6903 36.8184H13.7448C13.4737 36.8184 13.2539 37.0381 13.2539 37.3093C13.2539 37.5804 13.4737 37.8002 13.7448 37.8002H16.6903C16.9614 37.8002 17.1812 37.5804 17.1812 37.3093C17.1812 37.0381 16.9614 36.8184 16.6903 36.8184Z" fill="white"/>
+<path d="M16.6903 38.7822H13.7448C13.4737 38.7822 13.2539 39.002 13.2539 39.2731C13.2539 39.5443 13.4737 39.764 13.7448 39.764H16.6903C16.9614 39.764 17.1812 39.5443 17.1812 39.2731C17.1812 39.002 16.9614 38.7822 16.6903 38.7822Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_893_823">
+<rect width="54" height="54" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+                <h3 class="text-[22px] font-semibold leading-9 text-white mt-14 mb-0.5">Wait! A special offer just for you</h3>
+                <p class="text-lg leading-[22px] text-[#7D7D7D]">We’d love to keep you with us.</p>
+            </div>
+            <div class="p-3">
+            <div class="flex flex-col gap-3">
+              <label class="flex items-center p-5 py-[18px] border border-[#2A2A2A] rounded-[10px] cursor-pointer transition-all duration-500 hover:border-[#4E4D4D]">
+                <input type="radio" name="offer" value="accept"  class="peer sr-only" checked>
+                <div class="w-5 h-5 border border-[#3A3A3A] rounded-full mr-3 flex items-center justify-center transition-colors duration-150 peer-checked:bg-[#000000] peer-checked:border-4 peer-checked:border-[#C6FF00]">
+                      <div class="w-2 h-2 rounded-full scale-0 peer-checked:scale-100 transform transition-transform bg-white">
+                      </div>
+                    </div>
+                <span  class="text-white text-lg leading-[26px] font-medium">30% off for the next 3 months</span>
+              </label>
+              <label  class="flex items-center p-5 py-[18px] border border-[#2A2A2A] rounded-[10px] cursor-pointer transition-all duration-500 hover:border-[#4E4D4D]">
+                <input type="radio" name="offer" value="decline"  class="peer sr-only">
+                <div class="w-5 h-5 border border-[#3A3A3A] rounded-full mr-3 flex items-center justify-center transition-colors duration-150 peer-checked:bg-[#000000] peer-checked:border-4 peer-checked:border-[#C6FF00]">
+                      <div class="w-2 h-2 rounded-full scale-0 peer-checked:scale-100 transform transition-transform bg-white">
+                      </div>
+                    </div>
+                <span  class="text-white text-lg leading-[26px] font-medium">Decline Offer, I want to cancel</span>
+              </label>
+            </div>
+            <button id="step4-next" class="mt-6 bg-[#C6FF00] w-full text-center text-base font-medium text-black leading-5 py-3.5 rounded-lg transition-all duration-500 hover:bg-[#D7FF4D]">Continue</button>
+            </div>
+            </div>
+            `;
+
+                    document.getElementById("step4-next").onclick = () => {
+                        const selected = document.querySelector('input[name="offer"]:checked');
+                        showOffer = selected && selected.value === "accept";
+                        step = showOffer ? 5 : 6;
+                        showStep();
+                    };
+                }
+
+                else if (step === 5) {
+                    stepContainer.innerHTML = `
+          <div class=" bg-gradient-to-r from-[#C6FF00]/10 via-[#C6FF00]/50 to-[#C6FF00]/10 p-[2px] rounded-3xl">
+                <!--pricing hero section-->
+                <div class="block relative w-full p-6 bg-[#1B1B1B] rounded-[22px]">
+                   
+                    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_893_756)">
+<path d="M25.0376 51.546C38.5937 51.546 49.5831 40.5566 49.5831 27.0005C49.5831 13.4445 38.5937 2.45508 25.0376 2.45508C11.4816 2.45508 0.492188 13.4445 0.492188 27.0005C0.492188 40.5566 11.4816 51.546 25.0376 51.546Z" fill="white" fill-opacity="0.04"/>
+<path d="M10.8009 3.43667C11.6142 3.43667 12.2736 2.7773 12.2736 1.96394C12.2736 1.15057 11.6142 0.491211 10.8009 0.491211C9.98749 0.491211 9.32812 1.15057 9.32812 1.96394C9.32812 2.7773 9.98749 3.43667 10.8009 3.43667Z" fill="#FF4D69"/>
+<path d="M52.0391 4.41811C52.8525 4.41811 53.5119 3.75875 53.5119 2.94538C53.5119 2.13202 52.8525 1.47266 52.0391 1.47266C51.2258 1.47266 50.5664 2.13202 50.5664 2.94538C50.5664 3.75875 51.2258 4.41811 52.0391 4.41811Z" fill="#00C99F"/>
+<path d="M45.6563 53.5089C46.4697 53.5089 47.129 52.8496 47.129 52.0362C47.129 51.2228 46.4697 50.5635 45.6563 50.5635C44.843 50.5635 44.1836 51.2228 44.1836 52.0362C44.1836 52.8496 44.843 53.5089 45.6563 53.5089Z" fill="#FFA100"/>
+<path d="M5.8907 50.5636C6.70406 50.5636 7.36342 49.9043 7.36342 49.0909C7.36342 48.2775 6.70406 47.6182 5.8907 47.6182C5.07733 47.6182 4.41797 48.2775 4.41797 49.0909C4.41797 49.9043 5.07733 50.5636 5.8907 50.5636Z" fill="#00C99F"/>
+<path d="M50.5661 14.2368V39.7641C50.5661 40.8057 50.1524 41.8046 49.4158 42.5411C48.6793 43.2776 47.6804 43.6914 46.6388 43.6914H7.04703C5.12276 41.6195 3.57003 39.2315 2.45703 36.6321V17.3688C3.57003 14.7695 5.12276 12.3814 7.04703 10.3096H46.6388C47.6804 10.3096 48.6793 10.7233 49.4158 11.4598C50.1524 12.1963 50.5661 13.1953 50.5661 14.2368Z" fill="#0F1400"/>
+<path d="M2.45703 24.5459H50.5661V29.455H2.45703V24.5459Z" fill="#3B4C00" fill-opacity="0.4"/>
+<path d="M30.875 10.3096H35.7841V43.6914H30.875V10.3096Z" fill="#3B4C00"/>
+<path d="M44.1106 33.166C43.8725 33.4044 43.5599 33.5539 43.2249 33.5896C42.8899 33.6254 42.5528 33.5451 42.2697 33.3624L33.3843 27.5844L24.4988 33.382C24.2158 33.5648 23.8787 33.645 23.5437 33.6093C23.2086 33.5735 22.896 33.424 22.6579 33.1856C21.0235 31.5499 20.1055 29.3322 20.1055 27.0198C20.1055 24.7075 21.0235 22.4898 22.6579 20.854C22.8912 20.6095 23.2014 20.4526 23.5366 20.4097C23.8718 20.3668 24.2115 20.4405 24.4988 20.6184L33.3843 26.416L42.2697 20.6184C42.5528 20.4356 42.8899 20.3554 43.2249 20.3911C43.5599 20.4269 43.8725 20.5764 44.1106 20.8147C44.9229 21.6251 45.5672 22.5876 46.0069 23.6473C46.4466 24.707 46.6729 25.8431 46.6729 26.9904C46.6729 28.1377 46.4466 29.2737 46.0069 30.3334C45.5672 31.3931 44.9229 32.3557 44.1106 33.166Z" fill="#3B4C00"/>
+<path d="M27.9826 29.4547C27.8739 29.4555 27.7681 29.4202 27.6816 29.3543C27.5952 29.2884 27.533 29.1956 27.5049 29.0906C27.4769 28.9856 27.4844 28.8743 27.5265 28.774C27.5685 28.6738 27.6426 28.5903 27.7372 28.5367L30.4372 27.0002L27.7372 25.4636C27.6811 25.4314 27.6319 25.3884 27.5924 25.3372C27.5529 25.286 27.5239 25.2274 27.5071 25.165C27.4902 25.1025 27.4858 25.0374 27.4941 24.9732C27.5024 24.9091 27.5233 24.8472 27.5555 24.7911C27.5878 24.735 27.6307 24.6858 27.682 24.6463C27.7332 24.6069 27.7917 24.5779 27.8542 24.561C27.9166 24.5441 27.9818 24.5397 28.046 24.548C28.1101 24.5563 28.172 24.5772 28.2281 24.6095L31.6644 26.5731C31.74 26.6159 31.8028 26.678 31.8465 26.753C31.8903 26.8281 31.9133 26.9133 31.9133 27.0002C31.9133 27.087 31.8903 27.1723 31.8465 27.2473C31.8028 27.3224 31.74 27.3845 31.6644 27.4273L28.2281 29.3909C28.1533 29.4333 28.0686 29.4553 27.9826 29.4547Z" fill="white"/>
+<path d="M38.7822 29.4547C38.6963 29.4553 38.6116 29.4333 38.5368 29.3909L35.1004 27.4273C35.0249 27.3845 34.962 27.3224 34.9183 27.2473C34.8746 27.1723 34.8516 27.087 34.8516 27.0002C34.8516 26.9133 34.8746 26.8281 34.9183 26.753C34.962 26.678 35.0249 26.6159 35.1004 26.5731L38.5368 24.6095C38.6501 24.5444 38.7846 24.5269 38.9107 24.561C39.0368 24.595 39.1442 24.6778 39.2093 24.7911C39.2744 24.9044 39.2919 25.0389 39.2578 25.165C39.2237 25.2911 39.141 25.3985 39.0277 25.4636L36.3277 27.0002L39.0179 28.5367C39.1117 28.5899 39.1855 28.6725 39.2277 28.7718C39.2699 28.871 39.2782 28.9814 39.2514 29.0859C39.2246 29.1904 39.1641 29.2831 39.0793 29.3498C38.9945 29.4165 38.8901 29.4533 38.7822 29.4547Z" fill="white"/>
+<path d="M35.3453 22.582H31.418C30.6047 22.582 29.9453 23.2414 29.9453 24.0548V29.9457C29.9453 30.759 30.6047 31.4184 31.418 31.4184H35.3453C36.1587 31.4184 36.818 30.759 36.818 29.9457V24.0548C36.818 23.2414 36.1587 22.582 35.3453 22.582Z" fill="#C6FF00"/>
+<path d="M10.3114 36.8184H6.38416C5.84192 36.8184 5.40234 37.2579 5.40234 37.8002V39.7638C5.40234 40.3061 5.84192 40.7456 6.38416 40.7456H10.3114C10.8537 40.7456 11.2933 40.3061 11.2933 39.7638V37.8002C11.2933 37.2579 10.8537 36.8184 10.3114 36.8184Z" fill="white"/>
+<path d="M16.6903 36.8184H13.7448C13.4737 36.8184 13.2539 37.0381 13.2539 37.3093C13.2539 37.5804 13.4737 37.8002 13.7448 37.8002H16.6903C16.9614 37.8002 17.1812 37.5804 17.1812 37.3093C17.1812 37.0381 16.9614 36.8184 16.6903 36.8184Z" fill="white"/>
+<path d="M16.6903 38.7822H13.7448C13.4737 38.7822 13.2539 39.002 13.2539 39.2731C13.2539 39.5443 13.4737 39.764 13.7448 39.764H16.6903C16.9614 39.764 17.1812 39.5443 17.1812 39.2731C17.1812 39.002 16.9614 38.7822 16.6903 38.7822Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_893_756">
+<rect width="54" height="54" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+                    <h3 class="text-lg font-semibold leading-9 text-white mt-14 mb-0.5">
+                        <span class="text-[28px] text-[#C6FF00]">30</span><span class=" text-[#C6FF00]">%</span> off for
+                        the next 3 months
+                    </h3>
+                    <p class="text-lg leading-[22px] text-[#7D7D7D] mb-6">
+                        We’ve sent you an email with a coupon code:
+                    </p>
+                    <p class="text-lg leading-[22px] text-[#7D7D7D] mb-6">
+                        Check your inbox and apply the code to keep enjoying Glima at a lower price.
+                    </p>
+                    <button onclick="closeModal()" class="bg-[#C6FF00] w-full text-center text-base font-medium text-black leading-5 py-3.5 rounded-lg transition-all duration-500 hover:bg-[#D7FF4D]">Explore Components</button>
+         
+                </div>
+            </div>
+           `;
+                }
+
+                else if (step === 6) {
+                    stepContainer.innerHTML = `
+          <div class="p-[12px] rounded-3xl">
+            <div class="block relative w-full p-6 rounded-[18px] bg-white/5 mb-3">
+               <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 16C4 9.37258 9.37258 4 16 4H46C52.6274 4 58 9.37258 58 16V46C58 52.6274 52.6274 58 46 58H16C9.37258 58 4 52.6274 4 46V16Z" fill="#C6FF00"/>
+<path d="M46 2C53.732 2 60 8.26801 60 16V46C60 53.732 53.732 60 46 60H16C8.26801 60 2 53.732 2 46V16C2 8.26801 8.26801 2 16 2H46Z" stroke="#C6FF00" stroke-opacity="0.1" stroke-width="4"/>
+<g clip-path="url(#clip0_895_200)">
+<path d="M37.2722 26.7671C37.2722 27.1384 37.162 27.5014 36.9557 27.8102C36.7494 28.119 36.4561 28.3596 36.113 28.5017C35.7699 28.6438 35.3924 28.681 35.0282 28.6086C34.664 28.5361 34.3294 28.3573 34.0668 28.0947C33.8042 27.8321 33.6254 27.4975 33.553 27.1333C33.4805 26.7691 33.5177 26.3915 33.6598 26.0485C33.8019 25.7054 34.0426 25.4121 34.3514 25.2058C34.6602 24.9995 35.0232 24.8894 35.3945 24.8894C35.8924 24.8899 36.3696 25.0879 36.7216 25.44C37.0736 25.792 37.2716 26.2693 37.2722 26.7671ZM46 31C46 39.271 39.271 46 31 46C22.729 46 16 39.271 16 31C16 22.729 22.729 16 31 16C39.271 16 46 22.729 46 31ZM44.125 31C44.125 23.7629 38.2371 17.875 31 17.875C23.7629 17.875 17.875 23.7629 17.875 31C17.875 38.2371 23.7629 44.125 31 44.125C38.2371 44.125 44.125 38.2371 44.125 31ZM28.4831 26.7671C28.4831 26.3957 28.373 26.0327 28.1668 25.7239C27.9605 25.4151 27.6672 25.1744 27.3241 25.0322C26.981 24.8901 26.6035 24.8529 26.2393 24.9253C25.875 24.9977 25.5405 25.1766 25.2778 25.4391C25.0152 25.7017 24.8364 26.0363 24.7639 26.4005C24.6915 26.7648 24.7286 27.1423 24.8707 27.4854C25.0129 27.8285 25.2535 28.1218 25.5623 28.3281C25.8711 28.5344 26.2341 28.6445 26.6055 28.6445C27.1032 28.644 27.5805 28.446 27.9325 28.094C28.2845 27.742 28.4825 27.2648 28.4831 26.7671ZM35.3558 33.9601L26.1588 36.4244C26.0399 36.4563 25.9284 36.5113 25.8307 36.5862C25.7331 36.6612 25.6511 36.7546 25.5896 36.8613C25.528 36.9679 25.488 37.0856 25.472 37.2076C25.4559 37.3297 25.464 37.4537 25.4959 37.5727C25.5603 37.8128 25.7174 38.0176 25.9327 38.1419C26.0394 38.2035 26.1571 38.2434 26.2791 38.2595C26.4012 38.2756 26.5252 38.2674 26.6441 38.2356L35.8411 35.7712C36.0813 35.7069 36.2861 35.5497 36.4104 35.3344C36.5347 35.1191 36.5684 34.8632 36.504 34.623C36.4397 34.3828 36.2825 34.1781 36.0672 34.0537C35.8519 33.9294 35.596 33.8957 35.3558 33.9601Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_895_200">
+<rect width="30" height="30" fill="white" transform="translate(16 16)"/>
+</clipPath>
+</defs>
+</svg>
+
+                <h3 class="text-[22px] font-semibold leading-9 text-white mt-14 mb-0.5">Confirm Cancellation</h3>
+                <p class="text-lg leading-[22px] text-[#7D7D7D]">We’re sad to see you go.</p>
+            </div>
+            <div class="w-full p-3 pt-6 flex flex-col gap-9">
+                <div class="relative w-full flex flex-col gap-3">
+                    <p class="text-lg leading-[30px] text-[#6B7280]">
+                        Once you cancel, your <a href="#" class="text-[#C6FF00]"> Glima</a> subscription will end at
+                        the end of your billing cycle.
+                    </p>
+                    <p class="text-lg leading-[26px] text-[#6B7280]">
+                        You’ll lose access to premium features.
+                    </p>
+                </div>
+                <div class="flex items-center gap-6">
+                   <button  id="step4-prev" class="bg-[#C6FF00] w-full text-center text-base font-medium text-black leading-5 py-3.5 rounded-lg transition-all duration-500 hover:bg-[#D7FF4D]">Go Back</button>
+              <button onclick="cancelSubscription()" class="w-full h-12 text-center py-3.5 text-base font-medium leading-5 rounded-lg bg-[#F52D0A]/15 text-[#F52D0A] transition-all duration-500 hover:bg-[#F52D0A] hover:text-white">Cancel Subscription</button>
+           
+                </div>
+            </div>
+          </div>
+          `;
+                    document.getElementById("step4-prev").onclick = () => {
+                        step = 4;
+                        showStep();
+                    };
+                }
+            }
+
+            function cancelSubscription() {
+                alert("Your subscription has been canceled.");
+                closeModal();
+            }
+
+            function closeModal() {
+                modal.classList.add("hidden");
+            }
+
+            document.getElementById("open-modal").addEventListener("click", () => {
+                step = 1;
+                showStep();
+                modal.classList.remove("hidden");
+            });
+
+            document.getElementById("close-modal").addEventListener("click", closeModal);
+        });
     </script>
 
 </body>

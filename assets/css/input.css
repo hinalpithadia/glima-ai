@@ -1373,8 +1373,8 @@ height: 100%;
     cursor: pointer;
   }
   .tab-buttons li.active {
-    background: rgba(198, 255, 0, 0.10);
-    color: #C6FF00;
+    background: #C6FF00;
+    color: #000;
   }
   .tab-panel {
     display: none;
