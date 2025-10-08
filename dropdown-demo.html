@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown with Scroll & Submenus</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+/* basic styles */
+.dropdown-menu, .submenu {
+  transition: all 0.3s ease;
+}
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.submenu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 50;
+}
+.submenu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+#drop-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(0,0,0,0.3);
+  display: none;
+}
+</style>
+</head>
+<body class="relative">
+
+
+<!-- Dropdown button -->
+<button class="dropdown-btn p-2 bg-blue-600 text-white rounded">Open Menu</button>
+
+<!-- Dropdown Menu -->
+<div class="dropdown-menu absolute mt-2 w-72 bg-gray-800 text-white rounded shadow-lg p-2">
+  <ul class="max-h-64 overflow-auto flex flex-col gap-2">
+    <li>
+      <button class="submenu-btn w-full flex justify-between items-center p-2 bg-gray-700 rounded">
+        Mystic
+        <span>&gt;</span>
+      </button>
+      <!-- Submenu -->
+      <div class="submenu bg-gray-600 rounded shadow-lg w-72">
+        <ul class="flex flex-col gap-2 p-2">
+          <li class="p-2 bg-gray-500 rounded">Mystic 1</li>
+          <li class="p-2 bg-gray-500 rounded">Mystic 2</li>
+          <li class="p-2 bg-gray-500 rounded">Mystic 3</li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <button class="submenu-btn w-full flex justify-between items-center p-2 bg-gray-700 rounded">
+        Flux
+        <span>&gt;</span>
+      </button>
+      <!-- Submenu -->
+      <div class="submenu bg-gray-600 rounded shadow-lg w-72">
+        <ul class="flex flex-col gap-2 p-2">
+          <li class="p-2 bg-gray-500 rounded">Flux 1</li>
+          <li class="p-2 bg-gray-500 rounded">Flux 2</li>
+          <li class="p-2 bg-gray-500 rounded">Flux 3</li>
+        </ul>
+      </div>
+    </li>
+    <li class="p-2 bg-gray-700 rounded">Classic</li>
+    <li class="p-2 bg-gray-700 rounded">Goggle Imagen 3</li>
+    <li class="p-2 bg-gray-700 rounded">Option 5</li>
+    <li class="p-2 bg-gray-700 rounded">Option 6</li>
+  </ul>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownBtn = document.querySelector(".dropdown-btn");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    const submenuBtns = document.querySelectorAll(".submenu-btn");
+    const submenus = document.querySelectorAll(".submenu");
+    const overlay = document.getElementById("drop-overlay");
+
+    // Toggle main dropdown
+    dropdownBtn.addEventListener("click", e => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle("show");
+        overlay.style.display = dropdownMenu.classList.contains("show") ? "block" : "none";
+    });
+
+    // Toggle submenus
+    submenuBtns.forEach(btn => {
+        btn.addEventListener("click", e => {
+            e.stopPropagation();
+            const submenu = btn.nextElementSibling;
+            submenu.classList.toggle("show");
+        });
+    });
+
+    // Close all on overlay click
+    overlay.addEventListener("click", () => {
+        dropdownMenu.classList.remove("show");
+        submenus.forEach(sm => sm.classList.remove("show"));
+        overlay.style.display = "none";
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", e => {
+        if (!dropdownMenu.contains(e.target) && !dropdownBtn.contains(e.target)) {
+            dropdownMenu.classList.remove("show");
+            submenus.forEach(sm => sm.classList.remove("show"));
+            overlay.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
