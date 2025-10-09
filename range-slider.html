@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mintwint-setting-2</title>
+    <link rel="stylesheet" href="assets/css/input.css">
+    <link rel="stylesheet" href="assets/css/styles-output.css">
+
+</head>
+
+<body class="font-inter bg-[#1B1B1B] p-20">
+    <div class="flex flex-col gap-2">
+        <label class="xl:text-sm text-xs text-white font-normal">
+            Number of Seconds (Min. 5s - Max. 60s)
+        </label>
+        <div class="flex gap-[15px] items-center py-3.5 px-4 rounded-xl bg-black-0a0a0a border border-white/10">
+
+
+
+            <input id="customRange" type="range" min="0" max="1440" step="24" value="24" class="w-full h-[3px] appearance-none rounded-lg cursor-pointer 
+           bg-gradient-to-r from-[#C6FF00] to-[#C6FF00] 
+           [--range-progress:#C6FF00]"
+                style="background: linear-gradient(to right, #C6FF00 0%, #C6FF00 0%, #222222 0%, #222222 100%)" />
+            <label for="customRange" class="text-white text-sm leading-4 font-normal min-w-10 text-right">
+                <span id="rangeLabel" class="min-w-10 text-right">24</span>
+            </label>
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery-min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const range = document.getElementById("customRange");
+        const label = document.getElementById("rangeLabel");
+
+        function updateRange() {
+            const value = range.value;
+            const min = range.min;
+            const max = range.max;
+            const percent = ((value - min) / (max - min)) * 100;
+
+            range.style.background = `linear-gradient(to right, #D7FF4D ${percent}%, #333 ${percent}%)`;
+            label.textContent = value;
+        }
+
+        range.addEventListener("input", updateRange);
+        updateRange();
+    </script>
+
+    <style>
+        /* Custom thumb styling */
+        input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+        }
+    </style>
+</body>
+
+</html>

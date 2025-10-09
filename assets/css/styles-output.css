@@ -2585,6 +2585,10 @@ pre{
   top: 100%;
 }
 
+.top-\[45\%\] {
+  top: 45%;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -3283,6 +3287,10 @@ pre{
   height: 100vh;
 }
 
+.h-\[3px\] {
+  height: 3px;
+}
+
 .max-h-64 {
   max-height: 16rem;
 }
@@ -3386,6 +3394,10 @@ pre{
 .max-h-max {
   max-height: -moz-max-content;
   max-height: max-content;
+}
+
+.max-h-\[372px\] {
+  max-height: 372px;
 }
 
 .min-h-\[110px\] {
@@ -3727,6 +3739,10 @@ pre{
   width: 1px;
 }
 
+.w-\[282px\] {
+  width: 282px;
+}
+
 .min-w-\[153px\] {
   min-width: 153px;
 }
@@ -3741,6 +3757,10 @@ pre{
 
 .min-w-\[734px\] {
   min-width: 734px;
+}
+
+.min-w-10 {
+  min-width: 2.5rem;
 }
 
 .max-w-2xl {
@@ -5544,6 +5564,10 @@ pre{
   padding: 1px;
 }
 
+.p-20 {
+  padding: 5rem;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -6803,6 +6827,10 @@ pre{
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+.\[--range-progress\:\#C6FF00\] {
+  --range-progress: #C6FF00;
 }
 
 @font-face {
@@ -9144,10 +9172,22 @@ pre{
   background-color: rgb(255 255 255 / 0.2);
 }
 
+.\[\&\:\:-webkit-scrollbar-thumb\]\:bg-\[rgba\(255\2c 255\2c 255\2c 0\.2\)\]::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.\[\&\:\:-webkit-scrollbar-track\]\:rounded-full::-webkit-scrollbar-track {
+  border-radius: 9999px;
+}
+
 .\[\&\:\:-webkit-scrollbar-track\]\:bg-transparent::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
 .\[\&\:\:-webkit-scrollbar\]\:w-1\.5::-webkit-scrollbar {
   width: 0.375rem;
+}
+
+.\[\&\:\:-webkit-scrollbar\]\:w-1::-webkit-scrollbar {
+  width: 0.25rem;
 }
