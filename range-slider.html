@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mintwint-setting-2</title>
+    <title>rangeslider</title>
     <link rel="stylesheet" href="assets/css/input.css">
     <link rel="stylesheet" href="assets/css/styles-output.css">
 
@@ -19,11 +19,11 @@
 
 
 
-            <input id="customRange" type="range" min="0" max="1440" step="24" value="24" class="w-full h-[3px] appearance-none rounded-lg cursor-pointer 
+            <input id="customRange" type="range" min="5" max="60" step="1" value="5" class="w-full h-[3px] appearance-none rounded-lg cursor-pointer 
            bg-gradient-to-r from-[#C6FF00] to-[#C6FF00] 
            [--range-progress:#C6FF00]"
                 style="background: linear-gradient(to right, #C6FF00 0%, #C6FF00 0%, #222222 0%, #222222 100%)" />
-            <label for="customRange" class="text-white text-sm leading-4 font-normal min-w-10 text-right">
+            <label for="customRange" class="text-white text-sm leading-4 font-normal min-w-5 text-right">
                 <span id="rangeLabel" class="min-w-10 text-right">24</span>
             </label>
         </div>
@@ -42,7 +42,7 @@
             const max = range.max;
             const percent = ((value - min) / (max - min)) * 100;
 
-            range.style.background = `linear-gradient(to right, #D7FF4D ${percent}%, #333 ${percent}%)`;
+            range.style.background = `linear-gradient(to right, #C6FF00 ${percent}%, #222222 ${percent}%)`;
             label.textContent = value;
         }
 
@@ -54,8 +54,8 @@
         /* Custom thumb styling */
         input[type="range"]::-webkit-slider-thumb {
             appearance: none;
-            width: 18px;
-            height: 18px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             background: white;
             cursor: pointer;
@@ -67,8 +67,8 @@
         }
 
         input[type="range"]::-moz-range-thumb {
-            width: 18px;
-            height: 18px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             background: white;
             cursor: pointer;

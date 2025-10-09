@@ -3763,6 +3763,10 @@ pre{
   min-width: 2.5rem;
 }
 
+.min-w-5 {
+  min-width: 1.25rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
