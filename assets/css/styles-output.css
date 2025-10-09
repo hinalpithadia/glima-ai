@@ -1156,19 +1156,23 @@ input:not(:checked) ~ .toggle-labels .yearly {
   transition: max-height 0.5s ease-in-out;
 }
 
-.pricing-list::-webkit-scrollbar-track
+.drop-overflow{
+  margin-right: 5px;
+}
+
+.pricing-list::-webkit-scrollbar-track,.drop-overflow::-webkit-scrollbar-track
       {
   border-radius: 100px;
   background-color: transparent;
 }
 
-.pricing-list::-webkit-scrollbar
+.pricing-list::-webkit-scrollbar,.drop-overflow::-webkit-scrollbar
       {
   width: 6px;
   background-color: transparent;
 }
 
-.pricing-list::-webkit-scrollbar-thumb
+.pricing-list::-webkit-scrollbar-thumb,.drop-overflow::-webkit-scrollbar-thumb
       {
   border-radius: 100px;
   background-color: rgba(255,255,255,0.2);
@@ -2668,6 +2672,11 @@ pre{
   margin-right: auto;
 }
 
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -3298,6 +3307,10 @@ pre{
   max-height: 194px;
 }
 
+.max-h-\[200px\] {
+  max-height: 200px;
+}
+
 .max-h-\[240px\] {
   max-height: 240px;
 }
@@ -3373,10 +3386,6 @@ pre{
 .max-h-max {
   max-height: -moz-max-content;
   max-height: max-content;
-}
-
-.max-h-\[200px\] {
-  max-height: 200px;
 }
 
 .min-h-\[110px\] {
@@ -8281,6 +8290,10 @@ pre{
     left: 85px;
   }
 
+  .lg\:left-\[calc\(100\%\+10px\)\] {
+    left: calc(100% + 10px);
+  }
+
   .lg\:top-8 {
     top: 2rem;
   }
@@ -8295,10 +8308,6 @@ pre{
 
   .lg\:top-\[90px\] {
     top: 90px;
-  }
-
-  .lg\:left-\[calc\(100\%\+10px\)\] {
-    left: calc(100% + 10px);
   }
 
   .lg\:col-span-2 {

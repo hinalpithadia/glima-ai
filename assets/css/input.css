@@ -542,19 +542,22 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
         overflow: hidden;
         transition: max-height 0.5s ease-in-out;
       }
-      .pricing-list::-webkit-scrollbar-track
+      .drop-overflow{
+        margin-right: 5px;
+      }
+      .pricing-list::-webkit-scrollbar-track,.drop-overflow::-webkit-scrollbar-track
       {
         border-radius: 100px;
         background-color: transparent;
       }
 
-      .pricing-list::-webkit-scrollbar
+      .pricing-list::-webkit-scrollbar,.drop-overflow::-webkit-scrollbar
       {
         width: 6px;
         background-color: transparent;
       }
 
-      .pricing-list::-webkit-scrollbar-thumb
+      .pricing-list::-webkit-scrollbar-thumb,.drop-overflow::-webkit-scrollbar-thumb
       {
         border-radius: 100px;
         background-color: rgba(255,255,255,0.2);
