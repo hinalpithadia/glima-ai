@@ -7,133 +7,6 @@
     <title>Glima</title>
     <link rel="stylesheet" href="assets/css/styles-output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
-    <style>
-        @media (max-width: 1023.98px) {
-            .dropdown-hover-effect {
-                display: none;
-            }
-
-            .wrapper-dropdown-effect.active .dropdown-hover-effect {
-                display: block;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .dropdown-hover-effect {
-                display: block;
-                opacity: 0;
-                visibility: hidden;
-                transform: translateX(-33%) scale(0.95);
-                transition:
-                    opacity 0.5s ease-out,
-                    transform 0.5s ease-out,
-                    visibility 08 linear 0.5s;
-            }
-
-            .wrapper-dropdown-effect:hover .dropdown-hover-effect {
-                opacity: 1;
-                visibility: visible;
-                transform: translateX(-33%) scale(1);
-                transition:
-                    opacity 0.5s ease-out,
-                    transform 0.5s ease-out,
-                    visibility 0s;
-            }
-
-            .wrapper-dropdown-effect:hover .arrow-svg {
-                transform: rotate(180deg);
-            }
-        }
-
-        /* Before Image = stays full left */
-        .before-img {
-            width: 100%;
-            display: block;
-            position: relative;
-            z-index: 1;
-            max-height: 767px;
-
-        }
-
-        /* Slider clipping container */
-        .resize {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: auto;
-            overflow: hidden;
-            z-index: 2;
-        }
-
-        /* After Image = also full width but clipped */
-        .after-img {
-            width: 100%;
-            height: auto;
-            display: block;
-            position: relative;
-            /* NOT absolute */
-            background: #111;
-        }
-
-        /* Handle always on top */
-        .handle {
-            width: 2px !important;
-            background: #fff !important;
-            cursor: ew-resize;
-            z-index: 10;
-        }
-
-        .ba-slider .handle:after,
-        .ba-slider2 .handle:after {
-            content: "";
-            width: 40px !important;
-            height: 40px !important;
-            margin: -13px 0px 0px -18px !important;
-        }
-
-        .ba-slider2 .ba2-btn {
-            position: absolute;
-            z-index: 5;
-            padding: 6px 20px;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.4);
-            -webkit-backdrop-filter: blur(10.0840339661px);
-            backdrop-filter: blur(10.0840339661px);
-            color: #000;
-            font-size: 14px;
-            font-weight: 500;
-            border: none;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-
-        .ba-slider2 .ba2-btn-before {
-            right: calc(100% + 16px);
-            top: 18%;
-            transform: translateY(-50%);
-        }
-
-        .ba-slider2 .ba2-btn-after {
-            left: calc(100% + 16px);
-            top: 18%;
-            transform: translateY(-50%);
-        }
-
-        @media (max-width: 640px) {
-            .ba-slider2 .ba2-btn {
-                padding: 4px 14px;
-                font-size: 12px;
-            }
-
-            .ba-slider2 .ba2-btn-before {
-                right: calc(100% + 8px);
-            }
-
-            .ba-slider2 .ba2-btn-after {
-                left: calc(100% + 8px);
-            }
-        }
-    </style>
 </head>
 
 <body class="relative bg-[#0A0A0A]">
@@ -334,9 +207,9 @@
                                                         class="w-full flex flex-col gap-1.5 bg-[#0A0A0A] rounded-md p-1.5 text-base font-semibold text-white">
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#0EA5E9" />
@@ -345,9 +218,9 @@
                                                         </li>
                                                         <li
                                                             class="group  rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#8B5CF6" />
@@ -356,9 +229,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#D946EF" />
@@ -367,9 +240,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#EF4444" />
@@ -380,9 +253,9 @@
 
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#FFCC00" />
@@ -393,9 +266,9 @@
 
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#34C759" />
@@ -408,9 +281,9 @@
                                                         class=" w-full flex flex-col gap-1.5 bg-[#0A0A0A] rounded-md p-1.5 text-base font-semibold text-white">
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#00C8B3" />
@@ -420,9 +293,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#00C0E8" />
@@ -432,9 +305,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#AC7F5E" />
@@ -444,9 +317,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#633B48" />
@@ -456,9 +329,9 @@
                                                         </li>
                                                         <li
                                                             class="group  rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#CFBDFE" />
@@ -468,9 +341,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#FFB0C9" />
@@ -614,9 +487,9 @@
                                                         class="w-full flex flex-col gap-1.5 bg-[#0A0A0A] rounded-md p-1.5 text-base font-semibold text-white">
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#0EA5E9" />
@@ -625,9 +498,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#8B5CF6" />
@@ -636,9 +509,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#D946EF" />
@@ -647,9 +520,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#EF4444" />
@@ -660,9 +533,9 @@
 
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#FFCC00" />
@@ -673,9 +546,9 @@
 
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.585783 7.65686C-0.195265 6.87581 -0.195265 5.60948 0.585783 4.82843L4.82842 0.585791C5.60947 -0.195257 6.8758 -0.195257 7.65685 0.585791L11.8995 4.82843C12.6805 5.60948 12.6805 6.87581 11.8995 7.65686L7.65685 11.8995C6.8758 12.6805 5.60947 12.6805 4.82842 11.8995L0.585783 7.65686Z"
                                                                         fill="#34C759" />
@@ -688,9 +561,9 @@
                                                         class=" w-full flex flex-col gap-1.5 bg-[#0A0A0A] rounded-md p-1.5 text-base font-semibold text-white">
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#00C8B3" />
@@ -700,9 +573,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#00C0E8" />
@@ -712,9 +585,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#AC7F5E" />
@@ -724,9 +597,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#633B48" />
@@ -736,9 +609,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#CFBDFE" />
@@ -748,9 +621,9 @@
                                                         </li>
                                                         <li
                                                             class="group rounded-[10px] transition-all duration-500 hover:bg-[#111111]">
-                                                            <a href="" class="flex items-center gap-2 p-3"><svg width="13"
-                                                                    height="13" viewBox="0 0 13 13" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                            <a href="" class="flex items-center gap-2 p-3"><svg
+                                                                    width="13" height="13" viewBox="0 0 13 13"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
                                                                         d="M0.586088 7.6564C-0.19496 6.87535 -0.19496 5.60902 0.586089 4.82797L4.82873 0.585333C5.60978 -0.195715 6.87611 -0.195715 7.65716 0.585333L11.8998 4.82797C12.6808 5.60902 12.6808 6.87535 11.8998 7.6564L7.65716 11.899C6.87611 12.6801 5.60978 12.6801 4.82873 11.899L0.586088 7.6564Z"
                                                                         fill="#FFB0C9" />
@@ -834,43 +707,47 @@
     </nav>
 
     <!-- Tool Progress... area -->
-    <div class="w-full relative px-4 pt-[120px] h-[]">
+    <div class="w-full relative px-4 pt-24 pb-3 xl:pt-[90px]">
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
                 <h1 class="text-4xl font-medium lg:leading-[50px] text-white">Image BG Remover</h1>
-                <p class="font-normal text-lg text-[#797979] leading-7">Quickly remove the background from any image -
+                <p class="font-normal text-base text-[#797979] leading-7">Quickly remove the background from any image -
                     logos, product photos, or people - with just one easy click.</p>
             </div>
-            <label
-                class="w-full h-auto max-h-[620px] rounded-3xl bg-[#111]  xs:min-h-[480px] lg:min-h-[620px] mt-6 flex justify-center items-center cursor-pointer relative px-4 overflow-hidden">
-                <div class="relative z-20 h-auto">
-                    <div class="relative group flex gap-3">
-                        <div class="rounded-t-xl h-auto relative ba-slider2">
-                            <!--  After Img -->
-                            <img class="w-full before-img h-auto object-contain"
-                                src="assets/images/test-img1-Photoroom.png" alt="before">
-                            <!-- BEFORE IMAGE (left side) -->
-                            <div class="resize">
-                                <img src="assets/images/test-img1.jpg" alt="after"
-                                    class="after-img h-auto object-contain">
-                            </div>
+            <div class="py-2.5 mt-6 bg-[#111] rounded-3xl">
+                <label
+                    class="w-full h-auto max-h-[620px] xs:min-h-[480px] lg:min-h-[620px] flex justify-center items-center cursor-pointer relative px-4 overflow-hidden">
+                    <div class="relative z-20 h-auto">
+                        <div class="relative group flex gap-3">
+                            <div class="rounded-t-xl h-auto relative ba-slider2">
+                                <!--  After Img -->
+                                <img class="w-full before-img h-auto object-contain"
+                                    src="/assets/images/image-remover-img.png"
+                                    alt="before">
+                                <!-- BEFORE IMAGE (left side) -->
+                                <div class="resize">
+                                    <img src="/assets/images/image-bg-remover.png"
+                                        alt="after" class="after-img h-auto object-contain">
+                                </div>
 
-                            <span class="handle">
-                                <button class="ba2-btn ba2-btn-before">
-                                    Before
-                                </button>
-                                <button class="ba2-btn ba2-btn-after">
-                                    After
-                                </button>
-                            </span>
+                                <span class="handle">
+                                    <button class="ba2-btn ba2-btn-before">
+                                        Before
+                                    </button>
+                                    <button class="ba2-btn ba2-btn-after">
+                                        After
+                                    </button>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </label>
+                </label>
+            </div>
+
 
             <div class="mt-6 flex items-center justify-center gap-3">
                 <button
-                    class="max-w-[144px] w-full flex items-center justify-center gap-1.5 py-2.5 text-white font-medium text-lg border border-[#FFFFFF33] rounded-[10px] transition-all duration-500 hover:bg-[#111111] hover:border-[#1F1F1F]">
+                    class="max-w-[144px] w-full flex items-center justify-center gap-1.5 py-2.5 text-white font-medium text-lg leading-6 border border-[#FFFFFF33] rounded-[10px] transition-all duration-500 hover:bg-[#111111] hover:border-[#1F1F1F]">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.5921 9.00065C14.1096 12.2082 11.3419 14.6673 7.99992 14.6673C4.31802 14.6673 1.33325 11.6825 1.33325 8.00065C1.33325 4.31875 4.31802 1.33398 7.99992 1.33398C10.7337 1.33398 13.0831 2.97944 14.1119 5.33398"
@@ -881,7 +758,7 @@
                     Reset
                 </button>
                 <button
-                    class="py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] font-semibold text-lg text-black">
+                    class="py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] font-semibold text-lg leading-6 text-black">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M1.99976 11.334C1.99976 11.954 1.99976 12.264 2.06791 12.5183C2.25284 13.2085 2.79194 13.7476 3.48212 13.9325C3.73646 14.0007 4.04644 14.0007 4.66642 14.0007H11.3331C11.9531 14.0007 12.2631 14.0007 12.5174 13.9325C13.2076 13.7476 13.7467 13.2085 13.9316 12.5183C13.9998 12.264 13.9998 11.954 13.9998 11.334"

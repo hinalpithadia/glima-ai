@@ -3331,10 +3331,6 @@ pre{
   height: 58px;
 }
 
-.h-\[600px\] {
-  height: 600px;
-}
-
 .h-\[60px\] {
   height: 60px;
 }
@@ -3506,6 +3502,10 @@ pre{
   max-height: max-content;
 }
 
+.\!min-h-96 {
+  min-height: 24rem !important;
+}
+
 .min-h-52 {
   min-height: 13rem;
 }
@@ -3568,10 +3568,6 @@ pre{
 
 .min-h-\[300px\] {
   min-height: 300px;
-}
-
-.min-h-\[350px\] {
-  min-height: 350px;
 }
 
 .min-h-\[400px\] {
@@ -4582,6 +4578,10 @@ pre{
 
 .gap-\[5px\] {
   gap: 5px;
+}
+
+.gap-\[7px\] {
+  gap: 7px;
 }
 
 .gap-x-1 {
@@ -6314,6 +6314,10 @@ pre{
 
 .pt-\[75px\] {
   padding-top: 75px;
+}
+
+.pt-\[7px\] {
+  padding-top: 7px;
 }
 
 .pt-\[86px\] {
@@ -8143,6 +8147,10 @@ pre{
     height: 540px;
   }
 
+  .sm\:h-\[580px\] {
+    height: 580px;
+  }
+
   .sm\:h-\[600px\] {
     height: 600px;
   }
@@ -8715,10 +8723,6 @@ pre{
 
   .lg\:h-\[500px\] {
     height: 500px;
-  }
-
-  .lg\:h-\[600px\] {
-    height: 600px;
   }
 
   .lg\:h-\[calc\(100vh-100px\)\] {
@@ -9383,6 +9387,10 @@ pre{
     padding-bottom: 0px;
   }
 
+  .xl\:pt-\[90px\] {
+    padding-top: 90px;
+  }
+
   .xl\:text-left {
     text-align: left;
   }
@@ -9399,6 +9407,10 @@ pre{
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:h-\[620px\] {
+    height: 620px;
+  }
+
   .\32xl\:w-\[270px\] {
     width: 270px;
   }

@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glima</title>
-    <link rel="stylesheet" href="/assets/css/styles-output.css">
+    <link rel="stylesheet" href="assets/css/styles-output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
-
 </head>
 
-<body class="relative bg-[#0A0A0A] overflow-hidden">
+<body class="relative bg-[#0A0A0A]">
     <!--navbar-->
     <nav id="navbar"
         class="navbar fixed top-0 w-full z-50 border-b border-white/10 max-lg:backdrop-blur-lg backdrop-blur-lg bg-[#111111]">
@@ -706,16 +705,15 @@
         </div>
     </nav>
     <!-- Tool Progress... area -->
-    <div class="w-full relative px-4 pt-[120px] ">
+    <div class="w-full relative px-4 pt-24 pb-3 xl:pt-[90px]">
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
                 <h1 class="text-4xl font-medium lg:leading-[50px] text-white">Image BG Remover</h1>
-                <p class="font-normal text-lg text-[#797979] leading-7">Quickly remove the background from any image -
+                <p class="font-normal text-base text-[#797979] leading-7">Quickly remove the background from any image -
                     logos, product photos, or people - with just one easy click.</p>
             </div>
             <label
-                class="w-full min-h-[350px] lg:h-[600px] rounded-3xl bg-[#111111] mt-6 flex justify-center items-center cursor-pointer relative p-4">
-
+                class="w-full !min-h-96 sm:h-[580px] 2xl:h-[620px] rounded-3xl bg-[#111111] mt-6 flex justify-center items-center cursor-pointer relative">
                 <button
                     class="w-11 h-11 flex items-center justify-center rounded-[10px] bg-[#FFFFFF2E] backdrop-blur-[3px] absolute right-5 top-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -723,13 +721,14 @@
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <div class="p-4">
-                    <img src="/assets/images/image-bg-remover.png" alt="img" class="w-auto h-auto">
+                <div class="p-2.5 w-fit h-full">
+                    <img src="/assets/images/image-bg-remover.png" alt="img"
+                        class="max-h-full max-w-full w-auto h-auto">
                 </div>
             </label>
             <div
-                class="mt-6 mx-auto max-w-[240px] w-full bg-[#000000] rounded-[10px] flex flex-col gap-1.5 items-center justify-center p-[1px]">
-                <button class="pt-1.5 flex items-center gap-1.5 text-white font-medium text-xs"><svg width="16"
+                class="mt-6 mx-auto w-fit bg-[#000000] rounded-[10px] flex flex-col gap-[7px] items-center justify-center p-[1px]">
+                <button class="pt-[7px] flex items-center gap-1.5 text-white font-medium text-xs"><svg width="16"
                         height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_171_58)">
                             <path
@@ -774,7 +773,7 @@
                     </svg>
                     12 Credit</button>
                 <button
-                    class="w-fit text-nowrap py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] font-semibold text-lg text-black">
+                    class="w-fit text-nowrap py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] leading-6 font-semibold text-lg text-black">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_171_52)">
                             <path
@@ -790,7 +789,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    Remover Background
+                    Remove Background
                 </button>
             </div>
         </div>
@@ -798,7 +797,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
