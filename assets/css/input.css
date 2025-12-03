@@ -784,78 +784,94 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
   #menuToggle span:nth-child(3){
     top: 15px;
   }
-  .ba-slider, .ba-slider2 {
-    position: relative;
-    overflow: hidden;
-}
-  .handle {
+/* Before Image = stays full left */
+        .before-img {
+            width: 100%;
+            display: block;
+            position: relative;
+            z-index: 1;
+            max-height: 767px;
+
+        }
+
+        /* Slider clipping container */
+        .resize {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: auto;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        /* After Image = also full width but clipped */
+        .after-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: relative;
+            /* NOT absolute */
+            background: #111;
+        }
+
+        /* Handle always on top */
+        .handle {
             width: 2px !important;
             background: #fff !important;
             cursor: ew-resize;
             z-index: 10;
         }
-.ba-slider img, .ba-slider2 img {
-    width: 100%;
-    display:block;
-    max-width:none;
-}
- 
-.ba-slider .resize, .ba-slider2 .resize {
-    position: absolute;
-    top:0;
-    left: 0;
-    height: 100%;
-    width: 50%;
-    overflow: hidden;
-    resize: none;
-}
 
+        .ba-slider .handle:after,
+        .ba-slider2 .handle:after {
+            content: "";
+            width: 40px !important;
+            height: 40px !important;
+            margin: -13px 0px 0px -18px !important;
+        }
 
-.ba-slider .handle, .ba-slider2 .handle { /* Thin line seperator */
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    margin-left: -2px;
-    background: #000;
-    cursor: ew-resize;
-}
- 
-.ba-slider .handle:after, .ba-slider2 .handle:after {  /* Big orange knob  */
-    position: absolute;
-    top: 50%;
-    width: 30px;
-    height: 30px;
- 
-    /*content:'↔';*/
-    content:'';
-    background-image: url("https://glima.ai/storage/media/1749186970_kkdCphpDtkRON.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    color:white;
-    font-weight:bold;
-    font-size:30px;
-    text-align:center;
-    line-height:60px;
-    margin: -13px 0px 0px -13px;
-    background-color: #000; /* @orange */
-    border-radius: 50%;
-    transition:all 0.3s ease;
-}
+        .ba-slider2 .ba2-btn {
+            position: absolute;
+            z-index: 5;
+            padding: 6px 20px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.4);
+            -webkit-backdrop-filter: blur(10.0840339661px);
+            backdrop-filter: blur(10.0840339661px);
+            color: #000;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+        }
 
-.ba-slider .handle.ba-draggable:after, .ba-slider2 .handle.ba-draggable:after {
-    width: 48px;
-    height: 48px;
-    margin: -24px 0 0 -24px;
-    line-height:45px;
-    font-size:23px;
-}
-.ba-slider .resize img, .ba-slider2 .resize img
-{
-    height: 100%;
-}
+        .ba-slider2 .ba2-btn-before {
+            right: calc(100% + 16px);
+            top: 18%;
+            transform: translateY(-50%);
+        }
 
+        .ba-slider2 .ba2-btn-after {
+            left: calc(100% + 16px);
+            top: 18%;
+            transform: translateY(-50%);
+        }
+
+        @media (max-width: 640px) {
+            .ba-slider2 .ba2-btn {
+                padding: 4px 14px;
+                font-size: 12px;
+            }
+
+            .ba-slider2 .ba2-btn-before {
+                right: calc(100% + 8px);
+            }
+
+            .ba-slider2 .ba2-btn-after {
+                left: calc(100% + 8px);
+            }
+        }
 
 
 
