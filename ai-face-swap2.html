@@ -705,21 +705,21 @@
             </div>
         </div>
     </nav>
-    <!-- Tool Progress... area -->
-    <div class="w-full relative px-4 pt-[120px]">
+      <!-- Tool Progress... area -->
+    <div class="w-full relative px-4 pt-24 pb-3 xl:pt-[95px]">
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
                 <h1 class="text-4xl font-medium lg:leading-[50px] text-white">AI Face Swap</h1>
-                <p class="font-normal text-lg text-[#797979] leading-7">Easily swap faces in any photo or video using
+                <p class="font-normal text-base text-[#797979] leading-7">Easily swap faces in any photo or video using
                     smart AI for clean, natural, and realistic results.</p>
             </div>
             <div class="pt-6 flex flex-col">
-                <!--main Img box -->
+
                 <div class="w-full rounded-3xl bg-[#111111] p-2.5 relative">
                     <div class="grid grid-cols-2 lg:grid-cols-2 gap-2.5 relative">
                         <!-- loading code -->
                         <div
-                            class="flex items-center justify-center w-full h-full absolute top-1/2 -translate-y-[43%] sm:top-1/2  sm:-translate-y-[47.5%] z-40">
+                            class="flex items-center justify-center w-full h-full absolute top-1/2 -translate-y-[40%] sm:top-1/2  sm:-translate-y-[47.5%] z-40">
                             <svg width="70" height="70" viewBox="0 0 70 70" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g class="rotate-animation">
@@ -776,28 +776,30 @@
                             </svg>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <h3 class="text-white text-sm sm:text-lg pl-2 sm:pl-4">Upload Image</h3>
-                            <div class="bg-black min-h-52 sm:h-[540px] rounded-[18px] p-3 relative">
+                            <h3 class="text-white text-lg sm:pl-6">Upload Image</h3>
+                            <div
+                                class="bg-black min-h-52 sm:h-[500px] 2xl:h-[550px] rounded-[18px] p-3 relative flex items-center justify-center">
                                 <label class="absolute inset-0 cursor-pointer rounded-3xl">
                                     <input type="file" class="hidden" accept="image/*">
                                 </label>
-
                                 <div
                                     class="max-w-full w-fit h-fit flex items-center justify-center relative overflow-hidden">
-                                    <img id="previewImg" src="" alt="" class="max-w-full max-h-full object-contain">
+                                    <img id="previewImg" src="/assets/images/upscaler-img.png" alt=""
+                                        class="max-w-full max-h-full w-fit h-fit object-contain">
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-col gap-3">
-                            <h3 class="text-white text-sm sm:text-lg text-right pr-1 sm:pr-4 whitespace-nowrap">Target Image Samples</h3>
-                            <div class="bg-black min-h-52 sm:h-[540px] rounded-[18px] p-3 relative">
+                            <h3 class="text-white text-lg text-right pr-1 sm:pr-6">Target Image Samples</h3>
+                            <div
+                                class="bg-black min-h-52 sm:h-[500px] 2xl:h-[550px] rounded-[18px] p-3 relative flex items-center justify-center">
                                 <label class="absolute inset-0 cursor-pointer rounded-3xl">
                                     <input type="file" class="hidden" accept="image/*">
                                 </label>
-
                                 <div
-                                    class="max-w-full w-fit h-fit flex items-center justify-center relative overflow-hidde\">
-                                    <img id="previewImg" src="" alt="" class="max-w-full max-h-full object-contain">
+                                    class="max-w-full w-fit h-fit flex items-center justify-center relative overflow-hidden">
+                                    <img id="previewImg" src="/assets/images/upscaler-img.png" alt=""
+                                        class="max-w-full max-h-full w-fit h-fit object-contain">
                                 </div>
                             </div>
                         </div>
@@ -806,9 +808,9 @@
             </div>
         </div>
         <div
-            class="mt-6 mx-auto w-fit  bg-[#000000] rounded-[10px] flex flex-col gap-1.5 items-center justify-center p-[1px]">
-            <button class="pt-1.5 flex items-center gap-1.5 text-white font-medium text-xs"><svg width="16" height="16"
-                    viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            class="mt-6 mx-auto w-fit bg-[#000000] rounded-[10px] flex flex-col gap-[7px] items-center justify-center p-[1px]">
+            <button class="pt-[7px] flex items-center gap-1.5 text-white font-medium text-xs"><svg width="16"
+                    height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_171_58)">
                         <path
                             d="M7.99823 15.9965C12.4155 15.9965 15.9965 12.4155 15.9965 7.99823C15.9965 3.58093 12.4155 0 7.99823 0C3.58093 0 0 3.58093 0 7.99823C0 12.4155 3.58093 15.9965 7.99823 15.9965Z"
@@ -852,7 +854,7 @@
                 </svg>
                 12 Credit</button>
             <button
-                class="w-fit text-nowrap py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] font-semibold text-lg text-black">
+                class="w-fit text-nowrap py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] focus:bg-[#D7FF4D] leading-6 font-semibold text-lg text-black">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_171_52)">
                         <path

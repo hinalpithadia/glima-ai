@@ -47,7 +47,7 @@
     </style>
 </head>
 
-<body class="relative bg-[#0A0A0A] lg:overflow-hidden">
+<body class="relative bg-[#0A0A0A]">
     <!--navbar-->
     <nav id="navbar"
         class="navbar fixed top-0 w-full z-50 border-b border-white/10 max-lg:backdrop-blur-lg backdrop-blur-lg bg-[#111111]">
@@ -743,46 +743,44 @@
         </div>
     </nav>
     <!-- Tool Progress... area -->
-    <div class="w-full relative px-4 pt-[120px]" style="height: calc(100vh - 5px);">
+    <div class="w-full relative px-4 pt-24 pb-3 xl:pt-[90px]">
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
                 <h1 class="text-4xl font-medium lg:leading-[50px] text-white">AI Baby Generator</h1>
-                <p class="font-normal text-lg text-[#797979] leading-7">See how your future baby might look by blending
-                    two photos with smart and realistic AI.</p>
+                <p class="font-normal text-base text-[#797979] leading-7">See how your future baby might look by
+                    blending two photos with smart and realistic AI.</p>
             </div>
-            <div class="pt-6 flex flex-col gap-6">
-                <div class="w-full sm:h-[620px] rounded-3xl bg-[#111111] p-2.5 flex items-center justify-center relative">
-                    <div class="h-full w-fit relative">
-                        <img id="previewImg" src="../assets/images/image-bg-remover.png" alt="img"
-                            class="w-full h-full object-contain">
-                    </div>
+            <div
+                class="w-full !min-h-96 sm:h-[580px] 2xl:h-[650px] rounded-3xl bg-[#111111] mt-6 flex justify-center items-center cursor-pointer relative">
+                <div class="p-2.5 w-fit h-full flex items-center justify-center">
+                    <img src="/assets/images/image-bg-remover.png" alt="img"
+                        class="max-h-full max-w-full w-auto h-auto">
                 </div>
-
-                <div class="flex items-center justify-center gap-3">
-                    <button
-                        class="max-w-[144px] w-full flex items-center justify-center gap-1.5 py-2.5 text-white font-medium text-lg border border-[#FFFFFF33] rounded-[10px] transition-all duration-500 hover:bg-[#111111] hover:border-[#1F1F1F]">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M14.5921 9.00065C14.1096 12.2082 11.3419 14.6673 7.99992 14.6673C4.31802 14.6673 1.33325 11.6825 1.33325 8.00065C1.33325 4.31875 4.31802 1.33398 7.99992 1.33398C10.7337 1.33398 13.0831 2.97944 14.1119 5.33398"
-                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M11.3333 5.33333H14.2666C14.4875 5.33333 14.6666 5.15425 14.6666 4.93333V2"
-                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        Reset
-                    </button>
-                    <button
-                        class="py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] font-semibold text-lg text-black">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M1.99976 11.334C1.99976 11.954 1.99976 12.264 2.06791 12.5183C2.25284 13.2085 2.79194 13.7476 3.48212 13.9325C3.73646 14.0007 4.04644 14.0007 4.66642 14.0007H11.3331C11.9531 14.0007 12.2631 14.0007 12.5174 13.9325C13.2076 13.7476 13.7467 13.2085 13.9316 12.5183C13.9998 12.264 13.9998 11.954 13.9998 11.334"
-                                stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
-                                stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        Download
-                    </button>
-                </div>
+            </div>
+            <div class="mt-6 flex items-center justify-center gap-3">
+                <button
+                    class="max-w-[144px] w-full flex items-center justify-center gap-1.5 py-[9px] text-white font-medium text-lg leading-6 border border-[#FFFFFF33] rounded-[10px] transition-all duration-500 hover:bg-[#111111] hover:border-[#1F1F1F] focus:bg-[#111111] focus:border-[#1F1F1F]">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.5921 9.00065C14.1096 12.2082 11.3419 14.6673 7.99992 14.6673C4.31802 14.6673 1.33325 11.6825 1.33325 8.00065C1.33325 4.31875 4.31802 1.33398 7.99992 1.33398C10.7337 1.33398 13.0831 2.97944 14.1119 5.33398"
+                            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11.3333 5.33333H14.2666C14.4875 5.33333 14.6666 5.15425 14.6666 4.93333V2"
+                            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Reset
+                </button>
+                <button
+                    class="py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] focus:bg-[#D7FF4D]  font-semibold text-lg leading-6 text-black">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.99976 11.334C1.99976 11.954 1.99976 12.264 2.06791 12.5183C2.25284 13.2085 2.79194 13.7476 3.48212 13.9325C3.73646 14.0007 4.04644 14.0007 4.66642 14.0007H11.3331C11.9531 14.0007 12.2631 14.0007 12.5174 13.9325C13.2076 13.7476 13.7467 13.2085 13.9316 12.5183C13.9998 12.264 13.9998 11.954 13.9998 11.334"
+                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
+                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Download
+                </button>
             </div>
         </div>
     </div>

@@ -10,7 +10,7 @@
   
 </head>
 
-<body class="relative bg-[#0A0A0A] overflow-hidden">
+<body class="relative bg-[#0A0A0A]">
      <!--navbar-->
     <nav id="navbar"
         class="navbar fixed top-0 w-full z-50 border-b border-white/10 max-lg:backdrop-blur-lg backdrop-blur-lg bg-[#111111]">
@@ -706,23 +706,28 @@
         </div>
     </nav>
     <!-- Tool Progress... area -->
-    <div class="w-full relative px-4 pt-[120px]" style="height: calc(100vh - 5px);">
+    <div class="w-full relative px-4 pt-24 pb-3 xl:pt-[90px]">
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
                 <h1 class="text-4xl font-medium lg:leading-[50px] text-white">AI Image Upscaler</h1>
-                <p class="font-normal text-lg text-[#797979] leading-7">Enhance any image to high quality sharpen
-                    details, fix blur, and upscale to bigger sizes in just one click.</p>
+                <p class="font-normal text-base text-[#797979] leading-7">Enhance any image to high quality sharpen details, fix blur, and upscale to bigger sizes in just one click.</p>
             </div>
-            <div
-                class="mt-6 w-full sm:h-[600px] rounded-3xl bg-[#111111] relative p-2.5 flex items-center justify-center">
-                <div class="h-full w-fit relative">
-                    <img id="previewImg" src="assets/images/upscaler-img.png" alt="img"
-                        class="w-full h-full object-contain">
+            <label
+                class="w-full !min-h-96 sm:h-[580px] 2xl:h-[620px] rounded-3xl bg-[#111111] mt-6 flex justify-center items-center cursor-pointer relative">
+                <button
+                    class="w-11 h-11 flex items-center justify-center rounded-[10px] bg-[#FFFFFF2E] backdrop-blur-[3px] absolute right-2.5 top-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path d="M16.5 5.5L5.50074 16.4993M16.4993 16.5L5.5 5.50078" stroke="white" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="p-2.5 w-fit h-full">
+                    <img src="/assets/images/upscaler-img.png" alt="img" class="max-h-full max-w-full w-auto h-auto">
                 </div>
-            </div>
+            </label>
             <div
-                class="mt-6 mx-auto w-fit  bg-[#000000] rounded-[10px] flex flex-col gap-1.5 items-center justify-center p-[1px]">
-                <button class="pt-1.5 flex items-center gap-1.5 text-white font-medium text-xs"><svg width="16"
+                class="mt-6 mx-auto w-fit bg-[#000000] rounded-[10px] flex flex-col gap-[7px] items-center justify-center p-[1px]">
+                <button class="pt-[7px] flex items-center gap-1.5 text-white font-medium text-xs"><svg width="16"
                         height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_171_58)">
                             <path
@@ -767,7 +772,7 @@
                     </svg>
                     12 Credit</button>
                 <button
-                    class="w-fit text-nowrap py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] font-semibold text-lg text-black">
+                    class="w-fit text-nowrap py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] leading-6 font-semibold text-lg text-black">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_171_52)">
                             <path
@@ -783,7 +788,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    Upscaler Image
+                   Upscale Image
                 </button>
             </div>
         </div>
