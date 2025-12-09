@@ -2751,6 +2751,14 @@ pre{
   top: 100%;
 }
 
+.right-2 {
+  right: 0.5rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -3109,6 +3117,14 @@ pre{
 
 .mt-auto {
   margin-top: auto;
+}
+
+.mt-\[23\.06px\] {
+  margin-top: 23.06px;
+}
+
+.mt-\[65px\] {
+  margin-top: 65px;
 }
 
 .line-clamp-2 {
@@ -3475,6 +3491,22 @@ pre{
 
 .h-screen {
   height: 100vh;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-\[202px\] {
+  height: 202px;
+}
+
+.h-\[600px\] {
+  height: 600px;
+}
+
+.h-\[750px\] {
+  height: 750px;
 }
 
 .max-h-64 {
@@ -3961,6 +3993,10 @@ pre{
   width: 1px;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .min-w-10 {
   min-width: 2.5rem;
 }
@@ -4312,6 +4348,14 @@ pre{
 
 .max-w-xs {
   max-width: 20rem;
+}
+
+.max-w-\[1468px\] {
+  max-width: 1468px;
+}
+
+.max-w-\[452px\] {
+  max-width: 452px;
 }
 
 .flex-1 {
@@ -4693,6 +4737,18 @@ pre{
 
 .gap-\[7px\] {
   gap: 7px;
+}
+
+.gap-\[11\.3px\] {
+  gap: 11.3px;
+}
+
+.gap-\[9\.28px\] {
+  gap: 9.28px;
+}
+
+.gap-\[9px\] {
+  gap: 9px;
 }
 
 .gap-x-1 {
@@ -5145,6 +5201,10 @@ pre{
   border-color: rgb(255 255 255 / 0.8);
 }
 
+.border-\[\#FFFFFF1A\] {
+  border-color: #FFFFFF1A;
+}
+
 .bg-\[\#00000080\] {
   background-color: #00000080;
 }
@@ -5449,6 +5509,14 @@ pre{
   background-color: rgb(255 255 255 / .03);
 }
 
+.bg-\[\#00000029\] {
+  background-color: #00000029;
+}
+
+.bg-\[\#11111180\] {
+  background-color: #11111180;
+}
+
 .bg-opacity-40 {
   --tw-bg-opacity: 0.4;
 }
@@ -5547,6 +5615,14 @@ pre{
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.bg-\[linear-gradient\(180deg\2c \#1FE06C00\2c \#1FE06C66\)\] {
+  background-image: linear-gradient(180deg,#1FE06C00,#1FE06C66);
+}
+
+.bg-\[linear-gradient\(180deg\2c \#FF000F00\2c \#FF000F66\)\] {
+  background-image: linear-gradient(180deg,#FF000F00,#FF000F66);
 }
 
 .from-\[\#0A0A0A\] {
@@ -5865,6 +5941,10 @@ pre{
   padding: 1px;
 }
 
+.p-\[1\.7px\] {
+  padding: 1.7px;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -6113,6 +6193,11 @@ pre{
 .py-\[9px\] {
   padding-top: 9px;
   padding-bottom: 9px;
+}
+
+.px-\[11\.3px\] {
+  padding-left: 11.3px;
+  padding-right: 11.3px;
 }
 
 .pb-0 {
@@ -6459,6 +6544,10 @@ pre{
   padding-top: 1px;
 }
 
+.pt-\[23\.22px\] {
+  padding-top: 23.22px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -6594,6 +6683,10 @@ pre{
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[23\.21px\] {
+  font-size: 23.21px;
 }
 
 .font-bold {
@@ -6919,6 +7012,16 @@ pre{
 
 .text-white\/80 {
   color: rgb(255 255 255 / 0.8);
+}
+
+.text-\[\#1FE06C\] {
+  --tw-text-opacity: 1;
+  color: rgb(31 224 108 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#FF000F\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 15 / var(--tw-text-opacity, 1));
 }
 
 .text-opacity-70 {
@@ -7636,6 +7739,11 @@ pre{
   border-color: rgb(255 255 255 / 0.5);
 }
 
+.hover\:border-\[\#688405\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(104 132 5 / var(--tw-border-opacity, 1));
+}
+
 .hover\:bg-\[\#0A0A0A\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
@@ -7790,6 +7898,10 @@ pre{
 
 .hover\:bg-white\/80:hover {
   background-color: rgb(255 255 255 / 0.8);
+}
+
+.hover\:bg-\[\#C6FF001A\]:hover {
+  background-color: #C6FF001A;
 }
 
 .hover\:bg-gradient-to-tr:hover {
@@ -7964,6 +8076,20 @@ pre{
 .focus\:bg-\[\#D7FF4D\]:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(215 255 77 / var(--tw-bg-opacity, 1));
+}
+
+.focus\:bg-\[\#C6FF001A\]:focus {
+  background-color: #C6FF001A;
+}
+
+.focus\:bg-black:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.focus\:text-\[\#C6FF00\]:focus {
+  --tw-text-opacity: 1;
+  color: rgb(198 255 0 / var(--tw-text-opacity, 1));
 }
 
 .focus\:outline-none:focus {
@@ -8399,6 +8525,10 @@ pre{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -8622,6 +8752,10 @@ pre{
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -8938,6 +9072,14 @@ pre{
     height: 100vh;
   }
 
+  .lg\:h-\[1045px\] {
+    height: 1045px;
+  }
+
+  .lg\:h-\[630px\] {
+    height: 630px;
+  }
+
   .lg\:max-h-none {
     max-height: none;
   }
@@ -9083,6 +9225,14 @@ pre{
     max-width: max-content;
   }
 
+  .lg\:max-w-\[630px\] {
+    max-width: 630px;
+  }
+
+  .lg\:max-w-\[808px\] {
+    max-width: 808px;
+  }
+
   .lg\:-translate-x-1\/3 {
     --tw-translate-x: -33.333333%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -9129,6 +9279,10 @@ pre{
 
   .lg\:flex-col {
     flex-direction: column;
+  }
+
+  .lg\:flex-nowrap {
+    flex-wrap: nowrap;
   }
 
   .lg\:items-start {
@@ -9464,6 +9618,10 @@ pre{
     height: 100vh;
   }
 
+  .xl\:h-\[600px\] {
+    height: 600px;
+  }
+
   .xl\:max-h-\[660px\] {
     max-height: 660px;
   }
@@ -9559,6 +9717,10 @@ pre{
 
   .xl\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 
   .xl\:flex-row {
