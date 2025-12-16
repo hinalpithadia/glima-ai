@@ -816,17 +816,357 @@ n<!doctype html>
             </aside>
         </div>
         <div
-            class="md:w-[calc(100%-90px)]  w-full ml-auto relative md:h-screen md:overflow-y-auto pt-[65px] px-0">
+            class="md:w-[calc(100%-90px)]  w-full ml-auto relative md:h-screen md:overflow-y-auto pt-10 px-0">
             <!--Main Content Page-->
             <div class="w-full h-full relative p-5">
-               <div class="grid md:grid-cols-3 grid-cols-1 gap-[15px]">
-                    <div class="p-5 rounded-[15px] border border-[#1B1B1B] bg-[linear-gradient(94deg,#1B1B1B_0%,rgba(27,27,27,0.00)_100%)] flex flex-col gap-[30px]">
-                        <div class="flex flex-col gap-2.5">
-                            <h4 class="text-xl font-semibold leading-[30px] text-white">AI Image</h4>
-                            <p></p>
+                <div class="flex flex-col gap-5 mb-[30px]">
+                    <div class="grid md:grid-cols-3 grid-cols-1 gap-[15px]">
+                        <div class="p-5 rounded-[15px] border border-[#1B1B1B] bg-[linear-gradient(94deg,#1B1B1B_0%,rgba(27,27,27,0.00)_100%)] flex flex-col gap-[30px] relative">
+                            <div class="flex flex-col gap-2.5">
+                                <h4 class="text-xl font-semibold leading-[30px] text-white">AI Image</h4>
+                                <p class="text-sm text-[#B1B1B1] font-medium">Generate images from text prompt.</p>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <span class="py-2 px-2.5 bg-[#0A0A0A] rounded-md text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000]">Text to Image</span>
+                                <span class="py-2 px-2.5 bg-[#0A0A0A] rounded-md text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000]">Image to Image</span>
+                                <span class="py-2 px-2.5 bg-[#0A0A0A] rounded-md text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000]">Image Effects</span>
+                            </div>
+                            <div class="absolute right-0 bottom-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="108" height="123" viewBox="0 0 108 123" fill="none">
+    <g opacity="0.5" clip-path="url(#clip0_5857_2923)">
+        <g filter="url(#filter0_i_5857_2923)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M64.9649 12.2092C66.2333 11.6877 67.6937 12.1133 68.4834 13.2346L72.7042 19.2273C74.6564 21.9992 78.0256 23.4053 81.3691 22.8435L88.5978 21.6292C89.9501 21.402 91.2799 22.1409 91.8013 23.4092C92.3227 24.6776 91.8971 26.1381 90.7759 26.9277L84.7832 31.1485C82.0112 33.1008 80.6051 36.4699 81.1669 39.8134L82.3812 47.0421C82.6084 48.3945 81.8696 49.7242 80.6012 50.2456C79.3328 50.767 77.8723 50.3414 77.0827 49.2203L72.8619 43.2275C70.9097 40.4556 67.5405 39.0495 64.197 39.6112L56.9683 40.8255C55.616 41.0528 54.2862 40.3139 53.7648 39.0455C53.2434 37.7771 53.669 36.3167 54.7902 35.5271L60.7829 31.3062C63.5549 29.354 64.9609 25.9849 64.3992 22.6414L63.1849 15.4127C62.9577 14.0603 63.6965 12.7306 64.9649 12.2092Z" fill="url(#paint0_linear_5857_2923)"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M60.6462 47.3328C56.5559 49.0142 54.535 53.7131 56.2461 57.8756C57.9573 62.0382 62.6987 63.9571 66.789 62.2757C70.8794 60.5942 72.9002 55.8954 71.189 51.7328C69.4779 47.5703 64.7366 45.6513 60.6462 47.3328Z" fill="url(#paint1_linear_5857_2923)"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.7621 48.6143L49.1391 37.7711C49.1175 38.7585 49.2952 39.7616 49.6895 40.7208C50.0838 41.68 50.663 42.5181 51.3728 43.2049L24.9959 54.0481C21.9949 55.2817 20.5622 58.7146 21.7959 61.7156L31.3014 84.8386C42.0157 76.8981 55.4026 75.1609 67.2106 79.0304C71.4661 72.962 77.8962 69.2457 84.812 68.2147L79.3267 54.8714C80.3141 54.8929 81.3173 54.7153 82.2765 54.3209C83.2357 53.9266 84.0738 53.3474 84.7605 52.6376L91.7672 69.682C91.785 69.7225 91.8019 69.7635 91.8178 69.805L96.7206 81.7314C99.1879 87.7334 96.3226 94.5991 90.3205 97.0665L49.5672 113.82C43.5652 116.287 36.6995 113.422 34.2321 107.42L16.3621 63.9493C13.8947 57.9473 16.7602 51.0816 22.7621 48.6143Z" fill="url(#paint2_linear_5857_2923)"/>
+        </g>
+    </g>
+    <defs>
+        <filter id="filter0_i_5857_2923" x="15.4766" y="11.9883" width="82.1328" height="106.717" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="4"/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_5857_2923"/>
+        </filter>
+        <linearGradient id="paint0_linear_5857_2923" x1="41.3785" y1="36.3096" x2="76.4226" y2="112.731" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white" stop-opacity="0.3"/>
+        <stop offset="0.841845" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_5857_2923" x1="41.3785" y1="36.3096" x2="76.4226" y2="112.731" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white" stop-opacity="0.3"/>
+        <stop offset="0.841845" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint2_linear_5857_2923" x1="41.3785" y1="36.3096" x2="76.4226" y2="112.731" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white" stop-opacity="0.3"/>
+        <stop offset="0.841845" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <clipPath id="clip0_5857_2923">
+        <rect width="94" height="94" fill="white" transform="translate(0 35.7402) rotate(-22.3469)"/>
+        </clipPath>
+    </defs>
+                            </svg>
+                        </div>
+                        </div>
+                        <div class="p-5 rounded-[15px] border border-[#1B1B1B] bg-[linear-gradient(94deg,#1B1B1B_0%,rgba(27,27,27,0.00)_100%)] flex flex-col gap-[30px] relative">
+                            <div class="flex flex-col gap-2.5">
+                                <h4 class="text-xl font-semibold leading-[30px] text-white">AI Video</h4>
+                                <p class="text-sm text-[#B1B1B1] font-medium">Generate images from text prompt.</p>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <span class="py-2 px-2.5 bg-[#0A0A0A] rounded-md text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000]">Text to Image</span>
+                                <span class="py-2 px-2.5 bg-[#0A0A0A] rounded-md text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000]">Image to Image</span>
+                                <span class="py-2 px-2.5 bg-[#0A0A0A] rounded-md text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000]">Image Effects</span>
+                            </div>
+                            <div class="absolute right-0 bottom-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="108" height="123" viewBox="0 0 108 123" fill="none">
+    <g opacity="0.5" clip-path="url(#clip0_5857_2937)">
+        <g filter="url(#filter0_i_5857_2937)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M46.452 29.0635C52.8794 26.4666 58.0231 24.3885 62.3194 23.1316C62.3452 24.2584 62.3493 25.0338 62.3273 25.4982C61.8882 25.9645 60.9778 26.8325 59.5532 28.1291L57.563 29.9409C55.3226 31.9802 54.5887 35.1993 55.7237 38.0085C56.8588 40.8176 59.6226 42.6227 62.6507 42.5334L65.3409 42.4541C67.2664 42.3972 68.519 42.3884 69.1588 42.4188C69.625 42.8577 70.47 43.7573 71.7666 45.1817L73.5784 47.1719C75.6176 49.4123 78.836 50.1464 81.6452 49.0115C84.4545 47.8765 86.2603 45.1125 86.1709 42.0842L86.0916 39.394C86.0349 37.4689 86.0303 36.2295 86.0609 35.5899C86.3798 35.2513 86.9386 34.7057 87.7663 33.936C89.866 37.9471 92.0701 43.4026 94.6675 49.8314C97.6386 57.1852 99.9726 62.9612 101.188 67.7157C102.434 72.5878 102.616 76.7797 100.899 80.8245C99.1821 84.8692 96.0399 87.6496 91.67 90.1379C87.4053 92.5661 81.2452 95.0557 73.8915 98.0268C66.5377 100.998 60.7613 103.331 56.0068 104.547C51.1346 105.792 46.9431 105.975 42.8983 104.258C38.8536 102.541 36.0733 99.3993 33.5849 95.0293C31.1566 90.7646 28.8224 84.9888 25.8513 77.6349C22.8801 70.2811 20.3918 64.1207 19.1761 59.3661C17.9303 54.4939 17.7477 50.3024 19.4645 46.2576C21.1815 42.2129 24.3231 39.4318 28.6932 36.9434C32.9579 34.5151 39.0983 32.0345 46.452 29.0635ZM60.8365 52.9548C54.0882 51.86 50.7142 51.313 48.7967 52.8557C48.0039 53.4935 47.3905 54.3447 47.0154 55.3269C46.1085 57.7026 47.4624 61.0529 50.1696 67.7532C52.8766 74.4534 54.23 77.8044 56.5327 78.8831C57.4848 79.3292 58.5171 79.5144 59.5303 79.4225C61.9814 79.2003 64.0285 76.4629 68.1222 70.9877C72.3565 65.3241 74.4739 62.4919 74.0956 59.8478C73.9392 58.7564 73.5175 57.7124 72.8718 56.8187C71.3071 54.6539 67.8167 54.0875 60.8365 52.9548Z" fill="url(#paint0_linear_5857_2937)"/>
+        <path d="M68.422 16.2822C69.4754 15.8566 70.6827 16.1318 71.4474 16.9721L73.2585 18.9622C75.8006 21.7554 76.5488 22.491 77.4449 22.8715C78.3412 23.2519 79.3901 23.279 83.1654 23.1672L85.855 23.0877C86.9906 23.0542 88.0272 23.7313 88.4528 24.7848C88.8785 25.8382 88.6032 27.0454 87.763 27.8101L85.773 29.6212C82.9797 32.1635 82.244 32.9115 81.8634 33.8078C81.4832 34.704 81.456 35.7529 81.5677 39.5281L81.6473 42.2177C81.6809 43.3534 81.0036 44.39 79.9503 44.8156C78.8969 45.2412 77.6896 44.966 76.9248 44.1257L75.1137 42.1356C72.5716 39.3424 71.8234 38.6067 70.9274 38.2263C70.031 37.8459 68.9822 37.8188 65.2071 37.9304L62.5173 38.01C61.3816 38.0436 60.345 37.3665 59.9194 36.313C59.4938 35.2595 59.7691 34.0524 60.6093 33.2877L62.5996 31.4764C65.3926 28.9343 66.1283 28.1862 66.5088 27.29C66.8891 26.3938 66.9163 25.3449 66.8046 21.5697L66.725 18.8801C66.6914 17.7444 67.3686 16.7078 68.422 16.2822Z" fill="url(#paint1_linear_5857_2937)"/>
+        </g>
+    </g>
+    <defs>
+        <filter id="filter0_i_5857_2937" x="18.2109" y="16.0841" width="83.9453" height="93.4297" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="4"/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_5857_2937"/>
+        </filter>
+        <linearGradient id="paint0_linear_5857_2937" x1="40.182" y1="47.5706" x2="84.3319" y2="96.3712" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white" stop-opacity="0.3"/>
+        <stop offset="0.841845" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_5857_2937" x1="40.182" y1="47.5706" x2="84.3319" y2="96.3712" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white" stop-opacity="0.3"/>
+        <stop offset="0.841845" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <clipPath id="clip0_5857_2937">
+        <rect width="94" height="94" fill="white" transform="translate(0 35.213) rotate(-22)"/>
+        </clipPath>
+    </defs>
+    </svg>
+                        </div>
+                        </div>
+                        <div class="p-5 rounded-[15px] border border-[#1B1B1B] bg-[linear-gradient(94deg,#1B1B1B_0%,rgba(27,27,27,0.00)_100%)] flex flex-col gap-[30px] relative">
+                            <div class="flex flex-col gap-2.5">
+                                <h4 class="text-xl font-semibold leading-[30px] text-white">AI Video</h4>
+                                <p class="text-sm text-[#B1B1B1] font-medium">Generate images from text prompt.</p>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <span class="py-2 px-2.5 bg-[#0A0A0A] rounded-md text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000]">Text to Image</span>
+                                <span class="py-2 px-2.5 bg-[#0A0A0A] rounded-md text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000]">Image to Image</span>
+                                <span class="py-2 px-2.5 bg-[#0A0A0A] rounded-md text-sm font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000]">Image Effects</span>
+                            </div>
+                            <div class="absolute right-0 bottom-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="108" height="123" viewBox="0 0 108 123" fill="none">
+    <g opacity="0.5" clip-path="url(#clip0_5857_2937)">
+        <g filter="url(#filter0_i_5857_2937)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M46.452 29.0635C52.8794 26.4666 58.0231 24.3885 62.3194 23.1316C62.3452 24.2584 62.3493 25.0338 62.3273 25.4982C61.8882 25.9645 60.9778 26.8325 59.5532 28.1291L57.563 29.9409C55.3226 31.9802 54.5887 35.1993 55.7237 38.0085C56.8588 40.8176 59.6226 42.6227 62.6507 42.5334L65.3409 42.4541C67.2664 42.3972 68.519 42.3884 69.1588 42.4188C69.625 42.8577 70.47 43.7573 71.7666 45.1817L73.5784 47.1719C75.6176 49.4123 78.836 50.1464 81.6452 49.0115C84.4545 47.8765 86.2603 45.1125 86.1709 42.0842L86.0916 39.394C86.0349 37.4689 86.0303 36.2295 86.0609 35.5899C86.3798 35.2513 86.9386 34.7057 87.7663 33.936C89.866 37.9471 92.0701 43.4026 94.6675 49.8314C97.6386 57.1852 99.9726 62.9612 101.188 67.7157C102.434 72.5878 102.616 76.7797 100.899 80.8245C99.1821 84.8692 96.0399 87.6496 91.67 90.1379C87.4053 92.5661 81.2452 95.0557 73.8915 98.0268C66.5377 100.998 60.7613 103.331 56.0068 104.547C51.1346 105.792 46.9431 105.975 42.8983 104.258C38.8536 102.541 36.0733 99.3993 33.5849 95.0293C31.1566 90.7646 28.8224 84.9888 25.8513 77.6349C22.8801 70.2811 20.3918 64.1207 19.1761 59.3661C17.9303 54.4939 17.7477 50.3024 19.4645 46.2576C21.1815 42.2129 24.3231 39.4318 28.6932 36.9434C32.9579 34.5151 39.0983 32.0345 46.452 29.0635ZM60.8365 52.9548C54.0882 51.86 50.7142 51.313 48.7967 52.8557C48.0039 53.4935 47.3905 54.3447 47.0154 55.3269C46.1085 57.7026 47.4624 61.0529 50.1696 67.7532C52.8766 74.4534 54.23 77.8044 56.5327 78.8831C57.4848 79.3292 58.5171 79.5144 59.5303 79.4225C61.9814 79.2003 64.0285 76.4629 68.1222 70.9877C72.3565 65.3241 74.4739 62.4919 74.0956 59.8478C73.9392 58.7564 73.5175 57.7124 72.8718 56.8187C71.3071 54.6539 67.8167 54.0875 60.8365 52.9548Z" fill="url(#paint0_linear_5857_2937)"/>
+        <path d="M68.422 16.2822C69.4754 15.8566 70.6827 16.1318 71.4474 16.9721L73.2585 18.9622C75.8006 21.7554 76.5488 22.491 77.4449 22.8715C78.3412 23.2519 79.3901 23.279 83.1654 23.1672L85.855 23.0877C86.9906 23.0542 88.0272 23.7313 88.4528 24.7848C88.8785 25.8382 88.6032 27.0454 87.763 27.8101L85.773 29.6212C82.9797 32.1635 82.244 32.9115 81.8634 33.8078C81.4832 34.704 81.456 35.7529 81.5677 39.5281L81.6473 42.2177C81.6809 43.3534 81.0036 44.39 79.9503 44.8156C78.8969 45.2412 77.6896 44.966 76.9248 44.1257L75.1137 42.1356C72.5716 39.3424 71.8234 38.6067 70.9274 38.2263C70.031 37.8459 68.9822 37.8188 65.2071 37.9304L62.5173 38.01C61.3816 38.0436 60.345 37.3665 59.9194 36.313C59.4938 35.2595 59.7691 34.0524 60.6093 33.2877L62.5996 31.4764C65.3926 28.9343 66.1283 28.1862 66.5088 27.29C66.8891 26.3938 66.9163 25.3449 66.8046 21.5697L66.725 18.8801C66.6914 17.7444 67.3686 16.7078 68.422 16.2822Z" fill="url(#paint1_linear_5857_2937)"/>
+        </g>
+    </g>
+    <defs>
+        <filter id="filter0_i_5857_2937" x="18.2109" y="16.0841" width="83.9453" height="93.4297" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="4"/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_5857_2937"/>
+        </filter>
+        <linearGradient id="paint0_linear_5857_2937" x1="40.182" y1="47.5706" x2="84.3319" y2="96.3712" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white" stop-opacity="0.3"/>
+        <stop offset="0.841845" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_5857_2937" x1="40.182" y1="47.5706" x2="84.3319" y2="96.3712" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white" stop-opacity="0.3"/>
+        <stop offset="0.841845" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <clipPath id="clip0_5857_2937">
+        <rect width="94" height="94" fill="white" transform="translate(0 35.213) rotate(-22)"/>
+        </clipPath>
+    </defs>
+    </svg>
+                        </div>
                         </div>
                     </div>
-               </div>
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-[23px]">
+                        <div class="border border-[#1B1B1B] rounded-[15px] bg-[#000] relative md:h-[400px] h-[200px] bg-[url('../../assets/images/dashboard-headshot-bg.png')] overflow-hidden flex  items-end py-[25px] px-[30px]">
+                            <div class="bg-[radial-gradient(57.96%_50%_at_50.95%_50%,rgba(4,3,3,0.00)_0%,#040303_100%)] absolute left-0 top-0 h-full w-full"></div>
+                            <div class="flex justify-between items-end relative w-full">
+                                <div class="flex flex-col gap-2.5">
+                                    <div class="block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+  <foreignObject x="-2.875" y="-2.875" width="65.75" height="65.75"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(3px);clip-path:url(#bgblur_0_5857_3407_clip_path);height:100%;width:100%"></div></foreignObject><path data-figma-bg-blur-radius="6" d="M41.7458 5.82083C38.1973 4.09385 34.2118 3.125 30 3.125C15.1574 3.125 3.125 15.1574 3.125 30C3.125 44.8428 15.1574 56.875 30 56.875C44.8428 56.875 56.875 44.8428 56.875 30C56.875 25.7883 55.9063 21.8028 54.1793 18.2543C53.3128 18.8977 52.6895 19.8472 52.4645 20.9476C51.3603 26.3508 43.6398 26.3508 42.5355 20.9476C42.177 19.1937 40.8063 17.823 39.0525 17.4645C33.649 16.3601 33.6495 8.63983 39.0525 7.53548C40.1528 7.31058 41.1023 6.68725 41.7458 5.82083Z" fill="white" fill-opacity="0.08"/>
+  <g filter="url(#filter1_i_5857_3407)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M34.0004 37.5H26.0084C21.5228 37.5 17.381 39.9035 15.1555 43.7982L14.2656 45.3555C18.2589 49.4477 23.8349 51.9887 30.0044 51.9887C36.1739 51.9887 41.7499 49.4477 45.7434 45.3555L44.8534 43.7982C42.6279 39.9035 38.4862 37.5 34.0004 37.5Z" fill="white"/>
+  </g>
+  <g filter="url(#filter2_i_5857_3407)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M30 32.5C34.1422 32.5 37.5 29.1423 37.5 25C37.5 20.8579 34.1422 17.5 30 17.5C25.8577 17.5 22.5 20.8579 22.5 25C22.5 29.1423 25.8577 32.5 30 32.5Z" fill="#626262"/>
+  </g>
+  <g filter="url(#filter3_i_5857_3407)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M45.5972 4.67822C46.0205 2.60722 48.9795 2.6073 49.4028 4.67822C50.012 7.65875 52.3413 9.988 55.3218 10.5972C57.3928 11.0205 57.3928 13.9795 55.3218 14.4028C52.3413 15.012 50.012 17.3412 49.4028 20.3218C48.9795 22.3927 46.0205 22.3927 45.5972 20.3218C44.988 17.3412 42.6588 15.012 39.6783 14.4028C37.6072 13.9795 37.6072 11.0205 39.6783 10.5972C42.6588 9.988 44.988 7.65875 45.5972 4.67822Z" fill="#C6FF00"/>
+  </g>
+  <defs>
+    <clipPath id="bgblur_0_5857_3407_clip_path" transform="translate(2.875 2.875)"><path d="M41.7458 5.82083C38.1973 4.09385 34.2118 3.125 30 3.125C15.1574 3.125 3.125 15.1574 3.125 30C3.125 44.8428 15.1574 56.875 30 56.875C44.8428 56.875 56.875 44.8428 56.875 30C56.875 25.7883 55.9063 21.8028 54.1793 18.2543C53.3128 18.8977 52.6895 19.8472 52.4645 20.9476C51.3603 26.3508 43.6398 26.3508 42.5355 20.9476C42.177 19.1937 40.8063 17.823 39.0525 17.4645C33.649 16.3601 33.6495 8.63983 39.0525 7.53548C40.1528 7.31058 41.1023 6.68725 41.7458 5.82083Z"/>
+  </clipPath><filter id="filter1_i_5857_3407" x="14.2656" y="37.5" width="31.4766" height="16.4883" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+  <feOffset dy="2"/>
+  <feGaussianBlur stdDeviation="4"/>
+  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+  <feBlend mode="normal" in2="shape" result="effect1_innerShadow_5857_3407"/>
+</filter>
+<filter id="filter2_i_5857_3407" x="22.5" y="17.5" width="15" height="19" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+  <feOffset dy="4"/>
+  <feGaussianBlur stdDeviation="2"/>
+  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+  <feBlend mode="normal" in2="shape" result="effect1_innerShadow_5857_3407"/>
+</filter>
+<filter id="filter3_i_5857_3407" x="38.125" y="3.125" width="18.75" height="22.75" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+  <feOffset dy="4"/>
+  <feGaussianBlur stdDeviation="2"/>
+  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+  <feBlend mode="normal" in2="shape" result="effect1_innerShadow_5857_3407"/>
+</filter>
+</defs>
+</svg>
+                                    </div>
+                                    <h3 class="text-[32px] font-medium text-white leading-[44px]">AI Headshot Generator</h3>
+                                </div>
+                                <button class="py-[10px] px-4 rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-6 text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <g clip-path="url(#clip0_5857_3414)">
+                                        <path d="M5.33594 9.99967C8.58574 9.99967 10.0026 8.63234 10.0026 5.33301C10.0026 8.63234 11.4095 9.99967 14.6693 9.99967C11.4095 9.99967 10.0026 11.4066 10.0026 14.6663C10.0026 11.4066 8.58574 9.99967 5.33594 9.99967Z" stroke="black" stroke-width="1.2" stroke-linejoin="round"/>
+                                        <path d="M1.33594 4.33301C3.42511 4.33301 4.33594 3.45403 4.33594 1.33301C4.33594 3.45403 5.2404 4.33301 7.33594 4.33301C5.2404 4.33301 4.33594 5.23747 4.33594 7.33301C4.33594 5.23747 3.42511 4.33301 1.33594 4.33301Z" stroke="black" stroke-width="1.2" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_5857_3414">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                    </svg>
+                            Generate Now
+                        </button>
+                            </div>
+                        </div>
+                         <div class="border border-[#1B1B1B] rounded-[15px] bg-[#000] relative md:h-[400px] h-[200px] bg-[url('../../assets/images/dashboard-interior-bg.png')] overflow-hidden flex  items-end py-[25px] px-[30px]">
+                            <div class="bg-[radial-gradient(57.96%_50%_at_50.95%_50%,rgba(4,3,3,0.00)_0%,#040303_100%)] absolute left-0 top-0 h-full w-full"></div>
+                            <div class="flex justify-between items-end relative w-full">
+                                <div class="flex flex-col gap-2.5">
+                                    <div class="block">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_i_5857_3491)">
+<path d="M9.96515 31.0688V33.3062H30.8795V31.0688C30.8795 29.1233 32.1441 27.4696 33.7978 26.7887V22.1195C33.7978 16.3802 29.1285 11.7109 23.3892 11.7109H17.4554C11.7161 11.7109 7.04688 16.3802 7.04688 22.1195V26.7887C8.70057 27.4696 9.96515 29.1233 9.96515 31.0688Z" fill="#3E3E3E"/>
+</g>
+<g filter="url(#filter1_i_5857_3491)">
+<path d="M9.96512 40.5034C9.96512 40.698 10.0624 40.7952 10.2569 40.7952H30.4903C30.6849 40.7952 30.7822 40.698 30.7822 40.5034V35.2505H9.96512V40.5034Z" fill="white"/>
+<path d="M33.4075 49.9423H29.8083L31.1701 53.8333C31.4619 54.7088 32.4347 55.1952 33.3102 54.9034C34.1857 54.6115 34.6721 53.6388 34.3802 52.7633L33.4075 49.9423Z" fill="white"/>
+<path d="M35.4503 28.4424C33.9912 28.4424 32.8239 29.6097 32.8239 31.0688V40.5046C32.8239 41.7692 31.8511 42.7419 30.5865 42.7419H10.2559C8.99129 42.7419 8.01853 41.7692 8.01853 40.5046V31.0688C8.01853 29.6097 6.85121 28.4424 5.39208 28.4424C3.93294 28.4424 2.76562 29.6097 2.76562 31.0688V45.2711C2.76562 46.8275 4.03021 48.0921 5.58663 48.0921H35.2558C36.8122 48.0921 38.0768 46.8275 38.0768 45.2711V31.0688C37.9795 29.6097 36.8122 28.4424 35.4503 28.4424Z" fill="white"/>
+<path d="M6.46603 52.6656C6.27148 53.0547 6.36876 53.5411 6.56331 53.9302C6.75786 54.3193 7.14696 54.6112 7.53607 54.8057C8.41155 55.0975 9.38431 54.6112 9.67614 53.7357L11.038 49.8446H7.43879L6.46603 52.6656Z" fill="white"/>
+</g>
+<path d="M51.7898 53.0518H41.9649C41.3813 53.0518 40.9922 53.4409 40.9922 54.0245C40.9922 54.6082 41.3813 54.9973 41.9649 54.9973H51.7898C52.3735 54.9973 52.7626 54.6082 52.7626 54.0245C52.7626 53.4409 52.3735 53.0518 51.7898 53.0518Z" fill="white"/>
+<g filter="url(#filter2_i_5857_3491)">
+<path d="M57.2443 13.3657C56.1742 8.50193 51.9914 5 46.933 5C41.8747 5 37.6918 8.50193 36.6218 13.2685C36.5245 13.9494 37.0109 14.533 37.6918 14.533H56.2715C56.8552 14.6303 57.3415 14.0467 57.2443 13.3657Z" fill="#C6FF00"/>
+</g>
+<path d="M45.9576 16.5781V47.3173H44.7903C44.4012 47.3173 44.1094 47.6092 44.1094 47.9983V51.1111H49.6541V47.9983C49.6541 47.6092 49.3623 47.3173 48.9732 47.3173H47.8059V16.5781H45.9576Z" fill="url(#paint0_linear_5857_3491)"/>
+<defs>
+<filter id="filter0_i_5857_3491" x="7.04688" y="11.7109" width="26.75" height="25.5957" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_5857_3491"/>
+</filter>
+<filter id="filter1_i_5857_3491" x="2.76562" y="28.4424" width="35.3125" height="28.5459" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="4"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_5857_3491"/>
+</filter>
+<filter id="filter2_i_5857_3491" x="36.6094" y="5" width="20.6484" height="13.5439" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_5857_3491"/>
+</filter>
+<linearGradient id="paint0_linear_5857_3491" x1="46.8817" y1="16.5781" x2="46.8817" y2="51.1111" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C6FF00"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
+
+                                    </div>
+                                    <h3 class="text-[32px] font-medium text-white leading-[44px]">AI Interior</h3>
+                                </div>
+                                <button class="py-[10px] px-4 rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-6 text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <g clip-path="url(#clip0_5857_3414)">
+                                        <path d="M5.33594 9.99967C8.58574 9.99967 10.0026 8.63234 10.0026 5.33301C10.0026 8.63234 11.4095 9.99967 14.6693 9.99967C11.4095 9.99967 10.0026 11.4066 10.0026 14.6663C10.0026 11.4066 8.58574 9.99967 5.33594 9.99967Z" stroke="black" stroke-width="1.2" stroke-linejoin="round"/>
+                                        <path d="M1.33594 4.33301C3.42511 4.33301 4.33594 3.45403 4.33594 1.33301C4.33594 3.45403 5.2404 4.33301 7.33594 4.33301C5.2404 4.33301 4.33594 5.23747 4.33594 7.33301C4.33594 5.23747 3.42511 4.33301 1.33594 4.33301Z" stroke="black" stroke-width="1.2" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_5857_3414">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                    </svg>
+                            Generate Now
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="flex flex-col gap-5">
+                        <h4 class="text-[22px] font-medium text-white">Trending In AI Image</h4>
+                        <div class="flex flex-wrap gap-x-2.5 gap-y-5">
+                            <div onclick="window.location.href='';" class="bg-[#1B1B1B] rounded-lg p-1 w-[246px] h-[294px] flex flex-col gap-3 group cursor-pointer" >
+                                <div class="relative">
+                                    <img src="assets/images/dashboard-home/img-combiner-big-img.png" alt="image"/>
+                                    <div class="absolute bottom-1 left-1 flex items-center gap-[5px]">
+                                        <img src="assets/images/dashboard-home/img-combiner-small-img1.png" alt="image" class="rounded-[3px] border border-black"/>
+                                        <img src="assets/images/dashboard-home/img-combiner-small-img2.png" alt="image" class="rounded-[3px] border border-black"/>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between px-[6px]">
+                                    <h4 class="text-base font-medium text-white">Image Combiner</h4>
+                                    <a href="#" class="opacity-0 group-hover:opacity-100 transition-all duration-500 hover:translate-x-[2px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2.25 9.04492H15.75" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                             <div onclick="window.location.href='';" class="bg-[#1B1B1B] rounded-lg p-1 w-[246px] h-[294px] flex flex-col gap-3 group cursor-pointer" >
+                                <div class="relative">
+                                       <div class="rounded-t-xl h-auto relative ba-slider2">
+                                        <!--  After Img -->
+                                        <img class="w-full before-img h-auto object-contain"
+                                            src="assets/images/test-img1.jpg"
+                                            alt="before">
+                                        <!-- BEFORE IMAGE (left side) -->
+                                        <div class="resize">
+                                            <img src="assets/images/test-img1-Photoroom.png"
+                                                alt="after" class="after-img h-auto object-contain">
+                                        </div>
+
+                                        <span class="handle">
+                                            <button class="ba2-btn ba2-btn-before">
+                                                Before
+                                            </button>
+                                            <button class="ba2-btn ba2-btn-after">
+                                                After
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between px-[6px]">
+                                    <h4 class="text-base font-medium text-white">Image Combiner</h4>
+                                    <a href="#" class="opacity-0 group-hover:opacity-100 transition-all duration-500 hover:translate-x-[2px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2.25 9.04492H15.75" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>

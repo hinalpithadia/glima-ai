@@ -872,61 +872,104 @@
             <aside
                 class="md:fixed relative md:left-0 top-[65px] xl:w-[404px] lg:w-[280px] w-full md:w-[280px] md:h-[calc(100vh-64px)] overflow-y-auto scrollbar-hide z-50 flex justify-between flex-col bg-[#0A0A0A] nav-list md:border-r border-[#222222]">
                 <div class="relative px-3 pt-5">
-                    <div class="w-full  flex flex-col gap-4 pb-12">
+                    <div class="w-full  flex flex-col gap-4 md:pb-12 pb-4">
                         <div class="flex items-center gap-3.5">
-                            <h2 class="text-xl font-semibold leading-normal text-white">AI Face Swap Video</h2>
+                            <h2 class="text-xl font-semibold leading-normal text-white">Auto sound add to video</h2>
                         </div>
                         <div class="flex flex-col gap-2.5">
                             <label class="text-sm leading-[18px] text-white font-medium capitalize">upload your Videos</label>
-                            <div class="transition-all duration-500 outline-none bg-black w-full h-52 resize-none  px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-[10px] relative z-[2] cursor-pointer border border-transparent hover:border-[rgba(198,255,0,0.20)]">
+                            <div class="transition-all duration-500 outline-none bg-black w-full h-52 resize-none   text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-[10px] relative z-[2] cursor-pointer border border-transparent hover:border-[rgba(198,255,0,0.20)]">
                                     <label class="flex flex-col items-center justify-center gap-[18px] h-full w-full cursor-pointer">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-  <path d="M24.0859 21.4913C23.8334 22.5358 22.6402 23.274 20.2539 24.7503C17.9469 26.1773 16.7936 26.891 15.8639 26.6042C15.4796 26.4855 15.1295 26.2603 14.8471 25.95C14.1641 25.1997 14.1641 23.7442 14.1641 20.8333C14.1641 17.9225 14.1641 16.467 14.8471 15.7166C15.1295 15.4063 15.4796 15.1811 15.8639 15.0625C16.7936 14.7757 17.9469 15.4893 20.2539 16.9163C22.6402 18.3927 23.8334 19.1308 24.0859 20.1753C24.1901 20.6065 24.1901 21.0602 24.0859 21.4913Z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
-  <path d="M34.9988 18.3333C35.0026 19.1168 35.0026 19.9488 35.0026 20.8333C35.0026 28.2972 35.0026 32.0292 32.6839 34.348C30.3651 36.6667 26.6331 36.6667 19.1693 36.6667C11.7054 36.6667 7.97342 36.6667 5.65467 34.348C3.33594 32.0292 3.33594 28.2972 3.33594 20.8333C3.33594 13.3694 3.33594 9.63748 5.65467 7.31873C7.97342 5 11.7054 5 19.1693 5C20.0538 5 20.8858 5 21.6693 5.00385" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M30.8333 3.33325L31.2632 4.49497C31.8268 6.01829 32.1087 6.77995 32.6643 7.33557C33.22 7.8912 33.9817 8.17304 35.505 8.73672L36.6667 9.16659L35.505 9.59645C33.9817 10.1601 33.22 10.442 32.6643 10.9976C32.1087 11.5532 31.8268 12.3149 31.2632 13.8382L30.8333 14.9999L30.4035 13.8382C29.8398 12.3149 29.558 11.5532 29.0023 10.9976C28.4467 10.442 27.685 10.1601 26.1617 9.59645L25 9.16659L26.1617 8.73672C27.685 8.17304 28.4467 7.8912 29.0023 7.33557C29.558 6.77995 29.8398 6.01829 30.4035 4.49497L30.8333 3.33325Z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
+                                          <div class="relative w-full h-full aspect-video overflow-hidden rounded-[10px] video-wrap">
+  <!-- VIDEO -->
+  <video
+    id="customVideo"
+    class="video-el absolute inset-0 w-full h-full object-contain"
+    playsinline
+    disablepictureinpicture
+    controlslist="nodownload noplaybackrate nopictureinpicture"
+  >
+    <source
+      src="assets/images/upscale-video.mp4"
+      type="video/mp4"
+    />
+  </video>
+
+  <!-- PLAY / PAUSE OVERLAY -->
+  <button
+    id="playPauseBtn"
+    class="video-toggle absolute inset-0 z-10 flex items-center justify-center bg-black/30"
+  >
+    <!-- ▶️ PLAY ICON -->
+    <span class="play-icon">
+      <!-- YOUR PLAY SVG -->
+     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-7" y="-7" width="58" height="58"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(3.5px);clip-path:url(#bgblur_0_5894_2624_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="7">
+<rect width="44" height="44" rx="22" fill="white" fill-opacity="0.2"/>
+<path d="M23.4554 17.7528C24.6801 18.4486 25.6425 18.9953 26.3282 19.4962C27.0185 20.0004 27.5291 20.5275 27.7119 21.2224C27.846 21.732 27.846 22.2681 27.7119 22.7776C27.5291 23.4726 27.0185 23.9996 26.3282 24.5039C25.6425 25.0048 24.6801 25.5515 23.4555 26.2473C22.2724 26.9194 21.2748 27.4861 20.5174 27.8083C19.754 28.133 19.058 28.2976 18.3815 28.1059C17.8844 27.965 17.4321 27.6976 17.0677 27.33C16.5731 26.8311 16.3746 26.1415 16.2807 25.3116C16.1875 24.4877 16.1875 23.4093 16.1875 22.0376V21.9625C16.1875 20.5908 16.1875 19.5124 16.2807 18.6885C16.3746 17.8586 16.5731 17.169 17.0677 16.6701C17.4321 16.3024 17.8844 16.035 18.3815 15.8942C19.058 15.7025 19.754 15.8671 20.5174 16.1918C21.2748 16.5139 22.2724 17.0807 23.4554 17.7528Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="bgblur_0_5894_2624_clip_path" transform="translate(7 7)"><rect width="44" height="44" rx="22"/>
+</clipPath></defs>
 </svg>
 
+    </span>
 
-                                        <div class="block">
-                                            <p class="text-base leading-5 text-center text-white mb-1.5">Upload Video Here
-                                            </p>
-                                            <p class="text-xs leading-[14px] text-center text-[#797979]">Drop your video to add in to the editor
-                                            </p>
+    <!-- ⏸ PAUSE ICON -->
+    <span class="hidden pause-icon">
+      <!-- YOUR PAUSE SVG -->
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <foreignObject x="-7" y="-7" width="58" height="58">
+          <div xmlns="http://www.w3.org/1999/xhtml"
+            style="backdrop-filter:blur(3.5px);clip-path:url(#bgblur_0_1457_663_clip_path);height:100%;width:100%">
+          </div>
+        </foreignObject>
+        <g data-figma-bg-blur-radius="7">
+          <path
+            d="M0 22C0 9.84974 9.84974 0 22 0C34.1503 0 44 9.84974 44 22C44 34.1503 34.1503 44 22 44C9.84974 44 0 34.1503 0 22Z"
+            fill="white" fill-opacity="0.2" />
+          <path d="M25.7129 15.4375H25.75H25.7871C26.2857 15.4375 26.7153 15.4374 27.0594 15.4837C27.4281 15.5333 27.7815 15.6451 28.0682 15.9318C28.3549 16.2184 28.4667 16.5719 28.5163 16.9406C28.5626 17.2847 28.5625 17.7143 28.5625 18.213V25.7871C28.5625 26.2857 28.5626 26.7153 28.5163 27.0594C28.4667 27.4281 28.3549 27.7815 28.0682 28.0683C27.7815 28.3549 27.4281 28.4667 27.0594 28.5163C26.7153 28.5626 26.2857 28.5625 25.7871 28.5625H25.7129C25.2143 28.5625 24.7847 28.5626 24.4406 28.5163C24.0719 28.4667 23.7185 28.3549 23.4318 28.0683C23.1451 27.7815 23.0333 27.4281 22.9837 27.0594C22.9374 26.7153 22.9375 26.2857 22.9375 25.7871V18.213C22.9375 17.7143 22.9374 17.2847 22.9837 16.9406C23.0333 16.5719 23.1451 16.2184 23.4318 15.9318C23.7185 15.6451 24.0719 15.5333 24.4406 15.4837C24.7847 15.4374 25.2143 15.4375 25.7129 15.4375Z"
+            fill="white" />
+          <path d="M18.213 15.4375H18.25H18.287C18.7857 15.4375 19.2153 15.4374 19.5594 15.4837C19.9281 15.5333 20.2816 15.6451 20.5682 15.9318C20.8549 16.2184 20.9667 16.5719 21.0163 16.9406C21.0626 17.2847 21.0625 17.7143 21.0625 18.213V25.7871C21.0625 26.2857 21.0626 26.7153 21.0163 27.0594C20.9667 27.4281 20.8549 27.7815 20.5682 28.0683C20.2816 28.3549 19.9281 28.4667 19.5594 28.5163C19.2153 28.5626 18.7857 28.5625 18.287 28.5625H18.213C17.7143 28.5625 17.2847 28.5626 16.9406 28.5163C16.5719 28.4667 16.2184 28.3549 15.9318 28.0683C15.6451 27.7815 15.5333 27.4281 15.4837 27.0594C15.4374 26.7153 15.4375 26.2857 15.4375 25.7871V18.213C15.4375 17.7143 15.4374 17.2847 15.4837 16.9406C15.5333 16.5719 15.6451 16.2184 15.9318 15.9318C16.2184 15.6451 16.5719 15.5333 16.9406 15.4837C17.2847 15.4374 17.7143 15.4375 18.213 15.4375Z"
+            fill="white" />
+        </g>
+      </svg>
+    </span>
+  </button>
+</div>
 
-                                        </div>
-                                        <input type="file" class="hidden">
+                                        
                                     </label>
                                 </div>
                         </div>
-                     
-                        <div class="flex flex-col gap-2.5">
-                            <label class="text-sm leading-[18px] text-white font-medium capitalize">Upload Image Here</label>
-                            <div class="transition-all duration-500 outline-none bg-black w-full h-52 resize-none  px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-[10px] relative z-[2] cursor-pointer border border-transparent hover:border-[rgba(198,255,0,0.20)]">
-                                    <label class="flex flex-col items-center justify-center gap-[18px] h-full w-full cursor-pointer">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-  <path d="M14.9974 16.6667C16.8383 16.6667 18.3307 15.1743 18.3307 13.3333C18.3307 11.4924 16.8383 10 14.9974 10C13.1564 10 11.6641 11.4924 11.6641 13.3333C11.6641 15.1743 13.1564 16.6667 14.9974 16.6667Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M21.6693 3.33325H15.0026C6.66927 3.33325 3.33594 6.66659 3.33594 14.9999V24.9999C3.33594 33.3333 6.66927 36.6666 15.0026 36.6666H25.0026C33.3359 36.6666 36.6693 33.3333 36.6693 24.9999V16.6666" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M26.25 8.33325H35.4167" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M30.8359 12.9167V3.75" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M4.45312 31.5834L12.6698 26.0667C13.9865 25.1834 15.8865 25.2833 17.0698 26.3L17.6198 26.7833C18.9198 27.9 21.0198 27.9 22.3198 26.7833L29.2531 20.8333C30.5531 19.7167 32.6531 19.7167 33.9531 20.8333L36.6698 23.1667" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                                        <div class="block">
-                                            <p class="text-base leading-5 text-center text-white mb-1.5">Upload Image Here
-                                            </p>
-                                            <p class="text-xs leading-[14px] text-center text-[#797979]">Drop your image to add in to the editor
-                                            </p>
-
-                                        </div>
-                                        <input type="file" class="hidden">
-                                    </label>
-                                </div>
+                        <div class="relative w-full flex flex-col gap-2.5 ">
+                            <label class="text-sm  font-medium text-white">Text Prompt
+</label>
+                                <textarea name="text-prompt" id="text-prompt" placeholder="Write Prompt Here"
+                                    class="resize-none w-full h-auto min-h-[180px] bg-black rounded-[10px] py-2.5 pl-[18px] pr-[15px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">Change the hair color of the human subject in the image to a different style: apply a natural or creative color black, ensure realistic shading, shine, and texture, maintain original hair flow and lighting, and blend the new color seamlessly for a natural and polished look.</textarea>
                         </div>
-                     
+                        
+                          <div class="flex flex-col gap-2.5">
+                                <label class="text-sm leading-[18px] text-white font-medium capitalize">Duration</label>
+                                <div class="flex gap-[15px] items-center py-3.5 px-[18px] rounded-[10px] bg-black ">
+                                <input id="customRange" type="range" min="1" max="15" step="1" value="8" class="customRange w-full h-[3px] appearance-none rounded-[100px] cursor-pointer 
+                            bg-gradient-to-r from-[#C6FF00] to-[#C6FF00] 
+                            [--range-progress:#C6FF00]"
+                                    style="background: linear-gradient(to right, #C6FF00 0%, #C6FF00 0%,  rgb(255 255 255 / 10%) 0%,  rgb(255 255 255 / 10%) 100%)" />
+                                <label for="customRange" class="text-white text-sm leading-4 font-normal min-w-5 text-right">
+                                    <span id="rangeLabel" class="rangeLabel min-w-10 text-right">24</span>
+                                </label>
+                            </div> 
+                            </div>
+
+                             <div class="flex flex-col gap-2.5">
+                                <label class="text-sm leading-[18px] text-white font-medium capitalize">Start Offset</label>
+                                    <input type="text" placeholder="2 sec" class="w-full bg-black rounded-[10px] py-3 px-[18px] text-sm font-normal leading-[18px] placeholder:text-white text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">  
+                            </div>
                     </div>
                 </div>
                 <!-- The button should have position absolute, bottom 0 to stick to the bottom -->
-                <div class="bg-[#0A0A0A] border-t border-[#222222] md:sticky relative bottom-0 w-full left-0 right-0 p-3">
+                <div class="bg-[#0A0A0A] border-t border-[#222222] md:sticky fixed bottom-0 w-full left-0 right-0 p-3">
                     <div class="flex items-center justify-between gap-2 mx-auto p-1 bg-black rounded-[10px]">
                         <div class="flex items-center gap-2 w-fit lg:pl-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
@@ -1713,8 +1756,38 @@ ranges.forEach(range => {
 
 
     </script>
+    <!--custom video-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".video-wrap").forEach((wrap) => {
+      const video = wrap.querySelector(".video-el");
+      const toggle = wrap.querySelector(".video-toggle");
+      const playIcon = wrap.querySelector(".play-icon");
+      const pauseIcon = wrap.querySelector(".pause-icon");
 
-    
+      toggle.addEventListener("click", () => {
+        if (video.paused) {
+          video.play();
+          playIcon.classList.add("hidden");
+          pauseIcon.classList.remove("hidden");
+        } else {
+          video.pause();
+          pauseIcon.classList.add("hidden");
+          playIcon.classList.remove("hidden");
+        }
+      });
+
+      video.addEventListener("ended", () => {
+        pauseIcon.classList.add("hidden");
+        playIcon.classList.remove("hidden");
+      });
+    });
+  });
+</script>
+
+
+
+
 </body>
 
 </html>
