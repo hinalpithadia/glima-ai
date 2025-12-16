@@ -15,7 +15,10 @@
     font-family: 'manrope';
     src: url(../font/Manrope/Manrope-VariableFont_wght.ttf);
 }
-
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(../font/Bebas_Neue/BebasNeue-Regular.ttf);
+}
 @layer base {
     html {
         scroll-behavior: smooth;
@@ -26,7 +29,7 @@
 
     body {
         overflow-x: hidden !important;
-       @apply font-inter font-normal
+       @apply font-inter font-normal 
     }
      body ::-webkit-scrollbar-track
       {
