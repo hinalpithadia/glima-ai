@@ -57,6 +57,84 @@
         .tablink.active .svg-path {
             fill: #C6FF00;
         }
+             /* ============================= */
+/* MORPH DROPDOWN CONTAINER */
+/* ============================= */
+
+.morph {
+  position: fixed;
+ 
+
+  background: #111;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transform-origin: top center;
+ height: auto;  
+   max-height: max-content;  
+  transition:
+    width 0.32s cubic-bezier(.4,0,.2,1),
+    height 0.32s cubic-bezier(.4,0,.2,1),
+    top 0.32s cubic-bezier(.4,0,.2,1),
+    left 0.32s cubic-bezier(.4,0,.2,1),
+    opacity 0.2s ease;
+
+  z-index: 9999;
+}
+
+.morph.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ============================= */
+/* MENU TRIGGER */
+/* ============================= */
+
+.wrapper-dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+}
+
+.wrapper-dropdown.menu-open > a {
+  color: #c6ff00;
+}
+
+.wrapper-dropdown.menu-open .arrow-svg {
+  transform: rotate(180deg);
+}
+
+/* ============================= */
+/* DROPDOWN CONTENT */
+/* ============================= */
+
+
+/* ============================= */
+/* GRID DROPDOWN (OPTIONAL) */
+/* ============================= */
+
+.morph .grid {
+  gap: 14px;
+}
+
+/* ============================= */
+/* HIDE ORIGINAL DROPDOWNS */
+/* ============================= */
+
+.dropdown {
+  display: none;
+}
     </style>
 </head>
 
@@ -255,7 +333,7 @@
                                                 EXPLORE ALL
                                             </a>
                                         </div>
-
+                                        <div class="block">
                                         <div class="w-full  space-y-1.5 tabcontent" id="tabs-with-1" role="tabpanel"
                                             aria-labelledby="tabs-with-item-1">
                                             <div class="block transition-all duration-300">
@@ -733,6 +811,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1436,7 +1515,8 @@
             </div>
         </div>
     </nav>
-
+<!-- ONE MORPH CONTAINER -->
+<div id="morph" class="morph"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/main.js"></script>
@@ -1466,6 +1546,118 @@
             });
         }
     </script>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const wrappers = document.querySelectorAll(".wrapper-dropdown");
+  const morph = document.querySelector(".morph");
+
+  let activeWrapper = null;
+  let closeTimeout = null;
+  let firstOpen = true;
+
+  /* ---------- OPEN MENU ---------- */
+  function openMenu(wrapper) {
+    clearTimeout(closeTimeout);
+
+    const dropdown = wrapper.querySelector(".dropdown");
+    const content = dropdown.firstElementChild;
+    const triggerRect = wrapper.getBoundingClientRect();
+
+    /* Measure dropdown content */
+    const clone = content.cloneNode(true);
+    const temp = document.createElement("div");
+    temp.style.position = "fixed";
+    temp.style.visibility = "hidden";
+    temp.style.top = "-9999px";
+    temp.appendChild(clone);
+    document.body.appendChild(temp);
+    const rect = clone.getBoundingClientRect();
+    document.body.removeChild(temp);
+
+    morph.innerHTML = "";
+    morph.appendChild(clone);
+
+    const targetLeft = triggerRect.left;
+    const targetTop = triggerRect.bottom + 12;
+
+    /* 🔑 FIRST OPEN FIX */
+    if (firstOpen) {
+      morph.style.transition = "none";
+      morph.style.left = targetLeft + "px";
+      morph.style.top = targetTop + "px";
+      morph.style.width = rect.width + "px";
+      morph.style.height = rect.height + "px";
+
+      requestAnimationFrame(() => {
+        morph.style.transition = "";
+        morph.classList.add("active");
+        firstOpen = false;
+      });
+    } else {
+      morph.style.left = targetLeft + "px";
+      morph.style.top = targetTop + "px";
+      morph.style.width = rect.width + "px";
+      morph.style.height = rect.height + "px";
+      morph.classList.add("active");
+    }
+
+    activeWrapper = wrapper;
+  }
+
+  /* ---------- CLOSE MENU ---------- */
+  function closeMenu() {
+    closeTimeout = setTimeout(() => {
+      morph.classList.remove("active");
+      activeWrapper = null;
+    }, 120);
+  }
+
+  /* ---------- DESKTOP HOVER ---------- */
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    wrappers.forEach(wrapper => {
+      wrapper.addEventListener("mouseenter", () => openMenu(wrapper));
+      wrapper.addEventListener("mouseleave", closeMenu);
+    });
+
+    morph.addEventListener("mouseenter", () => {
+      clearTimeout(closeTimeout);
+    });
+
+    morph.addEventListener("mouseleave", closeMenu);
+  }
+
+  /* ---------- MOBILE CLICK ---------- */
+  wrappers.forEach(wrapper => {
+    const trigger = wrapper.querySelector("a");
+
+    trigger.addEventListener("click", e => {
+      if (window.innerWidth < 1024) {
+        e.preventDefault();
+
+        if (activeWrapper === wrapper) {
+          closeMenu();
+        } else {
+          openMenu(wrapper);
+        }
+      }
+    });
+  });
+
+  /* ---------- OUTSIDE CLICK CLOSE ---------- */
+  document.addEventListener("click", e => {
+    if (
+      activeWrapper &&
+      !activeWrapper.contains(e.target) &&
+      !morph.contains(e.target)
+    ) {
+      closeMenu();
+    }
+  });
+
+});
+</script>
+
 </body>
 
 </html>
