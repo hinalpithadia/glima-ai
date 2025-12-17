@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- REQUIRED META TAGS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Glima AI</title>
+    <!--- MAIN CSS ---->
+    <link rel="stylesheet" href="assets/css/styles-output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
+    <style>
+     /* ============================= */
+/* MORPH DROPDOWN CONTAINER */
+/* ============================= */
+
+.morph {
+  position: fixed;
+ 
+
+  background: #111;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transform-origin: top center;
+ height: auto;  
+   max-height: max-content;  
+  transition:
+    width 0.32s cubic-bezier(.4,0,.2,1),
+    height 0.32s cubic-bezier(.4,0,.2,1),
+    top 0.32s cubic-bezier(.4,0,.2,1),
+    left 0.32s cubic-bezier(.4,0,.2,1),
+    opacity 0.2s ease;
+
+  z-index: 9999;
+}
+
+.morph.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ============================= */
+/* MENU TRIGGER */
+/* ============================= */
+
+.wrapper-dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+}
+
+.wrapper-dropdown.menu-open > a {
+  color: #c6ff00;
+}
+
+.wrapper-dropdown.menu-open .arrow-svg {
+  transform: rotate(180deg);
+}
+
+/* ============================= */
+/* DROPDOWN CONTENT */
+/* ============================= */
+
+.morph > * {
+  padding: 20px;
+}
+
+/* Menu item styles */
+.morph div > div {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.morph div > div:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(2px);
+}
+
+/* ============================= */
+/* GRID DROPDOWN (OPTIONAL) */
+/* ============================= */
+
+.morph .grid {
+  gap: 14px;
+}
+
+/* ============================= */
+/* HIDE ORIGINAL DROPDOWNS */
+/* ============================= */
+
+.dropdown {
+  display: none;
+}
+
+    </style>
+</head>
+
+<body class="">
+    <div class="flex flex-col justify-center max-md:gap-8 md:flex-row bg-[#0A0A0A]">
+       <nav class="navbar fixed top-0 w-full z-50 border-b border-white/10 max-lg:backdrop-blur-lg backdrop-blur-lg bg-[#111111]">
+
+  <div class="wrapper-dropdown">
+    <a href="#" class="menu-trigger">AI Image</a>
+    <div class="dropdown">
+      <div class="p-6 w-[420px] grid grid-cols-2 gap-4">
+        <div>Image Gen</div>
+        <div>Upscale</div>
+        <div>Background</div>
+        <div>Portrait</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper-dropdown">
+    <a href="#" class="menu-trigger">AI Video</a>
+    <div class="dropdown">
+      <div class="p-6 w-[280px] space-y-3">
+        <div>Style Change</div>
+        <div>Motion</div>
+        <div>Enhance</div>
+      </div>
+    </div>
+  </div>
+
+</nav>
+
+<!-- ONE MORPH CONTAINER -->
+<div id="morph" class="morph"></div>
+
+    </div>
+    
+    
+    <!-- MAIN JS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
+    
+    
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const wrappers = document.querySelectorAll(".wrapper-dropdown");
+  const morph = document.querySelector(".morph");
+
+  let activeWrapper = null;
+  let closeTimeout = null;
+  let firstOpen = true;
+
+  /* ---------- OPEN MENU ---------- */
+  function openMenu(wrapper) {
+    clearTimeout(closeTimeout);
+
+    const dropdown = wrapper.querySelector(".dropdown");
+    const content = dropdown.firstElementChild;
+    const triggerRect = wrapper.getBoundingClientRect();
+
+    /* Measure dropdown content */
+    const clone = content.cloneNode(true);
+    const temp = document.createElement("div");
+    temp.style.position = "fixed";
+    temp.style.visibility = "hidden";
+    temp.style.top = "-9999px";
+    temp.appendChild(clone);
+    document.body.appendChild(temp);
+    const rect = clone.getBoundingClientRect();
+    document.body.removeChild(temp);
+
+    morph.innerHTML = "";
+    morph.appendChild(clone);
+
+    const targetLeft = triggerRect.left;
+    const targetTop = triggerRect.bottom + 12;
+
+    /* 🔑 FIRST OPEN FIX */
+    if (firstOpen) {
+      morph.style.transition = "none";
+      morph.style.left = targetLeft + "px";
+      morph.style.top = targetTop + "px";
+      morph.style.width = rect.width + "px";
+      morph.style.height = rect.height + "px";
+
+      requestAnimationFrame(() => {
+        morph.style.transition = "";
+        morph.classList.add("active");
+        firstOpen = false;
+      });
+    } else {
+      morph.style.left = targetLeft + "px";
+      morph.style.top = targetTop + "px";
+      morph.style.width = rect.width + "px";
+      morph.style.height = rect.height + "px";
+      morph.classList.add("active");
+    }
+
+    activeWrapper = wrapper;
+  }
+
+  /* ---------- CLOSE MENU ---------- */
+  function closeMenu() {
+    closeTimeout = setTimeout(() => {
+      morph.classList.remove("active");
+      activeWrapper = null;
+    }, 120);
+  }
+
+  /* ---------- DESKTOP HOVER ---------- */
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    wrappers.forEach(wrapper => {
+      wrapper.addEventListener("mouseenter", () => openMenu(wrapper));
+      wrapper.addEventListener("mouseleave", closeMenu);
+    });
+
+    morph.addEventListener("mouseenter", () => {
+      clearTimeout(closeTimeout);
+    });
+
+    morph.addEventListener("mouseleave", closeMenu);
+  }
+
+  /* ---------- MOBILE CLICK ---------- */
+  wrappers.forEach(wrapper => {
+    const trigger = wrapper.querySelector("a");
+
+    trigger.addEventListener("click", e => {
+      if (window.innerWidth < 1024) {
+        e.preventDefault();
+
+        if (activeWrapper === wrapper) {
+          closeMenu();
+        } else {
+          openMenu(wrapper);
+        }
+      }
+    });
+  });
+
+  /* ---------- OUTSIDE CLICK CLOSE ---------- */
+  document.addEventListener("click", e => {
+    if (
+      activeWrapper &&
+      !activeWrapper.contains(e.target) &&
+      !morph.contains(e.target)
+    ) {
+      closeMenu();
+    }
+  });
+
+});
+</script>
+
+
+
+
+</body>
+
+</html>
