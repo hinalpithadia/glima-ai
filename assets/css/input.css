@@ -794,8 +794,10 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
   .handle {
             width: 2px !important;
             background: #fff !important;
-            cursor: ew-resize;
             z-index: 10;
+             touch-action: none;
+      pointer-events: all;
+      cursor: ew-resize;
         }
          .before-img {
             width: 100%;
@@ -817,6 +819,7 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
     width: 100%;
     display:block;
     max-width:none;
+    
 }
  
 .ba-slider .resize, .ba-slider2 .resize {
@@ -840,14 +843,24 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
     background: #000;
     cursor: ew-resize;
 }
-  .ba-slider2 .ba2-btn-before {
+
+      .ba-slider2 .ba2-btn-before {
             right: calc(100% + 16px);
             top: 18%;
             transform: translateY(-50%);
         }
-
+        .dashboard-ba-slider.ba-slider2 .ba2-btn-before {
+            right: calc(100% + 4px);
+            top: 18%;
+            transform: translateY(-50%);
+        }
         .ba-slider2 .ba2-btn-after {
             left: calc(100% + 16px);
+            top: 18%;
+            transform: translateY(-50%);
+        }
+        .dashboard-ba-slider.ba-slider2 .ba2-btn-after {
+            left: calc(100% + 4px);
             top: 18%;
             transform: translateY(-50%);
         }
@@ -881,7 +894,7 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
             cursor: pointer;
             white-space: nowrap;
         }
-
+        
 .ba-slider .handle:after, .ba-slider2 .handle:after {  /* Big orange knob  */
     position: absolute;
     top: 50%;
@@ -911,11 +924,29 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
     line-height:45px;
     font-size:23px;
 }
+
 .ba-slider .resize img, .ba-slider2 .resize img
 {
     height: 100%;
 }
+/*custom auto slider*/
+.custom-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
 
+.custom-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 4px;
+  background: #fff;
+  transform: translateX(-50%);
+  cursor: ew-resize;
+  touch-action: none;
+}
 
 
 

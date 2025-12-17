@@ -723,76 +723,93 @@ document.querySelectorAll('.card-video').forEach(video => {
   });
 
 /*======resizer===========*/
-(function($) {
-  function drags(dragElement, resizeElement, container) {
-    dragElement.on('mousedown.ba-events touchstart.ba-events', function(e) {
-      e.preventDefault();
+(function ($) {
 
-      // Add active class for styling (if needed)
+  function drags(dragElement, resizeElement, container) {
+
+    // Disable native image drag
+    container.find('img').attr('draggable', false);
+
+    dragElement.on('mousedown.ba touchstart.ba', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
       dragElement.addClass('ba-draggable');
       resizeElement.addClass('ba-resizable');
 
-      var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+      const isTouch = e.type === 'touchstart';
+      const startX = isTouch
+        ? e.originalEvent.touches[0].pageX
+        : e.pageX;
 
-      var dragWidth = dragElement.outerWidth(),
-          posX = dragElement.offset().left + dragWidth - startX,
-          containerOffset = container.offset().left,
-          containerWidth = container.outerWidth();
+      const dragWidth = dragElement.outerWidth();
+      const containerOffset = container.offset().left;
+      const containerWidth = container.outerWidth();
 
-      var minLeft = containerOffset;
-      var maxLeft = containerOffset + containerWidth - dragWidth;
+      let posX = dragElement.offset().left + dragWidth - startX;
 
-      // Mouse move
-      $(document).on('mousemove.ba-events touchmove.ba-events', function(e) {
-        var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
-        var leftValue = moveX + posX - dragWidth;
+      const minLeft = containerOffset;
+      const maxLeft = containerOffset + containerWidth - dragWidth;
 
-        // Keep handle within bounds
+      // MOVE
+      $(document).on('mousemove.ba touchmove.ba', function (e) {
+        e.preventDefault();
+
+        const moveX = e.type === 'touchmove'
+          ? e.originalEvent.touches[0].pageX
+          : e.pageX;
+
+        let leftValue = moveX + posX - dragWidth;
+
         if (leftValue < minLeft) leftValue = minLeft;
         if (leftValue > maxLeft) leftValue = maxLeft;
 
-        // Calculate percentage position
-        var widthValue = ((leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth) + '%';
+        const percent =
+          ((leftValue + dragWidth / 2 - containerOffset) * 100) / containerWidth;
 
-        // ✅ Update only this instance
-        dragElement.css('left', widthValue);
-        resizeElement.css('width', widthValue);
+        dragElement.css('left', percent + '%');
+        resizeElement.css('width', percent + '%');
       });
 
-      // Mouse up
-      $(document).on('mouseup.ba-events touchend.ba-events touchcancel.ba-events', function() {
-        // Remove active classes
+      // RELEASE
+      $(document).on('mouseup.ba touchend.ba touchcancel.ba', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
         dragElement.removeClass('ba-draggable');
         resizeElement.removeClass('ba-resizable');
 
-        // Unbind events
-        $(document).off('.ba-events');
+        $(document).off('.ba');
       });
     });
   }
 
-  // Plugin definition
-  $.fn.beforeAfter = function() {
-    return this.each(function() {
-      var cur = $(this);
-      var width = cur.width() + 'px';
+  // Plugin
+  $.fn.beforeAfter = function () {
+    return this.each(function () {
+      const cur = $(this);
+      const width = cur.width() + 'px';
+
       cur.find('.resize img').css('width', width);
 
-      // Bind drag functionality
-      drags(cur.find('.handle'), cur.find('.resize'), cur);
+      drags(
+        cur.find('.handle'),
+        cur.find('.resize'),
+        cur
+      );
 
-      // Handle resize
-      $(window).on('resize', function() {
-        var width = cur.width() + 'px';
+      $(window).on('resize', function () {
+        const width = cur.width() + 'px';
         cur.find('.resize img').css('width', width);
       });
     });
   };
+
 })(jQuery);
 
-// ✅ Initialize all sliders
-$(function() {
+// INIT
+$(function () {
   $('.ba-slider').beforeAfter();
   $('.ba-slider2').beforeAfter();
-  $('.ba-slider3').beforeAfter(); // add more as needed
+  $('.ba-slider3').beforeAfter();
 });
