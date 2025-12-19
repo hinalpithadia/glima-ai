@@ -66,7 +66,9 @@
 .dropdown-select .select-styled {
     background: #0A0A0A;
 }
-
+ .interior-select .select-styled.active:after{
+    transform: rotate(180deg);
+  }
 .interior-select .select-styled:after {
 	    content: "";
     background: url(https://glima.ai/storage/media/1765532276_lfvkphpeC971s.svg);
@@ -77,6 +79,7 @@
     height: 10px;
     background-position: center;
     background-repeat: no-repeat;
+    transition: all .4s ease-in-out;
 }
 
 .interior-select .select-options {

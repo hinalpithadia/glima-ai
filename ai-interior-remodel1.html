@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="assets/css/styles-output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
     <style>
+      .scrollspy-link.active {
+  color: #C6FF00;
+  font-weight: bold;
+}
         .card.selected {
             border-color: #C6FF00 !important;
         }
@@ -32,7 +36,7 @@
     </style>
 </head>
 
-<body class="md:overflow-hidden">
+<body class="md:overflow-hidden" >
     <div class="flex flex-col max-md:gap-8 md:flex-row bg-black-0a0a0a">
         <!--navbar-->
         <nav id="navbar"
@@ -1355,9 +1359,9 @@
 
         </button>
         <div class="relative w-full  p-1  rounded-xl bg-[#111111] h-[580px] xl:h-[640px]  2xl:h-[700px] overflow-hidden">
-            <div class="w-full flex md:flex-row flex-col items-start gap-2">
-                <div class="flex flex-row md:flex-col gap-1.5 sm:gap-2 w-full md:max-w-[240px] h-auto md:h-[580px] xl:h-[640px] 2xl:h-[700px] overflow-y-auto sticky top-0  overflow-y-auto md:pb-5">
-                    <div class="md:block hidden relative">
+            <div class="w-full flex md:flex-row flex-col items-start gap-2 " id="myScrollspy">
+                <div class="flex flex-row md:flex-col gap-1.5 sm:gap-2 w-full md:max-w-[240px] h-auto md:h-[580px] xl:h-[640px] 2xl:h-[700px] overflow-y-auto sticky top-0  overflow-y-auto md:pb-5" id="scrollspy-menu">
+                    <!-- <div class="md:block hidden relative">
                         <input type="text" class="py-1.5 px-3 h-[40px] border border-[#2B2B2B] rounded-[10px] w-full bg-transparent text-base font-normal text-[#C6FF00] placeholder:text-[#C6FF00] pl-9 focus:outline-none" placeholder="Search..." />
                         <div class="absolute left-3 top-3">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1367,337 +1371,604 @@
 
                         </div>
                     </div>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black  active">
-                        🔥 Popular Edits
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                   -->
+                    <a href="#popular-edit"
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                       Popular Edits
+                    </a>
+                    <a href="#minimalist"
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         Minimalist
-                    </button>
+                    </a>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         Modern
                     </button>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         2025 Trends
                     </button>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         Nordic
                     </button>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         Japanese
                     </button>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         Transitional
                     </button>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         Traditional
                     </button>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         Rustic
                     </button>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         Mid-Century
                     </button>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         Coastal
                     </button>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         Mediterranean
                     </button>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                         Industrial
                     </button>
                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                        Classic
                     </button>
                      <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                        class="scrollspy-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
                        Bohemia
                     </button>
                 </div>
                 <div class="h-[580px] xl:h-[640px] 2xl:h-[700px] overflow-y-auto w-full">
-                <div
-                    class="p-3 bg-black w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 rounded-[10px]">
-                    <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
                     <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        class="p-3 bg-black w-full  rounded-[10px]">
+                        <div id="popular-edit" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 w-full">
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
-                    </div>
-                     <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
-                    <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
-                    </div>
-                     <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
-                    <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
-                    </div>
-                     <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
-                    <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
-                    </div>
-                     <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
-                    <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
-                    </div>
-                     <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
-                    <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
-                    </div>
-                     <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
-                    <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
-                    </div>
-                     <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
-                    <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
-                    </div>
-                     <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
-                    <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
-                    </div>
-                     <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
-                    <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
-                    </div>
-                     <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
-                    <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
-                    </div>
-                     <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
-                    <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
-                    <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
-                        <img src="assets/images/ai-headshot-img1.jpg" alt="img"
-                            class="w-full h-full object-cover">
-                    </div>
-                    <!-- HOVER ICON -->
-                    <div
-                        class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
-                            w-6 h-6 flex items-center justify-center 
-                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
-                    
-                        
-<svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
-<path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
 
-                </div>
-                    <!-- TITLE -->
-                    <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                        </div>
+                        <div id="minimalist" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 w-full">
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                            <div class="card interior-card p-[1px] relative rounded-[6px] group cursor-pointer ">
+                            <!-- IMAGE WRAPPER WITH BORDER (fixed) -->
+                            <div class="h-[192px]  w-full rounded-[6px] overflow-hidden border border-transparent transition-all duration-700 group-hover:border-[#C6FF00] card-inner">
+                                <img src="assets/images/ai-headshot-img1.jpg" alt="img"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- HOVER ICON -->
+                            <div
+                                class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                                    w-6 h-6 flex items-center justify-center 
+                                    rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+                            
+                                
+        <svg class="status-icon"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#C6FF00" fill-opacity="0.3" stroke="#C6FF00"/>
+        <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+                        </div>
+                            <!-- TITLE -->
+                            <h5 class="text-base font-normal text-white text-center mt-2.5">Super Realistic</h5>
+                            </div>
+                        </div>
                     </div>
-                
-                
-                </div>
                 </div>
             </div>
         </div>
@@ -2106,6 +2377,8 @@
             });
         });
     </script>
+    <!--scrollspy-->
+  
 </body>
 
 </html>

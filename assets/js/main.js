@@ -1,53 +1,211 @@
+// document.addEventListener("DOMContentLoaded", () => {
+//   const toggleButton = document.getElementById("toggleButton");
+//   const mobileMenu = document.getElementById("navbar-default");
+//   const nav = document.getElementById("navbar");
+//   const inner = document.getElementById("inner");
+//   toggleButton.addEventListener("click", () => {
+//       const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
+//       toggleButton.setAttribute("aria-expanded", !isExpanded);
+
+//       // Toggle multiple classes
+//       mobileMenu.classList.toggle("hidden");
+//       mobileMenu.classList.toggle("opacity-0"); 
+//       mobileMenu.classList.toggle("transition-all"); 
+//       inner.classList.toggle("pb-[19px]");
+//       nav.classList.toggle("h-auto");
+//       nav.classList.toggle("bg-black/25");
+//       nav.classList.toggle("bg-transparent");
+//       nav.classList.toggle("backdrop-blur-lg"); 
+//   });
+// });
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const navbar = document.getElementById("navbar");
+
+//   if (!navbar) {
+//       console.error("Navbar element not found! Make sure #navbar exists in the DOM.");
+//       return;
+//   }
+
+//   function updateNavbar() {
+//       console.log("Window Width:", window.innerWidth); 
+
+//       if (window.innerWidth > 1024 ) {
+//           if (window.scrollY > 10) {
+//               navbar.classList.add("backdrop-blur-lg", "bg-black/25");
+//           } else {
+//               navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
+//           }
+//       } else {
+//           navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
+//       }
+//   }
+
+//   window.addEventListener("scroll", updateNavbar);
+//   window.addEventListener("resize", updateNavbar);
+//   updateNavbar(); 
+// });
+
+/*menu*/
+/* ================================
+   MOBILE MENU (HAMBURGER)
+================================ */
+/* =====================================================
+   MOBILE MENU – SLIDE FROM LEFT
+===================================================== */
+/* =====================================================
+   MOBILE MENU TOGGLE
+===================================================== */
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("toggleButton");
-  const mobileMenu = document.getElementById("navbar-default");
-  const nav = document.getElementById("navbar");
+  const mobileMenu = document.getElementById("navbar-default-mobile");
+  const navbar = document.getElementById("navbar");
   const inner = document.getElementById("inner");
-  toggleButton.addEventListener("click", () => {
-      const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
-      toggleButton.setAttribute("aria-expanded", !isExpanded);
 
-      // Toggle multiple classes
-      mobileMenu.classList.toggle("hidden");
-      mobileMenu.classList.toggle("opacity-0");  // Example of another class to toggle
-      mobileMenu.classList.toggle("transition-all"); // Smooth transition
-      inner.classList.toggle("pb-[19px]");
-      nav.classList.toggle("h-auto");
-      nav.classList.toggle("bg-black/25");
-      nav.classList.toggle("bg-transparent");
-      nav.classList.toggle("backdrop-blur-lg"); // Example of adding/removing a background color
+  if (!toggleButton || !mobileMenu || !navbar) {
+    console.error("Mobile menu elements missing");
+    return;
+  }
+
+  toggleButton.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.contains("translate-x-0");
+
+    if (isOpen) {
+      // CLOSE MENU
+      mobileMenu.classList.add("-translate-x-full", "opacity-0");
+      mobileMenu.classList.remove("translate-x-0", "opacity-100");
+
+      navbar.classList.remove("mobile-menu-open");
+      inner?.classList.remove("pb-[19px]");
+
+      // CLOSE ALL DROPDOWNS WHEN MENU CLOSES
+      document.querySelectorAll(".mobile-menu-item.is-open").forEach(item => {
+        item.classList.remove("is-open");
+        const sub = item.querySelector(".mobile-submenu");
+        const arr = item.querySelector(".dropdown-arrow");
+        if (sub) {
+          sub.classList.add("max-h-0", "opacity-0", "overflow-hidden");
+          sub.classList.remove("max-h-[200px]", "opacity-100", "overflow-y-auto");
+        }
+        arr?.classList.remove("rotate-90");
+      });
+
+    } else {
+      // OPEN MENU
+      mobileMenu.classList.remove("-translate-x-full", "opacity-0");
+      mobileMenu.classList.add("translate-x-0", "opacity-100");
+
+      navbar.classList.add("mobile-menu-open");
+      inner?.classList.add("pb-[19px]");
+    }
   });
 });
 
+/* =====================================================
+   MOBILE DROPDOWNS (ONLY ONE OPEN)
+===================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownTriggers = document.querySelectorAll("[data-mobile-dropdown]");
 
+  dropdownTriggers.forEach(trigger => {
+    trigger.addEventListener("click", (e) => {
+      if (window.innerWidth > 1024) return;
+      e.preventDefault();
 
+      const menuItem = trigger.closest(".mobile-menu-item");
+      const submenu = trigger.nextElementSibling;
+      const arrow = trigger.querySelector(".dropdown-arrow");
+
+      if (!menuItem || !submenu) return;
+
+      const isOpen = menuItem.classList.contains("is-open");
+
+      // CLOSE ALL OTHER DROPDOWNS
+      document.querySelectorAll(".mobile-menu-item.is-open").forEach(item => {
+        if (item !== menuItem) {
+          item.classList.remove("is-open");
+          const sub = item.querySelector(".mobile-submenu");
+          const arr = item.querySelector(".dropdown-arrow");
+
+          if (sub) {
+            sub.classList.add("max-h-0", "opacity-0", "overflow-hidden");
+            sub.classList.remove("max-h-[220px]", "opacity-100", "overflow-y-auto");
+          }
+
+          arr?.classList.remove("rotate-90");
+        }
+      });
+
+      // TOGGLE CURRENT DROPDOWN
+      if (isOpen) {
+        menuItem.classList.remove("is-open");
+        submenu.classList.add("max-h-0", "opacity-0", "overflow-hidden");
+        submenu.classList.remove("max-h-[220px]", "opacity-100", "overflow-y-auto");
+        arrow?.classList.remove("rotate-90");
+      } else {
+        menuItem.classList.add("is-open");
+        submenu.classList.remove("max-h-0", "opacity-0", "overflow-hidden");
+        submenu.classList.add("max-h-[220px]", "opacity-100", "overflow-y-auto");
+        arrow?.classList.add("rotate-90");
+      }
+    });
+  });
+});
+
+/* =====================================================
+   DESKTOP NAVBAR SCROLL (UNCHANGED)
+===================================================== */
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.getElementById("navbar");
-
-  if (!navbar) {
-      console.error("Navbar element not found! Make sure #navbar exists in the DOM.");
-      return;
-  }
+  if (!navbar) return;
 
   function updateNavbar() {
-      console.log("Window Width:", window.innerWidth); // Debugging log
-
-      if (window.innerWidth > 1024 ) {
-          if (window.scrollY > 10) {
-              navbar.classList.add("backdrop-blur-lg", "bg-black/25");
-          } else {
-              navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
-          }
+    if (window.innerWidth > 1024) {
+      if (window.scrollY > 10) {
+        navbar.classList.add("backdrop-blur-lg", "bg-black/25");
       } else {
-          navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
+        navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
       }
+    } else {
+      navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
+    }
   }
 
   window.addEventListener("scroll", updateNavbar);
   window.addEventListener("resize", updateNavbar);
-  updateNavbar(); // Run once on page load
+  updateNavbar();
 });
 
+
+/* =====================================================
+   DESKTOP NAVBAR SCROLL (UNCHANGED)
+===================================================== */
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+
+  if (!navbar) {
+    console.error("Navbar element not found! Make sure #navbar exists.");
+    return;
+  }
+
+  function updateNavbar() {
+    if (window.innerWidth > 1024) {
+      if (window.scrollY > 10) {
+        navbar.classList.add("backdrop-blur-lg", "bg-black/25");
+      } else {
+        navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
+      }
+    } else {
+      navbar.classList.remove("backdrop-blur-lg", "bg-black/25");
+    }
+  }
+
+  window.addEventListener("scroll", updateNavbar);
+  window.addEventListener("resize", updateNavbar);
+  updateNavbar();
+});
 
 /* ============= Custom Select Picker=========*/
 $(document).ready(function () {
