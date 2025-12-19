@@ -2551,6 +2551,10 @@ pre{
   bottom: -400px;
 }
 
+.bottom-\[-7px\] {
+  bottom: -7px;
+}
+
 .bottom-\[140px\] {
   bottom: 140px;
 }
@@ -2735,6 +2739,10 @@ pre{
   right: 15px;
 }
 
+.right-\[180px\] {
+  right: 180px;
+}
+
 .right-\[20px\] {
   right: 20px;
 }
@@ -2817,6 +2825,10 @@ pre{
 
 .top-\[-270px\] {
   top: -270px;
+}
+
+.top-\[-28px\] {
+  top: -28px;
 }
 
 .top-\[-2px\] {
@@ -2925,6 +2937,10 @@ pre{
 
 .top-\[78px\] {
   top: 78px;
+}
+
+.top-\[80px\] {
+  top: 80px;
 }
 
 .top-\[85px\] {
@@ -5990,6 +6006,10 @@ pre{
   background-image: linear-gradient(180deg,#E6FF8D 0%,#C6FF00 100%);
 }
 
+.bg-\[linear-gradient\(180deg\2c \#FE0000_0\%\2c \#C2171C_100\%\)\] {
+  background-image: linear-gradient(180deg,#FE0000 0%,#C2171C 100%);
+}
+
 .bg-\[linear-gradient\(180deg\2c \#FF000F00\2c \#FF000F66\)\] {
   background-image: linear-gradient(180deg,#FF000F00,#FF000F66);
 }
@@ -6046,6 +6066,14 @@ pre{
   background-image: radial-gradient(22.64% 41.12% at 50% 0%,rgba(255,255,255,0.04) 0%,rgba(255,255,255,0.00) 100%);
 }
 
+.bg-\[radial-gradient\(360\.95\%_141\.42\%_at_0\%_0\%\2c \#830006_0\%\2c \#30010B_100\%\)\] {
+  background-image: radial-gradient(360.95% 141.42% at 0% 0%,#830006 0%,#30010B 100%);
+}
+
+.bg-\[radial-gradient\(360\.95\%_141\.42\%_at_0\%_0\%\2c \#fff_0\%\2c \#fff_100\%\)\] {
+  background-image: radial-gradient(360.95% 141.42% at 0% 0%,#fff 0%,#fff 100%);
+}
+
 .bg-\[radial-gradient\(37\.31\%_67\.78\%_at_50\%_0\%\2c rgba\(198\2c 255\2c 0\2c 0\.08\)_0\%\2c rgba\(198\2c 255\2c 0\2c 0\)_100\%\)\] {
   background-image: radial-gradient(37.31% 67.78% at 50% 0%,rgba(198,255,0,0.08) 0%,rgba(198,255,0,0) 100%);
 }
@@ -6100,6 +6128,10 @@ pre{
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.bg-\[radial-gradient\(30\.95\%_100\.42\%_at_100\%_0\%\2c \#fff_0\%\2c \#0a0a0a_100\%\)\] {
+  background-image: radial-gradient(30.95% 100.42% at 100% 0%,#fff 0%,#0a0a0a 100%);
 }
 
 .from-\[\#0A0A0A\] {
@@ -7106,6 +7138,10 @@ pre{
 
 .font-inter-tight {
   font-family: inter tight;
+}
+
+.font-manrope {
+  font-family: manrope;
 }
 
 .text-2xl {
@@ -8525,10 +8561,6 @@ pre{
   background-color: rgb(255 255 255 / 0.8);
 }
 
-.hover\:bg-\[\]:hover {
-  background-color: ;
-}
-
 .hover\:bg-gradient-to-tr:hover {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
@@ -9352,10 +9384,6 @@ pre{
 
   .md\:top-20 {
     top: 5rem;
-  }
-
-  .md\:top-28 {
-    top: 7rem;
   }
 
   .md\:mb-20 {

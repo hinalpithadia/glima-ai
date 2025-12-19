@@ -14,6 +14,18 @@
             border-color: #C6FF00 !important;
         }
 
+        .card.selected .card-inner {
+            border-color: #C6FF00 !important;
+        }
+
+        .interior-card.card.selected .status-icon rect {
+            fill-opacity: 1;
+        }
+
+        .interior-card.card.selected .status-icon path {
+            stroke: #000;
+        }
+
         .card.selected .click-icon {
             opacity: 100 !important;
         }
@@ -21,6 +33,7 @@
         .card.selected .circle-bg {
             opacity: 100 !important;
         }
+
     </style>
 </head>
 
@@ -797,644 +810,389 @@
                             <div class="grid grid-cols-3 gap-x-1 gap-y-2">
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                                    </div>
+                                    <p class="text-center text-sm font-normal leading-[18px] text-white">Super
+                                        Realistic</p>
+                                </div>
+                               <div class="flex flex-col gap-0.5">
+                                    <div
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        <img src="/assets/images/style-img-1.png" alt="img"
+                                            class="w-full h-full object-cover">
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
                                 <div class="flex flex-col gap-0.5">
                                     <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
+                                        class="card interior-card  relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
                                         <img src="/assets/images/style-img-1.png" alt="img"
                                             class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
+                                          <!-- HOVER ICON -->
+                            <div class="absolute right-2 top-2 z-20 opacity-0  transition-all duration-500 
+                            w-6 h-6 flex items-center justify-center 
+                            rounded-md bg-[#00000029] click-icon group-hover:opacity-100">
+
+
+                                <svg class="status-icon" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="24" height="24" rx="4.5" fill="#C6FF00"
+                                        fill-opacity="0.3" stroke="#C6FF00" />
+                                    <path d="M8 12L10.9965 15L17 9" stroke="#C6FF00" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
                                     </div>
                                     <p class="text-center text-sm font-normal leading-[18px] text-white">Super
                                         Realistic</p>
                                 </div>
-                                <div class="flex flex-col gap-0.5">
-                                    <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
-                                        <img src="/assets/images/style-img-1.png" alt="img"
-                                            class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p class="text-center text-sm font-normal leading-[18px] text-white">Super
-                                        Realistic</p>
-                                </div>
-                                <div class="flex flex-col gap-0.5">
-                                    <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
-                                        <img src="/assets/images/style-img-1.png" alt="img"
-                                            class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p class="text-center text-sm font-normal leading-[18px] text-white">Super
-                                        Realistic</p>
-                                </div>
-                                <div class="flex flex-col gap-0.5">
-                                    <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
-                                        <img src="/assets/images/style-img-1.png" alt="img"
-                                            class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p class="text-center text-sm font-normal leading-[18px] text-white">Super
-                                        Realistic</p>
-                                </div>
-                                <div class="flex flex-col gap-0.5">
-                                    <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
-                                        <img src="/assets/images/style-img-1.png" alt="img"
-                                            class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p class="text-center text-sm font-normal leading-[18px] text-white">Super
-                                        Realistic</p>
-                                </div>
-                                <div class="flex flex-col gap-0.5">
-                                    <div
-                                        class="card relative rounded-lg bg-[#111111] overflow-hidden transition-all duration-700 border border-transparent group hover:border-[#688405] cursor-pointer">
-                                        <img src="/assets/images/style-img-1.png" alt="img"
-                                            class="w-full h-full object-cover">
-                                        <div
-                                            class="absolute right-1 top-1 z-20 opacity-0 transition-all duration-500 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-md bg-[#00000029] click-icon">
-                                            <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14"
-                                                height="14" viewBox="0 0 14 14" fill="none">
-                                                <g clip-path="url(#clip0_5699_1996)">
-                                                    <path class="circle-bg" opacity="0.2"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        fill="#C6FF00" />
-                                                    <path class="circle-line"
-                                                        d="M12.8334 6.9974C12.8334 3.77573 10.2217 1.16406 7.00002 1.16406C3.77836 1.16406 1.16669 3.77573 1.16669 6.9974C1.16669 10.219 3.77836 12.8307 7.00002 12.8307C10.2217 12.8307 12.8334 10.219 12.8334 6.9974Z"
-                                                        stroke="#C6FF00" />
-                                                    <path class="tick"
-                                                        d="M4.66669 7.62498C4.66669 7.62498 5.54169 8.00001 6.06669 8.75C6.06669 8.75 7.29169 6.25001 9.33335 5.25"
-                                                        stroke="#C6FF00" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_5699_1996">
-                                                        <rect width="14" height="14" fill="white" />
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p class="text-center text-sm font-normal leading-[18px] text-white">Super
-                                        Realistic</p>
-                                </div>
+                                
                             </div>
                         </div>
 

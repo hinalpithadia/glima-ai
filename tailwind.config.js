@@ -26,6 +26,7 @@ module.exports = {
         'inter-tight': ['inter tight'],
         'playfair': ['playfair'],
         'bebas': ['Bebas Neue'],
+         'manrope': ['manrope'],
       },
       colors: {
         'limegreen': '#C6FF00',
