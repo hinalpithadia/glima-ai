@@ -729,7 +729,7 @@
         <!--SideBar-->
         <div class="relative flex md:h-full gap-5 md:overflow-hidden p-3 md:p-5 pb-0 md:pr-0 pt-0">
             <aside
-                class="md:fixed relative md:left-0 top-[65px] xl:w-[392px] lg:w-[280px] w-full md:w-[280px] md:h-[calc(100vh-64px)] overflow-y-auto scrollbar-hide z-40 flex justify-between flex-col bg-black-[#0A0A0A] nav-list pt-5 border-r border-[#222222]">
+                class="md:fixed relative md:left-0 top-[65px] xl:w-[392px] lg:w-[280px] w-full md:w-[280px] md:h-[calc(100vh-64px)] overflow-y-auto scrollbar-hide z-40 flex justify-between flex-col bg-black-[#0A0A0A] nav-list pt-5  md:border-r border-[#222222]">
                 <div class="flex flex-col pb-8 px-3">
                     <h2 class="text-xl font-medium text-white pb-5">Realistic Product Try On</h2>
                     <ul class="flex flex-col gap-4">
@@ -758,16 +758,13 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="">
-                            <div class="flex flex-col gap-2.5">
-                                <div class="flex items-center justify-between relative">
-                                    <label for="user-input"
-                                        class="text-sm leading-[18px] text-white font-medium">Image to Try
-                                        on
-                                    </label>
-                                </div>
+                           <li class="flex flex-col gap-2.5">
+                            <label for="user-input"
+                                class="text-sm leading-[18px] text-white font-medium flex items-center gap-2.5">Image to Try
+                            </label>
+                           <div class="flex flex-col gap-2.5">
                                 <div
-                                    class="bg-black h-52 sm:h-[160px] 2xl:h-[190px] rounded-[10px] p-3 relative outline-none flex justify-center transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
+                                    class="bg-black min-h-52 sm:h-[160px] 2xl:h-[380px] rounded-[10px] p-1.5 relative outline-none flex justify-center transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
                                     <button
                                         class="absolute z-20 top-3 right-3 w-8 h-8 flex items-center justify-center rounded-[6px] bg-[#FFFFFF2E] backdrop-blur-[3px] transition-all duration-500 hover:bg-[#FFFFFF18]"><svg
                                             xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -775,14 +772,16 @@
                                             <path d="M12 4L4.00054 11.9995M11.9995 12L4 4.00057" stroke="white"
                                                 stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg></button>
+
                                     <!-- img box -->
                                     <div class="w-full h-full flex items-center justify-center">
-                                        <img src="/assets/images/ai-combiner-img1.png" alt=""
-                                            class="max-w-full max-h-full w-auto h-auto  object-contain">
+                                        <img src="../assets/images/ai-producton-hand-img6.png" alt=""
+                                            class="w-full h-full">
                                     </div>
                                 </div>
                             </div>
                         </li>
+                      
                         <li class="">
                             <div class="flex flex-col gap-2.5">
                                 <div class="flex items-center justify-between relative">

@@ -919,15 +919,67 @@
                             </div>
 
                              <div class="flex flex-col gap-2.5">
-                                <label class="text-sm leading-[18px] text-white font-medium capitalize">Expand From</label>
-                                  <button
-                                            class="dropdown-btn flex justify-between items-center py-3 px-[18px] rounded-[10px] bg-black">
-                                             <span class="text-sm text-white">Expand Left, Right</span>
-                                           <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.75 11.31L5.09667 6.96333C5.61 6.45 5.61 5.61 5.09667 5.09667L0.75 0.75" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                            <label class="text-sm  font-medium text-white">Expand From
+                                </label>
+                                <div class="flex flex-wrap gap-2.5">
+                                    <label class="relative flex items-center gap-2 cursor-pointer select-none bg-black py-2 px-2.5 pr-3.5 rounded-[10px]">
+                                    <input type="checkbox" class="peer hidden">
+                                    <div class="w-4 h-4 border border-[#666] rounded-[2px]
+                                                peer-checked:bg-[#C6FF00] peer-checked:border-transparent
+                                                transition-all duration-200"></div>
 
-                                        </button>
+                                    <svg class="w-3.5 h-3.5 text-black absolute left-[11px]
+                                                opacity-0 peer-checked:opacity-100 transition-opacity duration-150"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="text-white text-sm capitalize">Expand Left</span>
+                                </label>
+                                <label class="relative flex items-center gap-2 cursor-pointer select-none bg-black py-2 px-2.5 pr-3.5 rounded-[10px]">
+                                    <input type="checkbox" class="peer hidden">
+                                    <div class="w-4 h-4 border border-[#666] rounded-[2px]
+                                                peer-checked:bg-[#C6FF00] peer-checked:border-transparent
+                                                transition-all duration-200"></div>
+
+                                    <svg class="w-3.5 h-3.5 text-black absolute left-[11px]
+                                                opacity-0 peer-checked:opacity-100 transition-opacity duration-150"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="text-white text-sm capitalize">Expand Right</span>
+                                </label>
+                                <label class="relative flex items-center gap-2 cursor-pointer select-none bg-black py-2 px-2.5 pr-3.5 rounded-[10px]">
+                                    <input type="checkbox" class="peer hidden">
+                                    <div class="w-4 h-4 border border-[#666] rounded-[2px]
+                                                peer-checked:bg-[#C6FF00] peer-checked:border-transparent
+                                                transition-all duration-200"></div>
+
+                                    <svg class="w-3.5 h-3.5 text-black absolute left-[11px]
+                                                opacity-0 peer-checked:opacity-100 transition-opacity duration-150"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="text-white text-sm capitalize">Expand Top</span>
+                                </label>
+                                <label class="relative flex items-center gap-2 cursor-pointer select-none bg-black py-2 px-2.5 pr-3.5 rounded-[10px]">
+                                    <input type="checkbox" class="peer hidden">
+                                    <div class="w-4 h-4 border border-[#666] rounded-[2px]
+                                                peer-checked:bg-[#C6FF00] peer-checked:border-transparent
+                                                transition-all duration-200"></div>
+
+                                    <svg class="w-3.5 h-3.5 text-black absolute left-[11px]
+                                                opacity-0 peer-checked:opacity-100 transition-opacity duration-150"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span class="text-white text-sm capitalize">Expand Bottom</span>
+                                </label>
+                               
+                                </div>
                             </div>
                     </div>
                 </div>
@@ -1120,41 +1172,7 @@
     </div>
     
     <!--dropdown modal-->
-     <!--exterior dropdown modal-->
-    <div
-        class="dropdown-menu  z-[100]  p-[18px] absolute left-[25px] md:left-[305px] lg:left-[415px] top-[60%]   mt-2 w-[calc(100%-50px)] sm:w-[380px] bg-black p-[2px] shadow-lg rounded-[10px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
-        
-            <div class="relative ">
-                 <a href="#" class="py-3 px-[18px] flex items-center justify-between rounded-[10px] transition-all duration-500 hover:bg-[#0a0a0a]">
-                    <span class="text-sm font-normal text-white">Expand Left</span>
-                    <label class="relative inline-flex items-center cursor-pointer">
-                                        <input type="checkbox" value="" class="sr-only peer">
-                                        <div class="w-9 h-5 bg-[#111]  peer-focus:outline-0 peer-focus:ring-transparent rounded-full peer transition-all ease-in-out duration-500 peer-checked:after:translate-x-full peer-checked:after:bg-[#000] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-[#4D4D4D] after:shadow-[0px_1px_3px_0px_rgba(16,24,40,0.08)] after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#C6FF00] hover:peer-checked:bg-[#C6FF00]"></div>
-                                        </label>
-                 </a> 
-                 <a href="#" class="py-3 px-[18px] flex items-center justify-between rounded-[10px] transition-all duration-500 hover:bg-[#0a0a0a]">
-                    <span class="text-sm font-normal text-white">Expand Right</span>
-                    <label class="relative inline-flex items-center cursor-pointer">
-                                        <input type="checkbox" value="" class="sr-only peer">
-                                        <div class="w-9 h-5 bg-[#111]  peer-focus:outline-0 peer-focus:ring-transparent rounded-full peer transition-all ease-in-out duration-500 peer-checked:after:translate-x-full peer-checked:after:bg-[#000] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-[#4D4D4D] after:shadow-[0px_1px_3px_0px_rgba(16,24,40,0.08)] after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#C6FF00] hover:peer-checked:bg-[#C6FF00]"></div>
-                                        </label>
-                 </a> 
-                  <a href="#" class="py-3 px-[18px] flex items-center justify-between rounded-[10px] transition-all duration-500 hover:bg-[#0a0a0a]">
-                    <span class="text-sm font-normal text-white">Expand Top</span>
-                    <label class="relative inline-flex items-center cursor-pointer">
-                                        <input type="checkbox" value="" class="sr-only peer">
-                                        <div class="w-9 h-5 bg-[#111]  peer-focus:outline-0 peer-focus:ring-transparent rounded-full peer transition-all ease-in-out duration-500 peer-checked:after:translate-x-full peer-checked:after:bg-[#000] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-[#4D4D4D] after:shadow-[0px_1px_3px_0px_rgba(16,24,40,0.08)] after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#C6FF00] hover:peer-checked:bg-[#C6FF00]"></div>
-                                        </label>
-                 </a>  
-                  <a href="#" class="py-3 px-[18px] flex items-center justify-between rounded-[10px] transition-all duration-500 hover:bg-[#0a0a0a]">
-                    <span class="text-sm font-normal text-white">Expand Bottom</span>
-                    <label class="relative inline-flex items-center cursor-pointer">
-                                        <input type="checkbox" value="" class="sr-only peer">
-                                        <div class="w-9 h-5 bg-[#111]  peer-focus:outline-0 peer-focus:ring-transparent rounded-full peer transition-all ease-in-out duration-500 peer-checked:after:translate-x-full peer-checked:after:bg-[#000] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-[#4D4D4D] after:shadow-[0px_1px_3px_0px_rgba(16,24,40,0.08)] after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#C6FF00] hover:peer-checked:bg-[#C6FF00]"></div>
-                                        </label>
-                 </a>      
-            </div>
-    </div>
+    
     
     <div
         class="overlay-modal w-full h-screen z-[10000] bg-black/50 backdrop-blur-xl fixed top-0 left-0 opacity-0 invisible">
@@ -1162,7 +1180,7 @@
     <!-- MAIN JS-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
         /*==============tooltip==================*/
         document.addEventListener('DOMContentLoaded', () => {

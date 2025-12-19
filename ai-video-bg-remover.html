@@ -874,7 +874,7 @@
                 <div class="relative px-3 pt-5">
                     <div class="w-full  flex flex-col gap-4 pb-12">
                         <div class="flex items-center gap-3.5">
-                            <h2 class="text-xl font-semibold leading-normal text-white capitalize">AI cloth changer</h2>
+                            <h2 class="text-xl font-semibold leading-normal text-white capitalize">AI Video Background Remover</h2>
                         </div>
                         <div class="flex flex-col gap-2.5">
                             <label class="text-sm leading-[18px] text-white font-medium capitalize">upload your Videos</label>
@@ -898,12 +898,28 @@
                                     </label>
                                 </div>
                         </div>
-                        <div class="relative w-full flex flex-col gap-2.5 ">
-                            <label class="text-sm  font-medium text-white">Specific Requirement
+                        <div class="flex flex-col gap-2.5">
+                            <label class="text-sm  font-medium text-white">Background Color
 </label>
-                                <textarea name="text-prompt" id="text-prompt" placeholder="Write Prompt Here"
-                                    class="resize-none w-full h-auto min-h-[180px] bg-black rounded-[10px] py-2.5 pl-[18px] pr-[15px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">Change the hair color of the human subject in the image to a different style: apply a natural or creative color black, ensure realistic shading, shine, and texture, maintain original hair flow and lighting, and blend the new color seamlessly for a natural and polished look.</textarea>
-                        </div>
+                        <!--custom select-->
+                       <div class="interior-select"> 
+                        <select id="sources" name="fontcolor">
+                             <option value="default">Default</option>
+                                <option value="white">White</option>
+                                <option value="black">Black</option>
+                                <option value="red">Red</option>
+                                <option value="green">Green</option>
+                                <option value="blue">Blue</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="orange">Orange</option>
+                                <option value="purple">Purple</option>
+                                <option value="brown">Brown</option>
+                                <option value="gray">Gray</option>
+                                <option value="cyan">Cyan</option>
+                                <option value="magenta">Magenta</option>
+                           </select>
+                         </div>  
+                         </div>
                     </div>
                 </div>
                 <!-- The button should have position absolute, bottom 0 to stick to the bottom -->
@@ -1614,7 +1630,7 @@
     <!-- MAIN JS-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
         /*==============tooltip==================*/
         document.addEventListener('DOMContentLoaded', () => {

@@ -7,161 +7,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Glima AI</title>
     <!--- MAIN CSS ---->
-    <link rel="stylesheet" href="assets/css/styles-output.css">
+    <link rel="stylesheet" href="/assets/css/styles-output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
     <style>
-        .card.selected {
-            border-color: #C6FF00 !important;
+        /* Before Image = stays full left */
+        .before-img {
+            width: 100%;
+            display: block;
+            position: relative;
+            z-index: 1;
+            max-height: 767px;
+
         }
 
-        .card.selected .click-icon {
-            opacity: 100 !important;
+        /* Slider clipping container */
+        .resize {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: auto;
+            overflow: hidden;
+            z-index: 2;
         }
 
-        .card.selected .circle-bg {
-            opacity: 100 !important;
+        /* After Image = also full width but clipped */
+        .after-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: relative;
+            /* NOT absolute */
+            background: #111;
         }
-         /* Custom thumb styling */
-        input[type="range"]::-webkit-slider-thumb {
-            appearance: none;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: white;
+
+        /* Handle always on top */
+        .handle {
+            width: 2px !important;
+            background: #fff !important;
+            cursor: ew-resize;
+            z-index: 10;
+        }
+
+        .ba-slider .handle:after,
+        .ba-slider2 .handle:after {
+            content: "";
+            width: 40px !important;
+            height: 40px !important;
+            margin: -13px 0px 0px -18px !important;
+        }
+
+        .ba-slider2 .ba2-btn {
+            position: absolute;
+            z-index: 5;
+            padding: 6px 20px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.4);
+            -webkit-backdrop-filter: blur(10.0840339661px);
+            backdrop-filter: blur(10.0840339661px);
+            color: #000;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
             cursor: pointer;
-            transition: transform 0.2s;
-            filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.10));
+            white-space: nowrap;
         }
 
-        input[type="range"]::-webkit-slider-thumb:hover {
-            transform: scale(1.1);
+        .ba-slider2 .ba2-btn-before {
+            right: calc(100% + 16px);
+            top: 18%;
+            transform: translateY(-50%);
         }
 
-        input[type="range"]::-moz-range-thumb {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
+        .ba-slider2 .ba2-btn-after {
+            left: calc(100% + 16px);
+            top: 18%;
+            transform: translateY(-50%);
         }
-         .interior-select .select-hidden {
-	display: none;
-	visibility: hidden;
-	padding-right: 10px;
-}
 
-.interior-select .select {
-	position: relative;
-	display: inline-block;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	margin-bottom: 0px!important;
-	width: 100%;
-	cursor: pointer;
-	-webkit-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-}
+        @media (max-width: 640px) {
+            .ba-slider2 .ba2-btn {
+                padding: 4px 14px;
+                font-size: 12px;
+            }
 
-.interior-select .select-styled {
-	position: relative;
-	display: flex;
-	align-items: center;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	margin-bottom: 0px!important;
-	width: 100%;
-	background: #000;
-	font-size: 14px;
-	color: #fff;
-	padding: 12px 18px;
-	border-radius: 10px;
-	-webkit-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-	font-weight: 500;
-}
+            .ba-slider2 .ba2-btn-before {
+                right: calc(100% + 8px);
+            }
 
-.dropdown-select .select-styled {
-    background: #0A0A0A;
-}
-
-.interior-select .select-styled:after {
-	    content: "";
-    background: url(./assets/images/select-arrow-white.svg);
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    width: 20px;
-    height: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.interior-select .select-options {
-	display: none;
-	position: absolute;
-	top: 110%;
-	right: 0;
-	left: 0;
-	z-index: 999;
-	margin: 0;
-	padding: 2px;
-	list-style: none;
-    border-radius: 10px;
-	background-color: #000;
-	-webkit-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-    overflow: hidden;
-    max-height: 150px;
-    overflow-y: auto;
-}
-.interior-select .select-options::-webkit-scrollbar-track
-      {
-        background-color: transparent!important;
-          border-left: 8px solid transparent;
-      }
-
-      .interior-select .select-options::-webkit-scrollbar
-      {
-        width: 5px;
-        background-color: transparent!important;
-        border-radius: 6px;
-        
-      }
-
-      .interior-select .select-options::-webkit-scrollbar-thumb
-      {
-        background-color: #1f1f1f!important;
-         border-radius: 6px;
-         padding-right: 10px;
-      }
-  
-.interior-select .select-options li {
-	position: relative;
-	display: block;
-	padding: 12px 18px;
-	font-size: 14px;
-	color: #fff;
-    border-radius: 10px;
-	cursor: pointer;
-	-webkit-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-}
-
-.select-options li:hover {
-	background: #0A0A0A;
-}
-
-.select-options li[rel="hide"] {
-	display: none;
-}
+            .ba-slider2 .ba2-btn-after {
+                left: calc(100% + 8px);
+            }
+        }
     </style>
 </head>
 
@@ -868,46 +804,140 @@
             </div>
         </nav>
         <!--SideBar-->
-        <div class="relative flex md:h-full gap-5 md:overflow-hidden pb-0 md:pr-0 pt-0">
+        <div class="relative flex md:h-full gap-5 md:overflow-hidden p-3 md:p-5 pb-0 md:pr-0 pt-0">
             <aside
-                class="md:fixed relative md:left-0 top-[65px] xl:w-[404px] lg:w-[280px] w-full md:w-[280px] md:h-[calc(100vh-64px)] overflow-y-auto scrollbar-hide z-50 flex justify-between flex-col bg-[#0A0A0A] nav-list md:border-r border-[#222222]">
-                <div class="relative px-3 pt-5">
-                    <div class="w-full  flex flex-col gap-4 pb-12">
-                        <div class="flex items-center gap-3.5">
-                            <h2 class="text-xl font-semibold leading-normal text-white capitalize">AI cloth changer</h2>
-                        </div>
-                        <div class="flex flex-col gap-2.5">
-                            <label class="text-sm leading-[18px] text-white font-medium capitalize">upload your Videos</label>
-                            <div class="transition-all duration-500 outline-none bg-black w-full h-52 resize-none  px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-[10px] relative z-[2] cursor-pointer border border-transparent hover:border-[rgba(198,255,0,0.20)]">
-                                    <label class="flex flex-col items-center justify-center gap-[18px] h-full w-full cursor-pointer">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-  <path d="M24.0859 21.4913C23.8334 22.5358 22.6402 23.274 20.2539 24.7503C17.9469 26.1773 16.7936 26.891 15.8639 26.6042C15.4796 26.4855 15.1295 26.2603 14.8471 25.95C14.1641 25.1997 14.1641 23.7442 14.1641 20.8333C14.1641 17.9225 14.1641 16.467 14.8471 15.7166C15.1295 15.4063 15.4796 15.1811 15.8639 15.0625C16.7936 14.7757 17.9469 15.4893 20.2539 16.9163C22.6402 18.3927 23.8334 19.1308 24.0859 20.1753C24.1901 20.6065 24.1901 21.0602 24.0859 21.4913Z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
-  <path d="M34.9988 18.3333C35.0026 19.1168 35.0026 19.9488 35.0026 20.8333C35.0026 28.2972 35.0026 32.0292 32.6839 34.348C30.3651 36.6667 26.6331 36.6667 19.1693 36.6667C11.7054 36.6667 7.97342 36.6667 5.65467 34.348C3.33594 32.0292 3.33594 28.2972 3.33594 20.8333C3.33594 13.3694 3.33594 9.63748 5.65467 7.31873C7.97342 5 11.7054 5 19.1693 5C20.0538 5 20.8858 5 21.6693 5.00385" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M30.8333 3.33325L31.2632 4.49497C31.8268 6.01829 32.1087 6.77995 32.6643 7.33557C33.22 7.8912 33.9817 8.17304 35.505 8.73672L36.6667 9.16659L35.505 9.59645C33.9817 10.1601 33.22 10.442 32.6643 10.9976C32.1087 11.5532 31.8268 12.3149 31.2632 13.8382L30.8333 14.9999L30.4035 13.8382C29.8398 12.3149 29.558 11.5532 29.0023 10.9976C28.4467 10.442 27.685 10.1601 26.1617 9.59645L25 9.16659L26.1617 8.73672C27.685 8.17304 28.4467 7.8912 29.0023 7.33557C29.558 6.77995 29.8398 6.01829 30.4035 4.49497L30.8333 3.33325Z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
-</svg>
-
-
-                                        <div class="block">
-                                            <p class="text-base leading-5 text-center text-white mb-1.5">Upload Video Here
-                                            </p>
-                                            <p class="text-xs leading-[14px] text-center text-[#797979]">Drop your video to add in to the editor
-                                            </p>
-
-                                        </div>
-                                        <input type="file" class="hidden">
+                class="md:fixed relative md:left-0 top-[65px] xl:w-[392px] lg:w-[280px] w-full md:w-[280px] md:h-[calc(100vh-64px)] overflow-y-auto scrollbar-hide z-40 flex justify-between flex-col bg-black-[#0A0A0A] nav-list pt-5 md:border-r border-[#222222]">
+                <div class="flex flex-col pb-8 px-3">
+                    <h2 class="text-xl font-medium text-white pb-5">Studio Product Photoshoot</h2>
+                    <ul class="flex flex-col gap-4">
+                        <li class="">
+                            <div class="flex flex-col gap-2.5">
+                                <div class="flex items-center justify-between relative">
+                                    <label for="user-input"
+                                        class="xl:text-sm xl:leading-[18px] text-xs text-white font-medium">Upload Your
+                                        Photos
                                     </label>
                                 </div>
-                        </div>
-                        <div class="relative w-full flex flex-col gap-2.5 ">
-                            <label class="text-sm  font-medium text-white">Specific Requirement
-</label>
-                                <textarea name="text-prompt" id="text-prompt" placeholder="Write Prompt Here"
-                                    class="resize-none w-full h-auto min-h-[180px] bg-black rounded-[10px] py-2.5 pl-[18px] pr-[15px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">Change the hair color of the human subject in the image to a different style: apply a natural or creative color black, ensure realistic shading, shine, and texture, maintain original hair flow and lighting, and blend the new color seamlessly for a natural and polished look.</textarea>
-                        </div>
-                    </div>
+                                <div
+                                    class="bg-black min-h-52 sm:h-[160px] 2xl:h-[190px] rounded-[10px] p-3 relative outline-none flex justify-center transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
+                                    <label class="absolute inset-0 cursor-pointer rounded-3xl z-30">
+                                        <input type="file" class="hidden" accept="image/*">
+                                    </label>
+                                    <div
+                                        class="flex flex-col items-center justify-center gap-2.5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+                                        <svg width="40" height="40" viewBox="0 0 82 82" fill="none"
+                                            class="w-5 h-5 sm:w-auto sm:h-auto" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M30.7501 34.1667C34.524 34.1667 37.5834 31.1073 37.5834 27.3333C37.5834 23.5594 34.524 20.5 30.7501 20.5C26.9761 20.5 23.9167 23.5594 23.9167 27.3333C23.9167 31.1073 26.9761 34.1667 30.7501 34.1667Z"
+                                                stroke="white" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M44.4166 6.83398H30.7499C13.6666 6.83398 6.83325 13.6673 6.83325 30.7507V51.2507C6.83325 68.334 13.6666 75.1673 30.7499 75.1673H51.2499C68.3333 75.1673 75.1666 68.334 75.1666 51.2507V34.1673"
+                                                stroke="white" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M53.8125 17.084H72.6042" stroke="white" stroke-width="3"
+                                                stroke-linecap="round" />
+                                            <path d="M63.2083 26.4792V7.6875" stroke="white" stroke-width="3"
+                                                stroke-linecap="round" />
+                                            <path
+                                                d="M9.12256 64.7466L25.9667 53.4374C28.6659 51.6266 32.5609 51.8316 34.9867 53.9157L36.1142 54.9066C38.7792 57.1957 43.0842 57.1957 45.7492 54.9066L59.9626 42.7091C62.6276 40.4199 66.9326 40.4199 69.5976 42.7091L75.1667 47.4924"
+                                                stroke="white" stroke-width="3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="text-center font-normal text-sm pt-1 text-white min-w-56">
+                                            Upload Image Here
+                                        </span>
+                                        <p class="text-xs font-light text-[#797979] text-center">
+                                            Drop your image to add in to the editor
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="flex flex-col gap-2.5">
+                            <label for="user-input"
+                                class="xl:text-sm xl:leading-[18px] text-xs text-white font-medium">Product Backgrounds
+                            </label>
+                            <div class="flex flex-col gap-2.5">
+                                <div
+                                    class="bg-black min-h-52 sm:h-[160px] 2xl:h-[190px] rounded-[10px] p-1.5 relative outline-none flex justify-center transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
+                                    <button
+                                        class="absolute z-20 top-3 right-3 w-8 h-8 flex items-center justify-center rounded-[6px] bg-[#FFFFFF2E] backdrop-blur-[3px] transition-all duration-500 hover:bg-[#FFFFFF18]"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 16 16" fill="none">
+                                            <path d="M12 4L4.00054 11.9995M11.9995 12L4 4.00057" stroke="white"
+                                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></button>
+
+                                    <!-- img box -->
+                                    <div class="w-full h-full flex items-center justify-center">
+                                        <img src="/assets/images/ai-producton-hand-img6.png" alt=""
+                                            class="max-w-full max-h-full w-auto h-auto  object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-full">
+                                    <div class="flex flex-col gap-2.5">
+                                        <div class="flex flex-col gap-2">
+                                            <label class="xl:text-sm text-xs text-white font-normal">Number of
+                                                Images</label>
+                                            <div
+                                                class="flex justify-between items-center py-3 pl-[18px] pr-3 rounded-[10px] bg-black">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                    viewBox="0 0 18 18" fill="none">
+                                                    <path
+                                                        d="M9.7591 2.19219L14.1841 4.15719C15.4591 4.71969 15.4591 5.64969 14.1841 6.21219L9.7591 8.17719C9.2566 8.40219 8.4316 8.40219 7.9291 8.17719L3.5041 6.21219C2.2291 5.64969 2.2291 4.71969 3.5041 4.15719L7.9291 2.19219C8.4316 1.96719 9.2566 1.96719 9.7591 2.19219Z"
+                                                        stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M2.25 8.25C2.25 8.88 2.7225 9.6075 3.3 9.8625L8.3925 12.1275C8.7825 12.3 9.225 12.3 9.6075 12.1275L14.7 9.8625C15.2775 9.6075 15.75 8.88 15.75 8.25"
+                                                        stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path
+                                                        d="M2.25 12C2.25 12.6975 2.6625 13.3275 3.3 13.6125L8.3925 15.8775C8.7825 16.05 9.225 16.05 9.6075 15.8775L14.7 13.6125C15.3375 13.3275 15.75 12.6975 15.75 12"
+                                                        stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                                <div class="flex items-center w-auto gap-2">
+                                                    <button
+                                                        class="transition-all duration-500 text-white/40 hover:text-white minus">
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M15.8283 10H4.16406" stroke="currentcolor"
+                                                                stroke-width="1.5" stroke-linecap="round" />
+                                                        </svg>
+
+                                                    </button>
+                                                    <input type="text"
+                                                        class="text-center text-xs text-white lg:w-6 w-6 text bg-transparent focus:outline-none outline-none"
+                                                        value="1" />
+                                                    <button
+                                                        class="transition-all duration-500 text-white/40 hover:text-white plus">
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path
+                                                                    d="M9.9974 4.16797V15.8346M15.8307 10.0013H4.16406"
+                                                                    stroke="currentcolor" stroke-width="1.5"
+                                                                    stroke-linecap="round" />
+                                                            </g>
+                                                        </svg>
+
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
                 </div>
                 <!-- The button should have position absolute, bottom 0 to stick to the bottom -->
-                <div class="bg-[#0A0A0A] border-t border-[#222222] md:sticky relative bottom-0 w-full left-0 right-0 p-3">
+                <div class="bg-[#0A0A0A] border-t border-[#222222] sticky bottom-0 w-full left-0 right-0 p-4">
                     <div class="flex items-center justify-between gap-2 mx-auto p-1 bg-black rounded-[10px]">
                         <div class="flex items-center gap-2 w-fit lg:pl-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
@@ -956,7 +986,7 @@
                             <span class="text-sm font-medium leading-[18px] text-white">12 Credit</span>
                         </div>
                         <button
-                            class="py-[11px] pl-[14px] pr-[17px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-[16px] text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 ">
+                            class="py-3 pl-[15px] pr-[17px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-[16px] text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
                                 fill="none">
                                 <g clip-path="url(#clip0_5669_2031)">
@@ -977,27 +1007,26 @@
                         </button>
                     </div>
                 </div>
-
             </aside>
         </div>
         <div
-            class="xl:w-[calc(100%-404px)] lg:w-[calc(100%-280px)] md:w-[calc(100%-280px)] w-full ml-auto relative md:h-screen md:overflow-y-auto pt-[65px] px-0">
-             <!--Main Content Page-->
-            <div class="w-full h-full relative p-5">
+            class="xl:w-[calc(100%-392px)] lg:w-[calc(100%-280px)] md:w-[calc(100%-280px)] w-full ml-auto relative md:h-screen md:overflow-y-auto pt-[80px] px-4">
+            <!--Main Content Page-->
+            <div class="w-full h-full relative">
                 <div class="flex flex-col gap-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <!-- video box-1 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 px-4">
+                        <!-- img box-1 -->
                         <div
-                            class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                            <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                               <video controls="" class="object-contain h-full aspect-video rounded-[10px]" controlslist="nodownload noplaybackrate nopictureinpicture" disablepictureinpicture="">
-                                    <source src="assets/images/clothes-changer.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                            class="w-full h-[420px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative">
+                            <div class="p-2.5 w-fit h-full flex items-center justify-center">
+                                <img src="/assets/images/ai-clotheschanger-img1.png" alt="img"
+                                    class="max-h-full max-w-full w-auto h-auto">
                             </div>
-                           
+                            <div class="flex items-end justify-end w-full h-full absolute top-0 bg-[#00000099]
+        opacity-0 group-hover:opacity-100 transition-all duration-500 p-4 z-30" data-modal-target="result-modal">
+                            </div>
                             <button
-                                class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                class="opacity-0 group-hover:opacity-100 transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute bottom-0 right-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                     fill="none">
                                     <path
@@ -1011,18 +1040,18 @@
                                 </svg>
                             </button>
                         </div>
-                        <!-- video box-2 -->
+                        <!-- img box-2 -->
                         <div
-                            class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                            <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                               <video controls="" class="object-contain h-full aspect-video rounded-[10px]" controlslist="nodownload noplaybackrate nopictureinpicture" disablepictureinpicture="">
-                                    <source src="assets/images/upscale-video.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                            class="w-full h-[420px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative">
+                            <div class="p-2.5 w-fit h-full flex items-center justify-center">
+                                <img src="/assets/images/ai-clotheschanger-img1.png" alt="img"
+                                    class="max-h-full max-w-full w-auto h-auto">
                             </div>
-                           
+                            <div class="flex items-end justify-end w-full h-full absolute top-0 bg-[#00000099]
+        opacity-0 group-hover:opacity-100 transition-all duration-500 p-4 z-30" data-modal-target="result-modal">
+                            </div>
                             <button
-                                class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                class="opacity-0 group-hover:opacity-100 transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute bottom-0 right-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                     fill="none">
                                     <path
@@ -1036,18 +1065,18 @@
                                 </svg>
                             </button>
                         </div>
-                        <!-- video box-3 -->
+                        <!-- img box-3 -->
                         <div
-                            class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                            <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                               <video controls="" class="object-contain h-full aspect-video rounded-[10px]" controlslist="nodownload noplaybackrate nopictureinpicture" disablepictureinpicture="">
-                                    <source src="assets/images/unblur-video.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                            class="w-full h-[420px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative">
+                            <div class="p-2.5 w-fit h-full flex items-center justify-center">
+                                <img src="/assets/images/ai-clotheschanger-img1.png" alt="img"
+                                    class="max-h-full max-w-full w-auto h-auto">
                             </div>
-                           
+                            <div class="flex items-end justify-end w-full h-full absolute top-0 bg-[#00000099]
+        opacity-0 group-hover:opacity-100 transition-all duration-500 p-4 z-30" data-modal-target="result-modal">
+                            </div>
                             <button
-                                class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                class="opacity-0 group-hover:opacity-100 transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute bottom-0 right-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                     fill="none">
                                     <path
@@ -1061,19 +1090,18 @@
                                 </svg>
                             </button>
                         </div>
-                       
-                         <!-- video box-2 -->
+                        <!-- img box-4 -->
                         <div
-                            class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                            <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                               <video controls="" class="object-contain h-full aspect-video rounded-[10px]" controlslist="nodownload noplaybackrate nopictureinpicture" disablepictureinpicture="">
-                                    <source src="assets/images/video-bg-remove.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                            class="w-full h-[420px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative">
+                            <div class="p-2.5 w-fit h-full flex items-center justify-center">
+                                <img src="/assets/images/ai-clotheschanger-img1.png" alt="img"
+                                    class="max-h-full max-w-full w-auto h-auto">
                             </div>
-                            
+                            <div class="flex items-end justify-end w-full h-full absolute top-0 bg-[#00000099]
+        opacity-0 group-hover:opacity-100 transition-all duration-500 p-4 z-30" data-modal-target="result-modal">
+                            </div>
                             <button
-                                class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                class="opacity-0 group-hover:opacity-100 transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute bottom-0 right-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                     fill="none">
                                     <path
@@ -1087,615 +1115,145 @@
                                 </svg>
                             </button>
                         </div>
-                       
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--Big image Modal-->
-    <div class="modalTrigger  modal-image" id="image-modal">
-        <div
-            class="absolute bg-black-1B1B1B w-9 h-9 -left-12 z-50 flex items-center justify-center border-[0.8px] border-[rgba(255,255,255,0.20)] rounded-lg cursor-pointer">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.6063 8.99896H2.40625M2.40625 8.99896L8.63958 2.76562M2.40625 8.99896L8.63958 15.2323"
-                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-        </div>
-        <div class="relative bg-black-1B1B1B p-3.5 rounded-3xl lg:h-auto h-full overflow-auto">
-            <div class="flex lg:flex-row flex-col-reverse gap-3.5  w-full">
-                <div class="bg-black-0a0a0a rounded-xl xl:max-w-[1294px] lg:max-w-[1180px] lg:w-[75%] relative">
-                    <div class="w-full h-full max-h-[800px] rounded-xl overflow-hidden">
-                        <img id="zoomImage" src="/assets/images/big-image.png" alt="image"
-                            class="w-full h-full rounded-xl" />
-                    </div>
-                    <div
-                        class="absolute bottom-0 left-0 right-0 m-auto bg-[rgba(255,255,255,0.12)] backdrop-blur-sm p-3 rounded-t-lg max-w-[385px] flex items-center gap-2.5 justify-between rangeslider-zoom">
-                        <span class="text-xs text-white">100%</span>
-                        <input id="zoom" class="rangeslider-zoom" type="range" min="100" max="500" step="5"
-                            value="100" />
-                        <span class="text-xs text-white" id="zoomValue">500%</span>
-                    </div>
-                </div>
-                <div class="relative  lg:w-[25%]">
-                    <div class="flex flex-col justify-between h-full">
-                        <div class="block">
-                            <div class="pb-4 mb-4 border-b border-white/10 flex justify-between items-center">
-                                <h4 class="text-lg text-white font-medium">19 Mar. 2025</h4>
-                                <div class="flex items-center gap-5">
-                                    <button class="relative">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M2.5 5H4.16667H17.5" stroke="white" stroke-width="1.4"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path
-                                                d="M6.66406 5.0013V3.33464C6.66406 2.89261 6.83966 2.46868 7.15222 2.15612C7.46478 1.84356 7.8887 1.66797 8.33073 1.66797H11.6641C12.1061 1.66797 12.53 1.84356 12.8426 2.15612C13.1551 2.46868 13.3307 2.89261 13.3307 3.33464V5.0013M15.8307 5.0013V16.668C15.8307 17.11 15.6551 17.5339 15.3426 17.8465C15.03 18.159 14.6061 18.3346 14.1641 18.3346H5.83073C5.3887 18.3346 4.96478 18.159 4.65222 17.8465C4.33966 17.5339 4.16406 17.11 4.16406 16.668V5.0013H15.8307Z"
-                                                stroke="white" stroke-width="1.4" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M8.33594 9.16797V14.168" stroke="white" stroke-width="1.4"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M11.6641 9.16797V14.168" stroke="white" stroke-width="1.4"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                    <button
-                                        class="close-btn cursor-pointer p-1.5 rounded-lg bg-black-0a0a0a border-[0.8px] border-white/20 text-white transition-all duration-300 hover:text-limegreen w-9 h-9 ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                            viewBox="0 0 22 22" fill="none">
-                                            <path
-                                                d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
-                                                stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="flex items-center flex-wrap gap-1 mb-4 pb-4 border-b border-white/10">
-                                <img src="/assets/images/editor-demo-img1.png" alt="image"
-                                    class="w-[60px] h-[60px] rounded-xl" />
-                                <img src="/assets/images/editor-demo-img1.png" alt="image"
-                                    class="w-[60px] h-[60px] rounded-xl" />
-                                <img src="/assets/images/editor-demo-img1.png" alt="image"
-                                    class="w-[60px] h-[60px] rounded-xl" />
-                                <img src="/assets/images/editor-demo-img1.png" alt="image"
-                                    class="w-[60px] h-[60px] rounded-xl" />
-                                <img src="/assets/images/editor-demo-img1.png" alt="image"
-                                    class="w-[60px] h-[60px] rounded-xl" />
-                                <img src="/assets/images/editor-demo-img1.png" alt="image"
-                                    class="w-[60px] h-[60px] rounded-xl" />
-                            </div>
-                            <div class="flex flex-col gap-3.5 mb-5">
-                                <div class="flex items-center justify-between">
-                                    <h5 class="text-base font-medium text-white">Prompt</h5>
-                                    <a href="#" class="flex gap-2 items-center text-sm text-limegreen">
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.6693 8.5987V11.3987C10.6693 13.732 9.73594 14.6654 7.4026 14.6654H4.6026C2.26927 14.6654 1.33594 13.732 1.33594 11.3987V8.5987C1.33594 6.26536 2.26927 5.33203 4.6026 5.33203H7.4026C9.73594 5.33203 10.6693 6.26536 10.6693 8.5987Z"
-                                                stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M14.6693 4.5987V7.3987C14.6693 9.73203 13.7359 10.6654 11.4026 10.6654H10.6693V8.5987C10.6693 6.26536 9.73594 5.33203 7.4026 5.33203H5.33594V4.5987C5.33594 2.26536 6.26927 1.33203 8.6026 1.33203H11.4026C13.7359 1.33203 14.6693 2.26536 14.6693 4.5987Z"
-                                                stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                        Copy Prompt
-                                    </a>
-                                </div>
-                                <p class="text-sm text-white leading-6">Futuristic girl racer in cyberpunk costume
-                                    sitting on a high-tech sportsbike. Detailed mecha design with metallic elements,
-                                    aggressive lines of the motorcycle.</p>
-                            </div>
-                            <div class="flex flex-col gap-3.5">
-                                <button
-                                    class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm text-black font-medium bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
-                                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.25 11.25V14.25C16.25 14.6478 16.092 15.0294 15.8107 15.3107C15.5294 15.592 15.1478 15.75 14.75 15.75H4.25C3.85218 15.75 3.47064 15.592 3.18934 15.3107C2.90804 15.0294 2.75 14.6478 2.75 14.25V11.25"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M5.75 7.5L9.5 11.25L13.25 7.5" stroke="black" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M9.5 11.25V2.25" stroke="black" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                    Download HD
-                                </button>
-                                <button
-                                    class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm  font-medium bg-[rgba(198,255,0,0.10)] hover:bg-[rgba(198,255,0,0.20)] text-limegreen transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
-                                            stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M6.00313 2.25H6.75313C5.29063 6.63 5.29063 11.37 6.75313 15.75H6.00313"
-                                            stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M11.25 2.25C12.7125 6.63 12.7125 11.37 11.25 15.75" stroke="#C6FF00"
-                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M2.25 12V11.25C6.63 12.7125 11.37 12.7125 15.75 11.25V12"
-                                            stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M2.25 6.74922C6.63 5.28672 11.37 5.28672 15.75 6.74922"
-                                            stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-
-                                    Publish to community
-                                </button>
-                                <button
-                                    class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm text-white font-medium bg-[#2A2A2A] hover:bg-[#393939] transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.2422 13.125H12.3747C14.6397 13.125 16.4997 11.2725 16.4997 9C16.4997 6.735 14.6472 4.875 12.3747 4.875H11.2422"
-                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M6.75 4.875H5.625C3.3525 4.875 1.5 6.7275 1.5 9C1.5 11.265 3.3525 13.125 5.625 13.125H6.75"
-                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M6 9H12" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    Copy Image URL
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div
-            class="absolute bg-black-1B1B1B w-9 h-9 -right-12 z-50 flex items-center justify-center border-[0.8px] border-[rgba(255,255,255,0.20)] rounded-lg cursor-pointer">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.39375 8.99896H15.5938M15.5938 8.99896L9.36042 2.76562M15.5938 8.99896L9.36042 15.2323"
-                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-        </div>
-    </div>
-    <!-- room type modal  -->
-    <div class="modalTrigger m-0 modal-home w-full md:max-w-[740px] lg:max-w-[1140px] 2xl:max-w-[1340px] p-5" id="roomtype">
-        <button
-            class="close-btn cursor-pointer p-1.5 rounded-full bg-[#1D1D1D] text-white transition-all duration-300 hover:text-limegreen absolute md:top-20 top-10 right-2 md:right-0 ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                <path
-                    d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
-                    stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-        </button>
-        <div class="relative w-full  p-1  rounded-xl bg-[#111111] h-[580px] xl:h-[640px]  2xl:h-[700px] overflow-hidden">
-            <div class="w-full flex md:flex-row flex-col items-start gap-2">
-                <div class="flex flex-row md:flex-col gap-1.5 sm:gap-2 w-full md:max-w-[240px] h-auto md:h-[580px] xl:h-[640px] 2xl:h-[700px] overflow-y-auto sticky top-0  overflow-y-auto md:pb-5">
-                    <div class="md:block hidden relative">
-                        <input type="text" class="py-1.5 px-3 h-[40px] border border-[#2B2B2B] rounded-[10px] w-full bg-transparent text-base font-normal text-[#C6FF00] placeholder:text-[#C6FF00] pl-9 focus:outline-none" placeholder="Search..." />
-                        <div class="absolute left-3 top-3">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.3359 11.3335L14.0026 14.0002" stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667C8.80867 12.6667 10.1441 12.0677 11.1096 11.0995C12.0718 10.1348 12.6667 8.80353 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333Z" stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                        </div>
-                    </div>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black  active">
-                        🔥 Popular Edits
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        Minimalist
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        Modern
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        2025 Trends
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        Nordic
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        Japanese
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        Transitional
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        Traditional
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        Rustic
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        Mid-Century
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        Coastal
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        Mediterranean
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                        Industrial
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                       Classic
-                    </button>
-                     <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                       Bohemia
-                    </button>
-                </div>
-                <div class="h-[580px] xl:h-[640px] 2xl:h-[700px] overflow-y-auto w-full">
-                <div
-                    class="p-3 bg-black w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 rounded-[10px]">
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     <!-- style  modal  -->
-    <div class="modalTrigger m-0 modal-home w-full md:max-w-[740px] lg:max-w-[1140px] 2xl:max-w-[1140px] p-5" id="styletype">
-        <button
-            class="close-btn cursor-pointer p-1.5 rounded-full bg-[#1D1D1D] text-white transition-all duration-300 hover:text-limegreen absolute md:top-20 top-10 right-2 md:right-0 ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                <path
-                    d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
-                    stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-        </button>
-        <div class="relative w-full  p-1  rounded-xl bg-[#111111] h-[580px] xl:h-[640px]  2xl:h-[700px] overflow-hidden">
-            <div class="w-full flex md:flex-row flex-col items-start gap-2">
-              
-                <div class="h-[580px] xl:h-[640px] 2xl:h-[700px] overflow-y-auto w-full">
-                <div
-                    class="p-3 bg-black w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 rounded-[10px]">
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                    <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   <a href="#" class="flex flex-col gap-2.5 items-center rounded-lg group">
-                        <div class="w-full h-auto overflow-hidden rounded-md">
-                            <img src="assets/images/interior-img.png" alt=""
-                                class="md:w-[256px]  w-full md:h-[192px] h-full transition-all duration-1000 group-hover:scale-[1.05] rounded-[6px]">
-                        </div>
-                        <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                    </a>
-                   
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--delete Modal-->
-    <div class="modalTrigger  modal-home " id="delete-modal">
-        <div
-            class="relative w-full  py-5 px-5 2xl:px-6 rounded-[24px] bg-black-1B1B1B border-[0.8px] border-white/20  h-auto  overflow-auto">
-            <div class="flex flex-col w-full">
-                <span
-                    class="close-btn cursor-pointer p-1.5 rounded-full bg-[#0A0A0A] text-white transition-all duration-300 hover:text-[#FF3030] absolute top-4 right-4 ">
+    <!--result Modal-->
+    <div class="modalTrigger  modal-home" style="max-width: 1400px !important;" id="result-modal">
+        <div class="p-2.5 relative w-full  bg-[#111111] rounded-[10px] mt-6">
+            <label
+                class="w-full h-auto max-h-[600px] rounded-3xl xs:min-h-[480px] lg:min-h-[600px] 2xl:min-h-[620px] flex flex-col gap-3 justify-center items-center cursor-pointer relative p-2.5 overflow-hidden">
+                <button
+                    class="close-btn z-30 w-11 h-11 flex items-center justify-center rounded-[10px] bg-[#FFFFFF2E] backdrop-blur-[3px] absolute right-2.5 top-2.5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                        <path
-                            d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
-                            stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M16.5 5.5L5.50074 16.4993M16.4993 16.5L5.5 5.50078" stroke="white" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
+                </button>
+                <div class="relative z-20 h-auto">
+                    <div class="relative group flex gap-3">
+                        <div class="h-auto relative ba-slider2">
+                            <!--  After Img -->
+                            <img class="w-full before-img h-auto object-contain"
+                                src="/assets/images/ai-recolorimg2.png" alt="after">
+                            <!-- BEFORE IMAGE (left side) -->
+                            <div class="resize">
+                                <img src="/assets/images/ai-recolorimg1.png" alt="before"
+                                    class="after-img h-auto object-contain">
+                            </div>
 
-                </span>
-                <div class="w-full">
-                    <div class="flex items-center  gap-2.5">
-                        <div class="w-8 h-8 rounded-md bg-[#FF3030] flex items-center justify-center">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M2.25 4.95312H15.75M3.6 4.95312H14.4V11.2531C14.4 13.3744 14.4 14.4351 13.741 15.0941C13.082 15.7531 12.0213 15.7531 9.9 15.7531H8.1C5.97868 15.7531 4.91802 15.7531 4.25901 15.0941C3.6 14.4351 3.6 13.3744 3.6 11.2531V4.95312Z"
-                                    stroke="white" stroke-linecap="round" />
-                                <path
-                                    d="M5.625 4.95V3.75C5.625 2.92157 6.29657 2.25 7.125 2.25H10.875C11.7034 2.25 12.375 2.92157 12.375 3.75V4.95M12.375 4.95H2.25M12.375 4.95H15.75"
-                                    stroke="white" stroke-linecap="round" />
-                                <path d="M7.64844 8.32812V12.3781" stroke="white" stroke-linecap="round" />
-                                <path d="M10.3516 8.32812V12.3781" stroke="white" stroke-linecap="round" />
-                            </svg>
-
+                            <span class="handle">
+                                <button class="ba2-btn ba2-btn-before">
+                                    Before
+                                </button>
+                                <button class="ba2-btn ba2-btn-after">
+                                    After
+                                </button>
+                            </span>
                         </div>
-                        <h2 class="text-base font-medium text-white">Confirm Deletion?</h2>
-                    </div>
-                    <p class="pt-4 pb-6 text-sm text-white/80 leading-6">
-                        Are you sure you want to delete this Generation? It will permanently deleted from your account.
-                    </p>
-                    <div class="flex items-center gap-3">
-                        <button
-                            class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm text-white font-medium bg-[#1B1B1B] border border-[rgba(255,255,255,0.20)] hover:bg-white/5 transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
-                            Cancel
-                        </button>
-                        <button
-                            class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm text-white font-medium bg-[#FF3030] border border-[rgba(255,255,255,0.20)] hover:bg-[#bb1e1e] transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
-                            Delete
-                        </button>
                     </div>
                 </div>
-            </div>
+                <button
+                    class="lg:absolute bottom-2.5 right-2.5 py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] focus:bg-[#D7FF4D]  font-semibold text-lg leading-6 text-black">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.99976 11.334C1.99976 11.954 1.99976 12.264 2.06791 12.5183C2.25284 13.2085 2.79194 13.7476 3.48212 13.9325C3.73646 14.0007 4.04644 14.0007 4.66642 14.0007H11.3331C11.9531 14.0007 12.2631 14.0007 12.5174 13.9325C13.2076 13.7476 13.7467 13.2085 13.9316 12.5183C13.9998 12.264 13.9998 11.954 13.9998 11.334"
+                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
+                            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Download
+                </button>
+            </label>
         </div>
     </div>
-    <div
-        class="overlay-modal w-full h-screen z-[10000] bg-black/50 backdrop-blur-xl fixed top-0 left-0 opacity-0 invisible">
+    <!-- backdrop-overlay -->
+    <div class="overlay-modal w-full h-screen z-[10000] bg-[#00000099 fixed top-0 left-0 opacity-0 invisible">
     </div>
     <!-- MAIN JS-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
     <script src="/assets/js/main.js"></script>
     <script>
-        /*==============tooltip==================*/
-        document.addEventListener('DOMContentLoaded', () => {
-            const tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
+        /*======resizer===========*/
+        (function ($) {
+            function drags(dragElement, resizeElement, container) {
+                dragElement.on('mousedown.ba-events touchstart.ba-events', function (e) {
+                    e.preventDefault();
 
-            tooltipTriggers.forEach(trigger => {
-                const tooltip = trigger.nextElementSibling;
+                    // Add active class for styling (if needed)
+                    dragElement.addClass('ba-draggable');
+                    resizeElement.addClass('ba-resizable');
 
-                const showTooltip = () => {
-                    tooltip.classList.remove('opacity-0', 'translate-x-2', 'invisible', 'z-[-1]');
-                    tooltip.classList.add('opacity-100', '-translate-x-2', 'visible', 'z-10');
-                };
+                    var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
 
-                const hideTooltip = () => {
-                    tooltip.classList.remove('opacity-100', '-translate-x-2', 'visible', 'z-10');
-                    tooltip.classList.add('opacity-0', 'translate-x-2', 'invisible', 'z-[-1]');
-                };
+                    var dragWidth = dragElement.outerWidth(),
+                        posX = dragElement.offset().left + dragWidth - startX,
+                        containerOffset = container.offset().left,
+                        containerWidth = container.outerWidth();
 
-                trigger.addEventListener('mouseenter', showTooltip);
-                trigger.addEventListener('mouseleave', hideTooltip);
-                trigger.addEventListener('focus', showTooltip);
-                trigger.addEventListener('blur', hideTooltip);
+                    var minLeft = containerOffset;
+                    var maxLeft = containerOffset + containerWidth - dragWidth;
 
-                // Hide tooltip on click
-                trigger.addEventListener('click', hideTooltip);
-            });
+                    // Mouse move
+                    $(document).on('mousemove.ba-events touchmove.ba-events', function (e) {
+                        var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+                        var leftValue = moveX + posX - dragWidth;
+
+                        // Keep handle within bounds
+                        if (leftValue < minLeft) leftValue = minLeft;
+                        if (leftValue > maxLeft) leftValue = maxLeft;
+
+                        // Calculate percentage position
+                        var widthValue = ((leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth) + '%';
+
+                        // ✅ Update only this instance
+                        dragElement.css('left', widthValue);
+                        resizeElement.css('width', widthValue);
+                    });
+
+                    // Mouse up
+                    $(document).on('mouseup.ba-events touchend.ba-events touchcancel.ba-events', function () {
+                        // Remove active classes
+                        dragElement.removeClass('ba-draggable');
+                        resizeElement.removeClass('ba-resizable');
+
+                        // Unbind events
+                        $(document).off('.ba-events');
+                    });
+                });
+            }
+
+            // Plugin definition
+            $.fn.beforeAfter = function () {
+                return this.each(function () {
+                    var cur = $(this);
+                    var width = cur.width() + 'px';
+                    cur.find('.resize img').css('width', width);
+
+                    // Bind drag functionality
+                    drags(cur.find('.handle'), cur.find('.resize'), cur);
+
+                    // Handle resize
+                    $(window).on('resize', function () {
+                        var width = cur.width() + 'px';
+                        cur.find('.resize img').css('width', width);
+                    });
+                });
+            };
+        })(jQuery);
+
+        // ✅ Initialize all sliders
+        $(function () {
+            $('.ba-slider').beforeAfter();
+            $('.ba-slider2').beforeAfter();
+            $('.ba-slider3').beforeAfter(); // add more as needed
         });
 
-        document.querySelectorAll(".card").forEach(card => {
-            card.addEventListener("click", () => {
-                const circle = card.querySelector(".circle-bg");
-                const circle2 = card.querySelector(".circle-line");
-                const tick = card.querySelector(".tick");
-
-                card.classList.toggle("selected");
-
-                if (card.classList.contains("selected")) {
-                    circle.setAttribute("fill", "#C6FF00");
-                    circle2.setAttribute("stroke", "C6FF00");
-                    tick.setAttribute("stroke", "black");
-                } else {
-                    circle.setAttribute("fill", "#C6FF00");
-                    circle2.setAttribute("stroke", "#C6FF00");
-                    tick.setAttribute("stroke", "#C6FF00");
-                }
-
-            });
-        });
     </script>
-    <!--custom range slider-->
-    <script>
-       const ranges = document.querySelectorAll(".customRange");
-
-ranges.forEach(range => {
-    const label = range.parentElement.querySelector(".rangeLabel");
-
-    function updateRange() {
-        const value = range.value;
-        const min = range.min;
-        const max = range.max;
-        const percent = ((value - min) / (max - min)) * 100;
-
-        // Background progress fill
-        range.style.background = `linear-gradient(to right, #C6FF00 ${percent}%, #ffffff1a ${percent}%)`;
-
-        // 🔥 Auto-detect decimals
-        if (range.step.includes(".")) {
-            label.textContent = parseFloat(value).toFixed(1);   // for 0.5 / 0.1 etc.
-        } else {
-            label.textContent = value;                          // for normal integer sliders
-        }
-    }
-
-    range.addEventListener("input", updateRange);
-    updateRange();
-});
-
-
-    </script>
-
-    
 </body>
 
 </html>
