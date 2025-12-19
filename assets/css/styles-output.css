@@ -5187,6 +5187,10 @@ pre{
   overflow-x: scroll;
 }
 
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
 .text-ellipsis {
   text-overflow: ellipsis;
 }
@@ -8519,6 +8523,10 @@ pre{
 
 .hover\:bg-white\/80:hover {
   background-color: rgb(255 255 255 / 0.8);
+}
+
+.hover\:bg-\[\]:hover {
+  background-color: ;
 }
 
 .hover\:bg-gradient-to-tr:hover {
