@@ -906,13 +906,13 @@
                             </div>
                             <div class="flex flex-col gap-2.5">
                                 <label class="text-sm leading-[18px] text-white font-medium capitalize">Google Font Name</label>
-                                    <input type="text" placeholder="Montserrat" class="w-full bg-black rounded-[10px] py-3 px-[18px] text-sm font-normal leading-[18px] placeholder:text-white text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]" />  
+                                    <input type="text" placeholder="Montserrat" value="Montserrat" class="w-full bg-black rounded-[10px] py-3 px-[18px] text-sm font-normal leading-[18px] placeholder:text-white text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]" />  
                             </div>
                          </div>
                           <div class="flex flex-col gap-2.5">
                                 <label class="text-sm leading-[18px] text-white font-medium capitalize">Font Size</label>
                                 <div class="flex gap-[15px] items-center py-3.5 px-[18px] rounded-[10px] bg-black ">
-                                <input id="customRange" type="range" min="5" max="60" step="1" value="24" class="customRange w-full h-[3px] appearance-none rounded-[100px] cursor-pointer 
+                                <input id="customRange" type="range" min="20" max="150" step="1" value="100" class="customRange w-full h-[3px] appearance-none rounded-[100px] cursor-pointer 
                             bg-gradient-to-r from-[#C6FF00] to-[#C6FF00] 
                             [--range-progress:#C6FF00]"
                                     style="background: linear-gradient(to right, #C6FF00 0%, #C6FF00 0%,  rgb(255 255 255 / 10%) 0%,  rgb(255 255 255 / 10%) 100%)" />
@@ -929,9 +929,9 @@
                         <!--custom select-->
                         <div class="interior-select"> 
                         <select id="sources" name="fontweight">
-                              <option value="Default">Default</option>
+                            
                               <option value="Normal" >Normal</option>
-                               <option value="Bold" >Bold</option>
+                               <option value="Bold" selected>Bold</option>
                                 <option value="Black" >Black</option>
                            </select>
                          </div>  
@@ -942,8 +942,8 @@
                         <!--custom select-->
                         <div class="interior-select"> 
                         <select id="sources" name="fontcolor">
-                             <option value="default">Default</option>
-                                <option value="white">White</option>
+                           
+                                <option value="white" selected>White</option>
                                 <option value="black">Black</option>
                                 <option value="red">Red</option>
                                 <option value="green">Green</option>
@@ -966,7 +966,7 @@
                         <!--custom select-->
                         <div class="interior-select"> 
                         <select id="sources" name="highlightcolor">
-                               <option value="default">Default</option>
+                             
                                 <option value="white">White</option>
                                 <option value="black">Black</option>
                                 <option value="red">Red</option>
@@ -974,7 +974,7 @@
                                 <option value="blue">Blue</option>
                                 <option value="yellow">Yellow</option>
                                 <option value="orange">Orange</option>
-                                <option value="purple">Purple</option>
+                                <option value="purple" selected>Purple</option>
                                 <option value="brown">Brown</option>
                                 <option value="gray">Gray</option>
                                 <option value="cyan">Cyan</option>
@@ -982,86 +982,28 @@
                            </select>
                          </div>  
                          </div>
-                         <div class="flex flex-col gap-2.5">
-                            <label class="text-sm  font-medium text-white">Background Color
-</label>
-                        <!--custom select-->
-                        <div class="interior-select"> 
-                        <select id="sources" name="bgcolor">
-                             <option value="default">Default</option>
-                                <option value="white">White</option>
-                                <option value="black">Black</option>
-                                <option value="red">Red</option>
-                                <option value="green">Green</option>
-                                <option value="blue">Blue</option>
-                                <option value="yellow">Yellow</option>
-                                <option value="orange">Orange</option>
-                                <option value="purple">Purple</option>
-                                <option value="brown">Brown</option>
-                                <option value="gray">Gray</option>
-                                <option value="cyan">Cyan</option>
-                                <option value="magenta">Magenta</option>
-                                 <option value="magenta">None</option>
-                                  <option value="transparent">Transparent</option>
-                           </select>
-                         </div>  
-                         </div>
-                            </div>
-                              <div class="flex flex-col gap-2.5">
-                                <label class="text-sm leading-[18px] text-white font-medium capitalize">Stroke Width</label>
-                                <div class="flex gap-[15px] items-center py-3.5 px-[18px] rounded-[10px] bg-black ">
-                                <input id="customRange" type="range" min="1" max="10" step="1" value="3" class="customRange w-full h-[3px] appearance-none rounded-[100px] cursor-pointer 
-                            bg-gradient-to-r from-[#C6FF00] to-[#C6FF00] 
-                            [--range-progress:#C6FF00]"
-                                    style="background: linear-gradient(to right, #C6FF00 0%, #C6FF00 0%,  rgb(255 255 255 / 10%) 0%,  rgb(255 255 255 / 10%) 100%)" />
-                                <label for="customRange" class="text-white text-sm leading-4 font-normal min-w-5 text-right">
-                                    <span id="rangeLabel" class="rangeLabel min-w-10 text-right">3</span>
-                                </label>
-                            </div> 
-                            </div>
-                            <div class="grid grid-cols-2 gap-2.5">
-                            <div class="flex flex-col gap-2.5">
-                            <label class="text-sm  font-medium text-white">Stroke Color
-</label>
-                        <!--custom select-->
-                        <div class="interior-select"> 
-                        <select id="sources" name="strokecolor">
-                               <option value="default">Default</option>
-                                <option value="white">White</option>
-                                <option value="black">Black</option>
-                                <option value="red">Red</option>
-                                <option value="green">Green</option>
-                                <option value="blue">Blue</option>
-                                <option value="yellow">Yellow</option>
-                                <option value="orange">Orange</option>
-                                <option value="purple">Purple</option>
-                                <option value="brown">Brown</option>
-                                <option value="gray">Gray</option>
-                                <option value="cyan">Cyan</option>
-                                <option value="magenta">Magenta</option>
-                           </select>
-                         </div>  
-                         </div>
-                         <div class="flex flex-col gap-2.5">
+                          <div class="flex flex-col gap-2.5">
                             <label class="text-sm  font-medium text-white">Position
 
 </label>
                         <!--custom select-->
                         <div class="interior-select"> 
                         <select id="sources" name="position">
-                             <option value="default">Default</option>
+                            
                                 <option value="top">Top</option>
-                                <option value="bottom">Bottom</option>
+                                <option value="bottom" selected>Bottom</option>
                                 <option value="center">Center</option>
                                
                            </select>
                          </div>  
                          </div>
+                        
                             </div>
-                             <div class="flex flex-col gap-2.5">
-                                <label class="text-sm leading-[18px] text-white font-medium capitalize">Background Opacity</label>
+                            <div class="grid grid-cols-2 gap-2.5">
+                           <div class="flex flex-col gap-2.5">
+                                <label class="text-sm leading-[18px] text-white font-medium capitalize">Stroke Width</label>
                                 <div class="flex gap-[15px] items-center py-3.5 px-[18px] rounded-[10px] bg-black ">
-                                <input id="customRange" type="range" min="0" max="5" step="0.5" value="2.5" class="customRange w-full h-[3px] appearance-none rounded-[100px] cursor-pointer 
+                                <input id="customRange" type="range" min="0" max="10" step="1" value="3" class="customRange w-full h-[3px] appearance-none rounded-[100px] cursor-pointer 
                             bg-gradient-to-r from-[#C6FF00] to-[#C6FF00] 
                             [--range-progress:#C6FF00]"
                                     style="background: linear-gradient(to right, #C6FF00 0%, #C6FF00 0%,  rgb(255 255 255 / 10%) 0%,  rgb(255 255 255 / 10%) 100%)" />
@@ -1069,6 +1011,87 @@
                                     <span id="rangeLabel" class="rangeLabel min-w-10 text-right">3</span>
                                 </label>
                             </div> 
+                            </div>
+                           <div class="flex flex-col gap-2.5">
+                            <label class="text-sm  font-medium text-white">Stroke Color
+</label>
+                        <!--custom select-->
+                        <div class="interior-select"> 
+                        <select id="sources" name="strokecolor">
+                            
+                                <option value="white">White</option>
+                                <option value="black" selected>Black</option>
+                                <option value="red">Red</option>
+                                <option value="green">Green</option>
+                                <option value="blue">Blue</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="orange">Orange</option>
+                                <option value="purple">Purple</option>
+                                <option value="brown">Brown</option>
+                                <option value="gray">Gray</option>
+                                <option value="cyan">Cyan</option>
+                                <option value="magenta">Magenta</option>
+                           </select>
+                         </div>  
+                         </div>
+                        
+                            </div>
+                              
+                            <div class="grid grid-cols-2 gap-2.5">
+                                 <div class="flex flex-col gap-2.5">
+                                <label class="text-sm leading-[18px] text-white font-medium capitalize">Background Opacity</label>
+                                <div class="flex gap-[15px] items-center py-3.5 px-[18px] rounded-[10px] bg-black ">
+                                <input id="customRange" type="range" min="0" max="5" step="1" value="10" class="customRange w-full h-[3px] appearance-none rounded-[100px] cursor-pointer 
+                            bg-gradient-to-r from-[#C6FF00] to-[#C6FF00] 
+                            [--range-progress:#C6FF00]"
+                                    style="background: linear-gradient(to right, #C6FF00 0%, #C6FF00 0%,  rgb(255 255 255 / 10%) 0%,  rgb(255 255 255 / 10%) 100%)" />
+                                <label for="customRange" class="text-white text-sm leading-4 font-normal min-w-5 text-right">
+                                    <span id="rangeLabel" class="rangeLabel min-w-10 text-right">3</span>
+                                </label>
+                            </div> 
+                            </div>
+                            <div class="flex flex-col gap-2.5">
+                            <label class="text-sm  font-medium text-white">Background Color
+</label>
+                        <!--custom select-->
+                        <div class="interior-select"> 
+                        <select id="sources" name="bgcolor">
+                              <option value="none" selected>None</option>
+                                <option value="white">White</option>
+                                <option value="black">Black</option>
+                                <option value="red">Red</option>
+                                <option value="green">Green</option>
+                                <option value="blue">Blue</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="orange" >Orange</option>
+                                <option value="purple">Purple</option>
+                                <option value="brown">Brown</option>
+                                <option value="gray">Gray</option>
+                                <option value="cyan">Cyan</option>
+                                <option value="magenta">Magenta</option>
+                           </select>
+                         </div>  
+                         </div>
+                        
+                            </div>
+                            <div class="flex flex-col gap-2.5">
+                                <label class="text-sm leading-[18px] text-white font-medium capitalize">word per subtitle</label>
+                                <div class="flex gap-[15px] items-center py-3.5 px-[18px] rounded-[10px] bg-black ">
+                                <input id="customRange" type="range" min="0" max="5" step="0.5" value="0.5" class="customRange w-full h-[3px] appearance-none rounded-[100px] cursor-pointer 
+                            bg-gradient-to-r from-[#C6FF00] to-[#C6FF00] 
+                            [--range-progress:#C6FF00]"
+                                    style="background: linear-gradient(to right, #C6FF00 0%, #C6FF00 0%,  rgb(255 255 255 / 10%) 0%,  rgb(255 255 255 / 10%) 100%)" />
+                                <label for="customRange" class="text-white text-sm leading-4 font-normal min-w-5 text-right">
+                                    <span id="rangeLabel" class="rangeLabel min-w-10 text-right">3</span>
+                                </label>
+                            </div> 
+                            </div>
+                              <div class="flex justify-between gap-2.5 flex gap-[15px] items-center py-3.5 px-[18px] rounded-[10px] bg-black ">
+                                <label class="text-sm leading-[18px] text-white font-medium capitalize">Enable Animation</label>
+                               <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer">
+                                        <div class="w-9 h-5 bg-[rgba(255,255,255,0.2)]  peer-focus:outline-0 peer-focus:ring-transparent rounded-full peer transition-all ease-in-out duration-500 peer-checked:after:translate-x-full peer-checked:after:bg-[#000] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-[#CDCDCD] after:shadow-[0px_1px_3px_0px_rgba(16,24,40,0.08)] after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#C6FF00] "></div>
+                                        </label>
                             </div>
                     </div>
                 </div>

@@ -898,7 +898,36 @@
                                     </label>
                                 </div>
                         </div>
-                     
+                     <div class="grid grid-cols-2 gap-2.5">
+                            <div class="flex flex-col gap-2.5">
+                            <label class="text-sm  font-medium text-white">Video Resolution
+</label>
+                        <!--custom select-->
+                        <div class="interior-select"> 
+                        <select id="sources" name="videoresolution">
+                             
+                                <option value="1080p">1080p</option>
+                                <option value="2k">2k</option>
+                                <option value="4k" selected>4k</option>
+                              
+                           </select>
+                         </div>  
+                         </div>
+                          <div class="flex flex-col gap-2.5">
+                            <label class="text-sm  font-medium text-white">Target FPS
+
+</label>
+                        <!--custom select-->
+                        <div class="interior-select"> 
+                        <select id="sources" name="targetfps">
+                            
+                                <option value="30fps" selected>30fps</option>
+                                <option value="60fps" >60fps</option>
+                           </select>
+                         </div>  
+                         </div>
+                        
+                            </div>
                     </div>
                 </div>
                 <!-- The button should have position absolute, bottom 0 to stick to the bottom -->

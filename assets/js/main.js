@@ -49,12 +49,7 @@
 // });
 
 /*menu*/
-/* ================================
-   MOBILE MENU (HAMBURGER)
-================================ */
-/* =====================================================
-   MOBILE MENU – SLIDE FROM LEFT
-===================================================== */
+
 /* =====================================================
    MOBILE MENU TOGGLE
 ===================================================== */
@@ -209,84 +204,82 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* ============= Custom Select Picker=========*/
 $(document).ready(function () {
-    'use strict';
-    $("select").each(function () {
-        'use strict';
-        var $this = $(this),
-            numberOfOptions = $(this).children("option").length;
+  'use strict';
 
-        $this.addClass("select-hidden");
-        $this.wrap('<div class="select"></div>');
-        $this.after('<div class="select-styled"></div>');
+  $("select").each(function () {
+    var $this = $(this),
+      numberOfOptions = $this.children("option").length;
 
-        var $styledSelect = $this.next("div.select-styled");
-        $styledSelect.text(
-            $this
-                .children("option")
-                .eq(0)
-                .text()
-        );
+    $this.addClass("select-hidden");
+    $this.wrap('<div class="select"></div>');
+    $this.after('<div class="select-styled"></div>');
 
-        var $list = $("<ul />", {
-            class: "select-options"
-        }).insertAfter($styledSelect);
+    var $styledSelect = $this.next("div.select-styled");
 
-        for (var i = 0; i < numberOfOptions; i++) {
-            $("<li />", {
-                text: $this
-                    .children("option")
-                    .eq(i)
-                    .text(),
-                rel: $this
-                    .children("option")
-                    .eq(i)
-                    .val()
-            }).appendTo($list);
-        }
+    // ✅ Use selected option as default instead of first
+    var selectedText = $this.children("option:selected").text();
+    $styledSelect.text(selectedText);
 
-        var $listItems = $list.children("li");
+    var $list = $("<ul />", {
+      class: "select-options"
+    }).insertAfter($styledSelect);
 
-        $styledSelect.on('click', function (e) {
-            e.stopPropagation();
-            $("div.select-styled.active")
-                .not(this)
-                .each(function () {
-                    $(this)
-                        .removeClass("active")
-                        .next("ul.select-options")
-                        .hide();
-                });
-            $(this)
-                .toggleClass("active")
-                .next("ul.select-options")
-                .toggle();
+    for (var i = 0; i < numberOfOptions; i++) {
+      var $option = $this.children("option").eq(i);
+
+      $("<li />", {
+        text: $option.text(),
+        rel: $option.val(),
+        class: $option.is(":selected") ? "active" : ""
+      }).appendTo($list);
+    }
+
+    var $listItems = $list.children("li");
+
+    $styledSelect.on('click', function (e) {
+      e.stopPropagation();
+      $("div.select-styled.active")
+        .not(this)
+        .each(function () {
+          $(this).removeClass("active").next("ul.select-options").hide();
         });
 
-      $listItems.on('click', function (e) {
-    e.stopPropagation();
-
-    const selectedText = $(this).text();
-    const selectedValue = $(this).attr("rel");
-
-    $styledSelect.text(selectedText).removeClass("active");
-
-    // Set the <select> value and trigger change
-    $this.val(selectedValue).trigger("change");
-
-    $list.hide();
-});
-        
-
-        $(document).on('click', function () {
-            $styledSelect.removeClass("active");
-            $list.hide();
-        });
+      $(this)
+        .toggleClass("active")
+        .next("ul.select-options")
+        .toggle();
     });
+
+    $listItems.on('click', function (e) {
+      e.stopPropagation();
+
+      var selectedText = $(this).text();
+      var selectedValue = $(this).attr("rel");
+
+      $styledSelect.text(selectedText).removeClass("active");
+
+      // ✅ update original select
+      $this.val(selectedValue).trigger("change");
+
+      // ✅ update active class
+      $listItems.removeClass("active");
+      $(this).addClass("active");
+
+      $list.hide();
+    });
+
+    $(document).on('click', function () {
+      $styledSelect.removeClass("active");
+      $list.hide();
+    });
+  });
 });
 
+// Optional: listen to change
 $("select").on("change", function () {
-    console.log("Changed:", $(this).attr("name"), "→", $(this).val());
+  console.log("Changed:", $(this).attr("name"), "→", $(this).val());
 });
+
 
 
 

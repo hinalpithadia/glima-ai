@@ -1423,14 +1423,14 @@ height: 100%;
   margin-left: 0;
 }
 .mobile-menu-open .mobile-menu-span span:nth-child(1){
-      transform: translate(-1px, 6px) rotate(45deg);
+      transform: translate(-2px, 6px) rotate(45deg);
     width: 13px;
 }
 .mobile-menu-open .mobile-menu-span span:nth-child(3){
      opacity: 0;
 }
 .mobile-menu-open .mobile-menu-span span:nth-child(2){
-      transform:translate(3px, 0px) rotate(130deg);
+      transform:translate(2px, 0px) rotate(130deg);
    
 }
   /* #menuToggle.active span:nth-child(2){

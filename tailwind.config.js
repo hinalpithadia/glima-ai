@@ -18,6 +18,8 @@ module.exports = {
     "./LLM-pages/**/*.html", 
     "./new-generator-page/**/*.html", 
     "./editor-pages/**/*.html", 
+    "./interior-landing-page/**/*.html", 
+    "./use-cases/**/*.html",
   ],
   theme: {
     extend: {

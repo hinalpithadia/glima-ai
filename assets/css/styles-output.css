@@ -2023,7 +2023,7 @@ pre{
 }
 
 .mobile-menu-open .mobile-menu-span span:nth-child(1){
-  transform: translate(-1px, 6px) rotate(45deg);
+  transform: translate(-2px, 6px) rotate(45deg);
   width: 13px;
 }
 
@@ -2032,7 +2032,7 @@ pre{
 }
 
 .mobile-menu-open .mobile-menu-span span:nth-child(2){
-  transform:translate(3px, 0px) rotate(130deg);
+  transform:translate(2px, 0px) rotate(130deg);
 }
 
 /* #menuToggle.active span:nth-child(2){
@@ -9095,6 +9095,11 @@ pre{
   background-color: rgba(198,255,0,0.3);
 }
 
+.peer:checked ~ .peer-checked\:bg-\[\#000\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
 .peer:checked ~ .peer-checked\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -9116,8 +9121,24 @@ pre{
   background-color: rgb(198 255 0 / var(--tw-bg-opacity, 1));
 }
 
+.peer:checked ~ .peer-checked\:after\:bg-\[\#000\]::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.peer:checked ~ .hover\:peer-checked\:bg-\[\#C6FF00\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(198 255 0 / var(--tw-bg-opacity, 1));
+}
+
 .peer:checked ~ .hover\:peer-checked\:bg-\[rgba\(198\2c 255\2c 0\2c 0\.3\)\]:hover {
   background-color: rgba(198,255,0,0.3);
+}
+
+.peer:checked ~ .hover\:peer-checked\:bg-\[\#000\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .peer:focus ~ .peer-focus\:outline-0 {
