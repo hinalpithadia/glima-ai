@@ -3995,6 +3995,10 @@ pre{
   max-height: 200px;
 }
 
+.max-h-\[220px\] {
+  max-height: 220px;
+}
+
 .max-h-\[240px\] {
   max-height: 240px;
 }
@@ -9122,6 +9126,14 @@ pre{
   fill: #fff;
 }
 
+.group.active .group-\[\&\.active\]\:fill-\[\] {
+  fill: ;
+}
+
+.group.active .group-\[\&\.active\]\:fill-\[\#C6FF00\] {
+  fill: #C6FF00;
+}
+
 .group.is-open .group-\[\&\.is-open\]\:pb-3\.5 {
   padding-bottom: 0.875rem;
 }
@@ -11311,6 +11323,11 @@ pre{
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(75 85 99 / var(--tw-ring-opacity, 1));
   }
+}
+
+.\[\&\.active\]\:bg-\[\#0A0A0A\].active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
 }
 
 .\[\&\.active\]\:text-limegreen.active {
