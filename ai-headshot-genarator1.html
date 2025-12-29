@@ -29,7 +29,7 @@
         .card.selected .circle-bg {
             opacity: 100 !important;
         }
-        .tablink.active {
+        .tablinkheadshot.active {
             color: #C6FF00;
             background: #C6FF001A;
         }
@@ -754,11 +754,11 @@
 
             <div class="bg-black rounded-xl w-[380px] flex items-center gap-0.5 p-0.5 whitespace-nowrap">
                 <button
-                    class="w-1/2 px-[22px] text-center text-base font-normal leading-5 rounded-[10px] py-3.5 transition-all duration-500 text-white focus:bg-[#C6FF001A] focus:text-[#C6FF00] tab-active:bg-[C6FF001A] tab-active:text-[#C6FF00] active tablink"
+                    class="w-1/2 px-[22px] text-center text-base font-normal leading-5 rounded-[10px] py-3.5 transition-all duration-500 text-white focus:bg-[#C6FF001A] focus:text-[#C6FF00] tab-active:bg-[C6FF001A] tab-active:text-[#C6FF00] active tablinkheadshot"
                     data-tab="tabs-with-1" role="tab">Create
                     Headshot</button>
                 <button
-                    class="w-1/2 px-[22px] text-center text-base font-normal leading-5 text-white rounded-[10px] py-3.5 transition-all duration-500 hover:bg-[#C6FF001A] hover:text-[#C6FF00] focus:bg-[#C6FF001A] focus:text-[#C6FF00] tab-active:bg-[#C6FF001A] tab-active:text-[#C6FF00] tablink"
+                    class="w-1/2 px-[22px] text-center text-base font-normal leading-5 text-white rounded-[10px] py-3.5 transition-all duration-500 hover:bg-[#C6FF001A] hover:text-[#C6FF00] focus:bg-[#C6FF001A] focus:text-[#C6FF00] tab-active:bg-[#C6FF001A] tab-active:text-[#C6FF00] tablinkheadshot"
                     data-tab="tabs-with-2" role="tab">My
                     Creation</button>
             </div>
@@ -1433,7 +1433,7 @@
         function tabs() {
             document.addEventListener('click', function (event) {
 
-                if (event.target.classList.contains('tablink')) {
+                if (event.target.classList.contains('tablinkheadshot')) {
                     var tab = event.target.dataset.tab;
                     var tabContainer = event.target.closest('.tabs');
                     var tabcontents = tabContainer.querySelectorAll('.tabcontent');
@@ -1441,9 +1441,9 @@
                         tabcontents[i].style.display = 'none';
                     }
 
-                    var tablinks = tabContainer.querySelectorAll('.tablink');
-                    for (var i = 0; i < tablinks.length; i++) {
-                        tablinks[i].classList.remove('active');
+                    var tablinkheadshots = tabContainer.querySelectorAll('.tablinkheadshot');
+                    for (var i = 0; i < tablinkheadshots.length; i++) {
+                        tablinkheadshots[i].classList.remove('active');
                     }
                     var tabcontent = tabContainer.querySelector('#' + tab);
                     tabcontent.style.display = 'block';

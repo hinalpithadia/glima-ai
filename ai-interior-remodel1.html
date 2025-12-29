@@ -1454,9 +1454,9 @@
                         Bohemia
                     </a>
                 </div>
-                <div class="h-[580px] xl:h-[640px] 2xl:h-[700px] overflow-y-auto w-full">
+                <div class="bg-black rounded-xl p-3 w-full">
                     <div id="popup-scroll"
-                        class="overflow-y-auto h-[580px] xl:h-[640px] 2xl:h-[700px] scroll-smooth p-3 bg-black w-full  rounded-[10px] flex flex-col gap-3">
+                        class="h-[547px] xl:h-[607px] 2xl:h-[668px] overflow-y-auto scroll-smooth  w-full  rounded-[10px] flex flex-col gap-3">
                         <div id="popular-edit">
                             <h3 class="text-white text-xl font-medium leading-[30px] mb-2.5">Popular</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 w-full">
@@ -3012,7 +3012,7 @@
             links[0].classList.add("scrollspy-active");
 
             function updateActive() {
-                const scrollPos = popup.scrollTop + 150;
+                const scrollPos = popup.scrollTop + 15;
 
                 sections.forEach((section, index) => {
                     if (!section) return;
@@ -3033,7 +3033,7 @@
                     const target = document.querySelector(link.getAttribute("href"));
 
                     popup.scrollTo({
-                        top: target.offsetTop - 120,
+                        top: target.offsetTop - 15,
                         behavior: "smooth"
                     });
                 });

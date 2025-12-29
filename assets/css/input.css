@@ -74,7 +74,11 @@
       line-height: 18px;
       transition: all .6s ease-in-out;
     }
-  
+    @media(max-width:1024px){
+       .nav-link {
+        font-size: 12px;
+      }
+    }
     .nav-link:hover {
       color: #fff;
     }
@@ -843,7 +847,12 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
     background: #000;
     cursor: ew-resize;
 }
-
+.headhsot-bg{
+    background:url("https://glima.ai/storage/media/1766662790_EBcvphptWkYJu.png");
+}
+.interior-bg{
+    background:url("https://glima.ai/storage/media/1766662814_31JYphp8mFsAT.png");
+}
       .ba-slider2 .ba2-btn-before {
             right: calc(100% + 16px);
             top: 18%;
@@ -1591,7 +1600,10 @@ height: 100%;
       color:#000;
       background: #C6FF00;
     }
-   
+    .tablinkheadshot.active {
+            color: #C6FF00;
+            background: #C6FF001A;
+        }
    
     
 @media(max-width:1500px){
