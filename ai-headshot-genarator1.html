@@ -733,10 +733,10 @@
         </div>
     </nav>
 
-    <div class="w-full relative mt-[65px] px-6 tabs">
+    <div class="w-full relative mt-[65px] lg:px-6 px-5 lg:pb-0 pb-10 tabs">
         <div
-            class="flex items-center justify-center lg:justify-between  flex-wrap lg:flex-nowrap gap-6 py-6 border-b border-[#FFFFFF1A] ">
-            <div class="flex flex-col gap-3">
+            class="flex items-center justify-center lg:justify-between  flex-wrap lg:flex-nowrap gap-6 py-6 lg:border-b border-[#FFFFFF1A] ">
+            <div class="flex flex-col gap-3 lg:items-start items-center">
                 <h2 class="text-2xl font-medium leading-[30px] text-white">Headshot Generator</h2>
                 <p class="text-sm font-light leading-[18px] text-[#797979]">Create professional headshots instantly</p>
             </div>
@@ -751,8 +751,8 @@
                 <button
                     class="w-fit px-[22px] text-center text-base font-normal leading-5 text-white rounded-[10px] py-3.5 transition-all duration-500 hover:bg-black hover:text-[#C6FF00] focus:bg-black focus:text-[#C6FF00] ">Female</button>
             </div>
-
-            <div class="bg-black rounded-xl w-[380px] flex items-center gap-0.5 p-0.5 whitespace-nowrap">
+            <div class="lg:z-0 z-10 lg:relative fixed bottom-0 lg:p-0 p-1 lg:bg-transparent bg-[#111] lg:w-fit  w-full">
+            <div class="bg-black rounded-xl lg:w-[380px] w-full flex items-center gap-0.5 p-0.5 whitespace-nowrap  ">
                 <button
                     class="w-1/2 px-[22px] text-center text-base font-normal leading-5 rounded-[10px] py-3.5 transition-all duration-500 text-white focus:bg-[#C6FF001A] focus:text-[#C6FF00] tab-active:bg-[C6FF001A] tab-active:text-[#C6FF00] active tablinkheadshot"
                     data-tab="tabs-with-1" role="tab">Create
@@ -762,11 +762,12 @@
                     data-tab="tabs-with-2" role="tab">My
                     Creation</button>
             </div>
+            </div>
         </div>
 
-        <div class="max-w-[1468px] w-full mx-auto pt-6 tabcontent" id="tabs-with-1" role="tabpanel"
+        <div class="max-w-[1468px] w-full mx-auto lg:pt-6 pt-0 lg:pb-0 pb-24 tabcontent" id="tabs-with-1" role="tabpanel"
             aria-labelledby="tabs-with-item-1">
-            <div class="h-[600px] lg:h-[1045px]  xl:h-[600px] 2xl:h-[650px] overflow-auto flex flex-col gap-6">
+            <div class="h-full lg:h-[1045px]  xl:h-[600px] 2xl:h-[650px] lg:overflow-auto flex flex-col gap-6">
                 <div class="flex flex-col gap-2.5">
                     <h3 class="text-2xl font-medium leading-[30px] text-white">Casual</h3>
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-7 gap-[9px]">
@@ -1133,8 +1134,8 @@
 
             </div>
             <div
-                class="mt-6 mx-auto w-fit bg-[#000000] rounded-[10px] flex flex-col gap-[7px] items-center justify-center p-[1px]">
-                <button class="pt-[7px] flex items-center gap-1.5 text-white font-medium text-xs"><svg width="16"
+                class="mt-6 mx-auto lg:w-fit w-full lg:bg-[#000000] bg-[#111]   lg:rounded-[10px] rounded-t-xl flex lg:flex-col flex-row gap-[7px] items-center lg:justify-center justify-between lg:p-[4px] p-1 lg:relative fixed lg:bottom-0 bottom-[58px] left-0">
+                <button class="flex items-center gap-2 w-fit lg:pl-0 lg:px-0 px-5"><svg width="16"
                         height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_171_58)">
                             <path
@@ -1177,7 +1178,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    12 Credit</button>
+                    <span class="text-sm font-medium leading-[18px] text-white ">12 Credit</span></button>
                 <button data-modal-target="upload-img-modal"
                     class="w-fit text-nowrap py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] focus:bg-[#D7FF4D]  leading-6 font-semibold text-lg text-black">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1203,13 +1204,14 @@
         <div class="tabcontent hidden pt-6" id="tabs-with-2" role="tabpanel" aria-labelledby="tabs-with-item-2">
             <span class="text-white">demo
             </span>
+            
         </div>
     </div>
 
     <!--upload-img-modal-->
     <div class="modalTrigger  modal-home" style="max-width: 1468px !important;" id="upload-img-modal">
         <div class="p-3 relative w-full  bg-[#111111] rounded-[10px] overflow-auto">
-            <div class="flex flex-wrap items-center gap-4 justify-between">
+            <div class="lg:flex hidden flex-wrap items-center gap-4 justify-between">
                 <div class="flex items-center gap-3.5">
                     <button
                         class="close-btn w-10 h-10 flex items-center justify-center border border-[#FFFFFF33] rounded-lg"><svg
@@ -1239,9 +1241,9 @@
                     Generate Headshot
                 </button>
             </div>
-            <div class="flex flex-col-reverse lg:flex-row gap-2.5 mt-3">
+            <div class="flex flex-col lg:flex-row gap-2.5 mt-3">
                 <div
-                    class="h-auto lg:h-[630px] lg:max-w-[808px] w-full rounded-xl bg-black flex flex-col items-center justify-center gap-6 p-1">
+                    class="h-auto lg:h-[630px] lg:max-w-[808px] w-full rounded-xl bg-black flex lg:flex-col flex-row items-center justify-center gap-6 p-1">
                     <div
                         class="max-w-[452px] w-full p-[1.7px] rounded-lg bg-[linear-gradient(180deg,#1FE06C00,#1FE06C66)]">
                         <div class="bg-black rounded-lg">
@@ -1254,7 +1256,7 @@
                                     <img src="/assets/images/ai-headshot-img4.png" alt="">
                                     <img src="/assets/images/ai-headshot-img5.png" alt="">
                                 </div>
-                                <div class="grid grid-cols-2 gap-2.5 pt-3.5">
+                                <div class="lg:grid flex flex-col grid-cols-2 gap-2.5 pt-3.5">
                                     <ul class="text-xs sm:text-sm font-medium text-white flex flex-col gap-2.5">
                                         <li class="flex items-center gap-[9.28px]"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="21" height="21"
@@ -1304,7 +1306,7 @@
                         </div>
                     </div>
                     <div
-                        class="hidden md:block max-w-[452px] w-full p-[1.7px] rounded-lg bg-[linear-gradient(180deg,#FF000F00,#FF000F66)]">
+                        class=" max-w-[452px] w-full p-[1.7px] rounded-lg bg-[linear-gradient(180deg,#FF000F00,#FF000F66)]">
                         <div class="bg-black rounded-lg">
                             <div class="bg-[#11111180] rounded-lg px-[11.3px] pb-4 pt-[23.22px]">
                                 <h3 class="text-[23.21px] text-center font-medium text-[#FF000F]">Bad Photo Examples
@@ -1315,7 +1317,7 @@
                                     <img src="/assets/images/ai-headshot-img4.png" alt="">
                                     <img src="/assets/images/ai-headshot-img5.png" alt="">
                                 </div>
-                                <div class="grid grid-cols-2 gap-2.5 pt-3.5">
+                                <div class="lg:grid flex flex-col grid-cols-2 gap-2.5 pt-3.5">
                                     <ul class="text-sm font-medium text-white flex flex-col gap-2.5">
                                         <li class="flex items-center gap-[9.28px]"><svg
                                                 xmlns="http://www.w3.org/2000/svg" width="21" height="21"
@@ -1404,7 +1406,7 @@
     <!-- MAIN JS-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
         document.querySelectorAll(".card").forEach(card => {
             card.addEventListener("click", () => {
@@ -1451,6 +1453,110 @@
                 }
             });
         }
+    </script>
+    <script>
+        // ===================== MODAL ===================== //
+
+const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
+const modals = document.querySelectorAll(".modalTrigger");
+const modalCloseButtons = document.querySelectorAll(".modal-close");
+const closeButtons = document.querySelectorAll(".close-btn");
+const overlay = document.querySelector(".overlay-modal");
+
+// OPEN MODAL
+modalTriggerButtons.forEach(button => {
+  button.addEventListener("click", e => {
+    const targetModalId = e.currentTarget.getAttribute("data-modal-target");
+
+    // Close other modals first
+    modals.forEach(modal => {
+      if (modal.id !== targetModalId) {
+        closeModal(modal.id, false);
+      }
+    });
+
+    openModal(targetModalId);
+    showOverlay();
+  });
+});
+
+// CLOSE BUTTONS
+[...modalCloseButtons, ...closeButtons].forEach(btn => {
+  btn.addEventListener("click", closeAllModals);
+});
+
+// CLICK OUTSIDE MODAL CONTENT
+modals.forEach(modal => {
+  modal.addEventListener("click", e => {
+    if (e.target === modal) closeAllModals();
+  });
+});
+
+// ESC KEY CLOSE
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeAllModals();
+});
+
+// ===================== FUNCTIONS ===================== //
+
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+
+  modal.style.display = "flex";
+
+  // Reset animation state
+  modal.classList.remove("modal-hide");
+  modal.offsetHeight; // force reflow (important)
+  modal.classList.add("modal-show");
+
+  lockBodyScroll();
+}
+
+function closeModal(modalId, hideOverlay = true) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+
+  modal.classList.remove("modal-show");
+  modal.classList.add("modal-hide");
+
+  setTimeout(() => {
+    modal.style.display = "none";
+    modal.classList.remove("modal-hide");
+  }, 300); // must match CSS animation duration
+
+  if (hideOverlay) hideOverlayModal();
+  unlockBodyScroll();
+}
+
+function closeAllModals() {
+  modals.forEach(modal => closeModal(modal.id, true));
+}
+
+// ===================== OVERLAY ===================== //
+
+function showOverlay() {
+  overlay.style.visibility = "visible";
+  overlay.style.opacity = "1";
+  overlay.style.zIndex = "200";
+}
+
+function hideOverlayModal() {
+  overlay.style.opacity = "0";
+  overlay.style.visibility = "hidden";
+  overlay.style.zIndex = "-1";
+}
+
+// ===================== BODY SCROLL ===================== //
+
+function lockBodyScroll() {
+  document.body.style.overflow = "hidden";
+}
+
+function unlockBodyScroll() {
+  document.body.style.overflow = "";
+}
+
     </script>
 </body>
 

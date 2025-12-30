@@ -5,11 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glima</title>
-    <link rel="stylesheet" href="/assets/css/styles-output.css">
+    <link rel="stylesheet" href="assets/css/styles-output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
+    <style>
+        @media (max-width: 1023.98px) {
+            .dropdown-hover-effect {
+                display: none;
+            }
+
+            .wrapper-dropdown-effect.active .dropdown-hover-effect {
+                display: block;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .dropdown-hover-effect {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(-33%) scale(0.95);
+                transition:
+                    opacity 0.5s ease-out,
+                    transform 0.5s ease-out,
+                    visibility 08 linear 0.5s;
+            }
+
+            .wrapper-dropdown-effect:hover .dropdown-hover-effect {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-33%) scale(1);
+                transition:
+                    opacity 0.5s ease-out,
+                    transform 0.5s ease-out,
+                    visibility 0s;
+            }
+
+            .wrapper-dropdown-effect:hover .arrow-svg {
+                transform: rotate(180deg);
+            }
+        }
+
+    </style>
 </head>
 
-<body class="relative bg-[#0A0A0A] xl:overflow-hidden">
+<body class="relative bg-[#0A0A0A] lg:overflow-hidden">
     <!--navbar-->
     <nav id="navbar"
         class="navbar fixed top-0 w-full z-50 border-b border-white/10 max-lg:backdrop-blur-lg backdrop-blur-lg bg-[#111111]">
@@ -704,307 +743,142 @@
             </div>
         </div>
     </nav>
-    <div class="w-full relative px-4 pt-24  xl:pt-[95px] md:pb-3  pb-44">
+
+    
+    <!-- Tool Progress... area -->
+    <div class="w-full relative px-5 pt-24 pb-3 xl:pt-[90px]" >
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
-                <h1 class="md:text-4xl text-2xl font-medium lg:leading-[50px] text-white">AI Image Combiner
-                </h1>
-                <p class="font-normal text-sm md:text-base text-[#797979] leading-5 md:leading-7">Combine multiple
-                    photos into a single image
-                    effortlessly, with AI blending everything naturally.</p>
+                <h1 class="md:text-4xl text-2xl font-medium lg:leading-[50px] text-white">Ai Inpaint image</h1>
+                <p class="font-normal text-sm md:text-base  text-[#797979] leading-5 md:leading-7">Easily replace any part of your image with new
+                    objects, backgrounds, or elements using smart AI.</p>
             </div>
-            <div class="pt-5 md:pt-6 flex flex-col gap-5 md:gap-6">
+            <div class="pt-6 flex flex-col gap-6">
                 <!--main Img box -->
-                <div class="w-full md:rounded-3xl rounded-2xl bg-[#111111] p-1 md:p-2.5 relative">
-                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-1 md:gap-2.5">
-                        <div class="flex flex-col gap-3">
-                            <div
-                                class="bg-black h-[164px] md:h-[194px] lg:h-[200px] 2xl:h-[250px] rounded-xl md:rounded-2xl p-3 relative border border-transparent transition-all duration-500 hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
-                                <label class="absolute inset-0 cursor-pointer rounded-3xl z-30">
-                                    <input type="file" class="hidden" accept="image/*">
-                                </label>
-                                <div
-                                    class="flex flex-col items-center justify-center gap-2 md:gap-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                    <svg width="60" height="60" viewBox="0 0 82 82" fill="none"
-                                        class="w-8 h-8 sm:w-auto sm:h-auto" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M30.7501 34.1667C34.524 34.1667 37.5834 31.1073 37.5834 27.3333C37.5834 23.5594 34.524 20.5 30.7501 20.5C26.9761 20.5 23.9167 23.5594 23.9167 27.3333C23.9167 31.1073 26.9761 34.1667 30.7501 34.1667Z"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M44.4166 6.83398H30.7499C13.6666 6.83398 6.83325 13.6673 6.83325 30.7507V51.2507C6.83325 68.334 13.6666 75.1673 30.7499 75.1673H51.2499C68.3333 75.1673 75.1666 68.334 75.1666 51.2507V34.1673"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M53.8125 17.084H72.6042" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path d="M63.2083 26.4792V7.6875" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path
-                                            d="M9.12256 64.7466L25.9667 53.4374C28.6659 51.6266 32.5609 51.8316 34.9867 53.9157L36.1142 54.9066C38.7792 57.1957 43.0842 57.1957 45.7492 54.9066L59.9626 42.7091C62.6276 40.4199 66.9326 40.4199 69.5976 42.7091L75.1667 47.4924"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <div class="flex flex-col items-center justify-center gap-0.5 md:gap-2.5">
-                                        <h4
-                                            class="block md:hidden text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image
-                                        </h4>
-                                        <h4
-                                            class="hidden md:block text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image Here
-                                        </h4>
-                                        <p
-                                            class="text-[10px] md:text-sm font-normal text-[#797979] text-center sm:min-w-28">
-                                            Drop your image to add
-                                            in to the editor
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3">
-                            <div
-                                class="bg-black h-[164px] md:h-[194px] lg:h-[200px] 2xl:h-[250px] rounded-xl md:rounded-2xl relative border border-transparent transition-all duration-500 hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
-                                <label class="absolute inset-0 cursor-pointer rounded-3xl z-30">
-                                    <input type="file" class="hidden" accept="image/*">
-                                </label>
-                                <div
-                                    class="flex flex-col items-center justify-center gap-2 md:gap-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                    <svg width="60" height="60" viewBox="0 0 82 82" fill="none"
-                                        class="w-8 h-8 sm:w-auto sm:h-auto" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M30.7501 34.1667C34.524 34.1667 37.5834 31.1073 37.5834 27.3333C37.5834 23.5594 34.524 20.5 30.7501 20.5C26.9761 20.5 23.9167 23.5594 23.9167 27.3333C23.9167 31.1073 26.9761 34.1667 30.7501 34.1667Z"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M44.4166 6.83398H30.7499C13.6666 6.83398 6.83325 13.6673 6.83325 30.7507V51.2507C6.83325 68.334 13.6666 75.1673 30.7499 75.1673H51.2499C68.3333 75.1673 75.1666 68.334 75.1666 51.2507V34.1673"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M53.8125 17.084H72.6042" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path d="M63.2083 26.4792V7.6875" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path
-                                            d="M9.12256 64.7466L25.9667 53.4374C28.6659 51.6266 32.5609 51.8316 34.9867 53.9157L36.1142 54.9066C38.7792 57.1957 43.0842 57.1957 45.7492 54.9066L59.9626 42.7091C62.6276 40.4199 66.9326 40.4199 69.5976 42.7091L75.1667 47.4924"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <div class="flex flex-col items-center justify-center gap-0.5 md:gap-2.5">
-                                        <h4
-                                            class="block md:hidden text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image
-                                        </h4>
-                                        <h4
-                                            class="hidden md:block text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image Here
-                                        </h4>
-                                        <p
-                                            class="text-[10px] md:text-sm font-normal text-[#797979] text-center sm:min-w-28">
-                                            Drop your image to add
-                                            in to the editor
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="w-full md:h-[500px] p-2.5 rounded-3xl md:p-0   bg-[#111111] flex items-center justify-center relative">
+                    <div class="flex flex-col justify-center items-center h-full w-full z-40 relative">
+                        <div class="w-fit h-full relative">
+                            <img src="../assets/images/ai-inpiant-img.png" alt="img"
+                                class="max-w-full max-h-full w-fit h-fit object-contain">
+                            <button
+                                class="w-11 h-11 flex items-center justify-center rounded-[10px] bg-[#FFFFFF2E] backdrop-blur-[3px] absolute md:top-5 top-3  md:right-5 right-3 transition-all duration-500 hover:bg-[#FFFFFF18]"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                    fill="none">
+                                    <path d="M8.25 10.5391H13.75" stroke="white" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M9.625 14.2109H12.375" stroke="white" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M17.875 5.03906L17.0627 18.4416C17.0041 19.4093 16.2022 20.1641 15.2327 20.1641H6.76726C5.79781 20.1641 4.99592 19.4093 4.93728 18.4416L4.125 5.03906"
+                                        stroke="white" stroke-width="1.8" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M2.75 5.04427H7.33333M7.33333 5.04427L8.47023 2.39151C8.61468 2.05447 8.94609 1.83594 9.31278 1.83594H12.6872C13.0539 1.83594 13.3854 2.05447 13.5297 2.39151L14.6667 5.04427M7.33333 5.04427H14.6667M19.25 5.04427H14.6667"
+                                        stroke="white" stroke-width="1.8" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg></button>
                         </div>
 
-                        <div class="flex flex-col gap-3">
-                            <div
-                                class="bg-black h-[164px] md:h-[194px] lg:h-[200px] 2xl:h-[250px] rounded-xl md:rounded-2xl  relative border border-transparent transition-all duration-500 hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
-                                <label class="absolute inset-0 cursor-pointer rounded-3xl z-30">
-                                    <input type="file" class="hidden" accept="image/*">
-                                </label>
-                                <div
-                                    class="flex flex-col items-center justify-center gap-2 md:gap-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                    <svg width="60" height="60" viewBox="0 0 82 82" fill="none"
-                                        class="w-8 h-8 sm:w-auto sm:h-auto" xmlns="http://www.w3.org/2000/svg">
+                        <div
+                            class="flex  items-center gap-2 justify-center md:justify-between w-full h-fit md:absolute fixed md:bottom-3.5 bottom-40 py-3 md:py-0 px-3.5">
+                            <div class="flex items-center gap-2.5">
+                                <button
+                                    class="w-11 h-11 flex items-center justify-center rounded-[10px] bg-[#FFFFFF2E] backdrop-blur-[3px] transition-all duration-500 hover:bg-[#FFFFFF18]"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none">
                                         <path
-                                            d="M30.7501 34.1667C34.524 34.1667 37.5834 31.1073 37.5834 27.3333C37.5834 23.5594 34.524 20.5 30.7501 20.5C26.9761 20.5 23.9167 23.5594 23.9167 27.3333C23.9167 31.1073 26.9761 34.1667 30.7501 34.1667Z"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
+                                            d="M1.83366 9.16667H14.667C22.0003 9.16667 22.0003 19.25 14.667 19.25M1.83366 9.16667L8.25033 2.75M1.83366 9.16667L8.25033 15.5833"
+                                            stroke="white" stroke-width="1.8" stroke-linecap="round"
                                             stroke-linejoin="round" />
+                                    </svg></button>
+                                <button
+                                    class="w-11 h-11 flex items-center justify-center rounded-[10px] bg-[#FFFFFF2E] backdrop-blur-[3px] transition-all duration-500 hover:bg-[#FFFFFF18]"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none">
                                         <path
-                                            d="M44.4166 6.83398H30.7499C13.6666 6.83398 6.83325 13.6673 6.83325 30.7507V51.2507C6.83325 68.334 13.6666 75.1673 30.7499 75.1673H51.2499C68.3333 75.1673 75.1666 68.334 75.1666 51.2507V34.1673"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
+                                            d="M20.1663 9.16667H7.33301C-0.000325561 9.16667 -0.000325561 19.25 7.33301 19.25M20.1663 9.16667L13.7497 2.75M20.1663 9.16667L13.7497 15.5833"
+                                            stroke="white" stroke-width="1.8" stroke-linecap="round"
                                             stroke-linejoin="round" />
-                                        <path d="M53.8125 17.084H72.6042" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path d="M63.2083 26.4792V7.6875" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path
-                                            d="M9.12256 64.7466L25.9667 53.4374C28.6659 51.6266 32.5609 51.8316 34.9867 53.9157L36.1142 54.9066C38.7792 57.1957 43.0842 57.1957 45.7492 54.9066L59.9626 42.7091C62.6276 40.4199 66.9326 40.4199 69.5976 42.7091L75.1667 47.4924"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <div class="flex flex-col items-center justify-center gap-0.5 md:gap-2.5">
-                                        <h4
-                                            class="block md:hidden text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image
-                                        </h4>
-                                        <h4
-                                            class="hidden md:block text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image Here
-                                        </h4>
-                                        <p
-                                            class="text-[10px] md:text-sm font-normal text-[#797979] text-center sm:min-w-28">
-                                            Drop your image to add
-                                            in to the editor
-                                        </p>
+                                    </svg></button>
+                            </div>
+                            <div class="relative md:bg-[#00000080] bg-[#000] rounded-[10px] md:max-w-[226px] max-w-full p-[13px]">
+                                <div class="w-[200px] h-[18px] bg-black rounded-md relative overflow-hidden">
+                                    <!-- filled progress -->
+                                    <div class="absolute top-0 left-0 h-full bg-[#C6FF00] rounded-md"
+                                        style="width: 60%;"></div>
+
+                                    <!-- control knob -->
+                                    <div
+                                        class="absolute top-1/2 -translate-y-1/2 right-[40%] w-[14px] h-[18px] bg-white rounded-md shadow-md flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18"
+                                            viewBox="0 0 14 18" fill="none">
+                                            <rect width="14" height="18" rx="4" fill="white" />
+                                            <mask id="path-2-inside-1_5612_2023" fill="white">
+                                                <path d="M4 5H10V13H4V5Z" />
+                                            </mask>
+                                            <path d="M10 5H8.8V13H10H11.2V5H10ZM4 13H5.2V5H4H2.8V13H4Z" fill="black"
+                                                mask="url(#path-2-inside-1_5612_2023)" />
+                                        </svg>
+
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="flex flex-col gap-3">
-                            <div
-                                class="bg-black h-[164px] md:h-[194px] lg:h-[200px] 2xl:h-[250px] rounded-xl md:rounded-2xl  relative border border-transparent transition-all duration-500 hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
-                                <label class="absolute inset-0 cursor-pointer rounded-3xl z-30">
-                                    <input type="file" class="hidden" accept="image/*">
-                                </label>
-                                <div
-                                    class="flex flex-col items-center justify-center gap-2 md:gap-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                    <svg width="60" height="60" viewBox="0 0 82 82" fill="none"
-                                        class="w-8 h-8 sm:w-auto sm:h-auto" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M30.7501 34.1667C34.524 34.1667 37.5834 31.1073 37.5834 27.3333C37.5834 23.5594 34.524 20.5 30.7501 20.5C26.9761 20.5 23.9167 23.5594 23.9167 27.3333C23.9167 31.1073 26.9761 34.1667 30.7501 34.1667Z"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M44.4166 6.83398H30.7499C13.6666 6.83398 6.83325 13.6673 6.83325 30.7507V51.2507C6.83325 68.334 13.6666 75.1673 30.7499 75.1673H51.2499C68.3333 75.1673 75.1666 68.334 75.1666 51.2507V34.1673"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M53.8125 17.084H72.6042" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path d="M63.2083 26.4792V7.6875" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path
-                                            d="M9.12256 64.7466L25.9667 53.4374C28.6659 51.6266 32.5609 51.8316 34.9867 53.9157L36.1142 54.9066C38.7792 57.1957 43.0842 57.1957 45.7492 54.9066L59.9626 42.7091C62.6276 40.4199 66.9326 40.4199 69.5976 42.7091L75.1667 47.4924"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <div class="flex flex-col items-center justify-center gap-0.5 md:gap-2.5">
-                                        <h4
-                                            class="block md:hidden text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image
-                                        </h4>
-                                        <h4
-                                            class="hidden md:block text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image Here
-                                        </h4>
-                                        <p
-                                            class="text-[10px] md:text-sm font-normal text-[#797979] text-center sm:min-w-28">
-                                            Drop your image to add
-                                            in to the editor
-                                        </p>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
+                            <button
+                                class="md:w-auto md:h-auto w-[44px] h-[44px] py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] font-semibold text-lg text-black">
+                               <span class="md:block hidden"> Confirm </span>
+                               <svg class="md:hidden block" width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.39844 7.40039L5.39844 11.4004L15.3984 1.40039" stroke="black" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 
 
-                        <div class="flex flex-col gap-3">
-                            <div
-                                class="bg-black h-[164px] md:h-[194px] lg:h-[200px] 2xl:h-[250px] rounded-[20px] md:rounded-2xl relative border border-transparent transition-all duration-500 hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
-                                <label class="absolute inset-0 cursor-pointer rounded-3xl z-30">
-                                    <input type="file" class="hidden" accept="image/*">
-                                </label>
-                                <div
-                                    class="flex flex-col items-center justify-center gap-2 md:gap-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                    <svg width="60" height="60" viewBox="0 0 82 82" fill="none"
-                                        class="w-8 h-8 sm:w-auto sm:h-auto" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M30.7501 34.1667C34.524 34.1667 37.5834 31.1073 37.5834 27.3333C37.5834 23.5594 34.524 20.5 30.7501 20.5C26.9761 20.5 23.9167 23.5594 23.9167 27.3333C23.9167 31.1073 26.9761 34.1667 30.7501 34.1667Z"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M44.4166 6.83398H30.7499C13.6666 6.83398 6.83325 13.6673 6.83325 30.7507V51.2507C6.83325 68.334 13.6666 75.1673 30.7499 75.1673H51.2499C68.3333 75.1673 75.1666 68.334 75.1666 51.2507V34.1673"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M53.8125 17.084H72.6042" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path d="M63.2083 26.4792V7.6875" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path
-                                            d="M9.12256 64.7466L25.9667 53.4374C28.6659 51.6266 32.5609 51.8316 34.9867 53.9157L36.1142 54.9066C38.7792 57.1957 43.0842 57.1957 45.7492 54.9066L59.9626 42.7091C62.6276 40.4199 66.9326 40.4199 69.5976 42.7091L75.1667 47.4924"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <div class="flex flex-col items-center justify-center gap-0.5 md:gap-2.5">
-                                        <h4
-                                            class="block md:hidden text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image
-                                        </h4>
-                                        <h4
-                                            class="hidden md:block text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image Here
-                                        </h4>
-                                        <p
-                                            class="text-[10px] md:text-sm font-normal text-[#797979] text-center sm:min-w-28">
-                                            Drop your image to add
-                                            in to the editor
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            </button>
                         </div>
-                        <div class="flex flex-col gap-3">
-                            <div
-                                class="bg-black h-[164px] md:h-[194px] lg:h-[200px] 2xl:h-[250px] rounded-[20px] md:rounded-2xl p-3 relative border border-transparent transition-all duration-500 hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
-                                <label class="absolute inset-0 cursor-pointer rounded-3xl z-30">
-                                    <input type="file" class="hidden" accept="image/*">
-                                </label>
-                                <div
-                                    class="flex flex-col items-center justify-center gap-2 md:gap-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                    <svg width="60" height="60" viewBox="0 0 82 82" fill="none"
-                                        class="w-8 h-8 sm:w-auto sm:h-auto" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M30.7501 34.1667C34.524 34.1667 37.5834 31.1073 37.5834 27.3333C37.5834 23.5594 34.524 20.5 30.7501 20.5C26.9761 20.5 23.9167 23.5594 23.9167 27.3333C23.9167 31.1073 26.9761 34.1667 30.7501 34.1667Z"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M44.4166 6.83398H30.7499C13.6666 6.83398 6.83325 13.6673 6.83325 30.7507V51.2507C6.83325 68.334 13.6666 75.1673 30.7499 75.1673H51.2499C68.3333 75.1673 75.1666 68.334 75.1666 51.2507V34.1673"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M53.8125 17.084H72.6042" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path d="M63.2083 26.4792V7.6875" stroke="white" stroke-width="3"
-                                            stroke-linecap="round" />
-                                        <path
-                                            d="M9.12256 64.7466L25.9667 53.4374C28.6659 51.6266 32.5609 51.8316 34.9867 53.9157L36.1142 54.9066C38.7792 57.1957 43.0842 57.1957 45.7492 54.9066L59.9626 42.7091C62.6276 40.4199 66.9326 40.4199 69.5976 42.7091L75.1667 47.4924"
-                                            stroke="white" stroke-width="3" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <div class="flex flex-col items-center justify-center gap-0.5 md:gap-2.5">
-                                        <h4
-                                            class="block md:hidden text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image
-                                        </h4>
-                                        <h4
-                                            class="hidden md:block text-center font-normal text-xs md:text-xl text-white min-w-36 sm:min-w-72">
-                                            Upload Image Here
-                                        </h4>
-                                        <p
-                                            class="text-[10px] md:text-sm font-normal text-[#797979] text-center sm:min-w-28">
-                                            Drop your image to add
-                                            in to the editor
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-                <!-- Prompt Area (mobile fixed)-->
-                <div class="flex flex-col gap-1 bg-[#111111] max-w-[800px] w-full mx-auto p-1 rounded-[10px] md:relative fixed left-0 bottom-0 md:z-0 z-10">
-                    <div class="w-full md:h-auto h-[90px]">
-                        <textarea name="" id=""
-                            class="bg-black rounded-[10px] px-4 py-3 md:min-h-[98px] min-h-[90px] font-light w-full text-white outline-none text-base placeholder:text-white placeholder:opacity-40"
-                            placeholder="Describe what you want to replace..."></textarea>
+
+                <!-- Prompt Area -->
+                <div
+                    class="mt-6 flex flex-col gap-1 bg-[#111111] max-w-[902px] w-full mx-auto p-1 md:rounded-[10px] rounded-t-[12px] opacity-50 md:relative fixed bottom-0 left-0">
+                    <div class="flex items-center gap-1">
+                        <div class="rounded-[10px] bg-black md:w-[98px] md:h-24 w-[90px] h-[90px] flex flex-col relative p-1  justify-center items-center shrink-0 ">
+                            <label class="absolute z-30 inset-0 cursor-pointer rounded-3xl">
+                                <input type="file" class="hidden" accept="image/*">
+                            </label>
+                            <div
+                                class="absolute z-0 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M9 10C10.1046 10 11 9.10457 11 8C11 6.89543 10.1046 6 9 6C7.89543 6 7 6.89543 7 8C7 9.10457 7.89543 10 9 10Z"
+                                        stroke="#4D4D4D" stroke-width="1.2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M13 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V10"
+                                        stroke="#4D4D4D" stroke-width="1.2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M15.75 5H21.25" stroke="#4D4D4D" stroke-width="1.2"
+                                        stroke-linecap="round" />
+                                    <path d="M18.5 7.75V2.25" stroke="#4D4D4D" stroke-width="1.2"
+                                        stroke-linecap="round" />
+                                    <path
+                                        d="M2.66992 18.9525L7.59992 15.6425C8.38992 15.1125 9.52992 15.1725 10.2399 15.7825L10.5699 16.0725C11.3499 16.7425 12.6099 16.7425 13.3899 16.0725L17.5499 12.5025C18.3299 11.8325 19.5899 11.8325 20.3699 12.5025L21.9999 13.9025"
+                                        stroke="#4D4D4D" stroke-width="1.2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <a href="" class="text-xs font-normal text-center text-[#4D4D4D] md:block hidden">Reference
+                                    Image</a>
+                            </div>
+                        </div>
+                        <div class="w-full md:max-w-[792px] md:min-h-[98px] h-[90px] max-w-full">
+                            <textarea name="" id=""
+                                class="bg-black rounded-[10px] px-4 py-3 h-[90px] md:min-h-[98px] font-light w-full text-white outline-none text-base placeholder:text-white placeholder:opacity-40"
+                                placeholder="Describe what you want to replace..."></textarea>
+                        </div>
                     </div>
-                    <div class="w-full  rounded-[10px] flex gap-4 items-center justify-between ">
-                        <button class="pt-1.5 flex items-center gap-1.5 text-white font-medium text-xs px-[18px]"><svg
-                                width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                    <div class="w-full rounded-[10px] flex gap-4 items-center md:justify-end justify-between ">
+                        <button class="pt-1.5 flex items-center gap-1.5 text-white font-medium text-xs md:px-0 px-5"><svg width="16"
+                                height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_171_58)">
                                     <path
                                         d="M7.99823 15.9965C12.4155 15.9965 15.9965 12.4155 15.9965 7.99823C15.9965 3.58093 12.4155 0 7.99823 0C3.58093 0 0 3.58093 0 7.99823C0 12.4155 3.58093 15.9965 7.99823 15.9965Z"
@@ -1048,7 +922,7 @@
                             </svg>
                             12 Credit</button>
                         <button
-                            class="py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] focus:bg-[#D7FF4D] leading-6 font-semibold text-lg text-black">
+                            class="py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] font-semibold text-lg text-black">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_171_52)">
@@ -1065,20 +939,17 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            Image Combiner
+                            Image Replace
                         </button>
                     </div>
-                    
                 </div>
             </div>
         </div>
-
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

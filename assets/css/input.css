@@ -136,9 +136,15 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
 }
 
 .rotate-animation {
-  animation: rotate360 10s linear infinite;
-      transform-box: fill-box;
-    transform-origin: center center;
+   animation: rotate360 10s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.rotate-animation1 {
+   animation: rotate360 30s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
 }
 @keyframes rotate360 {
   from {
@@ -150,6 +156,11 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
 }
 .rotate-animation-reverse {
   animation: rotate360-reverse 10s linear reverse infinite;
+      transform-box: fill-box;
+    transform-origin: center center;
+}
+.rotate-animation-reverse1 {
+  animation: rotate360-reverse 40s linear reverse infinite;
       transform-box: fill-box;
     transform-origin: center center;
 }
@@ -264,6 +275,42 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
       opacity: 0;
       visibility: hidden;
     }
+    @media (max-width: 767px) {
+  .modalTrigger {
+    align-items: flex-end; /* stick to bottom */
+  }
+
+      .modalTrigger.modal-show {
+        animation: slideUp 0.35s ease forwards;
+        left: 0%;
+        top: 10%;
+        margin: 0;
+        padding: 0;
+        z-index: 1000;
+    }
+
+  .modalTrigger.modal-hide {
+    animation: slideDown 0.25s ease forwards;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
     .modal {
       position: fixed;
       left: 28.5%;
@@ -858,6 +905,7 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
             top: 18%;
             transform: translateY(-50%);
         }
+       
         .dashboard-ba-slider.ba-slider2 .ba2-btn-before {
             right: calc(100% + 4px);
             top: 18%;
@@ -876,8 +924,8 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
 
          @media (max-width: 640px) {
             .ba-slider2 .ba2-btn {
-                padding: 4px 14px;
-                font-size: 12px;
+                padding: 4px 14px!important;
+                font-size: 12px!important;
             }
 
             .ba-slider2 .ba2-btn-before {
@@ -1593,6 +1641,18 @@ height: 100%;
 .select-options li[rel="hide"] {
 	display: none;
 }
+/*===scrollspy===*/
+ .scrollspy-link.active {
+            color: #C6FF00!important;
+            font-weight: bold;
+        }
+         .scrollspy-active {
+            background-color: rgba(198, 255, 0, 0.10)!important;
+            color: #C6FF00!important;
+        }
+         .scrollspy-link.scrollspy-active svg{
+            color: #C6FF00!important;
+         }
 /*======tabs css=======*/
 
   
