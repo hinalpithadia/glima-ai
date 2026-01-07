@@ -713,11 +713,21 @@
                 </div>
             </div>
         </nav>
+        <div class="scrollspy-scroll flex lg:flex-row flex-col w-full">
         <!--SideBar-->
-        <div class="relative flex md:h-full gap-5 md:overflow-hidden p-3 md:p-5 pb-0 md:pr-0 pt-0">
+        <div class="relative flex lg:h-full gap-5 lg:overflow-hidden " id="create-section">
             <aside
-                class="md:fixed relative md:left-0 top-[65px] xl:w-[392px] lg:w-[280px] w-full md:w-[280px] md:h-[calc(100vh-64px)] overflow-y-auto scrollbar-hide z-40 flex justify-between flex-col bg-black-[#0A0A0A] nav-list pt-5  md:border-r border-[#222222]">
-                <div class="flex flex-col pb-8 px-3">
+                class="relative w-full h-auto overflow-visible
+    lg:fixed lg:left-0 lg:top-[65px]
+    lg:w-[280px] xl:w-[404px]
+    lg:h-[calc(100vh-64px)] lg:overflow-y-auto
+    lg:z-50 lg:pt-0 pt-[65px]
+    flex flex-col justify-between
+    bg-[#0A0A0A]
+    nav-list
+    lg:border-r border-[#222222]
+    scrollbar-hide">
+                <div class="flex flex-col pb-8 lg:px-3 px-5 pt-5 relative ">
                     <h2 class="text-xl font-medium text-white pb-5">Product On Hand</h2>
                     <ul class="flex flex-col gap-4">
                         <li class="">
@@ -729,7 +739,7 @@
                                     </label>
                                 </div>
                                 <div
-                                    class="bg-black min-h-52 sm:h-[160px] 2xl:h-[190px] rounded-[10px] p-1.5 relative outline-none flex justify-center transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
+                                    class="bg-black min-h-52 lg:max-w-full md:max-w-[350px] max-w-fullg:mx-0 md:mx-auto m-0  lg:aspect-auto aspect-square lg:h-[160px] 2xl:h-[190px] rounded-[10px] p-1.5 relative outline-none flex justify-center transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
                                     <button
                                         class="absolute z-20 top-3 right-3 w-8 h-8 flex items-center justify-center rounded-[6px] bg-[#FFFFFF2E] backdrop-blur-[3px] transition-all duration-500 hover:bg-[#FFFFFF18]"><svg
                                             xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -752,7 +762,7 @@
                             </label>
                            <div class="flex flex-col gap-2.5">
                                 <div
-                                    class="bg-black min-h-52 sm:h-[160px] 2xl:h-[380px] rounded-[10px] p-1.5 relative outline-none flex justify-center transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
+                                    class="bg-black min-h-52 lg:max-w-full md:max-w-[350px] max-w-fullg:mx-0 md:mx-auto m-0 lg:aspect-auto aspect-square lg:h-[160px] 2xl:h-[380px] rounded-[10px] p-1.5 relative outline-none flex justify-center transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
                                     <button
                                         class="absolute z-20 top-3 right-3 w-8 h-8 flex items-center justify-center rounded-[6px] bg-[#FFFFFF2E] backdrop-blur-[3px] transition-all duration-500 hover:bg-[#FFFFFF18]"><svg
                                             xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -827,86 +837,86 @@
                     </ul>
 
                 </div>
-                <!-- The button should have position absolute, bottom 0 to stick to the bottom -->
-                <div class="bg-[#0A0A0A] border-t border-[#222222] sticky bottom-0 w-full left-0 right-0 p-4">
-                    <div class="flex items-center justify-between gap-2 mx-auto p-1 bg-black rounded-[10px]">
-                        <div class="flex items-center gap-2 w-fit lg:pl-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
-                                fill="none">
-                                <g clip-path="url(#clip0_5669_2017)">
-                                    <path
-                                        d="M8.99801 17.996C13.9675 17.996 17.996 13.9675 17.996 8.99801C17.996 4.02855 13.9675 0 8.99801 0C4.02855 0 0 4.02855 0 8.99801C0 13.9675 4.02855 17.996 8.99801 17.996Z"
-                                        fill="#C6FF00" />
-                                    <path opacity="0.2"
-                                        d="M4.02035 9.71413L1.91485 3.44531C1.28718 4.24381 0.794572 5.1456 0.464844 6.12684L5.3631 17.2343C5.97091 17.5045 6.61448 17.7071 7.28585 17.8382L4.02035 9.71413Z"
-                                        fill="white" />
-                                    <path
-                                        d="M6.47158 4.26327L6.85295 3.81436L5.60952 0.664062C5.37116 0.759406 5.14075 0.866667 4.91431 0.981873L6.47158 4.26327Z"
-                                        fill="#E5FF8C" />
-                                    <path opacity="0.2"
-                                        d="M13.0461 5.5883L16.7765 13.5336C16.9949 13.1601 17.1856 12.7668 17.3525 12.3616L11.3618 0.316616C10.9486 0.205382 10.5275 0.121957 10.0945 0.0703125L13.0461 5.5883Z"
-                                        fill="white" />
-                                    <path
-                                        d="M14.6449 14.827C17.6603 11.8116 17.6603 6.92276 14.6449 3.90741C11.6296 0.892064 6.74075 0.892065 3.7254 3.90741C0.710049 6.92276 0.710049 11.8116 3.7254 14.827C6.74075 17.8423 11.6296 17.8423 14.6449 14.827Z"
-                                        fill="white" />
-                                    <path
-                                        d="M14.4773 14.4654C17.5088 11.434 17.5088 6.51911 14.4773 3.4877C11.4459 0.45628 6.53103 0.456279 3.49961 3.4877C0.468191 6.51911 0.468191 11.434 3.49961 14.4654C6.53103 17.4968 11.4459 17.4968 14.4773 14.4654Z"
-                                        fill="#9BC30F" />
-                                    <path opacity="0.3"
-                                        d="M15.563 5C16.1042 6.03178 16.4074 7.19813 16.4074 8.43178C16.4074 12.6396 12.8616 16.049 8.48521 16.049C5.80248 16.049 3.43235 14.7705 2 12.8101C3.30637 15.2953 5.98444 17 9.07775 17C13.4541 17 17 13.5907 17 9.3828C17.0046 7.74991 16.4728 6.23813 15.563 5Z"
-                                        fill="#C1F702" />
-                                    <path
-                                        d="M1.1963 8.9191C1.1963 4.70337 4.83977 1.28315 9.33067 1.28315C12.0884 1.28315 14.5302 2.57303 16 4.54607C14.5589 2.41124 12.0214 1 9.12959 1C4.63868 1 1 4.41573 1 8.63146C1 10.2584 1.54102 11.764 2.46505 13C1.66071 11.8225 1.1963 10.4202 1.1963 8.9191Z"
-                                        fill="white" />
-                                    <path
-                                        d="M8.53107 4.26725C8.69215 3.83194 9.30785 3.83194 9.46893 4.26725L10.5408 7.16383C10.5914 7.30069 10.6993 7.4086 10.8362 7.45924L13.7327 8.53107C14.1681 8.69215 14.1681 9.30785 13.7327 9.46893L10.8362 10.5408C10.6993 10.5914 10.5914 10.6993 10.5408 10.8362L9.46893 13.7327C9.30785 14.1681 8.69215 14.1681 8.53107 13.7327L7.45924 10.8362C7.4086 10.6993 7.30069 10.5914 7.16383 10.5408L4.26725 9.46893C3.83194 9.30785 3.83194 8.69215 4.26725 8.53107L7.16383 7.45924C7.30069 7.4086 7.4086 7.30069 7.45924 7.16383L8.53107 4.26725Z"
-                                        fill="#C6FF00" stroke="url(#paint0_linear_5669_2017)" stroke-width="0.1" />
-                                </g>
-                                <defs>
-                                    <linearGradient id="paint0_linear_5669_2017" x1="9" y1="3" x2="9" y2="15"
-                                        gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="white" />
-                                        <stop offset="0.480769" stop-color="white" stop-opacity="0" />
-                                        <stop offset="1" stop-color="white" />
-                                    </linearGradient>
-                                    <clipPath id="clip0_5669_2017">
-                                        <rect width="18" height="18" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <span class="text-sm font-medium leading-[18px] text-white">12 Credit</span>
-                        </div>
-                        <button
-                            class="py-3 pl-[15px] pr-[17px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-[16px] text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
-                                fill="none">
-                                <g clip-path="url(#clip0_5669_2031)">
-                                    <path d="M6 9H9M9 9H12M9 9V6M9 9V12" stroke="black" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_5669_2031">
-                                        <rect width="18" height="18" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            Generate
-                        </button>
-                    </div>
-                </div>
+                 <!-- The button should have position absolute, bottom 0 to stick to the bottom -->
+                        <div class="bg-[#111] lg:border-t border-[#222222] lg:sticky fixed lg:bottom-0 w-full left-0 right-0 lg:p-3  p-1  bottom-0 lg:bg-[#0A0A0A] lg:rounded-none rounded-t-[12px] z-50">
+                                    <!--mobile- sticky-->
+                                    <div class="flex items-center justify-between gap-2 mx-auto lg:p-1 px-0 pt-0 pb-1 lg:bg-black bg-transparent lg:rounded-[10px]">
+                                        <div class="flex items-center gap-2 w-fit lg:pl-3 lg:px-0 px-5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                <g clip-path="url(#clip0_5669_2017)">
+                                                    <path d="M8.99801 17.996C13.9675 17.996 17.996 13.9675 17.996 8.99801C17.996 4.02855 13.9675 0 8.99801 0C4.02855 0 0 4.02855 0 8.99801C0 13.9675 4.02855 17.996 8.99801 17.996Z" fill="#C6FF00"></path>
+                                                    <path opacity="0.2" d="M4.02035 9.71413L1.91485 3.44531C1.28718 4.24381 0.794572 5.1456 0.464844 6.12684L5.3631 17.2343C5.97091 17.5045 6.61448 17.7071 7.28585 17.8382L4.02035 9.71413Z" fill="white"></path>
+                                                    <path d="M6.47158 4.26327L6.85295 3.81436L5.60952 0.664062C5.37116 0.759406 5.14075 0.866667 4.91431 0.981873L6.47158 4.26327Z" fill="#E5FF8C"></path>
+                                                    <path opacity="0.2" d="M13.0461 5.5883L16.7765 13.5336C16.9949 13.1601 17.1856 12.7668 17.3525 12.3616L11.3618 0.316616C10.9486 0.205382 10.5275 0.121957 10.0945 0.0703125L13.0461 5.5883Z" fill="white"></path>
+                                                    <path d="M14.6449 14.827C17.6603 11.8116 17.6603 6.92276 14.6449 3.90741C11.6296 0.892064 6.74075 0.892065 3.7254 3.90741C0.710049 6.92276 0.710049 11.8116 3.7254 14.827C6.74075 17.8423 11.6296 17.8423 14.6449 14.827Z" fill="white"></path>
+                                                    <path d="M14.4773 14.4654C17.5088 11.434 17.5088 6.51911 14.4773 3.4877C11.4459 0.45628 6.53103 0.456279 3.49961 3.4877C0.468191 6.51911 0.468191 11.434 3.49961 14.4654C6.53103 17.4968 11.4459 17.4968 14.4773 14.4654Z" fill="#9BC30F"></path>
+                                                    <path opacity="0.3" d="M15.563 5C16.1042 6.03178 16.4074 7.19813 16.4074 8.43178C16.4074 12.6396 12.8616 16.049 8.48521 16.049C5.80248 16.049 3.43235 14.7705 2 12.8101C3.30637 15.2953 5.98444 17 9.07775 17C13.4541 17 17 13.5907 17 9.3828C17.0046 7.74991 16.4728 6.23813 15.563 5Z" fill="#C1F702"></path>
+                                                    <path d="M1.1963 8.9191C1.1963 4.70337 4.83977 1.28315 9.33067 1.28315C12.0884 1.28315 14.5302 2.57303 16 4.54607C14.5589 2.41124 12.0214 1 9.12959 1C4.63868 1 1 4.41573 1 8.63146C1 10.2584 1.54102 11.764 2.46505 13C1.66071 11.8225 1.1963 10.4202 1.1963 8.9191Z" fill="white"></path>
+                                                    <path d="M8.53107 4.26725C8.69215 3.83194 9.30785 3.83194 9.46893 4.26725L10.5408 7.16383C10.5914 7.30069 10.6993 7.4086 10.8362 7.45924L13.7327 8.53107C14.1681 8.69215 14.1681 9.30785 13.7327 9.46893L10.8362 10.5408C10.6993 10.5914 10.5914 10.6993 10.5408 10.8362L9.46893 13.7327C9.30785 14.1681 8.69215 14.1681 8.53107 13.7327L7.45924 10.8362C7.4086 10.6993 7.30069 10.5914 7.16383 10.5408L4.26725 9.46893C3.83194 9.30785 3.83194 8.69215 4.26725 8.53107L7.16383 7.45924C7.30069 7.4086 7.4086 7.30069 7.45924 7.16383L8.53107 4.26725Z" fill="#C6FF00" stroke="url(#paint0_linear_5669_2017)" stroke-width="0.1"></path>
+                                                </g>
+                                                <defs>
+                                                    <linearGradient id="paint0_linear_5669_2017" x1="9" y1="3" x2="9" y2="15" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="white"></stop>
+                                                        <stop offset="0.480769" stop-color="white" stop-opacity="0"></stop>
+                                                        <stop offset="1" stop-color="white"></stop>
+                                                    </linearGradient>
+                                                    <clipPath id="clip0_5669_2017">
+                                                        <rect width="18" height="18" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <span class="text-sm font-medium leading-[18px] text-white ">12 Credit</span>
+                                        </div>
+                                        <button class="py-[11px] pl-[14px] pr-[17px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-[16px] text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                <g clip-path="url(#clip0_5669_2031)">
+                                                    <path d="M6 9H9M9 9H12M9 9V6M9 9V12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_5669_2031">
+                                                        <rect width="18" height="18" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            Generate
+                                        </button>
+                                    </div>
+                                    <!--mobile tabs-->
+                                    <div class="mobile-tab  bg-[#000] rounded-[10px] p-[2px] flex items-center   lg:hidden">
+                                        <a href="#create-section" class="scrollspy-link flex items-center justify-center text-sm text-white w-1/2 gap-2 py-2.5 px-5 rounded-lg scrollspy-active">
+                                            <svg class="text-white " xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path d="M3.79156 22.2089C4.69073 23.108 6.1424 23.108 7.04156 22.2089L21.1249 8.12555C22.0241 7.22638 22.0241 5.77471 21.1249 4.87555C20.2257 3.97638 18.7741 3.97638 17.8749 4.87555L3.79156 18.9589C2.8924 19.858 2.8924 21.3097 3.79156 22.2089Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M19.5078 9.73828L16.2578 6.48828" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M9.21094 2.64268L10.8359 2.16602L10.3593 3.79102L10.8359 5.41602L9.21094 4.93935L7.58594 5.41602L8.0626 3.79102L7.58594 2.16602L9.21094 2.64268Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M4.875 9.14268L6.5 8.66602L6.02333 10.291L6.5 11.916L4.875 11.4393L3.25 11.916L3.72667 10.291L3.25 8.66602L4.875 9.14268Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M21.125 14.5607L22.75 14.084L22.2733 15.709L22.75 17.334L21.125 16.8573L19.5 17.334L19.9767 15.709L19.5 14.084L21.125 14.5607Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>  Create
+                                        </a>
+                                        <a href="#my-creation-section" class="scrollspy-link flex items-center justify-center text-sm text-white w-1/2 gap-2 py-2.5 px-5 rounded-lg">
+                                        <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path d="M17.3307 8.66602H8.66406V17.3327H17.3307V8.66602Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.41406 23.834C7.20156 23.834 8.66406 22.3715 8.66406 20.584V17.334H5.41406C3.62656 17.334 2.16406 18.7965 2.16406 20.584C2.16406 22.3715 3.62656 23.834 5.41406 23.834Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M5.41406 8.66602H8.66406V5.41602C8.66406 3.62852 7.20156 2.16602 5.41406 2.16602C3.62656 2.16602 2.16406 3.62852 2.16406 5.41602C2.16406 7.20352 3.62656 8.66602 5.41406 8.66602Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M17.3359 8.66602H20.5859C22.3734 8.66602 23.8359 7.20352 23.8359 5.41602C23.8359 3.62852 22.3734 2.16602 20.5859 2.16602C18.7984 2.16602 17.3359 3.62852 17.3359 5.41602V8.66602Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M20.5859 23.834C22.3734 23.834 23.8359 22.3715 23.8359 20.584C23.8359 18.7965 22.3734 17.334 20.5859 17.334H17.3359V20.584C17.3359 22.3715 18.7984 23.834 20.5859 23.834Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>  My Creation
+                                        </a>
+                                    </div>
+                                </div>
             </aside>
         </div>
+        <!--content-->
         <div
-            class="xl:w-[calc(100%-392px)] lg:w-[calc(100%-280px)] md:w-[calc(100%-280px)] w-full ml-auto relative md:h-screen md:overflow-y-auto pt-[80px] px-4">
+            class="xl:w-[calc(100%-404px)] lg:w-[calc(100%-280px)]   w-full ml-auto relative lg:h-screen lg:overflow-y-auto pt-5 lg:pt-[80px] px-4 lg:pb-0 pb-32">
             <!--Main Content Page-->
+            <h3 class="text-xl font-semibold leading-normal text-white pb-5 lg:hidden block">My Creation</h3>
             <div class="w-full h-full relative">
                 <div class="flex flex-col gap-6">
+                    result
                 </div>
             </div>
+        </div>
         </div>
     </div>
     <!-- MAIN JS-->

@@ -345,12 +345,19 @@ CloseButtons.forEach(elem => {
     });
 });
 
+// modals.forEach(elem => {
+//     elem.addEventListener("click", event => {
+//         if (event.currentTarget === event.target) closeModal(event.currentTarget.id, true);
+//     });
+// });
 modals.forEach(elem => {
     elem.addEventListener("click", event => {
-        if (event.currentTarget === event.target) closeModal(event.currentTarget.id, true);
+        // close ONLY when clicking backdrop, not modal content
+        if (event.target === elem) {
+            closeModal(elem.id, true);
+        }
     });
 });
-
 // Close Modal with "Esc" key
 document.addEventListener("keydown", event => {
     if (event.key === "Escape" || event.keyCode === 27) {
@@ -362,6 +369,7 @@ document.addEventListener("keydown", event => {
 
 function toggleModal(modalId) {
     const modal = document.getElementById(modalId);
+    if (!modal) return; // prevents error only
 
     if (getComputedStyle(modal).display === "flex") {
         closeModal(modalId, true);
@@ -394,7 +402,7 @@ function closeModal(modalId, hideOverlay = true) {
 function closeAllModals() {
     modals.forEach(modal => closeModal(modal.id, true));
 }
-/*========dropdown=========*/
+/*========dropdown=========(as modal) */
 document.addEventListener("DOMContentLoaded", function () {
   const dropdownBtns = document.querySelectorAll(".dropdown-btn");
   const dropdownMenus = document.querySelectorAll(".dropdown-menu");
@@ -404,137 +412,186 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeSubmenus = document.querySelectorAll(".close-submenu");
   const dropoverlay = document.getElementById("drop-overlay");
 
-  // Function to show a menu
+  /* -------------------------
+     Helpers
+  ------------------------- */
+
+  function anyDropdownOpen() {
+    return [...dropdownMenus, ...submenus].some(
+      el => !el.classList.contains("invisible")
+    );
+  }
+
+  /* -------------------------
+     Show / Hide Menu
+  ------------------------- */
+
   function showMenu(menu) {
-      setDropdownPosition(menu);
-      menu.classList.remove("opacity-0", "invisible", "translate-y-[-10px]");
+    setDropdownPosition(menu);
+
+    if (window.innerWidth > 640) {
+      menu.classList.remove("opacity-0", "invisible", "md:translate-y-[-10px]");
       menu.classList.add("opacity-100", "translate-y-0");
+    } else {
+      menu.classList.remove("opacity-0", "invisible", "max-sm:translate-y-full");
+      menu.classList.add("opacity-100", "translate-y-0");
+    }
   }
 
-  // Function to hide a menu
   function hideMenu(menu) {
+    if (window.innerWidth > 640) {
       menu.classList.remove("opacity-100", "translate-y-0");
-      menu.classList.add("opacity-0", "translate-y-[-10px]");
-      setTimeout(() => {
-          menu.classList.add("invisible");
-          
-      }, 300);
+      menu.classList.add("opacity-0", "md:translate-y-[-10px]");
+    } else {
+      menu.classList.remove("opacity-100", "translate-y-0");
+      menu.classList.add("opacity-0", "max-sm:translate-y-full");
+    }
+
+    setTimeout(() => {
+      menu.classList.add("invisible");
+    }, 300);
   }
 
-  // Set position of dropdown
+  /* -------------------------
+     Dropdown Position
+  ------------------------- */
+
   function setDropdownPosition(menu) {
-      const placement = menu.getAttribute("data-placement");
-      menu.style.left = "";
-      menu.style.right = "";
-      menu.style.top = "";
-      menu.style.bottom = "";
+    const placement = menu.getAttribute("data-placement");
 
-      if (placement) {
-          if (placement.includes("right")) {
-              menu.style.left = "100%";
-          } else if (placement.includes("left")) {
-              menu.style.right = "100%";
-          } else if (placement.includes("top")) {
-              menu.style.bottom = "100%";
-          } else if (placement.includes("bottom")) {
-              menu.style.top = "100%";
-          }
-      }
+    menu.style.left = "";
+    menu.style.right = "";
+    menu.style.top = "";
+    menu.style.bottom = "";
+
+    if (!placement) return;
+
+    if (placement.includes("right")) menu.style.left = "100%";
+    else if (placement.includes("left")) menu.style.right = "100%";
+    else if (placement.includes("top")) menu.style.bottom = "100%";
+    else if (placement.includes("bottom")) menu.style.top = "100%";
   }
 
-  // Show the overlay
+  /* -------------------------
+     Overlay Control
+  ------------------------- */
+
   function showOverlay() {
-      dropoverlay.classList.remove("hidden");
+    if (window.innerWidth <= 640) {
+      dropoverlay.classList.remove("hidden", "invisible", "opacity-0");
+      dropoverlay.classList.add("opacity-100");
+    }
   }
 
-  // Hide the overlay if all dropdowns and submenus are invisible
-  function hideOverlay() {
-      const allMenusInvisible = Array.from(dropdownMenus).every(menu => menu.classList.contains("invisible"));
-      const allSubmenusInvisible = Array.from(submenus).every(submenu => submenu.classList.contains("invisible"));
+  function forceHideOverlay() {
+    if (window.innerWidth > 640) return;
 
-      if (allMenusInvisible && allSubmenusInvisible) {
-          dropoverlay.classList.add("hidden");
-      }
+    dropoverlay.classList.add("opacity-0");
+    setTimeout(() => {
+      dropoverlay.classList.add("hidden", "invisible");
+    }, 300);
   }
 
-  // Toggle main dropdowns
+  /* -------------------------
+     Main Dropdown Buttons
+  ------------------------- */
+
   dropdownBtns.forEach((btn, index) => {
-      const dropdownMenu = dropdownMenus[index];
+    const dropdownMenu = dropdownMenus[index];
 
-      btn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          // Close other dropdowns
-          dropdownMenus.forEach(menu => {
-              if (menu !== dropdownMenu) hideMenu(menu);
-          });
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
 
-          // Toggle the clicked dropdown
-          if (dropdownMenu.classList.contains("invisible")) {
-              showMenu(dropdownMenu);
-              showOverlay();
-          } else {
-              hideMenu(dropdownMenu);
-          }
-
-          // After toggling, check if overlay should be hidden
-          hideOverlay();
-      });
-  });
-
-  // Toggle submenus
-  submenuButtons.forEach(button => {
-      button.addEventListener("click", function (e) {
-          e.stopPropagation();
-          const submenu = this.nextElementSibling;
-          const parentDropdown = this.closest(".dropdown-menu");
-          const siblingSubmenus = parentDropdown.querySelectorAll(".submenu");
-
-          siblingSubmenus.forEach(sub => {
-              if (sub !== submenu) hideMenu(sub);
-          });
-
-          if (submenu.classList.contains("invisible")) {
-              showMenu(submenu);
-              showOverlay();
-          } else {
-              hideMenu(submenu);
-          }
-
-          // After toggling, check if overlay should be hidden
-          hideOverlay();
-      });
-  });
-
-  // Close dropdown on close button click
-  closeDropdowns.forEach(button => {
-      button.addEventListener("click", function (e) {
-          e.stopPropagation();
-          const dropdownMenu = this.closest(".dropdown-menu");
-          hideMenu(dropdownMenu);
-          hideOverlay();
-          dropoverlay.classList.add("hidden");
-          
-      });
-  });
-
-  // Close submenu on close button click
-  closeSubmenus.forEach(button => {
-      button.addEventListener("click", function (e) {
-          e.stopPropagation();
-          const submenu = this.closest(".submenu");
-          hideMenu(submenu);
-          hideOverlay();
-      });
-  });
-
-  // Close all dropdowns and submenus when clicking outside
-  document.addEventListener("click", function (e) {
       dropdownMenus.forEach(menu => {
-          if (!menu.contains(e.target)) hideMenu(menu);
+        if (menu !== dropdownMenu) hideMenu(menu);
       });
-      submenus.forEach(submenu => hideMenu(submenu));
-      hideOverlay();  // Check if overlay should be hidden
-      dropoverlay.classList.add("hidden");
+
+      if (dropdownMenu.classList.contains("invisible")) {
+        showMenu(dropdownMenu);
+        showOverlay();
+      } else {
+        hideMenu(dropdownMenu);
+        forceHideOverlay();
+      }
+    });
+  });
+
+  /* -------------------------
+     Submenu Buttons
+  ------------------------- */
+
+  submenuButtons.forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const submenu = this.nextElementSibling;
+      const parentDropdown = this.closest(".dropdown-menu");
+      const siblingSubmenus = parentDropdown.querySelectorAll(".submenu");
+
+      siblingSubmenus.forEach(sub => {
+        if (sub !== submenu) hideMenu(sub);
+      });
+
+      if (submenu.classList.contains("invisible")) {
+        showMenu(submenu);
+        showOverlay();
+      } else {
+        hideMenu(submenu);
+        forceHideOverlay();
+      }
+    });
+  });
+
+  /* -------------------------
+     Close Buttons
+  ------------------------- */
+
+  closeDropdowns.forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.stopPropagation();
+      hideMenu(this.closest(".dropdown-menu"));
+      forceHideOverlay();
+    });
+  });
+
+  closeSubmenus.forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.stopPropagation();
+      hideMenu(this.closest(".submenu"));
+      forceHideOverlay();
+    });
+  });
+
+  /* -------------------------
+     Document Click (SAFE)
+  ------------------------- */
+
+  document.addEventListener("click", function (e) {
+    // 🔴 Ignore clicks inside dropdowns
+    if (
+      e.target.closest(".dropdown-menu") ||
+      e.target.closest(".submenu")
+    ) return;
+
+    // 🔴 Ignore clicks inside ANY MODAL (change selector if needed)
+    if (e.target.closest(".modal")) return;
+
+    // 🔴 If no dropdown is open, DO NOTHING (prevents modal conflicts)
+    if (!anyDropdownOpen()) return;
+
+    dropdownMenus.forEach(menu => hideMenu(menu));
+    submenus.forEach(submenu => hideMenu(submenu));
+    forceHideOverlay();
+  });
+
+  /* -------------------------
+     Overlay Click
+  ------------------------- */
+
+  dropoverlay.addEventListener("click", function () {
+    dropdownMenus.forEach(menu => hideMenu(menu));
+    submenus.forEach(submenu => hideMenu(submenu));
+    forceHideOverlay();
   });
 });
 
