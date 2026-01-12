@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <!-- REQUIRED META TAGS -->
@@ -9,7 +9,16 @@
     <!--- MAIN CSS ---->
     <link rel="stylesheet" href="assets/css/styles-output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
+    <style>
+        .scrollspy-link.active {
+            color: white !important;
+        }
 
+        .scrollspy-active {
+            background-color:black !important;
+            color: white !important;
+        }
+    </style>
 </head>
 
 <body class="md:overflow-hidden">
@@ -183,9 +192,11 @@
                                         </svg>
 
                                         <div class="block">
-                                            <p class="text-base leading-5 text-center text-white mb-1.5">Upload Image Here
+                                            <p class="text-base leading-5 text-center text-white mb-1.5">Upload Image
+                                                Here
                                             </p>
-                                            <p class="text-xs leading-[14px] text-center text-[#797979]">Drop your image to add in to the editor
+                                            <p class="text-xs leading-[14px] text-center text-[#797979]">Drop your image
+                                                to add in to the editor
                                             </p>
 
                                         </div>
@@ -411,15 +422,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- The button should have position absolute, bottom 0 to stick to the bottom -->
-                 <div class="sticky hidden md:block py-24 z-10 w-full !h-[200px] bottom-0 left-0 bg-gradient-to-t from-[#0A0A0A] to-[#0A0A0A]/0 pointer-events-none">
+                <div
+                    class="sticky hidden md:block py-24 z-10 w-full !h-[200px] bottom-0 left-0 bg-gradient-to-t from-[#0A0A0A] to-[#0A0A0A]/0 pointer-events-none">
                     <!-- <div class="py-[100px]"></div> -->
-                 </div>
+                </div>
                 <div
                     class="md:sticky relative max-md:mt-4 z-20 bottom-3 w-full left-0 right-0 mx-auto bg-black p-1 rounded-[10px] flex items-center justify-between">
                     <div class="flex items-center gap-2">
@@ -615,7 +627,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                   
+
                                 </div>
                             </div>
 
@@ -628,144 +640,238 @@
         </div>
 
     </div>
-<!--Big image Modal-->
-    <div class="modalTrigger  modal-image" id="image-modal">
-        <div class="absolute bg-black-1B1B1B w-9 h-9 -left-12 z-50 flex items-center justify-center border-[0.8px] border-[rgba(255,255,255,0.20)] rounded-lg cursor-pointer">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.6063 8.99896H2.40625M2.40625 8.99896L8.63958 2.76562M2.40625 8.99896L8.63958 15.2323" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!--Big image Modal-->
+    <div class="modalTrigger modal-home w-full 2xl:max-w-[1650px] xl:max-w-[1200px]  lg:max-w-[950px] md:max-w-[700px] max-xl:mx-4 max-lg:mx-0"
+        id="image-modal">
+        <div class="relative h-auto w-full">
+            <button class="close-btn cursor-pointer p-1.5 rounded-md
+bg-[#262626] text-white
+transition-all duration-300 hover:text-limegreen
+absolute top-[-40px] lg:right-0 right-2 z-20 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path
+                        d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
+                        stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                
-        </div>
-        <div class="relative bg-black-1B1B1B p-3.5 rounded-3xl lg:h-auto h-full overflow-auto" >
-            <div class="flex lg:flex-row flex-col-reverse gap-3.5  w-full">
-            <div class="bg-black-0a0a0a rounded-xl xl:max-w-[1294px] lg:max-w-[1180px] lg:w-[75%] relative">
-             <div class="w-full h-full max-h-[800px] rounded-xl overflow-hidden">
-                <img id="zoomImage" src="assets/images/big-image.png" alt="image" class="w-full h-full rounded-xl"/>
-            </div>   
-             <div class="absolute bottom-0 left-0 right-0 m-auto bg-[rgba(255,255,255,0.12)] backdrop-blur-sm p-3 rounded-t-lg max-w-[385px] flex items-center gap-2.5 justify-between rangeslider-zoom">
-                <span class="text-xs text-white">100%</span>
-                <input
-                id="zoom"
-                class="rangeslider-zoom"
-                type="range"
-                min="100"
-                max="500"
-                step="5"
-                value="100"
-              />
-                <span class="text-xs text-white" id="zoomValue">500%</span>
-             </div>
-            </div>
-            <div class="relative  lg:w-[25%]">
-              <div class="flex flex-col justify-between h-full">
-                <div class="block">
-                    <div class="pb-4 mb-4 border-b border-white/10 flex justify-between items-center">
-                    <h4 class="text-lg text-white font-medium">19 Mar. 2025</h4>
-                    <div class="flex items-center gap-5">
-                        <button class="relative">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.5 5H4.16667H17.5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6.66406 5.0013V3.33464C6.66406 2.89261 6.83966 2.46868 7.15222 2.15612C7.46478 1.84356 7.8887 1.66797 8.33073 1.66797H11.6641C12.1061 1.66797 12.53 1.84356 12.8426 2.15612C13.1551 2.46868 13.3307 2.89261 13.3307 3.33464V5.0013M15.8307 5.0013V16.668C15.8307 17.11 15.6551 17.5339 15.3426 17.8465C15.03 18.159 14.6061 18.3346 14.1641 18.3346H5.83073C5.3887 18.3346 4.96478 18.159 4.65222 17.8465C4.33966 17.5339 4.16406 17.11 4.16406 16.668V5.0013H15.8307Z" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8.33594 9.16797V14.168" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M11.6641 9.16797V14.168" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                        </button>
-                        <button
-                        class="close-btn cursor-pointer p-1.5 rounded-lg bg-black-0a0a0a border-[0.8px] border-white/20 text-white transition-all duration-300 hover:text-limegreen w-9 h-9 ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                        <path
-                            d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
-                            stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                    </div>
-                    </div>
-                    <div class="flex items-center flex-wrap gap-1 mb-4 pb-4 border-b border-white/10">
-                        <img src="assets/images/editor-demo-img1.png" alt="image" class="w-[60px] h-[60px] rounded-xl"/>
-                        <img src="assets/images/editor-demo-img1.png" alt="image" class="w-[60px] h-[60px] rounded-xl"/>
-                        <img src="assets/images/editor-demo-img1.png" alt="image" class="w-[60px] h-[60px] rounded-xl"/>
-                        <img src="assets/images/editor-demo-img1.png" alt="image" class="w-[60px] h-[60px] rounded-xl"/>
-                        <img src="assets/images/editor-demo-img1.png" alt="image" class="w-[60px] h-[60px] rounded-xl"/>
-                        <img src="assets/images/editor-demo-img1.png" alt="image" class="w-[60px] h-[60px] rounded-xl"/>
-                    </div>
-                    <div class="flex flex-col gap-3.5 mb-5">
-                        <div class="flex items-center justify-between">
-                            <h5 class="text-base font-medium text-white">Prompt</h5>
-                            <a href="#" class="flex gap-2 items-center text-sm text-limegreen">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.6693 8.5987V11.3987C10.6693 13.732 9.73594 14.6654 7.4026 14.6654H4.6026C2.26927 14.6654 1.33594 13.732 1.33594 11.3987V8.5987C1.33594 6.26536 2.26927 5.33203 4.6026 5.33203H7.4026C9.73594 5.33203 10.6693 6.26536 10.6693 8.5987Z" stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M14.6693 4.5987V7.3987C14.6693 9.73203 13.7359 10.6654 11.4026 10.6654H10.6693V8.5987C10.6693 6.26536 9.73594 5.33203 7.4026 5.33203H5.33594V4.5987C5.33594 2.26536 6.26927 1.33203 8.6026 1.33203H11.4026C13.7359 1.33203 14.6693 2.26536 14.6693 4.5987Z" stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    Copy Prompt                             
-                            </a>
-                        </div>
-                        <p class="text-sm text-white leading-6">Futuristic girl racer in cyberpunk costume sitting on a high-tech sportsbike. Detailed mecha design with metallic elements, aggressive lines of the motorcycle.</p>
-                    </div>
-                     <div class="flex flex-col gap-3.5">
-                <button class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm text-black font-medium bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
-                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.25 11.25V14.25C16.25 14.6478 16.092 15.0294 15.8107 15.3107C15.5294 15.592 15.1478 15.75 14.75 15.75H4.25C3.85218 15.75 3.47064 15.592 3.18934 15.3107C2.90804 15.0294 2.75 14.6478 2.75 14.25V11.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M5.75 7.5L9.5 11.25L13.25 7.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M9.5 11.25V2.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        
-                    Download HD
-                  </button>
-                  <button class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm  font-medium bg-[rgba(198,255,0,0.10)] hover:bg-[rgba(198,255,0,0.20)] text-limegreen transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z" stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M6.00313 2.25H6.75313C5.29063 6.63 5.29063 11.37 6.75313 15.75H6.00313" stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M11.25 2.25C12.7125 6.63 12.7125 11.37 11.25 15.75" stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M2.25 12V11.25C6.63 12.7125 11.37 12.7125 15.75 11.25V12" stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M2.25 6.74922C6.63 5.28672 11.37 5.28672 15.75 6.74922" stroke="#C6FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        
-                        Publish to community
-                  </button>
-                  <button class="py-2.5 px-5 rounded-lg flex justify-center items-center gap-2.5 text-sm text-white font-medium bg-[#2A2A2A] hover:bg-[#393939] transition-all duration-500 sticky bottom-0 w-full left-0 right-0 mx-auto">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.2422 13.125H12.3747C14.6397 13.125 16.4997 11.2725 16.4997 9C16.4997 6.735 14.6472 4.875 12.3747 4.875H11.2422" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M6.75 4.875H5.625C3.3525 4.875 1.5 6.7275 1.5 9C1.5 11.265 3.3525 13.125 5.625 13.125H6.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M6 9H12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Copy Image URL
-                  </button>
-              </div>
-                </div>
-              
-            </div>
-            </div>
-            </div>
-          </div>
-          <div class="absolute bg-black-1B1B1B w-9 h-9 -right-12 z-50 flex items-center justify-center border-[0.8px] border-[rgba(255,255,255,0.20)] rounded-lg cursor-pointer">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.39375 8.99896H15.5938M15.5938 8.99896L9.36042 2.76562M15.5938 8.99896L9.36042 15.2323" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                
-        </div>
-        </div> 
-    <!-- popular edit modal  -->
-    <div class="modalTrigger  modal-home w-full max-w-[1159px] " id="popularEdit">
-         <button
-              class="close-btn cursor-pointer p-1.5 rounded-full bg-[#1D1D1D] text-white transition-all duration-300 hover:text-limegreen absolute top-20 right-0 ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                <path
-                  d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
-                  stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-        
             </button>
-        <div class="relative w-full  p-1  rounded-xl bg-[#111111]   h-[700px]  overflow-y-auto">
-            <div class="w-full flex items-start gap-2">
-                <div class="flex flex-col gap-2 w-full max-w-[240px] sticky top-0 h-full overflow-y-auto">
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-base leading-5 text-white transition-all duration-500 hover:bg-black active">
+            <div class="relative bg-[#111] md:p-2.5 p-5 rounded-[15px] md:h-auto h-[640px] overflow-auto">
+                <div class="flex lg:flex-row flex-col gap-5  w-full  overflow-y-auto md:justify-start justify-end">
+                    <div class="md:pb-5 pb-0 md:hidden flex justify-between items-center">
+                        <div
+                            class="py-2.5 px-4 bg-black flex justify-center items-center text-sm text-white rounded-[10px] font-normal">
+                            Dec 03, 2025
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <button
+                                class="relative w-10 h-10 flex justify-center items-center bg-black rounded-[10px] group">
+                                <svg class="text-white group-hover:text-[#C6FF00] transition-all duration-500"
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path
+                                        d="M2 4.40039H14M3.2 4.40039H12.8V10.0004C12.8 11.886 12.8 12.8288 12.2142 13.4146C11.6284 14.0004 10.6856 14.0004 8.8 14.0004H7.2C5.31438 14.0004 4.37157 14.0004 3.78579 13.4146C3.2 12.8288 3.2 11.886 3.2 10.0004V4.40039Z"
+                                        stroke="currentColor" stroke-linecap="round" />
+                                    <path
+                                        d="M5 4.4V3.33333C5 2.59695 5.59695 2 6.33333 2H9.66664C10.403 2 11 2.59695 11 3.33333V4.4M11 4.4H2M11 4.4H14"
+                                        stroke="currentColor" stroke-linecap="round" />
+                                    <path d="M6.79688 7.40039V11.0004" stroke="currentColor" stroke-linecap="round" />
+                                    <path d="M9.20312 7.40039V11.0004" stroke="currentColor" stroke-linecap="round" />
+                                </svg>
+                            </button>
+                            <button
+                                class="relative w-10 h-10 flex justify-center items-center bg-[#C6FF00] rounded-[10px] hover:bg-[#a8d50c] transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path
+                                        d="M2 11.334C2 11.954 2 12.264 2.06815 12.5183C2.25309 13.2085 2.79218 13.7476 3.48237 13.9325C3.7367 14.0007 4.04669 14.0007 4.66667 14.0007H11.3333C11.9533 14.0007 12.2633 14.0007 12.5177 13.9325C13.2078 13.7476 13.7469 13.2085 13.9319 12.5183C14 12.264 14 11.954 14 11.334"
+                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M11 7.66669C11 7.66669 8.79056 10.6667 7.99996 10.6667C7.20943 10.6667 5 7.66669 5 7.66669M7.99996 10V2"
+                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-black rounded-[10px] 2xl:max-w-[1294px] xl:max-w-[1180px] lg:w-[65%] relative">
+
+                        <div class="w-full h-full md:max-h-[800px] max-h-full rounded-xl overflow-hidden">
+                            <img id="zoomImage" src="assets/images/big-image.png" alt="image"
+                                class="w-full h-full rounded-xl" />
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 right-0 m-auto bg-[rgba(255,255,255,0.12)] backdrop-blur-sm p-3 rounded-t-lg max-w-[385px] flex items-center gap-2.5 justify-between rangeslider-zoom">
+                            <span class="text-xs text-white">100%</span>
+                            <input id="zoom" class="rangeslider-zoom" type="range" min="100" max="500" step="5"
+                                value="100" />
+                            <span class="text-xs text-white" id="zoomValue">500%</span>
+                        </div>
+                    </div>
+                    <div class="relative md:py-2.5 pt-2.5 lg:w-[35%]">
+                        <div class="flex flex-col justify-between h-full">
+                            <div class="block">
+                                <div class="pb-5 hidden md:flex justify-between items-center">
+                                    <div
+                                        class="py-2.5 px-4 bg-black flex justify-center items-center text-sm text-white rounded-[10px] font-normal">
+                                        Dec 03, 2025
+                                    </div>
+
+                                    <div class="flex items-center gap-2">
+                                        <button
+                                            class="relative w-10 h-10 flex justify-center items-center bg-black rounded-[10px] group">
+                                            <svg class="text-white group-hover:text-[#C6FF00] transition-all duration-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M2 4.40039H14M3.2 4.40039H12.8V10.0004C12.8 11.886 12.8 12.8288 12.2142 13.4146C11.6284 14.0004 10.6856 14.0004 8.8 14.0004H7.2C5.31438 14.0004 4.37157 14.0004 3.78579 13.4146C3.2 12.8288 3.2 11.886 3.2 10.0004V4.40039Z"
+                                                    stroke="currentColor" stroke-linecap="round" />
+                                                <path
+                                                    d="M5 4.4V3.33333C5 2.59695 5.59695 2 6.33333 2H9.66664C10.403 2 11 2.59695 11 3.33333V4.4M11 4.4H2M11 4.4H14"
+                                                    stroke="currentColor" stroke-linecap="round" />
+                                                <path d="M6.79688 7.40039V11.0004" stroke="currentColor"
+                                                    stroke-linecap="round" />
+                                                <path d="M9.20312 7.40039V11.0004" stroke="currentColor"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                        </button>
+                                        <button
+                                            class="relative w-10 h-10 flex justify-center items-center bg-[#C6FF00] rounded-[10px] hover:bg-[#a8d50c] transition-all duration-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M2 11.334C2 11.954 2 12.264 2.06815 12.5183C2.25309 13.2085 2.79218 13.7476 3.48237 13.9325C3.7367 14.0007 4.04669 14.0007 4.66667 14.0007H11.3333C11.9533 14.0007 12.2633 14.0007 12.5177 13.9325C13.2078 13.7476 13.7469 13.2085 13.9319 12.5183C14 12.264 14 11.954 14 11.334"
+                                                    stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M11 7.66669C11 7.66669 8.79056 10.6667 7.99996 10.6667C7.20943 10.6667 5 7.66669 5 7.66669M7.99996 10V2"
+                                                    stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center justify-between relative">
+                                        <label for="user-input" class=" text-sm  text-white font-normal">Prompt
+                                        </label>
+                                        <a href="#" class="md:hidden block text-sm font-medium text-[#C6FF00]">
+                                            Copy Prompt
+                                        </a>
+                                    </div>
+                                    <div class=" relative z-[2] rounded-xl transition-all duration-500 ">
+                                        <textarea name="prompt" id="user-input"
+                                            class="border border-transparent hover:border-limegreen transition-all duration-500 outline-none bg-black w-full 2xl:h-[280px] xl:h-[200px] h-[98px] resize-none pt-2.5 px-3.5 text-base leading-6 font-normal text-white placeholder:text-[#797979] rounded-xl"
+                                            placeholder="">Modern loft-style living and dining room with large double-height windows, soft natural daylight, and minimalistic architectural design. Neutral color palette with beige and warm wood tones. Cozy contemporary sofa with textured blankets and pillows, sleek black metal coffee table, modern fireplace with stacked firewood, and large abstract wall art. Wooden dining table with woven chairs, hanging pendant lights, indoor plants, and soft shadows. High-end interior design, elegant composition, clean lines, airy spacious atmosphere, photorealistic rendering</textarea>
+
+                                    </div>
+                                    <div
+                                        class="-mt-[25px] rounded-b-xl bg-[#272727] pt-5 pb-0 xl:px-3.5 px-2 hidden md:flex items-center justify-center xl:gap-7 gap-2">
+
+                                        <button
+                                            class="flex pt-1.5 pb-4 items-center gap-1.5 text-xs text-white  transition-all duration-500 hover:text-[#c6ff00] ">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.34406 13H4.9974C4.58406 13 4.2174 12.9867 3.89073 12.94C2.1374 12.7467 1.66406 11.92 1.66406 9.66667V6.33333C1.66406 4.08 2.1374 3.25333 3.89073 3.06C4.2174 3.01333 4.58406 3 4.9974 3H7.30406"
+                                                    stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M10.0156 3H11.0023C11.4156 3 11.7823 3.01333 12.109 3.06C13.8623 3.25333 14.3356 4.08 14.3356 6.33333V9.66667C14.3356 11.92 13.8623 12.7467 12.109 12.94C11.7823 12.9867 11.4156 13 11.0023 13H10.0156"
+                                                    stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M10 1.33398V14.6673" stroke="#C6FF00" stroke-width="1.4"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M5.33594 5.66602V10.3327" stroke="#C6FF00" stroke-width="1.4"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Copy Prompt
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="md:flex hidden items-center gap-[5px] mt-5">
+                                    <div class="py-2 px-3.5 bg-black rounded-md text-sm text-white">
+                                        1.1
+                                    </div>
+                                    <div class="py-2 px-3.5 bg-black rounded-md text-sm text-white">
+                                        Flux
+                                    </div>
+                                    <div class="py-2 px-3.5 bg-black rounded-md text-sm text-white">
+                                        Custom Prompt
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col justify-between lg:pt-0 pt-5">
+
+                                <div class="flex flex-col gap-3.5 mt-auto">
+                                    <button
+                                        class="py-[7px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-base text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">
+                                        Upscale Image
+                                    </button>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <button
+                                            class="py-[7px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-base text-white font-semibold border border-white/20 hover:bg-white/5 transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M8.0026 14.6673C11.6845 14.6673 14.6693 11.6825 14.6693 8.00065C14.6693 4.31875 11.6845 1.33398 8.0026 1.33398C4.32071 1.33398 1.33594 4.31875 1.33594 8.00065C1.33594 11.6825 4.32071 14.6673 8.0026 14.6673Z"
+                                                    stroke="white" stroke-width="1.2" />
+                                                <path
+                                                    d="M5.33594 8.00065C5.33594 12.0007 8.0026 14.6673 8.0026 14.6673C8.0026 14.6673 10.6693 12.0007 10.6693 8.00065C10.6693 4.00065 8.0026 1.33398 8.0026 1.33398C8.0026 1.33398 5.33594 4.00065 5.33594 8.00065Z"
+                                                    stroke="white" stroke-width="1.2" stroke-linejoin="round" />
+                                                <path d="M14 10H2" stroke="white" stroke-width="1.2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M14 6H2" stroke="white" stroke-width="1.2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Publish
+                                        </button>
+                                        <button
+                                            class="py-[7px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-base text-white font-semibold border border-white/20 hover:bg-white/5 transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M9.00261 11.3327H11.3359C13.1769 11.3327 14.6693 9.84028 14.6693 7.99935C14.6693 6.1584 13.1769 4.66602 11.3359 4.66602H9.00261M7.0026 11.3327H4.66927C2.82832 11.3327 1.33594 9.84028 1.33594 7.99935C1.33594 6.1584 2.82832 4.66602 4.66927 4.66602H7.0026"
+                                                    stroke="white" stroke-width="1.2" stroke-linecap="round" />
+                                                <path d="M6 8H10" stroke="white" stroke-width="1.2"
+                                                    stroke-linecap="round" />
+                                            </svg>
+                                            Copy URL
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popular edit modal  -->
+    <div class="modalTrigger m-0 modal-home w-full md:max-w-[740px] lg:max-w-[1140px] 2xl:max-w-[1340px] p-5 scroll-smooth"
+        id="popularEdit">
+        <button
+            class="close-btn cursor-pointer p-1.5 rounded-full bg-[#1D1D1D] text-white transition-all duration-300 hover:text-limegreen absolute md:top-20 top-10 right-2 md:right-0 ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path
+                    d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
+                    stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div
+            class="relative w-full  p-1  rounded-xl bg-[#111111] h-[580px] xl:h-[640px]  2xl:h-[700px] overflow-hidden scroll-smooth">
+            <div class="w-full flex md:flex-row flex-col items-start gap-2 md:gap-2 pt-4 md:pt-2">
+                <div
+                    class="popup-links flex flex-row md:flex-col gap-1.5 sm:gap-2 w-full md:max-w-[240px] h-auto md:h-[580px] xl:h-[640px] 2xl:h-[700px] overflow-y-auto sticky top-0  overflow-y-auto !pb-0 md:pb-5 whitespace-nowrap">
+                    <a href="#popularedit"
+                        class="scrollspy-link modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-base leading-5 text-white transition-all duration-500 hover:bg-black scrollspy-active">
                         🔥 Popular Edits
-                    </button>
-                    <button
-                        class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-base leading-5 text-white transition-all duration-500 hover:bg-black">
+                    </a>
+                    <a href="#coloradj"
+                        class="scrollspy-link modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-base leading-5 text-white transition-all duration-500 hover:bg-black">
                         🎨 Color Adjustments
-                    </button>
+                    </a>
                     <button
                         class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-base leading-5 text-white transition-all duration-500 hover:bg-black">
                         😊 Face Retouching
@@ -806,371 +912,558 @@
                         class="modal-link py-2.5 w-full text-left px-3 rounded-[10px] bg-transparent text-base leading-5 text-white transition-all duration-500 hover:bg-black">
                         ✍️ Text & Graphics
                     </button>
-
                 </div>
-                <div class="p-1 bg-black w-full grid grid-cols-4 gap-1 rounded-[10px]">
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
+                <div class="h-[580px] xl:h-[640px] 2xl:h-[700px] overflow-y-auto w-full">
+                    <div class="px-3 md:p-3 bg-black w-full  grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5 md:gap-3 rounded-[10px]"
+                        id="popularedit">
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
+        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
+                                <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
-                        </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
-                        </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
-                        </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
-                        </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
-                        </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
-                        </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
+                                <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
+                    <div class="p-3 bg-black w-full  grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5 md:gap-3 rounded-[10px]"
+                        id="coloradj">
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
+                                <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
+                                <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
+                                <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
+                                <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
+                                <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bg-[#111111] overflow-hidden rounded-lg group">
-                        <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
-                            <img src="assets/images/abs-box/abs-box-popular.png" alt=""
-                                class="transition-all duration-1000 group-hover:scale-[1.05]">
+                                <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
-                        <div class="p-1 pt-3 ">
-                            <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
-                            <p class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
-                                Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
-                                shadows and reflections
-                            </p>
-                            <button
-                                class="py-2 px-3 w-full rounded-[10px] flex items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
-                                        stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Use This Prompt
-                            </button>
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
+                        </div>
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
+                        </div>
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
+                        </div>
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
+                        </div>
+                        <div class="md:bg-[#111111] overflow-hidden rounded-lg group">
+                            <div class="w-full h-auto max-h-[123px] overflow-hidden rounded-md">
+                                <img src="assets/images/abs-box/abs-box-popular.png" alt=""
+                                    class="transition-all duration-1000 group-hover:scale-[1.05]">
+                            </div>
+                            <div class="p-1 pt-3 ">
+                                <h5 class="px-1 text-base leading-[22px] text-white mb-1.5">Super Realistic</h5>
+                                <p class="hidden md:block px-1 text-xs leading-[18px] text-[#696969] mb-1.5">
+                                    Super realistic, ultra-detailed high-resolution image, natural lighting, accurate
+                                    shadows and reflections
+                                </p>
+                                <button
+                                    class="hidden md:flex py-2 px-3 w-full rounded-[10px] items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.9333 13.3333H6.4C6.17909 13.3333 6 13.1543 6 12.9333V6.4C6 6.17909 6.17909 6 6.4 6H12.9333C13.1543 6 13.3333 6.17909 13.3333 6.4V12.9333C13.3333 13.1543 13.1543 13.3333 12.9333 13.3333Z"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.0013 5.9974V3.06406C10.0013 2.84315 9.82224 2.66406 9.6013 2.66406H3.06797C2.84706 2.66406 2.66797 2.84315 2.66797 3.06406V9.5974C2.66797 9.81833 2.84706 9.9974 3.06797 9.9974H6.0013"
+                                            stroke="#C6FF00" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    Use This Prompt
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1233,6 +1526,110 @@
                 });
             });
         });
+    </script>
+
+    <!--scrollspy-->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.querySelector(".popup-content");
+            const links = document.querySelectorAll(".popup-links .scrollspy-link");
+
+            if (!container || !links.length) return;
+
+            const sections = Array.from(links)
+                .map(link => container.querySelector(link.getAttribute("href")))
+                .filter(Boolean);
+
+            function setActive(index) {
+                links.forEach(l => l.classList.remove("scrollspy-active"));
+                links[index]?.classList.add("scrollspy-active");
+            }
+
+            function updateActive() {
+                const scrollPos = container.scrollTop + 20;
+
+                sections.forEach((section, index) => {
+                    const top = section.offsetTop;
+                    const bottom = top + section.offsetHeight;
+
+                    if (scrollPos >= top && scrollPos < bottom) {
+                        setActive(index);
+                    }
+                });
+            }
+
+            links.forEach((link, index) => {
+                link.addEventListener("click", e => {
+                    e.preventDefault();
+
+                    container.scrollTo({
+                        top: sections[index].offsetTop - 20,
+                        behavior: "smooth"
+                    });
+
+                    setActive(index);
+                });
+            });
+
+            container.addEventListener("scroll", updateActive);
+            updateActive();
+        });
+
+    </script>
+
+    <!--mobile tab scroll-->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mobileButtons = document.querySelectorAll(".mobile-tab .scrollspy-link");
+            if (!mobileButtons.length) return;
+
+            const sections = Array.from(mobileButtons).map(btn =>
+                document.querySelector(btn.getAttribute("href"))
+            );
+
+            // Set the active class
+            function setMobileActive(index) {
+                mobileButtons.forEach(b => b.classList.remove("scrollspy-active"));
+                mobileButtons[index]?.classList.add("scrollspy-active");
+            }
+
+            // Set first button active by default
+            setMobileActive(0);
+
+            // Click event for smooth scrolling
+            mobileButtons.forEach((btn, index) => {
+                btn.addEventListener("click", e => {
+                    e.preventDefault();
+                    const target = sections[index];
+                    if (!target) return;
+
+                    setMobileActive(index);
+
+                    window.scrollTo({
+                        top: target.offsetTop - 60,
+                        behavior: "smooth"
+                    });
+                });
+            });
+
+            // Scroll event for automatic active update
+            window.addEventListener("scroll", () => {
+                let scrollPos = window.scrollY || document.documentElement.scrollTop;
+
+                sections.forEach((section, index) => {
+                    if (!section) return;
+                    const sectionTop = section.offsetTop - 60;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+
+                    if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                        setMobileActive(index);
+                    }
+                });
+            });
+        });
+
+
+
     </script>
 </body>
 

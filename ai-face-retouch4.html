@@ -797,28 +797,28 @@
     </nav>
 
     <!-- Tool Progress... area -->
-    <div class="w-full relative px-4 pt-24 pb-3 xl:pt-[90px]">
+    <div class="w-full relative px-5 pt-[84px] md:pt-24 pb-3 xl:pt-[90px]">
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
-                <h1 class="text-4xl font-medium lg:leading-[50px] text-white">AI Face Retouch</h1>
-                <p class="font-normal text-base text-[#797979] leading-7">Easy face enhancements that make every picture
-                    look perfect.</p>
+                <h1 class="md:text-4xl text-2xl font-medium lg:leading-[50px] text-white">AI Face Retouch
+                </h1>
+                <p class="font-normal text-sm md:text-base text-[#797979] leading-5 md:leading-7">Easy face enhancements
+                    that make every picture look perfect.</p>
             </div>
-            <div class="p-2.5 bg-[#111] rounded-3xl mt-6">
+            <div class="py-2.5 mt-6 bg-[#111] rounded-2xl md:rounded-3xl md:aspect-auto aspect-square">
                 <label
-                    class="w-full h-auto max-h-[600px] rounded-3xl xs:min-h-[480px] lg:min-h-[600px] 2xl:min-h-[620px] flex justify-center items-center cursor-pointer relative p-2.5 overflow-hidden">
-                    <div class="relative z-20 h-auto">
-                        <div class="relative group flex gap-3">
-                            <div class="h-auto relative ba-slider2">
+                    class="w-full md:aspect-auto aspect-square h-auto md:max-h-[620px] xs:min-h-[480px] lg:min-h-[620px] flex justify-center items-center cursor-pointer relative overflow-hidden">
+                    <div class="relative z-20 md:h-auto h-full md:aspect-auto aspect-square">
+                        <div class="relative group flex gap-3 md:h-auto h-full">
+                            <div class="rounded-t-xl h-auto relative ba-slider2 md:aspect-auto aspect-square">
                                 <!--  After Img -->
-                                <img class="w-full before-img h-auto object-contain"
-                                    src="/assets/images/ai-face-retouch-img2.png" alt="after">
+                                <img class="w-full before-img md:h-auto h-full object-contain"
+                                    src="/assets/images/ai-face-retouch-img2.png" alt="before">
                                 <!-- BEFORE IMAGE (left side) -->
                                 <div class="resize">
-                                    <img src="/assets/images/ai-face-retouch-img1.png" alt="before"
-                                        class="after-img h-auto object-contain">
+                                    <img src="/assets/images/ai-face-retouch-img1.png" alt="after"
+                                        class="after-img md:h-auto h-full object-contain">
                                 </div>
-
                                 <span class="handle">
                                     <button class="ba2-btn ba2-btn-before">
                                         Before
@@ -833,9 +833,11 @@
                 </label>
             </div>
 
-            <div class="mt-6 flex items-center justify-center gap-3">
+
+            <div
+                class="md:mt-6 flex items-center justify-center gap-3 md:relative fixed md:w-auto w-[calc(100%-40px)] md:bottom-0 m-auto right-0 bottom-5 left-0">
                 <button
-                    class="max-w-[144px] w-full flex items-center justify-center gap-1.5 py-[9px] text-white font-medium text-lg leading-6 border border-[#FFFFFF33] rounded-[10px] transition-all duration-500 hover:bg-[#111111] hover:border-[#1F1F1F] focus:bg-[#111111] focus:border-[#1F1F1F]">
+                    class="md:max-w-[144px] max-w-full w-1/2 flex items-center justify-center gap-1.5 py-2.5 text-white font-medium text-lg leading-6 border border-[#FFFFFF33] rounded-[10px] transition-all duration-500 hover:bg-[#111111] hover:border-[#1F1F1F]">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.5921 9.00065C14.1096 12.2082 11.3419 14.6673 7.99992 14.6673C4.31802 14.6673 1.33325 11.6825 1.33325 8.00065C1.33325 4.31875 4.31802 1.33398 7.99992 1.33398C10.7337 1.33398 13.0831 2.97944 14.1119 5.33398"
@@ -846,7 +848,7 @@
                     Reset
                 </button>
                 <button
-                    class="py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] focus:bg-[#D7FF4D]  font-semibold text-lg leading-6 text-black">
+                    class="md:max-w-[144px] max-w-full w-1/2 py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] font-semibold text-lg leading-6 text-black">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M1.99976 11.334C1.99976 11.954 1.99976 12.264 2.06791 12.5183C2.25284 13.2085 2.79194 13.7476 3.48212 13.9325C3.73646 14.0007 4.04644 14.0007 4.66642 14.0007H11.3331C11.9531 14.0007 12.2631 14.0007 12.5174 13.9325C13.2076 13.7476 13.7467 13.2085 13.9316 12.5183C13.9998 12.264 13.9998 11.954 13.9998 11.334"

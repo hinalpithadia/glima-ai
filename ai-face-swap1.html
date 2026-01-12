@@ -706,27 +706,29 @@
         </div>
     </nav>
     <!-- Tool Progress... area -->
-    <div class="w-full relative px-4 pt-24 pb-3 xl:pt-[95px]">
+    <div class="w-full relative px-4 pt-[84px] md:pt-24  xl:pt-[95px] md:pb-3 pb-20">
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
-                <h1 class="text-4xl font-medium lg:leading-[50px] text-white">AI Face Swap</h1>
-                <p class="font-normal text-base text-[#797979] leading-7">Easily swap faces in any photo or video using
-                    smart AI for clean, natural, and realistic results.</p>
+                <h1 class="md:text-4xl text-2xl font-medium lg:leading-[50px] text-white">AI Face Swap</h1>
+                <p class="font-normal text-sm md:text-base text-[#797979] leading-5 md:leading-7">Easily swap faces in
+                    any photo or video using smart AI for clean, natural, and realistic results.</p>
             </div>
             <div class="pt-6 flex flex-col">
-                <div class="w-full rounded-3xl bg-[#111111] px-2.5 pt-3 pb-2.5 relative">
-                    <div class="grid grid-cols-2 lg:grid-cols-2 gap-2.5">
-                        <div class="flex flex-col gap-3">
-                            <h3 class="text-white text-sm sm:text-lg pl-1 sm:pl-6">Upload Image</h3>
+                <!--main Img box -->
+                <div class="w-full rounded-2xl md:rounded-3xl bg-[#111111] px-2.5 pt-4 md:pt-3 pb-2.5 relative">
+                    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-2.5 gap-5">
+                        <div class="flex flex-col gap-1.5 md:gap-3">
+                            <h3 class="text-white text-lg pl-1 sm:pl-6">Upload Image</h3>
                             <div
-                                class="bg-black min-h-52 sm:h-[500px] 2xl:h-[550px] rounded-3xl p-3 relative outline-none transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
-                                <label class="absolute inset-0 cursor-pointer rounded-3xl z-30">
+                                class="bg-black h-[210px] sm:h-[520px] 2xl:h-[550px] rounded-xl md:rounded-2xl p-2.5 relative outline-none transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
+                                <label class="absolute inset-0 cursor-pointer  z-30">
                                     <input type="file" class="hidden" accept="image/*">
                                 </label>
                                 <div
-                                    class="flex flex-col items-center justify-center gap-2.5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    class="flex flex-col items-center justify-center gap-2.5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-fit w-full">
                                     <svg width="60" height="60" viewBox="0 0 82 82" fill="none"
-                                        class="w-5 h-5 sm:w-auto sm:h-auto" xmlns="http://www.w3.org/2000/svg">
+                                        class="w-[50px] h-[50px] md:w-auto md:h-auto"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M30.7501 34.1667C34.524 34.1667 37.5834 31.1073 37.5834 27.3333C37.5834 23.5594 34.524 20.5 30.7501 20.5C26.9761 20.5 23.9167 23.5594 23.9167 27.3333C23.9167 31.1073 26.9761 34.1667 30.7501 34.1667Z"
                                             stroke="white" stroke-width="3" stroke-linecap="round"
@@ -745,27 +747,28 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                     <span
-                                        class="text-center font-normal text-sm sm:text-2xl sm:pt-3.5 text-white min-w-32 md:min-w-72">
+                                        class="text-center font-normal text-xl sm:text-2xl sm:pt-3.5 text-white min-w-full md:min-w-72">
                                         Upload Image Here
                                     </span>
-                                    <p class="text-xs sm:text-sm font-normal text-[#797979] text-center min-w-28">
+                                    <p class="text-sm font-normal text-[#797979] text-center min-w-28">
                                         Drop your image to add in to the editor
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-col gap-3">
-                            <h3 class="text-white text-sm sm:text-lg text-right pr-1 sm:pr-6">Target Image Samples</h3>
+                        <div class="flex flex-col gap-1.5 md:gap-3">
+                            <h3 class="text-white text-lg md:text-right pr-1 sm:pr-6">Target Image Samples</h3>
                             <div
-                                class="bg-black min-h-52 sm:h-[500px] 2xl:h-[550px] rounded-3xl p-3 relative outline-none transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
-                                <label class="absolute inset-0 cursor-pointer rounded-3xl z-30">
+                                class="bg-black h-[210px] sm:h-[520px] 2xl:h-[550px] rounded-xl md:rounded-2xl p-2.5 relative outline-none transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
+                                <label class="absolute inset-0 cursor-pointer  z-30">
                                     <input type="file" class="hidden" accept="image/*">
                                 </label>
 
                                 <div
-                                    class="flex flex-col items-center justify-center gap-2.5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    class="flex flex-col items-center justify-center gap-2.5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-fit w-full">
                                     <svg width="60" height="60" viewBox="0 0 82 82" fill="none"
-                                        class="w-5 h-5 sm:w-auto sm:h-auto" xmlns="http://www.w3.org/2000/svg">
+                                        class="w-[50px] h-[50px] md:w-auto md:h-auto"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M30.7501 34.1667C34.524 34.1667 37.5834 31.1073 37.5834 27.3333C37.5834 23.5594 34.524 20.5 30.7501 20.5C26.9761 20.5 23.9167 23.5594 23.9167 27.3333C23.9167 31.1073 26.9761 34.1667 30.7501 34.1667Z"
                                             stroke="white" stroke-width="3" stroke-linecap="round"
@@ -784,10 +787,10 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                     <span
-                                        class="text-center font-normal text-sm sm:text-2xl sm:pt-3.5 text-white min-w-32 md:min-w-72">
+                                        class="text-center font-normal text-xl sm:text-2xl sm:pt-3.5 text-white min-w-full md:min-w-72">
                                         Upload Image Here
                                     </span>
-                                    <p class="text-xs sm:text-sm font-normal text-[#797979] text-center min-w-28">
+                                    <p class="text-sm font-normal text-[#797979] text-center min-w-28">
                                         Drop your image to add in to the editor
                                     </p>
                                 </div>
@@ -798,9 +801,10 @@
             </div>
         </div>
         <div
-            class="mt-6 mx-auto w-fit bg-[#000000] rounded-[10px] flex flex-col gap-[7px] items-center justify-center p-[1px]">
-            <button class="pt-[7px] flex items-center gap-1.5 text-white font-medium text-xs"><svg width="16"
-                    height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            class="mt-6 mx-auto md:w-fit w-full md:bg-[#000000] bg-[#111] rounded-t-[12px] md:rounded-[10px] flex md:flex-col flex-row gap-[7px] items-center md:justify-center justify-between md:p-[1px] p-1 md:relative fixed left-0 bottom-0">
+            <button
+                class="md:pt-[7px] pt-0 flex items-center gap-1.5 text-white font-medium text-xs md:pl-0 pl-3.5"><svg
+                    width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_171_58)">
                         <path
                             d="M7.99823 15.9965C12.4155 15.9965 15.9965 12.4155 15.9965 7.99823C15.9965 3.58093 12.4155 0 7.99823 0C3.58093 0 0 3.58093 0 7.99823C0 12.4155 3.58093 15.9965 7.99823 15.9965Z"
@@ -844,7 +848,7 @@
                 </svg>
                 12 Credit</button>
             <button
-                class="w-fit text-nowrap py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] focus:bg-[#D7FF4D] leading-6 font-semibold text-lg text-black">
+                class="w-fit text-nowrap py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] leading-6 font-semibold text-lg text-black">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_171_52)">
                         <path
@@ -860,7 +864,7 @@
                         </clipPath>
                     </defs>
                 </svg>
-                Baby Generator
+                Face Swap
             </button>
         </div>
     </div>

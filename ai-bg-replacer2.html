@@ -705,28 +705,30 @@
         </div>
     </nav>
     <!-- Tool Progress... area -->
-    <div class="w-full relative px-4 pt-24 pb-3 xl:pt-[90px]">
+    <div class="w-full relative px-5 pt-[84px] md:pt-24 pb-3 xl:pt-[90px]">
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
-                <h1 class="text-4xl font-medium lg:leading-[50px] text-white">AI Background Replacer</h1>
-                <p class="font-normal text-base text-[#797979] leading-7">Easily change the background of any image with AI from simple colors to realistic scenes in seconds.</p>
+                <h1 class="md:text-4xl text-2xl font-medium lg:leading-[50px] text-white">AI Background Replacer</h1>
+                <p class="font-normal text-sm md:text-base text-[#797979] leading-5 md:leading-7">Easily change the
+                    background of any image with AI from simple colors to realistic scenes in seconds.</p>
             </div>
             <div
-                class="w-full !min-h-96 sm:h-[510px] 2xl:h-[550px] rounded-3xl bg-[#111111] mt-6 flex justify-center items-center cursor-pointer relative p-4 outline-none transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)]">
+                class="w-full aspect-square sm:h-[520px] 2xl:h-[550px] rounded-2xl md:rounded-3xl bg-[#111111] mt-6 flex justify-center items-center cursor-pointer relative outline-none transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)]">
                 <button
-                    class="w-11 h-11 flex items-center justify-center rounded-[10px] bg-[#FFFFFF2E] backdrop-blur-[3px] absolute right-2.5 top-2.5">
+                    class="w-10 h-10 md:w-11 md:h-11 flex items-center justify-center rounded-[10px] bg-[#FFFFFF2E] backdrop-blur-[3px] z-20 absolute right-2.5 top-2.5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                         <path d="M16.5 5.5L5.50074 16.4993M16.4993 16.5L5.5 5.50078" stroke="white" stroke-width="1.6"
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <div class="p-2.5 w-fit h-full">
+                <div class="p-2.5 relative max-w-fit w-full max-h-fit h-full flex items-center justify-center z-10">
                     <img src="/assets/images/ai-hairchanger-img1.png" alt="img"
                         class="max-h-full max-w-full w-auto h-auto">
                 </div>
             </div>
             <!-- Prompt Area -->
-            <div class="mt-6 flex flex-col gap-1 bg-[#111111] max-w-[902px] w-full mx-auto p-1 rounded-[10px]">
+            <div
+                class="mt-6 flex flex-col gap-1 bg-[#111111] max-w-[902px] w-full mx-auto p-1 md:rounded-[10px] rounded-t-[12px] md:relative fixed bottom-0 left-0">
                 <div class="flex items-center gap-1">
                     <div class="rounded-[10px] bg-black w-[98px] h-24 flex flex-col relative p-1 -top-1">
                         <label class="absolute z-30 inset-0 cursor-pointer rounded-3xl">
@@ -754,7 +756,6 @@
                                 Image</a>
                         </div>
 
-
                         <div class="w-full h-full flex items-center justify-center relative z-50">
                             <button
                                 class="p-[3px] rounded-md bg-[#FFFFFF2E] absolute top-1 right-1 backdrop-blur-[3px] flex items-center justify-center"><svg
@@ -765,18 +766,18 @@
                                         stroke="white" stroke-width="1.2" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg></button>
-                            <img src="/assets/images/ai-inpaint-img-2.png" alt="img" class="">
+                            <img src="../assets/images/ai-inpaint-img-2.png" alt="img" class="w-full h-full">
                         </div>
                     </div>
-                    <div class="w-full max-w-[792px]">
+                    <div class="w-full max-w-[792px] h-[98px]">
                         <textarea name="" id=""
-                            class="bg-black rounded-[10px] px-4 py-3 min-h-[98px] font-light w-full text-white outline-none text-base placeholder:text-white placeholder:opacity-40"
+                            class="bg-black rounded-[10px] px-4 py-3 h-full font-light w-full text-white outline-none text-base placeholder:text-white placeholder:opacity-40 resize-none"
                             placeholder="Describe what you want to replace..."></textarea>
                     </div>
                 </div>
-                <div class="w-full rounded-[10px] flex gap-4 items-center justify-end">
-                    <button class="pt-1.5 flex items-center gap-1.5 text-white font-medium text-xs"><svg width="16"
-                            height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="w-full rounded-[10px] flex gap-4 items-center md:justify-end justify-between ">
+                    <div class="pt-1.5 flex items-center gap-1.5 text-white font-medium text-xs md:px-0 px-5"><svg
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_171_58)">
                                 <path
                                     d="M7.99823 15.9965C12.4155 15.9965 15.9965 12.4155 15.9965 7.99823C15.9965 3.58093 12.4155 0 7.99823 0C3.58093 0 0 3.58093 0 7.99823C0 12.4155 3.58093 15.9965 7.99823 15.9965Z"
@@ -818,9 +819,9 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        12 Credit</button>
-                    <button data-modal-target="mask-model"
-                        class="py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] focus:bg-[#D7FF4D] font-semibold text-lg text-black">
+                        12 Credit</div>
+                    <button
+                        class="py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] focus:bg-[#D7FF4D]  font-semibold text-lg leading-6 text-black">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_171_52)">
                                 <path
@@ -836,7 +837,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                       Replacer Background
+                        Replacer Background
                     </button>
                 </div>
             </div>

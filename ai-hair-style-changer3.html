@@ -705,19 +705,21 @@
         </div>
     </nav>
     <!-- Tool Progress... area -->
-    <div class="w-full relative px-4 pt-24 pb-3 xl:pt-[90px]">
+    <div class="w-full relative px-5 pt-[84px] md:pt-24 pb-3 xl:pt-[90px]">
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
-                <h1 class="text-4xl font-medium lg:leading-[50px] text-white">AI Hair Style Changer</h1>
-                <p class="font-normal text-base text-[#797979] leading-7">Your virtual hairstylist that helps you choose the right look every time.</p>
+                <h1 class="md:text-4xl text-2xl font-medium lg:leading-[50px] text-white">AI Hair Style Changer</h1>
+                <p class="font-normal text-sm md:text-base text-[#797979] leading-5 md:leading-7">Your virtual
+                    hairstylist that helps you choose
+                    the right look every time.</p>
             </div>
             <div
-                class="w-full !min-h-96 sm:h-[510px] 2xl:h-[550px] rounded-3xl bg-[#111111] mt-6 flex justify-center items-center cursor-pointer relative py-2.5">
-                <div class="relative w-fit h-full">
+                class="w-full aspect-square sm:h-[520px] 2xl:h-[550px] rounded-2xl md:rounded-3xl bg-[#111111] mt-6 flex justify-center items-center cursor-pointer relative p-2.5">
+                <div class="relative max-w-fit w-full max-h-fit h-full flex items-center justify-center">
                     <img src="/assets/images/ai-hairchanger-img1.png" alt="img"
                         class="max-h-full max-w-full w-auto h-auto">
                     <!-- loading code -->
-                    <div class="flex items-center justify-center w-full h-full bg-[#00000080] absolute top-0 z-40">
+                    <div class="flex items-center justify-center inset-0 bg-[#00000080] absolute top-0">
                         <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g class="rotate-animation">
                                 <rect x="10.5" y="5.5" width="49" height="49" rx="24.5"
@@ -738,7 +740,6 @@
                                     d="M35.5943 35.8042L38.44 40.902L42.1771 38.671L39.429 33.7481C39.1303 33.2143 38.5794 32.8858 37.9845 32.8868L31.7771 32.8876C31.1801 32.8874 30.6301 33.2168 30.3306 33.7525L27.5758 38.6808L31.3107 40.908L34.1634 35.8047C34.4799 35.2336 35.2743 35.2349 35.5943 35.8042Z"
                                     fill="black" />
                             </g>
-
                             <defs>
                                 <filter id="filter0_d_171_432" x="0" y="0" width="70" height="70"
                                     filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -775,35 +776,14 @@
                 </div>
             </div>
             <!-- Prompt Area -->
-            <div class="mt-6 flex flex-col gap-1 bg-[#111111] max-w-[902px] w-full mx-auto p-1 rounded-[10px]">
+            <div
+                class="mt-6 flex flex-col gap-1 bg-[#111111] max-w-[902px] w-full mx-auto p-1 md:rounded-[10px] rounded-t-[12px] md:relative fixed bottom-0 left-0">
                 <div class="flex items-center gap-1">
-                    <div class="rounded-[10px] bg-black w-[98px] h-24 flex flex-col relative p-1 -top-1">
+                    <div
+                        class="rounded-[10px] bg-black md:w-[98px] md:h-24 w-[90px] h-[90px] flex flex-col relative p-1  justify-center items-center shrink-0">
                         <label class="absolute z-30 inset-0 cursor-pointer rounded-3xl">
                             <input type="file" class="hidden" accept="image/*">
                         </label>
-                        <div
-                            class="absolute z-0 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2.5">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path
-                                    d="M9 10C10.1046 10 11 9.10457 11 8C11 6.89543 10.1046 6 9 6C7.89543 6 7 6.89543 7 8C7 9.10457 7.89543 10 9 10Z"
-                                    stroke="#4D4D4D" stroke-width="1.2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M13 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V10" stroke="#4D4D4D"
-                                    stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M15.75 5H21.25" stroke="#4D4D4D" stroke-width="1.2" stroke-linecap="round" />
-                                <path d="M18.5 7.75V2.25" stroke="#4D4D4D" stroke-width="1.2" stroke-linecap="round" />
-                                <path
-                                    d="M2.66992 18.9525L7.59992 15.6425C8.38992 15.1125 9.52992 15.1725 10.2399 15.7825L10.5699 16.0725C11.3499 16.7425 12.6099 16.7425 13.3899 16.0725L17.5499 12.5025C18.3299 11.8325 19.5899 11.8325 20.3699 12.5025L21.9999 13.9025"
-                                    stroke="#4D4D4D" stroke-width="1.2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-
-                            <a href="" class="text-xs font-normal text-center text-[#4D4D4D]">Reference
-                                Image</a>
-                        </div>
-
-
                         <div class="w-full h-full flex items-center justify-center relative z-50">
                             <button
                                 class="p-[3px] rounded-md bg-[#FFFFFF2E] absolute top-1 right-1 backdrop-blur-[3px] flex items-center justify-center"><svg
@@ -814,18 +794,18 @@
                                         stroke="white" stroke-width="1.2" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg></button>
-                            <img src="../assets/images/ai-inpaint-img-2.png" alt="img" class="">
+                            <img src="../assets/images/ai-inpaint-img-2.png" alt="img" class="w-full h-full">
                         </div>
                     </div>
-                    <div class="w-full max-w-[792px]">
+                    <div class="w-full md:max-w-[792px] md:min-h-[98px] h-[90px] max-w-full">
                         <textarea name="" id=""
-                            class="bg-black rounded-[10px] px-4 py-3 min-h-[98px] font-light w-full text-white outline-none text-base placeholder:text-white placeholder:opacity-40"
+                            class="bg-black rounded-[10px] px-4 py-3 h-[90px] md:min-h-[98px] font-light w-full text-white outline-none text-base placeholder:text-white placeholder:opacity-40 resize-none"
                             placeholder="Describe what you want to replace..."></textarea>
                     </div>
                 </div>
-                <div class="w-full rounded-[10px] flex gap-4 items-center justify-end">
-                    <button class="pt-1.5 flex items-center gap-1.5 text-white font-medium text-xs"><svg width="16"
-                            height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="w-full rounded-[10px] flex gap-4 items-center md:justify-end justify-between ">
+                    <div class="pt-1.5 flex items-center gap-1.5 text-white font-medium text-xs md:px-0 px-5"><svg
+                            width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_171_58)">
                                 <path
                                     d="M7.99823 15.9965C12.4155 15.9965 15.9965 12.4155 15.9965 7.99823C15.9965 3.58093 12.4155 0 7.99823 0C3.58093 0 0 3.58093 0 7.99823C0 12.4155 3.58093 15.9965 7.99823 15.9965Z"
@@ -867,9 +847,9 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        12 Credit</button>
-                    <button data-modal-target="mask-model"
-                        class="py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] font-semibold text-lg text-black">
+                        12 Credit</div>
+                    <button
+                        class="py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] focus:bg-[#D7FF4D]  font-semibold text-lg leading-6 text-black">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_171_52)">
                                 <path
