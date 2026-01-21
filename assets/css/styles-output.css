@@ -10156,6 +10156,10 @@ textarea{
     aspect-ratio: auto;
   }
 
+  .md\:aspect-\[357\/355\] {
+    aspect-ratio: 357/355;
+  }
+
   .md\:h-11 {
     height: 2.75rem;
   }
