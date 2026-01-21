@@ -1936,3 +1936,11 @@ height: 100%;
     }
       }
 }
+body.no-scroll {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+textarea{
+  resize: none;
+}
