@@ -10390,6 +10390,10 @@ textarea{
     width: max-content;
   }
 
+  .md\:w-\[720px\] {
+    width: 720px;
+  }
+
   .md\:min-w-72 {
     min-width: 18rem;
   }
