@@ -22,8 +22,8 @@
             border-color: #C6FF00 !important;
         }
 
-        .active-tab {
-            background-color: rgba(198, 255, 0, 0.10);
+          .active-tab {
+            background-color: #C6FF0026;
             color: #C6FF00;
         }
 
@@ -753,20 +753,20 @@
                 </div>
             </div>
         </nav>
-         <div class="scrollspy-scroll flex lg:flex-row flex-col w-full">
+        <div class="scrollspy-scroll flex lg:flex-row flex-col w-full">
             <!--SideBar-->
             <div id="create-section"
-                class="relative flex lg:h-full gap-5 lg:overflow-hidden h-full pb-[100px] md:pb-0 overflow-y-auto">
+                class="relative flex lg:h-full gap-5 lg:overflow-hidden  pb-[100px] md:pb-0">
                 <aside class="relative w-full h-auto overflow-visible
 lg:fixed lg:left-0 lg:top-[65px]
 lg:w-[280px] 2xl:w-[404px] xl:w-[380px]
-lg:h-[calc(100vh-64px)] lg:overflow-y-auto
+lg:h-[calc(100vh-64px)] overflow-y-auto
 lg:z-50 lg:pt-0 pt-[65px]
 flex flex-col justify-between
-bg-[#0A0A0A]
+bg-[#151515]
 nav-list
-lg:border-r border-[#222222]
-scrollbar-hide">
+lg:border-r border-black
+scrollbar-hide h-screen">
                     <div class="flex flex-col pb-8 relative lg:px-3 px-5 pt-5">
                         <ul class="flex flex-col gap-5 ">
                             <li>
@@ -807,7 +807,7 @@ scrollbar-hide">
                                         </p>
                                     </div>
                                     <div
-                                        class="-mt-[25px] rounded-b-xl bg-[#272727] pt-5 pb-0 xl:px-3.5 px-2  flex items-center justify-center xl:gap-7 gap-2">
+                                        class="-mt-[25px] rounded-b-xl border-b border-[#292114] bg-[#272727] pt-5 pb-0 xl:px-3.5 px-2  flex items-center justify-center xl:gap-7 gap-2">
 
                                         <button
                                             class="flex pt-1.5 pb-4 items-center gap-1.5 text-xs text-white  transition-all duration-500 hover:text-[#c6ff00] ">
@@ -833,14 +833,11 @@ scrollbar-hide">
 
                             <li class="">
                                 <div class="relative flex flex-col gap-3.5">
-
                                     <div class="flex flex-col gap-3.5">
-
                                         <div class="w-full flex flex-col gap-2">
-
                                             <label class="text-sm text-white font-normal">Styles</label>
                                             <button
-                                                class="group w-full flex items-center justify-between py-2.5 pl-[18px] pr-[15px] rounded-[10px] bg-black text-base leading-[26px] text-left whitespace-nowrap font-normal capitalize text-white transition-all duration-500 hover:text-[#C6FF00]"
+                                                class="group w-full flex items-center justify-between py-2.5 pl-[18px] pr-[15px] border border-[#FFFFFF1A] rounded-[10px] bg-black text-base leading-[26px] text-left whitespace-nowrap font-normal capitalize text-white transition-all duration-500 hover:text-[#C6FF00]"
                                                 data-modal-target="styles">
                                                 <div class="flex items-center gap-3">
                                                     <img src="/assets/images/1mystic1.png" alt="img"
@@ -922,7 +919,7 @@ scrollbar-hide">
                                                         data-modal-target="aspect-ratio">
                                                         <div class="flex items-center gap-2.5 flex-1">
                                                             <div class="relative  shrink-0 overflow-hidden rounded ">
-                                                                <svg width="24" height="24" viewBox="0 0 24 24"
+                                                                <svg width="18" height="18" viewBox="0 0 24 24"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <rect x="1" y="1" width="22" height="22" rx="4"
                                                                         stroke="white"></rect>
@@ -954,78 +951,41 @@ scrollbar-hide">
                     </div>
                     <!--mobile tabs-->
                     <div
-                        class="bg-[#111] lg:border-t border-[#222222] lg:sticky hidden lg:block lg:bottom-0 w-full left-0 right-0 lg:p-3  p-1  bottom-0 lg:bg-[#0A0A0A] lg:rounded-none rounded-t-[12px] z-50 lg:shadow-none shadow-[0_-16px_44px_0_rgba(0,0,0,0.60)]">
+                        class="backdrop-blur-xl lg:sticky hidden lg:block lg:bottom-0 w-full left-0 right-0 lg:p-3  p-1  bottom-0 lg:rounded-none rounded-t-[12px] z-50">
                         <!--mobile- sticky-->
-                        <div
-                            class="flex items-center justify-between gap-2 mx-auto lg:p-1 px-0 pt-0 pb-1 lg:bg-black bg-transparent lg:rounded-[10px]">
+                        <button
+                            class="w-full flex items-center justify-between gap-2 mx-auto bg-[#C6FF00] hover:bg-[#a8d50c] transition-all duration-500  lg:rounded-[10px] cursor-pointer">
                             <div class="flex items-center gap-2 w-fit lg:pl-3 lg:px-0 px-5">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                                     fill="none">
-                                    <g clip-path="url(#clip0_5669_2017)">
+                                    <g opacity="0.7" clip-path="url(#clip0_6433_3337)">
                                         <path
-                                            d="M8.99801 17.996C13.9675 17.996 17.996 13.9675 17.996 8.99801C17.996 4.02855 13.9675 0 8.99801 0C4.02855 0 0 4.02855 0 8.99801C0 13.9675 4.02855 17.996 8.99801 17.996Z"
-                                            fill="#C6FF00"></path>
-                                        <path opacity="0.2"
-                                            d="M4.02035 9.71413L1.91485 3.44531C1.28718 4.24381 0.794572 5.1456 0.464844 6.12684L5.3631 17.2343C5.97091 17.5045 6.61448 17.7071 7.28585 17.8382L4.02035 9.71413Z"
-                                            fill="white"></path>
+                                            d="M16.0867 16.0753C19.455 12.7071 19.455 7.24606 16.0867 3.87782C12.7185 0.509582 7.25751 0.509581 3.88927 3.87782C0.521026 7.24606 0.521026 12.7071 3.88927 16.0753C7.25751 19.4435 12.7185 19.4435 16.0867 16.0753Z"
+                                            fill="black" />
                                         <path
-                                            d="M6.47158 4.26327L6.85295 3.81436L5.60952 0.664062C5.37116 0.759406 5.14075 0.866667 4.91431 0.981873L6.47158 4.26327Z"
-                                            fill="#E5FF8C"></path>
-                                        <path opacity="0.2"
-                                            d="M13.0461 5.5883L16.7765 13.5336C16.9949 13.1601 17.1856 12.7668 17.3525 12.3616L11.3618 0.316616C10.9486 0.205382 10.5275 0.121957 10.0945 0.0703125L13.0461 5.5883Z"
-                                            fill="white"></path>
-                                        <path
-                                            d="M14.6449 14.827C17.6603 11.8116 17.6603 6.92276 14.6449 3.90741C11.6296 0.892064 6.74075 0.892065 3.7254 3.90741C0.710049 6.92276 0.710049 11.8116 3.7254 14.827C6.74075 17.8423 11.6296 17.8423 14.6449 14.827Z"
-                                            fill="white"></path>
-                                        <path
-                                            d="M14.4773 14.4654C17.5088 11.434 17.5088 6.51911 14.4773 3.4877C11.4459 0.45628 6.53103 0.456279 3.49961 3.4877C0.468191 6.51911 0.468191 11.434 3.49961 14.4654C6.53103 17.4968 11.4459 17.4968 14.4773 14.4654Z"
-                                            fill="#9BC30F"></path>
-                                        <path opacity="0.3"
-                                            d="M15.563 5C16.1042 6.03178 16.4074 7.19813 16.4074 8.43178C16.4074 12.6396 12.8616 16.049 8.48521 16.049C5.80248 16.049 3.43235 14.7705 2 12.8101C3.30637 15.2953 5.98444 17 9.07775 17C13.4541 17 17 13.5907 17 9.3828C17.0046 7.74991 16.4728 6.23813 15.563 5Z"
-                                            fill="#C1F702"></path>
-                                        <path
-                                            d="M1.1963 8.9191C1.1963 4.70337 4.83977 1.28315 9.33067 1.28315C12.0884 1.28315 14.5302 2.57303 16 4.54607C14.5589 2.41124 12.0214 1 9.12959 1C4.63868 1 1 4.41573 1 8.63146C1 10.2584 1.54102 11.764 2.46505 13C1.66071 11.8225 1.1963 10.4202 1.1963 8.9191Z"
-                                            fill="white"></path>
-                                        <path
-                                            d="M8.53107 4.26725C8.69215 3.83194 9.30785 3.83194 9.46893 4.26725L10.5408 7.16383C10.5914 7.30069 10.6993 7.4086 10.8362 7.45924L13.7327 8.53107C14.1681 8.69215 14.1681 9.30785 13.7327 9.46893L10.8362 10.5408C10.6993 10.5914 10.5914 10.6993 10.5408 10.8362L9.46893 13.7327C9.30785 14.1681 8.69215 14.1681 8.53107 13.7327L7.45924 10.8362C7.4086 10.6993 7.30069 10.5914 7.16383 10.5408L4.26725 9.46893C3.83194 9.30785 3.83194 8.69215 4.26725 8.53107L7.16383 7.45924C7.30069 7.4086 7.4086 7.30069 7.45924 7.16383L8.53107 4.26725Z"
-                                            fill="#C6FF00" stroke="url(#paint0_linear_5669_2017)" stroke-width="0.1">
-                                        </path>
+                                            d="M9.53026 4.59538C9.69134 4.16007 10.307 4.16007 10.4681 4.59538L11.72 7.97857C11.7706 8.11543 11.8786 8.22333 12.0154 8.27397L15.3986 9.52587C15.8339 9.68695 15.8339 10.3026 15.3986 10.4637L12.0154 11.7156C11.8786 11.7663 11.7706 11.8742 11.72 12.011L10.4681 15.3942C10.307 15.8295 9.69134 15.8295 9.53026 15.3942L8.27837 12.011C8.22773 11.8742 8.11982 11.7663 7.98296 11.7156L4.59977 10.4637C4.16446 10.3026 4.16446 9.68694 4.59977 9.52587L7.98296 8.27397C8.11982 8.22333 8.22773 8.11543 8.27837 7.97857L9.53026 4.59538Z"
+                                            fill="#C6FF00" stroke="url(#paint0_linear_6433_3337)" stroke-width="0.1" />
                                     </g>
                                     <defs>
-                                        <linearGradient id="paint0_linear_5669_2017" x1="9" y1="3" x2="9" y2="15"
-                                            gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="white"></stop>
-                                            <stop offset="0.480769" stop-color="white" stop-opacity="0"></stop>
-                                            <stop offset="1" stop-color="white"></stop>
+                                        <linearGradient id="paint0_linear_6433_3337" x1="9.99919" y1="3.32812"
+                                            x2="9.99919" y2="16.6615" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="white" />
+                                            <stop offset="0.480769" stop-color="white" stop-opacity="0" />
+                                            <stop offset="1" stop-color="white" />
                                         </linearGradient>
-                                        <clipPath id="clip0_5669_2017">
-                                            <rect width="18" height="18" fill="white"></rect>
+                                        <clipPath id="clip0_6433_3337">
+                                            <rect width="20" height="20" fill="white" />
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <span class="text-sm font-medium leading-[18px] text-white ">12 Credit</span>
+                                <span class="text-sm font-semibold leading-normal text-black opacity-70">12
+                                    Credit</span>
                             </div>
-                            <button
-                                class="py-[11px] pl-[14px] pr-[17px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-[16px] text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_5669_2031)">
-                                        <path d="M6 9H9M9 9H12M9 9V6M9 9V12" stroke="black" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path
-                                            d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_5669_2031">
-                                            <rect width="18" height="18" fill="white"></rect>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                            <span
+                                class="py-2.5 pr-[19px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-6 text-black font-semibold">
                                 Generate
-                            </button>
-                        </div>
+                            </span>
+                        </button>
                         <!--mobile tabs-->
                         <div class="mobile-tab  bg-[#000] rounded-[10px] p-[2px] flex items-center   lg:hidden">
                             <button
@@ -1086,7 +1046,7 @@ scrollbar-hide">
                 <!--Main Content Page-->
                 <div class="w-full h-full relative">
                     <div class="flex md:flex-row flex-col md:items-center justify-between pb-5 gap-5">
-                        <div class="flex items-center gap-2.5">
+                        <div class="hidden md:flex items-center gap-2.5">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 5.99805H6V11.998H12V5.99805Z" stroke="white" stroke-width="1.3"
@@ -1111,15 +1071,17 @@ scrollbar-hide">
                                 <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none ">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
                                         fill="none">
-                                        <path d="M13 13L16 16" stroke="white" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M2 8C2 11.3137 4.68629 14 8 14C9.65975 14 11.1621 13.3261 12.2483 12.237C13.3308 11.1516 14 9.65397 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8Z"
-                                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                        <g opacity="0.5">
+                                            <path d="M13 13L16 16" stroke="white" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M2 8C2 11.3137 4.68629 14 8 14C9.65975 14 11.1621 13.3261 12.2483 12.237C13.3308 11.1516 14 9.65397 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8Z"
+                                                stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
                                     </svg>
                                 </div>
                                 <input type="text" id="default-search"
-                                    class="block md:w-[344px] w-full pr-3.5 pl-10 py-2.5 text-sm leading-[18px] font-normal text-white bg-black  rounded-[10px] placeholder-white transition-all duration-500 border border-transparent focus:border-white/10 hover:border-white/10 outline-none focus-within:outline-offset-0 focus-within:outline focus-within:!outline-0 focus-within:outline-none "
+                                    class="block md:w-[344px] w-full pr-3.5 pl-10 py-2.5 text-sm leading-[18px] font-normal text-white bg-black  rounded-[10px] placeholder-white/50 transition-all duration-500 border border-transparent focus:border-white/10 hover:border-white/10 outline-none focus-within:outline-offset-0 focus-within:outline focus-within:!outline-0 focus-within:outline-none "
                                     placeholder="Search By Prompt">
                             </div>
                             <div class="relative">
@@ -1127,21 +1089,23 @@ scrollbar-hide">
                                     class="dropdown-btn w-[40px] h-[40px] flex items-center justify-between   rounded-[10px] border border-transparent focus:border-white/10 hover:border-white/10 font-medium  bg-black  p-3 transition-all duration-500  outline-none focus-within:outline-offset-0 focus-within:outline focus-within:!outline-1 focus-within:outline-none ">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
                                         fill="none">
-                                        <path
-                                            d="M6.6431 9.37957C4.77676 7.9842 3.44673 6.44936 2.72051 5.5865C2.4957 5.3194 2.42204 5.12392 2.37775 4.7796C2.22608 3.6006 2.15026 3.0111 2.49596 2.63055C2.84168 2.25 3.45303 2.25 4.67575 2.25H13.3243C14.547 2.25 15.1583 2.25 15.504 2.63055C15.8498 3.0111 15.7739 3.6006 15.6223 4.77961C15.578 5.12393 15.5043 5.3194 15.2795 5.5865C14.5523 6.45046 13.2196 7.98803 11.3495 9.38513C11.1803 9.51158 11.0687 9.71753 11.048 9.94605C10.8628 11.994 10.6919 13.1157 10.5856 13.6831C10.414 14.5993 9.1149 15.1505 8.4195 15.6422C8.00558 15.935 7.50323 15.5865 7.44959 15.1333C7.34732 14.2696 7.15471 12.5148 6.94445 9.94605C6.92557 9.71543 6.81365 9.50707 6.6431 9.37957Z"
-                                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                        <g opacity="0.5">
+                                            <path
+                                                d="M6.6431 9.37957C4.77676 7.9842 3.44673 6.44936 2.72051 5.5865C2.4957 5.3194 2.42204 5.12392 2.37775 4.7796C2.22608 3.6006 2.15026 3.0111 2.49596 2.63055C2.84168 2.25 3.45303 2.25 4.67575 2.25H13.3243C14.547 2.25 15.1583 2.25 15.504 2.63055C15.8498 3.0111 15.7739 3.6006 15.6223 4.77961C15.578 5.12393 15.5043 5.3194 15.2795 5.5865C14.5523 6.45046 13.2196 7.98803 11.3495 9.38513C11.1803 9.51158 11.0687 9.71753 11.048 9.94605C10.8628 11.994 10.6919 13.1157 10.5856 13.6831C10.414 14.5993 9.1149 15.1505 8.4195 15.6422C8.00558 15.935 7.50323 15.5865 7.44959 15.1333C7.34732 14.2696 7.15471 12.5148 6.94445 9.94605C6.92557 9.71543 6.81365 9.50707 6.6431 9.37957Z"
+                                                stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
                                     </svg>
                                 </button>
                                 <!--filter ratio dropdown-->
-                                 <div
-                                    class="dropdown-menu z-[1000] absolute right-0 mt-2 w-full md:w-[720px] bg-[#111] shadow-lg rounded-[10px] transform transition-all duration-300 py-4 px-5 
+                                <div
+                                    class="dropdown-menu z-[1000] absolute right-0 mt-2 w-full md:w-[720px] bg-[#202020] shadow-lg rounded-[10px] transform transition-all duration-300 py-4 px-5 
          opacity-0 invisible md:translate-y-[-10px] 
          max-sm:fixed max-sm:left-0 max-sm:right-0 max-sm:bottom-0 max-sm:mt-0 max-sm:rounded-t-[16px] max-sm:translate-y-full">
                                     <div class="flex justify-between items-center pb-4">
                                         <span class="text-xl font-medium text-white">Models</span>
 
                                         <button type="button" class="close-dropdown  cursor-pointer p-1.5 rounded-md
-                    bg-[#262626] text-white
+                    bg-black text-white
                     transition-all duration-300 hover:text-limegreen
                     ">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
@@ -1388,9 +1352,9 @@ scrollbar-hide">
                         </div>
                     </div>
                     <div class="flex flex-col gap-6 lg:h-[calc(100vh-145px)] h-auto overflow-y-auto">
-                        <div class="relative bg-[#111] rounded-lg p-3 flex flex-col gap-3">
+                        <div class="relative bg-[#111111] rounded-lg p-3 flex flex-col gap-3">
                             <div class="flex lg:flex-row flex-col gap-4 justify-between items-center ">
-                                <h4 class="text-base text-white font-medium leading-6
+                                <h4 class="text-base opacity-50  text-white font-normal md:font-medium leading-6
                         line-clamp-3
                         md:line-clamp-none">
                                     Modern loft-style living and dining room with large double-height windows, soft
@@ -1760,18 +1724,18 @@ scrollbar-hide">
 
                                 <div class="flex flex-wrap items-center gap-[5px]">
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">1.1</span>
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">1.1</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">Flux</span>
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Flux</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent whitespace-nowrap hover:border-white/10 transition-all duration-500">Custom
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Custom
                                         prompt</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">Dec
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Dec
                                         03, 2025</span>
                                 </div>
                                 <button
-                                    class="py-2 px-3.5 border border-white/20 rounded-lg flex items-center justify-center gap-1.5 text-sm text-white  font-medium transition-all duration-500 hover:bg-[#1F1F1F] md:w-fit w-full">
+                                    class="py-[7px] pl-[15px] pr-[17px] bg-[#202020] rounded-lg leading-5 flex items-center justify-center gap-1.5 text-sm text-white  font-normal transition-all duration-500 hover:bg-[#343434] md:w-fit w-full">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_6205_4948)">
@@ -1795,7 +1759,7 @@ scrollbar-hide">
                         </div>
                         <div class="relative bg-[#111] rounded-lg p-3 flex flex-col gap-3">
                             <div class="flex lg:flex-row flex-col gap-4 justify-between items-center ">
-                                <h4 class="text-base text-white font-medium leading-6
+                                <h4 class="text-base opacity-50  text-white font-normal md:font-medium leading-6
                         line-clamp-3
                         md:line-clamp-none">
                                     Modern loft-style living and dining room with large double-height windows, soft
@@ -2375,18 +2339,18 @@ scrollbar-hide">
 
                                 <div class="flex flex-wrap items-center gap-[5px]">
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">1.1</span>
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">1.1</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">Flux</span>
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Flux</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent whitespace-nowrap hover:border-white/10 transition-all duration-500">Custom
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Custom
                                         prompt</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">Dec
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Dec
                                         03, 2025</span>
                                 </div>
                                 <button
-                                    class="py-2 px-3.5 border border-white/20 rounded-lg flex items-center justify-center gap-1.5 text-sm text-white  font-medium transition-all duration-500 hover:bg-[#1F1F1F] md:w-fit w-full">
+                                    class="py-[7px] pl-[15px] pr-[17px] bg-[#202020] rounded-lg leading-5 flex items-center justify-center gap-1.5 text-sm text-white  font-normal transition-all duration-500 hover:bg-[#343434] md:w-fit w-full">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_6205_4948)">
@@ -2410,9 +2374,9 @@ scrollbar-hide">
                         </div>
                         <div class="relative bg-[#111] rounded-lg p-3 flex flex-col gap-3">
                             <div class="flex lg:flex-row flex-col gap-4 justify-between items-center ">
-                                <h4 class="text-base text-white font-medium leading-6
-line-clamp-3
-md:line-clamp-none ">
+                                <h4 class="text-base opacity-50  text-white font-normal md:font-medium leading-6
+                        line-clamp-3
+                        md:line-clamp-none ">
                                     Modern loft-style living and dining room with large double-height windows, soft
                                     natural daylight, and minimalistic architectural design. Neutral color palette with
                                     beige and warm wood tones. Cozy contemporary sofa with textured blankets and
@@ -2503,18 +2467,18 @@ md:line-clamp-none ">
 
                                 <div class="flex flex-wrap items-center gap-[5px]">
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">1.1</span>
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">1.1</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">Flux</span>
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Flux</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent whitespace-nowrap hover:border-white/10 transition-all duration-500">Custom
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Custom
                                         prompt</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">Dec
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Dec
                                         03, 2025</span>
                                 </div>
                                 <button
-                                    class="py-2 px-3.5 border border-white/20 rounded-lg flex items-center justify-center gap-1.5 text-sm text-white  font-medium transition-all duration-500 hover:bg-[#1F1F1F] md:w-fit w-full">
+                                    class="py-[7px] pl-[15px] pr-[17px] bg-[#202020] rounded-lg leading-5 flex items-center justify-center gap-1.5 text-sm text-white  font-normal transition-all duration-500 hover:bg-[#343434] md:w-fit w-full">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_6205_4948)">
@@ -2536,12 +2500,12 @@ md:line-clamp-none ">
                                 </button>
                             </div>
                         </div>
-               
+
                         <div class="relative bg-[#111] rounded-lg p-3 flex flex-col gap-3">
                             <div class="flex lg:flex-row flex-col gap-4 justify-between items-center ">
-                                <h4 class="text-base text-white font-medium leading-6
-line-clamp-3
-md:line-clamp-none ">
+                                <h4 class="text-base opacity-50  text-white font-normal md:font-medium leading-6
+                        line-clamp-3
+                        md:line-clamp-none">
                                     Modern loft-style living and dining room with large double-height windows, soft
                                     natural daylight, and minimalistic architectural design. Neutral color palette with
                                     beige and warm wood tones. Cozy contemporary sofa with textured blankets and
@@ -2756,31 +2720,31 @@ md:line-clamp-none ">
 
                                 <div class="flex flex-wrap items-center gap-[5px]">
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">1.1</span>
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">1.1</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">Flux</span>
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Flux</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent whitespace-nowrap hover:border-white/10 transition-all duration-500">Custom
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Custom
                                         prompt</span>
                                     <span
-                                        class="bg-black rounded-md py-2 px-3.5 text-sm text-white border border-transparent hover:border-white/10 transition-all duration-500">Dec
+                                        class="bg-black rounded-md py-[7px] px-3.5 leading-[18px] text-sm font-normal text-white opacity-50 border border-transparent hover:border-white/10 transition-all duration-500">Dec
                                         03, 2025</span>
                                 </div>
                                 <button
-                                    class="py-2 px-3.5 border border-white/20 rounded-lg flex items-center justify-center gap-1.5 text-sm text-white  font-medium transition-all duration-500 hover:bg-[#1F1F1F] md:w-fit w-full">
+                                    class="py-[7px] pl-[15px] pr-[17px] bg-[#202020] rounded-lg leading-5 flex items-center justify-center gap-1.5 text-sm text-white  font-normal transition-all duration-500 hover:bg-[#343434] md:w-fit w-full">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_6205_4948)">
                                             <path
                                                 d="M4.66406 6.99935H6.9974M6.9974 6.99935H9.33073M6.9974 6.99935V4.66602M6.9974 6.99935V9.33268"
-                                                stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                                             <path
                                                 d="M6.9974 12.8327C10.219 12.8327 12.8307 10.221 12.8307 6.99935C12.8307 3.77769 10.219 1.16602 6.9974 1.16602C3.77573 1.16602 1.16406 3.77769 1.16406 6.99935C1.16406 10.221 3.77573 12.8327 6.9974 12.8327Z"
-                                                stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                                         </g>
                                         <defs>
                                             <clipPath id="clip0_6205_4948">
-                                                <rect width="14" height="14" fill="white"></rect>
+                                                <rect width="14" height="14" fill="white" />
                                             </clipPath>
                                         </defs>
                                     </svg>
@@ -2796,81 +2760,45 @@ md:line-clamp-none ">
                 </div>
             </div>
             <div
-                class="bg-[#111] lg:border-t border-[#222222] block lg:hidden fixed lg:bottom-0 w-full left-0 right-0 lg:p-3  p-1  bottom-0 lg:bg-[#0A0A0A] lg:rounded-none rounded-t-[12px] z-50 lg:shadow-none shadow-[0_-16px_44px_0_rgba(0,0,0,0.60)]">
+                class="bg-[#0A0A0A] lg:border-t border-black block lg:hidden fixed lg:bottom-0 w-full left-0 right-0 p-1.5 bottom-0 lg:rounded-none rounded-t-[12px] z-50">
                 <!--mobile- sticky-->
-                <div
-                    class="flex items-center justify-between gap-2 mx-auto lg:p-1 px-0 pt-0 pb-1 lg:bg-black bg-transparent lg:rounded-[10px]">
-                    <div class="flex items-center gap-2 w-fit lg:pl-3 lg:px-0 px-5">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                            <g clip-path="url(#clip0_5669_2017)">
+                <button
+                    class="w-full flex items-center justify-between px-4 gap-2 mx-auto bg-[#C6FF00] hover:bg-[#a8d50c] transition-all duration-500  rounded-[10px] cursor-pointer">
+                    <div class="flex items-center gap-2 w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <g opacity="0.7" clip-path="url(#clip0_6433_3337)">
                                 <path
-                                    d="M8.99801 17.996C13.9675 17.996 17.996 13.9675 17.996 8.99801C17.996 4.02855 13.9675 0 8.99801 0C4.02855 0 0 4.02855 0 8.99801C0 13.9675 4.02855 17.996 8.99801 17.996Z"
-                                    fill="#C6FF00"></path>
-                                <path opacity="0.2"
-                                    d="M4.02035 9.71413L1.91485 3.44531C1.28718 4.24381 0.794572 5.1456 0.464844 6.12684L5.3631 17.2343C5.97091 17.5045 6.61448 17.7071 7.28585 17.8382L4.02035 9.71413Z"
-                                    fill="white"></path>
+                                    d="M16.0867 16.0753C19.455 12.7071 19.455 7.24606 16.0867 3.87782C12.7185 0.509582 7.25751 0.509581 3.88927 3.87782C0.521026 7.24606 0.521026 12.7071 3.88927 16.0753C7.25751 19.4435 12.7185 19.4435 16.0867 16.0753Z"
+                                    fill="black" />
                                 <path
-                                    d="M6.47158 4.26327L6.85295 3.81436L5.60952 0.664062C5.37116 0.759406 5.14075 0.866667 4.91431 0.981873L6.47158 4.26327Z"
-                                    fill="#E5FF8C"></path>
-                                <path opacity="0.2"
-                                    d="M13.0461 5.5883L16.7765 13.5336C16.9949 13.1601 17.1856 12.7668 17.3525 12.3616L11.3618 0.316616C10.9486 0.205382 10.5275 0.121957 10.0945 0.0703125L13.0461 5.5883Z"
-                                    fill="white"></path>
-                                <path
-                                    d="M14.6449 14.827C17.6603 11.8116 17.6603 6.92276 14.6449 3.90741C11.6296 0.892064 6.74075 0.892065 3.7254 3.90741C0.710049 6.92276 0.710049 11.8116 3.7254 14.827C6.74075 17.8423 11.6296 17.8423 14.6449 14.827Z"
-                                    fill="white"></path>
-                                <path
-                                    d="M14.4773 14.4654C17.5088 11.434 17.5088 6.51911 14.4773 3.4877C11.4459 0.45628 6.53103 0.456279 3.49961 3.4877C0.468191 6.51911 0.468191 11.434 3.49961 14.4654C6.53103 17.4968 11.4459 17.4968 14.4773 14.4654Z"
-                                    fill="#9BC30F"></path>
-                                <path opacity="0.3"
-                                    d="M15.563 5C16.1042 6.03178 16.4074 7.19813 16.4074 8.43178C16.4074 12.6396 12.8616 16.049 8.48521 16.049C5.80248 16.049 3.43235 14.7705 2 12.8101C3.30637 15.2953 5.98444 17 9.07775 17C13.4541 17 17 13.5907 17 9.3828C17.0046 7.74991 16.4728 6.23813 15.563 5Z"
-                                    fill="#C1F702"></path>
-                                <path
-                                    d="M1.1963 8.9191C1.1963 4.70337 4.83977 1.28315 9.33067 1.28315C12.0884 1.28315 14.5302 2.57303 16 4.54607C14.5589 2.41124 12.0214 1 9.12959 1C4.63868 1 1 4.41573 1 8.63146C1 10.2584 1.54102 11.764 2.46505 13C1.66071 11.8225 1.1963 10.4202 1.1963 8.9191Z"
-                                    fill="white"></path>
-                                <path
-                                    d="M8.53107 4.26725C8.69215 3.83194 9.30785 3.83194 9.46893 4.26725L10.5408 7.16383C10.5914 7.30069 10.6993 7.4086 10.8362 7.45924L13.7327 8.53107C14.1681 8.69215 14.1681 9.30785 13.7327 9.46893L10.8362 10.5408C10.6993 10.5914 10.5914 10.6993 10.5408 10.8362L9.46893 13.7327C9.30785 14.1681 8.69215 14.1681 8.53107 13.7327L7.45924 10.8362C7.4086 10.6993 7.30069 10.5914 7.16383 10.5408L4.26725 9.46893C3.83194 9.30785 3.83194 8.69215 4.26725 8.53107L7.16383 7.45924C7.30069 7.4086 7.4086 7.30069 7.45924 7.16383L8.53107 4.26725Z"
-                                    fill="#C6FF00" stroke="url(#paint0_linear_5669_2017)" stroke-width="0.1">
-                                </path>
+                                    d="M9.53026 4.59538C9.69134 4.16007 10.307 4.16007 10.4681 4.59538L11.72 7.97857C11.7706 8.11543 11.8786 8.22333 12.0154 8.27397L15.3986 9.52587C15.8339 9.68695 15.8339 10.3026 15.3986 10.4637L12.0154 11.7156C11.8786 11.7663 11.7706 11.8742 11.72 12.011L10.4681 15.3942C10.307 15.8295 9.69134 15.8295 9.53026 15.3942L8.27837 12.011C8.22773 11.8742 8.11982 11.7663 7.98296 11.7156L4.59977 10.4637C4.16446 10.3026 4.16446 9.68694 4.59977 9.52587L7.98296 8.27397C8.11982 8.22333 8.22773 8.11543 8.27837 7.97857L9.53026 4.59538Z"
+                                    fill="#C6FF00" stroke="url(#paint0_linear_6433_3337)" stroke-width="0.1" />
                             </g>
                             <defs>
-                                <linearGradient id="paint0_linear_5669_2017" x1="9" y1="3" x2="9" y2="15"
-                                    gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="white"></stop>
-                                    <stop offset="0.480769" stop-color="white" stop-opacity="0"></stop>
-                                    <stop offset="1" stop-color="white"></stop>
+                                <linearGradient id="paint0_linear_6433_3337" x1="9.99919" y1="3.32812" x2="9.99919"
+                                    y2="16.6615" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white" />
+                                    <stop offset="0.480769" stop-color="white" stop-opacity="0" />
+                                    <stop offset="1" stop-color="white" />
                                 </linearGradient>
-                                <clipPath id="clip0_5669_2017">
-                                    <rect width="18" height="18" fill="white"></rect>
+                                <clipPath id="clip0_6433_3337">
+                                    <rect width="20" height="20" fill="white" />
                                 </clipPath>
                             </defs>
                         </svg>
-                        <span class="text-sm font-medium leading-[18px] text-white ">12 Credit</span>
+                        <span class="text-sm font-semibold leading-normal text-black opacity-70">12
+                            Credit</span>
                     </div>
-                    <button
-                        class="py-[11px] pl-[14px] pr-[17px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-[16px] text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                            <g clip-path="url(#clip0_5669_2031)">
-                                <path d="M6 9H9M9 9H12M9 9V6M9 9V12" stroke="black" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path
-                                    d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
-                                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                </path>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_5669_2031">
-                                    <rect width="18" height="18" fill="white"></rect>
-                                </clipPath>
-                            </defs>
-                        </svg>
+                    <span
+                        class="py-[14px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-6 text-black font-semibold">
                         Generate
-                    </button>
-                </div>
+                    </span>
+                </button>
                 <!--mobile tabs-->
-                <div class="mobile-tab  bg-[#000] rounded-[10px] p-[2px] flex items-center   lg:hidden">
+                <div class="mobile-tab bg-black rounded-[10px] p-[2px] gap-0.5 flex items-center lg:hidden mt-1.5">
                     <button id="create"
-                        class="scrollspy-link flex items-center justify-center text-sm text-white w-1/2 gap-2 py-2.5 px-5 rounded-lg">
-                        <svg class="text-white " xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                        class="scrollspy-link flex items-center justify-center text-sm font-medium text-white w-1/2 gap-2.5 py-[13px] px-5 rounded-lg">
+                        <svg class="text-white " xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 26 26" fill="none">
                             <path
                                 d="M3.79156 22.2089C4.69073 23.108 6.1424 23.108 7.04156 22.2089L21.1249 8.12555C22.0241 7.22638 22.0241 5.77471 21.1249 4.87555C20.2257 3.97638 18.7741 3.97638 17.8749 4.87555L3.79156 18.9589C2.8924 19.858 2.8924 21.3097 3.79156 22.2089Z"
@@ -2893,8 +2821,8 @@ md:line-clamp-none ">
                         </svg> Create
                     </button>
                     <button id="my-creation"
-                        class="scrollspy-link flex items-center justify-center text-sm text-white w-1/2 gap-2 py-2.5 px-5 rounded-lg">
-                        <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                        class="scrollspy-link flex items-center justify-center text-sm text-white w-1/2 gap-2.5 py-[13px] px-5 rounded-lg">
+                        <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 26 26" fill="none">
                             <path d="M17.3307 8.66602H8.66406V17.3327H17.3307V8.66602Z" stroke="currentColor"
                                 stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -2969,7 +2897,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                         stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </button>
-            <div class="relative bg-[#111] md:p-2.5 p-5 rounded-[15px] md:h-auto h-[600px] overflow-auto">
+            <div class="relative bg-[#202020] md:p-2.5 p-5 rounded-[15px] md:h-auto h-[600px] overflow-auto">
                 <div class="flex lg:flex-row flex-col gap-5  w-full  overflow-y-auto md:justify-start justify-end">
                     <div class="md:pb-5 pb-0 md:hidden flex justify-between items-center">
                         <div
@@ -3012,10 +2940,10 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                         class="bg-black rounded-[10px] 2xl:max-w-[1294px] xl:max-w-[1180px] lg:w-[65%] relative h-[320px] md:h-auto">
 
                         <div
-                            class="w-full h-full md:max-h-[800px] max-h-full rounded-xl overflow-hidden flex justify-center items-center p-2.5">
+                            class="w-full h-full md:max-h-[800px] max-h-full rounded-xl overflow-hidden flex justify-center items-center">
                             <img id="zoomImage"
                                 src="https://s3.us-east-005.backblazeb2.com/glima-ai/text_to_img_results/1767943343_pfh4.jpg"
-                                alt="image" class="max-h-full max-w-full w-auto h-auto rounded-xl" />
+                                alt="image" class="w-full h-full md:max-h-full md:max-w-full md:w-auto md:h-auto rounded-xl" />
                         </div>
                         <div
                             class="absolute bottom-0 left-0 right-0 m-auto bg-[rgba(255,255,255,0.12)] backdrop-blur-sm p-3 rounded-t-lg max-w-[385px] flex items-center gap-2.5 justify-between rangeslider-zoom">
@@ -3025,12 +2953,12 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                             <span class="text-xs text-white" id="zoomValue">500%</span>
                         </div>
                     </div>
-                    <div class="relative md:py-2.5 pt-2.5 lg:w-[35%]">
+                    <div class="relative pt-2.5 lg:w-[35%]">
                         <div class="flex flex-col justify-between h-full">
                             <div class="block">
                                 <div class="pb-5 hidden md:flex justify-between items-center">
                                     <div
-                                        class="py-2.5 px-4 bg-black flex justify-center items-center text-sm text-white rounded-[10px] font-normal">
+                                        class="py-2.5 px-4 bg-black flex justify-center items-center text-sm text-white/80 rounded-[10px] font-normal ">
                                         Dec 03, 2025
                                     </div>
 
@@ -3078,24 +3006,8 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                     </div>
                                     <div class=" relative z-[2] rounded-xl transition-all duration-500 ">
                                         <p name="prompt" id="user-input"
-                                            class="transition-all duration-500 outline-none bg-black w-full 2xl:h-[280px] xl:h-[200px] h-[98px] resize-none pt-2.5 px-3.5 text-base leading-6 font-normal text-white placeholder:text-[#797979] rounded-xl overflow-y-auto"
-                                            placeholder="">Modern loft-style living and dining room with large
-                                            double-height windows, soft natural daylight, and minimalistic architectural
-                                            design. Neutral color palette with beige and warm wood tones. Cozy
-                                            contemporary sofa with textured blankets and pillows, sleek black metal
-                                            coffee table, modern fireplace with stacked firewood, and large abstract
-                                            wall art. Wooden dining table with woven chairs, hanging pendant lights,
-                                            indoor plants, and soft shadows. High-end interior design, elegant
-                                            composition, clean lines, airy spacious atmosphere, photorealistic
-                                            renderingModern loft-style living and dining room with large double-height
-                                            windows, soft natural daylight, and minimalistic architectural design.
-                                            Neutral color palette with beige and warm wood tones. Cozy contemporary sofa
-                                            with textured blankets and pillows, sleek black metal coffee table, modern
-                                            fireplace with stacked firewood, and large abstract wall art. Wooden dining
-                                            table with woven chairs, hanging pendant lights, indoor plants, and soft
-                                            shadows. High-end interior design, elegant composition, clean lines, airy
-                                            spacious atmosphere, photorealistic rendering</p>
-
+                                            class="transition-all duration-500 outline-none bg-black w-full 2xl:h-[280px] xl:h-[200px] h-[98px] resize-none p-2.5 lg:pt-2.5 lg:px-3.5 text-base leading-[26px] font-normal text-white placeholder:text-[#797979] rounded-xl opacity-50 overflow-y-auto"
+                                            placeholder="">Modern loft-style living and dining room with large double-height windows, soft natural daylight, and minimalistic architectura design. Neutral color palette with beige and warm wood tones. Cozy contemporary sofa with textured blankets and pillows, sleek black metal coffee table, modern fireplace with stacked firewood, and large abstract wall art. Wooden dining table with woven chairs, hanging pendant lights, indoor plants, and soft shadows. High-end interior design, elegant composition, clean lines, airy spacious atmosphere, photorealistic renderingModern loft-style living and dining room with large double-height windows, soft natural daylight, and minimalistic architectural design. Neutral color palette with beige and warm wood tones. Cozy contemporary sofawith textured blankets and pillows, sleek black metal coffee table, modernfireplace with stacked firewood, and large abstract wall art. Wooden dining table with woven chairs, hanging pendant lights, indoor plants, and soft shadows. High-end interior design, elegant composition, clean lines, airy spacious atmosphere, photorealistic rendering</p>
                                     </div>
                                     <div
                                         class="-mt-[25px] rounded-b-xl bg-[#272727] pt-5 pb-0 xl:px-3.5 px-2 hidden md:flex items-center justify-center xl:gap-7 gap-2">
@@ -3121,56 +3033,28 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                     </div>
                                 </div>
                                 <div class="md:flex hidden items-center gap-[5px] mt-5">
-                                    <div class="py-2 px-3.5 bg-black rounded-md text-sm text-white">
+                                    <div class="py-2 px-3.5 bg-black rounded-md text-sm text-white/50">
                                         1.1
                                     </div>
-                                    <div class="py-2 px-3.5 bg-black rounded-md text-sm text-white">
+                                    <div class="py-2 px-3.5 bg-black rounded-md text-sm text-white/50">
                                         Flux
                                     </div>
-                                    <div class="py-2 px-3.5 bg-black rounded-md text-sm text-white">
+                                    <div class="py-2 px-3.5 bg-black rounded-md text-sm text-white/50">
                                         Custom Prompt
                                     </div>
                                 </div>
                             </div>
                             <div class="flex flex-col justify-between lg:pt-0 pt-5">
-
-                                <div class="flex flex-col gap-3.5 mt-auto">
-                                    <button
-                                        class="py-[7px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-base text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">
-                                        Upscale Image
-                                    </button>
-                                    <div class="grid grid-cols-2 gap-4">
+                       
+                                    <div class="grid grid-cols-2 gap-2.5">
                                         <button
-                                            class="py-[7px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-base text-white font-semibold border border-white/20 hover:bg-white/5 transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 16 16" fill="none">
-                                                <path
-                                                    d="M8.0026 14.6673C11.6845 14.6673 14.6693 11.6825 14.6693 8.00065C14.6693 4.31875 11.6845 1.33398 8.0026 1.33398C4.32071 1.33398 1.33594 4.31875 1.33594 8.00065C1.33594 11.6825 4.32071 14.6673 8.0026 14.6673Z"
-                                                    stroke="white" stroke-width="1.2" />
-                                                <path
-                                                    d="M5.33594 8.00065C5.33594 12.0007 8.0026 14.6673 8.0026 14.6673C8.0026 14.6673 10.6693 12.0007 10.6693 8.00065C10.6693 4.00065 8.0026 1.33398 8.0026 1.33398C8.0026 1.33398 5.33594 4.00065 5.33594 8.00065Z"
-                                                    stroke="white" stroke-width="1.2" stroke-linejoin="round" />
-                                                <path d="M14 10H2" stroke="white" stroke-width="1.2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M14 6H2" stroke="white" stroke-width="1.2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                            Publish
+                                            class="py-[13px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-lg text-white font-medium bg-[#151515] leading-[26px] hover:text-[#C6FF00] transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">
+                                      Upscale Image
                                         </button>
                                         <button
-                                            class="py-[7px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-base text-white font-semibold border border-white/20 hover:bg-white/5 transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 16 16" fill="none">
-                                                <path
-                                                    d="M9.00261 11.3327H11.3359C13.1769 11.3327 14.6693 9.84028 14.6693 7.99935C14.6693 6.1584 13.1769 4.66602 11.3359 4.66602H9.00261M7.0026 11.3327H4.66927C2.82832 11.3327 1.33594 9.84028 1.33594 7.99935C1.33594 6.1584 2.82832 4.66602 4.66927 4.66602H7.0026"
-                                                    stroke="white" stroke-width="1.2" stroke-linecap="round" />
-                                                <path d="M6 8H10" stroke="white" stroke-width="1.2"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                            Copy URL
+                                            class="py-[13px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-lg text-white font-medium bg-[#151515] leading-[26px] hover:text-[#C6FF00] transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">Copy URL
                                         </button>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -3194,7 +3078,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
             </button>
             <div class="relative w-full
 px-5 py-4
-rounded-xl bg-[#111111]
+rounded-xl bg-[#202020]
 min-h-full
 max-h-[calc(100vh-15vh)]
 overflow-y-auto
@@ -3608,7 +3492,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
             </button>
             <div class="relative w-full
 px-5 py-4
-rounded-xl bg-[#111111]
+rounded-xl bg-[#202020]
 min-h-[420px] 2xl:max-h-[calc(100vh-200px)] xl:max-h-[calc(100vh-80px)] 
 ">
                 <div class="relative">
@@ -3861,7 +3745,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
             </button>
             <div class="relative w-full
                     px-5 py-4
-                    rounded-xl bg-[#111111]
+                    rounded-xl bg-[#202020]
                     min-h-full md:max-h-full
                     max-h-[calc(100vh-15vh)]
                     overflow-y-auto
