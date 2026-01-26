@@ -8201,6 +8201,10 @@ pre{
   color: rgb(198 255 0 / var(--tw-text-opacity, 1));
 }
 
+.text-limegreen\/70 {
+  color: rgb(198 255 0 / 0.7);
+}
+
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity, 1));
