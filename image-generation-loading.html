@@ -46,8 +46,10 @@
         .card.selected .circle-bg {
             opacity: 100 !important;
         }
-
-        /* .model-scroll::-webkit-scrollbar {
+       .card.selected {
+  --tw-ring-color: #C6FF00 !important;
+}
+     /* .model-scroll::-webkit-scrollbar {
   width: 8px;
 }
 
@@ -2596,7 +2598,7 @@ scrollbar-hide h-screen">
                     </div>
                     <div class="flex flex-col gap-6 lg:h-[calc(100vh-145px)] h-auto overflow-y-auto">
                         <div class="relative bg-[#111111] rounded-lg p-3 flex flex-col gap-3">
-                            <div class="flex lg:flex-row flex-col gap-4 justify-between items-center ">
+                            <div class="flex lg:flex-row flex-col gap-4 justify-between  ">
                                 <h4 class="text-base opacity-50  text-white font-normal  leading-6
                         line-clamp-3
                         md:line-clamp-none">
@@ -3071,7 +3073,7 @@ scrollbar-hide h-screen">
                             </div>
                         </div>
                         <div class="relative bg-[#111] rounded-lg p-3 flex flex-col gap-3">
-                            <div class="flex lg:flex-row flex-col gap-4 justify-between items-center ">
+                            <div class="flex lg:flex-row flex-col gap-4 justify-between ">
                                 <h4 class="text-base opacity-50  text-white font-normal  leading-6
                         line-clamp-3
                         md:line-clamp-none">
@@ -3572,7 +3574,7 @@ scrollbar-hide h-screen">
                             </div>
                         </div>
                         <div class="relative bg-[#111] rounded-lg p-3 flex flex-col gap-3">
-                            <div class="flex lg:flex-row flex-col gap-4 justify-between items-center ">
+                            <div class="flex lg:flex-row flex-col gap-4 justify-between  ">
                                 <h4 class="text-base opacity-50  text-white font-normal  leading-6
                         line-clamp-3
                         md:line-clamp-none ">
@@ -4077,7 +4079,7 @@ scrollbar-hide h-screen">
                         </div>
 
                         <div class="relative bg-[#111] rounded-lg p-3 flex flex-col gap-3">
-                            <div class="flex lg:flex-row flex-col gap-4 justify-between items-center ">
+                            <div class="flex lg:flex-row flex-col gap-4 justify-between ">
                                 <h4 class="text-base opacity-50  text-white font-normal  leading-6
                         line-clamp-3
                         md:line-clamp-none">
@@ -4711,7 +4713,7 @@ scrollbar-hide h-screen">
         </div>
     </div>
 
-    <!--Big image Modal-->
+      <!--Big image Modal-->
     <div class="modalTrigger modal-home w-full 2xl:max-w-[1650px] xl:max-w-[1200px]  lg:max-w-[950px] md:max-w-[700px] max-xl:mx-4 max-lg:mx-0"
         id="image-modal">
         <div class="relative h-auto w-full">
@@ -4765,17 +4767,17 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                         </div>
                     </div>
                     <div
-                        class="bg-black rounded-[10px] 2xl:max-w-[1294px] xl:max-w-[1180px] lg:w-[65%] relative md:h-auto">
+                        class="bg-black rounded-[10px] 2xl:max-w-[1294px] xl:max-w-[1180px] lg:w-[65%] relative h-[320px] md:h-auto">
 
                         <div
-                            class="w-full h-auto md:max-h-[800px] max-h-full rounded-xl flex justify-center items-center">
+                            class="w-full h-full md:max-h-[800px] max-h-full  overflow-hidden flex justify-center items-center">
                             <img id="zoomImage"
                                 src="https://s3.us-east-005.backblazeb2.com/glima-ai/text_to_img_results/1767943343_pfh4.jpg"
                                 alt="image"
-                                class="w-full h-auto object-contain md:max-h-full md:max-w-full md:w-auto md:h-auto rounded-xl" />
+                                class="w-full md:h-full h-full md:max-h-full md:max-w-full md:w-auto object-contain " />
                         </div>
                         <div
-                            class="absolute bottom-0 left-0 right-0 m-auto bg-[rgba(255,255,255,0.12)] backdrop-blur-sm p-3 rounded-t-lg max-w-[385px] flex items-center gap-2.5 justify-between rangeslider-zoom">
+                            class="absolute bottom-0  left-0 right-0 m-auto bg-[rgba(255,255,255,0.12)] backdrop-blur-sm md:p-3 p-1.5 rounded-t-lg md:max-w-[385px] max-w-[230px] flex items-center gap-2.5 justify-between rangeslider-zoom">
                             <span class="text-xs text-white">100%</span>
                             <input id="zoom" class="rangeslider-zoom" type="range" min="100" max="500" step="5"
                                 value="100" />
@@ -4835,23 +4837,12 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                     </div>
                                     <div class=" relative z-[2] rounded-xl transition-all duration-500 ">
                                         <p name="prompt" id="user-input"
-                                            class="transition-all duration-500 outline-none bg-black w-full 2xl:h-[280px] xl:h-[200px] h-[98px] resize-none p-2.5 lg:pt-2.5 lg:px-3.5 text-base leading-[26px] font-normal text-white placeholder:text-[#797979] rounded-xl opacity-50 overflow-y-auto"
+                                            class="transition-all duration-500 outline-none bg-black w-full  resize-none p-2.5 lg:pt-2.5 lg:px-3.5 text-base leading-[26px] max-h-[150px] font-normal text-white placeholder:text-[#797979] rounded-xl  overflow-y-auto"
                                             placeholder="">Modern loft-style living and dining room with large
                                             double-height windows, soft natural daylight, and minimalistic architectura
                                             design. Neutral color palette with beige and warm wood tones. Cozy
                                             contemporary sofa with textured blankets and pillows, sleek black metal
-                                            coffee table, modern fireplace with stacked firewood, and large abstract
-                                            wall art. Wooden dining table with woven chairs, hanging pendant lights,
-                                            indoor plants, and soft shadows. High-end interior design, elegant
-                                            composition, clean lines, airy spacious atmosphere, photorealistic
-                                            renderingModern loft-style living and dining room with large double-height
-                                            windows, soft natural daylight, and minimalistic architectural design.
-                                            Neutral color palette with beige and warm wood tones. Cozy contemporary
-                                            sofawith textured blankets and pillows, sleek black metal coffee table,
-                                            modernfireplace with stacked firewood, and large abstract wall art. Wooden
-                                            dining table with woven chairs, hanging pendant lights, indoor plants, and
-                                            soft shadows. High-end interior design, elegant composition, clean lines,
-                                            airy spacious atmosphere, photorealistic rendering</p>
+                                           </p>
                                     </div>
                                     <div
                                         class="-mt-[25px] rounded-b-xl bg-[#272727] pt-5 pb-0 xl:px-3.5 px-2 hidden md:flex items-center justify-center xl:gap-7 gap-2">
@@ -4892,11 +4883,11 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
 
                                 <div class="grid grid-cols-2 gap-2.5">
                                     <button
-                                        class="py-[13px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-lg text-white font-medium bg-[#151515] leading-[26px] hover:text-[#C6FF00] transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">
+                                        class="py-[13px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-base text-white font-medium bg-[#151515] leading-[26px] hover:text-[#C6FF00] transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">
                                         Upscale Image
                                     </button>
                                     <button
-                                        class="py-[13px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-lg text-white font-medium bg-[#151515] leading-[26px] hover:text-[#C6FF00] transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">Copy
+                                        class="py-[13px] px-5 rounded-lg flex justify-center items-center gap-2.5 text-base text-white font-medium bg-[#151515] leading-[26px] hover:text-[#C6FF00] transition-all duration-500 relative md:sticky bottom-0 w-full left-0 right-0 mx-auto">Copy
                                         URL
                                     </button>
                                 </div>
@@ -4935,7 +4926,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         class="grid lg:grid-cols-6 md:grid-cols-5 grid-cols-2 gap-x-2.5 gap-y-4 model-list md:pb-0 pb-8">
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500 shadow-none">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -4950,7 +4941,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="42" height="16" viewBox="0 0 42 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -4963,7 +4954,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="35" height="16" viewBox="0 0 35 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -4975,7 +4966,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="67" height="16" viewBox="0 0 67 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -4988,7 +4979,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="72" height="16" viewBox="0 0 72 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -5001,7 +4992,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="38" height="16" viewBox="0 0 38 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -5014,7 +5005,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -5026,7 +5017,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -5040,7 +5031,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="32" height="21" viewBox="0 0 32 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_2538_3998)">
@@ -5083,7 +5074,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="32" height="21" viewBox="0 0 32 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_2538_3998)">
@@ -5125,7 +5116,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 s
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -5140,7 +5131,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -5154,7 +5145,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
                                     fill="none">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -5168,7 +5159,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
                                     fill="none">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -5182,7 +5173,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_6173_3815)">
@@ -5214,7 +5205,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="51" height="21" viewBox="0 0 51 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -5228,7 +5219,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24"
                                     fill="none">
                                     <path d="M4.80086 21.5359L0 22.7526V1.27733L4.80086 2.49406V21.5359Z"
@@ -5246,7 +5237,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
 
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_2538_4067)">
@@ -5283,7 +5274,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]">
                         </div>
                         <div class="flex flex-col gap-1.5 items-center group">
                             <div
-                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer border-[0.5px] border-transparent hover:border-[#C6FF00] card-inner transition-all duration-500">
+                                class="card lg:w-[140px]  w-[120px] w-full h-[90px] bg-black flex items-center justify-center rounded-[10px] cursor-pointer ring-[0.5px] ring-transparent hover:ring-[#C6FF00] card-inner transition-all duration-500">
                                 <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -5853,7 +5844,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
                     <div class="grid md:grid-cols-4 grid-cols-3 gap-x-2.5 gap-y-4">
                         <button class="group flex flex-col justify-center items-center gap-2">
                             <div
-                                class="bg-black group-hover:bg-black transition-all duration-500 border-[0.5px] md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl border-transparent hover:border-[#C6FF00] card-inner card">
+                                class="bg-black group-hover:bg-black transition-all duration-500 ring-[0.5px] ring-transparent hover:ring-[#C6FF00]  md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl  card-inner card">
                                 <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="34" height="34" rx="4" stroke="white" />
@@ -5863,7 +5854,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
                         </button>
                         <button class="group flex flex-col justify-center items-center gap-2">
                             <div
-                                class="bg-black group-hover:bg-black transition-all duration-500 border-[0.5px] md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl border-transparent hover:border-[#C6FF00] card-inner card">
+                                class="bg-black group-hover:bg-black transition-all duration-500 ring-[0.5px] ring-transparent hover:ring-[#C6FF00]  md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl  card-inner card">
                                 <svg width="21" height="35" viewBox="0 0 21 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="20" height="34" rx="4" stroke="white" />
@@ -5874,7 +5865,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
                         </button>
                         <button class="group flex flex-col justify-center items-center gap-2">
                             <div
-                                class="bg-black group-hover:bg-black transition-all duration-500 border-[0.5px] md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl border-transparent hover:border-[#C6FF00] card-inner card">
+                                class="bg-black group-hover:bg-black transition-all duration-500 ring-[0.5px] ring-transparent hover:ring-[#C6FF00]  md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl  card-inner card">
                                 <svg width="35" height="21" viewBox="0 0 35 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="34" height="20" rx="4" stroke="white" />
@@ -5885,7 +5876,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
                         </button>
                         <button class="group flex flex-col justify-center items-center gap-2">
                             <div
-                                class="bg-black group-hover:bg-black transition-all duration-500 border-[0.5px] md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl border-transparent hover:border-[#C6FF00] card-inner card">
+                                class="bg-black group-hover:bg-black transition-all duration-500 ring-[0.5px] ring-transparent hover:ring-[#C6FF00]  md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl  card-inner card">
                                 <svg width="35" height="28" viewBox="0 0 35 28" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="34" height="27" rx="4" stroke="white" />
@@ -5896,7 +5887,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
                         </button>
                         <button class="group flex flex-col justify-center items-center gap-2">
                             <div
-                                class="bg-black group-hover:bg-black transition-all duration-500 border-[0.5px] md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl border-transparent hover:border-[#C6FF00] card-inner card">
+                                class="bg-black group-hover:bg-black transition-all duration-500 ring-[0.5px] ring-transparent hover:ring-[#C6FF00]  md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl  card-inner card">
                                 <svg width="28" height="35" viewBox="0 0 28 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="27" height="34" rx="4" stroke="white" />
@@ -5907,7 +5898,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
                         </button>
                         <button class="group flex flex-col justify-center items-center gap-2">
                             <div
-                                class="bg-black group-hover:bg-black transition-all duration-500 border-[0.5px] md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl border-transparent hover:border-[#C6FF00] card-inner card">
+                                class="bg-black group-hover:bg-black transition-all duration-500 ring-[0.5px] ring-transparent hover:ring-[#C6FF00]  md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl  card-inner card">
                                 <svg width="35" height="25" viewBox="0 0 35 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="34" height="24" rx="4" stroke="white" />
@@ -5918,7 +5909,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
                         </button>
                         <button class="group flex flex-col justify-center items-center gap-2">
                             <div
-                                class="bg-black group-hover:bg-black transition-all duration-500 border-[0.5px] md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl border-transparent hover:border-[#C6FF00] card-inner card">
+                                class="bg-black group-hover:bg-black transition-all duration-500 ring-[0.5px] ring-transparent hover:ring-[#C6FF00]  md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl  card-inner card">
                                 <svg width="25" height="35" viewBox="0 0 25 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="24" height="34" rx="4" stroke="white" />
@@ -5929,7 +5920,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
                         </button>
                         <button class="group flex flex-col justify-center items-center gap-2">
                             <div
-                                class="bg-black group-hover:bg-black transition-all duration-500 border-[0.5px] md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl border-transparent hover:border-[#C6FF00] card-inner card">
+                                class="bg-black group-hover:bg-black transition-all duration-500 ring-[0.5px] ring-transparent hover:ring-[#C6FF00]  md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl  card-inner card">
                                 <svg width="25" height="35" viewBox="0 0 25 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="24" height="34" rx="4" stroke="white" />
@@ -5940,7 +5931,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
                         </button>
                         <button class="group flex flex-col justify-center items-center gap-2">
                             <div
-                                class="bg-black group-hover:bg-black transition-all duration-500 border-[0.5px] md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl border-transparent hover:border-[#C6FF00] card-inner card">
+                                class="bg-black group-hover:bg-black transition-all duration-500 ring-[0.5px] ring-transparent hover:ring-[#C6FF00]  md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl  card-inner card">
                                 <svg width="35" height="25" viewBox="0 0 35 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="34" height="24" rx="4" stroke="white" />
@@ -5951,7 +5942,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
                         </button>
                         <button class="group flex flex-col justify-center items-center gap-2">
                             <div
-                                class="bg-black group-hover:bg-black transition-all duration-500 border-[0.5px] md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl border-transparent hover:border-[#C6FF00] card-inner card">
+                                class="bg-black group-hover:bg-black transition-all duration-500 ring-[0.5px] ring-transparent hover:ring-[#C6FF00]  md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl  card-inner card">
                                 <svg width="18" height="35" viewBox="0 0 18 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="17" height="34" rx="2" stroke="white" />
@@ -5961,7 +5952,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20">
                         </button>
                         <button class="group flex flex-col justify-center items-center gap-2">
                             <div
-                                class="bg-black group-hover:bg-black transition-all duration-500 border-[0.5px] md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl border-transparent hover:border-[#C6FF00] card-inner card">
+                                class="bg-black group-hover:bg-black transition-all duration-500 ring-[0.5px] ring-transparent hover:ring-[#C6FF00]  md:w-[140px] w-full h-[90px] flex justify-center items-center rounded-xl  card-inner card">
                                 <svg width="35" height="18" viewBox="0 0 35 18" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="34" height="17" rx="4" stroke="white" />
