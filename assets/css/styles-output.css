@@ -4423,6 +4423,26 @@ pre{
   max-height: max-content;
 }
 
+.max-h-\[calc\(100vh-480px\)\] {
+  max-height: calc(100vh - 480px);
+}
+
+.max-h-\[calc\(100vh-400px\)\] {
+  max-height: calc(100vh - 400px);
+}
+
+.max-h-\[calc\(100vh-390px\)\] {
+  max-height: calc(100vh - 390px);
+}
+
+.max-h-\[calc\(100vh-380px\)\] {
+  max-height: calc(100vh - 380px);
+}
+
+.max-h-\[calc\(100vh-470px\)\] {
+  max-height: calc(100vh - 470px);
+}
+
 .min-h-52 {
   min-height: 13rem;
 }
@@ -6832,6 +6852,12 @@ pre{
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-\[\#354500\] {
+  --tw-gradient-from: #354500 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(53 69 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-\[\#C6FF0000\] {
   --tw-gradient-from: #C6FF0000 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(198 255 0 / 0) var(--tw-gradient-to-position);
@@ -6956,6 +6982,10 @@ pre{
 
 .to-\[\#828282\] {
   --tw-gradient-to: #828282 var(--tw-gradient-to-position);
+}
+
+.to-\[\#83A900\] {
+  --tw-gradient-to: #83A900 var(--tw-gradient-to-position);
 }
 
 .to-\[\#C6FF0014\] {
@@ -9661,6 +9691,11 @@ textarea{
   opacity: 0.5;
 }
 
+.group:hover .group-hover\:translate-x-1 {
+  --tw-translate-x: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group:hover .group-hover\:translate-y-0 {
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -10337,6 +10372,10 @@ textarea{
     margin-bottom: 50px;
   }
 
+  .md\:mb-\[70px\] {
+    margin-bottom: 70px;
+  }
+
   .md\:ml-\[346px\] {
     margin-left: 346px;
   }
@@ -10498,6 +10537,10 @@ textarea{
 
   .md\:max-h-full {
     max-height: 100%;
+  }
+
+  .md\:max-h-\[calc\(100vh-380px\)\] {
+    max-height: calc(100vh - 380px);
   }
 
   .md\:\!min-h-96 {
@@ -10923,6 +10966,11 @@ textarea{
     padding-right: 0.75rem;
   }
 
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .md\:px-\[30px\] {
     padding-left: 30px;
     padding-right: 30px;
@@ -10946,6 +10994,11 @@ textarea{
   .md\:py-28 {
     padding-top: 7rem;
     padding-bottom: 7rem;
+  }
+
+  .md\:py-3\.5 {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
   }
 
   .md\:py-32 {
