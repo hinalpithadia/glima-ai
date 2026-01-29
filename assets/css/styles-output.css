@@ -4405,6 +4405,10 @@ pre{
   max-height: calc(100vh - 35vh);
 }
 
+.max-h-\[calc\(100vh-470px\)\] {
+  max-height: calc(100vh - 470px);
+}
+
 .max-h-\[clamp\(420px\2c calc\(100vh-22vh\)\2c 700px\)\] {
   max-height: clamp(420px,calc(100vh - 22vh),700px);
 }
@@ -4423,24 +4427,8 @@ pre{
   max-height: max-content;
 }
 
-.max-h-\[calc\(100vh-480px\)\] {
-  max-height: calc(100vh - 480px);
-}
-
-.max-h-\[calc\(100vh-400px\)\] {
-  max-height: calc(100vh - 400px);
-}
-
-.max-h-\[calc\(100vh-390px\)\] {
-  max-height: calc(100vh - 390px);
-}
-
-.max-h-\[calc\(100vh-380px\)\] {
-  max-height: calc(100vh - 380px);
-}
-
-.max-h-\[calc\(100vh-470px\)\] {
-  max-height: calc(100vh - 470px);
+.max-h-\[193px\] {
+  max-height: 193px;
 }
 
 .min-h-52 {
@@ -7898,6 +7886,14 @@ pre{
   padding-top: 1px;
 }
 
+.pb-14 {
+  padding-bottom: 3.5rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -10507,6 +10503,10 @@ textarea{
     height: 100vh;
   }
 
+  .md\:h-\[380px\] {
+    height: 380px;
+  }
+
   .md\:max-h-\[123px\] {
     max-height: 123px;
   }
@@ -10531,16 +10531,16 @@ textarea{
     max-height: calc(100vh - 220px);
   }
 
+  .md\:max-h-\[calc\(100vh-380px\)\] {
+    max-height: calc(100vh - 380px);
+  }
+
   .md\:max-h-\[clamp\(420px\2c calc\(100vh-22vh\)\2c 680px\)\] {
     max-height: clamp(420px,calc(100vh - 22vh),680px);
   }
 
   .md\:max-h-full {
     max-height: 100%;
-  }
-
-  .md\:max-h-\[calc\(100vh-380px\)\] {
-    max-height: calc(100vh - 380px);
   }
 
   .md\:\!min-h-96 {
@@ -10853,6 +10853,10 @@ textarea{
     gap: 50px;
   }
 
+  .md\:gap-1\.5 {
+    gap: 0.375rem;
+  }
+
   .md\:gap-x-2\.5 {
     -moz-column-gap: 0.625rem;
          column-gap: 0.625rem;
@@ -11016,6 +11020,11 @@ textarea{
     padding-bottom: 30px;
   }
 
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .md\:pb-0 {
     padding-bottom: 0px;
   }
@@ -11098,6 +11107,10 @@ textarea{
 
   .md\:pt-\[7px\] {
     padding-top: 7px;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
   }
 
   .md\:text-left {
