@@ -772,14 +772,13 @@
                             <div
                                 class="mb-4 bg-black rounded-xl xl:w-[380px] lg:w-[260px] w-full flex items-center gap-0.5 p-0.5 whitespace-nowrap  ">
                                 <button
-                                    class="w-1/2 xl:px-[22px] px-2 text-center xl:text-base text-sm font-normal leading-5 rounded-[10px] py-3 transition-all duration-500 text-white focus:bg-[#C6FF001A] focus:text-[#C6FF00] tab-active:bg-[C6FF001A] tab-active:text-[#C6FF00] active tablinkheadshot"
-                                    data-tab="tabs-with-1" role="tab">Nano Banana</button>
+                                    class="mode-btn w-1/2 xl:px-[22px] px-2 text-center xl:text-base text-sm font-normal leading-5 rounded-[10px] py-3 transition-all duration-500 text-white focus:bg-[#C6FF001A] focus:text-[#C6FF00] active tablinkheadshot"
+                                    data-mode="basic">Nano Banana</button>
                                 <button
-                                    class="w-1/2 xl:px-[22px] px-2 text-center xl:text-base text-sm font-normal leading-5 text-white rounded-[10px] py-3 transition-all duration-500 hover:bg-[#C6FF001A] hover:text-[#C6FF00] focus:bg-[#C6FF001A] focus:text-[#C6FF00] tab-active:bg-[#C6FF001A] tab-active:text-[#C6FF00] tablinkheadshot"
-                                    data-tab="tabs-with-2" role="tab">Nano Banana Pro</button>
+                                    class="mode-btn w-1/2 xl:px-[22px] px-2 text-center xl:text-base text-sm font-normal leading-5 text-white rounded-[10px] py-3 transition-all duration-500 hover:bg-[#C6FF001A] hover:text-[#C6FF00] focus:bg-[#C6FF001A] focus:text-[#C6FF00]  tablinkheadshot"
+                                     data-mode="pro">Nano Banana Pro</button>
                             </div>
-                            <div class="tabcontent" id="tabs-with-1" role="tabpanel" aria-labelledby="tabs-with-item-1">
-                                <div class="w-full  flex flex-col gap-4">
+                             <div class="w-full  flex flex-col gap-4">
                                     <div class="flex flex-col gap-2.5">
                                         <div class="flex items-center justify-between relative">
                                             <label for="user-input" class="text-sm text-white font-medium">Upload Your
@@ -885,6 +884,18 @@
                                             placeholder="Describe your image here..."
                                             class="w-full h-auto min-h-[150px] bg-black rounded-[10px] p-[18px] text-base font-normal leading-[26px] placeholder:text-[#797979] text-white focus:outline-0 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)] transition-all duration-500 outline-none"></textarea>
                                     </div>
+                                    <div id="resolutionBlock" class="hidden w-full flex flex-col gap-2.5">
+                                            <label
+                                                class="text-sm leading-[18px] text-white font-normal">Resolutions</label>
+                                            <!--custom select-->
+                                            <div class="interior-select">
+                                                <select id="sources" name="resolution">
+                                                    <option value="2k">2K</option>
+                                                    <option value="4k">4K</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
                                     <div class="flex items-center gap-3.5">
                                         <div class="w-full">
                                             <div class="flex flex-col gap-2.5">
@@ -942,7 +953,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             <div class="tabcontent hidden" id="tabs-with-2" role="tabpanel"
                                 aria-labelledby="tabs-with-item-2">
                                 <div class="w-full  flex flex-col gap-4">
@@ -1052,18 +1062,7 @@
                                             class="w-full h-auto min-h-[150px] bg-black rounded-[10px] p-[18px] text-base font-normal leading-[26px] placeholder:text-[#797979] text-white focus:outline-0 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)] transition-all duration-500 outline-none"></textarea>
                                     </div>
                                     <div class="lg:flex flex-col gap-4 grid grid-cols-2">
-                                        <div class="w-full flex flex-col gap-2.5">
-                                            <label
-                                                class="text-sm leading-[18px] text-white font-normal">Resolutions</label>
-                                            <!--custom select-->
-                                            <div class="interior-select">
-                                                <select id="sources" name="resolution">
-                                                    <option value="2k">2K</option>
-                                                    <option value="4k">4K</option>
-
-                                                </select>
-                                            </div>
-                                        </div>
+                                        
                                         <div class="flex items-center gap-3.5">
                                             <div class="w-full">
                                                 <div class="flex flex-col gap-2.5">
@@ -1894,62 +1893,84 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
             </button>
             <div
                 class="relative w-full  md:p-1  rounded-xl bg-[#202020] h-[580px] xl:h-[640px]  2xl:h-[700px] overflow-hidden">
-                <div class="popup-scroll w-full flex md:flex-row flex-col items-start gap-5 md:gap-2 ">
+                <div class="popup-scroll w-full flex md:flex-row flex-col items-start gap-0 md:gap-2 ">
                     <div
-                        class="popup-links flex flex-row md:flex-col gap-1.5 sm:gap-2 w-full md:max-w-[240px] h-auto md:h-[580px] xl:h-[640px] 2xl:h-[700px] overflow-y-auto sticky top-0 px-5 pt-5 md:pt-0 md:px-0 md:pb-5 whitespace-nowrap scroll-smooth">
+                        class="popup-links inline-flex md:flex flex-row md:flex-col gap-1.5 sm:gap-2 w-full md:max-w-[240px] h-auto md:h-[580px] xl:h-[640px] 2xl:h-[700px] overflow-y-auto sticky top-0 md:px-0 px-3 md:pt-0 pt-3  md:px-0 md:pb-3 pb-0  whitespace-nowrap scroll-smooth">
                         <a href="#popular-edit"
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black scrollspy-active">
-                            🔥 Popular Edits
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black scrollspy-active">
+                            <img src="https://glima.ai/storage/uploads/XATWRiVTcP3SI2ma5TowIyQpuZQkHkv5XN6Xru8o.png" class="md:w-6 w-4 md:h-6 h-4" alt="image"> 
+                            Popular Edits
                         </a>
-                        <a href="#minimalist"
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                            🎨 Color Adjustments
+                        <a href="#fashion-retouching"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/T8LeMEpOqhIOwip8zCEPA8tGq49ItqxZ5JYOBv6n.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                            Fashion Retouching
                         </a>
-                        <a href="#modern"
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                            😊 Face Retouching
+                        <a href="#body-retouching"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/7rZb5b9pJw91glmdP7J0EjZApTImt7lBO3Jg8XAY.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                            Body Retouching
+                    
                         </a>
-                        <a href="#trends"
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                            🤖 AI-Powered Effects
+                        <a href="#ai-powered-effects"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/k75mRNWXAC8KtO5o2xJWmsQ5XQl1m7zrouUaZeu3.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                            AI-Powered Effects
                         </a>
-                        <a
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                            🌆 Background Control
+                        <a href="#background-control"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/gbSy17xo5ZaTRHGZfnV57SZxRGLvzxLNN9hXWAkX.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                            Background Control
                         </a>
-                        <a
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                            🧩 Object-Level Edits
+                        <a href="#object-level-edits"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/AfeS8pCbzcm57oIu4Tybzoh430i5AQG29mAI60Au.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                            Object-Level Edits
                         </a>
-                        <a
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                            🧼 Photo Restoration
+                        <a href="#photo-restoration"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/deiacOMv3JJ94WqOZWcVJw3OIjdLGQ83R2VRhpfz.jpg" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                            Photo Restoration
                         </a>
-                        <a
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                            💡 Lighting & Effects
+                        <a href="#lighting-effects"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/JQQv9ngU0xDQURLtvvxxUkkTcj6TKuU1LwUl8Ncm.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                            Lighting & Effects
                         </a>
-                        <a
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                            🧭 Compositional Tools
+                        <a href="#compositional-tools"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/86CoKK0EmWcACUw0ygy85Lwb68qrv1UaQWV58PI1.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                            Compositional Tools
                         </a>
-                        <a
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                            🔍 Zoom & Focus
+                        <a href="#zoom-focus"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/o8xbHsBrkvu5gRfngtdQBH1dNhc8dXbN0l3KJ8gH.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                            Zoom & Focus
                         </a>
-                        <a
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                            🖼️ Image Generation
+                        <a href="#image-generation"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/duVIs0oXNRK7zUBmO7GlttuBSmfZ7lBE4ktefkHM.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                            Image Generation
                         </a>
-                        <a
-                            class="scrollspy-link  py-3 pl-3 pr-4 rounded-[12px] md:py-2.5 w-full text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
-                            ✍️ Text & Graphics
+                        <a href="#text-graphics"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/RinKLU0piRnIRfZOnhhJMi6v0aCQdIXFAtKHuqnt.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                            Text & Graphics
                         </a>
-
+                        <a href="#color-adjustments"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/cRVMf4PzXWnfQu73dD8njvfwReu1x139qijgAPIv.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                             Color Adjustments
+                        </a>
+                        <a href="#trending-effects"
+                            class="scrollspy-link flex  shrink-0 items-center md:gap-3 gap-2  py-2.5 pl-2.5 pr-2.5  rounded-[12px] md:py-2.5 md:w-full w-auto text-left md:px-3 md:rounded-[10px] text-sm sm:text-base leading-5 text-white transition-all duration-500 whitespace-nowrap hover:bg-black ">
+                            <img src="https://glima.ai/storage/uploads/EhzCHJpq4nAs9dc57SPDGyDcEylT85SrcXLWF1rx.png" class="md:w-6 w-4 md:h-6 h-4" alt="image">
+                             Trending Effects
+                        </a>
                     </div>
                     <div class="md:bg-black rounded-xl md:p-3 pt-0 md:py-4 px-5 w-full">
                         <div
-                            class="popup-content h-[547px] xl:h-[607px] 2xl:h-[668px] overflow-y-auto scroll-smooth  w-full  rounded-[10px] flex flex-col gap-3 pb-14 md:pb-0">
+                            class="popup-content h-[547px] xl:h-[607px] 2xl:h-[660px] overflow-y-auto scroll-smooth  w-full  rounded-[10px] flex flex-col gap-3 pb-14 md:pb-0">
                             <div id="popular-edit">
                                 <h3 class="text-white md:text-xl text-sm font-medium leading-[30px] mb-2.5">Popular</h3>
                                 <div
@@ -1965,13 +1986,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -1998,13 +2019,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2031,13 +2052,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2064,13 +2085,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2097,13 +2118,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2130,13 +2151,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2163,13 +2184,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2196,13 +2217,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2220,7 +2241,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                     </div>
                                 </div>
                             </div>
-                            <div id="minimalist">
+                            <div id="fashion-retouching">
                                 <h3 class="text-white md:text-xl text-sm  font-medium leading-[30px] mb-2.5">Color
                                     Adjustments
                                 </h3>
@@ -2237,13 +2258,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2270,13 +2291,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2303,13 +2324,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2336,13 +2357,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2369,13 +2390,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2402,13 +2423,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2435,13 +2456,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2468,13 +2489,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2492,7 +2513,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                     </div>
                                 </div>
                             </div>
-                            <div id="modern">
+                            <div id="body-retouching">
                                 <h3 class="text-white md:text-xl text-sm  font-medium leading-[30px] mb-2.5">Face
                                     Retouching</h3>
                                 <div
@@ -2508,13 +2529,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2541,13 +2562,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2574,13 +2595,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2607,13 +2628,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2640,13 +2661,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2673,13 +2694,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2706,13 +2727,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2739,13 +2760,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2763,7 +2784,7 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                     </div>
                                 </div>
                             </div>
-                            <div id="trends">
+                            <div id="ai-powered-effects">
                                 <h3 class="text-white md:text-xl text-sm  font-medium leading-[30px] mb-2.5">AI-Powered
                                     Effects
                                 </h3>
@@ -2780,13 +2801,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2813,13 +2834,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2846,13 +2867,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2879,13 +2900,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2912,13 +2933,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2945,13 +2966,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -2978,13 +2999,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -3011,13 +3032,13 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
                                                 class="px-1 font-medium text-xs md:text-base leading-[22px] text-white md:mb-1.5 md:text-left text-center">
                                                 Super Realistic</h5>
                                             <p
-                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden">
+                                                class="px-1 text-xs leading-[18px] text-[#696969] mb-1.5 md:block hidden  overflow-hidden text-ellipsis line-clamp-3">
                                                 Super realistic, ultra-detailed high-resolution image, natural lighting,
                                                 accurate
                                                 shadows and reflections
                                             </p>
                                             <button
-                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00]">
+                                                class="py-2 px-3 w-full rounded-[10px] md:flex hidden items-center justify-center bg-black text-sm leading-5 text-[#C6FF00] gap-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
                                                     <path
@@ -3125,75 +3146,99 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
     </script>
     <!--scrollspy-->
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const container = document.querySelector(".popup-content");
-            const links = document.querySelectorAll(".popup-links .scrollspy-link");
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".popup-content");
+    const links = document.querySelectorAll(".popup-links .scrollspy-link");
 
-            if (!container || !links.length) return;
+    if (!container || !links.length) return;
 
-            const sections = Array.from(links)
-                .map(link => container.querySelector(link.getAttribute("href")))
-                .filter(Boolean);
+    const sections = Array.from(links)
+        .map(link => container.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
 
-            function scrollLinkToCenter(link) {
-                const parent = link.parentElement;
+    /* ----------------------------------------
+       OFFSET: DESKTOP SAME, MOBILE ONLY CHANGE
+    ---------------------------------------- */
+    function getScrollOffset() {
+        // 👇 change ONLY this value if needed
+        return window.innerWidth < 768 ? 60 : 18;
+    }
 
-                // Only for mobile (flex-row)
-                if (window.innerWidth < 768) {
-                    const parentRect = parent.getBoundingClientRect();
-                    const linkRect = link.getBoundingClientRect();
+    /* ----------------------------------------
+       CENTER ACTIVE TAB (MOBILE ONLY)
+    ---------------------------------------- */
+    function scrollLinkToCenter(link) {
+        if (window.innerWidth >= 768) return;
 
-                    const offset =
-                        linkRect.left -
-                        parentRect.left -
-                        parentRect.width / 2 +
-                        linkRect.width / 2;
+        const parent = link.parentElement;
+        const parentRect = parent.getBoundingClientRect();
+        const linkRect = link.getBoundingClientRect();
 
-                    parent.scrollBy({
-                        left: offset,
-                        behavior: "smooth"
-                    });
-                }
+        const offset =
+            linkRect.left -
+            parentRect.left -
+            parentRect.width / 2 +
+            linkRect.width / 2;
+
+        parent.scrollBy({
+            left: offset,
+            behavior: "smooth"
+        });
+    }
+
+    /* ----------------------------------------
+       SET ACTIVE LINK
+    ---------------------------------------- */
+    function setActive(index) {
+        links.forEach(l => l.classList.remove("scrollspy-active"));
+
+        const activeLink = links[index];
+        if (!activeLink) return;
+
+        activeLink.classList.add("scrollspy-active");
+        scrollLinkToCenter(activeLink);
+    }
+
+    /* ----------------------------------------
+       UPDATE ACTIVE ON SCROLL
+    ---------------------------------------- */
+    function updateActive() {
+        const scrollPos = container.scrollTop + getScrollOffset();
+
+        sections.forEach((section, index) => {
+            const top = section.offsetTop;
+            const bottom = top + section.offsetHeight;
+
+            if (scrollPos >= top && scrollPos < bottom) {
+                setActive(index);
             }
+        });
+    }
 
-            function setActive(index) {
-                links.forEach(l => l.classList.remove("scrollspy-active"));
+    /* ----------------------------------------
+       CLICK HANDLER
+       (DESKTOP SAME, MOBILE FIXED)
+    ---------------------------------------- */
+    links.forEach((link, index) => {
+        link.addEventListener("click", e => {
+            e.preventDefault();
 
-                const activeLink = links[index];
-                if (!activeLink) return;
-
-                activeLink.classList.add("scrollspy-active");
-                scrollLinkToCenter(activeLink);
-            }
-
-            function updateActive() {
-                const scrollPos = container.scrollTop + 40;
-
-                sections.forEach((section, index) => {
-                    const top = section.offsetTop;
-                    const bottom = top + section.offsetHeight;
-
-                    if (scrollPos >= top && scrollPos < bottom) {
-                        setActive(index);
-                    }
-                });
-            }
-            links.forEach((link, index) => {
-                link.addEventListener("click", e => {
-                    e.preventDefault();
-
-                    container.scrollTo({
-                        top: sections[index].offsetTop - 20,
-                        behavior: "smooth"
-                    });
-
-                    setActive(index);
-                });
+            container.scrollTo({
+                top: sections[index].offsetTop - getScrollOffset(),
+                behavior: "smooth"
             });
 
-            container.addEventListener("scroll", updateActive);
-            updateActive();
+            setActive(index);
         });
+    });
+
+    container.addEventListener("scroll", updateActive);
+    window.addEventListener("resize", updateActive);
+
+    updateActive();
+});
+
+
     </script>
     <script>
         const createBtn = document.getElementById("create")
@@ -3255,6 +3300,27 @@ absolute top-[-40px] lg:right-0 right-2 z-20 ">
         if (isSmallScreen()) {
             showCreate()
         }
+    </script>
+    <script>
+        const modeButtons = document.querySelectorAll('.mode-btn');
+const resolutionBlock = document.getElementById('resolutionBlock');
+
+modeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        modeButtons.forEach(b => {
+            b.classList.remove('active', 'bg-[#C6FF001A]', 'text-[#C6FF00]');
+            b.classList.add('text-white');
+        });
+
+        btn.classList.add('active', 'bg-[#C6FF001A]', 'text-[#C6FF00]');
+        btn.classList.remove('text-white');
+
+        resolutionBlock.classList.toggle(
+            'hidden',
+            btn.dataset.mode !== 'pro'
+        );
+    });
+});
     </script>
 </body>
 
