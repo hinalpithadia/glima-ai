@@ -3507,6 +3507,10 @@ pre{
   margin-top: -0.375rem;
 }
 
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+
 .-mt-\[25px\] {
   margin-top: -25px;
 }
@@ -3533,6 +3537,10 @@ pre{
 
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .mb-16 {
@@ -4261,10 +4269,6 @@ pre{
   height: 100vh;
 }
 
-.h-0 {
-  height: 0px;
-}
-
 .max-h-0 {
   max-height: 0px;
 }
@@ -4425,10 +4429,6 @@ pre{
 .max-h-max {
   max-height: -moz-max-content;
   max-height: max-content;
-}
-
-.max-h-\[54px\] {
-  max-height: 54px;
 }
 
 .min-h-52 {
@@ -4662,6 +4662,10 @@ pre{
 
 .w-\[116px\] {
   width: 116px;
+}
+
+.w-\[11px\] {
+  width: 11px;
 }
 
 .w-\[120\%\] {
@@ -4958,6 +4962,10 @@ pre{
   max-width: 64rem;
 }
 
+.max-w-6xl {
+  max-width: 72rem;
+}
+
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -4972,6 +4980,10 @@ pre{
 
 .max-w-\[1159px\] {
   max-width: 1159px;
+}
+
+.max-w-\[115px\] {
+  max-width: 115px;
 }
 
 .max-w-\[1164px\] {
@@ -5845,6 +5857,11 @@ pre{
 
 .text-nowrap {
   text-wrap: nowrap;
+}
+
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .break-all {
@@ -7414,6 +7431,11 @@ pre{
   padding-bottom: 30px;
 }
 
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .py-\[42px\] {
   padding-top: 42px;
   padding-bottom: 42px;
@@ -7642,6 +7664,10 @@ pre{
   padding-left: 1.5rem;
 }
 
+.pl-8 {
+  padding-left: 2rem;
+}
+
 .pl-9 {
   padding-left: 2.25rem;
 }
@@ -7776,6 +7802,10 @@ pre{
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-\[0px\] {
+  padding-top: 0px;
 }
 
 .pt-\[100px\] {
@@ -8300,6 +8330,10 @@ pre{
   color: rgb(198 255 0 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#ffffff7d\] {
+  color: #ffffff7d;
+}
+
 .text-\[rgba\(255\2c 255\2c 255\2c 0\.5\)\] {
   color: rgba(255,255,255,0.5);
 }
@@ -8342,10 +8376,6 @@ pre{
 .text-limegreen {
   --tw-text-opacity: 1;
   color: rgb(198 255 0 / var(--tw-text-opacity, 1));
-}
-
-.text-limegreen\/70 {
-  color: rgb(198 255 0 / 0.7);
 }
 
 .text-red-500 {
@@ -10495,10 +10525,6 @@ textarea{
     height: 100vh;
   }
 
-  .md\:h-\[54px\] {
-    height: 54px;
-  }
-
   .md\:max-h-\[123px\] {
     max-height: 123px;
   }
@@ -11167,6 +11193,10 @@ textarea{
     line-height: 1rem;
   }
 
+  .md\:\!leading-\[65px\] {
+    line-height: 65px !important;
+  }
+
   .md\:leading-7 {
     line-height: 1.75rem;
   }
@@ -11231,6 +11261,10 @@ textarea{
 
   .lg\:left-3 {
     left: 0.75rem;
+  }
+
+  .lg\:left-\[18\.25\%\] {
+    left: 18.25%;
   }
 
   .lg\:left-\[38\%\] {
@@ -12192,6 +12226,10 @@ textarea{
 }
 
 @media (min-width: 1280px) {
+  .xl\:left-\[14\.25\%\] {
+    left: 14.25%;
+  }
+
   .xl\:left-\[395px\] {
     left: 395px;
   }

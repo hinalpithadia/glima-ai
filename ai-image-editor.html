@@ -49,6 +49,14 @@
         .active-tab svg {
             color: #C6FF00;
         }
+        .mode-btn.mode-active{
+ background: #C6FF001A;
+            color:#C6FF00;
+        }
+        .mode-btn.mode-active:hover{
+            background: #C6FF001A;
+            color:#C6FF00;
+        }
     </style>
 </head>
 
@@ -772,11 +780,11 @@
                             <div
                                 class="mb-4 bg-black rounded-xl xl:w-[380px] lg:w-[260px] w-full flex items-center gap-0.5 p-0.5 whitespace-nowrap  ">
                                 <button
-                                    class="mode-btn w-1/2 xl:px-[22px] px-2 text-center xl:text-base text-sm font-normal leading-5 rounded-[10px] py-3 transition-all duration-500 text-white focus:bg-[#C6FF001A] focus:text-[#C6FF00] active tablinkheadshot"
-                                    data-mode="basic">Nano Banana</button>
+                                    class="mode-btn w-1/2 xl:px-[22px] px-2 text-center xl:text-base text-sm font-normal leading-5 rounded-[10px] py-3 transition-all duration-500 hover:bg-[#111] hover:text-white text-white tablinkheadshot mode-active"
+                                    data-mode="basic">Regular</button>
                                 <button
-                                    class="mode-btn w-1/2 xl:px-[22px] px-2 text-center xl:text-base text-sm font-normal leading-5 text-white rounded-[10px] py-3 transition-all duration-500 hover:bg-[#C6FF001A] hover:text-[#C6FF00] focus:bg-[#C6FF001A] focus:text-[#C6FF00]  tablinkheadshot"
-                                     data-mode="pro">Nano Banana Pro</button>
+                                    class="mode-btn w-1/2 xl:px-[22px] px-2 text-center xl:text-base text-sm font-normal leading-5 text-white rounded-[10px] py-3 transition-all duration-500 hover:bg-[#111] hover:text-white  tablinkheadshot"
+                                     data-mode="pro">Pro</button>
                             </div>
                              <div class="w-full  flex flex-col gap-4">
                                     <div class="flex flex-col gap-2.5">
@@ -882,7 +890,7 @@
                                         </label>
                                         <textarea name="text-prompt" id="text-prompt"
                                             placeholder="Describe your image here..."
-                                            class="w-full h-auto min-h-[150px] bg-black rounded-[10px] p-[18px] text-base font-normal leading-[26px] placeholder:text-[#797979] text-white focus:outline-0 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)] transition-all duration-500 outline-none"></textarea>
+                                            class="w-full h-auto min-h-[150px] bg-black rounded-[10px] p-3 text-base font-normal leading-[26px] placeholder:text-[#797979] text-white focus:outline-0 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)] transition-all duration-500 outline-none"></textarea>
                                     </div>
                                     <div id="resolutionBlock" class="hidden w-full flex flex-col gap-2.5">
                                             <label
@@ -3314,11 +3322,11 @@ const resolutionBlock = document.getElementById('resolutionBlock');
 modeButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         modeButtons.forEach(b => {
-            b.classList.remove('active', 'bg-[#C6FF001A]', 'text-[#C6FF00]');
+            b.classList.remove('mode-active', 'bg-[#C6FF001A]', 'text-[#C6FF00]');
             b.classList.add('text-white');
         });
 
-        btn.classList.add('active', 'bg-[#C6FF001A]', 'text-[#C6FF00]');
+        btn.classList.add('mode-active', 'bg-[#C6FF001A]', 'text-[#C6FF00]');
         btn.classList.remove('text-white');
 
         resolutionBlock.classList.toggle(
