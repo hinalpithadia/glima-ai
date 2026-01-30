@@ -4261,6 +4261,10 @@ pre{
   height: 100vh;
 }
 
+.h-0 {
+  height: 0px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -4421,6 +4425,10 @@ pre{
 .max-h-max {
   max-height: -moz-max-content;
   max-height: max-content;
+}
+
+.max-h-\[54px\] {
+  max-height: 54px;
 }
 
 .min-h-52 {
@@ -10391,6 +10399,10 @@ textarea{
     height: 6rem;
   }
 
+  .md\:h-6 {
+    height: 1.5rem;
+  }
+
   .md\:h-9 {
     height: 2.25rem;
   }
@@ -10483,8 +10495,8 @@ textarea{
     height: 100vh;
   }
 
-  .md\:h-6 {
-    height: 1.5rem;
+  .md\:h-\[54px\] {
+    height: 54px;
   }
 
   .md\:max-h-\[123px\] {
@@ -10561,6 +10573,10 @@ textarea{
 
   .md\:w-11 {
     width: 2.75rem;
+  }
+
+  .md\:w-6 {
+    width: 1.5rem;
   }
 
   .md\:w-9 {
@@ -10640,17 +10656,13 @@ textarea{
     width: fit-content;
   }
 
-  .md\:w-max {
-    width: -moz-max-content;
-    width: max-content;
-  }
-
   .md\:w-full {
     width: 100%;
   }
 
-  .md\:w-6 {
-    width: 1.5rem;
+  .md\:w-max {
+    width: -moz-max-content;
+    width: max-content;
   }
 
   .md\:min-w-72 {
@@ -10948,11 +10960,6 @@ textarea{
     padding-right: 0.75rem;
   }
 
-  .md\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -11074,10 +11081,6 @@ textarea{
 
   .md\:pt-4 {
     padding-top: 1rem;
-  }
-
-  .md\:pt-5 {
-    padding-top: 1.25rem;
   }
 
   .md\:pt-6 {
@@ -12565,16 +12568,16 @@ textarea{
     height: 650px;
   }
 
+  .\32xl\:h-\[660px\] {
+    height: 660px;
+  }
+
   .\32xl\:h-\[668px\] {
     height: 668px;
   }
 
   .\32xl\:h-\[700px\] {
     height: 700px;
-  }
-
-  .\32xl\:h-\[660px\] {
-    height: 660px;
   }
 
   .\32xl\:max-h-\[680px\] {
