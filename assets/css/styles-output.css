@@ -2967,6 +2967,10 @@ pre{
   left: -5%;
 }
 
+.left-\[-5px\] {
+  left: -5px;
+}
+
 .left-\[10px\] {
   left: 10px;
 }
@@ -5859,11 +5863,6 @@ pre{
   text-wrap: nowrap;
 }
 
-.break-normal {
-  overflow-wrap: normal;
-  word-break: normal;
-}
-
 .break-all {
   word-break: break-all;
 }
@@ -8519,6 +8518,12 @@ pre{
 .shadow-none {
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_-16px_44px_0_rgba\(0\2c 0\2c 0\2c 0\.60\)\] {
+  --tw-shadow: 0 -16px 44px 0 rgba(0,0,0,0.60);
+  --tw-shadow-colored: 0 -16px 44px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -11263,6 +11268,10 @@ textarea{
     left: 0.75rem;
   }
 
+  .lg\:left-\[-23px\] {
+    left: -23px;
+  }
+
   .lg\:left-\[18\.25\%\] {
     left: 18.25%;
   }
@@ -11851,6 +11860,14 @@ textarea{
 
   .lg\:overflow-y-auto {
     overflow-y: auto;
+  }
+
+  .lg\:whitespace-normal {
+    white-space: normal;
+  }
+
+  .lg\:break-words {
+    overflow-wrap: break-word;
   }
 
   .lg\:rounded-\[10px\] {
