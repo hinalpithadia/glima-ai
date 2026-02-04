@@ -136,7 +136,7 @@
     </style>
 </head>
 
-<body class="relative bg-[#0A0A0A]">
+<body class="relative bg-[#151515] md:bg-[#0A0A0A]">
 
     <!--navbar-->
     <nav id="navbar"
@@ -833,8 +833,8 @@
         </div>
     </nav>
 
-   <!-- Tool Progress... area -->
-    <div class="w-full relative px-5 pt-[84px] md:pt-24 pb-3 xl:pt-[90px]">
+    <!-- Tool Progress... area -->
+    <div class="w-full relative px-5 pt-[84px] md:pt-24 pb-20 md:pb-3 xl:pt-[90px]">
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
                 <h1 class="md:text-4xl text-2xl font-medium lg:leading-[50px] text-white">AI Image Upscale / Enhancer
@@ -842,7 +842,7 @@
                 <p class="font-normal text-sm md:text-base text-[#797979] leading-5 md:leading-7">Enhance any image to
                     high quality sharpen details, fix blur, and upscale to bigger sizes in just one click.</p>
             </div>
-            <div class="py-2.5 mt-6 bg-[#111] rounded-2xl md:rounded-3xl md:aspect-auto aspect-square">
+            <div class="py-2.5 mt-6 bg-black md:bg-[#111111] rounded-2xl md:rounded-3xl md:aspect-auto aspect-square">
                 <label
                     class="w-full md:aspect-auto aspect-square h-auto md:max-h-[620px] xs:min-h-[480px] lg:min-h-[620px] flex justify-center items-center cursor-pointer relative p-2.5 overflow-hidden">
                     <div class="relative z-20 md:h-auto h-full md:aspect-auto aspect-square">
@@ -850,10 +850,10 @@
                             <div class="rounded-t-xl h-auto relative ba-slider2 md:aspect-auto aspect-square">
                                 <!--  After Img -->
                                 <img class="w-full before-img md:h-auto h-full object-contain"
-                                    src="/assets/images/upscaler2-img.jpg" alt="before">
+                                    src="assets/images/upscaler-img2.png" alt="before">
                                 <!-- BEFORE IMAGE (left side) -->
                                 <div class="resize">
-                                    <img src="/assets/images/upscaler-img.png" alt="after"
+                                    <img src="assets/images/upscaler-img.png" alt="after"
                                         class="after-img md:h-auto h-full object-contain">
                                 </div>
 
@@ -870,12 +870,10 @@
                     </div>
                 </label>
             </div>
-
-
             <div
-                class="md:mt-6 flex items-center justify-center gap-3 md:relative fixed md:w-auto w-[calc(100%-40px)] md:bottom-0 m-auto right-0 bottom-5 left-0">
+                class="md:mt-6 flex items-center justify-center gap-3 md:relative fixed md:w-auto w-[calc(100%-40px)] md:bottom-0 m-auto right-0 bottom-5 left-0 z-50">
                 <button
-                    class="md:max-w-[144px] max-w-full w-1/2 flex items-center justify-center gap-1.5 py-2.5 text-white font-medium text-lg leading-6 border border-[#FFFFFF33] rounded-[10px] transition-all duration-500 hover:bg-[#111111] hover:border-[#1F1F1F]">
+                    class="md:max-w-[144px] max-w-full w-1/2 flex items-center justify-center gap-1.5 py-[9px] text-white font-medium text-lg leading-6 bg-[#0A0A0A] border border-[#FFFFFF33] rounded-[10px] transition-all duration-500 hover:bg-[#111111] hover:border-[#1F1F1F]">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14.5921 9.00065C14.1096 12.2082 11.3419 14.6673 7.99992 14.6673C4.31802 14.6673 1.33325 11.6825 1.33325 8.00065C1.33325 4.31875 4.31802 1.33398 7.99992 1.33398C10.7337 1.33398 13.0831 2.97944 14.1119 5.33398"

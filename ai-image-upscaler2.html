@@ -7,11 +7,11 @@
     <title>Glima</title>
     <link rel="stylesheet" href="assets/css/styles-output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
-  
+
 </head>
 
-<body class="relative bg-[#0A0A0A]">
-     <!--navbar-->
+<body class="relative bg-[#151515] md:bg-[#0A0A0A]">
+    <!--navbar-->
     <nav id="navbar"
         class="navbar fixed top-0 w-full z-50 border-b border-white/10 max-lg:backdrop-blur-lg backdrop-blur-lg bg-[#111111]">
         <div id="inner" class="lg:px-3 px-0 p-3">
@@ -706,7 +706,7 @@
         </div>
     </nav>
     <!-- Tool Progress... area -->
-    <div class="w-full relative px-5 pt-[84px] md:pt-24 pb-3 xl:pt-[90px]">
+    <div class="w-full relative px-5 pt-[84px] md:pt-24 pb-20 md:pb-3 xl:pt-[90px]">
         <div class="max-w-[1400px] w-full mx-auto">
             <div class="flex flex-col gap-2.5 justify-center items-center text-center">
                 <h1 class="md:text-4xl text-2xl font-medium lg:leading-[50px] text-white">AI Image Upscale / Enhancer
@@ -715,83 +715,51 @@
                     high quality sharpen details, fix blur, and upscale to bigger sizes in just one click.</p>
             </div>
             <label
-                class="w-full aspect-square md:!min-h-96 sm:h-[580px] 2xl:h-[620px] rounded-2xl md:rounded-3xl bg-[#111111] mt-6 flex justify-center items-center cursor-pointer relative">
+                class="w-full aspect-square md:!min-h-96 sm:h-[580px] 2xl:h-[650px] rounded-2xl md:rounded-3xl bg-black md:bg-[#111111] mt-6 flex justify-center items-center cursor-pointer relative">
                 <button
-                    class="w-10 h-10 md:w-11 md:h-11 flex items-center justify-center rounded-[10px] bg-[#FFFFFF2E] backdrop-blur-[3px] absolute right-2.5 top-2.5">
+                    class="w-10 h-10 md:w-11 md:h-11 flex items-center justify-center rounded-[10px] bg-[#FFFFFF2E] backdrop-blur-[3px] absolute right-2.5 top-2.5 z-10">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                         <path d="M16.5 5.5L5.50074 16.4993M16.4993 16.5L5.5 5.50078" stroke="white" stroke-width="1.6"
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
                 <div class="p-2.5 relative max-w-fit w-full max-h-fit h-full flex items-center justify-center">
-                    <img src="/assets/images/upscaler-img.png" alt="img" class="max-h-full max-w-full w-auto h-auto">
+                    <img src="assets//images/upscaler-img.png" alt="img" class="max-h-full max-w-full w-auto h-auto">
                 </div>
             </label>
             <div
-                class="mt-6 mx-auto md:w-fit w-full md:bg-[#000000] bg-[#111] rounded-t-[12px] md:rounded-[10px] flex md:flex-col flex-row gap-[7px] items-center md:justify-center justify-between md:p-[1px] p-1 md:relative fixed left-0 bottom-0">
+                class="md:mt-[39px] mx-auto md:w-fit w-full md:bg-none bg-[#0A0A0A] border border-black md:border-0 rounded-t-[12px] md:rounded-[10px] flex md:flex-col flex-row gap-[7px] items-center md:justify-center justify-between md:p-[1px] p-1.5 md:relative fixed left-0 bottom-0">
                 <button
-                    class="md:pt-[7px] pt-0 flex items-center gap-1.5 text-white font-medium text-xs md:pl-0 pl-3.5"><svg
-                        width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_171_58)">
-                            <path
-                                d="M7.99823 15.9965C12.4155 15.9965 15.9965 12.4155 15.9965 7.99823C15.9965 3.58093 12.4155 0 7.99823 0C3.58093 0 0 3.58093 0 7.99823C0 12.4155 3.58093 15.9965 7.99823 15.9965Z"
-                                fill="#C6FF00" />
-                            <path opacity="0.2"
-                                d="M3.57354 8.63478L1.70198 3.0625C1.14405 3.77228 0.706178 4.57387 0.413086 5.44608L4.76709 15.3194C5.30737 15.5595 5.87943 15.7396 6.47621 15.8561L3.57354 8.63478Z"
-                                fill="white" />
-                            <path
-                                d="M5.75241 3.78523L6.0914 3.3862L4.98613 0.585938C4.77426 0.670687 4.56944 0.76603 4.36816 0.868436L5.75241 3.78523Z"
-                                fill="#E5FF8C" />
-                            <path opacity="0.2"
-                                d="M11.5966 4.96542L14.9124 12.0279C15.1066 11.6959 15.2761 11.3464 15.4245 10.9862L10.0994 0.279483C9.73211 0.180609 9.3578 0.106453 8.9729 0.0605469L11.5966 4.96542Z"
-                                fill="white" />
-                            <path
-                                d="M13.0176 13.1774C15.698 10.497 15.698 6.1514 13.0176 3.47109C10.3373 0.790775 5.99169 0.790776 3.31138 3.47109C0.631073 6.1514 0.631073 10.497 3.31138 13.1774C5.99169 15.8577 10.3373 15.8577 13.0176 13.1774Z"
-                                fill="white" />
-                            <path
-                                d="M12.8687 12.8595C15.5633 10.1649 15.5633 5.79607 12.8687 3.10148C10.1741 0.406884 5.80528 0.406883 3.11068 3.10148C0.416089 5.79607 0.416089 10.1649 3.11068 12.8595C5.80528 15.5541 10.1741 15.5541 12.8687 12.8595Z"
-                                fill="#9BC30F" />
-                            <path opacity="0.3"
-                                d="M13.8336 4.44531C14.3146 5.36245 14.5842 6.39921 14.5842 7.49578C14.5842 11.2361 11.4323 14.2666 7.54222 14.2666C5.15757 14.2666 3.05078 13.1302 1.77759 11.3876C2.93881 13.5967 5.31931 15.112 8.06892 15.112C11.959 15.112 15.1109 12.0815 15.1109 8.34114C15.115 6.88967 14.6423 5.54587 13.8336 4.44531Z"
-                                fill="#C1F702" />
-                            <path
-                                d="M1.0634 7.92787C1.0634 4.18056 4.30204 1.14036 8.29396 1.14036C10.7453 1.14036 12.9157 2.28692 14.2222 4.04073C12.9413 2.1431 10.6857 0.888672 8.11522 0.888672C4.1233 0.888672 0.888916 3.92488 0.888916 7.67219C0.888916 9.11839 1.36982 10.4567 2.19118 11.5553C1.47621 10.5086 1.0634 9.26221 1.0634 7.92787Z"
-                                fill="white" />
-                            <path
-                                d="M7.53116 3.93327C7.69223 3.49796 8.30793 3.49796 8.46901 3.93327L9.36078 6.34324C9.41142 6.4801 9.51933 6.58801 9.65619 6.63865L12.0662 7.53042C12.5015 7.6915 12.5015 8.3072 12.0662 8.46828L9.65619 9.36005C9.51933 9.41069 9.41142 9.51859 9.36078 9.65545L8.46901 12.0654C8.30793 12.5007 7.69223 12.5007 7.53116 12.0654L6.63938 9.65545C6.58874 9.51859 6.48084 9.41069 6.34398 9.36005L3.934 8.46827C3.49869 8.3072 3.49869 7.6915 3.934 7.53042L6.34398 6.63865C6.48084 6.58801 6.58874 6.4801 6.63938 6.34324L7.53116 3.93327Z"
-                                fill="#C6FF00" stroke="url(#paint0_linear_171_58)" stroke-width="0.1" />
-                        </g>
-                        <defs>
-                            <linearGradient id="paint0_linear_171_58" x1="8.00008" y1="2.66602" x2="8.00008"
-                                y2="13.3327" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="white" />
-                                <stop offset="0.480769" stop-color="white" stop-opacity="0" />
-                                <stop offset="1" stop-color="white" />
-                            </linearGradient>
-                            <clipPath id="clip0_171_58">
-                                <rect width="16" height="16" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    12 Credit</button>
-                <button
-                    class="w-fit text-nowrap py-2.5 px-4 rounded-[10px] flex gap-2 items-center justify-center bg-[#C6FF00] transition-all duration-500 hover:bg-[#D7FF4D] leading-6 font-semibold text-lg text-black">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_171_52)">
-                            <path
-                                d="M5.33325 10.0007C8.58305 10.0007 9.99992 8.63332 9.99992 5.33398C9.99992 8.63332 11.4069 10.0007 14.6666 10.0007C11.4069 10.0007 9.99992 11.4076 9.99992 14.6673C9.99992 11.4076 8.58305 10.0007 5.33325 10.0007Z"
-                                stroke="black" stroke-width="1.2" stroke-linejoin="round" />
-                            <path
-                                d="M1.33325 4.33398C3.42243 4.33398 4.33325 3.455 4.33325 1.33398C4.33325 3.455 5.23771 4.33398 7.33325 4.33398C5.23771 4.33398 4.33325 5.23844 4.33325 7.33398C4.33325 5.23844 3.42243 4.33398 1.33325 4.33398Z"
-                                stroke="black" stroke-width="1.2" stroke-linejoin="round" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_171_52">
-                                <rect width="16" height="16" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    Upscale Image
+                    class="w-full flex items-center justify-between px-4 md:pl-3.5 md:pr-[19px] gap-2 md:gap-20 mx-auto bg-[#C6FF00] hover:bg-[#a8d50c] transition-all duration-500  rounded-[10px] cursor-pointer">
+                    <div class="flex items-center gap-1 w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <g opacity="0.7" clip-path="url(#clip0_6591_2807)">
+                                <path
+                                    d="M16.0872 16.0753C19.4555 12.7071 19.4555 7.24606 16.0872 3.87782C12.719 0.509582 7.258 0.509581 3.88976 3.87782C0.521515 7.24606 0.521515 12.7071 3.88976 16.0753C7.258 19.4435 12.719 19.4435 16.0872 16.0753Z"
+                                    fill="black" />
+                                <path
+                                    d="M9.52977 4.59538C9.69085 4.16007 10.3065 4.16007 10.4676 4.59538L11.7195 7.97857C11.7702 8.11543 11.8781 8.22333 12.0149 8.27397L15.3981 9.52587C15.8334 9.68695 15.8334 10.3026 15.3981 10.4637L12.0149 11.7156C11.8781 11.7663 11.7702 11.8742 11.7195 12.011L10.4676 15.3942C10.3065 15.8295 9.69085 15.8295 9.52977 15.3942L8.27788 12.011C8.22724 11.8742 8.11933 11.7663 7.98247 11.7156L4.59928 10.4637C4.16397 10.3026 4.16398 9.68694 4.59928 9.52587L7.98247 8.27397C8.11933 8.22333 8.22724 8.11543 8.27788 7.97857L9.52977 4.59538Z"
+                                    fill="#C6FF00" stroke="url(#paint0_linear_6591_2807)" stroke-width="0.1" />
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_6591_2807" x1="9.9987" y1="3.32812" x2="9.9987"
+                                    y2="16.6615" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white" />
+                                    <stop offset="0.480769" stop-color="white" stop-opacity="0" />
+                                    <stop offset="1" stop-color="white" />
+                                </linearGradient>
+                                <clipPath id="clip0_6591_2807">
+                                    <rect width="20" height="20" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="text-sm font-semibold leading-normal text-black opacity-70">12
+                            Credit</span>
+                    </div>
+                    <span
+                        class="py-3.5 md:py-2.5 rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-6 text-black font-semibold">
+                        Upscale Image
+                    </span>
                 </button>
             </div>
         </div>
