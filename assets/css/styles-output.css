@@ -10403,6 +10403,10 @@ textarea{
     margin-top: 1.5rem;
   }
 
+  .md\:mt-\[39px\] {
+    margin-top: 39px;
+  }
+
   .md\:line-clamp-none {
     overflow: visible;
     display: block;
@@ -10860,6 +10864,10 @@ textarea{
     gap: 0.625rem;
   }
 
+  .md\:gap-20 {
+    gap: 5rem;
+  }
+
   .md\:gap-3 {
     gap: 0.75rem;
   }
@@ -10925,6 +10933,10 @@ textarea{
     border-radius: 14px;
   }
 
+  .md\:border-0 {
+    border-width: 0px;
+  }
+
   .md\:border-r {
     border-right-width: 1px;
   }
@@ -10936,6 +10948,11 @@ textarea{
   .md\:bg-\[\#000000\] {
     --tw-bg-opacity: 1;
     background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+  }
+
+  .md\:bg-\[\#0A0A0A\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
   }
 
   .md\:bg-\[\#111111\] {
@@ -10950,6 +10967,10 @@ textarea{
 
   .md\:bg-transparent {
     background-color: transparent;
+  }
+
+  .md\:bg-none {
+    background-image: none;
   }
 
   .md\:p-0 {
@@ -11078,12 +11099,20 @@ textarea{
     padding-left: 0.375rem;
   }
 
+  .md\:pl-3\.5 {
+    padding-left: 0.875rem;
+  }
+
   .md\:pr-0 {
     padding-right: 0px;
   }
 
   .md\:pr-3 {
     padding-right: 0.75rem;
+  }
+
+  .md\:pr-\[19px\] {
+    padding-right: 19px;
   }
 
   .md\:pt-0 {
@@ -11310,10 +11339,6 @@ textarea{
 
   .lg\:top-10 {
     top: 2.5rem;
-  }
-
-  .lg\:top-16 {
-    top: 4rem;
   }
 
   .lg\:top-8 {
