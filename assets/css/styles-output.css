@@ -1501,7 +1501,7 @@ input[type='checkbox']:checked {
   display: block;
   position: relative;
   z-index: 1;
-  max-height: 767px;
+  /* max-height: 767px;*/
 }
 
 .after-img {
@@ -1510,7 +1510,7 @@ input[type='checkbox']:checked {
   display: block;
   position: relative;
   /* NOT absolute */
-  background: #111;
+  /* background: #111;*/
 }
 
 .ba-slider img, .ba-slider2 img {
@@ -1635,10 +1635,10 @@ input[type='checkbox']:checked {
   font-size:23px;
 }
 
-.ba-slider .resize img, .ba-slider2 .resize img
+/* .ba-slider .resize img, .ba-slider2 .resize img
 {
-  height: 100%;
-}
+    height: 100%;
+} */
 
 /*custom auto slider*/
 
@@ -3867,6 +3867,10 @@ pre{
 
 .aspect-\[296\/221\] {
   aspect-ratio: 296/221;
+}
+
+.aspect-\[4\/5\] {
+  aspect-ratio: 4/5;
 }
 
 .aspect-\[607\/221\] {
@@ -7907,6 +7911,10 @@ pre{
   padding-top: 1px;
 }
 
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -9644,6 +9652,11 @@ textarea{
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.focus\:bg-\[\#111111\]:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1));
+}
+
 .focus\:text-\[\#C6FF00\]:focus {
   --tw-text-opacity: 1;
   color: rgb(198 255 0 / var(--tw-text-opacity, 1));
@@ -10136,6 +10149,10 @@ textarea{
     height: auto;
   }
 
+  .sm\:h-\[490px\] {
+    height: 490px;
+  }
+
   .sm\:w-\[282px\] {
     width: 282px;
   }
@@ -10405,6 +10422,10 @@ textarea{
 
   .md\:mt-\[39px\] {
     margin-top: 39px;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
   }
 
   .md\:line-clamp-none {
@@ -10969,8 +10990,18 @@ textarea{
     background-color: transparent;
   }
 
+  .md\:bg-\[\#111\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1));
+  }
+
   .md\:bg-none {
     background-image: none;
+  }
+
+  .md\:object-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .md\:p-0 {
@@ -11249,6 +11280,16 @@ textarea{
 
   .md\:opacity-0 {
     opacity: 0;
+  }
+
+  .md\:hover\:bg-black:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+  }
+
+  .md\:focus\:bg-black:focus {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
   }
 }
 
@@ -12658,6 +12699,10 @@ textarea{
 
   .\32xl\:h-\[700px\] {
     height: 700px;
+  }
+
+  .\32xl\:h-\[520px\] {
+    height: 520px;
   }
 
   .\32xl\:max-h-\[680px\] {

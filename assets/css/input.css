@@ -862,7 +862,7 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
             display: block;
             position: relative;
             z-index: 1;
-            max-height: 767px;
+           /* max-height: 767px;*/
 
         }
         .after-img {
@@ -871,7 +871,7 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
             display: block;
             position: relative;
             /* NOT absolute */
-            background: #111;
+           /* background: #111;*/
         }
 .ba-slider img, .ba-slider2 img {
     width: 100%;
@@ -989,10 +989,10 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
     font-size:23px;
 }
 
-.ba-slider .resize img, .ba-slider2 .resize img
+/* .ba-slider .resize img, .ba-slider2 .resize img
 {
     height: 100%;
-}
+} */
 /*custom auto slider*/
 .custom-slider {
   position: absolute;

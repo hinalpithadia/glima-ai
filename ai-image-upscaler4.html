@@ -842,19 +842,19 @@
                 <p class="font-normal text-sm md:text-base text-[#797979] leading-5 md:leading-7">Enhance any image to
                     high quality sharpen details, fix blur, and upscale to bigger sizes in just one click.</p>
             </div>
-            <div class="py-2.5 mt-6 bg-black md:bg-[#111111] rounded-2xl md:rounded-3xl md:aspect-auto aspect-square">
+            <div class="py-2.5 mt-6 bg-black md:bg-[#111111] rounded-2xl md:rounded-3xl aspect-[4/5] md:aspect-auto">
                 <label
-                    class="w-full md:aspect-auto aspect-square h-auto md:max-h-[620px] xs:min-h-[480px] lg:min-h-[620px] flex justify-center items-center cursor-pointer relative p-2.5 overflow-hidden">
-                    <div class="relative z-20 md:h-auto h-full md:aspect-auto aspect-square">
+                    class="w-full aspect-full md:aspect-auto  h-auto md:max-h-[620px] xs:min-h-[480px] lg:min-h-[620px] flex justify-center items-center cursor-pointer relative px-4 overflow-hidden">
+                    <div class="relative z-20  relative z-20 h-auto md:h-auto">
                         <div class="relative group flex gap-3 md:h-auto h-full">
-                            <div class="rounded-t-xl h-auto relative ba-slider2 md:aspect-auto aspect-square">
+                            <div class="rounded-t-xl relative ba-slider2 aspect-[4/5] md:aspect-auto">
                                 <!--  After Img -->
-                                <img class="w-full before-img md:h-auto h-full object-contain"
-                                    src="assets/images/upscaler-img2.png" alt="before">
+                                <img class="w-full before-img md:h-auto h-full object-cover md:object-contain"
+                                    src="assets/images/test-upscale1.jpg" alt="before">
                                 <!-- BEFORE IMAGE (left side) -->
                                 <div class="resize">
-                                    <img src="assets/images/upscaler-img.png" alt="after"
-                                        class="after-img md:h-auto h-full object-contain">
+                                    <img src="assets/images/test-upscale1.jpg" alt="after"
+                                        class="after-img md:h-auto h-full object-cover md:object-contain">
                                 </div>
 
                                 <span class="handle">
@@ -903,7 +903,6 @@
     <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        /*======resizer===========*/
         /*======resizer===========*/
         (function ($) {
             function drags(dragElement, resizeElement, container) {
