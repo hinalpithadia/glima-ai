@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weekly Countdown</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+  .time-box {
+    @apply flex flex-col items-center justify-center w-32 h-36 rounded-2xl bg-white/10 backdrop-blur-md;
+  }
+
+  .digits {
+    display: flex;
+    gap: 0px;
+  }
+
+  .digit {
+    position: relative;
+    width: 35px;
+    height: 60px;
+    overflow: hidden;
+  }
+
+  .digit span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* starting positions */
+  .digit .old {
+    transform: translateY(0%);
+  }
+
+  .digit .new {
+    transform: translateY(100%);
+  }
+
+  /* slide animation */
+  .digit.slide .old {
+    transform: translateY(-100%);
+  }
+
+  .digit.slide .new {
+    transform: translateY(0%);
+  }
+
+  .time-box small {
+    @apply mt-3 text-xs uppercase tracking-widest text-white/70;
+  }
+</style>
+
+
+
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-black text-white">
+
+  <div class="text-center space-y-6">
+    <h2 class="text-3xl font-semibold tracking-wide">Next Reset In</h2>
+
+    <div class="flex gap-8 justify-center">
+  <div class="time-box">
+    <div class="digits" id="days"></div>
+    <small>Days</small>
+  </div>
+  <div class="time-box">
+    <div class="digits" id="hours"></div>
+    <small>Hours</small>
+  </div>
+  <div class="time-box">
+    <div class="digits" id="minutes"></div>
+    <small>Minutes</small>
+  </div>
+  <div class="time-box">
+    <div class="digits" id="seconds"></div>
+    <small>Seconds</small>
+  </div>
+</div>
+
+  </div>
+<script>
+  $(function () {
+    const WEEK = 7 * 24 * 60 * 60;
+    let remaining = WEEK;
+
+    function renderDigits($container, value) {
+      const digits = value.split("");
+
+      // Initial render
+      if ($container.children().length === 0) {
+        digits.forEach(d => {
+          $container.append(`
+            <div class="digit">
+              <span class="old">${d}</span>
+            </div>
+          `);
+        });
+        return;
+      }
+
+      $container.children(".digit").each(function (i) {
+        const $digit = $(this);
+        const current = $digit.find(".old").text();
+        const next = digits[i];
+
+        if (current === next) return;
+
+        const $new = $(`<span class="new">${next}</span>`);
+        $digit.append($new);
+
+        // force reflow so browser registers start position
+        $new[0].offsetHeight;
+
+        $digit.addClass("slide");
+
+        setTimeout(() => {
+          $digit.find(".old").remove();
+          $new.removeClass("new").addClass("old");
+          $digit.removeClass("slide");
+        }, 500);
+      });
+    }
+
+    function update() {
+      let t = remaining;
+
+      let d = Math.floor(t / 86400);
+      t %= 86400;
+      let h = Math.floor(t / 3600);
+      t %= 3600;
+      let m = Math.floor(t / 60);
+      let s = t % 60;
+
+      renderDigits($("#days"), String(d).padStart(2, "0"));
+      renderDigits($("#hours"), String(h).padStart(2, "0"));
+      renderDigits($("#minutes"), String(m).padStart(2, "0"));
+      renderDigits($("#seconds"), String(s).padStart(2, "0"));
+
+      remaining--;
+      if (remaining < 0) remaining = WEEK;
+    }
+
+    update();
+    setInterval(update, 1400);
+  });
+</script>
+
+
+
+
+</body>
+</html>

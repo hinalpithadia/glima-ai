@@ -4632,6 +4632,10 @@ pre{
   width: 0.875rem;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -5817,6 +5821,12 @@ pre{
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .self-stretch {
@@ -8260,6 +8270,10 @@ pre{
   letter-spacing: 0.05em;
 }
 
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
 .text-\[\#002225\] {
   --tw-text-opacity: 1;
   color: rgb(0 34 37 / var(--tw-text-opacity, 1));
@@ -10576,6 +10590,10 @@ textarea{
     max-height: 340px;
   }
 
+  .md\:max-h-\[520px\] {
+    max-height: 520px;
+  }
+
   .md\:max-h-\[620px\] {
     max-height: 620px;
   }
@@ -10602,18 +10620,6 @@ textarea{
 
   .md\:max-h-full {
     max-height: 100%;
-  }
-
-  .md\:max-h-\[580px\] {
-    max-height: 580px;
-  }
-
-  .md\:max-h-\[500px\] {
-    max-height: 500px;
-  }
-
-  .md\:max-h-\[520px\] {
-    max-height: 520px;
   }
 
   .md\:\!min-h-96 {
@@ -10880,6 +10886,10 @@ textarea{
 
   .md\:flex-col {
     flex-direction: column;
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
   }
 
   .md\:items-end {
@@ -12430,6 +12440,10 @@ textarea{
     height: 100vh;
   }
 
+  .xl\:max-h-\[520px\] {
+    max-height: 520px;
+  }
+
   .xl\:max-h-\[660px\] {
     max-height: 660px;
   }
@@ -12448,18 +12462,6 @@ textarea{
 
   .xl\:max-h-none {
     max-height: none;
-  }
-
-  .xl\:max-h-\[580px\] {
-    max-height: 580px;
-  }
-
-  .xl\:max-h-\[500px\] {
-    max-height: 500px;
-  }
-
-  .xl\:max-h-\[520px\] {
-    max-height: 520px;
   }
 
   .xl\:min-h-\[650px\] {
@@ -12774,28 +12776,16 @@ textarea{
     height: 700px;
   }
 
+  .\32xl\:max-h-\[520px\] {
+    max-height: 520px;
+  }
+
   .\32xl\:max-h-\[680px\] {
     max-height: 680px;
   }
 
   .\32xl\:max-h-\[calc\(100vh-200px\)\] {
     max-height: calc(100vh - 200px);
-  }
-
-  .\32xl\:max-h-\[600px\] {
-    max-height: 600px;
-  }
-
-  .\32xl\:max-h-\[580px\] {
-    max-height: 580px;
-  }
-
-  .\32xl\:max-h-\[500px\] {
-    max-height: 500px;
-  }
-
-  .\32xl\:max-h-\[520px\] {
-    max-height: 520px;
   }
 
   .\32xl\:min-h-\[620px\] {
