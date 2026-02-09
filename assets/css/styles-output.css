@@ -10604,6 +10604,18 @@ textarea{
     max-height: 100%;
   }
 
+  .md\:max-h-\[580px\] {
+    max-height: 580px;
+  }
+
+  .md\:max-h-\[500px\] {
+    max-height: 500px;
+  }
+
+  .md\:max-h-\[520px\] {
+    max-height: 520px;
+  }
+
   .md\:\!min-h-96 {
     min-height: 24rem !important;
   }
@@ -10804,6 +10816,10 @@ textarea{
 
   .md\:max-w-\[700px\] {
     max-width: 700px;
+  }
+
+  .md\:max-w-\[735px\] {
+    max-width: 735px;
   }
 
   .md\:max-w-\[740px\] {
@@ -11769,6 +11785,10 @@ textarea{
     max-width: 700px;
   }
 
+  .lg\:max-w-\[735px\] {
+    max-width: 735px;
+  }
+
   .lg\:max-w-\[808px\] {
     max-width: 808px;
   }
@@ -12430,6 +12450,18 @@ textarea{
     max-height: none;
   }
 
+  .xl\:max-h-\[580px\] {
+    max-height: 580px;
+  }
+
+  .xl\:max-h-\[500px\] {
+    max-height: 500px;
+  }
+
+  .xl\:max-h-\[520px\] {
+    max-height: 520px;
+  }
+
   .xl\:min-h-\[650px\] {
     min-height: 650px;
   }
@@ -12520,6 +12552,10 @@ textarea{
 
   .xl\:max-w-\[680px\] {
     max-width: 680px;
+  }
+
+  .xl\:max-w-\[735px\] {
+    max-width: 735px;
   }
 
   .xl\:columns-5 {
@@ -12746,6 +12782,22 @@ textarea{
     max-height: calc(100vh - 200px);
   }
 
+  .\32xl\:max-h-\[600px\] {
+    max-height: 600px;
+  }
+
+  .\32xl\:max-h-\[580px\] {
+    max-height: 580px;
+  }
+
+  .\32xl\:max-h-\[500px\] {
+    max-height: 500px;
+  }
+
+  .\32xl\:max-h-\[520px\] {
+    max-height: 520px;
+  }
+
   .\32xl\:min-h-\[620px\] {
     min-height: 620px;
   }
@@ -12824,6 +12876,10 @@ textarea{
 
   .\32xl\:max-w-\[732px\] {
     max-width: 732px;
+  }
+
+  .\32xl\:max-w-\[735px\] {
+    max-width: 735px;
   }
 
   .\32xl\:max-w-\[740px\] {
