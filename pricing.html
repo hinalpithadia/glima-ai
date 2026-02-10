@@ -228,7 +228,7 @@ Works For You</h2>
                                     </div>
                                 </div>
                                  <!--countdown-->
-                                <div class="countdown text-center space-y-6">
+                                <div class="countdown text-center space-y-6" data-key="offer-1" data-duration="604800">
    
     <div class="flex gap-4 justify-center">
   <div class="time-box">
@@ -1243,7 +1243,7 @@ Works For You</h2>
                                     </div>
                                 </div>
                                 <!--countdown-->
-                                <div class="countdown text-center space-y-6">
+                                <div class="countdown text-center space-y-6" data-key="offer-2" data-duration="604800">
    
     <div class="flex gap-4 justify-center">
   <div class="time-box">
@@ -1804,7 +1804,7 @@ toggle.addEventListener("change", () => {
   });
 });
   </script>
-    <script>
+   <script>
   $(function () {
 
     function renderDigits($container, value) {
@@ -1843,13 +1843,33 @@ toggle.addEventListener("change", () => {
     }
 
     $(".countdown").each(function () {
-      const $countdown = $(this);
-      const duration = Number($countdown.data("duration")) || 604800;
-      let remaining = duration;
+      const $cd = $(this);
+      const key = $cd.data("key"); // UNIQUE KEY
+      const duration = Number($cd.data("duration")) || 604800;
+
+      if (!key) {
+        console.error("Countdown missing data-key");
+        return;
+      }
+
+      const storageKey = `countdown_end_${key}`;
+      let endTime = localStorage.getItem(storageKey);
+
+      if (!endTime || Number(endTime) < Date.now()) {
+        endTime = Date.now() + duration * 1000;
+        localStorage.setItem(storageKey, endTime);
+      }
 
       function update() {
-        let t = remaining;
+        let remaining = Math.floor((endTime - Date.now()) / 1000);
 
+        if (remaining <= 0) {
+          endTime = Date.now() + duration * 1000;
+          localStorage.setItem(storageKey, endTime);
+          remaining = duration;
+        }
+
+        let t = remaining;
         const d = Math.floor(t / 86400);
         t %= 86400;
         const h = Math.floor(t / 3600);
@@ -1857,13 +1877,10 @@ toggle.addEventListener("change", () => {
         const m = Math.floor(t / 60);
         const s = t % 60;
 
-        renderDigits($countdown.find('[data-unit="days"]'), String(d).padStart(2, "0"));
-        renderDigits($countdown.find('[data-unit="hours"]'), String(h).padStart(2, "0"));
-        renderDigits($countdown.find('[data-unit="minutes"]'), String(m).padStart(2, "0"));
-        renderDigits($countdown.find('[data-unit="seconds"]'), String(s).padStart(2, "0"));
-
-        remaining--;
-        if (remaining < 0) remaining = duration;
+        renderDigits($cd.find('[data-unit="days"]'), String(d).padStart(2, "0"));
+        renderDigits($cd.find('[data-unit="hours"]'), String(h).padStart(2, "0"));
+        renderDigits($cd.find('[data-unit="minutes"]'), String(m).padStart(2, "0"));
+        renderDigits($cd.find('[data-unit="seconds"]'), String(s).padStart(2, "0"));
       }
 
       update();
@@ -1872,6 +1889,7 @@ toggle.addEventListener("change", () => {
 
   });
 </script>
+
 
 </body>
 

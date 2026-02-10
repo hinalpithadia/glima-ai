@@ -9915,6 +9915,10 @@ textarea{
   background-color: rgba(198,255,0,0.3);
 }
 
+.peer:checked ~ .peer-checked\:bg-\[\#c6ff001a\] {
+  background-color: #c6ff001a;
+}
+
 .peer:checked ~ .peer-checked\:text-\[\#C6FF00\] {
   --tw-text-opacity: 1;
   color: rgb(198 255 0 / var(--tw-text-opacity, 1));
@@ -10722,6 +10726,10 @@ textarea{
     width: 720px;
   }
 
+  .md\:w-\[780px\] {
+    width: 780px;
+  }
+
   .md\:w-\[80px\] {
     width: 80px;
   }
@@ -10762,6 +10770,10 @@ textarea{
   .md\:w-max {
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .md\:w-\[600px\] {
+    width: 600px;
   }
 
   .md\:min-w-72 {
@@ -10838,6 +10850,10 @@ textarea{
 
   .md\:max-w-full {
     max-width: 100%;
+  }
+
+  .md\:max-w-\[780px\] {
+    max-width: 780px;
   }
 
   .md\:translate-x-0 {
@@ -12518,6 +12534,10 @@ textarea{
 
   .xl\:w-auto {
     width: auto;
+  }
+
+  .xl\:w-\[780px\] {
+    width: 780px;
   }
 
   .xl\:min-w-\[550px\] {
