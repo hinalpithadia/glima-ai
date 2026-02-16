@@ -1191,22 +1191,34 @@ Works For You</h2>
           </div>
     </div> 
      <!--Pricing Modal-->
-    <div class="modalTrigger  modal-pricing" id="pricing">
-    <div class="relative bg-black-1B1B1B  rounded-3xl md:max-h-[750px] lg:h-auto h-full overflow-auto" >
-        <div class="flex flex-col w-full">
-        <div class="pb-5 2xl:px-5 2xl:pb-2 0 w-full">
-            <span
-          class="close-btn cursor-pointer p-1.5 rounded-full bg-[#1D1D1D] text-white transition-all duration-300 hover:text-limegreen absolute top-4 right-4">
+    <div class="modalTrigger xl:max-w-[1170px] lg:max-w-[950px]  modal-pricing" id="pricing">
+      <div class="relative h-auto w-full">
+      <button
+          class="close-btn cursor-pointer p-1.5 rounded-md
+bg-[#262626] text-white
+transition-all duration-300 hover:text-limegreen
+absolute top-[-40px] lg:right-0 right-2 z-20">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
             <path
               d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
               stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
     
-        </span>
-        <div class="w-full mt-5">
+        </button>
+      <div class="relative w-full
+
+rounded-xl bg-[#202020]
+min-h-full
+max-h-[calc(100vh-15vh)]
+overflow-y-auto
+2xl:min-h-[750px] xl:min-h-[615px]
+md:max-h-[clamp(420px,calc(100vh-22vh),680px)]" >
+        <div class="flex flex-col w-full">
+        <div class="pb-5 2xl:px-5 2xl:pb-2 px-5 w-full">
+           
+        <div class="w-full mt-5 mb-[22px]">
             <div class="flex  flex-col items-center  gap-2  w-full">
-                <p class="text-sm text-white font-normal leading-6 lg:max-w-[700px] max-w-max">You have 13 credits remaining. Upgrade to get more credits.</p>
+                <p class="text-sm text-center text-white font-normal leading-6 lg:max-w-[700px] max-w-max">You have 13 credits remaining. Upgrade to get more credits.</p>
                 <div class="toggle-container w-full max-w-[320px] h-[58px] bg-black-0a0a0a border border-white/20 relative rounded-2xl inline-flex items-center justify-center cursor-pointer overflow-hidden  p-2.5">
                     <input id="pricingToggle" type="checkbox" class="opacity-0 w-full h-full absolute cursor-pointer">
                     <div class="toggle-slider absolute z-30 top-[8px] left-[10px] w-[46%] h-[40px] bg-limegreen rounded-lg transition-all duration-500"></div>
@@ -1215,7 +1227,10 @@ Works For You</h2>
                       <span class="yearly w-1/2"> Yearly <span class="ml-2 text-xs font-medium  text-limegreen py-1.5 px-2 rounded-xl bg-black">22% Off</span></span>
                     </div>
                   </div>
-                     <div class="rounded-[15px] w-full">
+                    
+            </div>
+        </div>
+         <div class="rounded-[15px] w-full">
                             <div class="rounded-[15px] bg-cover    2xl:p-5 px-3 pt-3 pb-5 flex md:flex-row flex-col  relative items-center md:justify-between justify-center h-full w-full md:gap-0 gap-5"
                                 style="background-image: url('https://glima.ai/storage/media/1767867455_rGRFphpgnogYw.png')">
                                 <div class="flex flex-col md:items-start items-center gap-2.5 ">
@@ -1267,10 +1282,8 @@ Works For You</h2>
                                 </div>
                             </div>
                         </div>
-            </div>
         </div>
-        </div>
-        <div class="grid lg:grid-cols-3 grid-cols-1  gap-5 p-5 w-full">
+        <div class="grid lg:grid-cols-3 grid-cols-1  gap-5 p-5 pb-0 w-full">
             <div class="bg-black-0a0a0a p-5 shadow-[0px_15px_40px_-4px_rgba(16,24,40,0.04)] rounded-2xl border border-white/10">
                 <div class="relative h-full">
                     <div class="pb-2 mb-2 flex flex-col gap-4 ">
@@ -1774,6 +1787,7 @@ Works For You</h2>
                     </div>
                 </div>
         </div>
+      </div>
       </div>
     </div>  
       <div class="overlay-modal w-full h-screen z-[500] bg-black/50 backdrop-blur-xl fixed top-0 left-0 opacity-0 invisible"></div>
