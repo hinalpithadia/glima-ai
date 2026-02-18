@@ -19,6 +19,11 @@
     font-family: "Bebas Neue";
     src: url(../font/Bebas_Neue/BebasNeue-Regular.ttf);
 }
+
+@font-face {
+    font-family: 'Sofia Sans';
+    src: url(../font/Sofia_Sans/SofiaSans-Medium.ttf);
+}
 @font-face {
     font-family: "Agdasima";
     src: url(../font/Agdasima/Agdasima-Regular.ttf);

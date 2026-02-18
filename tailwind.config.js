@@ -29,6 +29,7 @@ module.exports = {
         'playfair': ['playfair'],
         'bebas': ['Bebas Neue'],
          'manrope': ['manrope'],
+         'sofia': ['Sofia Sans'],
         'agdasima': ['agdasima'],
       },
       colors: {

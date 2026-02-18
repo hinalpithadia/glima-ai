@@ -8116,6 +8116,10 @@ pre{
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.font-sofia {
+  font-family: Sofia Sans;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -8971,6 +8975,12 @@ pre{
   font-family: "Bebas Neue";
 
   src: url(../font/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Sofia Sans';
+
+  src: url(../font/Sofia_Sans/SofiaSans-Medium.ttf);
 }
 
 @font-face {
