@@ -29,6 +29,7 @@ module.exports = {
         'playfair': ['playfair'],
         'bebas': ['Bebas Neue'],
          'manrope': ['manrope'],
+        'agdasima': ['agdasima'],
       },
       colors: {
         'limegreen': '#C6FF00',

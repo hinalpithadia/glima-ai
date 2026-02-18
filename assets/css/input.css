@@ -19,6 +19,10 @@
     font-family: "Bebas Neue";
     src: url(../font/Bebas_Neue/BebasNeue-Regular.ttf);
 }
+@font-face {
+    font-family: "Agdasima";
+    src: url(../font/Agdasima/Agdasima-Regular.ttf);
+}
 @layer base {
     html {
         scroll-behavior: smooth;

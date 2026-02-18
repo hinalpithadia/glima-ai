@@ -15,11 +15,13 @@
   .digits {
     display: flex;
     gap: 0px;
+    align-items: center;
+    justify-content: center;
   }
 
   .digit {
     position: relative;
-    width: 20px;
+    width: 16px;
     height: 35px;
     overflow: hidden;
   }
@@ -30,7 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 800;
     
     line-height: 1;
@@ -228,7 +230,7 @@ Works For You</h2>
                                     </div>
                                 </div>
                                  <!--countdown-->
-                                <div class="countdown text-center space-y-6" data-key="offer-1" data-duration="604800">
+                                <!-- <div class="countdown text-center space-y-6" data-key="offer-1" data-duration="604800">
    
     <div class="flex gap-4 justify-center">
   <div class="time-box">
@@ -249,7 +251,67 @@ Works For You</h2>
   </div>
 </div>
 
-                                </div>
+                                </div> -->
+                                 <!-- Countdown -->
+<div class="countdown text-center" data-key="offer-2" data-duration="604800">
+
+  <div class="flex gap-3 justify-center p-4 rounded-lg">
+
+    <div class="time-box text-center relative">
+      <div class="digits bg-[#445C0B] border border-[#DEFF50] 
+                  rounded-md w-[38px] h-[42px] 
+                  text-[#b4ff00] text-3xl font-bold 
+                   shadow-inner font-agdasima"
+           data-unit="days"></div>
+           <div class="absolute ">
+            <svg width="38" height="7" viewBox="0 0 38 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.81484 6.30032L0 6.29994V0H1.81484V6.30032Z" fill="#DEFF50"/>
+<path d="M37.3539 6.30032L35.5391 6.29994V0H37.3539V6.30032Z" fill="#DEFF50"/>
+<path d="M37.3578 3.35547H0.0703125V3.8489H37.3578V3.35547Z" fill="#DEFF50"/>
+</svg>
+
+           </div>
+      <small class="text-[10px] text-white/70 mt-1 block tracking-widest uppercase">
+        Days
+      </small>
+    </div>
+
+    <div class="time-box text-center">
+      <div class="digits bg-[#445C0B] border border-[#DEFF50] 
+                  rounded-md w-[38px] h-[42px] 
+                  text-[#b4ff00] text-3xl font-bold  
+                  tracking-wider shadow-inner flex items-center justify-center"
+           data-unit="hours"></div>
+      <small class="text-[10px] text-white/70 mt-1 block tracking-widest uppercase">
+        Hours
+      </small>
+    </div>
+
+    <div class="time-box text-center">
+      <div class="digits bg-[#445C0B] border border-[#DEFF50] 
+                  rounded-md w-[38px] h-[42px] 
+                  text-[#b4ff00] text-3xl font-bold  
+                  tracking-wider shadow-inner"
+           data-unit="minutes"></div>
+      <small class="text-[10px] text-white/70 mt-1 block tracking-widest uppercase">
+        Minutes
+      </small>
+    </div>
+
+    <div class="time-box text-center">
+      <div class="digits bg-[#445C0B] border border-[#DEFF50] 
+                  rounded-md w-[38px] h-[42px] 
+                  text-[#b4ff00] text-3xl font-bold 
+                  tracking-wider shadow-inner"
+           data-unit="seconds"></div>
+      <small class="text-[10px] text-white/70 mt-1 block tracking-widest uppercase">
+        Seconds
+      </small>
+    </div>
+
+  </div>
+</div>
+
                             </div>
                         </div>
                     </div>
@@ -1258,7 +1320,7 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]" >
                                     </div>
                                 </div>
                                 <!--countdown-->
-                                <div class="countdown text-center space-y-6" data-key="offer-2" data-duration="604800">
+                                <!-- <div class="countdown text-center space-y-6" data-key="offer-2" data-duration="604800">
    
     <div class="flex gap-4 justify-center">
   <div class="time-box">
@@ -1279,7 +1341,9 @@ md:max-h-[clamp(420px,calc(100vh-22vh),680px)]" >
   </div>
 </div>
 
-                                </div>
+                                </div> -->
+                               
+
                             </div>
                         </div>
         </div>

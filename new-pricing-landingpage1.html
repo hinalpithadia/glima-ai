@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap"
         rel="stylesheet">
-    <style>
+      <style>
         @media (max-width: 767px) {
             .more-wrapper {
                 height: 0;
@@ -22,6 +22,71 @@
 
         .font-sofia {
             font-family: "Sofia Sans";
+        }
+
+        .font-agdasima {
+            font-family: "Agdasima", sans-serif;
+        }
+
+        .digits {
+            display: flex;
+            gap: 0px;
+        }
+
+        .digit {
+            position: relative;
+            width: 16px;
+            height: 32px;
+            overflow: hidden;
+        }
+
+        .digit span {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #C6FF00;
+            letter-spacing: -1.28px;
+            font-family: "Agdasima", sans-serif;
+            transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* initial */
+        .digit .old {
+            transform: translateY(0%);
+        }
+
+        .digit .new {
+            transform: translateY(100%);
+        }
+
+        /* animation */
+        .digit.slide .old {
+            transform: translateY(-100%);
+        }
+
+        .digit.slide .new {
+            transform: translateY(0%);
+        }
+        .time-box small{
+            font-size: 16px;
+               font-family: "Agdasima", sans-serif;
+               text-transform: uppercase;
+               letter-spacing: 1px;
+               font-weight: 500;
+        }
+        @media(max-width: 767px){
+           
+            .digit{
+                width: 15px;
+                height: 20px;
+            }
+            .digit span{
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -134,15 +199,64 @@
     </nav>
     <div class="relative pt-[86px] md:pt-[120px] px-5 md:px-4">
         <div class="w-full max-w-[1170px] mx-auto">
+            <div class="flex flex-col gap-2 md:gap-0 md:flex-row md:items-center justify-between">
             <div class="flex flex-col gap-2">
                 <h1 class="text-[28px] md:text-4xl font-medium text-white">Pricing Plan</h1>
                 <p class="text-base font-normal text-[#FFFFFF99]">Unlock more power with higher limits,
                     priority access,
                     and early feature releases.</p>
             </div>
+             <div class="relative md:my-0 my-2  md:translate-y-5 rounded-2xl border border-[#FFFFFF1A] px-3 pt-5 pb-3 w-fit flex flex-col gap-5 md:w-fit w-full"
+                    style="background: radial-gradient(ellipse 72.44% 85.85% at 50.00% 0.00%, rgba(34, 52, 0, 0.30) 0%, rgba(34, 52, 0, 0) 100%), black;">
+                    <div class="flex items-center justify-between md:gap-[67px] ">
+                        <div class="flex flex-col gap-0.5">
+                            <label class="text-xs font-semibold text-white uppercase">Exclusive Sale</label>
+                            <h4 class="text-[28px] font-manrope tracking-[0.84px] font-extrabold text-[#C6FF00]">40%
+                                <span class="text-white">OFF</span>
+                            </h4>
+                        </div>
+                        <div>
+                            <!--countdown-->
+                            <div class="countdown text-center space-y-6" data-key="offer-1" data-duration="604800">
+                                <div class="flex md:gap-3 gap-1 justify-center">
+                                    <div class="time-box">
+                                        <div class="digits  text-white " data-unit="days"></div>
+                                        <small class="text-white/70">Days</small>
+                                    </div>
+                                    <div class="time-box">
+                                        <div class="digits  text-white " data-unit="hours"></div>
+                                        <small class="text-white/70">Hours</small>
+                                    </div>
+                                    <div class="time-box">
+                                        <div class="digits  text-white " data-unit="minutes"></div>
+                                        <small class="text-white/70">Min</small>
+                                    </div>
+                                    <div class="time-box">
+                                        <div class="digits  text-white " data-unit="seconds"></div>
+                                        <small class="text-white/70">Sec</small>
+                                    </div>
+                                </div>
 
+                            </div>
+                        </div>
+
+                    </div>
+                    <div
+                        class="relative z-10 flex items-center justify-center gap-1.5 bg-[#C6FF001F] rounded-lg py-1.5 px-2.5">
+                        <span class="text-sm text-[#C6FF00] font-medium text-center">SUPER40</span>
+                        <button class="cursor-pointer copy-code-btn" data-code="SUPER60">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                fill="none">
+                                <path
+                                    d="M6.41667 1.75H7.58333C9.7832 1.75 10.8832 1.75 11.5666 2.43342C12.25 3.11684 12.25 4.21678 12.25 6.41667V7.58333M5.83333 12.25C4.1948 12.25 3.37552 12.25 2.787 11.8568C2.53223 11.6865 2.31348 11.4677 2.14324 11.213C1.75 10.6245 1.75 9.80519 1.75 8.16667C1.75 6.52814 1.75 5.70886 2.14324 5.12034C2.31348 4.86556 2.53223 4.64681 2.787 4.47657C3.37552 4.08333 4.1948 4.08333 5.83333 4.08333C7.47186 4.08333 8.29115 4.08333 8.87967 4.47657C9.13442 4.64681 9.35317 4.86556 9.52344 5.12034C9.91667 5.70886 9.91667 6.52814 9.91667 8.16667C9.91667 9.80519 9.91667 10.6245 9.52344 11.213C9.35317 11.4677 9.13442 11.6865 8.87967 11.8568C8.29115 12.25 7.47186 12.25 5.83333 12.25Z"
+                                    stroke="#C6FF00" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+             </div>   
             <!-- pricing section -->
-            <div class="w-full pt-4 md:pt-12 flex flex-col gap-5 md:gap-6">
+            <div class="w-full  flex flex-col gap-5 md:gap-6 md:mt-0 mt-2">
                 <!-- toggle -->
                 <div class="flex items-center gap-3 pricing-toggle">
 
@@ -1013,7 +1127,7 @@
                             </div>
                             <div class="relative"> 
                                  <button
-                                class="w-full pl-3.5 pr-5 py-[10px] whitespace-nowrap rounded-lg bg-white md:bg-[#C6FF00] text-sm font-medium text-center text-black transition-all duration-500 hover:bg-white/80 md:hover:bg-[#D7FF4D]">Buy
+                                class="w-full pl-3.5 pr-5 py-[10px] whitespace-nowrap rounded-lg bg-white md:bg-[#C6FF00] text-sm font-medium text-center text-black transition-all duration-500 hover:bg-white/80 md:hover:bg-[#D7FF4D] tooltip-trigger">Buy
                                 Credits Now</button><div class="tooltip absolute bottom-12 bg-[#0A0A0A] flex flex-col translate-y-2 invisible opacity-0 mb-5 duration-300 transition-all max-w-[340px] right-0 m-auto left-0 gap-2 z-10  before:left-[45%] before:border-t-[#484848] whitespace-pre">
                                   <h5 class="text-xs text-white text-left">Extra Credits </h5>
                                     <p class="text-xs text-[#696969] text-left whitespace-break-spaces">Extra Credit purchase only available on active subscription.</p>
@@ -1080,7 +1194,7 @@
                             </div>
                            <div class="relative"> 
                                  <button
-                                class="w-full pl-3.5 pr-5 py-[10px] whitespace-nowrap rounded-lg bg-white md:bg-[#C6FF00] text-sm font-medium text-center text-black transition-all duration-500 hover:bg-white/80 md:hover:bg-[#D7FF4D]">Buy
+                                class="w-full pl-3.5 pr-5 py-[10px] whitespace-nowrap rounded-lg bg-white md:bg-[#C6FF00] text-sm font-medium text-center text-black transition-all duration-500 hover:bg-white/80 md:hover:bg-[#D7FF4D] tooltip-trigger">Buy
                                 Credits Now</button><div class="tooltip absolute bottom-12 bg-[#0A0A0A] flex flex-col translate-y-2 invisible opacity-0 mb-5 duration-300 transition-all max-w-[340px] right-0 m-auto left-0 gap-2 z-10  before:left-[45%] before:border-t-[#484848] whitespace-pre">
                                   <h5 class="text-xs text-white text-left">Extra Credits </h5>
                                     <p class="text-xs text-[#696969] text-left whitespace-break-spaces">Extra Credit purchase only available on active subscription.</p>
@@ -1146,7 +1260,7 @@
                             </div>
                           <div class="relative"> 
                                  <button
-                                class="w-full pl-3.5 pr-5 py-[10px] whitespace-nowrap rounded-lg bg-white md:bg-[#C6FF00] text-sm font-medium text-center text-black transition-all duration-500 hover:bg-white/80 md:hover:bg-[#D7FF4D]">Buy
+                                class="w-full pl-3.5 pr-5 py-[10px] whitespace-nowrap rounded-lg bg-white md:bg-[#C6FF00] text-sm font-medium text-center text-black transition-all duration-500 hover:bg-white/80 md:hover:bg-[#D7FF4D] tooltip-trigger">Buy
                                 Credits Now</button><div class="tooltip absolute bottom-12 bg-[#0A0A0A] flex flex-col translate-y-2 invisible opacity-0 mb-5 duration-300 transition-all max-w-[340px] right-0 m-auto left-0 gap-2 z-10  before:left-[45%] before:border-t-[#484848] whitespace-pre">
                                   <h5 class="text-xs text-white text-left">Extra Credits </h5>
                                     <p class="text-xs text-[#696969] text-left whitespace-break-spaces">Extra Credit purchase only available on active subscription.</p>
@@ -1584,6 +1698,86 @@
         });
     </script>
 
+ <script>
+        $(function () {
+
+            function renderDigits($container, value) {
+                const digits = value.split("");
+
+                if ($container.children().length === 0) {
+                    digits.forEach(d => {
+                        $container.append(`
+                    <div class="digit">
+                        <span class="old">${d}</span>
+                    </div>
+                `);
+                    });
+                    return;
+                }
+
+                $container.children(".digit").each(function (i) {
+                    const $digit = $(this);
+                    const current = $digit.find(".old").text();
+                    const next = digits[i];
+
+                    if (current === next) return;
+
+                    const $new = $(`<span class="new">${next}</span>`);
+                    $digit.append($new);
+                    $new[0].offsetHeight;
+
+                    $digit.addClass("slide");
+
+                    setTimeout(() => {
+                        $digit.find(".old").remove();
+                        $new.removeClass("new").addClass("old");
+                        $digit.removeClass("slide");
+                    }, 450);
+                });
+            }
+
+            $(".countdown").each(function () {
+                const $cd = $(this);
+                const key = $cd.data("key");
+                const duration = Number($cd.data("duration")) || 604800;
+
+                const storageKey = `countdown_end_${key}`;
+                let endTime = localStorage.getItem(storageKey);
+
+                if (!endTime || Number(endTime) < Date.now()) {
+                    endTime = Date.now() + duration * 1000;
+                    localStorage.setItem(storageKey, endTime);
+                }
+
+                function update() {
+                    let remaining = Math.floor((endTime - Date.now()) / 1000);
+
+                    if (remaining <= 0) {
+                        endTime = Date.now() + duration * 1000;
+                        localStorage.setItem(storageKey, endTime);
+                        remaining = duration;
+                    }
+
+                    let t = remaining;
+                    const d = Math.floor(t / 86400);
+                    t %= 86400;
+                    const h = Math.floor(t / 3600);
+                    t %= 3600;
+                    const m = Math.floor(t / 60);
+                    const s = t % 60;
+
+                    renderDigits($cd.find('[data-unit="days"]'), String(d).padStart(2, "0"));
+                    renderDigits($cd.find('[data-unit="hours"]'), String(h).padStart(2, "0"));
+                    renderDigits($cd.find('[data-unit="minutes"]'), String(m).padStart(2, "0"));
+                    renderDigits($cd.find('[data-unit="seconds"]'), String(s).padStart(2, "0"));
+                }
+
+                update();
+                setInterval(update, 1000);
+            });
+
+        });
+    </script>
 
 
 </body>
