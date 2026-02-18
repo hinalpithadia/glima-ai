@@ -9708,6 +9708,18 @@ textarea{
   background-color: rgb(255 255 255 / 0.8);
 }
 
+.hover\:bg-\[\]:hover {
+  background-color: ;
+}
+
+.hover\:bg-\[\#c7ff051f\]:hover {
+  background-color: #c7ff051f;
+}
+
+.hover\:bg-\[\#9eca0633\]:hover {
+  background-color: #9eca0633;
+}
+
 .hover\:bg-gradient-to-tr:hover {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }

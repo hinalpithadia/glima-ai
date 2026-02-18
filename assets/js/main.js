@@ -845,23 +845,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const showTooltip = () => {
       tooltip.classList.remove('opacity-0', 'translate-y-2', 'invisible');
-      tooltip.classList.add('opacity-100' , 'translate-y-0', 'visible');
+      tooltip.classList.add('opacity-100', 'translate-y-0', 'visible');
     };
 
     const hideTooltip = () => {
-      tooltip.classList.remove('opacity-100' , 'translate-y-0', 'visible');
+      tooltip.classList.remove('opacity-100', 'translate-y-0', 'visible');
       tooltip.classList.add('opacity-0', 'translate-y-2', 'invisible');
     };
 
-    trigger.addEventListener('mouseenter', showTooltip);
-    trigger.addEventListener('mouseleave', hideTooltip);
-    trigger.addEventListener('focus', showTooltip);
-    trigger.addEventListener('blur', hideTooltip);
+    const isMobile = window.matchMedia("(max-width: 1023px)").matches;
 
-    // Hide tooltip on click
-    trigger.addEventListener('click', hideTooltip);
+    if (isMobile) {
+      // 📱 Mobile → open on click
+      trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        const isVisible = tooltip.classList.contains('opacity-100');
+
+        // Close all other tooltips first
+        document.querySelectorAll('.tooltip-trigger + *').forEach(tip => {
+          tip.classList.remove('opacity-100', 'translate-y-0', 'visible');
+          tip.classList.add('opacity-0', 'translate-y-2', 'invisible');
+        });
+
+        if (!isVisible) {
+          showTooltip();
+        }
+      });
+
+      // Close when clicking outside
+      document.addEventListener('click', () => {
+        hideTooltip();
+      });
+
+    } else {
+      // 🖥 Desktop → hover
+      trigger.addEventListener('mouseenter', showTooltip);
+      trigger.addEventListener('mouseleave', hideTooltip);
+      trigger.addEventListener('focus', showTooltip);
+      trigger.addEventListener('blur', hideTooltip);
+    }
   });
 });
+
 // ============ SMALL DropDown ================
 
 const selectedAll = document.querySelectorAll(".wrapper-dropdown");
