@@ -8112,10 +8112,6 @@ pre{
   font-family: manrope;
 }
 
-.font-sans {
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
 .font-sofia {
   font-family: Sofia Sans;
 }
@@ -9566,6 +9562,10 @@ textarea{
   background-color: #9ea97729;
 }
 
+.hover\:bg-\[\#9eca0633\]:hover {
+  background-color: #9eca0633;
+}
+
 .hover\:bg-\[\#C6FF001A\]:hover {
   background-color: #C6FF001A;
 }
@@ -9706,18 +9706,6 @@ textarea{
 
 .hover\:bg-white\/80:hover {
   background-color: rgb(255 255 255 / 0.8);
-}
-
-.hover\:bg-\[\]:hover {
-  background-color: ;
-}
-
-.hover\:bg-\[\#c7ff051f\]:hover {
-  background-color: #c7ff051f;
-}
-
-.hover\:bg-\[\#9eca0633\]:hover {
-  background-color: #9eca0633;
 }
 
 .hover\:bg-gradient-to-tr:hover {
@@ -11618,10 +11606,6 @@ textarea{
 
   .md\:text-right {
     text-align: right;
-  }
-
-  .md\:font-inter {
-    font-family: inter;
   }
 
   .md\:text-2xl {
