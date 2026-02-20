@@ -13411,6 +13411,11 @@ textarea{
   }
 }
 
+.\[\&\.active\]\:border-limegreen.active {
+  --tw-border-opacity: 1;
+  border-color: rgb(198 255 0 / var(--tw-border-opacity, 1));
+}
+
 .\[\&\.active\]\:bg-\[\#0A0A0A\].active {
   --tw-bg-opacity: 1;
   background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
