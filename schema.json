@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Glima AI",
+  "url": "https://glima.ai",
+  "logo": "https://glima.ai/storage/media/1751000698_GYFPphpqwQzhm.png",
+   "description": "Glima AI is an all-in-one AI creative platform for generating, editing, and enhancing images and videos using advanced artificial intelligence models.",
+  "sameAs": [
+    "https://twitter.com/glimaai",
+    "https://discord.com/invite/n2d3WaTa"
+  ]
+}
+
+i already told you when i give you link web search and read page go to frequently asked question page and copy all faq and add it into faq schema
+
+All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
+
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Use AI Panorama Image Generator",
+ 
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Input Your Text",
+      "text": "Type a description of the panoramic scene you want to generate."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Select Your Style & Settings",
+      "text": "Choose from different artistic styles like realistic, futuristic, or abstract."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Generate & Download",
+      "text": "Click the generate button and let AI transform your text into a breathtaking panoramic image."
+    }
+  ]
+}
