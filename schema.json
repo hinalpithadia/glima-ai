@@ -18,23 +18,23 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Use AI Panorama Image Generator",
- 
+  "name": "How to Create Airbnb-Style Icons with Glima AI",
+  "description": "Follow these simple steps to generate professional Airbnb-style icons using Glima AI’s online image generator.",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Input Your Text",
-      "text": "Type a description of the panoramic scene you want to generate."
+      "name": "Describe Your Icon Idea",
+      "text": "Enter your concept, such as a cozy cabin, beach umbrella, or mountain trail. Be as specific or creative as you like."
     },
     {
       "@type": "HowToStep",
-      "name": "Select Your Style & Settings",
-      "text": "Choose from different artistic styles like realistic, futuristic, or abstract."
+      "name": "Select Your Style Preferences",
+      "text": "Choose the Airbnb-style aesthetic—soft curves, minimal lines, or pastel color schemes. Let the AI match the iconic look."
     },
     {
       "@type": "HowToStep",
       "name": "Generate & Download",
-      "text": "Click the generate button and let AI transform your text into a breathtaking panoramic image."
+      "text": "With one click, your unique Airbnb-style icon is ready to use for listings, apps, or branding. Download in high-res formats."
     }
   ]
 }
