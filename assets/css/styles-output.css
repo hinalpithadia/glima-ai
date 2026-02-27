@@ -13421,9 +13421,26 @@ textarea{
   background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
 }
 
+.\[\&\.active\]\:bg-\[\#111111\].active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1));
+}
+
 .\[\&\.active\]\:text-limegreen.active {
   --tw-text-opacity: 1;
   color: rgb(198 255 0 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 768px) {
+  .md\:\[\&\.active\]\:bg-black.active {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+  }
+
+  .md\:\[\&\.active\]\:text-limegreen.active {
+    --tw-text-opacity: 1;
+    color: rgb(198 255 0 / var(--tw-text-opacity, 1));
+  }
 }
 
 .\[\&\.is-open\]\:rounded-lg.is-open {

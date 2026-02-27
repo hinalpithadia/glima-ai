@@ -18,23 +18,23 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Create Airbnb-Style Icons with Glima AI",
-  "description": "Follow these simple steps to generate professional Airbnb-style icons using Glima AI’s online image generator.",
+  "name": "How to Use the AI Sports Logo Generator",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Describe Your Icon Idea",
-      "text": "Enter your concept, such as a cozy cabin, beach umbrella, or mountain trail. Be as specific or creative as you like."
+      "name": "Enter Your Team or Brand Name",
+      "text": "Type in the name of your sports team or brand, and optionally add a tagline to incorporate into your logo design."
     },
     {
       "@type": "HowToStep",
-      "name": "Select Your Style Preferences",
-      "text": "Choose the Airbnb-style aesthetic—soft curves, minimal lines, or pastel color schemes. Let the AI match the iconic look."
+      "name": "Choose Sport and Style",
+      "text": "Select the sport (football, basketball, baseball, etc.) and the design style (modern, classic, minimalist, bold) that best represents your team’s identity."
     },
     {
       "@type": "HowToStep",
-      "name": "Generate & Download",
-      "text": "With one click, your unique Airbnb-style icon is ready to use for listings, apps, or branding. Download in high-res formats."
-    }
+      "name": "Generate and Customize",
+      "text": "Click 'Generate,' let the AI craft your custom logo, and fine-tune colors, fonts, and icons as needed."
+    },
+   
   ]
 }
