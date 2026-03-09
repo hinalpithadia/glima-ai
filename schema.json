@@ -18,23 +18,62 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Use the AI Sports Logo Generator",
+  "name": "How to Generate Gamer Girl Names",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Enter Your Team or Brand Name",
-      "text": "Type in the name of your sports team or brand, and optionally add a tagline to incorporate into your logo design."
+      "name": "Select your vibe",
+      "text": "Pick a style, add your game and keywords, then generate your gamer name"
     },
     {
       "@type": "HowToStep",
-      "name": "Choose Sport and Style",
-      "text": "Select the sport (football, basketball, baseball, etc.) and the design style (modern, classic, minimalist, bold) that best represents your team’s identity."
+      "name": "Generate to get result",
+      "text": "Click ‘Generate’ to get a list of unique and catchy gamer girl names tailored to your style and gaming vibe."
     },
     {
       "@type": "HowToStep",
-      "name": "Generate and Customize",
-      "text": "Click 'Generate,' let the AI craft your custom logo, and fine-tune colors, fonts, and icons as needed."
+      "name": "Pick and Continue",
+      "text": "Browse AI-generated gamer girl names, pick your favorite, and copy it instantly with one click."
+    }
+  ]
+}
+
+
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the AI generate gamer girl names?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The AI uses advanced language models to create unique and catchy names based on your style, game preferences, and keywords."
+      }
     },
-   
+    {
+      "@type": "Question",
+      "name": "Can I customize the names?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! You can select name styles like Cool, Cute, or Badass, enter your favorite games, and add keywords to personalize your name."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the generated names unique?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each name is generated dynamically, combining different elements to create fresh, original gamer tags."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these names professionally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! The names are designed to be memorable and suitable for gaming profiles, streams, and online communities."
+      }
+    }
   ]
 }
