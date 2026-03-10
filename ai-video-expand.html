@@ -892,8 +892,14 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                     <div class="relative px-3 pt-5">
                         <div class="w-full  flex flex-col gap-4 pb-12">
                             <div class="flex items-center gap-3.5">
-                                <h2 class="text-xl font-semibold leading-normal text-white">AI Expand video</h2>
-                            </div>
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 12H3M3 12L11.5 3.5M3 12L11.5 20.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg></a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1" height="31" viewBox="0 0 1 31" fill="none">
+                                <path opacity="0.1" d="M0.5 0.5L0.499999 30.5" stroke="white" stroke-linecap="round"></path>
+                            </svg>
+                            <h2 class="text-xl font-semibold leading-normal text-white">Expand Video</h2>
+                        </div>
                             <div class="flex flex-col gap-2.5">
                                 <label class="text-sm leading-[18px] text-white font-medium capitalize">upload your
                                     Videos</label>
@@ -1119,59 +1125,119 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                 <div class="w-full h-full relative">
                     <div class="flex flex-col gap-5">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <!-- video box-1 -->
+                           <!-- video box-1 -->
                             <div
-                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
-                                        controlslist="nodownload noplaybackrate nopictureinpicture"
-                                        disablepictureinpicture="">
-                                        <source src="/assets/images/clothes-changer.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
+                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px] p-2.5">
+                                <div class="w-fit h-full flex flex-col gap-2 items-center justify-center rounded-[10px]">
+                                   <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g class="rotate-animation">
+                                                        <rect x="10.5" y="5.5" width="49" height="49" rx="24.5" stroke="url(#paint0_linear_171_432)"></rect>
+                                                        <rect x="10.5" y="5.5" width="49" height="49" rx="24.5" stroke="url(#paint1_linear_171_432)"></rect>
+                                                    </g>
 
-                                <button
-                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <path
-                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </button>
+                                                    <rect x="15" y="10" width="40" height="40" rx="20" fill="#C6FF00">
+                                                    </rect>
+                                                    <g filter="url(#filter0_d_171_432)" class="rotate-animation">
+                                                        <path d="M29.789 27.7006L24.0918 27.6971L24.0939 32.1553L29.5957 32.1586C30.1926 32.1584 30.7436 31.8299 31.0401 31.2973L34.1432 25.7444C34.4418 25.2106 34.4406 24.5539 34.1412 24.0182L31.3863 19.0899L27.6514 21.3171L30.5041 26.4204C30.8247 26.9891 30.4264 27.699 29.789 27.7006Z" fill="black"></path>
+                                                        <path d="M39.4887 26.4113L42.3402 21.317L38.6011 19.0898L35.8474 24.0094C35.5491 24.5434 35.5491 25.2005 35.8474 25.7321L38.9518 31.2841C39.2501 31.8181 39.8013 32.1454 40.4003 32.1454L45.91 32.1454L45.91 27.691L40.2046 27.691C39.5675 27.6935 39.1714 26.9823 39.4887 26.4113Z" fill="black"></path>
+                                                        <path d="M35.5943 35.8042L38.44 40.902L42.1771 38.671L39.429 33.7481C39.1303 33.2143 38.5794 32.8858 37.9845 32.8868L31.7771 32.8876C31.1801 32.8874 30.6301 33.2168 30.3306 33.7525L27.5758 38.6808L31.3107 40.908L34.1634 35.8047C34.4799 35.2336 35.2743 35.2349 35.5943 35.8042Z" fill="black"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <filter id="filter0_d_171_432" x="0" y="0" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                            <feFlood flood-opacity="0" result="BackgroundImageFix">
+                                                            </feFlood>
+                                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                                                            <feMorphology radius="5" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_171_432"></feMorphology>
+                                                            <feOffset dy="5"></feOffset>
+                                                            <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+                                                            <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                                            <feColorMatrix type="matrix" values="0 0 0 0 0.776471 0 0 0 0 1 0 0 0 0 0 0 0 0 0.15 0">
+                                                            </feColorMatrix>
+                                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_171_432"></feBlend>
+                                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_171_432" result="shape">
+                                                            </feBlend>
+                                                        </filter>
+                                                        <linearGradient id="paint0_linear_171_432" x1="35" y1="5" x2="39.5136" y2="12.7004" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#C6FF00" stop-opacity="0.75"></stop>
+                                                            <stop offset="0.25" stop-color="#C6FF00" stop-opacity="0.25"></stop>
+                                                            <stop offset="0.5" stop-color="#C6FF00" stop-opacity="0">
+                                                            </stop>
+                                                        </linearGradient>
+                                                        <linearGradient id="paint1_linear_171_432" x1="35" y1="55" x2="30.4864" y2="47.2996" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#C6FF00" stop-opacity="0.2"></stop>
+                                                            <stop offset="0.25" stop-color="#C6FF00" stop-opacity="0.1">
+                                                            </stop>
+                                                            <stop offset="0.5" stop-color="#C6FF00" stop-opacity="0">
+                                                            </stop>
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                <span class="text-sm text-white/60">Estimating 1 minute</span>
+                                </div>
+                               
                             </div>
                             <!-- video box-2 -->
+                             <!-- video box-1 -->
                             <div
-                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
+                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px] p-2.5">
                                 <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
+                                    <video controls="" class="object-contain h-full"
                                         controlslist="nodownload noplaybackrate nopictureinpicture"
                                         disablepictureinpicture="">
-                                        <source src="/assets/images/upscale-video.mp4" type="video/mp4">
+                                        <source
+                                            src="https://glima.ai/storage/videos/1745404082_jQLke93XBkFTaOOKg7Hcz1Yn6_output.mp4"
+                                            type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
+                                <div class="z-40 absolute top-2.5 right-2.5 flex flex-col w-fit gap-2.5">
+                                    <button
+                                        class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px]  hover:bg-[#aad70e]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 16 16" fill="none">
+                                            <path
+                                                d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
+                                                stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
+                                                stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                    <button
+                                        class="relative w-[42px] h-[42px] flex justify-center items-center bg-black rounded-[10px] text-white hover:text-[#C6FF00] transition-all duration-500 "
+                                        data-modal-target="image-modal">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8 3.09779C8 3.09779 4.03374 2.74194 3.38783 3.38785C2.74191 4.03375 3.09783 8 3.09783 8"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M8 20.9022C8 20.9022 4.03374 21.2581 3.38783 20.6122C2.74191 19.9662 3.09783 16 3.09783 16"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M16 3.09779C16 3.09779 19.9663 2.74194 20.6122 3.38785C21.2581 4.03375 20.9022 8 20.9022 8"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M16 20.9022C16 20.9022 19.9663 21.2581 20.6122 20.6122C21.2581 19.9662 20.9022 16 20.9022 16"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M14.002 9.99313L20.2431 3.77344" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.99792 14.0039L3.64062 20.3822" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.99732 10.0029L3.8457 3.85938" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M13.9805 14.0039L20.5289 20.4998" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
 
-                                <button
-                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <path
-                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </button>
                             </div>
                             <!-- video box-3 -->
                             <div
