@@ -4039,6 +4039,10 @@ pre{
   height: 146px;
 }
 
+.h-\[150px\] {
+  height: 150px;
+}
+
 .h-\[152px\] {
   height: 152px;
 }
@@ -4662,6 +4666,10 @@ pre{
 
 .w-2 {
   width: 0.5rem;
+}
+
+.w-20 {
+  width: 5rem;
 }
 
 .w-28 {
@@ -5348,6 +5356,10 @@ pre{
 
 .max-w-\[945px\] {
   max-width: 945px;
+}
+
+.max-w-\[960px\] {
+  max-width: 960px;
 }
 
 .max-w-fit {
@@ -6185,6 +6197,11 @@ pre{
 .border-\[\#222\] {
   --tw-border-opacity: 1;
   border-color: rgb(34 34 34 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#272727\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(39 39 39 / var(--tw-border-opacity, 1));
 }
 
 .border-\[\#282828\] {
@@ -10721,6 +10738,10 @@ textarea{
     margin-top: 1.5rem;
   }
 
+  .md\:mt-\[28px\] {
+    margin-top: 28px;
+  }
+
   .md\:mt-\[39px\] {
     margin-top: 39px;
   }
@@ -10862,6 +10883,10 @@ textarea{
 
   .md\:max-h-\[340px\] {
     max-height: 340px;
+  }
+
+  .md\:max-h-\[450px\] {
+    max-height: 450px;
   }
 
   .md\:max-h-\[520px\] {
@@ -11375,6 +11400,11 @@ textarea{
        object-fit: contain;
   }
 
+  .md\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
   .md\:p-0 {
     padding: 0px;
   }
@@ -11554,6 +11584,10 @@ textarea{
 
   .md\:pt-0 {
     padding-top: 0px;
+  }
+
+  .md\:pt-1 {
+    padding-top: 0.25rem;
   }
 
   .md\:pt-10 {
@@ -12008,6 +12042,10 @@ textarea{
     height: 100vh;
   }
 
+  .lg\:max-h-\[800px\] {
+    max-height: 800px;
+  }
+
   .lg\:max-h-none {
     max-height: none;
   }
@@ -12165,6 +12203,10 @@ textarea{
     max-width: 1200px;
   }
 
+  .lg\:max-w-\[1355px\] {
+    max-width: 1355px;
+  }
+
   .lg\:max-w-\[180px\] {
     max-width: 180px;
   }
@@ -12278,6 +12320,10 @@ textarea{
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-6 {
@@ -12470,6 +12516,11 @@ textarea{
 
   .lg\:bg-transparent {
     background-color: transparent;
+  }
+
+  .lg\:object-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .lg\:p-0 {
@@ -13270,6 +13321,10 @@ textarea{
     max-width: 1340px;
   }
 
+  .\32xl\:max-w-\[1360px\] {
+    max-width: 1360px;
+  }
+
   .\32xl\:max-w-\[1440px\] {
     max-width: 1440px;
   }
@@ -13496,6 +13551,10 @@ textarea{
 .\[\&\:\:-webkit-scrollbar-thumb\]\:bg-\[\#1f1f1f\]::-webkit-scrollbar-thumb {
   --tw-bg-opacity: 1;
   background-color: rgb(31 31 31 / var(--tw-bg-opacity, 1));
+}
+
+.\[\&\:\:-webkit-scrollbar-thumb\]\:bg-\[\#FFFFFF2E\]::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF2E;
 }
 
 .\[\&\:\:-webkit-scrollbar-thumb\]\:bg-white\/20::-webkit-scrollbar-thumb {
