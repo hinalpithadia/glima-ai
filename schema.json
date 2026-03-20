@@ -18,26 +18,25 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Generate Gamer Girl Names",
+  "name": "How to Create Pet Finger Videos with Glima AI",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Select your vibe",
-      "text": "Pick a style, add your game and keywords, then generate your gamer name"
+      "name": "Upload Your Pet Photo",
+      "text": "Upload a clear image or short video of your pet."
     },
     {
       "@type": "HowToStep",
-      "name": "Generate to get result",
-      "text": "Click ‘Generate’ to get a list of unique and catchy gamer girl names tailored to your style and gaming vibe."
+      "name": "Choose Finger Style or Action",
+      "text": "Select how you want the finger interaction to look."
     },
     {
       "@type": "HowToStep",
-      "name": "Pick and Continue",
-      "text": "Browse AI-generated gamer girl names, pick your favorite, and copy it instantly with one click."
+      "name": "Generate & Download",
+      "text": "Click Generate and let AI create the video."
     }
   ]
 }
-
 
 {
   "@context": "https://schema.org",
@@ -45,34 +44,42 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How does the AI generate gamer girl names?",
+      "name": "What is an AI Pet Finger Video Generator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The AI uses advanced language models to create unique and catchy names based on your style, game preferences, and keywords."
+        "text": "An AI Pet Finger Video Generator is a tool that uses artificial intelligence to create fun videos where pets appear to interact with animated fingers in cute or playful ways."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I customize the names?",
+      "name": "Do I need editing skills to use it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! You can select name styles like Cool, Cute, or Badass, enter your favorite games, and add keywords to personalize your name."
+        "text": " No, you don’t need any editing experience. Just upload your pet photo or video, choose a style, and the AI does the rest automatically."
       }
     },
     {
       "@type": "Question",
-      "name": "Are the generated names unique?",
+      "name": "What type of pet photos or videos work best?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Each name is generated dynamically, combining different elements to create fresh, original gamer tags."
+        "text": "Clear images or videos with good lighting and a visible pet face or body work best for realistic and smooth animations."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I use these names professionally?",
+      "name": "How long does it take to generate a video?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely! The names are designed to be memorable and suitable for gaming profiles, streams, and online communities."
+        "text": "Most videos are created in seconds to a few minutes, depending on the length and quality of your upload."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I share the generated videos on social media?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": " Yes! You can download your videos and share them on platforms like Instagram, TikTok, and YouTube."
       }
     }
   ]

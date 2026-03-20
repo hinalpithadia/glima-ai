@@ -21,7 +21,8 @@
         .card.selected .circle-bg {
             opacity: 100 !important;
         }
-         /* Custom thumb styling */
+
+        /* Custom thumb styling */
         input[type="range"]::-webkit-slider-thumb {
             appearance: none;
             width: 12px;
@@ -44,132 +45,141 @@
             background: white;
             cursor: pointer;
         }
-         .interior-select .select-hidden {
-	display: none;
-	visibility: hidden;
-	padding-right: 10px;
-}
 
-.interior-select .select {
-	position: relative;
-	display: inline-block;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	margin-bottom: 0px!important;
-	width: 100%;
-	cursor: pointer;
-	-webkit-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-}
+        .interior-select .select-hidden {
+            display: none;
+            visibility: hidden;
+            padding-right: 10px;
+        }
 
-.interior-select .select-styled {
-	position: relative;
-	display: flex;
-	align-items: center;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	margin-bottom: 0px!important;
-	width: 100%;
-	background: #000;
-	font-size: 14px;
-	color: #fff;
-	padding: 12px 18px;
-	border-radius: 10px;
-	-webkit-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-	font-weight: 500;
-}
+        .interior-select .select {
+            position: relative;
+            display: inline-block;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin-bottom: 0px !important;
+            width: 100%;
+            cursor: pointer;
+            -webkit-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
 
-.dropdown-select .select-styled {
-    background: #0A0A0A;
-}
+        .interior-select .select-styled {
+            position: relative;
+            display: flex;
+            align-items: center;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin-bottom: 0px !important;
+            width: 100%;
+            background: #000;
+            font-size: 14px;
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 10px;
+            -webkit-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            font-weight: 500;
+        }
 
-.interior-select .select-styled:after {
-	    content: "";
-    background: url(./assets/images/select-arrow-white.svg);
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    width: 20px;
-    height: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+        .dropdown-select .select-styled {
+            background: #0A0A0A;
+        }
 
-.interior-select .select-options {
-	display: none;
-	position: absolute;
-	top: 110%;
-	right: 0;
-	left: 0;
-	z-index: 999;
-	margin: 0;
-	padding: 2px;
-	list-style: none;
-    border-radius: 10px;
-	background-color: #000;
-	-webkit-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-    overflow: hidden;
-    max-height: 150px;
-    overflow-y: auto;
-}
-.interior-select .select-options::-webkit-scrollbar-track
-      {
-        background-color: transparent!important;
-          border-left: 8px solid transparent;
-      }
+        .interior-select .select-styled:after {
+            content: "";
+            background: url(./assets/images/select-arrow-white.svg);
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 20px;
+            height: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
-      .interior-select .select-options::-webkit-scrollbar
-      {
-        width: 5px;
-        background-color: transparent!important;
-        border-radius: 6px;
-        
-      }
+        .interior-select .select-options {
+            display: none;
+            position: absolute;
+            top: 110%;
+            right: 0;
+            left: 0;
+            z-index: 999;
+            margin: 0;
+            padding: 2px;
+            list-style: none;
+            border-radius: 10px;
+            background-color: #000;
+            -webkit-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            overflow: hidden;
+            max-height: 150px;
+            overflow-y: auto;
+        }
 
-      .interior-select .select-options::-webkit-scrollbar-thumb
-      {
-        background-color: #1f1f1f!important;
-         border-radius: 6px;
-         padding-right: 10px;
-      }
-  
-.interior-select .select-options li {
-	position: relative;
-	display: block;
-	padding: 12px 18px;
-	font-size: 14px;
-	color: #fff;
-    border-radius: 10px;
-	cursor: pointer;
-	-webkit-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-}
+        .interior-select .select-options::-webkit-scrollbar-track {
+            background-color: transparent !important;
+            border-left: 8px solid transparent;
+        }
 
-.select-options li:hover {
-	background: #0A0A0A;
-}
+        .interior-select .select-options::-webkit-scrollbar {
+            width: 5px;
+            background-color: transparent !important;
+            border-radius: 6px;
 
-.select-options li[rel="hide"] {
-	display: none;
-}
-.sub-tab-buttons li.active{
-    background: #000;
-    color: #C6FF00;
-}
+        }
+
+        .interior-select .select-options::-webkit-scrollbar-thumb {
+            background-color: #1f1f1f !important;
+            border-radius: 6px;
+            padding-right: 10px;
+        }
+
+        .interior-select .select-options li {
+            position: relative;
+            display: block;
+            padding: 12px 18px;
+            font-size: 14px;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            -webkit-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .select-options li:hover {
+            background: #0A0A0A;
+        }
+
+        .select-options li[rel="hide"] {
+            display: none;
+        }
+
+        .sub-tab-buttons li.active {
+            background: #000;
+            color: #C6FF00;
+        }
+
+        .active-tab {
+            background-color: rgba(198, 255, 0, 0.10);
+            color: #C6FF00;
+        }
+
+        .active-tab svg {
+            color: #C6FF00;
+        }
     </style>
 </head>
 
-<body class="md:overflow-hidden">
+<body class="md:overflow-hidden bg-black-0a0a0a">
     <div class="flex flex-col max-md:gap-8 md:flex-row bg-black-0a0a0a">
         <!--navbar-->
         <nav id="navbar"
@@ -872,315 +882,470 @@
             </div>
         </nav>
         <!--SideBar-->
-        <div class="relative flex md:h-full gap-5 md:overflow-hidden pb-0 md:pr-0 pt-0">
-            <aside
-                class="md:fixed relative md:left-0 top-[65px] xl:w-[404px] lg:w-[280px] w-full md:w-[280px] md:h-[calc(100vh-64px)] overflow-y-auto scrollbar-hide z-50 flex justify-between flex-col bg-[#0A0A0A] nav-list md:border-r border-[#222222]">
-                <div class="relative px-3 pt-5">
-                    <div class="w-full  flex flex-col gap-4 pb-12">
-                        <div class="flex items-center gap-3.5">
-                            <h2 class="text-xl font-semibold leading-normal text-white capitalize">AI Avatar Single Text</h2>
-                        </div>
-                        <div class="tabs">
-                    <ul class="tab-buttons flex items-center gap-0 p-1 bg-black rounded-[10px]">
-                        <li
-                            class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 active">
-                            Single Person</li>
-                        <li
-                            class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 ">
-                            Multi Person</li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-panel active">
-                            <div class="w-full  flex flex-col gap-4 pb-12">
-                                <div class="flex flex-col gap-2.5">
-                                    <label class="text-sm leading-[18px] text-white font-medium capitalize">Image</label>
-                                    <div class="transition-all duration-500 outline-none bg-black w-full h-52 resize-none  px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-[10px] relative z-[2] cursor-pointer border border-transparent hover:border-[rgba(198,255,0,0.20)]">
-                                            <label class="flex flex-col items-center justify-center gap-[18px] h-full w-full cursor-pointer">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <path d="M14.9974 16.6667C16.8383 16.6667 18.3307 15.1743 18.3307 13.3333C18.3307 11.4924 16.8383 10 14.9974 10C13.1564 10 11.6641 11.4924 11.6641 13.3333C11.6641 15.1743 13.1564 16.6667 14.9974 16.6667Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M21.6693 3.33325H15.0026C6.66927 3.33325 3.33594 6.66659 3.33594 14.9999V24.9999C3.33594 33.3333 6.66927 36.6666 15.0026 36.6666H25.0026C33.3359 36.6666 36.6693 33.3333 36.6693 24.9999V16.6666" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M26.25 8.33325H35.4167" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-        <path d="M30.8359 12.9167V3.75" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-        <path d="M4.45312 31.5834L12.6698 26.0667C13.9865 25.1834 15.8865 25.2833 17.0698 26.3L17.6198 26.7833C18.9198 27.9 21.0198 27.9 22.3198 26.7833L29.2531 20.8333C30.5531 19.7167 32.6531 19.7167 33.9531 20.8333L36.6698 23.1667" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-
-
-                                                <div class="block">
-                                                    <p class="text-base leading-5 text-center text-white mb-1.5">Upload Image Here
-                                                    </p>
-                                                    <p class="text-xs leading-[14px] text-center text-[#797979]">Drop your image to add in to the editor
-                                                    </p>
-
-                                                </div>
-                                                <input type="file" class="hidden">
-                                            </label>
-                                        </div>
-                                </div>
-                                <div class="tabs sub-tabs">
-                                    <ul class="tab-buttons sub-tab-buttons flex items-center gap-0 p-1 bg-[#111] rounded-[10px]">
-                                        <li
-                                            class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 active">
-                                            Text</li>
-                                        <li
-                                            class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 ">
-                                            Audio</li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-panel active">
-                                           <div class="flex flex-col gap-4">
-                                                <div class="relative w-full flex flex-col gap-2.5 ">
-                                                    <label class="text-sm  font-medium text-white">Input text
-                                                    </label>
-                                                        <textarea name="text-prompt" id="text-prompt" placeholder="Write here.."
-                                                            class="resize-none w-full h-auto min-h-[80px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
-                                                </div>
-                                                 <div class="relative w-full flex flex-col gap-2.5 ">
-                                                    <label class="text-sm  font-medium text-white">Voice
-                                                    </label>
-                                                <button
-                                                 class="dropdown-btn flex justify-between items-center py-3 px-[18px] rounded-[10px] bg-black">
-                                                <div class="flex items-center gap-2.5 flex-1">
-                                                                                <div class="relative size-5 shrink-0 overflow-hidden rounded ">
-                                                                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                        <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
-                                                                                        <path d="M11 14.6663V7.33301" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M16.5 12.8337V9.16699" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M5.5 12.8337V9.16699" stroke="white" stroke-linecap="round"></path>
-                                                                                    </svg>
-                                                                                </div>
-                                                                                <span class="text-sm text-white leading-[22px]">Bill
-                                                                                </span>
-                                                                            </div>
-                                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                <path d="M7.42188 16.5984L12.8552 11.1651C13.4969 10.5234 13.4969 9.47344 12.8552 8.83177L7.42188 3.39844" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                                            </svg>
-                                                </button>
-                                                </div>
-                                                 <div class="flex flex-col gap-2.5">
-                            <label class="text-sm  font-medium text-white">Video Resolution
-</label>
-                        <!--custom select-->
-                        <div class="interior-select"> 
-                        <select id="sources" name="videoresolution">
-                            
-                                <option value="480p" selected>480p</option>
-                                <option value="720p" >720p</option>
-                               
-                           </select>
-                         </div>  
-                         </div>
-                                                <div class="relative w-full flex flex-col gap-2.5 ">
-                                                    <label class="text-sm  font-medium text-white">Prompt
-                                                    </label>
-                                                        <textarea name="text-prompt" id="text-prompt" placeholder="Describe your image here"
-                                                            class="resize-none w-full h-auto min-h-[110px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                         <div class="tab-panel relative">
-                                            <div class="flex flex-col gap-4">
-                                                <div class="flex flex-col gap-2.5">
-                                <label class="text-sm leading-[18px] text-white font-medium capitalize">Audio File</label>
-                                <div class="bg-black w-full px-[18px] py-3 rounded-[10px] border border-transparent 
-                                hover:border-[rgba(198,255,0,0.20)] transition-all duration-500">
-                                    <div class="flex items-center text-sm text-white/50">
-
-                                        <!-- Paste text (NOT input placeholder) -->
-                                        <span class="text-white/50">Paste here or</span>
-
-                                        <!-- No space between "or" and Upload -->
-                                        <label for="uploadInput" class="text-[#C6FF00] cursor-pointer ml-1.5">
-                                            Upload Audio File
-                                        </label>
-
-                                        <!-- Hidden file selector -->
-                                        <input id="uploadInput" type="file" class="hidden" accept="video/*">
-                                    </div>
-                                </div>
+        <div class="scrollspy-scroll flex lg:flex-row flex-col w-full">
+            <!--SideBar-->
+            <div id="create-section" class="relative flex lg:h-full gap-5 lg:overflow-hidden ">
+                <aside class="relative w-full overflow-visible
+lg:fixed lg:left-0 lg:top-[65px]
+lg:w-[280px] 2xl:w-[404px] xl:w-[380px]
+lg:h-[calc(100vh-64px)] overflow-y-auto
+lg:z-50 lg:pt-0 pt-[65px]
+flex flex-col justify-between
+bg-[#151515]
+nav-list
+lg:border-r border-black
+scrollbar-hide h-screen pb-[130px] md:pb-0">
+                    <div class="relative px-3 pt-5">
+                        <div class="w-full  flex flex-col gap-4 pb-12">
+                            <div class="flex items-center gap-3.5">
+                                <h2 class="text-xl font-semibold leading-normal text-white capitalize">AI Avatar Single
+                                    Text
+                                </h2>
                             </div>
-                                                <div class="relative w-full flex flex-col gap-2.5 ">
-                                                    <label class="text-sm  font-medium text-white">Prompt
+                            <div class="tabs">
+                                <ul class="tab-buttons flex items-center gap-0 p-1 bg-black rounded-[10px]">
+                                    <li
+                                        class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 active">
+                                        Single Person</li>
+                                    <li
+                                        class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 ">
+                                        Multi Person</li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-panel active">
+                                        <div class="w-full  flex flex-col gap-4 pb-12">
+                                            <div class="flex flex-col gap-2.5">
+                                                <label
+                                                    class="text-sm leading-[18px] text-white font-medium capitalize">Image</label>
+                                                <div
+                                                    class="transition-all duration-500 outline-none bg-black w-full h-52 resize-none  px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-[10px] relative z-[2] cursor-pointer border border-transparent hover:border-[rgba(198,255,0,0.20)]">
+                                                    <label
+                                                        class="flex flex-col items-center justify-center gap-3.5 h-full w-full cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                            viewBox="0 0 40 40" fill="none">
+                                                            <path
+                                                                d="M14.9974 16.6667C16.8383 16.6667 18.3307 15.1743 18.3307 13.3333C18.3307 11.4924 16.8383 10 14.9974 10C13.1564 10 11.6641 11.4924 11.6641 13.3333C11.6641 15.1743 13.1564 16.6667 14.9974 16.6667Z"
+                                                                stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path
+                                                                d="M21.6693 3.33325H15.0026C6.66927 3.33325 3.33594 6.66659 3.33594 14.9999V24.9999C3.33594 33.3333 6.66927 36.6666 15.0026 36.6666H25.0026C33.3359 36.6666 36.6693 33.3333 36.6693 24.9999V16.6666"
+                                                                stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path d="M26.25 8.33325H35.4167" stroke="white"
+                                                                stroke-width="1.6" stroke-linecap="round" />
+                                                            <path d="M30.8359 12.9167V3.75" stroke="white"
+                                                                stroke-width="1.6" stroke-linecap="round" />
+                                                            <path
+                                                                d="M4.45312 31.5834L12.6698 26.0667C13.9865 25.1834 15.8865 25.2833 17.0698 26.3L17.6198 26.7833C18.9198 27.9 21.0198 27.9 22.3198 26.7833L29.2531 20.8333C30.5531 19.7167 32.6531 19.7167 33.9531 20.8333L36.6698 23.1667"
+                                                                stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+                                                        <div class="block">
+                                                            <p
+                                                                class="text-sm leading-[18px] font-normal text-center text-white mb-1">
+                                                                Upload Image Here
+                                                            </p>
+                                                            <p
+                                                                class="text-xs leading-[14px] text-center text-[#797979]">
+                                                                Drop your image to add in to the editor
+                                                            </p>
+
+                                                        </div>
+                                                        <input type="file" class="hidden">
                                                     </label>
-                                                        <textarea name="text-prompt" id="text-prompt" placeholder="Describe your image here"
-                                                            class="resize-none w-full h-auto min-h-[110px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
                                                 </div>
-                                                 
+                                            </div>
+                                            <div class="tabs sub-tabs">
+                                                <ul
+                                                    class="tab-buttons sub-tab-buttons flex items-center gap-0 p-1 bg-[#111] rounded-[10px]">
+                                                    <li
+                                                        class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 active">
+                                                        Text</li>
+                                                    <li
+                                                        class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 ">
+                                                        Audio</li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-panel active">
+                                                        <div class="flex flex-col gap-4">
+                                                            <div class="relative w-full flex flex-col gap-2.5 ">
+                                                                <label class="text-sm  font-medium text-white">Input
+                                                                    text
+                                                                </label>
+                                                                <textarea name="text-prompt" id="text-prompt"
+                                                                    placeholder="Write here.."
+                                                                    class="resize-none w-full h-auto min-h-[80px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
+                                                            </div>
+                                                            <div class="relative w-full flex flex-col gap-2.5 ">
+                                                                <label class="text-sm  font-medium text-white">Voice
+                                                                </label>
+                                                                <button
+                                                                    class="dropdown-btn flex justify-between items-center py-3 px-[18px] rounded-[10px] bg-black">
+                                                                    <div class="flex items-center gap-2.5 flex-1">
+                                                                        <div
+                                                                            class="relative size-5 shrink-0 overflow-hidden rounded ">
+                                                                            <svg width="22" height="22"
+                                                                                viewBox="0 0 22 22" fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path
+                                                                                    d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                                                                                    stroke="white"></path>
+                                                                                <path d="M11 14.6663V7.33301"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round"></path>
+                                                                                <path d="M13.75 13.75V8.25"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round"></path>
+                                                                                <path d="M8.25 13.75V8.25"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round"></path>
+                                                                                <path d="M16.5 12.8337V9.16699"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round">
+                                                                                </path>
+                                                                                <path d="M5.5 12.8337V9.16699"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round">
+                                                                                </path>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <span
+                                                                            class="text-sm text-white leading-[22px]">Bill
+                                                                        </span>
+                                                                    </div>
+                                                                    <svg width="20" height="20" viewBox="0 0 20 20"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M7.42188 16.5984L12.8552 11.1651C13.4969 10.5234 13.4969 9.47344 12.8552 8.83177L7.42188 3.39844"
+                                                                            stroke="white" stroke-width="1.5"
+                                                                            stroke-miterlimit="10"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="flex flex-col gap-2.5">
+                                                                <label class="text-sm  font-medium text-white">Video
+                                                                    Resolution
+                                                                </label>
+                                                                <!--custom select-->
+                                                                <div class="interior-select">
+                                                                    <select id="sources" name="videoresolution">
+
+                                                                        <option value="480p" selected>480p</option>
+                                                                        <option value="720p">720p</option>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="relative w-full flex flex-col gap-2.5 ">
+                                                                <label class="text-sm  font-medium text-white">Prompt
+                                                                </label>
+                                                                <textarea name="text-prompt" id="text-prompt"
+                                                                    placeholder="Describe your image here"
+                                                                    class="resize-none w-full h-auto min-h-[110px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-panel relative">
+                                                        <div class="flex flex-col gap-4">
+                                                            <div class="flex flex-col gap-2.5">
+                                                                <label
+                                                                    class="text-sm leading-[18px] text-white font-medium capitalize">Audio
+                                                                    File</label>
+                                                                <div class="bg-black w-full px-[18px] py-3 rounded-[10px] border border-transparent 
+                                hover:border-[rgba(198,255,0,0.20)] transition-all duration-500">
+                                                                    <div
+                                                                        class="flex items-center text-sm text-white/50">
+
+                                                                        <!-- Paste text (NOT input placeholder) -->
+                                                                        <span class="text-white/50">Paste here or</span>
+
+                                                                        <!-- No space between "or" and Upload -->
+                                                                        <label for="uploadInput"
+                                                                            class="text-[#C6FF00] cursor-pointer ml-1.5">
+                                                                            Upload Audio File
+                                                                        </label>
+
+                                                                        <!-- Hidden file selector -->
+                                                                        <input id="uploadInput" type="file"
+                                                                            class="hidden" accept="video/*">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="relative w-full flex flex-col gap-2.5 ">
+                                                                <label class="text-sm  font-medium text-white">Prompt
+                                                                </label>
+                                                                <textarea name="text-prompt" id="text-prompt"
+                                                                    placeholder="Describe your image here"
+                                                                    class="resize-none w-full h-auto min-h-[110px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-panel relative">
-                             <div class="w-full  flex flex-col gap-4 pb-12">
-                                <div class="flex flex-col gap-2.5">
-                                    <label class="text-sm leading-[18px] text-white font-medium capitalize">Image</label>
-                                    <div class="transition-all duration-500 outline-none bg-black w-full h-52 resize-none  px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-[10px] relative z-[2] cursor-pointer border border-transparent hover:border-[rgba(198,255,0,0.20)]">
-                                            <label class="flex flex-col items-center justify-center gap-[18px] h-full w-full cursor-pointer">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <path d="M14.9974 16.6667C16.8383 16.6667 18.3307 15.1743 18.3307 13.3333C18.3307 11.4924 16.8383 10 14.9974 10C13.1564 10 11.6641 11.4924 11.6641 13.3333C11.6641 15.1743 13.1564 16.6667 14.9974 16.6667Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M21.6693 3.33325H15.0026C6.66927 3.33325 3.33594 6.66659 3.33594 14.9999V24.9999C3.33594 33.3333 6.66927 36.6666 15.0026 36.6666H25.0026C33.3359 36.6666 36.6693 33.3333 36.6693 24.9999V16.6666" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M26.25 8.33325H35.4167" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-        <path d="M30.8359 12.9167V3.75" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-        <path d="M4.45312 31.5834L12.6698 26.0667C13.9865 25.1834 15.8865 25.2833 17.0698 26.3L17.6198 26.7833C18.9198 27.9 21.0198 27.9 22.3198 26.7833L29.2531 20.8333C30.5531 19.7167 32.6531 19.7167 33.9531 20.8333L36.6698 23.1667" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+                                    <div class="tab-panel relative">
+                                        <div class="w-full  flex flex-col gap-4 pb-12">
+                                            <div class="flex flex-col gap-2.5">
+                                                <label
+                                                    class="text-sm leading-[18px] text-white font-medium capitalize">Image</label>
+                                                <div
+                                                    class="transition-all duration-500 outline-none bg-black w-full h-52 resize-none  px-3.5 text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-[10px] relative z-[2] cursor-pointer border border-transparent hover:border-[rgba(198,255,0,0.20)]">
+                                                    <label
+                                                        class="flex flex-col items-center justify-center gap-3.5 h-full w-full cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                            viewBox="0 0 40 40" fill="none">
+                                                            <path
+                                                                d="M14.9974 16.6667C16.8383 16.6667 18.3307 15.1743 18.3307 13.3333C18.3307 11.4924 16.8383 10 14.9974 10C13.1564 10 11.6641 11.4924 11.6641 13.3333C11.6641 15.1743 13.1564 16.6667 14.9974 16.6667Z"
+                                                                stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path
+                                                                d="M21.6693 3.33325H15.0026C6.66927 3.33325 3.33594 6.66659 3.33594 14.9999V24.9999C3.33594 33.3333 6.66927 36.6666 15.0026 36.6666H25.0026C33.3359 36.6666 36.6693 33.3333 36.6693 24.9999V16.6666"
+                                                                stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                            <path d="M26.25 8.33325H35.4167" stroke="white"
+                                                                stroke-width="1.6" stroke-linecap="round" />
+                                                            <path d="M30.8359 12.9167V3.75" stroke="white"
+                                                                stroke-width="1.6" stroke-linecap="round" />
+                                                            <path
+                                                                d="M4.45312 31.5834L12.6698 26.0667C13.9865 25.1834 15.8865 25.2833 17.0698 26.3L17.6198 26.7833C18.9198 27.9 21.0198 27.9 22.3198 26.7833L29.2531 20.8333C30.5531 19.7167 32.6531 19.7167 33.9531 20.8333L36.6698 23.1667"
+                                                                stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
 
 
-                                                <div class="block">
-                                                    <p class="text-base leading-5 text-center text-white mb-1.5">Upload Image Here
-                                                    </p>
-                                                    <p class="text-xs leading-[14px] text-center text-[#797979]">Drop your image to add in to the editor
-                                                    </p>
+                                                        <div class="block">
+                                                            <p
+                                                                class="text-sm leading-[18px] font-normal text-center text-white mb-1">
+                                                                Upload Image Here
+                                                            </p>
+                                                            <p
+                                                                class="text-xs leading-[14px] text-center text-[#797979]">
+                                                                Drop your image to add in to the editor
+                                                            </p>
 
-                                                </div>
-                                                <input type="file" class="hidden">
-                                            </label>
-                                        </div>
-                                </div>
-                                <div class="tabs sub-tabs">
-                                    <ul class="tab-buttons sub-tab-buttons flex items-center gap-0 p-1 bg-[#111] rounded-[10px]">
-                                        <li
-                                            class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 active">
-                                            Text</li>
-                                        <li
-                                            class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 ">
-                                            Audio</li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-panel active">
-                                           <div class="flex flex-col gap-4">
-                                                <div class="relative w-full flex flex-col gap-2.5 ">
-                                                    <label class="text-sm  font-medium text-white">First Input text
+                                                        </div>
+                                                        <input type="file" class="hidden">
                                                     </label>
-                                                        <textarea name="text-prompt" id="text-prompt" placeholder="Write here.."
-                                                            class="resize-none w-full h-auto min-h-[80px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
                                                 </div>
-                                                 <div class="relative w-full flex flex-col gap-2.5 ">
-                                                    <label class="text-sm  font-medium text-white">Second Input text
-                                                    </label>
-                                                        <textarea name="text-prompt" id="text-prompt" placeholder="Write here.."
-                                                            class="resize-none w-full h-auto min-h-[80px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
-                                                </div>
-                                                 <div class="relative w-full flex flex-col gap-2.5 ">
-                                                    <label class="text-sm  font-medium text-white">Voice 1
-                                                    </label>
-                                                <button
-                                                 class="dropdown-btn flex justify-between items-center py-3 px-[18px] rounded-[10px] bg-black">
-                                                <div class="flex items-center gap-2.5 flex-1">
-                                                                                <div class="relative size-5 shrink-0 overflow-hidden rounded ">
-                                                                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                        <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
-                                                                                        <path d="M11 14.6663V7.33301" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M16.5 12.8337V9.16699" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M5.5 12.8337V9.16699" stroke="white" stroke-linecap="round"></path>
-                                                                                    </svg>
-                                                                                </div>
-                                                                                <span class="text-sm text-white leading-[22px]">Bill
-                                                                                </span>
-                                                                            </div>
-                                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                <path d="M7.42188 16.5984L12.8552 11.1651C13.4969 10.5234 13.4969 9.47344 12.8552 8.83177L7.42188 3.39844" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                                            </svg>
-                                                </button>
-                                                </div>
-                                                 <div class="relative w-full flex flex-col gap-2.5 ">
-                                                    <label class="text-sm  font-medium text-white">Voice 2
-                                                    </label>
-                                                <button
-                                                 class="dropdown-btn flex justify-between items-center py-3 px-[18px] rounded-[10px] bg-black">
-                                                <div class="flex items-center gap-2.5 flex-1">
-                                                                                <div class="relative size-5 shrink-0 overflow-hidden rounded ">
-                                                                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                        <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
-                                                                                        <path d="M11 14.6663V7.33301" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M16.5 12.8337V9.16699" stroke="white" stroke-linecap="round"></path>
-                                                                                        <path d="M5.5 12.8337V9.16699" stroke="white" stroke-linecap="round"></path>
-                                                                                    </svg>
-                                                                                </div>
-                                                                                <span class="text-sm text-white leading-[22px]">John
-                                                                                </span>
-                                                                            </div>
-                                                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                <path d="M7.42188 16.5984L12.8552 11.1651C13.4969 10.5234 13.4969 9.47344 12.8552 8.83177L7.42188 3.39844" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                                            </svg>
-                                                </button>
-                                                </div>
-                                                <div class="flex flex-col gap-2.5">
-                            <label class="text-sm  font-medium text-white">Video Resolution
-</label>
-                        <!--custom select-->
-                        <div class="interior-select"> 
-                        <select id="sources" name="videoresolution">
-                            
-                                <option value="480p" selected>480p</option>
-                                <option value="720p" >720p</option>
-                               
-                           </select>
-                         </div>  
-                         </div>
-                                                <div class="relative w-full flex flex-col gap-2.5 ">
-                                                    <label class="text-sm  font-medium text-white">Prompt
-                                                    </label>
-                                                        <textarea name="text-prompt" id="text-prompt" placeholder="Describe your image here"
-                                                            class="resize-none w-full h-auto min-h-[80px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
-                                                </div>
-
                                             </div>
-                                        </div>
-                                         <div class="tab-panel relative">
-                                            <div class="flex flex-col gap-4">
-                                                <div class="flex flex-col gap-2.5">
-                                <label class="text-sm leading-[18px] text-white font-medium capitalize">First Audio File</label>
-                                <div class="bg-black w-full px-[18px] py-3 rounded-[10px] border border-transparent 
+                                            <div class="tabs sub-tabs">
+                                                <ul
+                                                    class="tab-buttons sub-tab-buttons flex items-center gap-0 p-1 bg-[#111] rounded-[10px]">
+                                                    <li
+                                                        class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 active">
+                                                        Text</li>
+                                                    <li
+                                                        class="w-full h-[40px] flex items-center justify-center text-center py-2 px-3 rounded-[6px] font-inter font-medium text-sm leading-4 ">
+                                                        Audio</li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-panel active">
+                                                        <div class="flex flex-col gap-4">
+                                                            <div class="relative w-full flex flex-col gap-2.5 ">
+                                                                <label class="text-sm  font-medium text-white">First
+                                                                    Input
+                                                                    text
+                                                                </label>
+                                                                <textarea name="text-prompt" id="text-prompt"
+                                                                    placeholder="Write here.."
+                                                                    class="resize-none w-full h-auto min-h-[80px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
+                                                            </div>
+                                                            <div class="relative w-full flex flex-col gap-2.5 ">
+                                                                <label class="text-sm  font-medium text-white">Second
+                                                                    Input
+                                                                    text
+                                                                </label>
+                                                                <textarea name="text-prompt" id="text-prompt"
+                                                                    placeholder="Write here.."
+                                                                    class="resize-none w-full h-auto min-h-[80px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
+                                                            </div>
+                                                            <div class="relative w-full flex flex-col gap-2.5 ">
+                                                                <label class="text-sm  font-medium text-white">Voice 1
+                                                                </label>
+                                                                <button
+                                                                    class="dropdown-btn flex justify-between items-center py-3 px-[18px] rounded-[10px] bg-black">
+                                                                    <div class="flex items-center gap-2.5 flex-1">
+                                                                        <div
+                                                                            class="relative size-5 shrink-0 overflow-hidden rounded ">
+                                                                            <svg width="22" height="22"
+                                                                                viewBox="0 0 22 22" fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path
+                                                                                    d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                                                                                    stroke="white"></path>
+                                                                                <path d="M11 14.6663V7.33301"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round"></path>
+                                                                                <path d="M13.75 13.75V8.25"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round"></path>
+                                                                                <path d="M8.25 13.75V8.25"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round"></path>
+                                                                                <path d="M16.5 12.8337V9.16699"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round">
+                                                                                </path>
+                                                                                <path d="M5.5 12.8337V9.16699"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round">
+                                                                                </path>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <span
+                                                                            class="text-sm text-white leading-[22px]">Bill
+                                                                        </span>
+                                                                    </div>
+                                                                    <svg width="20" height="20" viewBox="0 0 20 20"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M7.42188 16.5984L12.8552 11.1651C13.4969 10.5234 13.4969 9.47344 12.8552 8.83177L7.42188 3.39844"
+                                                                            stroke="white" stroke-width="1.5"
+                                                                            stroke-miterlimit="10"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="relative w-full flex flex-col gap-2.5 ">
+                                                                <label class="text-sm  font-medium text-white">Voice 2
+                                                                </label>
+                                                                <button
+                                                                    class="dropdown-btn flex justify-between items-center py-3 px-[18px] rounded-[10px] bg-black">
+                                                                    <div class="flex items-center gap-2.5 flex-1">
+                                                                        <div
+                                                                            class="relative size-5 shrink-0 overflow-hidden rounded ">
+                                                                            <svg width="22" height="22"
+                                                                                viewBox="0 0 22 22" fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path
+                                                                                    d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                                                                                    stroke="white"></path>
+                                                                                <path d="M11 14.6663V7.33301"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round"></path>
+                                                                                <path d="M13.75 13.75V8.25"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round"></path>
+                                                                                <path d="M8.25 13.75V8.25"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round"></path>
+                                                                                <path d="M16.5 12.8337V9.16699"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round">
+                                                                                </path>
+                                                                                <path d="M5.5 12.8337V9.16699"
+                                                                                    stroke="white"
+                                                                                    stroke-linecap="round">
+                                                                                </path>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <span
+                                                                            class="text-sm text-white leading-[22px]">John
+                                                                        </span>
+                                                                    </div>
+                                                                    <svg width="20" height="20" viewBox="0 0 20 20"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M7.42188 16.5984L12.8552 11.1651C13.4969 10.5234 13.4969 9.47344 12.8552 8.83177L7.42188 3.39844"
+                                                                            stroke="white" stroke-width="1.5"
+                                                                            stroke-miterlimit="10"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"></path>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <div class="flex flex-col gap-2.5">
+                                                                <label class="text-sm  font-medium text-white">Video
+                                                                    Resolution
+                                                                </label>
+                                                                <!--custom select-->
+                                                                <div class="interior-select">
+                                                                    <select id="sources" name="videoresolution">
+
+                                                                        <option value="480p" selected>480p</option>
+                                                                        <option value="720p">720p</option>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="relative w-full flex flex-col gap-2.5 ">
+                                                                <label class="text-sm  font-medium text-white">Prompt
+                                                                </label>
+                                                                <textarea name="text-prompt" id="text-prompt"
+                                                                    placeholder="Describe your image here"
+                                                                    class="resize-none w-full h-auto min-h-[80px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-panel relative">
+                                                        <div class="flex flex-col gap-4">
+                                                            <div class="flex flex-col gap-2.5">
+                                                                <label
+                                                                    class="text-sm leading-[18px] text-white font-medium capitalize">First
+                                                                    Audio File</label>
+                                                                <div class="bg-black w-full px-[18px] py-3 rounded-[10px] border border-transparent 
                                 hover:border-[rgba(198,255,0,0.20)] transition-all duration-500">
-                                    <div class="flex items-center text-sm text-white/50">
+                                                                    <div
+                                                                        class="flex items-center text-sm text-white/50">
 
-                                        <!-- Paste text (NOT input placeholder) -->
-                                        <span class="text-white/50">Paste here or</span>
+                                                                        <!-- Paste text (NOT input placeholder) -->
+                                                                        <span class="text-white/50">Paste here or</span>
 
-                                        <!-- No space between "or" and Upload -->
-                                        <label for="uploadInput" class="text-[#C6FF00] cursor-pointer ml-1.5">
-                                            Upload Audio File
-                                        </label>
+                                                                        <!-- No space between "or" and Upload -->
+                                                                        <label for="uploadInput"
+                                                                            class="text-[#C6FF00] cursor-pointer ml-1.5">
+                                                                            Upload Audio File
+                                                                        </label>
 
-                                        <!-- Hidden file selector -->
-                                        <input id="uploadInput" type="file" class="hidden" accept="video/*">
-                                    </div>
-                                </div>
-                                                 </div>
-                                                 <div class="flex flex-col gap-2.5">
-                                <label class="text-sm leading-[18px] text-white font-medium capitalize">Second Audio File</label>
-                                <div class="bg-black w-full px-[18px] py-3 rounded-[10px] border border-transparent 
+                                                                        <!-- Hidden file selector -->
+                                                                        <input id="uploadInput" type="file"
+                                                                            class="hidden" accept="video/*">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex flex-col gap-2.5">
+                                                                <label
+                                                                    class="text-sm leading-[18px] text-white font-medium capitalize">Second
+                                                                    Audio File</label>
+                                                                <div class="bg-black w-full px-[18px] py-3 rounded-[10px] border border-transparent 
                                 hover:border-[rgba(198,255,0,0.20)] transition-all duration-500">
-                                    <div class="flex items-center text-sm text-white/50">
+                                                                    <div
+                                                                        class="flex items-center text-sm text-white/50">
 
-                                        <!-- Paste text (NOT input placeholder) -->
-                                        <span class="text-white/50">Paste here or</span>
+                                                                        <!-- Paste text (NOT input placeholder) -->
+                                                                        <span class="text-white/50">Paste here or</span>
 
-                                        <!-- No space between "or" and Upload -->
-                                        <label for="uploadInput" class="text-[#C6FF00] cursor-pointer ml-1.5">
-                                            Upload Audio File
-                                        </label>
+                                                                        <!-- No space between "or" and Upload -->
+                                                                        <label for="uploadInput"
+                                                                            class="text-[#C6FF00] cursor-pointer ml-1.5">
+                                                                            Upload Audio File
+                                                                        </label>
 
-                                        <!-- Hidden file selector -->
-                                        <input id="uploadInput" type="file" class="hidden" accept="video/*">
-                                    </div>
-                                </div>
-                                                 </div>
-                                                <div class="relative w-full flex flex-col gap-2.5 ">
-                                                    <label class="text-sm  font-medium text-white">Prompt
-                                                    </label>
-                                                        <textarea name="text-prompt" id="text-prompt" placeholder="Describe your image here"
-                                                            class="resize-none w-full h-auto min-h-[110px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
+                                                                        <!-- Hidden file selector -->
+                                                                        <input id="uploadInput" type="file"
+                                                                            class="hidden" accept="video/*">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="relative w-full flex flex-col gap-2.5 ">
+                                                                <label class="text-sm  font-medium text-white">Prompt
+                                                                </label>
+                                                                <textarea name="text-prompt" id="text-prompt"
+                                                                    placeholder="Describe your image here"
+                                                                    class="resize-none w-full h-auto min-h-[110px] bg-black rounded-[10px] py-[18px] px-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white focus:outline-0 transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                 
                                             </div>
                                         </div>
                                     </div>
@@ -1188,214 +1353,330 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                        
-                    </div>
-                </div>
-                <!-- The button should have position absolute, bottom 0 to stick to the bottom -->
-                <div class="bg-[#0A0A0A] border-t border-[#222222] md:sticky relative bottom-0 w-full left-0 right-0 p-3">
-                    <div class="flex items-center justify-between gap-2 mx-auto p-1 bg-black rounded-[10px]">
-                        <div class="flex items-center gap-2 w-fit lg:pl-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
-                                fill="none">
-                                <g clip-path="url(#clip0_5669_2017)">
-                                    <path
-                                        d="M8.99801 17.996C13.9675 17.996 17.996 13.9675 17.996 8.99801C17.996 4.02855 13.9675 0 8.99801 0C4.02855 0 0 4.02855 0 8.99801C0 13.9675 4.02855 17.996 8.99801 17.996Z"
-                                        fill="#C6FF00" />
-                                    <path opacity="0.2"
-                                        d="M4.02035 9.71413L1.91485 3.44531C1.28718 4.24381 0.794572 5.1456 0.464844 6.12684L5.3631 17.2343C5.97091 17.5045 6.61448 17.7071 7.28585 17.8382L4.02035 9.71413Z"
-                                        fill="white" />
-                                    <path
-                                        d="M6.47158 4.26327L6.85295 3.81436L5.60952 0.664062C5.37116 0.759406 5.14075 0.866667 4.91431 0.981873L6.47158 4.26327Z"
-                                        fill="#E5FF8C" />
-                                    <path opacity="0.2"
-                                        d="M13.0461 5.5883L16.7765 13.5336C16.9949 13.1601 17.1856 12.7668 17.3525 12.3616L11.3618 0.316616C10.9486 0.205382 10.5275 0.121957 10.0945 0.0703125L13.0461 5.5883Z"
-                                        fill="white" />
-                                    <path
-                                        d="M14.6449 14.827C17.6603 11.8116 17.6603 6.92276 14.6449 3.90741C11.6296 0.892064 6.74075 0.892065 3.7254 3.90741C0.710049 6.92276 0.710049 11.8116 3.7254 14.827C6.74075 17.8423 11.6296 17.8423 14.6449 14.827Z"
-                                        fill="white" />
-                                    <path
-                                        d="M14.4773 14.4654C17.5088 11.434 17.5088 6.51911 14.4773 3.4877C11.4459 0.45628 6.53103 0.456279 3.49961 3.4877C0.468191 6.51911 0.468191 11.434 3.49961 14.4654C6.53103 17.4968 11.4459 17.4968 14.4773 14.4654Z"
-                                        fill="#9BC30F" />
-                                    <path opacity="0.3"
-                                        d="M15.563 5C16.1042 6.03178 16.4074 7.19813 16.4074 8.43178C16.4074 12.6396 12.8616 16.049 8.48521 16.049C5.80248 16.049 3.43235 14.7705 2 12.8101C3.30637 15.2953 5.98444 17 9.07775 17C13.4541 17 17 13.5907 17 9.3828C17.0046 7.74991 16.4728 6.23813 15.563 5Z"
-                                        fill="#C1F702" />
-                                    <path
-                                        d="M1.1963 8.9191C1.1963 4.70337 4.83977 1.28315 9.33067 1.28315C12.0884 1.28315 14.5302 2.57303 16 4.54607C14.5589 2.41124 12.0214 1 9.12959 1C4.63868 1 1 4.41573 1 8.63146C1 10.2584 1.54102 11.764 2.46505 13C1.66071 11.8225 1.1963 10.4202 1.1963 8.9191Z"
-                                        fill="white" />
-                                    <path
-                                        d="M8.53107 4.26725C8.69215 3.83194 9.30785 3.83194 9.46893 4.26725L10.5408 7.16383C10.5914 7.30069 10.6993 7.4086 10.8362 7.45924L13.7327 8.53107C14.1681 8.69215 14.1681 9.30785 13.7327 9.46893L10.8362 10.5408C10.6993 10.5914 10.5914 10.6993 10.5408 10.8362L9.46893 13.7327C9.30785 14.1681 8.69215 14.1681 8.53107 13.7327L7.45924 10.8362C7.4086 10.6993 7.30069 10.5914 7.16383 10.5408L4.26725 9.46893C3.83194 9.30785 3.83194 8.69215 4.26725 8.53107L7.16383 7.45924C7.30069 7.4086 7.4086 7.30069 7.45924 7.16383L8.53107 4.26725Z"
-                                        fill="#C6FF00" stroke="url(#paint0_linear_5669_2017)" stroke-width="0.1" />
-                                </g>
-                                <defs>
-                                    <linearGradient id="paint0_linear_5669_2017" x1="9" y1="3" x2="9" y2="15"
-                                        gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="white" />
-                                        <stop offset="0.480769" stop-color="white" stop-opacity="0" />
-                                        <stop offset="1" stop-color="white" />
-                                    </linearGradient>
-                                    <clipPath id="clip0_5669_2017">
-                                        <rect width="18" height="18" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <span class="text-sm font-medium leading-[18px] text-white">12 Credit</span>
-                        </div>
+                    <!--mobile tabs-->
+                    <div
+                        class="backdrop-blur-xl lg:sticky hidden lg:block lg:bottom-0 w-full left-0 right-0 lg:p-3  p-1  bottom-0 lg:rounded-none rounded-t-[12px] z-50">
+                        <!--mobile- sticky-->
                         <button
-                            class="py-[11px] pl-[14px] pr-[17px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-[16px] text-black font-semibold bg-limegreen hover:bg-[#a8d50c] transition-all duration-500 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
-                                fill="none">
-                                <g clip-path="url(#clip0_5669_2031)">
-                                    <path d="M6 9H9M9 9H12M9 9V6M9 9V12" stroke="black" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_5669_2031">
-                                        <rect width="18" height="18" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            Generate
+                            class="w-full flex items-center justify-between gap-2 mx-auto bg-[#C6FF00] hover:bg-[#a8d50c] transition-all duration-500  lg:rounded-[10px] cursor-pointer">
+                            <div class="flex items-center gap-2 w-fit lg:pl-3 lg:px-0 px-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g opacity="0.7" clip-path="url(#clip0_6433_3337)">
+                                        <path
+                                            d="M16.0867 16.0753C19.455 12.7071 19.455 7.24606 16.0867 3.87782C12.7185 0.509582 7.25751 0.509581 3.88927 3.87782C0.521026 7.24606 0.521026 12.7071 3.88927 16.0753C7.25751 19.4435 12.7185 19.4435 16.0867 16.0753Z"
+                                            fill="black" />
+                                        <path
+                                            d="M9.53026 4.59538C9.69134 4.16007 10.307 4.16007 10.4681 4.59538L11.72 7.97857C11.7706 8.11543 11.8786 8.22333 12.0154 8.27397L15.3986 9.52587C15.8339 9.68695 15.8339 10.3026 15.3986 10.4637L12.0154 11.7156C11.8786 11.7663 11.7706 11.8742 11.72 12.011L10.4681 15.3942C10.307 15.8295 9.69134 15.8295 9.53026 15.3942L8.27837 12.011C8.22773 11.8742 8.11982 11.7663 7.98296 11.7156L4.59977 10.4637C4.16446 10.3026 4.16446 9.68694 4.59977 9.52587L7.98296 8.27397C8.11982 8.22333 8.22773 8.11543 8.27837 7.97857L9.53026 4.59538Z"
+                                            fill="#C6FF00" stroke="url(#paint0_linear_6433_3337)" stroke-width="0.1" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_6433_3337" x1="9.99919" y1="3.32812"
+                                            x2="9.99919" y2="16.6615" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="white" />
+                                            <stop offset="0.480769" stop-color="white" stop-opacity="0" />
+                                            <stop offset="1" stop-color="white" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_6433_3337">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="text-sm font-semibold leading-normal text-black opacity-70">12
+                                    Credit</span>
+                            </div>
+                            <span
+                                class="py-2.5 pr-[19px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-6 text-black font-semibold">
+                                Generate
+                            </span>
                         </button>
+                        <!--mobile tabs-->
+                        <div class="mobile-tab  bg-[#000] rounded-[10px] p-[2px] flex items-center   lg:hidden">
+                            <button
+                                class="scrollspy-link flex items-center justify-center text-sm text-white w-1/2 gap-2 py-2.5 px-5 rounded-lg ">
+                                <svg class="text-white " xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                    viewBox="0 0 26 26" fill="none">
+                                    <path
+                                        d="M3.79156 22.2089C4.69073 23.108 6.1424 23.108 7.04156 22.2089L21.1249 8.12555C22.0241 7.22638 22.0241 5.77471 21.1249 4.87555C20.2257 3.97638 18.7741 3.97638 17.8749 4.87555L3.79156 18.9589C2.8924 19.858 2.8924 21.3097 3.79156 22.2089Z"
+                                        stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M19.5078 9.73828L16.2578 6.48828" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path
+                                        d="M9.21094 2.64268L10.8359 2.16602L10.3593 3.79102L10.8359 5.41602L9.21094 4.93935L7.58594 5.41602L8.0626 3.79102L7.58594 2.16602L9.21094 2.64268Z"
+                                        stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M4.875 9.14268L6.5 8.66602L6.02333 10.291L6.5 11.916L4.875 11.4393L3.25 11.916L3.72667 10.291L3.25 8.66602L4.875 9.14268Z"
+                                        stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M21.125 14.5607L22.75 14.084L22.2733 15.709L22.75 17.334L21.125 16.8573L19.5 17.334L19.9767 15.709L19.5 14.084L21.125 14.5607Z"
+                                        stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg> Create
+                            </button>
+                            <button
+                                class="scrollspy-link flex items-center justify-center text-sm text-white w-1/2 gap-2 py-2.5 px-5 rounded-lg">
+                                <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                    viewBox="0 0 26 26" fill="none">
+                                    <path d="M17.3307 8.66602H8.66406V17.3327H17.3307V8.66602Z" stroke="currentColor"
+                                        stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path
+                                        d="M5.41406 23.834C7.20156 23.834 8.66406 22.3715 8.66406 20.584V17.334H5.41406C3.62656 17.334 2.16406 18.7965 2.16406 20.584C2.16406 22.3715 3.62656 23.834 5.41406 23.834Z"
+                                        stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M5.41406 8.66602H8.66406V5.41602C8.66406 3.62852 7.20156 2.16602 5.41406 2.16602C3.62656 2.16602 2.16406 3.62852 2.16406 5.41602C2.16406 7.20352 3.62656 8.66602 5.41406 8.66602Z"
+                                        stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M17.3359 8.66602H20.5859C22.3734 8.66602 23.8359 7.20352 23.8359 5.41602C23.8359 3.62852 22.3734 2.16602 20.5859 2.16602C18.7984 2.16602 17.3359 3.62852 17.3359 5.41602V8.66602Z"
+                                        stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M20.5859 23.834C22.3734 23.834 23.8359 22.3715 23.8359 20.584C23.8359 18.7965 22.3734 17.334 20.5859 17.334H17.3359V20.584C17.3359 22.3715 18.7984 23.834 20.5859 23.834Z"
+                                        stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg> My Creation
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <!--content-->
+            <div id="my-creation-section"
+                class="max-lg:pt-20 2xl:w-[calc(100%-404px)] xl:w-[calc(100%-380px)] lg:w-[calc(100%-280px)] h-full lg:h-screen w-full ml-auto relative overflow-y-auto pt-5 lg:pt-[80px] px-5 lg:px-3 lg:pb-0 pb-32">
+                <!--Main Content Page-->
+                <h3 class="text-xl font-semibold leading-normal text-white pb-5 lg:hidden block">My Creation</h3>
+                <div class="w-full h-full relative">
+                    <div class="flex flex-col gap-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <!-- video box-1 -->
+                            <div
+                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
+                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
+                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
+                                        controlslist="nodownload noplaybackrate nopictureinpicture"
+                                        disablepictureinpicture="">
+                                        <source src="/assets/images/clothes-changer.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <button
+                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- video box-2 -->
+                            <div
+                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
+                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
+                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
+                                        controlslist="nodownload noplaybackrate nopictureinpicture"
+                                        disablepictureinpicture="">
+                                        <source src="/assets/images/upscale-video.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <button
+                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- video box-3 -->
+                            <div
+                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
+                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
+                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
+                                        controlslist="nodownload noplaybackrate nopictureinpicture"
+                                        disablepictureinpicture="">
+                                        <source src="/assets/images/unblur-video.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <button
+                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- video box-2 -->
+                            <div
+                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
+                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
+                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
+                                        controlslist="nodownload noplaybackrate nopictureinpicture"
+                                        disablepictureinpicture="">
+                                        <source src="/assets/images/video-bg-remove.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <button
+                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-            </aside>
-        </div>
-        <div
-            class="xl:w-[calc(100%-404px)] lg:w-[calc(100%-280px)] md:w-[calc(100%-280px)] w-full ml-auto relative md:h-screen md:overflow-y-auto pt-[65px] px-0">
-              <!--Main Content Page-->
-            <div class="w-full h-full relative p-5">
-                <div class="flex flex-col gap-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <!-- video box-1 -->
-                        <div
-                            class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                            <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                               <video controls="" class="object-contain h-full aspect-video rounded-[10px]" controlslist="nodownload noplaybackrate nopictureinpicture" disablepictureinpicture="">
-                                    <source src="assets/images/clothes-changer.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                           
-                            <button
-                                class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                        <!-- video box-2 -->
-                        <div
-                            class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                            <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                               <video controls="" class="object-contain h-full aspect-video rounded-[10px]" controlslist="nodownload noplaybackrate nopictureinpicture" disablepictureinpicture="">
-                                    <source src="assets/images/upscale-video.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                           
-                            <button
-                                class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                        <!-- video box-3 -->
-                        <div
-                            class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                            <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                               <video controls="" class="object-contain h-full aspect-video rounded-[10px]" controlslist="nodownload noplaybackrate nopictureinpicture" disablepictureinpicture="">
-                                    <source src="assets/images/unblur-video.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                           
-                            <button
-                                class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                       
-                         <!-- video box-2 -->
-                        <div
-                            class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                            <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                               <video controls="" class="object-contain h-full aspect-video rounded-[10px]" controlslist="nodownload noplaybackrate nopictureinpicture" disablepictureinpicture="">
-                                    <source src="assets/images/video-bg-remove.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            
-                            <button
-                                class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                    fill="none">
-                                    <path
-                                        d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
-                                        stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                       
+            </div>
+            <div
+                class="bg-[#0A0A0A] lg:border-t border-black block lg:hidden fixed lg:bottom-0 w-full left-0 right-0 p-1.5 bottom-0 lg:rounded-none rounded-t-[12px] z-50">
+                <!--mobile- sticky-->
+                <button
+                    class="w-full flex items-center justify-between px-4 gap-2 mx-auto bg-[#C6FF00] hover:bg-[#a8d50c] transition-all duration-500  rounded-[10px] cursor-pointer">
+                    <div class="flex items-center gap-2 w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <g opacity="0.7" clip-path="url(#clip0_6433_3337)">
+                                <path
+                                    d="M16.0867 16.0753C19.455 12.7071 19.455 7.24606 16.0867 3.87782C12.7185 0.509582 7.25751 0.509581 3.88927 3.87782C0.521026 7.24606 0.521026 12.7071 3.88927 16.0753C7.25751 19.4435 12.7185 19.4435 16.0867 16.0753Z"
+                                    fill="black" />
+                                <path
+                                    d="M9.53026 4.59538C9.69134 4.16007 10.307 4.16007 10.4681 4.59538L11.72 7.97857C11.7706 8.11543 11.8786 8.22333 12.0154 8.27397L15.3986 9.52587C15.8339 9.68695 15.8339 10.3026 15.3986 10.4637L12.0154 11.7156C11.8786 11.7663 11.7706 11.8742 11.72 12.011L10.4681 15.3942C10.307 15.8295 9.69134 15.8295 9.53026 15.3942L8.27837 12.011C8.22773 11.8742 8.11982 11.7663 7.98296 11.7156L4.59977 10.4637C4.16446 10.3026 4.16446 9.68694 4.59977 9.52587L7.98296 8.27397C8.11982 8.22333 8.22773 8.11543 8.27837 7.97857L9.53026 4.59538Z"
+                                    fill="#C6FF00" stroke="url(#paint0_linear_6433_3337)" stroke-width="0.1" />
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_6433_3337" x1="9.99919" y1="3.32812" x2="9.99919"
+                                    y2="16.6615" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white" />
+                                    <stop offset="0.480769" stop-color="white" stop-opacity="0" />
+                                    <stop offset="1" stop-color="white" />
+                                </linearGradient>
+                                <clipPath id="clip0_6433_3337">
+                                    <rect width="20" height="20" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="text-sm font-semibold leading-normal text-black opacity-70">12
+                            Credit</span>
                     </div>
+                    <span
+                        class="py-[14px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-6 text-black font-semibold">
+                        Generate
+                    </span>
+                </button>
+                <!--mobile tabs-->
+                <div class="mobile-tab bg-black rounded-[10px] p-[2px] gap-0.5 flex items-center lg:hidden mt-1.5">
+                    <button id="create"
+                        class="scrollspy-link flex items-center justify-center text-sm font-medium text-white w-1/2 gap-2.5 py-[13px] px-5 rounded-lg">
+                        <svg class="text-white " xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 26 26" fill="none">
+                            <path
+                                d="M3.79156 22.2089C4.69073 23.108 6.1424 23.108 7.04156 22.2089L21.1249 8.12555C22.0241 7.22638 22.0241 5.77471 21.1249 4.87555C20.2257 3.97638 18.7741 3.97638 17.8749 4.87555L3.79156 18.9589C2.8924 19.858 2.8924 21.3097 3.79156 22.2089Z"
+                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M19.5078 9.73828L16.2578 6.48828" stroke="currentColor" stroke-width="1.3"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M9.21094 2.64268L10.8359 2.16602L10.3593 3.79102L10.8359 5.41602L9.21094 4.93935L7.58594 5.41602L8.0626 3.79102L7.58594 2.16602L9.21094 2.64268Z"
+                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path
+                                d="M4.875 9.14268L6.5 8.66602L6.02333 10.291L6.5 11.916L4.875 11.4393L3.25 11.916L3.72667 10.291L3.25 8.66602L4.875 9.14268Z"
+                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path
+                                d="M21.125 14.5607L22.75 14.084L22.2733 15.709L22.75 17.334L21.125 16.8573L19.5 17.334L19.9767 15.709L19.5 14.084L21.125 14.5607Z"
+                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg> Create
+                    </button>
+                    <button id="my-creation"
+                        class="scrollspy-link flex items-center justify-center text-sm text-white w-1/2 gap-2.5 py-[13px] px-5 rounded-lg">
+                        <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 26 26" fill="none">
+                            <path d="M17.3307 8.66602H8.66406V17.3327H17.3307V8.66602Z" stroke="currentColor"
+                                stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M5.41406 23.834C7.20156 23.834 8.66406 22.3715 8.66406 20.584V17.334H5.41406C3.62656 17.334 2.16406 18.7965 2.16406 20.584C2.16406 22.3715 3.62656 23.834 5.41406 23.834Z"
+                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path
+                                d="M5.41406 8.66602H8.66406V5.41602C8.66406 3.62852 7.20156 2.16602 5.41406 2.16602C3.62656 2.16602 2.16406 3.62852 2.16406 5.41602C2.16406 7.20352 3.62656 8.66602 5.41406 8.66602Z"
+                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path
+                                d="M17.3359 8.66602H20.5859C22.3734 8.66602 23.8359 7.20352 23.8359 5.41602C23.8359 3.62852 22.3734 2.16602 20.5859 2.16602C18.7984 2.16602 17.3359 3.62852 17.3359 5.41602V8.66602Z"
+                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path
+                                d="M20.5859 23.834C22.3734 23.834 23.8359 22.3715 23.8359 20.584C23.8359 18.7965 22.3734 17.334 20.5859 17.334H17.3359V20.584C17.3359 22.3715 18.7984 23.834 20.5859 23.834Z"
+                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg> My Creation
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-   <!--voice dropdown single tab modal-->
+    <!--voice dropdown single tab modal-->
     <div
-        class="dropdown-menu  z-[100]  absolute left-[25px] md:left-[305px] lg:left-[415px] top-[50%]   mt-2 w-[calc(100%-50px)] sm:w-[376px] bg-black  shadow-lg rounded-[10px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+        class="dropdown-menu  z-[100]  fixed lg:absolute left-[0px]  lg:left-[415px] lg:top-[50%] top-auto lg:bottom-auto bottom-0  mt-2  w-full lg:w-[376px] bg-black  shadow-lg rounded-[10px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
         <div class="flex justify-between items-center  border-b border-[#222] py-3 px-[18px] ">
             <span class="text-sm font-medium text-white">
-Voices</span>
+                Voices</span>
             <button class="close-dropdown text-gray-500 hover:text-red-500">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-  <path d="M4.50781 11.495L8.0029 7.99998M8.0029 7.99998L11.498 4.50488M8.0029 7.99998L4.50781 4.50488M8.0029 7.99998L11.498 11.495" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                    <path
+                        d="M4.50781 11.495L8.0029 7.99998M8.0029 7.99998L11.498 4.50488M8.0029 7.99998L4.50781 4.50488M8.0029 7.99998L11.498 11.495"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </button>
         </div>
-      
-        <div class="relative max-h-[280px] p-[2px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#1f1f1f] [&::-webkit-scrollbar-thumb]:rounded-full">
-           <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+
+        <div
+            class="relative max-h-[280px] p-[2px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#1f1f1f] [&::-webkit-scrollbar-thumb]:rounded-full">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1404,9 +1685,12 @@ Voices</span>
                 </svg>
                 Aria
             </a>
-            <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1415,9 +1699,12 @@ Voices</span>
                 </svg>
                 Roger
             </a>
-            <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1426,9 +1713,12 @@ Voices</span>
                 </svg>
                 Sarah
             </a>
-            <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1437,9 +1727,12 @@ Voices</span>
                 </svg>
                 Laura
             </a>
-              <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1448,9 +1741,12 @@ Voices</span>
                 </svg>
                 Charlie
             </a>
-             <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1459,9 +1755,12 @@ Voices</span>
                 </svg>
                 George
             </a>
-             <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1470,25 +1769,31 @@ Voices</span>
                 </svg>
                 Callum
             </a>
-         </div>
+        </div>
     </div>
     <!--voice 1 dropdown multi tab modal-->
     <div
-        class="dropdown-menu  z-[100]  absolute left-[25px] md:left-[305px] lg:left-[415px] top-[60%]   mt-2 w-[calc(100%-50px)] sm:w-[376px] bg-black  shadow-lg rounded-[10px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+        class="dropdown-menu  z-[100]  fixed lg:absolute left-[0px]  lg:left-[415px] lg:top-[60%] top-auto lg:bottom-auto bottom-0   mt-2  lg:w-[376px] w-full bg-black  shadow-lg rounded-[10px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
         <div class="flex justify-between items-center  border-b border-[#222] py-3 px-[18px] ">
             <span class="text-sm font-medium text-white">
-Voices</span>
+                Voices</span>
             <button class="close-dropdown text-gray-500 hover:text-red-500">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-  <path d="M4.50781 11.495L8.0029 7.99998M8.0029 7.99998L11.498 4.50488M8.0029 7.99998L4.50781 4.50488M8.0029 7.99998L11.498 11.495" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                    <path
+                        d="M4.50781 11.495L8.0029 7.99998M8.0029 7.99998L11.498 4.50488M8.0029 7.99998L4.50781 4.50488M8.0029 7.99998L11.498 11.495"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </button>
         </div>
-      
-        <div class="relative max-h-[280px] p-[2px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#1f1f1f] [&::-webkit-scrollbar-thumb]:rounded-full">
-           <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+
+        <div
+            class="relative max-h-[280px] p-[2px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#1f1f1f] [&::-webkit-scrollbar-thumb]:rounded-full">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1497,9 +1802,12 @@ Voices</span>
                 </svg>
                 Aria
             </a>
-            <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1508,9 +1816,12 @@ Voices</span>
                 </svg>
                 Roger
             </a>
-            <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1519,9 +1830,12 @@ Voices</span>
                 </svg>
                 Sarah
             </a>
-            <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1530,9 +1844,12 @@ Voices</span>
                 </svg>
                 Laura
             </a>
-              <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1541,9 +1858,12 @@ Voices</span>
                 </svg>
                 Charlie
             </a>
-             <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1552,9 +1872,12 @@ Voices</span>
                 </svg>
                 George
             </a>
-             <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1563,25 +1886,34 @@ Voices</span>
                 </svg>
                 Callum
             </a>
-         </div>
+        </div>
     </div>
-   <!--voice 2 dropdown multi tab modal-->
+    <!--voice 2 dropdown multi tab modal-->
     <div
-        class="dropdown-menu  z-[100]  absolute left-[25px] md:left-[305px] lg:left-[415px] top-[60%]   mt-2 w-[calc(100%-50px)] sm:w-[376px] bg-black  shadow-lg rounded-[10px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
+        class=" dropdown-menu z-[100] fixed lg:absolute left-[0px] lg:left-[415px] lg:top-[60%] top-auto lg:bottom-auto bottom-0 mt-2 lg:w-[376px] w-full bg-black shadow-lg rounded-[10px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300 max-sm:translate-y-full">
+
+
+       
         <div class="flex justify-between items-center  border-b border-[#222] py-3 px-[18px] ">
             <span class="text-sm font-medium text-white">
-Voices</span>
+                Voices</span>
             <button class="close-dropdown text-gray-500 hover:text-red-500">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-  <path d="M4.50781 11.495L8.0029 7.99998M8.0029 7.99998L11.498 4.50488M8.0029 7.99998L4.50781 4.50488M8.0029 7.99998L11.498 11.495" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                    <path
+                        d="M4.50781 11.495L8.0029 7.99998M8.0029 7.99998L11.498 4.50488M8.0029 7.99998L4.50781 4.50488M8.0029 7.99998L11.498 11.495"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </button>
         </div>
-      
-        <div class="relative max-h-[280px] p-[2px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#1f1f1f] [&::-webkit-scrollbar-thumb]:rounded-full">
-           <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+
+        <div
+            class="relative max-h-[280px] p-[2px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#1f1f1f] [&::-webkit-scrollbar-thumb]:rounded-full">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1590,9 +1922,12 @@ Voices</span>
                 </svg>
                 Aria
             </a>
-            <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1601,9 +1936,12 @@ Voices</span>
                 </svg>
                 Roger
             </a>
-            <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1612,9 +1950,12 @@ Voices</span>
                 </svg>
                 Sarah
             </a>
-            <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1623,9 +1964,12 @@ Voices</span>
                 </svg>
                 Laura
             </a>
-              <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1634,9 +1978,12 @@ Voices</span>
                 </svg>
                 Charlie
             </a>
-             <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1645,9 +1992,12 @@ Voices</span>
                 </svg>
                 George
             </a>
-             <a href="#" class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
+            <a href="#"
+                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z" stroke="white"></path>
+                    <path
+                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
+                        stroke="white"></path>
                     <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
                     <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
                     <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
@@ -1656,7 +2006,7 @@ Voices</span>
                 </svg>
                 Callum
             </a>
-         </div>
+        </div>
     </div>
     <div
         class="overlay-modal w-full h-screen z-[10000] bg-black/50 backdrop-blur-xl fixed top-0 left-0 opacity-0 invisible">
@@ -1716,36 +2066,36 @@ Voices</span>
     </script>
     <!--custom range slider-->
     <script>
-       const ranges = document.querySelectorAll(".customRange");
+        const ranges = document.querySelectorAll(".customRange");
 
-ranges.forEach(range => {
-    const label = range.parentElement.querySelector(".rangeLabel");
+        ranges.forEach(range => {
+            const label = range.parentElement.querySelector(".rangeLabel");
 
-    function updateRange() {
-        const value = range.value;
-        const min = range.min;
-        const max = range.max;
-        const percent = ((value - min) / (max - min)) * 100;
+            function updateRange() {
+                const value = range.value;
+                const min = range.min;
+                const max = range.max;
+                const percent = ((value - min) / (max - min)) * 100;
 
-        // Background progress fill
-        range.style.background = `linear-gradient(to right, #C6FF00 ${percent}%, #ffffff1a ${percent}%)`;
+                // Background progress fill
+                range.style.background = `linear-gradient(to right, #C6FF00 ${percent}%, #ffffff1a ${percent}%)`;
 
-        // 🔥 Auto-detect decimals
-        if (range.step.includes(".")) {
-            label.textContent = parseFloat(value).toFixed(1);   // for 0.5 / 0.1 etc.
-        } else {
-            label.textContent = value;                          // for normal integer sliders
-        }
-    }
+                // 🔥 Auto-detect decimals
+                if (range.step.includes(".")) {
+                    label.textContent = parseFloat(value).toFixed(1);   // for 0.5 / 0.1 etc.
+                } else {
+                    label.textContent = value;                          // for normal integer sliders
+                }
+            }
 
-    range.addEventListener("input", updateRange);
-    updateRange();
-});
+            range.addEventListener("input", updateRange);
+            updateRange();
+        });
 
 
     </script>
-<!-------tabs------->
-<script>
+    <!-------tabs------->
+    <script>
         $(document).ready(function () {
             $('.tabs').each(function () {
                 const $tabs = $(this);
@@ -1764,8 +2114,72 @@ ranges.forEach(range => {
             });
         });
     </script>
+    <!--mobile tab scroll-->
+    <script>
+        const createBtn = document.getElementById("create")
+        const myCreationBtn = document.getElementById("my-creation")
 
-    
+        const createSection = document.getElementById("create-section")
+        const myCreationSection = document.getElementById("my-creation-section")
+
+        function isSmallScreen() {
+            return window.innerWidth < 1024
+        }
+
+        function showCreate() {
+            if (!isSmallScreen()) return
+
+            createSection.classList.remove("hidden")
+            myCreationSection.classList.add("hidden")
+
+            createBtn.classList.add("active-tab")
+            myCreationBtn.classList.remove("active-tab")
+        }
+
+        function showMyCreation() {
+            if (!isSmallScreen()) return
+
+            myCreationSection.classList.remove("hidden")
+            createSection.classList.add("hidden")
+
+            myCreationBtn.classList.add("active-tab")
+            createBtn.classList.remove("active-tab")
+        }
+
+        // Button Clicks
+        createBtn.addEventListener("click", showCreate)
+        myCreationBtn.addEventListener("click", showMyCreation)
+
+        /* ✅ IMPORTANT FIX */
+        let lastWidth = window.innerWidth
+
+        window.addEventListener("resize", () => {
+            const currentWidth = window.innerWidth
+
+            // ❌ Ignore resize caused by scroll (height-only changes)
+            if (currentWidth === lastWidth) return
+
+            lastWidth = currentWidth
+
+            if (!isSmallScreen()) {
+                // Desktop → Show both
+                createSection.classList.remove("hidden")
+                myCreationSection.classList.remove("hidden")
+
+                createBtn.classList.remove("active-tab")
+                myCreationBtn.classList.remove("active-tab")
+            } else {
+                // Mobile → Default only ON REAL WIDTH CHANGE
+                showCreate()
+            }
+        })
+
+        // Initial Load
+        if (isSmallScreen()) {
+            showCreate()
+        }
+    </script>
+
 </body>
 
 </html>

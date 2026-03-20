@@ -20,6 +20,7 @@ module.exports = {
     "./editor-pages/**/*.html", 
     "./interior-landing-page/**/*.html", 
     "./use-cases/**/*.html",
+     "./vidu/**/*.html",
   ],
   theme: {
     extend: {
