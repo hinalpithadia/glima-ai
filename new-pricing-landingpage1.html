@@ -294,7 +294,7 @@
                                         >
                                         $12
                                     </span>
-                                    <div class="flex items-center justify-between">
+                                    <div class="flex items-center justify-between relative">
                                         <div class="flex items-center gap-2">
                                             <h3 class=" text-white text-[40px] md:text-[54px] price font-sofia"
                                                 data-monthly="9" data-yearly="7">$
@@ -303,11 +303,15 @@
                                                 class="mt-3.5 postfix text-base font-normal leading-[22px] text-white/50  block">/
                                                 Month</span>
                                         </div>
+                                         <div class="text-xs font-medium text-[#C6FF00] absolute right-[-10px] top-[-24px] note-text">No Monthly Cap</div>
+                                        <div class="flex flex-col gap-2  ">
+                                           
                                         <div class="text-right">
-                                            <h4 class="text-[#C6FF00] text-lg md:text-xl">375</h4>
+                                            <h4 class="text-[#C6FF00] text-lg md:text-xl credit"  data-monthly="375" data-yearly="4500">375</h4>
                                             <p
                                                 class="text-sm font-normal text-white/50 tracking-[2.24px] uppercase pt-1.5 md:pt-0">
                                                 Credit</p>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -377,7 +381,7 @@
                                         data-monthly="" data-yearly="18">
                                         $22
                                     </span>
-                                    <div class="flex items-center justify-between">
+                                    <div class="flex items-center justify-between relative">
                                         <div class="flex items-center gap-2">
                                             <h3 class=" text-white text-[40px] md:text-[54px] price font-sofia"
                                                 data-monthly="18" data-yearly="14">$
@@ -386,8 +390,9 @@
                                                 class="mt-3.5 postfix text-base font-normal leading-[22px] text-white/50  block">/
                                                 Month</span>
                                         </div>
+                                          <div class="text-xs font-medium text-[#C6FF00] absolute right-[-10px] top-[-24px] note-text">No Monthly Cap</div>
                                         <div class="text-right">
-                                            <h4 class="text-[#C6FF00] text-lg md:text-xl">800</h4>
+                                            <h4 class="text-[#C6FF00] text-lg md:text-xl credit"  data-monthly="800" data-yearly="9600">800</h4>
                                             <p
                                                 class="text-sm font-normal text-white/50 tracking-[2.24px] uppercase pt-1.5 md:pt-0">
                                                 Credit</p>
@@ -450,14 +455,15 @@
                     </div>
                     <div>
                         <span class="transition-all duration-300 ease-in-out text-xl md:text-2xl font-medium text-white line-through opacity-20 font-sofia">$44</span>
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-center justify-between relative">
                             <div class="flex items-center gap-2">
                                 <h3 class="text-white text-[40px] md:text-[54px] price font-sofia" data-monthly="36" data-yearly="29">$29</h3>
                                 <span class="mt-3.5 postfix text-base font-normal leading-[22px] text-white/50 block">/
                                     Month</span>
                             </div>
+                              <div class="text-xs font-medium text-[#C6FF00] absolute right-[-10px] top-[-24px] note-text">No Monthly Cap</div>
                             <div class="text-right">
-                                <h4 class="text-[#C6FF00] text-lg md:text-xl">1700</h4>
+                                <h4 class="text-[#C6FF00] text-lg md:text-xl credit" data-monthly="1700" data-yearly="20,400">1700</h4>
                                 <p class="text-sm font-normal text-white/50 tracking-[2.24px] uppercase pt-1.5 md:pt-0">
                                     Credit</p>
                             </div>
@@ -1447,110 +1453,171 @@
                     </span>
                 </div>
 
-                <!-- pricing grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-[30px] gap-5">
+               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-[30px] gap-5">
                      <!--MINI-->
                     <div class="p-0.5 md:p-1 bg-[#0A0A0A] rounded-[18px] md:rounded-[20px] flex flex-col gap-[22px]">
-                        <div class="bg-[#000000] rounded-2xl md:rounded-[18px] px-5 md:px-3 pt-[18px] md:pt-[22px] pb-5 md:pb-3 flex flex-col gap-3.5 md:gap-4">
+                        <div
+                            class="bg-[#000000] rounded-2xl md:rounded-[18px] px-5 md:px-3 pt-[18px] md:pt-[22px] pb-5 md:pb-3 flex flex-col gap-3.5 md:gap-4">
                             <div class="px-0 md:px-[12px] flex flex-col gap-3.5 md:gap-4">
                                 <div class="flex items-center justify-between">
-                                    <h2 class="text-[#C6FF00] text-sm md:text-lg font-bold tracking-[1.68px] md:tracking-[2.16px] uppercase">
+                                    <h2
+                                        class="text-[#C6FF00] text-sm md:text-lg font-bold tracking-[1.68px] md:tracking-[2.16px] uppercase">
                                         MINI</h2>
-                                    <label class="px-3 md:px-4 py-1.5 rounded-full bg-[#0A0A0A] text-sm md:text-base font-normal text-white opacity-50">For
+                                    <label
+                                        class="px-3 md:px-4 py-1.5 rounded-full bg-[#0A0A0A] text-sm md:text-base font-normal text-white opacity-50">For
                                         Individuals</label>
                                 </div>
                                 <div>
                                     
-                                    <span class=" text-xl md:text-2xl font-medium text-white line-through opacity-20 font-sofia" >
+                                    <span
+                                        class=" text-xl md:text-2xl font-medium text-white line-through opacity-20 font-sofia"
+                                        >
                                         $12
                                     </span>
-                                    <div class="flex items-center justify-between">
+                                    <div class="flex items-center justify-between relative">
                                         <div class="flex items-center gap-2">
-                                            <h3 class=" text-white text-[40px] md:text-[54px] price font-sofia" data-monthly="9" data-yearly="7">$9</h3>
-                                            <span class="mt-3.5 postfix text-base font-normal leading-[22px] text-white/50  block">/ Month</span>
+                                            <h3 class=" text-white text-[40px] md:text-[54px] price font-sofia"
+                                                data-monthly="9" data-yearly="7">$
+                                            </h3>
+                                            <span
+                                                class="mt-3.5 postfix text-base font-normal leading-[22px] text-white/50  block">/
+                                                Month</span>
                                         </div>
+                                         <div class="text-xs font-medium text-[#C6FF00] absolute right-[-10px] top-[-24px] note-text">No Monthly Cap</div>
+                                        <div class="flex flex-col gap-2  ">
+                                           
                                         <div class="text-right">
-                                            <h4 class="text-[#C6FF00] text-lg md:text-xl">375</h4>
-                                            <p class="text-sm font-normal text-white/50 tracking-[2.24px] uppercase pt-1.5 md:pt-0">
+                                            <h4 class="text-[#C6FF00] text-lg md:text-xl credit"  data-monthly="375" data-yearly="4500">375</h4>
+                                            <p
+                                                class="text-sm font-normal text-white/50 tracking-[2.24px] uppercase pt-1.5 md:pt-0">
                                                 Credit</p>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <button class="px-4 py-2 md:py-[9px] rounded-lg md:rounded-[10px] bg-white w-full text-center text-base md:text-lg leading-[20px] md:leading-[26px] font-semibold  text-black transition-all duration-500 hover:bg-white/80">Upgrade
+                            <button
+                                class="px-4 py-2 md:py-[9px] rounded-lg md:rounded-[10px] bg-white w-full text-center text-base md:text-lg leading-[20px] md:leading-[26px] font-semibold  text-black transition-all duration-500 hover:bg-white/80">Upgrade
                             </button>
                         </div>
                         <ul class="hidden md:flex px-7 pb-[22px]  flex-col gap-5 ">
-                            <li class="flex items-center gap-2 text-white text-base font-normal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M4.16699 10.8359L7.50033 14.1693L15.8337 5.83594" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <li class="flex items-center gap-2 text-white text-base font-normal"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path d="M4.16699 10.8359L7.50033 14.1693L15.8337 5.83594" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg><span class="text-limegreen">Unlimited</span>access to every AI model</li>
-                            <li class="flex items-center gap-2 text-white text-base font-normal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M4.16699 10.8359L7.50033 14.1693L15.8337 5.83594" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <li class="flex items-center gap-2 text-white text-base font-normal"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path d="M4.16699 10.8359L7.50033 14.1693L15.8337 5.83594" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>4 concurrent tasks</li>
-                            <li class="flex items-center gap-2 text-white text-base font-normal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M4.16699 10.8359L7.50033 14.1693L15.8337 5.83594" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>Access to all model &amp; features</li>
-                            <li class="flex items-center gap-2 text-[#FFFFFF80] text-base font-normal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <li class="flex items-center gap-2 text-white text-base font-normal"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path d="M4.16699 10.8359L7.50033 14.1693L15.8337 5.83594" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>Access to all model & features</li>
+                            <li class="flex items-center gap-2 text-[#FFFFFF80] text-base font-normal"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
                                     <g opacity="0.6">
-                                        <path d="M5.63184 14.3705L10.0007 10.0017M10.0007 10.0017L14.3695 5.63281M10.0007 10.0017L5.63184 5.63281M10.0007 10.0017L14.3695 14.3705" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M5.63184 14.3705L10.0007 10.0017M10.0007 10.0017L14.3695 5.63281M10.0007 10.0017L5.63184 5.63281M10.0007 10.0017L14.3695 14.3705"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
                                     </g>
                                 </svg>Maximum value for every credit</li>
-                            <li class="flex items-center gap-2 text-[#FFFFFF80] text-base font-normal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <li class="flex items-center gap-2 text-[#FFFFFF80] text-base font-normal"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
                                     <g opacity="0.6">
-                                        <path d="M5.63184 14.3705L10.0007 10.0017M10.0007 10.0017L14.3695 5.63281M10.0007 10.0017L5.63184 5.63281M10.0007 10.0017L14.3695 14.3705" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M5.63184 14.3705L10.0007 10.0017M10.0007 10.0017L14.3695 5.63281M10.0007 10.0017L5.63184 5.63281M10.0007 10.0017L14.3695 14.3705"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
                                     </g>
                                 </svg>Be first to use advanced AI features</li>
                         </ul>
                     </div>
                     <!--LITE-->
                     <div class="p-0.5 md:p-1 bg-[#0A0A0A] rounded-[18px] md:rounded-[20px] flex flex-col gap-[22px]">
-                        <div class="bg-[#000000] rounded-2xl md:rounded-[18px] px-5 md:px-3 pt-[18px] md:pt-[22px] pb-5 md:pb-3 flex flex-col gap-3.5 md:gap-4"  style="background: radial-gradient(ellipse 72.44% 85.85% at 50.00% 0.00%, rgba(0, 20.80, 52, 0.30) 0%, rgba(0, 21, 52, 0) 100%), black;">
+                        <div
+                            class="bg-[#000000] rounded-2xl md:rounded-[18px] px-5 md:px-3 pt-[18px] md:pt-[22px] pb-5 md:pb-3 flex flex-col gap-3.5 md:gap-4" style="background: radial-gradient(ellipse 72.44% 85.85% at 50.00% 0.00%, rgba(0, 20.80, 52, 0.30) 0%, rgba(0, 21, 52, 0) 100%), black;">
                             <div class="px-0 md:px-[12px] flex flex-col gap-3.5 md:gap-4">
                                 <div class="flex items-center justify-between">
-                                    <h2 class="text-[#C6FF00] text-sm md:text-lg font-bold tracking-[1.68px] md:tracking-[2.16px] uppercase">
+                                    <h2
+                                        class="text-[#C6FF00] text-sm md:text-lg font-bold tracking-[1.68px] md:tracking-[2.16px] uppercase">
                                         Lite</h2>
-                                    <label class="px-3 md:px-4 py-1.5 rounded-full bg-[#0A0A0A] text-sm md:text-base font-normal text-white opacity-50">For
+                                    <label
+                                        class="px-3 md:px-4 py-1.5 rounded-full bg-[#0A0A0A] text-sm md:text-base font-normal text-white opacity-50">For
                             content creators</label>
                                 </div>
                                 <div>
                                     
-                                    <span class=" text-xl md:text-2xl font-medium text-white line-through opacity-20 font-sofia" data-monthly="" data-yearly="18">
+                                    <span
+                                        class=" text-xl md:text-2xl font-medium text-white line-through opacity-20 font-sofia"
+                                        data-monthly="" data-yearly="18">
                                         $22
                                     </span>
-                                    <div class="flex items-center justify-between">
+                                    <div class="flex items-center justify-between relative">
                                         <div class="flex items-center gap-2">
-                                            <h3 class=" text-white text-[40px] md:text-[54px] price font-sofia" data-monthly="18" data-yearly="14">$18</h3>
-                                            <span class="mt-3.5 postfix text-base font-normal leading-[22px] text-white/50  block">/ Month</span>
+                                            <h3 class=" text-white text-[40px] md:text-[54px] price font-sofia"
+                                                data-monthly="18" data-yearly="14">$
+                                            </h3>
+                                            <span
+                                                class="mt-3.5 postfix text-base font-normal leading-[22px] text-white/50  block">/
+                                                Month</span>
                                         </div>
+                                          <div class="text-xs font-medium text-[#C6FF00] absolute right-[-10px] top-[-24px] note-text">No Monthly Cap</div>
                                         <div class="text-right">
-                                            <h4 class="text-[#C6FF00] text-lg md:text-xl">800</h4>
-                                            <p class="text-sm font-normal text-white/50 tracking-[2.24px] uppercase pt-1.5 md:pt-0">
+                                            <h4 class="text-[#C6FF00] text-lg md:text-xl credit"  data-monthly="800" data-yearly="9600">800</h4>
+                                            <p
+                                                class="text-sm font-normal text-white/50 tracking-[2.24px] uppercase pt-1.5 md:pt-0">
                                                 Credit</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <button class="px-4 py-2 md:py-[9px] rounded-lg md:rounded-[10px] bg-white w-full text-center text-base md:text-lg leading-[20px] md:leading-[26px] font-semibold  text-black transition-all duration-500 hover:bg-white/80">Upgrade
+                            <button
+                                class="px-4 py-2 md:py-[9px] rounded-lg md:rounded-[10px] bg-white w-full text-center text-base md:text-lg leading-[20px] md:leading-[26px] font-semibold  text-black transition-all duration-500 hover:bg-white/80">Upgrade
                             </button>
                         </div>
                         <ul class="hidden md:flex px-7 pb-[22px]  flex-col gap-5 ">
-                            <li class="flex items-center gap-2 text-white text-base font-normal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M4.16699 10.8359L7.50033 14.1693L15.8337 5.83594" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <li class="flex items-center gap-2 text-white text-base font-normal"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path d="M4.16699 10.8359L7.50033 14.1693L15.8337 5.83594" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg><span class="text-limegreen">Unlimited</span>access to every AI model</li>
-                        <li class="flex items-center gap-2 text-white text-base font-normal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                           <li class="flex items-center gap-2 text-white text-base font-normal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M4.16699 10.8359L7.50033 14.1693L15.8337 5.83594" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg><span class="text-limegreen">Unlimited</span>&nbsp;concurrent tasks</li>
-                            <li class="flex items-center gap-2 text-white text-base font-normal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M4.16699 10.8359L7.50033 14.1693L15.8337 5.83594" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>Access to all model &amp; features</li>
-                            <li class="flex items-center gap-2 text-[#FFFFFF80] text-base font-normal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <li class="flex items-center gap-2 text-white text-base font-normal"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path d="M4.16699 10.8359L7.50033 14.1693L15.8337 5.83594" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>Access to all model & features</li>
+                            <li class="flex items-center gap-2 text-[#FFFFFF80] text-base font-normal"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
                                     <g opacity="0.6">
-                                        <path d="M5.63184 14.3705L10.0007 10.0017M10.0007 10.0017L14.3695 5.63281M10.0007 10.0017L5.63184 5.63281M10.0007 10.0017L14.3695 14.3705" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M5.63184 14.3705L10.0007 10.0017M10.0007 10.0017L14.3695 5.63281M10.0007 10.0017L5.63184 5.63281M10.0007 10.0017L14.3695 14.3705"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
                                     </g>
                                 </svg>Maximum value for every credit</li>
-                            <li class="flex items-center gap-2 text-[#FFFFFF80] text-base font-normal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <li class="flex items-center gap-2 text-[#FFFFFF80] text-base font-normal"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
                                     <g opacity="0.6">
-                                        <path d="M5.63184 14.3705L10.0007 10.0017M10.0007 10.0017L14.3695 5.63281M10.0007 10.0017L5.63184 5.63281M10.0007 10.0017L14.3695 14.3705" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M5.63184 14.3705L10.0007 10.0017M10.0007 10.0017L14.3695 5.63281M10.0007 10.0017L5.63184 5.63281M10.0007 10.0017L14.3695 14.3705"
+                                            stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
                                     </g>
                                 </svg>Be first to use advanced AI features</li>
                         </ul>
@@ -1568,13 +1635,15 @@
                     </div>
                     <div>
                         <span class="transition-all duration-300 ease-in-out text-xl md:text-2xl font-medium text-white line-through opacity-20 font-sofia">$44</span>
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-center justify-between relative">
                             <div class="flex items-center gap-2">
-                                <h3 class="text-white text-[40px] md:text-[54px] price font-sofia" data-monthly="36" data-yearly="29">$36</h3>
-                                <span class="mt-3.5 postfix text-base font-normal leading-[22px] text-white/50 block">/ Month</span>
+                                <h3 class="text-white text-[40px] md:text-[54px] price font-sofia" data-monthly="36" data-yearly="29">$29</h3>
+                                <span class="mt-3.5 postfix text-base font-normal leading-[22px] text-white/50 block">/
+                                    Month</span>
                             </div>
+                              <div class="text-xs font-medium text-[#C6FF00] absolute right-[-10px] top-[-24px] note-text">No Monthly Cap</div>
                             <div class="text-right">
-                                <h4 class="text-[#C6FF00] text-lg md:text-xl">1700</h4>
+                                <h4 class="text-[#C6FF00] text-lg md:text-xl credit" data-monthly="1700" data-yearly="20,400">1700</h4>
                                 <p class="text-sm font-normal text-white/50 tracking-[2.24px] uppercase pt-1.5 md:pt-0">
                                     Credit</p>
                             </div>
@@ -1732,64 +1801,83 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/2.5.3/tippy.all.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        const toggle = document.getElementById("pricingToggle");
-        const prices = document.querySelectorAll(".price");
-        const oldPrices = document.querySelectorAll(".old-price");
-        const postfixes = document.querySelectorAll(".postfix");
+       const toggle = document.getElementById("pricingToggle");
 
-        const monthlyLabel = document.querySelector(".monthly-label");
-        const yearlyLabel = document.querySelector(".yearly-label");
+const prices = document.querySelectorAll(".price");
+const oldPrices = document.querySelectorAll(".old-price");
+const postfixes = document.querySelectorAll(".postfix");
+const credits = document.querySelectorAll(".credit");
+const noteTexts = document.querySelectorAll(".note-text");
 
-
-        // Default = Monthly
-        updatePricing(false);
-
-
-        // Toggle change
-        toggle.addEventListener("change", () => {
-            updatePricing(toggle.checked);
-        });
+const monthlyLabel = document.querySelector(".monthly-label");
+const yearlyLabel = document.querySelector(".yearly-label");
 
 
-        function updatePricing(isYearly) {
+// Default = Monthly
+updatePricing(false);
 
-            // Change main price
-            prices.forEach(price => {
-                const monthly = price.dataset.monthly;
-                const yearly = price.dataset.yearly;
-                price.textContent = `$${isYearly ? yearly : monthly}`;
-            });
 
-            // Show / Hide discount price
-            oldPrices.forEach(old => {
-                if (isYearly) {
-                    old.classList.remove("hidden");
-                } else {
-                    old.classList.add("hidden");
-                }
-            });
+// Toggle change
+toggle.addEventListener("change", () => {
+    updatePricing(toggle.checked);
+});
 
-            // Change postfix
-            postfixes.forEach(postfix => {
-                postfix.textContent = isYearly ? "/ Month" : "/ Month";
-            });
 
-            // Label active style
-            if (isYearly) {
-                yearlyLabel.classList.remove("text-white/50");
-                yearlyLabel.classList.add("text-white", "font-medium");
+function updatePricing(isYearly) {
 
-                monthlyLabel.classList.remove("text-white", "font-medium");
-                monthlyLabel.classList.add("text-white/50");
+    // 🔹 Change main price
+    prices.forEach(price => {
+        const monthly = price.dataset.monthly;
+        const yearly = price.dataset.yearly;
+        price.textContent = `$${isYearly ? yearly : monthly}`;
+    });
 
-            } else {
-                monthlyLabel.classList.remove("text-white/50");
-                monthlyLabel.classList.add("text-white", "font-medium");
+    // 🔹 Update credits
+    credits.forEach(credit => {
+        const monthly = credit.dataset.monthly;
+        const yearly = credit.dataset.yearly;
+        credit.textContent = isYearly ? yearly : monthly;
+    });
 
-                yearlyLabel.classList.remove("text-white", "font-medium");
-                yearlyLabel.classList.add("text-white/50");
-            }
+    // 🔹 Show / Hide old price (discount)
+    oldPrices.forEach(old => {
+        if (isYearly) {
+            old.classList.remove("hidden");
+        } else {
+            old.classList.add("hidden");
         }
+    });
+
+    // 🔹 Show / Hide note text (ONLY yearly)
+    noteTexts.forEach(note => {
+        if (isYearly) {
+            note.classList.remove("hidden");
+        } else {
+            note.classList.add("hidden");
+        }
+    });
+
+    // 🔹 Postfix (you can customize if needed)
+    postfixes.forEach(postfix => {
+        postfix.textContent = "/ Month";
+    });
+
+    // 🔹 Toggle label styles
+    if (isYearly) {
+        yearlyLabel.classList.remove("text-white/50");
+        yearlyLabel.classList.add("text-white", "font-medium");
+
+        monthlyLabel.classList.remove("text-white", "font-medium");
+        monthlyLabel.classList.add("text-white/50");
+
+    } else {
+        monthlyLabel.classList.remove("text-white/50");
+        monthlyLabel.classList.add("text-white", "font-medium");
+
+        yearlyLabel.classList.remove("text-white", "font-medium");
+        yearlyLabel.classList.add("text-white/50");
+    }
+}
     </script>
 
     <script>

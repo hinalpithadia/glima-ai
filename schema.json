@@ -18,22 +18,22 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Create Pet Finger Videos with Glima AI",
+  "name": "How to Create Zongzi Drop Videos with Glima AI",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Upload Your Pet Photo",
-      "text": "Upload a clear image or short video of your pet."
+      "name": "Enter Your Prompt",
+      "text": "Describe the romantic rain kiss scene you want to create, including characters, location, mood, or lighting."
     },
     {
       "@type": "HowToStep",
-      "name": "Choose Finger Style or Action",
-      "text": "Select how you want the finger interaction to look."
+      "name": "Generate the Video",
+      "text": "Choose video style, rain intensity, camera angles, background setting, and visual effects to make the moment more cinematic."
     },
     {
       "@type": "HowToStep",
-      "name": "Generate & Download",
-      "text": "Click Generate and let AI create the video."
+      "name": "Download & Share",
+      "text": "Click generate and the AI will create your rain kiss video instantly. Preview the result and download or share it with ease."
     }
   ]
 }
@@ -44,42 +44,42 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is an AI Pet Finger Video Generator?",
+      "name": "What is an AI Zongzi Drop Video Generator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "An AI Pet Finger Video Generator is a tool that uses artificial intelligence to create fun videos where pets appear to interact with animated fingers in cute or playful ways."
+        "text": "An AI Zongzi Drop Video Generator is a tool that uses artificial intelligence to create realistic food videos showing Zongzi being dropped or falling with smooth motion and cinematic effects."
       }
     },
     {
       "@type": "Question",
-      "name": "Do I need editing skills to use it?",
+      "name": "How can I create a Zongzi drop video using AI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": " No, you don’t need any editing experience. Just upload your pet photo or video, choose a style, and the AI does the rest automatically."
+        "text": " Simply enter a prompt describing the Zongzi drop scene, choose your preferred style or settings, and click generate. The AI will automatically produce the video."
       }
     },
     {
       "@type": "Question",
-      "name": "What type of pet photos or videos work best?",
+      "name": "Can I customize the Zongzi drop video scene? ",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Clear images or videos with good lighting and a visible pet face or body work best for realistic and smooth animations."
+        "text": " Yes, you can customize elements like background, camera angles, lighting, slow-motion effects, and video style to create a unique and engaging video."
       }
     },
     {
       "@type": "Question",
-      "name": "How long does it take to generate a video?",
+      "name": "Do I need video editing skills to use this generator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most videos are created in seconds to a few minutes, depending on the length and quality of your upload."
+        "text": "No, the generator is beginner-friendly. You only need to enter your idea, and the AI will handle the entire video creation process."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I share the generated videos on social media?",
+      "name": "Where can I use the generated Zongzi drop videos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": " Yes! You can download your videos and share them on platforms like Instagram, TikTok, and YouTube."
+        "text": "You can use them for food content, social media posts, cooking visuals, marketing, and creative culinary videos."
       }
     }
   ]

@@ -2999,6 +2999,10 @@ pre{
   left: -5px;
 }
 
+.left-\[0px\] {
+  left: 0px;
+}
+
 .left-\[10px\] {
   left: 10px;
 }
@@ -3359,10 +3363,6 @@ pre{
   top: 57px;
 }
 
-.top-\[60\%\] {
-  top: 60%;
-}
-
 .top-\[64px\] {
   top: 64px;
 }
@@ -3403,16 +3403,24 @@ pre{
   top: auto;
 }
 
-.top-full {
-  top: 100%;
-}
-
 .top-auto {
   top: auto;
 }
 
-.left-\[0px\] {
-  left: 0px;
+.top-full {
+  top: 100%;
+}
+
+.right-\[-10px\] {
+  right: -10px;
+}
+
+.top-\[-20px\] {
+  top: -20px;
+}
+
+.top-\[-24px\] {
+  top: -24px;
 }
 
 .isolate {
@@ -3597,6 +3605,10 @@ pre{
 
 .-mt-2 {
   margin-top: -0.5rem;
+}
+
+.-mt-8 {
+  margin-top: -2rem;
 }
 
 .-mt-\[25px\] {
@@ -3865,6 +3877,10 @@ pre{
 
 .mt-\[65px\] {
   margin-top: 65px;
+}
+
+.mt-\[8px\] {
+  margin-top: 8px;
 }
 
 .mt-auto {
@@ -5649,6 +5665,11 @@ pre{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-y-8 {
+  --tw-translate-y: -2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .-rotate-0 {
   --tw-rotate: -0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -6239,6 +6260,10 @@ pre{
   border-radius: 7px;
 }
 
+.rounded-\[8px\] {
+  border-radius: 8px;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -6427,6 +6452,11 @@ pre{
 .border-\[\#3C3C3C\] {
   --tw-border-opacity: 1;
   border-color: rgb(60 60 60 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#454545\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(69 69 69 / var(--tw-border-opacity, 1));
 }
 
 .border-\[\#66680\] {
@@ -6707,6 +6737,11 @@ pre{
 .bg-\[\#28141A\] {
   --tw-bg-opacity: 1;
   background-color: rgb(40 20 26 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#282828\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(40 40 40 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#2A2A2A\] {
@@ -8367,6 +8402,10 @@ pre{
   font-size: 11px;
 }
 
+.text-\[13px\] {
+  font-size: 13px;
+}
+
 .text-\[22px\] {
   font-size: 22px;
 }
@@ -8925,6 +8964,18 @@ pre{
 .shadow-\[0_10px_15px_-5px_rgba\(255\2c 255\2c 255\2c 0\.3\)\] {
   --tw-shadow: 0 10px 15px -5px rgba(255,255,255,0.3);
   --tw-shadow-colored: 0 10px 15px -5px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_4px_0_0_\#000\] {
+  --tw-shadow: 0 4px 0 0 #000;
+  --tw-shadow-colored: 0 4px 0 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_4px_0_0_\#454545\] {
+  --tw-shadow: 0 4px 0 0 #454545;
+  --tw-shadow-colored: 0 4px 0 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -10694,10 +10745,6 @@ textarea{
     width: 368px;
   }
 
-  .sm\:w-\[376px\] {
-    width: 376px;
-  }
-
   .sm\:w-\[380px\] {
     width: 380px;
   }
@@ -10943,14 +10990,6 @@ textarea{
 
   .md\:top-\[80px\] {
     top: 80px;
-  }
-
-  .md\:top-\[50\%\] {
-    top: 50%;
-  }
-
-  .md\:bottom-auto {
-    bottom: auto;
   }
 
   .md\:col-span-1 {
@@ -12121,6 +12160,10 @@ textarea{
     bottom: 68px;
   }
 
+  .lg\:bottom-auto {
+    bottom: auto;
+  }
+
   .lg\:left-0 {
     left: 0px;
   }
@@ -12189,28 +12232,20 @@ textarea{
     top: 260px;
   }
 
+  .lg\:top-\[50\%\] {
+    top: 50%;
+  }
+
+  .lg\:top-\[60\%\] {
+    top: 60%;
+  }
+
   .lg\:top-\[65px\] {
     top: 65px;
   }
 
   .lg\:top-\[90px\] {
     top: 90px;
-  }
-
-  .lg\:top-\[50\%\] {
-    top: 50%;
-  }
-
-  .lg\:bottom-auto {
-    bottom: auto;
-  }
-
-  .lg\:left-\[305px\] {
-    left: 305px;
-  }
-
-  .lg\:top-\[60\%\] {
-    top: 60%;
   }
 
   .lg\:z-0 {
@@ -12438,6 +12473,10 @@ textarea{
     width: 350px;
   }
 
+  .lg\:w-\[376px\] {
+    width: 376px;
+  }
+
   .lg\:w-\[380px\] {
     width: 380px;
   }
@@ -12497,14 +12536,6 @@ textarea{
 
   .lg\:w-full {
     width: 100%;
-  }
-
-  .lg\:w-\[calc\(100\%-50px\)\] {
-    width: calc(100% - 50px);
-  }
-
-  .lg\:w-\[376px\] {
-    width: 376px;
   }
 
   .lg\:min-w-\[450px\] {
