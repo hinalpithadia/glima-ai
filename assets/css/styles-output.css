@@ -11745,6 +11745,14 @@ textarea{
     max-width: 100%;
   }
 
+  .md\:max-w-\[430px\] {
+    max-width: 430px;
+  }
+
+  .md\:max-w-\[425px\] {
+    max-width: 425px;
+  }
+
   .md\:translate-x-0 {
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -12246,6 +12254,10 @@ textarea{
 
   .md\:pr-\[17px\] {
     padding-right: 17px;
+  }
+
+  .md\:pt-5 {
+    padding-top: 1.25rem;
   }
 
   .md\:text-left {
@@ -12944,6 +12956,14 @@ textarea{
   .lg\:max-w-max {
     max-width: -moz-max-content;
     max-width: max-content;
+  }
+
+  .lg\:max-w-\[430px\] {
+    max-width: 430px;
+  }
+
+  .lg\:max-w-\[425px\] {
+    max-width: 425px;
   }
 
   .lg\:-translate-x-1\/3 {
