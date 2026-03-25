@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- REQUIRED META TAGS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Glima AI</title>
+    <!--- MAIN CSS ---->
+    <link rel="stylesheet" href="assets/css/styles-output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
+    <style>
+      
+    </style>
+</head>
+
+<body class="lg:overflow-hidden bg-black-0a0a0a">
+<section class="relative bg-blue-500 text-white py-24 overflow-hidden h-[859px]" style="clip-path: polygon(0 21%, 100% 1%, 100% 100%, 0 100%);">
+
+  <!-- LEFT SIDE (SMALL STACKED) -->
+  <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[32%] hidden lg:block z-0">
+
+  <div class="relative h-[500px] p-6 
+  [clip-path:polygon(0_0,85%_0,100%_100%,0_100%)]">
+
+    <!-- Top Image (small + tilted) -->
+    <div class="absolute top-0 left-0 rounded-lg overflow-hidden shadow-xl  z-10">
+      <img src="assets/images/comic-demo1.png" class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Bottom Image (bigger + overlap) -->
+    <div class="absolute bottom-0 left-0  rounded-lg overflow-hidden shadow-xl z-20">
+      <img src="assets/images/comic-demo2.png" class="w-full h-full object-cover" />
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- RIGHT SIDE (FULL HEIGHT) -->
+ <div class="absolute right-0 top-0 h-full w-[36%] hidden lg:block z-0">
+
+  <div class="relative h-full p-6 
+  [clip-path:polygon(15%_0,100%_0,100%_100%,0_100%)]">
+
+    <!-- Top Image -->
+    <div class="absolute  rounded-lg overflow-hidden shadow-xl ">
+      <img src="assets/images/comic-demo3.png" class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Bottom Image -->
+    <div class="absolute  rounded-lg overflow-hidden shadow-xl ">
+      <img src="assets/images/comic-demo4.png" class="w-full h-full object-cover" />
+    </div>
+
+  </div>
+</div>
+
+
+ 
+
+  <!-- CENTER CONTENT -->
+  <div class="relative z-10 max-w-3xl mx-auto text-center px-6">
+
+    <h2 class="text-4xl md:text-5xl font-extrabold uppercase tracking-wide">
+      Built for Modern Story Creators
+    </h2>
+
+    <p class="mt-4 text-gray-400 text-sm md:text-base">
+      Our platform empowers creators, marketers, and storytellers to design engaging
+      comic content without any design or illustration experience.
+    </p>
+
+    <button class="mt-6 bg-lime-400 text-black px-6 py-3 rounded-md font-semibold hover:bg-lime-300 transition">
+      Start Generating Now!
+    </button>
+
+  </div>
+
+</section>
+    <!-- MAIN JS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const createBtn = document.getElementById("create")
+        const myCreationBtn = document.getElementById("my-creation")
+
+        const createSection = document.getElementById("create-section")
+        const myCreationSection = document.getElementById("my-creation-section")
+
+        function isSmallScreen() {
+            return window.innerWidth < 1024
+        }
+
+        function showCreate() {
+            if (!isSmallScreen()) return
+
+            createSection.classList.remove("hidden")
+            myCreationSection.classList.add("hidden")
+
+            createBtn.classList.add("active-tab")
+            myCreationBtn.classList.remove("active-tab")
+        }
+
+        function showMyCreation() {
+            if (!isSmallScreen()) return
+
+            myCreationSection.classList.remove("hidden")
+            createSection.classList.add("hidden")
+
+            myCreationBtn.classList.add("active-tab")
+            createBtn.classList.remove("active-tab")
+        }
+
+        // Button Clicks
+        createBtn.addEventListener("click", showCreate)
+        myCreationBtn.addEventListener("click", showMyCreation)
+
+        /* ✅ IMPORTANT FIX */
+        let lastWidth = window.innerWidth
+
+        window.addEventListener("resize", () => {
+            const currentWidth = window.innerWidth
+
+            // ❌ Ignore resize caused by scroll (height-only changes)
+            if (currentWidth === lastWidth) return
+
+            lastWidth = currentWidth
+
+            if (!isSmallScreen()) {
+                // Desktop → Show both
+                createSection.classList.remove("hidden")
+                myCreationSection.classList.remove("hidden")
+
+                createBtn.classList.remove("active-tab")
+                myCreationBtn.classList.remove("active-tab")
+            } else {
+                // Mobile → Default only ON REAL WIDTH CHANGE
+                showCreate()
+            }
+        })
+
+        // Initial Load
+        if (isSmallScreen()) {
+            showCreate()
+        }
+    </script>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+
+                if (card.classList.contains('card-active')) {
+                    card.classList.remove('card-active');
+                } else {
+
+                    cards.forEach(c => c.classList.remove('card-active'));
+
+                    card.classList.add('card-active');
+                }
+
+            });
+        });
+    </script>
+    <script>
+        let isOpen = false;
+
+        function toggleAdvanced() {
+            const content = document.getElementById("advancedContent");
+            const icon = document.getElementById("arrowIcon");
+
+            if (!isOpen) {
+                // OPEN
+                content.style.height = content.scrollHeight + "px";
+
+                content.addEventListener("transitionend", function handler() {
+                    content.style.height = "auto";
+                    content.removeEventListener("transitionend", handler);
+                });
+
+                icon.classList.add("rotate-180");
+                isOpen = true;
+
+            } else {
+                // CLOSE
+                content.style.height = content.scrollHeight + "px";
+
+                requestAnimationFrame(() => {
+                    content.style.height = "0px";
+                });
+
+                icon.classList.remove("rotate-180");
+                isOpen = false;
+            }
+        }
+    </script>
+
+    <script>
+        function toggleBtn(btn) {
+            const defaultImg = btn.querySelector('.btn-img-default');
+            const activeImg = btn.querySelector('.btn-img-active');
+
+            const isActive = btn.classList.contains('active');
+
+            if (isActive) {
+                btn.classList.remove('active');
+                defaultImg.classList.remove('hidden');
+                activeImg.classList.add('hidden');
+            } else {
+                btn.classList.add('active');
+                defaultImg.classList.add('hidden');
+                activeImg.classList.remove('hidden');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
