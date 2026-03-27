@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/styles-output.css">
+    <link href="https://fonts.cdnfonts.com/css/comic-beacon" rel="stylesheet">
+    <style>
+        .accordion.active {
+            background: #12140A;
+        }
+    </style>
+</head>
+
+<body class="relative bg-[#0A0A0A]">
+    <!--navbar-->
+    <nav id="navbar" class="navbar  fixed top-0 w-full z-50 border-b border-white/10 max-lg:backdrop-blur-lg">
+        <div id="inner" class="lg:px-3 px-0 pt-[15px] pb-[19px]">
+            <div class="w-full flex  flex-col lg:flex-row">
+                <div class="px-3 xl:px-0 flex justify-between items-center lg:flex-row">
+                    <div class="flex items-center">
+                        <a href="#" class="flex items-center">
+                            <svg width="113" height="36" viewBox="0 0 113 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="35.7268" height="35.7268" rx="7.58393" fill="#C6FF00" />
+                                <path
+                                    d="M110.103 14.0696H113.002V27.4879H110.103V25.5556C109.084 26.978 107.5 27.8367 105.407 27.8367C101.757 27.8367 98.7246 24.7505 98.7246 20.7787C98.7246 16.7801 101.757 13.7207 105.407 13.7207C107.5 13.7207 109.084 14.5795 110.103 15.975V14.0696ZM105.863 25.0726C108.278 25.0726 110.103 23.2745 110.103 20.7787C110.103 18.2829 108.278 16.4849 105.863 16.4849C103.448 16.4849 101.623 18.2829 101.623 20.7787C101.623 23.2745 103.448 25.0726 105.863 25.0726Z"
+                                    fill="white" />
+                                <path
+                                    d="M91.3012 13.7207C94.3337 13.7207 96.3733 15.814 96.3733 19.1685V27.4879H93.475V19.3564C93.475 17.4778 92.4552 16.4312 90.8718 16.4312C89.1543 16.4312 87.9466 17.5315 87.9466 19.9736V27.4879H85.0483V19.3564C85.0483 17.4778 84.109 16.4312 82.5256 16.4312C80.8886 16.4312 79.5468 17.5315 79.5468 19.9736V27.4879H76.6484V14.0696H79.5468V15.6798C80.4056 14.3648 81.7205 13.7207 83.3844 13.7207C85.1288 13.7207 86.4169 14.499 87.1952 15.8408C88.0808 14.4453 89.5031 13.7207 91.3012 13.7207Z"
+                                    fill="white" />
+                                <path
+                                    d="M71.8341 12.057C70.8144 12.057 69.9824 11.1982 69.9824 10.2052C69.9824 9.18545 70.8144 8.35352 71.8341 8.35352C72.8539 8.35352 73.6859 9.18545 73.6859 10.2052C73.6859 11.1982 72.8539 12.057 71.8341 12.057ZM70.385 27.488V14.0697H73.2833V27.488H70.385Z"
+                                    fill="white" />
+                                <path d="M64.1211 27.4881V7.89746H67.0194V27.4881H64.1211Z" fill="white" />
+                                <path
+                                    d="M61.4884 17.7731V19.0613C61.4884 24.1871 57.785 27.8369 52.2835 27.8369C46.4331 27.8369 42.2734 23.4893 42.2734 18.0952C42.2734 12.701 46.4868 8.35352 52.1225 8.35352C55.6917 8.35352 58.7242 10.1516 60.3076 12.8084L57.6508 14.3381C56.6847 12.5937 54.5914 11.3592 52.1225 11.3592C48.1506 11.3592 45.3596 14.2844 45.3596 18.122C45.3596 21.906 48.097 24.8312 52.3103 24.8312C55.7186 24.8312 57.8118 23.0599 58.3754 20.5373H52.0956V17.7731H61.4884Z"
+                                    fill="white" />
+                                <path
+                                    d="M12.9968 15.7929L7.69141 15.7897L7.69338 19.8093L12.8168 19.8123C13.3727 19.8121 13.8857 19.5159 14.1619 19.0357L17.0516 14.0292C17.3297 13.5479 17.3286 12.9558 17.0497 12.4728L14.4843 8.02932L11.0062 10.0374L13.6627 14.6386C13.9613 15.1513 13.5904 15.7914 12.9968 15.7929Z"
+                                    fill="black" />
+                                <path
+                                    d="M22.0295 14.6304L24.6849 10.0374L21.2029 8.0293L18.6386 12.4648C18.3608 12.9463 18.3608 13.5387 18.6386 14.018L21.5295 19.0238C21.8073 19.5053 22.3206 19.8004 22.8784 19.8004H28.0092V15.7842H22.6961C22.1028 15.7865 21.734 15.1452 22.0295 14.6304Z"
+                                    fill="black" />
+                                <path
+                                    d="M18.4029 23.0992L21.0529 27.6954L24.533 25.6839L21.9739 21.2454C21.6958 20.7641 21.1827 20.4679 20.6288 20.4688L14.8482 20.4695C14.2923 20.4693 13.7801 20.7663 13.5012 21.2493L10.9358 25.6928L14.4139 27.7009L17.0704 23.0996C17.3651 22.5847 18.1049 22.5859 18.4029 23.0992Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <button data-collapse-toggle="navbar-default" type="button" id="toggleButton"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-default" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:opacity-100 opacity-0 w-full lg:flex lg:pl-11 max-h-96 overflow-auto lg:max-h-none lg:overflow-visible lg:shadow-none shadow-[0_10px_15px_-5px_rgba(255,255,255,0.3)] lg:p-0 p-5"
+                    id="navbar-default">
+                    <ul
+                        class="flex lg:items-center flex-col mt-4 lg:mt-0 gap-2 lg:gap-9 lg:flex-row ml-auto  xl-0 lg:mb-0 mb-2">
+                        <li class="relative lg:mb-0 mb-2 lg:text-left text-center">
+                            <a href="#" class="nav-link ">App</a>
+                        </li>
+                        <li class="relative lg:mb-0 mb-2 lg:text-left text-center">
+                            <a href="#" class="nav-link ">Models</a>
+                        </li>
+                        <li class="relative lg:mb-0 mb-2 lg:text-left text-center">
+                            <a href="#" class="nav-link ">Threads</a>
+                        </li>
+                        <li class="relative lg:mb-0 mb-2 lg:text-left text-center">
+                            <a href="#" class="nav-link ">Articles</a>
+                        </li>
+                        <li class="relative lg:mb-0 mb-2 lg:text-left text-center">
+                            <a href="#" class="nav-link ">Trainings</a>
+                            <span
+                                class="bg-limegreen rounded-full px-1.5 py-0.5 text-xs text-black-0a0a0a leading-5 font-medium">New</span>
+                        </li>
+
+                    </ul>
+                    <div class="flex items-center gap-2.5 ml-auto justify-center">
+                        <button
+                            class="p-2 border border-white/20 text-white rounded-lg text-sm leading-[18px] font-medium transition-all duration-500 hover:border-white/20 hover:bg-white/20 hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                fill="none">
+                                <g clip-path="url(#clip0_2350_2679)">
+                                    <path
+                                        d="M15.2378 3.27795C14.0905 2.75155 12.8603 2.36371 11.574 2.14156C11.5505 2.13727 11.5271 2.14799 11.5151 2.1694C11.3568 2.45083 11.1816 2.81793 11.0588 3.10649C9.67534 2.89935 8.29891 2.89935 6.94377 3.10649C6.82101 2.81153 6.63939 2.45083 6.48045 2.1694C6.46839 2.14869 6.44498 2.13797 6.42156 2.14156C5.13597 2.36297 3.90571 2.75081 2.75772 3.27795C2.74777 3.28224 2.73926 3.28937 2.7336 3.29865C0.400069 6.78492 -0.239212 10.1855 0.074382 13.5439C0.0757882 13.5603 0.0850343 13.5761 0.097796 13.5861C1.63739 14.7167 3.12879 15.4031 4.59245 15.8581C4.61587 15.8653 4.64069 15.8567 4.65559 15.8374C5.00181 15.3646 5.31045 14.866 5.57507 14.3418C5.59068 14.3111 5.57577 14.2746 5.54385 14.2625C5.0543 14.0768 4.58816 13.8503 4.13975 13.5932C4.10427 13.5725 4.10143 13.5218 4.13409 13.4975C4.22844 13.4268 4.32284 13.3532 4.41294 13.279C4.42926 13.2654 4.45197 13.2625 4.47113 13.2711C7.41694 14.616 10.6061 14.616 13.5172 13.2711C13.5363 13.2618 13.5591 13.2647 13.5761 13.2782C13.6662 13.3525 13.7606 13.4268 13.8556 13.4975C13.8883 13.5218 13.8861 13.5725 13.8507 13.5932C13.4023 13.8553 12.9361 14.0768 12.4459 14.2617C12.4139 14.2739 12.3997 14.311 12.4154 14.3417C12.6857 14.8653 12.9943 15.3638 13.3342 15.8367C13.3484 15.8567 13.3739 15.8653 13.3973 15.8581C14.8681 15.4031 16.3595 14.7167 17.8991 13.586C17.9126 13.5761 17.9211 13.561 17.9225 13.5446C18.2978 9.66194 17.2938 6.28922 15.2611 3.29936C15.2562 3.28937 15.2477 3.28224 15.2378 3.27795ZM6.01505 11.499C5.12816 11.499 4.39737 10.6848 4.39737 9.68479C4.39737 8.68484 5.11396 7.87058 6.01505 7.87058C6.92317 7.87058 7.6469 8.69197 7.63269 9.68479C7.63269 10.6848 6.91607 11.499 6.01505 11.499ZM11.9961 11.499C11.1092 11.499 10.3784 10.6848 10.3784 9.68479C10.3784 8.68484 11.095 7.87058 11.9961 7.87058C12.9042 7.87058 13.6279 8.69197 13.6138 9.68479C13.6138 10.6848 12.9043 11.499 11.9961 11.499Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2350_2679">
+                                        <rect width="18" height="18" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                        <button
+                            class="py-2 px-3 rounded-lg bg-[#C6FF00] hover:bg-[#D7FF4D] hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);] text-sm leading-[18px] font-medium text-black transition-all duration-500"
+                            data-modal-target="Sign_In">Generate
+                        </button>
+                        <button
+                            class="py-2 px-3 border border-white/20 text-white rounded-lg text-sm leading-[18px] font-medium transition-all duration-500 hover:border-white/20 hover:bg-white/20 ">Sign
+                            In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--hero section-->
+    <div class="hero relative w-full  overflow-visible pt-[70px]">
+        <div style="background-image: url(https://glima.ai/storage/media/1774499926_oChLphp8Zfd4i.webp);"
+            class="px-4 xl:h-screen flex flex-col items-center justify-center bg-cover border-b border-white/20">
+            <div class="w-full max-w-[1573px] mx-auto relative z-10 py-8 xl:py-0">
+                <div class="flex flex-col xl:flex-row items-center justify-center gap-[62px]">
+                    <div class="xl:max-w-[700px] w-full flex flex-col gap-[26px] text-center xl:text-start">
+                        <h1
+                            class="text-white [text-shadow:2px_2px_0_#000] [-webkit-text-stroke-width:1px] [-webkit-text-stroke-color:#000] font-['Comic_Beacon'] text-[48px] xl:text-[72px] font-normal leading-[82px] tracking-[3.6px] uppercase">
+                            Build Stories That Come Alive
+                        </h1>
+                        <p class="text-lg font-normal text-[#B1B1B1]">Can create dynamic characters, immersive scenes,
+                            and engaging panel layouts effortlessly. Whether it’s a fun short strip or a full comic
+                            narrative, bring your storytelling vision to life in a way that truly connects with your
+                            audience</p>
+                        <a href="https://glima.ai/ai-comic-book"
+                            class="mx-auto xl:mx-0 px-[30px] py-3 rounded-[10px] border border-[#C6FF00] bg-[#C6FF00] shadow-[0_4px_0_0_#000] text-lg font-semibold w-fit transition-all duration-500 hover:bg-[#a8d50c]">Start
+                            Generating Now!</a>
+                    </div>
+                    <img src="	https://glima.ai/storage/media/1774523401_RQeGphpSQoH2F.webp" alt="img" class="2xl:max-w-max lg:max-w-[600px] max-w-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="w-full relative px-4 pt-14 xl:pt-[120px] pb-14 lg:pb-0 after:contents-[''] after:absolute after:w-[230px] after:-left-[89px] after:top-[180px] after:z-0 after:h-[230px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
+        <div class="max-w-[1360px] w-full mx-auto flex flex-col gap-[35px] lg:gap-[70px]">
+            <h2 class="text-white 
+           [text-shadow:2px_2px_0_#000] 
+           [-webkit-text-stroke:1px_#000] 
+           font-['Comic_Beacon'] 
+           text-[38px]
+           lg:text-[52px] 
+           font-normal 
+           leading-[54px] 
+           tracking-[2.6px] 
+           uppercase text-center">
+                AI Tool for Powerful Comic Storytelling
+            </h2>
+
+            <div class="flex flex-col gap-[52px] lg:gap-2.5">
+                <div class="flex flex-col lg:flex-row items-center gap-[52px]">
+                    <div class="max-w-[380px] w-full flex flex-col gap-2.5 text-center">
+                        <h3
+                            class="text-white [text-shadow:2px_2px_0_#000] [-webkit-text-stroke-width:1px] [-webkit-text-stroke-color:#000] font-['Comic_Beacon'] text-3xl lg:text-[39px] font-normal leading-normal tracking-[2px] uppercase">
+                            Input Your Concept</h3>
+                        <p class="text-[#B1B1B1] text-lg font-normal">Provide a prompt or storyline to get started.
+                        </p>
+                    </div>
+                    <img src="https://glima.ai/storage/media/1774517968_1bgDphpaXy0cB.webp" alt="alt">
+                    <div class=" w-full flex flex-col gap-2.5 text-center">
+                        <h3
+                            class="text-white [text-shadow:2px_2px_0_#000] [-webkit-text-stroke-width:1px] [-webkit-text-stroke-color:#000] font-['Comic_Beacon'] text-3xl lg:text-[39px] font-normal leading-normal tracking-[2px] uppercase">
+                            Visual Story</h3>
+                        <p class="text-[#B1B1B1] text-lg font-normal">Watch your comic come to life with panels and
+                            characters.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center gap-[52px]">
+                    <div class="lg:max-w-[380px] w-full flex flex-col gap-2.5 text-center">
+                        <h3
+                            class="text-white [text-shadow:2px_2px_0_#000] [-webkit-text-stroke-width:1px] [-webkit-text-stroke-color:#000] font-['Comic_Beacon'] text-3xl lg:text-[39px] font-normal leading-normal tracking-[2px] uppercase">
+                            Edit & Enhance</h3>
+                        <p class="text-[#B1B1B1] text-lg font-normal">Fine-tune details, dialogues,
+                            and layout.
+                        </p>
+                    </div>
+                    <img src="	https://glima.ai/storage/media/1774517999_MANfphpRjmM4C.webp" alt="alt">
+                    <div class=" w-full flex flex-col gap-2.5 text-center">
+                        <h3
+                            class="text-white [text-shadow:2px_2px_0_#000] [-webkit-text-stroke-width:1px] [-webkit-text-stroke-color:#000] font-['Comic_Beacon'] text-3xl lg:text-[39px] font-normal leading-normal tracking-[2px] uppercase">
+                            Download & Share</h3>
+                        <p class="text-[#B1B1B1] text-lg font-normal">Get high-quality output ready for publishing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section
+        class="mt-20 relative bg-[#12140A] text-white pt-8 pb-8 lg:pb-0 lg:pt-24 overflow-hidden h-auto 2xl:h-[856px] xl:h-[790px] [@media(max-width:1366px)]:h-[700px] lg:h-[700px]  md:[clip-path:polygon(0_23%,_100%_1%,_100%_100%,_0_100%)]">
+        <img src="	https://glima.ai/storage/media/1774508092_2ng9phpL1hhOB.webp" alt="img" class="absolute right-[25%]">
+        <img src="	https://glima.ai/storage/media/1774508082_blIQphpHZui6S.webp" alt="img"
+            class="absolute left-[25%] bottom-10">
+        <!-- LEFT SIDE (SMALL STACKED) -->
+        <div class="absolute left-0 h-full top-1/2 bottom-0 -translate-y-1/2 w-[32%] hidden lg:block z-0">
+            <div class="relative h-full  p-6 
+  [clip-path:polygon(0_0,85%_0,100%_100%,0_100%)]">
+
+                <!-- Top Image (small + tilted) -->
+                <div class="absolute top-[90px] left-0 rounded-lg overflow-hidden shadow-xl  z-10">
+                    <img src="	https://glima.ai/storage/media/1774523501_8Q2EphptSBpJv.webp"
+                        class="w-full h-full object-cover" />
+                </div>
+
+                <!-- Bottom Image (bigger + overlap) -->
+                <div class="absolute bottom-0 left-0  rounded-lg overflow-hidden shadow-xl z-20">
+                    <img src="	https://glima.ai/storage/media/1774523491_0tVGphpupZwtn.webp"
+                        class="w-full h-full object-cover" />
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE (FULL HEIGHT) -->
+        <div class="absolute right-0 top-0 h-full w-[36%] hidden lg:block z-0">
+
+            <div class="relative h-full 
+  [clip-path:polygon(15%_0,100%_0,100%_100%,0_100%)] w-full">
+
+                <!-- Top Image -->
+                <div class="absolute right-0 rounded-lg overflow-hidden">
+                    <img src="https://glima.ai/storage/media/1774523518_buqBphp35BWVs.webp"
+                        class="w-full h-full object-cover" />
+                </div>
+
+                <!-- Bottom Image -->
+                <div class="absolute right-0 bottom-0  rounded-lg overflow-hidden">
+                    <img src="	https://glima.ai/storage/media/1774523530_7UsmphpzDJ5BX.webp"
+                        class="w-full h-full object-cover" />
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CENTER CONTENT -->
+        <div
+            class="relative md:absolute md:left-1/2 md:-translate-x-1/2 md:top-1/2 md:-translate-y-1/3 z-10 2xl:max-w-[891px] lg:max-w-[500px] w-full mx-auto my-auto text-center px-4">
+
+            <h2 class="text-white 
+           text-center
+           [text-shadow:2px_2px_0_#000] 
+           [-webkit-text-stroke-width:1px] 
+           [-webkit-text-stroke-color:#000] 
+           font-['Comic_Beacon'] 
+           text-[38px]
+           lg:text-[51px] 
+           font-normal 
+           leading-[68px] 
+           tracking-[2.6px] 
+           uppercase">
+                Build Engaging Comic Stories
+            </h2>
+
+            <p class="mt-5 max-w-[735px] w-full mx-auto text-center text-base md:text-lg font-normal text-[#B1B1B1] ">
+                With AI-powered tools, you can generate compelling characters, dynamic scenes, and seamless story flow
+                in just a few clicks.
+            </p>
+
+            <a href="https://glima.ai/ai-comic-book"
+                class="mx-auto mt-10 px-[30px] py-3 rounded-[10px] border border-[#C6FF00] bg-[#C6FF00] shadow-[0_4px_0_0_#000] text-lg font-semibold w-fit transition-all duration-500 hover:bg-[#a8d50c] text-black">Start
+                Generating Now!</a>
+
+        </div>
+
+    </section>
+
+    <div class="w-full px-4 pt-14 lg:pt-[120px]">
+        <h2 class="text-white 
+           text-center
+           [text-shadow:2px_2px_0_#000] 
+           [-webkit-text-stroke:1px_#000] 
+           font-['Comic_Beacon'] 
+           text-[38px]
+           lg:text-[52px] 
+           font-normal 
+           leading-[68px] 
+           tracking-[2.6px] 
+           uppercase">Explore Community Creation </h2>
+
+        <img src="https://glima.ai/storage/media/1774523562_2P9kphpiuVMl9.webp" alt="img"
+            class="mt-[35px] mx-auto lg:mt-[70px]">
+
+    </div>
+
+    <div class="w-full px-4 pt-14 lg:pt-[120px]">
+        <h2 class="text-white 
+           text-center
+           [text-shadow:2px_2px_0_#000] 
+           [-webkit-text-stroke:1px_#000] 
+           font-['Comic_Beacon'] 
+           text-[38px]
+           lg:text-[52px] 
+           font-normal 
+           leading-[68px] 
+           tracking-[2.6px] 
+           uppercase">Frequently Asked Questions</h2>
+
+        <div class="max-w-[1170px] w-full mx-auto pt-[35px] lg:pt-[70px]">
+            <div class="accordion-group flex flex-col gap-5 h-full lg:col-span-7 col-span-12"
+                data-accordion="default-accordion">
+                <div class="accordion bg-black-1B1B1B accordion-active:bg-[#12140A] p-4 md:p-[30px]"
+                    id="basic-heading-one-with-arrow-always-open">
+                    <button
+                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base md:text-xl font-medium leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
+                        aria-controls="basic-collapse-one-with-arrow-always-open">
+                        <h5 class="text-start">
+                            What is an AI Comic Story Generator?
+                        </h5>
+                        <a href=""
+                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
+                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </button>
+                    <div id="basic-collapse-one-with-arrow-always-open"
+                        class="accordion-content w-full px-0 overflow-hidden active"
+                        aria-labelledby="basic-heading-one-with-arrow-always-open">
+                        <p class="text-sm md:text-base font-normal leading-6 text-white pt-3">
+                            It’s an AI-powered tool that transforms your ideas into complete comic stories with
+                            characters, panels, and a structured narrative flow.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion bg-black-1B1B1B accordion-active:border-gray-900 p-4 md:p-[30px]"
+                    id="basic-heading-two-with-arrow-always-open">
+                    <button
+                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base md:text-xl font-medium leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
+                        aria-controls="basic-collapse-two-with-arrow-always-open">
+                        <h5 class="text-start">
+                            Do I need writing or drawing skills?
+                        </h5>
+                        <a href=""
+                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
+                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </button>
+                    <div id="basic-collapse-two-with-arrow-always-open"
+                        class="accordion-content w-full px-0 overflow-hidden active"
+                        aria-labelledby="basic-heading-two-with-arrow-always-open">
+                        <p class="text-sm md:text-base font-normal leading-6 text-white pt-3">
+                            No, the AI helps generate both the visuals and story flow, making it easy for anyone to
+                            create comics.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion bg-black-1B1B1B accordion-active:border-gray-900 p-4 md:p-[30px]"
+                    id="basic-heading-three-with-arrow-always-open">
+                    <button
+                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base md:text-xl font-medium leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
+                        aria-controls="basic-collapse-three-with-arrow-always-open">
+                        <h5 class="text-start">
+                            Can I create full comic stories or just short strips?
+                        </h5>
+                        <a href=""
+                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
+                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </button>
+                    <div id="basic-collapse-three-with-arrow-always-open"
+                        class="accordion-content w-full px-0 overflow-hidden active"
+                        aria-labelledby="basic-heading-three-with-arrow-always-open">
+                        <p class="text-sm md:text-base font-normal leading-6 text-white pt-3">
+                            You can create both—short comic strips or full-length stories with multiple scenes and
+                            chapters.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion bg-black-1B1B1B accordion-active:border-gray-900 p-4 md:p-[30px]"
+                    id="basic-heading-four-with-arrow-always-open">
+                    <button
+                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base md:text-xl font-medium leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
+                        aria-controls="basic-collapse-four-with-arrow-always-open">
+                        <h5 class="text-start">
+                            Can I customize the story and characters?
+                        </h5>
+                        <a href=""
+                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
+                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </button>
+                    <div id="basic-collapse-four-with-arrow-always-open"
+                        class="accordion-content w-full px-0 overflow-hidden active"
+                        aria-labelledby="basic-heading-four-with-arrow-always-open">
+                        <p class="text-sm md:text-base font-normal leading-6 text-white pt-3">
+                            Yes, you can edit characters, dialogues, scenes, and layouts to match your creative vision.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion bg-black-1B1B1B accordion-active:border-gray-900 p-4 md:p-[30px]"
+                    id="basic-heading-four-with-arrow-always-open">
+                    <button
+                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-base md:text-xl font-medium leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
+                        aria-controls="basic-collapse-four-with-arrow-always-open">
+                        <h5 class="text-start">
+                            What types of stories can I create?
+                        </h5>
+                        <a href=""
+                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-45 rounded-full flex items-center justify-center pointer-events-none">
+                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
+                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </button>
+                    <div id="basic-collapse-four-with-arrow-always-open"
+                        class="accordion-content w-full px-0 overflow-hidden active"
+                        aria-labelledby="basic-heading-four-with-arrow-always-open">
+                        <p class="text-sm md:text-base font-normal leading-6 text-white pt-3">
+                            You can create action, comedy, romance, fantasy, educational, or even marketing-based comic
+                            stories.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

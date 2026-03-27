@@ -21,6 +21,8 @@ module.exports = {
     "./interior-landing-page/**/*.html", 
     "./use-cases/**/*.html",
      "./vidu/**/*.html",
+      "./comic/**/*.html",
+        "./tools/**/*.html",
   ],
   theme: {
     extend: {

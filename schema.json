@@ -17,22 +17,22 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Create Head to Balloon Videos with Glima AI",
+  "name": "How to Use AI Punch Hit",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Upload Your Image",
-      "text": "Upload a clear photo of the person or subject you want to transform. The AI analyzes the face and prepares it for the head-to-balloon animation effect."
+      "name": "Upload Your Photo",
+      "text": "Upload a clear photo of a person, group, or even a pet. Front-facing images with visible faces usually produce the best results."
     },
     {
       "@type": "HowToStep",
-      "name": "Choose the Balloon Style",
-      "text": "Select the balloon style, inflation effect, and motion settings to create a fun and creative transformation scene."
+      "name": "Generate the Punch Hit Effect",
+      "text": "Our AI analyzes facial features and creates a dynamic punch animation where the face reacts with exaggerated expressions and motion."
     },
     {
       "@type": "HowToStep",
-      "name": "Generate & Download",
-      "text": "Click generate and let AI create the head-to-balloon animation in seconds. Preview the result, download the video, and share it on social media."
+      "name": "Download and Share the Video",
+      "text": "Within seconds, your punch hit animation is ready. Download the video or share it instantly on platforms like TikTok, Instagram Reels, or YouTube Shorts"
     }
   ]
 }
@@ -43,42 +43,42 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
   "mainEntity": [
     {
       "@type": "Question",
-      "name": " What is the AI Head to Balloon Video Generator?",
+      "name": "What is an AI Punch Hit video generator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The AI Head to Balloon Video Generator is a creative tool that transforms a person’s head in a photo into a playful balloon-style animation with fun motion effects."
+        "text": "It is an AI tool that converts a photo into a short video where a punch animation hits the subject’s face with exaggerated reactions."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I customize the balloon style or motion?",
+      "name": "Can the punch effect work on group photos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, you can adjust animation style, inflation effects, and motion settings to create different looks."
+        "text": "Yes. Many AI generators can animate multiple people in the same image, giving each person a unique reaction."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I create funny or viral videos with this effect?",
+      "name": "Does the AI create realistic facial movement?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, the playful balloon transformation is great for humorous and viral-style social media content."
+        "text": "Yes. The system simulates facial muscle reactions, cheek ripples, and motion effects to make the punch animation look dynamic."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I regenerate the video with different settings?",
+      "name": "What photo format should I upload?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, you can change the effects and generate a new version anytime."
+        "text": "Most generators support JPG or PNG images with clear lighting and visible faces."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I upload my own photo?",
+      "name": "Can I create punch videos with pets?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, you can upload your own image and the AI will apply the head-to-balloon animation effect.."
+        "text": "Yes. Some AI tools can apply the punch effect to pets if their faces are clearly visible."
       }
     }
   ]

@@ -4,13 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="../assets/css/input.css">
+    <title>Document</title>
     <link rel="stylesheet" href="../assets/css/styles-output.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
 </head>
 
 <body class="relative bg-[#0A0A0A]">
+    <svg class="absolute top-[250px] lg:block hidden" width="689" height="1278" viewBox="0 0 689 1278" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.5" filter="url(#filter0_f_2607_2814)">
+            <circle cx="50" cy="639" r="139" fill="#C6FF00" />
+        </g>
+        <defs>
+            <filter id="filter0_f_2607_2814" x="-589" y="0" width="1278" height="1278" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                <feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_2607_2814" />
+            </filter>
+        </defs>
+    </svg>
 
+    <div class="backdrop-blur-lg bg-black/25 "></div>
     <!--navbar-->
     <nav id="navbar" class="navbar  fixed top-0 w-full z-50 border-b border-white/10 max-lg:backdrop-blur-lg">
         <div id="inner" class="lg:px-3 px-0 pt-[15px] pb-[19px]">
@@ -113,56 +132,124 @@
     </nav>
 
     <!--hero section-->
-    <div
-        class="hero relative w-full h-auto overflow-visible pt-[138px] pb-[60px] after:contents-[''] after:absolute after:w-[278px] after:-left-[89px] after:-bottom-[136px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
-        <div class="w-full max-w-screen-2xl px-4 lg:px-8 mx-auto relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-9">
-                <div class="relative flex items-center">
-                    <div class="flex flex-col gap-[26px] overflow-visible lg:items-start items-center">
-                        <h1
-                            class="bg-gradient-to-b from-white to-[#828282] bg-clip-text text-transparent text-[64px] font-medium leading-[80px] lg:text-left text-center">
-                            AI Frost Carpet Video Generator
-                        </h1>
-                        <p class="text-lg leading-7 text-[#B1B1B1] lg:text-left text-center">
-                            Upload your photo and let AI create a magical winter scene where you walk across a glowing
-                            frost carpet. Turn a simple image into a cinematic icy video in seconds.
-                        </p>
-                        <button
-                            class="py-3.5 px-[30px] w-max rounded-lg bg-[#C6FF00] text-lg font-semibold leading-[26px] text-black transition-all duration-500 hover:shadow-md hover:shadow-[#c8ff00bd]">Start
-                            Generating Now!</button>
+    <div class="hero relative w-full overflow-hidden pb-[120px] pt-[134px] px-5 lg:px-8">
+        <div class="w-full max-w-[1470px]  mx-auto relative z-10">
+            <div class="block lg:text-left text-center w-full max-w-screen-lg mx-auto mb-16">
+                <h1
+                    class="mb-3.5 bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent text-[48px] font-medium text-center">
+                    AI Celebrity Lookalike Finder
+                </h1>
+                <p class="text-base text-center text-gray-B1B1B1 leading-7 font-normal">
+                    Upload your photo and discover which celebrity you look like using advanced AI facial recognition in
+                    seconds.
+                </p>
+            </div>
+            <div class="flex items-center flex-col md:flex-row gap-5">
+                <div
+                    class="max-w-[420px] h-[482px] w-full border border-[#FFFFFF33] rounded-[15px] bg-[#1B1B1B] p-5 flex flex-col gap-[15px]">
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center justify-between relative">
+                            <label class="text-base text-white font-medium">Upload Your Photo
+                            </label>
+                        </div>
+                        <div
+                            class="bg-black h-[190px] rounded-[10px] relative outline-none flex justify-center transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
+                            <label class="absolute inset-0 cursor-pointer rounded-3xl z-30">
+                                <input type="file" class="hidden" accept="image/*">
+                            </label>
+                            <div
+                                class="flex flex-col items-center justify-center gap-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+                                <svg width="40" height="40" viewBox="0 0 82 82" fill="none" class=""
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M30.7501 34.1667C34.524 34.1667 37.5834 31.1073 37.5834 27.3333C37.5834 23.5594 34.524 20.5 30.7501 20.5C26.9761 20.5 23.9167 23.5594 23.9167 27.3333C23.9167 31.1073 26.9761 34.1667 30.7501 34.1667Z"
+                                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <path
+                                        d="M44.4166 6.83398H30.7499C13.6666 6.83398 6.83325 13.6673 6.83325 30.7507V51.2507C6.83325 68.334 13.6666 75.1673 30.7499 75.1673H51.2499C68.3333 75.1673 75.1666 68.334 75.1666 51.2507V34.1673"
+                                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <path d="M53.8125 17.084H72.6042" stroke="white" stroke-width="3"
+                                        stroke-linecap="round"></path>
+                                    <path d="M63.2083 26.4792V7.6875" stroke="white" stroke-width="3"
+                                        stroke-linecap="round"></path>
+                                    <path
+                                        d="M9.12256 64.7466L25.9667 53.4374C28.6659 51.6266 32.5609 51.8316 34.9867 53.9157L36.1142 54.9066C38.7792 57.1957 43.0842 57.1957 45.7492 54.9066L59.9626 42.7091C62.6276 40.4199 66.9326 40.4199 69.5976 42.7091L75.1667 47.4924"
+                                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                                <span class="text-center font-normal text-sm pt-2.5 text-white min-w-56">
+                                    Upload Image Here
+                                </span>
+                                <p class="text-xs font-light text-[#797979] text-center">
+                                    Drop your image to add in to the editor
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    <p class="text-xs font-normal text-[#797979]">This AI face rating tool will evaluate your
+                        confidence, intelligence, reliability, and sense of humor.</p>
+
+                    <button
+                        class="mt-auto w-full flex items-center justify-between gap-2 mx-auto bg-[#C6FF00] hover:bg-[#a8d50c] transition-all duration-500  lg:rounded-[10px] cursor-pointer">
+                        <div class="flex items-center gap-2 w-fit lg:pl-3 lg:px-0 px-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <g opacity="0.7" clip-path="url(#clip0_6433_3337)">
+                                    <path
+                                        d="M16.0867 16.0753C19.455 12.7071 19.455 7.24606 16.0867 3.87782C12.7185 0.509582 7.25751 0.509581 3.88927 3.87782C0.521026 7.24606 0.521026 12.7071 3.88927 16.0753C7.25751 19.4435 12.7185 19.4435 16.0867 16.0753Z"
+                                        fill="black"></path>
+                                    <path
+                                        d="M9.53026 4.59538C9.69134 4.16007 10.307 4.16007 10.4681 4.59538L11.72 7.97857C11.7706 8.11543 11.8786 8.22333 12.0154 8.27397L15.3986 9.52587C15.8339 9.68695 15.8339 10.3026 15.3986 10.4637L12.0154 11.7156C11.8786 11.7663 11.7706 11.8742 11.72 12.011L10.4681 15.3942C10.307 15.8295 9.69134 15.8295 9.53026 15.3942L8.27837 12.011C8.22773 11.8742 8.11982 11.7663 7.98296 11.7156L4.59977 10.4637C4.16446 10.3026 4.16446 9.68694 4.59977 9.52587L7.98296 8.27397C8.11982 8.22333 8.22773 8.11543 8.27837 7.97857L9.53026 4.59538Z"
+                                        fill="#C6FF00" stroke="url(#paint0_linear_6433_3337)" stroke-width="0.1"></path>
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear_6433_3337" x1="9.99919" y1="3.32812" x2="9.99919"
+                                        y2="16.6615" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"></stop>
+                                        <stop offset="0.480769" stop-color="white" stop-opacity="0"></stop>
+                                        <stop offset="1" stop-color="white"></stop>
+                                    </linearGradient>
+                                    <clipPath id="clip0_6433_3337">
+                                        <rect width="20" height="20" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="text-sm font-semibold leading-normal text-black opacity-70">12 Credit</span>
+                        </div>
+                        <span
+                            class="py-[13px] pr-[19px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-6 text-black font-semibold">
+                            Generate
+                        </span>
+                    </button>
                 </div>
-                <div class="relative w-full min-h-[522px] max-h-[560px]">
-                    <video class="myVideo rounded-3xl w-full h-full  object-cover" autoplay muted loop playsinline
-                        poster="https://glima.ai/storage/media/1745488640_YXKQphpIceLur.webp">
-                        <source src="../assets/New Video/Couple Arrival ai/1.mp4" type="video/mp4" />
-                    </video>
-                    <div class="absolute right-[20px] bottom-[20px] rounded-[15px] flex gap-0">
-                        <img src="../assets/New Video/kwok dance/image.webp" alt="360 degree Rotation poster image"
-                            class="w-full max-w-[180px] rounded-xl">
-                    </div>
+                <div
+                    class="w-full h-[482px] w-full border border-[#FFFFFF33] rounded-[15px] bg-[#1B1B1B] p-2.5 flex flex-col items-center justify-center gap-[15px]">
+                    <img src="	https://glima.ai/storage/media/1774593741_WFbdphpRmYppl.webp" alt="img">
                 </div>
             </div>
         </div>
     </div>
+
     <!--unstability section-->
-    <div class="py-16 relative w-full z-0">
-        <div class="w-full max-w-screen-2xl px-4 lg:px-8 mx-auto relative z-10">
-            <div class="flex flex-col gap-5 mb-[70px] lg:items-start items-center">
+    <div class=" pb-16 relative w-full px-5 lg:px-8 after:contents-[''] after:absolute after:w-[278px] after:-right-[89px] after:top-[180px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
+        <div class="w-full max-w-[1470px] mx-auto relative z-10">
+            <div class="flex flex-col lg:items-start items-center lg:text-left text-center gap-[15px] mb-[70px]">
                 <h2
-                    class="text-[54px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text lg:text-left text-center">
-                    How to use AI Frost Carpet Video Generator
+                    class="text-[44px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
+                    How to use AI Celebrity Lookalike Finder
                 </h2>
-                <p class="text-lg leading-7 text-gray-B1B1B1 lg:text-left text-center">
-                    Describe your idea, customize the settings, and let AI generate your video in seconds.
+                <p class="lg:text-lg text-base leading-7 text-gray-B1B1B1">
+                    The AI Image Generator is a tool that transforms text descriptions into visual art using advanced
+                    artificial intelligence.
                 </p>
 
             </div>
             <div class="grid grid-cols-1  lg:grid-cols-3 gap-[30px]">
                 <div
-                    class="relative rounded-[24px] bg-black-1B1B1B border-[0.8px] border-white/20 p-4 flex flex-col gap-6">
+                    class="relative rounded-[24px] bg-black-1B1B1B border-[0.8px] border-white/20 p-5 flex flex-col gap-6">
                     <div
-                        class="w-full h-[200px] bg-black-0a0a0a rounded-[20px] border border-white/20 flex justify-center items-center">
+                        class="w-full min-h-[200px] h-full bg-black-0a0a0a rounded-[20px] border border-white/20 flex justify-center items-center">
                         <div class="svg-bg absolute">
                             <svg width="430" height="200" viewBox="0 0 430 200" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1030,23 +1117,24 @@
                         </div>
                         <div class="relative z-10">
                             <div
-                                class="w-[70px] h-[70px]  flex items-center justify-center bg-[linear-gradient(180deg,#E6FF8D_0%,#C6FF00_100%)] rounded-full text-black-0a0a0a text-2xl font-medium">
+                                class="w-[70px] h-[70px] flex items-center justify-center bg-[linear-gradient(180deg,#E6FF8D_0%,#C6FF00_100%)] rounded-full text-black-0a0a0a text-2xl font-medium">
                                 1</div>
                         </div>
                     </div>
                     <div class="flex flex-col gap-3.5">
-                        <h4 class="text-2xl font-medium text-white text-center leading-6">
+                        <h4 class="text-2xl font-medium text-white text-center leading-8">
                             Upload Your Photo
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                            Upload a clear image where the person is visible for the best animation result.
+                            Choose a clear, front-facing image with good lighting so the AI can accurately detect your
+                            facial features.
                         </p>
                     </div>
                 </div>
                 <div
-                    class="relative rounded-[24px] bg-black-1B1B1B border-[0.8px] border-white/20 p-4 flex flex-col gap-6">
+                    class="relative rounded-[24px] bg-black-1B1B1B border-[0.8px] border-white/20 p-5 flex flex-col gap-6">
                     <div
-                        class="w-full h-[200px] bg-black-0a0a0a rounded-[20px] border border-white/20 flex justify-center items-center">
+                        class="w-full min-h-[200px] h-full bg-black-0a0a0a rounded-[20px] border border-white/20 flex justify-center items-center">
                         <div class="svg-bg absolute">
                             <svg width="430" height="200" viewBox="0 0 430 200" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1914,23 +2002,24 @@
                         </div>
                         <div class="relative z-10">
                             <div
-                                class="w-[70px] h-[70px]  flex items-center justify-center bg-[linear-gradient(180deg,#E6FF8D_0%,#C6FF00_100%)] rounded-full text-black-0a0a0a text-2xl font-medium">
+                                class="w-[70px] h-[70px] flex items-center justify-center bg-[linear-gradient(180deg,#E6FF8D_0%,#C6FF00_100%)] rounded-full text-black-0a0a0a text-2xl font-medium">
                                 2</div>
                         </div>
                     </div>
                     <div class="flex flex-col gap-3.5">
-                        <h4 class="text-2xl font-medium text-white text-center leading-6">
-                            Apply the Frost Carpet Effect
+                        <h4 class="text-2xl font-medium text-white text-center leading-8">
+                            Let AI Analyze Your Face
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                            AI analyzes the image and generates a frozen carpet with icy textures and sparkling frost.
+                            Our advanced AI scans your facial structure, expressions, and key details to compare with
+                            thousands of celebrity faces.
                         </p>
                     </div>
                 </div>
                 <div
-                    class="relative rounded-[24px] bg-black-1B1B1B border-[0.8px] border-white/20 p-4 flex flex-col gap-6">
+                    class="relative rounded-[24px] bg-black-1B1B1B border-[0.8px] border-white/20 p-5 flex flex-col gap-6">
                     <div
-                        class="w-full h-[200px] bg-black-0a0a0a rounded-[20px] border border-white/20 flex justify-center items-center">
+                        class="w-full min-h-[200px] h-full bg-black-0a0a0a rounded-[20px] border border-white/20 flex justify-center items-center">
                         <div class="svg-bg absolute">
                             <svg width="430" height="200" viewBox="0 0 430 200" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -2798,16 +2887,17 @@
                         </div>
                         <div class="relative z-10">
                             <div
-                                class="w-[70px] h-[70px]  flex items-center justify-center bg-[linear-gradient(180deg,#E6FF8D_0%,#C6FF00_100%)] rounded-full text-black-0a0a0a text-2xl font-medium">
+                                class="w-[70px] h-[70px] flex items-center justify-center bg-[linear-gradient(180deg,#E6FF8D_0%,#C6FF00_100%)] rounded-full text-black-0a0a0a text-2xl font-medium">
                                 3</div>
                         </div>
                     </div>
                     <div class="flex flex-col gap-3.5">
-                        <h4 class="text-2xl font-medium text-white text-center leading-6">
-                            Download Your Ice Video
+                        <h4 class="text-2xl font-medium text-white text-center leading-8">
+                            Discover Your Celebrity Match
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                            Preview your generated clip and download it instantly to share online.
+                            Instantly see your top celebrity lookalikes and share your results with friends or on social
+                            media!
                         </p>
                     </div>
                 </div>
@@ -2816,104 +2906,57 @@
     </div>
 
     <!--feature section-->
-    <div
-        class="py-16 relative w-full after:contents-[''] after:absolute after:w-[278px] after:-right-[89px] after:top-[180px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
-        <div class="w-full max-w-screen-2xl px-4 lg:px-8 mx-auto relative z-10">
-            <div class="flex flex-col gap-[120px]">
-                <div class="flex lg:flex-row flex-col lg:gap-10 gap-20 lg:justify-between justify-center items-center">
-                    <div class="relative lg:w-1/2 group flex flex-col gap-3">
-                        <video class="myVideo rounded-3xl md:max-w-[550px]" autoplay muted loop playsinline
-                            poster="https://glima.ai/storage/media/1745488656_Ze1ZphptLblMS.webp">
-                            <source src="../assets/New Video/Couple Arrival ai/2.mp4" type="video/mp4" />
-                        </video>
-                        <svg class="absolute top-4 left-4" xmlns="http://www.w3.org/2000/svg" width="55" height="55"
-                            viewBox="0 0 55 55" fill="none">
-                            <path
-                                d="M27.5026 50.4154C40.1591 50.4154 50.4193 40.1552 50.4193 27.4987C50.4193 14.8422 40.1591 4.58203 27.5026 4.58203C14.8461 4.58203 4.58594 14.8422 4.58594 27.4987C4.58594 40.1552 14.8461 50.4154 27.5026 50.4154Z"
-                                fill="url(#paint0_linear_2514_2873)" />
-                            <path
-                                d="M20.8516 27.4992V24.1075C20.8516 19.7304 23.9453 17.9659 27.7266 20.1429L30.6599 21.8388L33.5932 23.5346C37.3745 25.7117 37.3745 29.2867 33.5932 31.4638L30.6599 33.1596L27.7266 34.8554C23.9453 37.0325 20.8516 35.245 20.8516 30.8909V27.4992Z"
-                                fill="black" />
-                            <defs>
-                                <linearGradient id="paint0_linear_2514_2873" x1="27.5026" y1="4.58203" x2="27.5026"
-                                    y2="50.4154" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#E6FF8D" />
-                                    <stop offset="1" stop-color="#C6FF00" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-
-                        <img src="../assets/images/vidu/aaa.png" alt="360 degree Rotation poster image"
-                            class="absolute -bottom-24 right-14 w-full max-w-[261px] rounded-[16px] rotate-[-7deg]">
+    <div class="py-16 relative w-full">
+        <div class="w-full max-w-screen-2xl px-5 lg:px-8 mx-auto relative z-10">
+            <div class="flex flex-col lg:gap-[120px] gap-16">
+                <div class="flex lg:flex-row flex-col gap-16 lg:justify-between justify-center items-center">
+                    <div class="block relative lg:w-1/2 group">
+                        <img src="	https://glima.ai/storage/media/1774594648_LnA7php8YZsHy.webp" alt="image"
+                            class="w-full" />
                     </div>
-                    <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center">
+                    <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center lg:text-left text-center">
                         <h3
-                            class="text-[44px] max-w-[562px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text lg:text-left text-center">
-                            Transform Photos into Frozen Cinematic Scenes
+                            class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
+                            Create Celebrity Lookalike Images with Our AI Matching Tool
                         </h3>
-                        <p class="text-lg text-white/70 leading-8 font-normal lg:text-left text-center pb-3.5">
-                            Our AI generator helps turn ordinary photos into visually stunning winter scenes. The Frost
-                            Carpet effect creates a glowing icy pathway beneath the subject, giving the video a magical
-                            frozen atmosphere.
+                        <p class="text-lg text-white/70 leading-8 font-normal">
+                            Turn your photos into stunning celebrity-style lookalike images with our powerful AI
+                            matching tool. Simply upload your selfie, and our intelligent system analyzes your facial
+                            features to find the closest celebrity match.
                         </p>
-                        <button
-                            class="py-3.5  px-[30px] w-max rounded-lg bg-[#C6FF00] text-lg font-semibold leading-[26px] text-black transition-all duration-500 hover:shadow-md hover:shadow-[#c8ff00bd]">
-                            Generating Now!</button>
                     </div>
                 </div>
-                <div
-                    class="flex lg:flex-row-reverse flex-col lg:gap-10 gap-20 lg:justify-between justify-center items-center">
-                    <div class="relative lg:w-1/2 group flex  gap-3">
-                        <div
-                            class=" md:max-w-[325px] max-w-[220px] lg:rotate-6 rotate-3 relative z-10 border border-black rounded-3xl">
+            </div>
+        </div>
+    </div>
 
-                            <video class="myVideo rounded-3xl " autoplay muted loop playsinline
-                                poster="https://glima.ai/storage/media/1745488664_WaQgphpxVvofg.webp">
-                                <source src="../assets/New Video/Couple Arrival ai/3.mp4" type="video/mp4" />
-                            </video>
-                            <svg class="absolute top-2.5 right-3.5" xmlns="http://www.w3.org/2000/svg" width="55"
-                                height="55" viewBox="0 0 55 55" fill="none">
-                                <path
-                                    d="M27.5026 50.4154C40.1591 50.4154 50.4193 40.1552 50.4193 27.4987C50.4193 14.8422 40.1591 4.58203 27.5026 4.58203C14.8461 4.58203 4.58594 14.8422 4.58594 27.4987C4.58594 40.1552 14.8461 50.4154 27.5026 50.4154Z"
-                                    fill="url(#paint0_linear_2514_2873)" />
-                                <path
-                                    d="M20.8516 27.4992V24.1075C20.8516 19.7304 23.9453 17.9659 27.7266 20.1429L30.6599 21.8388L33.5932 23.5346C37.3745 25.7117 37.3745 29.2867 33.5932 31.4638L30.6599 33.1596L27.7266 34.8554C23.9453 37.0325 20.8516 35.245 20.8516 30.8909V27.4992Z"
-                                    fill="black" />
-                                <defs>
-                                    <linearGradient id="paint0_linear_2514_2873" x1="27.5026" y1="4.58203" x2="27.5026"
-                                        y2="50.4154" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#E6FF8D" />
-                                        <stop offset="1" stop-color="#C6FF00" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
-                        <img src="https://glima.ai/storage/media/1745488664_WaQgphpxVvofg.webp"
-                            alt="360 degree Rotation poster image"
-                            class="rotate-3 absolute top-[85px] max-h-[350px] right-40 z-0">
+    <!--feature section-->
+    <div class="py-16 relative w-full">
+        <div class="w-full max-w-screen-2xl px-5 lg:px-8 mx-auto relative z-10">
+            <div class="flex flex-col lg:gap-[120px] gap-16">
+                <div class="flex lg:flex-row-reverse flex-col gap-20 lg:justify-between justify-center items-center">
+                    <div class="block relative lg:w-1/2 group">
+                        <img src="https://glima.ai/storage/media/1774594756_v37DphpuJMECR.webp" alt="image"
+                            class="w-full" />
                     </div>
-                    <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center">
+                    <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center lg:text-left text-center">
                         <h3
-                            class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text lg:text-left text-center">
-                            Advanced Frost and Ice Animation
+                            class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
+                            Generate Celebrity Lookalike Results from Your Photo with AI
                         </h3>
-                        <p class="text-lg text-white/70 leading-8 font-normal lg:text-left text-center pb-3.5">
-                            The technology simulates frost textures, icy surfaces, and cold lighting to create a
-                            realistic winter-style visual effect. AI can generate these frosted overlays and ice
-                            patterns automatically while keeping the subject recognizable.
+                        <p class="text-lg text-white/70 leading-8 font-normal">
+                            Discover which celebrity you resemble with our advanced AI-powered lookalike finder. Simply
+                            upload your photo, and the system analyzes your facial features such as structure, symmetry,
+                            and expressions to match you with the closest celebrity faces from a vast database.
                         </p>
-                        <button
-                            class="py-3.5 mt-3.5 px-[30px] w-max rounded-lg bg-[#C6FF00] text-lg font-semibold leading-[26px] text-black transition-all duration-500 hover:shadow-md hover:shadow-[#c8ff00bd]">
-                            Generating Now!</button>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
     <!--accordion section-->
-    <div class="py-16 relative w-full">
+    <div class="py-16 relative w-full after:contents-[''] after:absolute after:w-[278px] after:-left-[89px] after:top-[180px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
         <div class="w-full max-w-screen-2xl px-4 lg:px-8 mx-auto relative z-10">
             <div class="flex flex-col gap-5 mb-[70px] lg:items-start items-center">
                 <h2
@@ -2921,8 +2964,7 @@
                     Frequently Asked Questions
                 </h2>
                 <p class="text-lg leading-7 text-gray-B1B1B1 lg:text-left text-center">
-                    Find answers to common questions about our AI Frost Carpet Video Generator from customization
-                    options to downloading your final video.
+                    Find answers to common questions about our Packgod Roast Generator.
                 </p>
 
             </div>
@@ -2934,7 +2976,7 @@
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-one-with-arrow-always-open">
                         <h5 class="text-start">
-                            What is the AI Frost Carpet video generator?
+                            How does the AI Celebrity Lookalike Finder work?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -2950,8 +2992,9 @@
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-one-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            It is an AI tool that turns a photo into a short video where the subject walks across a
-                            glowing frozen or icy carpet.
+                            The tool uses advanced facial recognition technology to analyze your photo and compare key
+                            features—like face shape, eyes, nose, and expressions—with a large database of celebrities
+                            to find your closest matches.
                         </p>
                     </div>
                 </div>
@@ -2961,7 +3004,7 @@
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-two-with-arrow-always-open">
                         <h5 class="text-start">
-                            What type of images work best?
+                            What kind of photo gives the best results?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -2977,46 +3020,19 @@
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-two-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            Clear images with a visible person and good lighting usually produce the best frost
-                            animation.
+                            For the most accurate match, upload a clear, front-facing photo with good lighting, minimal
+                            filters, and no obstructions like sunglasses or masks.
                         </p>
                     </div>
                 </div>
 
                 <div class="accordion rounded-xl bg-black-1B1B1B accordion-active:border-gray-900 p-6"
-                    id="basic-heading-three-with-arrow-always-open">
-                    <button
-                        class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
-                        aria-controls="basic-collapse-three-with-arrow-always-open">
-                        <h5 class="text-start">
-                            Does the AI add snow or icy textures?
-                        </h5>
-                        <a href=""
-                            class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
-                            <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M6 9L10.5858 13.5858C11.2525 14.2525 11.5858 14.5858 12 14.5858C12.4142 14.5858 12.7475 14.2525 13.4142 13.5858L18 9"
-                                    stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </button>
-                    <div id="basic-collapse-three-with-arrow-always-open"
-                        class="accordion-content w-full px-0 overflow-hidden active"
-                        aria-labelledby="basic-heading-three-with-arrow-always-open">
-                        <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            Yes. The system generates frost patterns, icy surfaces, and cold lighting to create a winter
-                            atmosphere.
-                        </p>
-                    </div>
-                </div>
-                <div class="accordion rounded-xl bg-black-1B1B1B accordion-active:border-gray-900 p-6"
                     id="basic-heading-four-with-arrow-always-open">
                     <button
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-four-with-arrow-always-open">
                         <h5 class="text-start">
-                            How long does it take to generate the video?
+                            Is my photo safe and private?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -3032,17 +3048,18 @@
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-four-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            Most frost carpet videos are created within seconds after uploading the image.
+                            Yes, your privacy is important. Most AI tools process your image securely and do not store
+                            or share your photos without your consent.
                         </p>
                     </div>
                 </div>
                 <div class="accordion rounded-xl bg-black-1B1B1B accordion-active:border-gray-900 p-6"
-                    id="basic-heading-four-with-arrow-always-open">
+                    id="basic-heading-five-with-arrow-always-open">
                     <button
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
-                        aria-controls="basic-collapse-four-with-arrow-always-open">
+                        aria-controls="basic-collapse-five-with-arrow-always-open">
                         <h5 class="text-start">
-                            Can I share the video on social media?
+                            Can I share my celebrity match results?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -3054,38 +3071,20 @@
                             </svg>
                         </a>
                     </button>
-                    <div id="basic-collapse-four-with-arrow-always-open"
+                    <div id="basic-collapse-five-with-arrow-always-open"
                         class="accordion-content w-full px-0 overflow-hidden active"
-                        aria-labelledby="basic-heading-four-with-arrow-always-open">
+                        aria-labelledby="basic-heading-five-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            Yes. The generated videos are ideal for TikTok, Instagram Reels, and YouTube Shorts. </p>
+                            Absolutely! You can easily download or share your results on social media to show friends
+                            which celebrity you look like.
+                        </p>
                     </div>
                 </div>
+
             </div>
         </div>
         <div
             class="absolute -right-[89px] bottom-[-152px] w-[278px] aspect-square rounded-full blur-[250px] bg-[#C6FF00] opacity-50 hidden lg:block">
-        </div>
-    </div>
-
-
-    <div class="py-16 lg:pb-32 pb-16 relative w-full">
-        <div class="w-full max-w-screen-2xl px-4 lg:px-8 mx-auto relative z-10">
-            <div
-                class="w-full rounded-[26px] border-[0.8px] border-white/20 bg-[#1B1B1B] lg:py-[90px] py-8 px-9 flex flex-col items-center">
-                <h2
-                    class="text-[44px] leading-[70px] font-medium text-transparent text-center bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                    Create Your Frost Carpet Video Now
-                </h2>
-                <p class="text-xl mt-[15px] mb-8 leading-[35px] text-center text-white/70 max-w-[1260px] ">
-                    Upload your photo and watch AI generate a stunning icy walkway beneath your feet. Create your frost
-                    carpet video instantly and share your magical winter moment.
-                </p>
-                <button
-                    class="py-3.5 px-[30px] w-max mx-auto bg-limegreen rounded-lg text-lg leading-[26px] text-black font-semibold hover:shadow-[0px_4px_4px_0px_rgba(198,255,0,0.25);] transition-all duration-300">
-                    Start Generating
-                </button>
-            </div>
         </div>
     </div>
 
@@ -3179,15 +3178,9 @@
             </div>
         </div>
     </footer>
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script>
-        var vid = document.getElementsByClassName(".myVideo");
-
-        function play() {
-            vid.play();
-        }
-    </script>
 </body>
 
 </html>
