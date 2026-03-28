@@ -34,6 +34,7 @@ module.exports = {
          'manrope': ['manrope'],
          'sofia': ['Sofia Sans'],
         'agdasima': ['agdasima'],
+        'Comic_Beacon': ['Comic Beacon'],
       },
       colors: {
         'limegreen': '#C6FF00',

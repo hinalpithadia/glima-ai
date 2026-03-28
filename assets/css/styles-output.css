@@ -3903,6 +3903,17 @@ pre{
   margin-top: auto;
 }
 
+.mb-\[40px\] {
+  margin-bottom: 40px;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -4333,10 +4344,6 @@ pre{
 
 .h-\[478px\] {
   height: 478px;
-}
-
-.h-\[482px\] {
-  height: 482px;
 }
 
 .h-\[500px\] {
@@ -5334,10 +5341,6 @@ pre{
   max-width: 1468px;
 }
 
-.max-w-\[1470px\] {
-  max-width: 1470px;
-}
-
 .max-w-\[1500px\] {
   max-width: 1500px;
 }
@@ -5488,10 +5491,6 @@ pre{
 
 .max-w-\[400px\] {
   max-width: 400px;
-}
-
-.max-w-\[420px\] {
-  max-width: 420px;
 }
 
 .max-w-\[440px\] {
@@ -5662,6 +5661,10 @@ pre{
 
 .max-w-screen-lg {
   max-width: 1024px;
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 
 .max-w-sm {
@@ -9631,6 +9634,16 @@ pre{
   src: url(../font/Agdasima/Agdasima-Regular.ttf);
 }
 
+@font-face {
+  font-family: 'Comic Beacon';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: local('Comic Beacon'), url('https://fonts.cdnfonts.com/s/136998/Comic Beacon.woff') format('woff');
+}
+
 body.no-scroll {
   position: fixed;
   width: 100%;
@@ -12093,6 +12106,10 @@ textarea{
     gap: 67px;
   }
 
+  .md\:gap-\[55px\] {
+    gap: 55px;
+  }
+
   .md\:gap-x-2\.5 {
     -moz-column-gap: 0.625rem;
          column-gap: 0.625rem;
@@ -12331,6 +12348,11 @@ textarea{
     padding-bottom: 9px;
   }
 
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .md\:pb-0 {
     padding-bottom: 0px;
   }
@@ -12445,6 +12467,18 @@ textarea{
 
   .md\:pt-\[7px\] {
     padding-top: 7px;
+  }
+
+  .md\:pt-\[134px\] {
+    padding-top: 134px;
+  }
+
+  .md\:pb-\[120px\] {
+    padding-bottom: 120px;
+  }
+
+  .md\:pb-16 {
+    padding-bottom: 4rem;
   }
 
   .md\:text-left {
@@ -13796,6 +13830,10 @@ textarea{
     display: none;
   }
 
+  .xl\:aspect-auto {
+    aspect-ratio: auto;
+  }
+
   .xl\:h-\[200px\] {
     height: 200px;
   }
@@ -13804,8 +13842,20 @@ textarea{
     height: 246px;
   }
 
+  .xl\:h-\[282px\] {
+    height: 282px;
+  }
+
   .xl\:h-\[350px\] {
     height: 350px;
+  }
+
+  .xl\:h-\[482px\] {
+    height: 482px;
+  }
+
+  .xl\:h-\[490px\] {
+    height: 490px;
   }
 
   .xl\:h-\[600px\] {
@@ -13950,6 +14000,14 @@ textarea{
 
   .xl\:max-w-\[350px\] {
     max-width: 350px;
+  }
+
+  .xl\:max-w-\[380px\] {
+    max-width: 380px;
+  }
+
+  .xl\:max-w-\[420px\] {
+    max-width: 420px;
   }
 
   .xl\:max-w-\[480px\] {

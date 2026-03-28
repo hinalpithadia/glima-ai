@@ -17,22 +17,22 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Use AI Punch Hit",
+  "name": "How to Create AI Beast Chase Mountain Videos",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Upload Your Photo",
-      "text": "Upload a clear photo of a person, group, or even a pet. Front-facing images with visible faces usually produce the best results."
+      "name": "Upload an Image",
+      "text": "Upload your photo or choose a preset mountain landscape to set the environment for your beast chase video."
     },
     {
       "@type": "HowToStep",
-      "name": "Generate the Punch Hit Effect",
-      "text": "Our AI analyzes facial features and creates a dynamic punch animation where the face reacts with exaggerated expressions and motion."
+      "name": "Customize the Chase & Visual Style",
+      "text": "Select the beast type, chase speed, camera angles, and effects to create a dramatic high-altitude action sequence."
     },
     {
       "@type": "HowToStep",
-      "name": "Download and Share the Video",
-      "text": "Within seconds, your punch hit animation is ready. Download the video or share it instantly on platforms like TikTok, Instagram Reels, or YouTube Shorts"
+      "name": "Generate and Download",
+      "text": "Click generate and let AI create a cinematic mountain beast chase video in moments. Preview, download, and share your adventure-packed video anywhere."
     }
   ]
 }
@@ -43,42 +43,42 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is an AI Punch Hit video generator?",
+      "name": "What is the AI Beast Chase Mountain Video Generator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is an AI tool that converts a photo into a short video where a punch animation hits the subject’s face with exaggerated reactions."
+        "text": "It’s an AI-powered tool that creates cinematic beast chase videos set in dramatic mountain environments using images, ideas, or preset scenes."
       }
     },
     {
       "@type": "Question",
-      "name": "Can the punch effect work on group photos?",
+      "name": "How realistic are the mountain chase videos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Many AI generators can animate multiple people in the same image, giving each person a unique reaction."
+        "text": "The AI generates smooth motion, realistic depth, and cinematic camera angles for immersive, high-altitude action scenes."
       }
     },
     {
       "@type": "Question",
-      "name": "Does the AI create realistic facial movement?",
+      "name": "Will the generated videos have watermarks?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The system simulates facial muscle reactions, cheek ripples, and motion effects to make the punch animation look dynamic."
+        "text": "Watermark presence depends on your subscription plan. Premium plans usually offer watermark-free videos."
       }
     },
     {
       "@type": "Question",
-      "name": "What photo format should I upload?",
+      "name": "Can I control camera angles and motion?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most generators support JPG or PNG images with clear lighting and visible faces."
+        "text": "Yes, you can customize camera movement, zoom, and angles to create a truly cinematic chase experience."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I create punch videos with pets?",
+      "name": "Does the tool include sound effects or music?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Some AI tools can apply the punch effect to pets if their faces are clearly visible."
+        "text": "The focus is on visuals. You can add music or sound effects later using any video editor."
       }
     }
   ]

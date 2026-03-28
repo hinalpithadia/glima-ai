@@ -28,6 +28,13 @@
     font-family: "Agdasima";
     src: url(../font/Agdasima/Agdasima-Regular.ttf);
 }
+@font-face {
+    font-family: 'Comic Beacon';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Comic Beacon'), url('https://fonts.cdnfonts.com/s/136998/Comic Beacon.woff') format('woff');
+}
+
 @layer base {
     html {
         scroll-behavior: smooth;
