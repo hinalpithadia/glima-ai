@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/styles-output.css">
+      <link rel="stylesheet" href="../assets/css/styles-output.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
@@ -133,62 +133,43 @@
 
     <!--hero section-->
     <div class="hero relative w-full overflow-hidden md:pb-[120px] pb-20 md:pt-[134px] pt-24 px-5 lg:px-8">
-        <div class="w-full max-w-screen-xl  mx-auto relative z-10">
+        <div class="w-full max-w-screen-xl mx-auto relative z-10">
             <div class="block lg:text-left text-center w-full max-w-screen-lg mx-auto mb-16">
                 <h1
                     class="mb-3.5 bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent text-[48px] font-medium text-center">
-                    AI Celebrity Lookalike Finder
+                    AI Image Analyzer
                 </h1>
                 <p class="text-base text-center text-gray-B1B1B1 leading-7 font-normal">
-                    Upload your photo and discover which celebrity you look like using advanced AI facial recognition in
-                    seconds.
+                    Analyze any image instantly to extract insights, objects, and details using powerful AI.
                 </p>
             </div>
-            <div class="flex items-center flex-col xl:flex-row gap-5">
+            <div class="flex items-center flex-col md:flex-row gap-5">
                 <div
-                    class="aspect-square xl:aspect-auto xl:max-w-[380px] xl:h-[490px] w-full border border-[#FFFFFF33] rounded-[15px] bg-[#1B1B1B] p-5 flex flex-col gap-2.5">
+                    class="md:max-w-[380px] aspect-square md:aspect-auto md:h-[482px] w-full border border-[#FFFFFF33] rounded-[15px] bg-[#1B1B1B] p-5 flex flex-col gap-2.5 md:gap-[15px]">
                     <div class="flex flex-col gap-3">
                         <div class="flex items-center justify-between relative">
                             <label class="text-base text-white font-medium">Upload Your Photo
                             </label>
                         </div>
                         <div
-                            class="bg-black aspect-square xl:aspect-auto xl:h-[282px] rounded-[10px] relative outline-none flex justify-center transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">
-                            <label class="absolute inset-0 cursor-pointer rounded-3xl z-30">
-                                <input type="file" class="hidden" accept="image/*">
-                            </label>
-                            <div
-                                class="flex flex-col items-center justify-center gap-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
-                                <svg width="40" height="40" viewBox="0 0 82 82" fill="none" class=""
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M30.7501 34.1667C34.524 34.1667 37.5834 31.1073 37.5834 27.3333C37.5834 23.5594 34.524 20.5 30.7501 20.5C26.9761 20.5 23.9167 23.5594 23.9167 27.3333C23.9167 31.1073 26.9761 34.1667 30.7501 34.1667Z"
-                                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    </path>
-                                    <path
-                                        d="M44.4166 6.83398H30.7499C13.6666 6.83398 6.83325 13.6673 6.83325 30.7507V51.2507C6.83325 68.334 13.6666 75.1673 30.7499 75.1673H51.2499C68.3333 75.1673 75.1666 68.334 75.1666 51.2507V34.1673"
-                                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    </path>
-                                    <path d="M53.8125 17.084H72.6042" stroke="white" stroke-width="3"
-                                        stroke-linecap="round"></path>
-                                    <path d="M63.2083 26.4792V7.6875" stroke="white" stroke-width="3"
-                                        stroke-linecap="round"></path>
-                                    <path
-                                        d="M9.12256 64.7466L25.9667 53.4374C28.6659 51.6266 32.5609 51.8316 34.9867 53.9157L36.1142 54.9066C38.7792 57.1957 43.0842 57.1957 45.7492 54.9066L59.9626 42.7091C62.6276 40.4199 66.9326 40.4199 69.5976 42.7091L75.1667 47.4924"
-                                        stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    </path>
+                            class="bg-black h-[190px] rounded-[10px] relative outline-none flex justify-center transition-all duration-500">
+                            <button
+                                class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-[#FFFFFF2E] backdrop-blur-[3px] absolute z-30 right-[5px] top-[5px]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M9 3L3.00041 8.9996M8.9996 9L3 3.00043" stroke="white" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-                                <span class="text-center font-normal text-sm pt-2.5 text-white min-w-56">
-                                    Upload Image Here
-                                </span>
-                                <p class="text-xs font-light text-[#797979] text-center">
-                                    Drop your image to add in to the editor
-                                </p>
+                            </button>
+                            <div class="p-[5px] w-fit h-full flex items-center justify-center">
+                                <img src="	https://glima.ai/storage/media/1774603171_cCAMphpL2F2RQ.webp" alt="img"
+                                    class="max-h-full max-w-full w-auto h-auto">
                             </div>
                         </div>
                     </div>
                     <p class="text-xs font-normal text-[#797979]">This AI face rating tool will evaluate your
-                        confidence, intelligence, reliability, and sense of humor.</p>
+                        confidence, intelligence, reliability, and sense of humor.
+                    </p>
 
                     <button
                         class="mt-auto w-full flex items-center justify-between gap-2 mx-auto bg-[#C6FF00] hover:bg-[#a8d50c] transition-all duration-500 rounded-[10px] cursor-pointer">
@@ -224,68 +205,57 @@
                     </button>
                 </div>
                 <div
-                    class="w-full h-auto xl:h-[490px] border border-[#FFFFFF33] rounded-[15px] bg-[#1B1B1B] p-2.5 flex flex-col xl:flex-row gap-2.5">
-                    <div class="aspect-square xl:aspect-auto xl:max-w-[420px] w-full flex flex-col gap-5">
-                        <span class="pl-2.5 text-lg font-medium text-white/50 uppercase pt-2.5">your photos</span>
-                        <div
-                            class="w-full h-full bg-[#000000] overflow-hidden rounded-[10px] flex items-center justify-center">
-                            <img src="../assets/images/ai-clotheschanger-img1.png" alt="img"
-                                class="max-w-full max-h-full w-auto h-auto">
-                        </div>
+                    class="w-full aspect-square md:aspect-auto md:h-[482px] border border-[#FFFFFF33] rounded-[15px] bg-[#1B1B1B] p-5 flex flex-col items-center justify-center gap-[15px]">
+                    <div class="w-full flex items-center justify-between">
+                        <h4 class="text-base lg:text-2xl font-medium text-white">Description of Image</h4>
+                        <button
+                            class="w-fit px-3 py-2.5 flex items-center gap-1.5 text-base font-medium bg-[#C6FF001A] text-[#C6FF00] rounded-lg"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M9.18594 16.25H6.2526C5.73594 16.25 5.2776 16.2333 4.86927 16.175C2.6776 15.9333 2.08594 14.9 2.08594 12.0833V7.91667C2.08594 5.1 2.6776 4.06667 4.86927 3.825C5.2776 3.76667 5.73594 3.75 6.2526 3.75H9.13594"
+                                    stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M12.5156 3.75H13.749C14.2656 3.75 14.724 3.76667 15.1323 3.825C17.324 4.06667 17.9156 5.1 17.9156 7.91667V12.0833C17.9156 14.9 17.324 15.9333 15.1323 16.175C14.724 16.2333 14.2656 16.25 13.749 16.25H12.5156"
+                                    stroke="#C6FF00" stroke-width="1.4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12.5 1.66602V18.3327" stroke="#C6FF00" stroke-width="1.4"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.66406 7.08398V12.9173" stroke="#C6FF00" stroke-width="1.4"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg> Copy Text</button>
                     </div>
-                    <div class="w-full flex flex-col gap-5">
-                        <span class="pl-2.5 text-lg font-medium text-white/50 uppercase pt-2.5">Celebrity Match</span>
-                        <div class="flex flex-col gap-2.5">
-                            <div class="py-[5px] pl-[5px] pr-3.5 bg-[#0A0A0A] flex items-center gap-[15px] rounded-lg">
-                                <div class="w-[115px] h-[115px] shrink-0 overflow-hidden rounded-[5px]">
-                                    <img src="../assets/images/ai-clotheschanger-img1.png" alt="alt"
-                                        class="object-fill">
-                                </div>
-                                <div class="flex flex-col gap-2.5 w-full">
-                                    <div class="flex items-center justify-between">
-                                        <h4 class="text-base md:text-2xl font-semibold text-white line-clamp-1">Vicky
-                                            Kaushal</h4>
-                                        <span class="text-sm md:text-xl text-[#C6FF00] font-semibold">88%</span>
-                                    </div>
-                                    <p class="text-sm md:text-lg font-normal text-white/50"><span
-                                            class=" font-semibold text-white capitalize">Features:</span> Jawline,
-                                        Similar Beard, Face Shape.</p>
-                                </div>
-                            </div>
-                            <div class="py-[5px] pl-[5px] pr-3.5 bg-[#0A0A0A] flex items-center gap-[15px] rounded-lg">
-                                <div class="w-[115px] h-[115px] shrink-0 overflow-hidden rounded-[5px]">
-                                    <img src="../assets/images/ai-clotheschanger-img1.png" alt="alt"
-                                        class="object-fill">
-                                </div>
-                                <div class="flex flex-col gap-2.5 w-full">
-                                    <div class="flex items-center justify-between">
-                                        <h4 class="text-base md:text-2xl font-semibold text-white line-clamp-1">Vicky
-                                            Kaushal</h4>
-                                        <span class="text-sm md:text-xl text-[#C6FF00] font-semibold">88%</span>
-                                    </div>
-                                    <p class="text-sm md:text-lg font-normal text-white/50"><span
-                                            class=" font-semibold text-white capitalize">Features:</span> Jawline,
-                                        Similar Beard, Face Shape.</p>
-                                </div>
-                            </div>
-                            <div class="py-[5px] pl-[5px] pr-3.5 bg-[#0A0A0A] flex items-center gap-[15px] rounded-lg">
-                                <div class="w-[115px] h-[115px] shrink-0 overflow-hidden rounded-[5px]">
-                                    <img src="../assets/images/ai-clotheschanger-img1.png" alt="alt"
-                                        class="object-fill">
-                                </div>
-                                <div class="flex flex-col gap-2.5 w-full">
-                                    <div class="flex items-center justify-between">
-                                        <h4 class="text-base md:text-2xl font-semibold text-white line-clamp-1">Vicky
-                                            Kaushal</h4>
-                                        <span class="text-sm md:text-xl text-[#C6FF00] font-semibold">88%</span>
-                                    </div>
-                                    <p class="text-sm md:text-lg font-normal text-white/50"><span
-                                            class=" font-semibold text-white capitalize">Features:</span> Jawline,
-                                        Similar Beard, Face Shape.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p
+                        class="text-ellipsis text-white/50 text-xl leading-[34px] line-clamp-[7] md:line-clamp-[11] h-full">
+                        A woman stands confidently on a paved path in a park, framed by tall, bare trees that line both
+                        sides of the walkway, creating a natural corridor. The trees are leafless, suggesting it is
+                        autumn or early winter, and their trunks are a mix of gray and brown tones. The ground is
+                        covered with scattered dry, brownish-yellow leaves, adding to the seasonal atmosphere. The woman
+                        is the central focus of the image, positioned slightly off-center, looking directly at the
+                        camera with a gentle, engaging smile. She has long, dark, voluminous curly hair that cascades
+                        over her shoulders. She is wearing a fitted white sleeveless top with a corset-style front,
+                        high-waisted wide-leg trousers in a muted beige or light gray color, and white sneakers. A
+                        silver watch is visible on her left wrist, and she wears a delicate necklace. The lighting is
+                        soft and diffused, likely from an overcast sky or during the golden hour, casting a warm, muted
+                        glow on the scene. The background is softly blurred, drawing attention to the woman while still
+                        conveying the depth of the park setting. The overall composition is balanced, with the symmetry
+                        of the tree-lined path leading the eye toward the subject, and the colors are earthy and
+                        subdued, enhancing the calm, serene mood of the photograph.A woman stands confidently on a paved
+                        path in a park, framed by tall, bare trees that line both sides of the walkway, creating a
+                        natural corridor. The trees are leafless, suggesting it is autumn or early winter, and their
+                        trunks are a mix of gray and brown tones. The ground is covered with scattered dry,
+                        brownish-yellow leaves, adding to the seasonal atmosphere. The woman is the central focus of the
+                        image, positioned slightly off-center, looking directly at the camera with a gentle, engaging
+                        smile. She has long, dark, voluminous curly hair that cascades over her shoulders. She is
+                        wearing a fitted white sleeveless top with a corset-style front, high-waisted wide-leg trousers
+                        in a muted beige or light gray color, and white sneakers. A silver watch is visible on her left
+                        wrist, and she wears a delicate necklace. The lighting is soft and diffused, likely from an
+                        overcast sky or during the golden hour, casting a warm, muted glow on the scene. The background
+                        is softly blurred, drawing attention to the woman while still conveying the depth of the park
+                        setting. The overall composition is balanced, with the symmetry of the tree-lined path leading
+                        the eye toward the subject, and the colors are earthy and subdued, enhancing the calm, serene
+                        mood of the photograph.</p>
                 </div>
             </div>
         </div>
@@ -293,12 +263,12 @@
 
     <!--unstability section-->
     <div
-        class="md:pb-16 pb-10 relative w-full px-5 lg:px-8 after:contents-[''] after:absolute after:w-[278px] after:-right-[89px] after:top-[180px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
+        class=" md:pb-16 pb-10  relative w-full px-5 lg:px-8 after:contents-[''] after:absolute after:w-[278px] after:-right-[89px] after:top-[180px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
         <div class="w-full max-w-screen-xl mx-auto relative z-10">
-            <div class="flex flex-col lg:items-start items-center lg:text-left text-center gap-[15px] md:mb-[70px] mb-[40px]">
+            <div class="flex flex-col lg:items-start items-center lg:text-left text-center gap-[15px] mb-[70px]">
                 <h2
                     class="text-[44px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                    How to use AI Celebrity Lookalike Finder
+                    How to use AI Image Analyzer
                 </h2>
                 <p class="lg:text-lg text-base leading-7 text-gray-B1B1B1">
                     The AI Image Generator is a tool that transforms text descriptions into visual art using advanced
@@ -1184,11 +1154,11 @@
                     </div>
                     <div class="flex flex-col gap-3.5">
                         <h4 class="text-2xl font-medium text-white text-center leading-8">
-                            Upload Your Photo
+                            Upload Your Image
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                            Choose a clear, front-facing image with good lighting so the AI can accurately detect your
-                            facial features.
+                            Select and upload any image you want to analyze photos, screenshots, or graphics all work
+                            well.
                         </p>
                     </div>
                 </div>
@@ -2069,11 +2039,11 @@
                     </div>
                     <div class="flex flex-col gap-3.5">
                         <h4 class="text-2xl font-medium text-white text-center leading-8">
-                            Let AI Analyze Your Face
+                            Let AI Process the Image
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                            Our advanced AI scans your facial structure, expressions, and key details to compare with
-                            thousands of celebrity faces.
+                            The AI scans the image to detect objects, text, faces, colors, and other visual elements
+                            automatically.
                         </p>
                     </div>
                 </div>
@@ -2954,11 +2924,11 @@
                     </div>
                     <div class="flex flex-col gap-3.5">
                         <h4 class="text-2xl font-medium text-white text-center leading-8">
-                            Discover Your Celebrity Match
+                            Review the Analysis Results
                         </h4>
                         <p class="text-center text-base text-white/70 leading-7">
-                            Instantly see your top celebrity lookalikes and share your results with friends or on social
-                            media!
+                            Get detailed insights such as identified objects, descriptions, tags, and key features in
+                            seconds.
                         </p>
                     </div>
                 </div>
@@ -2967,22 +2937,22 @@
     </div>
 
     <!--feature section-->
-    <div class="md:py-16 py-10 relative w-full px-5 lg:px-8">
-        <div class="w-full max-w-screen-xl  mx-auto relative z-10">
-
-            <div class="flex lg:flex-row flex-col md:gap-[55px] gap-8 lg:justify-between justify-center items-center">
+    <div class="md:py-16 py-10 px-4 lg:px-8 relative w-full">
+        <div class="w-full max-w-screen-xl mx-auto relative z-10">
+            <div class="flex lg:flex-row flex-col gap-[55px] lg:justify-between justify-center items-center">
                 <div class="block relative lg:w-1/2 group">
-                    <img src="	https://glima.ai/storage/media/1774594648_LnA7php8YZsHy.webp" alt="image"
+                    <img src="	https://glima.ai/storage/media/1774601741_2dbSphpquvuld.webp" alt="image"
                         class="w-full" />
                 </div>
                 <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center lg:text-left text-center">
                     <h3
                         class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                        AI Celebrity Face Match Generator – Find Your Twin
+                        Discover What’s Inside Any Image in Seconds
                     </h3>
                     <p class="text-lg text-white/70 leading-8 font-normal">
-                        Find your celebrity twin in seconds with our AI-powered face match generator. Upload your photo
-                        and discover which famous personality you resemble the most.
+                        Upload any image and instantly uncover what it contains with the power of AI. From
+                        identifying objects and text to recognizing scenes and patterns, the tool provides quick and
+                        detailed insights, helping you understand visuals like never before.
                     </p>
                 </div>
             </div>
@@ -2990,22 +2960,164 @@
     </div>
 
     <!--feature section-->
-    <div class="md:py-16 py-10 relative w-full px-5 lg:px-8">
+    <div class="md:py-16 py-10 px-4 lg:px-8 relative w-full">
         <div class="w-full max-w-screen-xl mx-auto relative z-10">
-            <div class="flex lg:flex-row-reverse flex-col md:gap-[55px] gap-8 lg:justify-between justify-center items-center">
+            <div class="flex lg:flex-row-reverse flex-col gap-[55px] lg:justify-between justify-center items-center">
                 <div class="block relative lg:w-1/2 group">
-                    <img src="https://glima.ai/storage/media/1774594756_v37DphpuJMECR.webp" alt="image"
+                    <img src="	https://glima.ai/storage/media/1774601758_wAuXphpT74cVI.webp" alt="image"
                         class="w-full" />
                 </div>
                 <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center lg:text-left text-center">
                     <h3
                         class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
-                        Discover Your Famous Face Match with AI Technology
+                        Fast & Accurate Image Analysis with AI
                     </h3>
                     <p class="text-lg text-white/70 leading-8 font-normal">
-                        Discover your celebrity twin effortlessly with advanced AI technology. Upload your photo and let
-                        the system analyze facial features to find your closest famous match with impressive accuracy.
+                        Experience next-level facial analysis with our smart AI-powered recognition tool. Simply
+                        upload your photo, and the system intelligently detects and evaluates key facial features
+                        such as structure, symmetry, skin texture, and expressions.
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--more tools section-->
+    <div class="md:py-16 py-10 relative w-full">
+        <div class="w-full max-w-screen-xl px-4 lg:px-8 mx-auto relative z-10">
+            <div class="block">
+                <h2
+                    class="lg:text-[54px] text-[40px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-center md:mb-[70px] mb-8">
+                    Discover More
+                </h2>
+                <div class="flex flex-wrap items-center justify-center md:gap-8 gap-3">
+
+                    <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                        <a href="https://glima.ai/free-tools/ai-text-response"
+                            class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                            Short Hair Filter
+                            <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18"
+                                viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3"
+                                    stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                        <a href="https://glima.ai/video-generator/ai-perm-filter"
+                            class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                            Perm Filter
+                            <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18"
+                                viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3"
+                                    stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                        <a href="https://glima.ai/video-generator/ai-body-inflation"
+                            class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                            Body Inflation
+                            <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18"
+                                viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3"
+                                    stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                        <a href="https://glima.ai/video-generator/ai-elf-yourself"
+                            class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                            Elf Yourself
+                            <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18"
+                                viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3"
+                                    stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                        <a href="https://glima.ai/video-generator/ai-movie-trailer"
+                            class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                            Movie Trailer
+                            <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18"
+                                viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3"
+                                    stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                        <a href="https://glima.ai/video-generator/ai-santa-video-maker"
+                            class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                            Santa Video Maker
+                            <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18"
+                                viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3"
+                                    stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                        <a href="https://glima.ai/video-generator/ai-valentines-video-maker"
+                            class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                            Valentines Video Maker
+                            <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18"
+                                viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3"
+                                    stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                        <a href="https://glima.ai/video-generator/ai-wedding-invitation"
+                            class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                            Wedding Invitation
+                            <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18"
+                                viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3"
+                                    stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                        <a href="https://glima.ai/video-generator/ai-italian-brainrot"
+                            class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                            Italian Brainrot
+                            <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18"
+                                viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00"
+                                    stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3"
+                                    stroke-linecap="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -3013,7 +3125,7 @@
 
     <!--accordion section-->
     <div
-        class="py-16 px-5 lg:px-8 relative w-full after:contents-[''] after:absolute after:w-[278px] after:-left-[89px] after:top-[180px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
+        class="md:py-16 py-10 px-4 lg:px-8 relative w-full after:contents-[''] after:absolute after:w-[278px] after:-left-[89px] after:top-[180px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
         <div class="w-full max-w-screen-xl  mx-auto relative z-10">
             <div class="flex flex-col gap-5 mb-[70px] lg:items-start items-center">
                 <h2
@@ -3033,7 +3145,7 @@
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-one-with-arrow-always-open">
                         <h5 class="text-start">
-                            How does the AI Celebrity Lookalike Finder work?
+                            What does the AI Image Analyzer do?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -3049,9 +3161,8 @@
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-one-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            The tool uses advanced facial recognition technology to analyze your photo and compare key
-                            features—like face shape, eyes, nose, and expressions—with a large database of celebrities
-                            to find your closest matches.
+                            It analyzes images to detect objects, text, faces, colors, and other visual elements,
+                            providing detailed insights instantly.
                         </p>
                     </div>
                 </div>
@@ -3061,7 +3172,7 @@
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-two-with-arrow-always-open">
                         <h5 class="text-start">
-                            What kind of photo gives the best results?
+                            What types of images can I upload?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -3077,8 +3188,8 @@
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-two-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            For the most accurate match, upload a clear, front-facing photo with good lighting, minimal
-                            filters, and no obstructions like sunglasses or masks.
+                            You can upload photos, screenshots, graphics, or any standard image format like JPG, PNG, or
+                            WEBP.
                         </p>
                     </div>
                 </div>
@@ -3089,7 +3200,7 @@
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-four-with-arrow-always-open">
                         <h5 class="text-start">
-                            Is my photo safe and private?
+                            How accurate is the analysis?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -3105,8 +3216,8 @@
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-four-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            Yes, your privacy is important. Most AI tools process your image securely and do not store
-                            or share your photos without your consent.
+                            The AI provides highly accurate results, but accuracy may vary depending on image quality,
+                            lighting, and complexity.
                         </p>
                     </div>
                 </div>
@@ -3116,7 +3227,7 @@
                         class="accordion-toggle group inline-flex gap-1 items-center justify-between text-lg font-normal leading-relaxed text-white w-full transition-all duration-500  accordion-active:text-limegreen  always-open"
                         aria-controls="basic-collapse-five-with-arrow-always-open">
                         <h5 class="text-start">
-                            Can I share my celebrity match results?
+                            Can it detect text in images?
                         </h5>
                         <a href=""
                             class=" transition-all duration-500 w-6 h-6 accordion-active:rotate-180 rounded-full flex items-center justify-center pointer-events-none">
@@ -3132,8 +3243,8 @@
                         class="accordion-content w-full px-0 overflow-hidden active"
                         aria-labelledby="basic-heading-five-with-arrow-always-open">
                         <p class="text-base font-normal leading-6 text-white pt-3.5">
-                            Absolutely! You can easily download or share your results on social media to show friends
-                            which celebrity you look like.
+                            Yes, the tool can extract and recognize text from images using advanced OCR (Optical
+                            Character Recognition).
                         </p>
                     </div>
                 </div>
