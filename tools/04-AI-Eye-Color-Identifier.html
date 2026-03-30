@@ -132,9 +132,9 @@
     </nav>
 
     <!--hero section-->
-    <div class="hero relative w-full overflow-hidden pb-[120px] pt-[134px] px-5 lg:px-8">
-        <div class="w-full max-w-[1470px]  mx-auto relative z-10">
-            <div class="block lg:text-left text-center w-full max-w-screen-lg mx-auto mb-16">
+    <div class="hero relative w-full overflow-hidden md:pb-[120px] pb-20 md:pt-[100px] pt-24 px-5 lg:px-8">
+        <div class="w-full max-w-screen-xl  mx-auto relative z-10">
+            <div class="block lg:text-left text-center w-full max-w-screen-lg mx-auto mb-10">
                 <h1
                     class="mb-3.5 bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-transparent text-[48px] font-medium text-center">
                     AI Eye Color Identifier
@@ -145,7 +145,7 @@
             </div>
             <div class="flex items-center flex-col md:flex-row gap-5">
                 <div
-                    class="max-w-[420px] aspect-square md:aspect-auto md:h-[482px] w-full border border-[#FFFFFF33] rounded-[15px] bg-[#1B1B1B] p-5 flex flex-col gap-2.5 md:gap-[15px]">
+                    class="aspect-square xl:aspect-auto xl:max-w-[380px] xl:h-[438px] w-full border border-[#FFFFFF33] rounded-[15px] bg-[#1B1B1B] p-5 flex flex-col gap-2.5">
                     <div class="flex flex-col gap-3">
                         <div class="flex items-center justify-between relative">
                             <label class="text-base text-white font-medium">Upload Your Photo
@@ -154,7 +154,7 @@
                         <div
                             class="bg-black h-[190px] rounded-[10px] relative outline-none flex justify-center transition-all duration-500">
                             <button
-                                class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-[#FFFFFF2E] backdrop-blur-[3px] absolute z-30 right-[5px] top-[5px]">
+                                class="w-6 h-6 flex items-center justify-center rounded-[6px] bg-[#FFFFFF2E] backdrop-blur-[3px] absolute z-30 right-[10px] top-[10px]">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
                                     fill="none">
                                     <path d="M9 3L3.00041 8.9996M8.9996 9L3 3.00043" stroke="white" stroke-width="1.3"
@@ -201,24 +201,85 @@
                         </div>
                         <span
                             class="py-[13px] pr-[19px] rounded-lg flex justify-center items-center gap-1.5 w-fit text-lg leading-6 text-black font-semibold">
-                            Generate
+                            Identify Eye Color
                         </span>
                     </button>
                 </div>
                 <div
-                    class="w-full aspect-square md:aspect-auto md:h-[482px] border border-[#FFFFFF33] rounded-[15px] bg-[#1B1B1B] p-2.5 flex flex-col items-center justify-center gap-[30px]">
-                    <img src="https://glima.ai/storage/media/1774601331_fZkephpMYb2uR.webp" alt="img">
-                </div>
+                    class="w-full aspect-square md:aspect-auto md:h-[438px] border border-[#FFFFFF33] rounded-[15px] bg-[#1B1B1B] p-2.5 flex flex-col items-center justify-center gap-2.5">
+                    <div class="flex lg:flex-row flex-col gap-2.5 w-full">
+                        <div class="block shrink-0">
+                            <h4 class="mb-5 text-lg text-white/50 uppercase font-medium">
+                                Input image
+                            </h4>
+                            <div class="relative w-[236px] h-[230px]">
+                            <img src="https://glima.ai/storage/media/1774600997_roKXphpY79OA0.webp" alt="image" class="rounded-[10px] w-full h-full object-fit" />
+                        </div>
+                        </div>
+                        <div class="block w-full">
+                            <h4 class="mb-5 text-lg text-white/50 uppercase font-medium">
+                                result
+                            </h4>
+                            <div class="relative w-full">
+                                  <div class="p-[15px]  bg-[#0A0A0A] rounded-lg mb-2.5">
+                                    <label class="text-xl text-white font-normal capitalize mb-[15px] block">Color Classification
+                                    </label>
+                                    <div class="flex gap-2.5  w-full">
+                                        <div class="flex flex-row gap-[15px] w-1/2">
+                                            <img src="	https://glima.ai/storage/media/1774860356_7fwvphpovyGb6.png" alt="image"/>
+                                            <div class="flex flex-col gap-[3px]">
+                                                <span class="text-base font-normal capitalize text-white/50">Primary Color</span>
+                                                <h5 class="text-lg font-semibold capitalize text-white">Brown</h5>
+                                            </div>
+                                            
+                                        </div>
+                                       <div class="flex flex-row gap-[15px] w-1/2">
+                                            <img src="https://glima.ai/storage/media/1774860364_wawyphpBoMcwj.png" alt="image"/>
+                                            <div class="flex flex-col gap-[3px]">
+                                                <span class="text-base font-normal capitalize text-white/50">Secondary Tone</span>
+                                                <h5 class="text-lg font-semibold capitalize text-white">Golden Brown</h5>
+                                            </div>
+                                            
+                                        </div>
+                                       
+                                       
+                                    </div>
+                                  </div>  
+                                  <div class="p-[15px] bg-[#0A0A0A] rounded-lg">
+                                  
+                                    <div class="flex gap-2.5  w-full">
+                                        <div class="flex flex-row gap-[15px] ">
+                                            <div class="w-[60px] h-[60px] flex items-center justify-center rounded bg-[#2B2B2B]">
+                                            <img src="https://glima.ai/storage/media/1774860372_fD25phpafWDq6.png" alt="image"/>
+                                            </div>
+                                            <div class="flex flex-col gap-[3px]">
+                                                <span class="text-base font-normal capitalize text-white/50">Pattern</span>
+                                                <h5 class="text-lg font-semibold capitalize text-white">Radial streaks, Subtle Limbal ring</h5>
+                                            </div>
+                                            
+                                        </div>
+                                      
+                                       
+                                    </div>
+                                  </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-[15px]  bg-[#0A0A0A] rounded-lg w-full">
+                                    <label class="text-xl text-white font-normal capitalize mb-[15px] block">Additional Info
+                                    </label>
+                                    <p class="text-base font-normal text-white/50 capitalize">This eye color represents an intermediate pigmentation level, where light scattering from the stroma and mild melanin presence in the iris combine to produce a striking blue-green appearance.</p>
+                                  </div>
             </div>
         </div>
     </div>
-
+</div>
     <!--unstability section-->
     <div class=" pb-16 relative w-full px-5 lg:px-8 after:contents-[''] after:absolute after:w-[278px] after:-right-[89px] after:top-[180px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
-        <div class="w-full max-w-[1470px] mx-auto relative z-10">
+        <div class="w-full max-w-screen-xl mx-auto relative z-10">
             <div class="flex flex-col lg:items-start items-center lg:text-left text-center gap-[15px] mb-[70px]">
                 <h2
-                    class="text-[44px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
+                    class="md:text-[44px] text-[38px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
                     How to use AI Eye Color Identifier
                 </h2>
                 <p class="lg:text-lg text-base leading-7 text-gray-B1B1B1">
@@ -2888,7 +2949,7 @@
 
     <!--feature section-->
     <div class="py-16 relative w-full">
-        <div class="w-full max-w-screen-2xl px-5 lg:px-8 mx-auto relative z-10">
+        <div class="w-full max-w-screen-xl mx-auto relative z-10">
             <div class="flex flex-col lg:gap-[120px] gap-16">
                 <div class="flex lg:flex-row flex-col gap-16 lg:justify-between justify-center items-center">
                     <div class="block relative lg:w-1/2 group">
@@ -2897,14 +2958,11 @@
                     </div>
                     <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center lg:text-left text-center">
                         <h3
-                            class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
+                            class="md:text-[44px] text-[38px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
                             Identify Eye Colors from Any Photo
                         </h3>
                         <p class="text-lg text-white/70 leading-8 font-normal">
-                            Upload any image and let the AI instantly scan and detect eye color with impressive
-                            accuracy. Whether it's a selfie, portrait, or group photo, the tool works seamlessly to
-                            identify a wide range of eye shades, delivering quick and reliable results in just a few
-                            seconds.
+                           Upload any image and let the AI instantly scan and detect eye color with impressive accuracy. Whether it's a selfie, portrait, or group photo, the tool works seamlessly to identify a wide range of eye shades.
                         </p>
                     </div>
                 </div>
@@ -2914,7 +2972,7 @@
 
     <!--feature section-->
     <div class="py-16 relative w-full">
-        <div class="w-full max-w-screen-2xl px-5 lg:px-8 mx-auto relative z-10">
+        <div class="w-full max-w-screen-xl mx-auto relative z-10">
             <div class="flex flex-col lg:gap-[120px] gap-16">
                 <div class="flex lg:flex-row-reverse flex-col gap-20 lg:justify-between justify-center items-center">
                     <div class="block relative lg:w-1/2 group">
@@ -2923,26 +2981,127 @@
                     </div>
                     <div class="flex flex-col gap-4 lg:w-1/2 lg:items-start items-center lg:text-left text-center">
                         <h3
-                            class="text-[44px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
+                            class="md:text-[44px] text-[38px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text">
                             Smart AI for Accurate Eye Color Detection
                         </h3>
                         <p class="text-lg text-white/70 leading-8 font-normal">
-                            Powered by advanced AI technology, this tool analyzes fine details in the eyes to deliver
-                            precise and consistent results. From common shades to subtle variations like hazel or mixed
-                            tones, you’ll get fast, dependable eye color detection every time.
+                           Powered by advanced AI technology, this tool analyzes fine details in the eyes to deliver precise and consistent results. From common shades to subtle variations like hazel or mixed tones.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- more Tools section-->
+<div class="py-20 relative w-full">
+    <div class="w-full max-w-screen-2xl px-4 lg:px-8 mx-auto relative z-10">
+        <div class="block">
+            <h2 class="lg:text-[44px] text-[38px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text text-center md:mb-[70px] mb-8">
+                Discover More
+            </h2>
+            <div class="flex flex-wrap items-center justify-center md:gap-8 gap-3">
+           
+              
+                <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                    <a href="https://glima.ai/video-generator/ai-human-name-dnd" class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                       Human Name DND
+                        <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                    <a href="https://glima.ai/video-generator/ai-random-hair-color" class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                        Random Hair Color
+                        <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                    <a href="https://glima.ai/video-generator/ai-random-problem" class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                        Random Problem
+                        <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                    <a href="https://glima.ai/free-tools/ai-dnd-deck-of-many-things" class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                       DND Deck of Many Things
+                        <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                    <a href="https://glima.ai/video-generator/ai-marvel-character" class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                       Marvel Character
+                        <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                    <a href="https://glima.ai/video-generator/ai-fantasy-team-name" class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                        Fantasy Team Name
+                        <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                    <a href="https://glima.ai/identifier-tools/ai-celebrity-lookalike" class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                        Celebrity lookalike
+                        <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                 <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                    <a href="#" class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                        Face Analyzer
+                        <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-gradient-to-l from-[#354500] to-[#83A900] rounded-full p-[1px]">
+                    <a href="#" class="flex items-center gap-2.5 md:py-3.5 py-2.5 md:px-8 px-4  bg-black-0a0a0a text-base md:text-lg font-medium text-[#B1B1B1] transition-all duration-500 hover:bg-[#000] rounded-full group">
+                        Brand Identifier
+                        <svg class="group-hover:translate-x-1 transition-all duration-500" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2031 4.5L15.7492 9.04598L11.2031 13.592" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.25 9.04688H15.75" stroke="#C6FF00" stroke-width="1.3" stroke-linecap="round">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <!--accordion section-->
     <div class="py-16 relative w-full after:contents-[''] after:absolute after:w-[278px] after:-left-[89px] after:top-[180px] after:z-0 after:h-[278px] after:rounded-full after:bg-[#C6FF00] after:opacity-50 after:blur-[250px] lg:after:block after:hidden">
-        <div class="w-full max-w-screen-2xl px-4 lg:px-8 mx-auto relative z-10">
+        <div class="w-full max-w-screen-xl mx-auto relative z-10">
             <div class="flex flex-col gap-5 mb-[70px] lg:items-start items-center">
                 <h2
-                    class="text-[54px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text lg:text-left text-center">
+                    class="md:text-[44px] text-[38px] leading-[70px] font-medium text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#828282] bg-clip-text lg:text-left text-center">
                     Frequently Asked Questions
                 </h2>
                 <p class="text-lg leading-7 text-gray-B1B1B1 lg:text-left text-center">
