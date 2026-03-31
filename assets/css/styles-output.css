@@ -1272,6 +1272,10 @@ input:not(:checked) ~ .toggle-labels .yearly {
   transform: rotate(180deg);
 }
 
+.accordion.active > .accordion-toggle .accordion-active\:rotate-45 {
+  transform: rotate(180deg);
+}
+
 .accordion.active.accordion-active\:bg-indigo-100 {
   background-color: rgb(224 231 255);
 }
