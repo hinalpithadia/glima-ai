@@ -4507,6 +4507,10 @@ pre{
   height: 100vh;
 }
 
+.h-\[6px\] {
+  height: 6px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -5254,6 +5258,14 @@ pre{
 
 .w-px {
   width: 1px;
+}
+
+.w-\[132px\] {
+  width: 132px;
+}
+
+.w-\[156px\] {
+  width: 156px;
 }
 
 .min-w-10 {
@@ -7242,12 +7254,24 @@ pre{
   background-color: rgb(255 255 255 / .03);
 }
 
+.bg-\[\#FFFFFF0D\] {
+  background-color: #FFFFFF0D;
+}
+
 .bg-opacity-40 {
   --tw-bg-opacity: 0.4;
 }
 
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
+}
+
+.bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+
+.bg-opacity-\[0\.05\] {
+  --tw-bg-opacity: 0.05;
 }
 
 .bg-\[linear-gradient\(0deg\2c rgba\(198\2c 255\2c 0\2c 0\.08\)_0\%\2c rgba\(198\2c 255\2c 0\2c 0\.08\)_100\%\)\] {
@@ -7520,6 +7544,18 @@ pre{
 
 .from-white {
   --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#779900\] {
+  --tw-gradient-from: #779900 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(119 153 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-\[\#FFF\] {
+  --tw-gradient-from: #FFF var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
@@ -8593,6 +8629,10 @@ pre{
 
 .pt-px {
   padding-top: 1px;
+}
+
+.pr-\[143px\] {
+  padding-right: 143px;
 }
 
 .text-left {
@@ -11696,6 +11736,10 @@ textarea{
     height: 100vh;
   }
 
+  .md\:h-\[510px\] {
+    height: 510px;
+  }
+
   .md\:max-h-\[123px\] {
     max-height: 123px;
   }
@@ -13023,6 +13067,10 @@ textarea{
     height: 100vh;
   }
 
+  .lg\:h-\[510px\] {
+    height: 510px;
+  }
+
   .lg\:max-h-\[312px\] {
     max-height: 312px;
   }
@@ -13791,6 +13839,10 @@ textarea{
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-start {
+    text-align: start;
   }
 
   .lg\:text-2xl {
