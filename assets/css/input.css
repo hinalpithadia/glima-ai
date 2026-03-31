@@ -630,8 +630,10 @@ box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.25) inset;
       .accordion.active > .accordion-toggle.accordion-active\:text-limegreen{
         color: #C6FF00;
       }
-      
-      .accordion.active > .accordion-toggle .accordion-active\:rotate-45 {
+       .accordion.active > .accordion-toggle.accordion-active\:text-limegreen{
+        color: #C6FF00;
+      }
+      .accordion.active > .accordion-toggle .accordion-active\:rotate-180 {
         transform: rotate(180deg);
       }
      
