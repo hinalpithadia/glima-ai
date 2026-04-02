@@ -3936,6 +3936,13 @@ pre{
   -webkit-line-clamp: 3;
 }
 
+.line-clamp-5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
 .line-clamp-6 {
   overflow: hidden;
   display: -webkit-box;
@@ -5134,6 +5141,10 @@ pre{
   width: 50px;
 }
 
+.w-\[52px\] {
+  width: 52px;
+}
+
 .w-\[54px\] {
   width: 54px;
 }
@@ -5266,10 +5277,6 @@ pre{
 
 .w-px {
   width: 1px;
-}
-
-.w-\[52px\] {
-  width: 52px;
 }
 
 .min-w-10 {
@@ -7266,15 +7273,15 @@ pre{
   --tw-bg-opacity: 0.4;
 }
 
+.bg-opacity-5 {
+  --tw-bg-opacity: 0.05;
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
 
 .bg-opacity-\[0\.05\] {
-  --tw-bg-opacity: 0.05;
-}
-
-.bg-opacity-5 {
   --tw-bg-opacity: 0.05;
 }
 
@@ -8912,6 +8919,10 @@ pre{
   line-height: 26px;
 }
 
+.leading-\[27px\] {
+  line-height: 27px;
+}
+
 .leading-\[28px\] {
   line-height: 28px;
 }
@@ -8998,10 +9009,6 @@ pre{
 
 .leading-relaxed {
   line-height: 1.625;
-}
-
-.leading-\[27px\] {
-  line-height: 27px;
 }
 
 .tracking-\[0\.26px\] {
@@ -11620,6 +11627,10 @@ textarea{
     display: flex;
   }
 
+  .md\:grid {
+    display: grid;
+  }
+
   .md\:hidden {
     display: none;
   }
@@ -11646,6 +11657,10 @@ textarea{
 
   .md\:h-\[123px\] {
     height: 123px;
+  }
+
+  .md\:h-\[149px\] {
+    height: 149px;
   }
 
   .md\:h-\[192px\] {
@@ -11738,10 +11753,6 @@ textarea{
 
   .md\:h-screen {
     height: 100vh;
-  }
-
-  .md\:h-\[149px\] {
-    height: 149px;
   }
 
   .md\:max-h-\[123px\] {
@@ -11978,6 +11989,10 @@ textarea{
     max-width: 144px;
   }
 
+  .md\:max-w-\[152px\] {
+    max-width: 152px;
+  }
+
   .md\:max-w-\[225px\] {
     max-width: 225px;
   }
@@ -12056,10 +12071,6 @@ textarea{
 
   .md\:max-w-full {
     max-width: 100%;
-  }
-
-  .md\:max-w-\[152px\] {
-    max-width: 152px;
   }
 
   .md\:-translate-x-1\/2 {
@@ -13015,6 +13026,10 @@ textarea{
     height: 200px;
   }
 
+  .lg\:h-\[238\] {
+    height: 238;
+  }
+
   .lg\:h-\[282px\] {
     height: 282px;
   }
@@ -13262,6 +13277,10 @@ textarea{
 
   .lg\:max-w-\[210px\] {
     max-width: 210px;
+  }
+
+  .lg\:max-w-\[243px\] {
+    max-width: 243px;
   }
 
   .lg\:max-w-\[256px\] {
@@ -13797,6 +13816,10 @@ textarea{
     padding-right: 0px;
   }
 
+  .lg\:pr-5 {
+    padding-right: 1.25rem;
+  }
+
   .lg\:pt-0 {
     padding-top: 0px;
   }
@@ -13839,10 +13862,6 @@ textarea{
 
   .lg\:pt-\[85px\] {
     padding-top: 85px;
-  }
-
-  .lg\:pr-5 {
-    padding-right: 1.25rem;
   }
 
   .lg\:text-left {
