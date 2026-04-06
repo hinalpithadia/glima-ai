@@ -1763,6 +1763,11 @@ height: 100%;
     background: #C6FF00;
     color: #000;
   }
+  .audio-tab.tab-buttons li.active{
+    border-radius: 10px;
+background: rgba(198, 255, 0, 0.08);
+color:#C6FF00;
+  }
   .tab-panel {
     display: none;
     padding-top: 22px;
