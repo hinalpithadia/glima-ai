@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Waveform Player Preview</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .player-wrapper {
+            width: 100%;
+            max-width: 1000px;
+            background: #1a1f1a;
+            border-radius: 12px;
+            padding: 20px 24px;
+            border: 1px solid #2a2f2a;
+        }
+
+        /* Top info bar */
+        .player-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+        }
+        .player-info .track-name {
+            font-size: 14px;
+            color: #a0a0a0;
+        }
+        .player-info .track-time {
+            font-size: 13px;
+            color: #b4e61d;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Waveform container */
+        #waveform {
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+        }
+
+        /* Beat markers overlay */
+        .beat-markers {
+            position: relative;
+            height: 22px;
+            margin-top: 2px;
+        }
+        .beat-marker {
+            position: absolute;
+            height: 18px;
+            background: rgba(0, 180, 255, 0.35);
+            border: 1px solid rgba(0, 180, 255, 0.7);
+            border-radius: 3px;
+            font-size: 9px;
+            color: #7fdbff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 4px;
+            pointer-events: none;
+            top: 2px;
+        }
+
+        /* Timeline */
+        #timeline {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .ctrl-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.15s, background 0.15s;
+            background: #2a2f2a;
+            color: #fff;
+        }
+        .ctrl-btn:hover { transform: scale(1.1); }
+        .ctrl-btn.play-btn {
+            width: 46px;
+            height: 46px;
+            background: #b4e61d;
+            color: #000;
+        }
+        .ctrl-btn.play-btn:hover { background: #c8f535; }
+        .ctrl-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        .ctrl-btn.play-btn svg { width: 20px; height: 20px; }
+
+        /* Volume */
+        .volume-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: auto;
+        }
+        .volume-group svg { width: 18px; height: 18px; fill: #a0a0a0; }
+        .volume-slider {
+            -webkit-appearance: none;
+            width: 90px;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+            outline: none;
+        }
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #b4e61d;
+            cursor: pointer;
+        }
+
+        /* Region controls */
+        .region-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 14px;
+            flex-wrap: wrap;
+        }
+        .region-btn {
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: 1px solid #3a3f3a;
+            background: #222722;
+            color: #ccc;
+            font-size: 12px;
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s;
+        }
+        .region-btn:hover {
+            background: #2a352a;
+            border-color: #b4e61d;
+            color: #fff;
+        }
+        .region-btn.active {
+            background: rgba(180, 230, 29, 0.15);
+            border-color: #b4e61d;
+            color: #b4e61d;
+        }
+        .region-info {
+            font-size: 12px;
+            color: #777;
+            margin-left: auto;
+        }
+
+        /* Speed control */
+        .speed-select {
+            padding: 5px 10px;
+            border-radius: 6px;
+            border: 1px solid #3a3f3a;
+            background: #222722;
+            color: #ccc;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        /* Drop zone */
+        .drop-zone {
+            width: 100%;
+            border: 2px dashed #3a3f3a;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: border-color 0.2s, color 0.2s;
+            cursor: pointer;
+        }
+        .drop-zone:hover, .drop-zone.dragover {
+            border-color: #b4e61d;
+            color: #b4e61d;
+        }
+        .drop-zone input { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="player-wrapper">
+    <!-- Drop zone for loading audio -->
+    <div class="drop-zone" id="dropZone">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:8px;">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+        </svg>
+        <br>
+        Drop an audio file here or <span style="color:#b4e61d;text-decoration:underline;">click to browse</span>
+        <br><span style="font-size:11px;color:#555;margin-top:4px;display:inline-block;">MP3, WAV, OGG, FLAC</span>
+        <input type="file" id="fileInput" accept="audio/*">
+    </div>
+
+    <!-- Player info -->
+    <div class="player-info">
+        <span class="track-name" id="trackName">No audio loaded</span>
+        <span class="track-time"><span id="currentTime">0:00</span> / <span id="totalTime">0:00</span></span>
+    </div>
+
+    <!-- Waveform -->
+    <div id="waveform"></div>
+
+    <!-- Beat markers -->
+    <div class="beat-markers" id="beatMarkers"></div>
+
+    <!-- Timeline -->
+    <div id="timeline"></div>
+
+    <!-- Playback controls -->
+    <div class="controls">
+        <button class="ctrl-btn" id="skipBackBtn" title="Skip back">
+            <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+        </button>
+        <button class="ctrl-btn play-btn" id="playBtn" title="Play / Pause">
+            <svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <button class="ctrl-btn" id="skipFwdBtn" title="Skip forward">
+            <svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zm10-12v12h2V6h-2z"/></svg>
+        </button>
+
+        <select class="speed-select" id="speedSelect" title="Playback speed">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="1" selected>1x</option>
+            <option value="1.25">1.25x</option>
+            <option value="1.5">1.5x</option>
+            <option value="2">2x</option>
+        </select>
+
+        <div class="volume-group">
+            <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.01" value="0.8">
+        </div>
+    </div>
+
+    <!-- Region / selection controls -->
+    <div class="region-controls">
+        <button class="region-btn" id="addRegionBtn">+ Add Region</button>
+        <button class="region-btn" id="markBeatBtn">Mark Beat/Drop</button>
+        <button class="region-btn" id="clearRegionsBtn">Clear All</button>
+        <button class="region-btn" id="loopRegionBtn">Loop Region</button>
+        <button class="region-btn" id="zoomInBtn">Zoom +</button>
+        <button class="region-btn" id="zoomOutBtn">Zoom -</button>
+        <span class="region-info" id="regionInfo">Drag on waveform to select region</span>
+    </div>
+</div>
+
+<!-- WaveSurfer.js v7 (ESM) -->
+<script type="module">
+import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js';
+import RegionsPlugin from 'https://unpkg.com/wavesurfer.js@7/dist/plugins/regions.esm.js';
+import TimelinePlugin from 'https://unpkg.com/wavesurfer.js@7/dist/plugins/timeline.esm.js';
+
+// --- Init WaveSurfer ---
+const regions = RegionsPlugin.create();
+
+const ws = WaveSurfer.create({
+    container: '#waveform',
+    waveColor: '#4a5a3a',
+    progressColor: '#b4e61d',
+    cursorColor: '#b4e61d',
+    cursorWidth: 2,
+    barWidth: 2,
+    barGap: 1,
+    barRadius: 2,
+    height: 80,
+    normalize: true,
+    plugins: [
+        TimelinePlugin.create({
+            container: '#timeline',
+            primaryColor: '#555',
+            secondaryColor: '#333',
+            primaryFontColor: '#888',
+            secondaryFontColor: '#666',
+            fontSize: 10,
+            height: 20,
+        }),
+        regions,
+    ],
+});
+
+// --- DOM refs ---
+const playBtn = document.getElementById('playBtn');
+const playIcon = document.getElementById('playIcon');
+const skipBackBtn = document.getElementById('skipBackBtn');
+const skipFwdBtn = document.getElementById('skipFwdBtn');
+const speedSelect = document.getElementById('speedSelect');
+const volumeSlider = document.getElementById('volumeSlider');
+const currentTimeEl = document.getElementById('currentTime');
+const totalTimeEl = document.getElementById('totalTime');
+const trackNameEl = document.getElementById('trackName');
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+const addRegionBtn = document.getElementById('addRegionBtn');
+const markBeatBtn = document.getElementById('markBeatBtn');
+const clearRegionsBtn = document.getElementById('clearRegionsBtn');
+const loopRegionBtn = document.getElementById('loopRegionBtn');
+const zoomInBtn = document.getElementById('zoomInBtn');
+const zoomOutBtn = document.getElementById('zoomOutBtn');
+const regionInfo = document.getElementById('regionInfo');
+const beatMarkersEl = document.getElementById('beatMarkers');
+
+let currentZoom = 0;
+let loopActive = false;
+let activeRegion = null;
+let beatMarkers = [];
+
+// --- Format time ---
+function fmt(sec) {
+    if (!sec || isNaN(sec)) return '0:00';
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return m + ':' + (s < 10 ? '0' : '') + s;
+}
+
+// --- File loading ---
+function loadFile(file) {
+    const url = URL.createObjectURL(file);
+    ws.load(url);
+    trackNameEl.textContent = file.name;
+    dropZone.style.display = 'none';
+    beatMarkers = [];
+    renderBeatMarkers();
+}
+
+dropZone.addEventListener('click', () => fileInput.click());
+fileInput.addEventListener('change', (e) => {
+    if (e.target.files[0]) loadFile(e.target.files[0]);
+});
+dropZone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropZone.classList.add('dragover');
+});
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('dragover');
+    if (e.dataTransfer.files[0]) loadFile(e.dataTransfer.files[0]);
+});
+
+// --- Load demo audio (public domain) ---
+ws.load('https://cdn.freesound.org/previews/612/612095_5674468-lq.mp3');
+trackNameEl.textContent = 'Demo: Electronic Beat';
+dropZone.style.display = 'none';
+
+// --- Playback controls ---
+playBtn.addEventListener('click', () => ws.playPause());
+
+ws.on('play', () => {
+    playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+});
+ws.on('pause', () => {
+    playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+});
+
+ws.on('ready', () => {
+    totalTimeEl.textContent = fmt(ws.getDuration());
+    ws.setVolume(parseFloat(volumeSlider.value));
+});
+
+ws.on('audioprocess', () => {
+    currentTimeEl.textContent = fmt(ws.getCurrentTime());
+});
+ws.on('seeking', () => {
+    currentTimeEl.textContent = fmt(ws.getCurrentTime());
+});
+
+skipBackBtn.addEventListener('click', () => {
+    ws.skip(-5);
+});
+skipFwdBtn.addEventListener('click', () => {
+    ws.skip(5);
+});
+
+speedSelect.addEventListener('change', () => {
+    ws.setPlaybackRate(parseFloat(speedSelect.value));
+});
+
+volumeSlider.addEventListener('input', () => {
+    ws.setVolume(parseFloat(volumeSlider.value));
+});
+
+// --- Zoom ---
+zoomInBtn.addEventListener('click', () => {
+    currentZoom = Math.min(currentZoom + 20, 200);
+    ws.zoom(currentZoom);
+});
+zoomOutBtn.addEventListener('click', () => {
+    currentZoom = Math.max(currentZoom - 20, 0);
+    ws.zoom(currentZoom);
+});
+
+// --- Regions ---
+let regionCount = 0;
+const regionColors = [
+    'rgba(0, 180, 255, 0.15)',
+    'rgba(180, 230, 29, 0.15)',
+    'rgba(255, 100, 100, 0.15)',
+    'rgba(255, 200, 50, 0.15)',
+    'rgba(200, 100, 255, 0.15)',
+];
+
+addRegionBtn.addEventListener('click', () => {
+    const dur = ws.getDuration();
+    if (!dur) return;
+    const cur = ws.getCurrentTime();
+    const regionLen = Math.min(dur * 0.1, 5);
+    const start = Math.max(0, cur);
+    const end = Math.min(dur, cur + regionLen);
+    const color = regionColors[regionCount % regionColors.length];
+    regionCount++;
+
+    const region = regions.addRegion({
+        start: start,
+        end: end,
+        color: color,
+        drag: true,
+        resize: true,
+    });
+
+    activeRegion = region;
+    regionInfo.textContent = `Region: ${fmt(start)} — ${fmt(end)}`;
+});
+
+regions.on('region-updated', (region) => {
+    activeRegion = region;
+    regionInfo.textContent = `Region: ${fmt(region.start)} — ${fmt(region.end)}`;
+});
+
+regions.on('region-clicked', (region, e) => {
+    e.stopPropagation();
+    activeRegion = region;
+    regionInfo.textContent = `Region: ${fmt(region.start)} — ${fmt(region.end)}`;
+});
+
+clearRegionsBtn.addEventListener('click', () => {
+    regions.clearRegions();
+    activeRegion = null;
+    regionCount = 0;
+    beatMarkers = [];
+    renderBeatMarkers();
+    regionInfo.textContent = 'Drag on waveform to select region';
+});
+
+// --- Loop region ---
+loopRegionBtn.addEventListener('click', () => {
+    loopActive = !loopActive;
+    loopRegionBtn.classList.toggle('active', loopActive);
+    loopRegionBtn.textContent = loopActive ? 'Loop ON' : 'Loop Region';
+});
+
+regions.on('region-out', (region) => {
+    if (loopActive && activeRegion && region === activeRegion) {
+        ws.setTime(region.start);
+        ws.play();
+    }
+});
+
+// --- Beat / Drop markers ---
+function renderBeatMarkers() {
+    beatMarkersEl.innerHTML = '';
+    const dur = ws.getDuration();
+    if (!dur) return;
+
+    beatMarkers.forEach((beat) => {
+        const left = (beat.time / dur) * 100;
+        const markerEl = document.createElement('div');
+        markerEl.className = 'beat-marker';
+        markerEl.style.left = left + '%';
+        markerEl.style.minWidth = '50px';
+        markerEl.textContent = beat.label;
+        beatMarkersEl.appendChild(markerEl);
+    });
+}
+
+markBeatBtn.addEventListener('click', () => {
+    const dur = ws.getDuration();
+    if (!dur) return;
+    const cur = ws.getCurrentTime();
+    const label = `${fmt(cur)} Drop`;
+    beatMarkers.push({ time: cur, label: label });
+
+    // Also add a thin visual region as marker
+    regions.addRegion({
+        start: cur,
+        end: Math.min(cur + 0.5, dur),
+        color: 'rgba(0, 180, 255, 0.35)',
+        drag: false,
+        resize: false,
+    });
+
+    renderBeatMarkers();
+});
+
+ws.on('ready', () => {
+    renderBeatMarkers();
+});
+ws.on('zoom', () => {
+    renderBeatMarkers();
+});
+
+</script>
+
+</body>
+</html>
