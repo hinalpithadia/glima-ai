@@ -3945,6 +3945,10 @@ pre{
   margin-top: auto;
 }
 
+.\!mt-10 {
+  margin-top: 2.5rem !important;
+}
+
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -13238,6 +13242,10 @@ textarea{
 
   .lg\:top-\[90px\] {
     top: 90px;
+  }
+
+  .lg\:top-0 {
+    top: 0px;
   }
 
   .lg\:z-0 {
