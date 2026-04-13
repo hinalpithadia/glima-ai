@@ -43,42 +43,42 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the AI Beast Chase Mountain Video Generator?",
+      "name": "What is the AI Celebrity Lookalike tool?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It’s an AI-powered tool that creates cinematic beast chase videos set in dramatic mountain environments using images, ideas, or preset scenes."
+        "text": "The AI Celebrity Lookalike tool by Glima AI allows users to upload a photo and discover which celebrities they resemble using advanced AI-powered face analysis."
       }
     },
     {
       "@type": "Question",
-      "name": "How realistic are the mountain chase videos?",
+      "name": "How fast does the AI generate results?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The AI generates smooth motion, realistic depth, and cinematic camera angles for immersive, high-altitude action scenes."
+        "text": "Glima AI is optimized for speed and typically generates celebrity matches within seconds, depending on the complexity of the image and processing model."
       }
     },
     {
       "@type": "Question",
-      "name": "Will the generated videos have watermarks?",
+      "name": "Are the celebrity matches unique and accurate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Watermark presence depends on your subscription plan. Premium plans usually offer watermark-free videos."
+        "text": "Yes, the AI generates personalized and unique results based on your facial features, ensuring accurate and tailored celebrity matches."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I control camera angles and motion?",
+      "name": "Do I need any technical skills to use this tool?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, you can customize camera movement, zoom, and angles to create a truly cinematic chase experience."
+        "text": "No, the tool is designed for everyone. Simply upload your image and the AI will handle the rest without requiring any technical or editing skills."
       }
     },
     {
       "@type": "Question",
-      "name": "Does the tool include sound effects or music?",
+      "name": "Can I use the results for personal or social media use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The focus is on visuals. You can add music or sound effects later using any video editor."
+        "text": "Yes, you can use your celebrity lookalike results for fun, sharing, or personal use. Ensure compliance with platform guidelines when sharing publicly."
       }
     }
   ]
