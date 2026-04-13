@@ -2905,6 +2905,10 @@ pre{
   bottom: 123px;
 }
 
+.bottom-\[125px\] {
+  bottom: 125px;
+}
+
 .bottom-\[130px\] {
   bottom: 130px;
 }
@@ -4293,6 +4297,10 @@ pre{
   height: 202px;
 }
 
+.h-\[20px\] {
+  height: 20px;
+}
+
 .h-\[210px\] {
   height: 210px;
 }
@@ -4537,8 +4545,20 @@ pre{
   height: 98px;
 }
 
+.h-\[calc\(100vh-250px\)\] {
+  height: calc(100vh - 250px);
+}
+
+.h-\[calc\(100vh-280px\)\] {
+  height: calc(100vh - 280px);
+}
+
 .h-\[calc\(100vh-320px\)\] {
   height: calc(100vh - 320px);
+}
+
+.h-\[calc\(100vh-390px\)\] {
+  height: calc(100vh - 390px);
 }
 
 .h-\[calc\(100vh-64px\)\] {
@@ -4569,6 +4589,14 @@ pre{
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[25px\] {
+  height: 25px;
+}
+
+.h-\[calc\(100vh-412px\)\] {
+  height: calc(100vh - 412px);
 }
 
 .max-h-0 {
@@ -4901,6 +4929,10 @@ pre{
   min-height: 98px;
 }
 
+.min-h-\[calc\(100vh-64px\)\] {
+  min-height: calc(100vh - 64px);
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -5092,6 +5124,10 @@ pre{
 
 .w-\[200px\] {
   width: 200px;
+}
+
+.w-\[20px\] {
+  width: 20px;
 }
 
 .w-\[220px\] {
@@ -5350,6 +5386,10 @@ pre{
 
 .w-px {
   width: 1px;
+}
+
+.w-\[25px\] {
+  width: 25px;
 }
 
 .min-w-0 {
@@ -5935,8 +5975,28 @@ pre{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-\[15px\] {
+  --tw-translate-y: 15px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-\[1px\] {
   --tw-translate-y: 1px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[10px\] {
+  --tw-translate-y: 10px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[12px\] {
+  --tw-translate-y: 12px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[4px\] {
+  --tw-translate-y: 4px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -7309,6 +7369,10 @@ pre{
   background-color: rgb(27 27 27 / var(--tw-bg-opacity, 1));
 }
 
+.bg-black\/10 {
+  background-color: rgb(0 0 0 / 0.1);
+}
+
 .bg-black\/15 {
   background-color: rgb(0 0 0 / 0.15);
 }
@@ -7409,10 +7473,6 @@ pre{
 
 .bg-white\/\[\.03\] {
   background-color: rgb(255 255 255 / .03);
-}
-
-.bg-black\/10 {
-  background-color: rgb(0 0 0 / 0.1);
 }
 
 .bg-opacity-10 {
@@ -13156,6 +13216,10 @@ textarea{
     bottom: 0px;
   }
 
+  .lg\:bottom-2\.5 {
+    bottom: 0.625rem;
+  }
+
   .lg\:bottom-\[68px\] {
     bottom: 68px;
   }
@@ -13415,6 +13479,10 @@ textarea{
 
   .lg\:h-\[calc\(100vh-145px\)\] {
     height: calc(100vh - 145px);
+  }
+
+  .lg\:h-\[calc\(100vh-280px\)\] {
+    height: calc(100vh - 280px);
   }
 
   .lg\:h-\[calc\(100vh-64px\)\] {
@@ -13714,6 +13782,10 @@ textarea{
     max-width: 930px;
   }
 
+  .lg\:max-w-\[947px\] {
+    max-width: 947px;
+  }
+
   .lg\:max-w-\[950px\] {
     max-width: 950px;
   }
@@ -13999,6 +14071,10 @@ textarea{
     padding: 1.5rem;
   }
 
+  .lg\:p-\[15px\] {
+    padding: 15px;
+  }
+
   .lg\:p-\[4px\] {
     padding: 4px;
   }
@@ -14107,6 +14183,10 @@ textarea{
     padding-bottom: 0px;
   }
 
+  .lg\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
   .lg\:pb-28 {
     padding-bottom: 7rem;
   }
@@ -14157,6 +14237,10 @@ textarea{
 
   .lg\:pl-8 {
     padding-left: 2rem;
+  }
+
+  .lg\:pl-\[15px\] {
+    padding-left: 15px;
   }
 
   .lg\:pr-0 {
@@ -14227,6 +14311,10 @@ textarea{
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .lg\:text-\[14px\] {
+    font-size: 14px;
   }
 
   .lg\:text-\[23\.21px\] {

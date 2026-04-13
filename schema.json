@@ -17,22 +17,22 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Create AI Beast Chase Mountain Videos",
+  "name": "How to Identify Eye Color Using Glima AI",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Upload an Image",
-      "text": "Upload your photo or choose a preset mountain landscape to set the environment for your beast chase video."
+      "name": "Upload Your Photo",
+      "text": "Choose a clear photo where the eyes are visible. A close-up image works best for accurate results."
     },
     {
       "@type": "HowToStep",
-      "name": "Customize the Chase & Visual Style",
-      "text": "Select the beast type, chase speed, camera angles, and effects to create a dramatic high-altitude action sequence."
+      "name": "Let AI Analyze",
+      "text": "The tool automatically scans the image and detects the eye color using advanced AI technology."
     },
     {
       "@type": "HowToStep",
-      "name": "Generate and Download",
-      "text": "Click generate and let AI create a cinematic mountain beast chase video in moments. Preview, download, and share your adventure-packed video anywhere."
+      "name": "View Instant Results",
+      "text": "Get precise eye color details (like brown, blue, hazel, green, etc.) within seconds."
     }
   ]
 }
@@ -43,42 +43,34 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the AI Celebrity Lookalike tool?",
+      "name": "How does the AI Eye Color Identifier work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The AI Celebrity Lookalike tool by Glima AI allows users to upload a photo and discover which celebrities they resemble using advanced AI-powered face analysis."
+        "text": "The tool uses advanced AI algorithms to analyze eye features in your uploaded image and accurately detect the eye color within seconds."
       }
     },
     {
       "@type": "Question",
-      "name": "How fast does the AI generate results?",
+      "name": " What type of images work best?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Glima AI is optimized for speed and typically generates celebrity matches within seconds, depending on the complexity of the image and processing model."
+        "text": "Clear, high-quality images where the eyes are visible and well-lit provide the most accurate results. Close-up photos are ideal."
       }
     },
     {
       "@type": "Question",
-      "name": "Are the celebrity matches unique and accurate?",
+      "name": "Can it detect all eye colors?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, the AI generates personalized and unique results based on your facial features, ensuring accurate and tailored celebrity matches."
+        "text": "Yes, the AI can identify common eye colors like brown, blue, green, and hazel, along with subtle variations and mixed shades."
       }
     },
     {
       "@type": "Question",
-      "name": "Do I need any technical skills to use this tool?",
+      "name": "How accurate is the eye color detection?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, the tool is designed for everyone. Simply upload your image and the AI will handle the rest without requiring any technical or editing skills."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use the results for personal or social media use?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, you can use your celebrity lookalike results for fun, sharing, or personal use. Ensure compliance with platform guidelines when sharing publicly."
+        "text": "The tool is highly accurate, but results may vary slightly based on image quality, lighting, and angle."
       }
     }
   ]
