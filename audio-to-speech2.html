@@ -212,8 +212,13 @@
         }
          .mobile-emotion-select .select-styled:after{
             top: 10px;
-    right: 10px;
+             right: 10px;
          }
+         .mobile-emotion-select .select-options li {
+            padding: 8px 10px;
+            font-size: 12px;
+        }
+         
         @media(max-width:767px){
             .content-box:before{
                 padding-left: 8px;
@@ -1195,7 +1200,7 @@ transition-all duration-500">
                                                                     </select>
                                                                 </div>
                          </div>
-                        <button class=" transition-all duration-500 justify-center flex items-center p-1 w-10 h-10 bg-[#C6FF00] rounded-[10px]" disabled>
+                        <button class=" transition-all duration-500 justify-center flex items-center p-1 w-[45px] h-10 bg-[#C6FF00] rounded-[10px]" disabled>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                         <path d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                         <path d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -1206,7 +1211,7 @@ transition-all duration-500">
                     <div class="lg:h-[calc(100vh-145px)] h-full overflow-y-auto ">
                        <div class="w-full h-full bg-[#111111] rounded-lg flex flex-col p-2.5 relative">
                         <!--top speech-->
-                        <div class="w-full  bg-[#111111] flex flex-col overflow-hidden lg:h-[calc(100vh-280px)] h-[calc(100vh-412px)] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#FFFFFF2E] [&::-webkit-scrollbar-thumb]:rounded-full">
+                        <div class="w-full  bg-[#111111] flex flex-col overflow-hidden lg:h-[calc(100vh-310px)] h-[calc(100vh-412px)] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#FFFFFF2E] [&::-webkit-scrollbar-thumb]:rounded-full">
 
   <!-- Script editor -->
   <div class="relative lg:p-[15px] flex flex-col  lg:max-w-[947px]" id="script-editor">
@@ -1291,50 +1296,45 @@ transition-all duration-500">
                                 </button>
 
                                 <!-- Play/Pause -->
-                                <button id="" class="translate-y-[4px]">
-                               <svg width="60" height="60" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g class="rotate-animation">
-                                                        <rect x="10.5" y="5.5" width="49" height="49" rx="24.5" stroke="url(#paint0_linear_171_432)"></rect>
-                                                        <rect x="10.5" y="5.5" width="49" height="49" rx="24.5" stroke="url(#paint1_linear_171_432)"></rect>
-                                                    </g>
-
-                                                    <rect x="15" y="10" width="40" height="40" rx="20" fill="#C6FF00">
-                                                    </rect>
-                                                    <g filter="url(#filter0_d_171_432)" class="rotate-animation">
-                                                        <path d="M29.789 27.7006L24.0918 27.6971L24.0939 32.1553L29.5957 32.1586C30.1926 32.1584 30.7436 31.8299 31.0401 31.2973L34.1432 25.7444C34.4418 25.2106 34.4406 24.5539 34.1412 24.0182L31.3863 19.0899L27.6514 21.3171L30.5041 26.4204C30.8247 26.9891 30.4264 27.699 29.789 27.7006Z" fill="black"></path>
-                                                        <path d="M39.4887 26.4113L42.3402 21.317L38.6011 19.0898L35.8474 24.0094C35.5491 24.5434 35.5491 25.2005 35.8474 25.7321L38.9518 31.2841C39.2501 31.8181 39.8013 32.1454 40.4003 32.1454L45.91 32.1454L45.91 27.691L40.2046 27.691C39.5675 27.6935 39.1714 26.9823 39.4887 26.4113Z" fill="black"></path>
-                                                        <path d="M35.5943 35.8042L38.44 40.902L42.1771 38.671L39.429 33.7481C39.1303 33.2143 38.5794 32.8858 37.9845 32.8868L31.7771 32.8876C31.1801 32.8874 30.6301 33.2168 30.3306 33.7525L27.5758 38.6808L31.3107 40.908L34.1634 35.8047C34.4799 35.2336 35.2743 35.2349 35.5943 35.8042Z" fill="black"></path>
-                                                    </g>
-                                                    <defs>
-                                                        <filter id="filter0_d_171_432" x="0" y="0" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                                            <feFlood flood-opacity="0" result="BackgroundImageFix">
-                                                            </feFlood>
-                                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
-                                                            <feMorphology radius="5" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_171_432"></feMorphology>
-                                                            <feOffset dy="5"></feOffset>
-                                                            <feGaussianBlur stdDeviation="5"></feGaussianBlur>
-                                                            <feComposite in2="hardAlpha" operator="out"></feComposite>
-                                                            <feColorMatrix type="matrix" values="0 0 0 0 0.776471 0 0 0 0 1 0 0 0 0 0 0 0 0 0.15 0">
-                                                            </feColorMatrix>
-                                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_171_432"></feBlend>
-                                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_171_432" result="shape">
-                                                            </feBlend>
-                                                        </filter>
-                                                        <linearGradient id="paint0_linear_171_432" x1="35" y1="5" x2="39.5136" y2="12.7004" gradientUnits="userSpaceOnUse">
-                                                            <stop stop-color="#C6FF00" stop-opacity="0.75"></stop>
-                                                            <stop offset="0.25" stop-color="#C6FF00" stop-opacity="0.25"></stop>
-                                                            <stop offset="0.5" stop-color="#C6FF00" stop-opacity="0">
-                                                            </stop>
-                                                        </linearGradient>
-                                                        <linearGradient id="paint1_linear_171_432" x1="35" y1="55" x2="30.4864" y2="47.2996" gradientUnits="userSpaceOnUse">
-                                                            <stop stop-color="#C6FF00" stop-opacity="0.2"></stop>
-                                                            <stop offset="0.25" stop-color="#C6FF00" stop-opacity="0.1">
-                                                            </stop>
-                                                            <stop offset="0.5" stop-color="#C6FF00" stop-opacity="0">
-                                                            </stop>
-                                                        </linearGradient>
-                                                    </defs>
-                                                </svg>
+                                <button id="" class="">
+                           
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g class="rotate-animation" clip-path="url(#clip0_7597_478)">
+<path d="M36.3249 23.1468C36.3249 14.1299 29.0153 6.82031 19.9984 6.82031C10.9815 6.82031 3.67188 14.1299 3.67188 23.1468C3.67188 32.1637 10.9815 39.4734 19.9984 39.4734C29.0153 39.4734 36.3249 32.1637 36.3249 23.1468Z" fill="#C6FF00"/>
+<path d="M40 23.1406C40 12.0949 31.0457 3.14062 20 3.14062C8.95431 3.14062 0 12.0949 0 23.1406C0 34.1863 8.95431 43.1406 20 43.1406C31.0457 43.1406 40 34.1863 40 23.1406Z" stroke="url(#paint0_linear_7597_478)" stroke-width="0.857143"/>
+<path d="M40 23.1406C40 12.0949 31.0457 3.14062 20 3.14062C8.95431 3.14062 0 12.0949 0 23.1406C0 34.1863 8.95431 43.1406 20 43.1406C31.0457 43.1406 40 34.1863 40 23.1406Z" stroke="url(#paint1_linear_7597_478)" stroke-width="0.857143"/>
+<g filter="url(#filter0_d_7597_478)">
+<path d="M15.7445 21.2635L11.0938 21.2607L11.0955 24.9L15.5867 24.9027C16.074 24.9025 16.5238 24.6344 16.7658 24.1996L19.299 19.6666C19.5427 19.2309 19.5418 18.6948 19.2973 18.2575L17.0484 14.2344L13.9995 16.0525L16.3283 20.2185C16.59 20.6827 16.2649 21.2622 15.7445 21.2635Z" fill="black"/>
+<path d="M23.6629 20.2111L25.9907 16.0525L22.9384 14.2344L20.6904 18.2504C20.4469 18.6863 20.4469 19.2227 20.6904 19.6567L23.2246 24.1889C23.4682 24.6248 23.9181 24.892 24.4071 24.892H28.9048V21.2558H24.2473C23.7273 21.2578 23.4039 20.6772 23.6629 20.2111Z" fill="black"/>
+<path d="M20.4871 27.8737L22.8101 32.0352L25.8608 30.214L23.6175 26.1953C23.3737 25.7595 22.9239 25.4914 22.4383 25.4922L17.371 25.4928C16.8837 25.4927 16.4347 25.7616 16.1902 26.1989L13.9414 30.222L16.9903 32.0401L19.319 27.8741C19.5774 27.4079 20.2259 27.409 20.4871 27.8737Z" fill="black"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_7597_478" x="2.52232" y="9.94866" width="34.9554" height="34.9475" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4.28571"/>
+<feGaussianBlur stdDeviation="4.28571"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.776471 0 0 0 0 1 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_7597_478"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7597_478" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_7597_478" x1="20" y1="2.73246" x2="23.6846" y2="9.0185" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C6FF00" stop-opacity="0.75"/>
+<stop offset="0.25" stop-color="#C6FF00" stop-opacity="0.25"/>
+<stop offset="0.5" stop-color="#C6FF00" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_7597_478" x1="20" y1="43.5488" x2="16.3154" y2="37.2627" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C6FF00" stop-opacity="0.2"/>
+<stop offset="0.25" stop-color="#C6FF00" stop-opacity="0.1"/>
+<stop offset="0.5" stop-color="#C6FF00" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_7597_478">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+</defs>
+</svg>
 
                                 </button>
                                  <button id="pause-btn" class="hidden w-[40px] h-[40px] rounded-full bg-[#C6FF00] flex items-center justify-center hover:opacity-80 flex-shrink-0 transition-all duration-500">

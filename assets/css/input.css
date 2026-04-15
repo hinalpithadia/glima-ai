@@ -1550,6 +1550,18 @@ height: 100%;
         .card.selected .circle-bg {
             opacity: 100 !important;
         }
+          .mobile-emotion-select .select-styled{
+            padding:8px 10px;
+            font-size: 12px;
+        }
+         .mobile-emotion-select .select-styled:after{
+            top: 10px;
+             right: 10px;
+         }
+         .mobile-emotion-select .select-options li {
+            padding: 8px 10px;
+            font-size: 12px;
+        }
        .interior-select .select-hidden {
 	display: none;
 	visibility: hidden;

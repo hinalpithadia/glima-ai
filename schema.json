@@ -17,60 +17,60 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Identify Eye Color Using Glima AI",
+  "name": "How to Use AI Anime Identifier",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Upload Your Photo",
-      "text": "Choose a clear photo where the eyes are visible. A close-up image works best for accurate results."
+      "name": "Upload Your Anime Image",
+      "text": "Select or capture an image of an anime character, scene, or artwork you want to identify."
     },
     {
       "@type": "HowToStep",
-      "name": "Let AI Analyze",
-      "text": "The tool automatically scans the image and detects the eye color using advanced AI technology."
+      "name": "AI Scans the Image",
+      "text": "The AI analyzes visual details like art style, colors, and character features to find matches."
     },
     {
       "@type": "HowToStep",
-      "name": "View Instant Results",
-      "text": "Get precise eye color details (like brown, blue, hazel, green, etc.) within seconds."
+      "name": "Get Instant Results",
+      "text": "Receive the anime name, character details, and related information within seconds."
     }
   ]
 }
 
- {
+{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How does the AI Eye Color Identifier work?",
+      "name": "Can the AI recognize anime from partial or cropped images?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The tool uses advanced AI algorithms to analyze eye features in your uploaded image and accurately detect the eye color within seconds."
+        "text": "Yes, the AI can often identify characters or scenes even from cropped or partial images by focusing on unique visual features."
       }
     },
     {
       "@type": "Question",
-      "name": " What type of images work best?",
+      "name": "Does it work with fan art or edited images?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Clear, high-quality images where the eyes are visible and well-lit provide the most accurate results. Close-up photos are ideal."
+        "text": "In many cases, yes. The AI can analyze art style and character traits to match fan art or edited images with the original anime."
       }
     },
     {
       "@type": "Question",
-      "name": "Can it detect all eye colors?",
+      "name": "Can it suggest similar anime based on the image?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, the AI can identify common eye colors like brown, blue, green, and hazel, along with subtle variations and mixed shades."
+        "text": "Yes, some AI tools provide recommendations for similar anime or related series based on the identified content."
       }
     },
     {
       "@type": "Question",
-      "name": "How accurate is the eye color detection?",
+      "name": "Is the tool useful for discovering new anime?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The tool is highly accurate, but results may vary slightly based on image quality, lighting, and angle."
+        "text": "Absolutely! It helps users explore new shows and characters by identifying unknown images and offering related suggestions."
       }
     }
   ]

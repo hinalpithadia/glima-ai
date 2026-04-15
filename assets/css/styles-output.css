@@ -2202,6 +2202,21 @@ pre{
   opacity: 100 !important;
 }
 
+.mobile-emotion-select .select-styled{
+  padding:8px 10px;
+  font-size: 12px;
+}
+
+.mobile-emotion-select .select-styled:after{
+  top: 10px;
+  right: 10px;
+}
+
+.mobile-emotion-select .select-options li {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
 .interior-select .select-hidden {
   display: none;
   visibility: hidden;
@@ -4557,8 +4572,8 @@ pre{
   height: calc(100vh - 320px);
 }
 
-.h-\[calc\(100vh-390px\)\] {
-  height: calc(100vh - 390px);
+.h-\[calc\(100vh-412px\)\] {
+  height: calc(100vh - 412px);
 }
 
 .h-\[calc\(100vh-64px\)\] {
@@ -4589,14 +4604,6 @@ pre{
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[25px\] {
-  height: 25px;
-}
-
-.h-\[calc\(100vh-412px\)\] {
-  height: calc(100vh - 412px);
 }
 
 .max-h-0 {
@@ -5388,10 +5395,6 @@ pre{
   width: 1px;
 }
 
-.w-\[25px\] {
-  width: 25px;
-}
-
 .min-w-0 {
   min-width: 0px;
 }
@@ -5975,23 +5978,8 @@ pre{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-y-\[15px\] {
-  --tw-translate-y: 15px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .translate-y-\[1px\] {
   --tw-translate-y: 1px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-\[10px\] {
-  --tw-translate-y: 10px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-\[12px\] {
-  --tw-translate-y: 12px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -13503,6 +13491,10 @@ textarea{
 
   .lg\:h-screen {
     height: 100vh;
+  }
+
+  .lg\:h-\[calc\(100vh-310px\)\] {
+    height: calc(100vh - 310px);
   }
 
   .lg\:max-h-\[312px\] {
