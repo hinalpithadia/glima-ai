@@ -5249,6 +5249,10 @@ pre{
   width: 470px;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
 .w-\[50px\] {
   width: 50px;
 }
@@ -5267,6 +5271,10 @@ pre{
 
 .w-\[58px\] {
   width: 58px;
+}
+
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .w-\[60px\] {
@@ -5295,6 +5303,10 @@ pre{
 
 .w-\[70px\] {
   width: 70px;
+}
+
+.w-\[75\%\] {
+  width: 75%;
 }
 
 .w-\[76px\] {
@@ -5327,6 +5339,10 @@ pre{
 
 .w-\[92px\] {
   width: 92px;
+}
+
+.w-\[95\%\] {
+  width: 95%;
 }
 
 .w-\[98px\] {
@@ -5393,30 +5409,6 @@ pre{
 
 .w-px {
   width: 1px;
-}
-
-.w-\[85\%\] {
-  width: 85%;
-}
-
-.w-\[90\%\] {
-  width: 90%;
-}
-
-.w-\[95\%\] {
-  width: 95%;
-}
-
-.w-\[75\%\] {
-  width: 75%;
-}
-
-.w-\[60\%\] {
-  width: 60%;
-}
-
-.w-\[50\%\] {
-  width: 50%;
 }
 
 .min-w-0 {
@@ -5915,6 +5907,10 @@ pre{
 
 .grow {
   flex-grow: 1;
+}
+
+.origin-center {
+  transform-origin: center;
 }
 
 .-translate-x-1\/2 {
@@ -6482,22 +6478,16 @@ pre{
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
-
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .self-stretch {
@@ -6748,6 +6738,10 @@ pre{
 
 .border-\[6px\] {
   border-width: 6px;
+}
+
+.border-\[9px\] {
+  border-width: 9px;
 }
 
 .border-b {
@@ -7494,11 +7488,6 @@ pre{
   background-color: rgb(255 255 255 / .03);
 }
 
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
-}
-
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
@@ -7669,6 +7658,10 @@ pre{
 
 .bg-\[url\(\'\/assets\/images\/glima-christmas-bg\.png\'\)\] {
   background-image: url('/assets/images/glima-christmas-bg.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776417081_EvWOphpn3GoBc\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776417081_EvWOphpn3GoBc.png');
 }
 
 .bg-gradient-to-b {
@@ -10265,6 +10258,11 @@ textarea{
   border-top-color: rgb(72 72 72 / var(--tw-border-opacity, 1));
 }
 
+.before\:bg-black\/60::before {
+  content: var(--tw-content);
+  background-color: rgb(0 0 0 / 0.6);
+}
+
 .before\:bg-white\/10::before {
   content: var(--tw-content);
   background-color: rgb(255 255 255 / 0.1);
@@ -10299,6 +10297,13 @@ textarea{
 .before\:backdrop-blur-\[6px\]::before {
   content: var(--tw-content);
   --tw-backdrop-blur: blur(6px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.before\:backdrop-blur-\[7px\]::before {
+  content: var(--tw-content);
+  --tw-backdrop-blur: blur(7px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -11203,6 +11208,34 @@ textarea{
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:animate-\[spin-slow_8s_linear_infinite\] {
+  animation: spin-slow 8s linear infinite;
+}
+
+.group:hover .group-hover\:animate-\[wave-move_1s_ease-in-out_infinite\] {
+  animation: wave-move 1s ease-in-out infinite;
+}
+
+.group:hover .group-hover\:animate-\[waveMorph_0\.8s_ease-in-out_infinite\] {
+  animation: waveMorph 0.8s ease-in-out infinite;
+}
+
+.group:hover .group-hover\:animate-\[waveMorph_1s_ease-in-out_infinite\] {
+  animation: waveMorph 1s ease-in-out infinite;
+}
+
+.group:hover .group-hover\:animate-\[spin-slow_12s_linear_infinite\] {
+  animation: spin-slow 12s linear infinite;
+}
+
+.group:hover .group-hover\:animate-\[waveMorph_2s_ease-in-out_infinite\] {
+  animation: waveMorph 2s ease-in-out infinite;
+}
+
+.group:hover .group-hover\:animate-\[waveAdvanced_2s_ease-in-out_infinite\] {
+  animation: waveAdvanced 2s ease-in-out infinite;
 }
 
 .group:hover .group-hover\:border-\[\#C6FF00\] {
