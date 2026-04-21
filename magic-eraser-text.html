@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.tailwindcss.com"></script>
+<title>AI Magic Editor</title>
+</head>
+<body class="bg-[#0b0b12] text-white flex items-center justify-center min-h-screen p-6">
+<div class="w-[620px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6">
+
+  <h1 class="text-xl font-semibold mb-4 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+    ✨ AI Magic Editor
+  </h1>
+
+  <input type="file" id="upload" accept="image/*" class="mb-4 w-full text-sm text-white/50">
+
+  <div class="relative rounded-xl overflow-hidden border border-white/10 bg-black/30">
+    <canvas id="imageCanvas" class="w-full block"></canvas>
+    <canvas id="maskCanvas" class="absolute top-0 left-0 w-full h-full cursor-none"></canvas>
+    <div id="cursorRing" class="absolute pointer-events-none rounded-full opacity-0 border-2 border-purple-400"
+      style="transform:translate(-50%,-50%); transition: width 0.1s, height 0.1s;"></div>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="flex items-center gap-3 mt-4 flex-wrap">
+    <button id="btnBrush" onclick="setTool('brush')"
+      class="flex items-center gap-2 px-3 py-2 rounded-xl text-sm border border-purple-500 bg-purple-500/20 text-purple-300 transition-all">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536M9 11l6-6 3.536 3.536-6 6H9v-3.536z"/>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 21s1.5-3 4-3 3 3 3 3"/>
+      </svg>
+      Brush
+    </button>
+
+    <button id="btnEraser" onclick="setTool('eraser')"
+      class="flex items-center gap-2 px-3 py-2 rounded-xl text-sm border border-white/10 bg-white/5 text-white/50 transition-all">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M20 20H7L3 16l10-10 7 7-3.5 3.5"/>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.5 17.5l4-4"/>
+      </svg>
+      Eraser
+    </button>
+
+    <div class="flex items-center gap-2 flex-1">
+      <span class="text-xs text-white/40 shrink-0">Size</span>
+      <input type="range" id="brushSize" min="5" max="80" value="20"
+        class="flex-1 accent-purple-500 h-1">
+      <span id="sizeLabel" class="text-xs text-white/40 w-6 text-right">20</span>
+    </div>
+
+    <button onclick="clearMask()"
+      class="px-3 py-2 rounded-xl text-sm border border-white/10 bg-white/5 text-white/50 hover:text-white hover:border-white/30 transition-all">
+      Clear
+    </button>
+  </div>
+
+  <div class="flex gap-3 mt-3">
+    <input id="prompt" placeholder="e.g. remove object, replace background..."
+      class="flex-1 bg-black/40 border border-white/10 px-3 py-2 rounded-xl text-sm outline-none placeholder:text-white/20 focus:border-purple-500/50 transition-colors">
+    <button onclick="generateAI()"
+      class="bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity">
+      Generate
+    </button>
+  </div>
+
+</div>
+<script>
+const imgCanvas  = document.getElementById('imageCanvas');
+const maskCanvas = document.getElementById('maskCanvas');
+const imgCtx     = imgCanvas.getContext('2d');
+const maskCtx    = maskCanvas.getContext('2d');
+const cursorRing = document.getElementById('cursorRing');
+const brushSize  = document.getElementById('brushSize');
+const sizeLabel  = document.getElementById('sizeLabel');
+
+let drawing = false;
+let tool    = 'brush';
+let size    = 20;
+let lastX   = null;
+let lastY   = null;
+
+// Separate offscreen canvas for mask so eraser works correctly
+const offscreen    = document.createElement('canvas');
+const offscreenCtx = offscreen.getContext('2d');
+
+brushSize.addEventListener('input', () => {
+  size = parseInt(brushSize.value);
+  sizeLabel.textContent = size;
+  updateCursorSize();
+});
+
+function setTool(t) {
+  tool = t;
+  const btnBrush  = document.getElementById('btnBrush');
+  const btnEraser = document.getElementById('btnEraser');
+  if (t === 'brush') {
+    btnBrush.className  = 'flex items-center gap-2 px-3 py-2 rounded-xl text-sm border border-purple-500 bg-purple-500/20 text-purple-300 transition-all';
+    btnEraser.className = 'flex items-center gap-2 px-3 py-2 rounded-xl text-sm border border-white/10 bg-white/5 text-white/50 transition-all';
+    cursorRing.style.borderColor = '#a855f7';
+  } else {
+    btnEraser.className = 'flex items-center gap-2 px-3 py-2 rounded-xl text-sm border border-pink-500 bg-pink-500/20 text-pink-300 transition-all';
+    btnBrush.className  = 'flex items-center gap-2 px-3 py-2 rounded-xl text-sm border border-white/10 bg-white/5 text-white/50 transition-all';
+    cursorRing.style.borderColor = '#ec4899';
+  }
+}
+
+document.getElementById('upload').onchange = e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const img = new Image();
+  img.onload = () => {
+    imgCanvas.width  = maskCanvas.width  = offscreen.width  = img.width;
+    imgCanvas.height = maskCanvas.height = offscreen.height = img.height;
+    imgCtx.drawImage(img, 0, 0);
+    updateCursorSize();
+  };
+  img.src = URL.createObjectURL(file);
+};
+
+function updateCursorSize() {
+  const rect    = maskCanvas.getBoundingClientRect();
+  if (!rect.width) return;
+  const scale   = maskCanvas.width / rect.width;
+  const display = (size / scale) * 2;
+  cursorRing.style.width  = display + 'px';
+  cursorRing.style.height = display + 'px';
+}
+
+function getPos(e) {
+  const rect  = maskCanvas.getBoundingClientRect();
+  const scale = maskCanvas.width / rect.width;
+  return {
+    x: (e.clientX - rect.left) * scale,
+    y: (e.clientY - rect.top)  * scale,
+    rx: e.clientX - rect.left,
+    ry: e.clientY - rect.top,
+  };
+}
+
+// Stroke drawing — connects last point to current for smooth lines
+function drawStroke(x, y) {
+  if (tool === 'brush') {
+    // Draw on offscreen with stroke
+    offscreenCtx.globalCompositeOperation = 'source-over';
+    offscreenCtx.strokeStyle = 'rgba(168,85,247,0.6)';
+    offscreenCtx.lineWidth   = size * 2;
+    offscreenCtx.lineCap     = 'round';
+    offscreenCtx.lineJoin    = 'round';
+
+    if (lastX === null) {
+      offscreenCtx.beginPath();
+      offscreenCtx.moveTo(x, y);
+    }
+    offscreenCtx.lineTo(x, y);
+    offscreenCtx.stroke();
+
+  } else {
+    // Eraser — destination-out on offscreen
+    offscreenCtx.globalCompositeOperation = 'destination-out';
+    offscreenCtx.strokeStyle = 'rgba(0,0,0,1)';
+    offscreenCtx.lineWidth   = size * 2;
+    offscreenCtx.lineCap     = 'round';
+    offscreenCtx.lineJoin    = 'round';
+
+    if (lastX === null) {
+      offscreenCtx.beginPath();
+      offscreenCtx.moveTo(x, y);
+    }
+    offscreenCtx.lineTo(x, y);
+    offscreenCtx.stroke();
+    offscreenCtx.globalCompositeOperation = 'source-over';
+  }
+
+  // Flush offscreen to visible mask canvas
+  maskCtx.clearRect(0, 0, maskCanvas.width, maskCanvas.height);
+  maskCtx.drawImage(offscreen, 0, 0);
+
+  lastX = x;
+  lastY = y;
+}
+
+maskCanvas.addEventListener('mouseenter', () => {
+  cursorRing.style.opacity = '1';
+  updateCursorSize();
+});
+maskCanvas.addEventListener('mouseleave', () => {
+  cursorRing.style.opacity = '0';
+  if (drawing) {
+    offscreenCtx.beginPath(); // reset path on leave
+  }
+  drawing = false;
+  lastX = lastY = null;
+});
+
+maskCanvas.addEventListener('mousemove', e => {
+  const { x, y, rx, ry } = getPos(e);
+  cursorRing.style.left = rx + 'px';
+  cursorRing.style.top  = ry + 'px';
+  if (!drawing) return;
+  drawStroke(x, y);
+});
+
+maskCanvas.addEventListener('mousedown', e => {
+  drawing = true;
+  lastX = lastY = null;
+  offscreenCtx.beginPath();
+  const { x, y } = getPos(e);
+  // Single click dot
+  offscreenCtx.moveTo(x, y);
+  drawStroke(x, y);
+});
+
+maskCanvas.addEventListener('mouseup', () => {
+  drawing = false;
+  lastX = lastY = null;
+  offscreenCtx.beginPath();
+});
+
+// Touch support
+maskCanvas.addEventListener('touchstart', e => {
+  e.preventDefault();
+  drawing = true;
+  lastX = lastY = null;
+  offscreenCtx.beginPath();
+}, { passive: false });
+
+maskCanvas.addEventListener('touchend', () => {
+  drawing = false;
+  lastX = lastY = null;
+  offscreenCtx.beginPath();
+});
+
+maskCanvas.addEventListener('touchmove', e => {
+  e.preventDefault();
+  if (!drawing) return;
+  const touch = e.touches[0];
+  const rect  = maskCanvas.getBoundingClientRect();
+  const scale = maskCanvas.width / rect.width;
+  const x = (touch.clientX - rect.left) * scale;
+  const y = (touch.clientY - rect.top)  * scale;
+  drawStroke(x, y);
+}, { passive: false });
+
+function clearMask() {
+  offscreenCtx.clearRect(0, 0, offscreen.width, offscreen.height);
+  maskCtx.clearRect(0, 0, maskCanvas.width, maskCanvas.height);
+  offscreenCtx.beginPath();
+}
+
+function generateAI() {
+  const prompt = document.getElementById('prompt').value;
+  alert('AI will process: ' + prompt + '\n(Connect API here)');
+}
+</script>
+</body>
+</html>

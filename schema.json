@@ -17,22 +17,22 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Use AI Anime Identifier",
+  "name": "How to Create AI Jiggle Videos with Glima",
   "step": [
     {
       "@type": "HowToStep",
-      "name": "Upload Your Anime Image",
-      "text": "Select or capture an image of an anime character, scene, or artwork you want to identify."
+      "name": "Upload Your Image",
+      "text": "Upload a photo you want to animate. The AI will analyze the image and prepare it for smooth, natural-looking motion effects."
     },
     {
       "@type": "HowToStep",
-      "name": "AI Scans the Image",
-      "text": "The AI analyzes visual details like art style, colors, and character features to find matches."
+      "name": "Adjust Motion Settings",
+      "text": "Customize the movement style, intensity, and animation speed to achieve the look you want, from subtle motion to more dynamic effects."
     },
     {
       "@type": "HowToStep",
-      "name": "Get Instant Results",
-      "text": "Receive the anime name, character details, and related information within seconds."
+      "name": "Generate & Download",
+      "text": "Click generate and let AI create a lively animated video in seconds. Preview the result, download it, and share it on your favorite platforms."
     }
   ]
 }
@@ -43,34 +43,42 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Can the AI recognize anime from partial or cropped images?",
+      "name": "What is the AI Jiggle Video Generator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, the AI can often identify characters or scenes even from cropped or partial images by focusing on unique visual features."
+        "text": "It’s an AI-powered tool that transforms static images into animated videos by adding smooth, natural-looking motion effects."
       }
     },
     {
       "@type": "Question",
-      "name": "Does it work with fan art or edited images?",
+      "name": "How realistic are the motion effects?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In many cases, yes. The AI can analyze art style and character traits to match fan art or edited images with the original anime."
+        "text": "The AI applies smooth, natural movement designed to match the body’s posture and flow, creating visually appealing results."
       }
     },
     {
       "@type": "Question",
-      "name": "Can it suggest similar anime based on the image?",
+      "name": "Can I control the motion intensity?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, some AI tools provide recommendations for similar anime or related series based on the identified content."
+        "text": "Yes, you can adjust movement strength, speed, and animation style to achieve the desired look."
       }
     },
     {
       "@type": "Question",
-      "name": "Is the tool useful for discovering new anime?",
+      "name": "Is my uploaded image kept private?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely! It helps users explore new shows and characters by identifying unknown images and offering related suggestions."
+        "text": "Yes, uploaded images are processed securely and handled according to privacy standards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes this tool different from other animation tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can download high-quality generated videos instantly for personal or professional use."
       }
     }
   ]
