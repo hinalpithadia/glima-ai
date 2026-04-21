@@ -10,6 +10,23 @@
     <link rel="stylesheet" href="assets/css/styles-output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
     <style>
+        [contenteditable]:empty::before {
+            content: attr(data-placeholder);
+            color: rgba(255, 255, 255, 0.2);
+            pointer-events: none;
+            display: block;
+        }
+
+        .apply-wrap {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease;
+        }
+
+        .ebox-expanded .apply-wrap {
+            max-height: 40px;
+        }
+
         .btn.active {
             border-color: #47580C;
             color: #C6FF00;
@@ -23,152 +40,6 @@
         }
 
         .active-tab svg {
-            color: #C6FF00;
-        }
-
-        /* Custom thumb styling */
-        input[type="range"]::-webkit-slider-thumb {
-            appearance: none;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
-            transition: transform 0.2s;
-            filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.10));
-        }
-
-        input[type="range"]::-webkit-slider-thumb:hover {
-            transform: scale(1.1);
-        }
-
-        input[type="range"]::-moz-range-thumb {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
-        }
-
-        .interior-select .select-hidden {
-            display: none;
-            visibility: hidden;
-            padding-right: 10px;
-        }
-
-        .interior-select .select {
-            position: relative;
-            display: inline-block;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            margin-bottom: 0px !important;
-            width: 100%;
-            cursor: pointer;
-            -webkit-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-        }
-
-        .interior-select .select-styled {
-            position: relative;
-            display: flex;
-            align-items: center;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            margin-bottom: 0px !important;
-            width: 100%;
-            background: #000;
-            font-size: 14px;
-            color: #fff;
-            padding: 12px 18px;
-            border-radius: 10px;
-            -webkit-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-            font-weight: 500;
-        }
-
-        .dropdown-select .select-styled {
-            background: #0A0A0A;
-        }
-
-        .interior-select .select-styled:after {
-            content: "";
-            background: url(./assets/images/select-arrow-white.svg);
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            width: 20px;
-            height: 10px;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .interior-select .select-options {
-            display: none;
-            position: absolute;
-            top: 110%;
-            right: 0;
-            left: 0;
-            z-index: 999;
-            margin: 0;
-            padding: 2px;
-            list-style: none;
-            border-radius: 10px;
-            background-color: #000;
-            -webkit-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-            overflow: hidden;
-            max-height: 150px;
-            overflow-y: auto;
-        }
-
-        .interior-select .select-options::-webkit-scrollbar-track {
-            background-color: transparent !important;
-            border-left: 8px solid transparent;
-        }
-
-        .interior-select .select-options::-webkit-scrollbar {
-            width: 5px;
-            background-color: transparent !important;
-            border-radius: 6px;
-
-        }
-
-        .interior-select .select-options::-webkit-scrollbar-thumb {
-            background-color: #1f1f1f !important;
-            border-radius: 6px;
-            padding-right: 10px;
-        }
-
-        .interior-select .select-options li {
-            position: relative;
-            display: block;
-            padding: 12px 18px;
-            font-size: 14px;
-            color: #fff;
-            border-radius: 10px;
-            cursor: pointer;
-            -webkit-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-        }
-
-        .select-options li:hover {
-            background: #0A0A0A;
-        }
-
-        .select-options li[rel="hide"] {
-            display: none;
-        }
-
-        .sub-tab-buttons li.active {
-            background: #000;
             color: #C6FF00;
         }
     </style>
@@ -902,28 +773,31 @@ scrollbar-hide h-screen pb-[100px] md:pb-0">
                                 <path opacity="0.1" d="M0.5 0.5L0.499999 30.5" stroke="white" stroke-linecap="round">
                                 </path>
                             </svg>
-                            <h2 class="text-xl font-semibold text-white capitalize">audio to Text</h2>
+                            <h2 class="text-xl font-semibold text-white capitalize">music generator</h2>
                         </div>
                         <ul class="flex flex-col gap-4">
+
+                            <li>
+                                <div class="relative w-full flex flex-col gap-2.5 ">
+                                    <label class="text-sm  font-medium text-white">Prompt
+                                    </label>
+                                    <textarea name="text-prompt" id="text-prompt" placeholder="Write Prompt Here"
+                                        class="resize-none w-full h-[180px] bg-black rounded-[10px] p-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white outline-none transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">Change the hair color of the human subject in the image to a different style: apply a natural or creative color black, ensure realistic shading, shine, and texture, maintain original hair flow and lighting, and blend the new color seamlessly for a natural and polished look.</textarea>
+                                </div>
+                            </li>
                             <li>
                                 <div class="flex flex-col gap-2.5">
-                                    <label class="text-sm leading-[18px] text-white font-medium capitalize">Audio
-                                        File</label>
-                                    <div class="bg-black w-full h-[100px] p-[18px] rounded-[10px] border border-transparent 
-                                hover:border-[rgba(198,255,0,0.20)] transition-all duration-500">
-                                        <div class="flex items-center text-sm text-white/50">
-
-                                            <!-- Paste text (NOT input placeholder) -->
-                                            <span class="text-white/50">Paste here or</span>
-
-                                            <!-- No space between "or" and Upload -->
-                                            <label for="uploadInput" class="text-[#C6FF00] cursor-pointer ml-1.5">
-                                                Upload Audio File
-                                            </label>
-
-                                            <!-- Hidden file selector -->
-                                            <input id="uploadInput" type="file" class="hidden" accept="video/*">
-                                        </div>
+                                    <label class="text-sm leading-[18px] text-white font-medium capitalize">Duration
+                                    </label>
+                                    <div class="flex gap-[15px] items-center py-3.5 px-[18px] rounded-[10px] bg-black ">
+                                        <input id="customRange" type="range" min="2" max="12" step="1" value="8" class="customRange w-full h-[3px] appearance-none rounded-[100px] cursor-pointer 
+                                                bg-gradient-to-r from-[#C6FF00] to-[#C6FF00] 
+                                                [--range-progress:#C6FF00]"
+                                            style="background: linear-gradient(to right, rgb(198, 255, 0) 60%, rgba(255, 255, 255, 0.1) 60%);">
+                                        <label for="customRange"
+                                            class="text-white text-sm leading-4 font-normal min-w-5 text-right">
+                                            <span id="rangeLabel" class="rangeLabel min-w-10 text-right">8</span>
+                                        </label>
                                     </div>
                                 </div>
                             </li>
@@ -1051,122 +925,399 @@ scrollbar-hide h-screen pb-[100px] md:pb-0">
                             </svg>
                             <span class="text-base font-medium text-white ">My Creation</span>
                         </div>
-                    </div>
-                    <div class="lg:h-[calc(100vh-145px)] h-full overflow-y-auto lg:pb-3">
-                        <div class="w-full bg-[#111111] rounded-lg flex flex-col gap-6 p-3 relative">
-                            <p
-                                class="text-sm leading-7 md:text-base font-normal md:leading-[31px] text-white white text-ellipsis line-clamp-[11] max-h-[350px] overflow-y-auto [&::-webkit-scrollbar]:w-1
-[&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-track]:rounded-lg
-[&::-webkit-scrollbar-thumb]:bg-white/10
-hover:[&::-webkit-scrollbar-thumb]:bg-white/10">
-                                The names "John Doe" for males,
-                                "Jane Doe" or "Jane Roe" for females, or "Jonnie Doe" and
-                                "Janie Doe" for children, or just "Doe" non-gender-specifically are used as placeholder
-                                names for a party whose true identity is unknown or must be withheld in a legal action,
-                                case, or discussion. The names are also used to refer to acorpse or hospital patient
-                                whose identity is unknown. This practice is widely used in the United States and Canada,
-                                but is rarely used in other English-speaking countries including the United Kingdom
-                                itself, from where the use of "John Doe" in a legal context originates. The names Joe
-                                Bloggs or John Smith are used in the UK instead, as well as in Australia and New
-                                Zealand.
-
-                                <br>
-                                <br>
-                                John Doe is sometimes used to refer to a typical male in other contexts as well, in a
-                                similar manner to John Q. Public, known in Great Britain as Joe Public, John Smith or
-                                Joe Bloggs. For example, the first name listed on a form is often John Doe, along with a
-                                fictional address or other fictional information to provide an example of how to fill in
-                                the form. The name is also used frequently in popular culture, for example in the Frank
-                                Capra film Meet John Doe. John Doe was also the name of a 2002 American television
-                                series.
-                                <br>
-                                <br>
-
-                                Similarly, a child or baby whose identity is unknown may be referred to as Baby Doe. A
-                                notorious murder case in Kansas City, Missouri, referred to the baby victim as Precious
-                                Doe. Other unidentified female murder victims are Cali Doe and Princess Doe. Additional
-                                persons may be called James Doe, Judy Doe, etc. However, to avoid possible confusion, if
-                                two anonymous or unknown parties are cited in a specific case or action, the surnames
-                                Doe and Roe may be used simultaneously; for example, "John Doe v. Jane Roe". If several
-                                anonymous parties are referenced, they may simply be labelled John Doe #1, John Doe #2,
-                                etc. (the U.S. Operation Delego cited 21 (numbered) "John Doe"s) or labelled with other
-                                variants of Doe / Roe / Poe / etc. Other early alternatives such as John Stiles and
-                                Richard Miles are now rarely used, and Mary Major has been used in some American federal
-                                cases.
-                                 <br>
-
-                                Similarly, a child or baby whose identity is unknown may be referred to as Baby Doe. A
-                                notorious murder case in Kansas City, Missouri, referred to the baby victim as Precious
-                                Doe. Other unidentified female murder victims are Cali Doe and Princess Doe. Additional
-                                persons may be called James Doe, Judy Doe, etc. However, to avoid possible confusion, if
-                                two anonymous or unknown parties are cited in a specific case or action, the surnames
-                                Doe and Roe may be used simultaneously; for example, "John Doe v. Jane Roe". If several
-                                anonymous parties are referenced, they may simply be labelled John Doe #1, John Doe #2,
-                                etc. (the U.S. Operation Delego cited 21 (numbered) "John Doe"s) or labelled with other
-                                variants of Doe / Roe / Poe / etc. Other early alternatives such as John Stiles and
-                                Richard Miles are now rarely used, and Mary Major has been used in some American federal
-                                cases.
-                                 <br>
-
-                                Similarly, a child or baby whose identity is unknown may be referred to as Baby Doe. A
-                                notorious murder case in Kansas City, Missouri, referred to the baby victim as Precious
-                                Doe. Other unidentified female murder victims are Cali Doe and Princess Doe. Additional
-                                persons may be called James Doe, Judy Doe, etc. However, to avoid possible confusion, if
-                                two anonymous or unknown parties are cited in a specific case or action, the surnames
-                                Doe and Roe may be used simultaneously; for example, "John Doe v. Jane Roe". If several
-                                anonymous parties are referenced, they may simply be labelled John Doe #1, John Doe #2,
-                                etc. (the U.S. Operation Delego cited 21 (numbered) "John Doe"s) or labelled with other
-                                variants of Doe / Roe / Poe / etc. Other early alternatives such as John Stiles and
-                                Richard Miles are now rarely used, and Mary Major has been used in some American federal
-                                cases.
-                                 <br>
-
-                                Similarly, a child or baby whose identity is unknown may be referred to as Baby Doe. A
-                                notorious murder case in Kansas City, Missouri, referred to the baby victim as Precious
-                                Doe. Other unidentified female murder victims are Cali Doe and Princess Doe. Additional
-                                persons may be called James Doe, Judy Doe, etc. However, to avoid possible confusion, if
-                                two anonymous or unknown parties are cited in a specific case or action, the surnames
-                                Doe and Roe may be used simultaneously; for example, "John Doe v. Jane Roe". If several
-                                anonymous parties are referenced, they may simply be labelled John Doe #1, John Doe #2,
-                                etc. (the U.S. Operation Delego cited 21 (numbered) "John Doe"s) or labelled with other
-                                variants of Doe / Roe / Poe / etc. Other early alternatives such as John Stiles and
-                                Richard Miles are now rarely used, and Mary Major has been used in some American federal
-                                cases.
-                            </p>
-                            <div class="w-full flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between">
-                                <div
-                                    class="flex flex-col md:flex-row md:items-center gap-2.5 w-full md:w-fit text-center md:text-start">
-                                    <button
-                                        class="py-2 px-3.5 bg-[#C6FF0014] rounded-md text-[#C6FF00] text-sm font-normal flex items-center justify-center gap-[5px] transition-all duration-500 hover:text-black hover:bg-[#C6FF00]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            viewBox="0 0 18 18" fill="none">
-                                            <path
-                                                d="M6.75 11.25C6.75 9.1287 6.75 8.06805 7.40901 7.40901C8.06805 6.75 9.1287 6.75 11.25 6.75H12C14.1213 6.75 15.1819 6.75 15.841 7.40901C16.5 8.06805 16.5 9.1287 16.5 11.25V12C16.5 14.1213 16.5 15.1819 15.841 15.841C15.1819 16.5 14.1213 16.5 12 16.5H11.25C9.1287 16.5 8.06805 16.5 7.40901 15.841C6.75 15.1819 6.75 14.1213 6.75 12V11.25Z"
-                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path
-                                                d="M12.7499 6.75C12.7481 4.53218 12.7146 3.38341 12.069 2.59682C11.9443 2.44492 11.8051 2.30563 11.6532 2.18097C10.8234 1.5 9.59062 1.5 7.125 1.5C4.65939 1.5 3.42658 1.5 2.59682 2.18097C2.44492 2.30563 2.30563 2.44492 2.18097 2.59682C1.5 3.42658 1.5 4.65939 1.5 7.125C1.5 9.59062 1.5 10.8234 2.18097 11.6532C2.30563 11.8051 2.44492 11.9443 2.59682 12.069C3.38341 12.7146 4.53218 12.7481 6.75 12.7499"
-                                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                        Copy Text
-                                    </button>
-                                    <p class="py-2 px-3.5 bg-black rounded-md text-white/50 text-sm font-normal">Dec 03,
-                                        2025</p>
-                                    <p class="py-2 px-3.5 bg-black rounded-md text-white/50 text-sm font-normal">570 kb
-                                        File</p>
+                        <div class="flex max-md:justify-center items-center md:gap-4 gap-2 ">
+                            <div class="relative md:w-fit w-full">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                        fill="none">
+                                        <path d="M13 13L16 16" stroke="white" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M2 8C2 11.3137 4.68629 14 8 14C9.65975 14 11.1621 13.3261 12.2483 12.237C13.3308 11.1516 14 9.65397 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8Z"
+                                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
                                 </div>
+                                <input type="text" id="default-search"
+                                    class="block md:w-[344px] w-full pr-3.5 pl-10 py-2.5 text-sm leading-[18px] font-normal text-white bg-black  rounded-[10px] placeholder-white transition-all duration-500 ring-[0.5px] ring-transparent focus:ring-white/30 hover:ring-white/30 outline-none focus-within:outline-offset-0 focus-within:outline focus-within:!outline-0 focus-within:outline-none "
+                                    placeholder="Search By Prompt">
+                            </div>
+                            <div class="relative">
                                 <button
-                                    class="py-[7px] px-[29px] flex items-center justify-center gap-1.5 text-sm font-medium bg-[#C6FF00] rounded-lg transition-all duration-500 hover:bg-[#a8d50c] w-full md:w-fit"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    class="dropdown-btn w-[40px] h-[40px] flex items-center justify-between   rounded-[10px] ring-[0.5px] ring-transparent focus:ring-white/30 hover:ring-white/30 font-medium  bg-black  p-3 transition-all duration-500  outline-none focus-within:outline-offset-0 focus-within:outline focus-within:!outline-1 focus-within:outline-none ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
                                         fill="none">
                                         <path
-                                            d="M10.7917 5.25C11.5971 5.25 12.25 5.90292 12.25 6.70833V8.75C12.25 10.3999 12.25 11.2248 11.7374 11.7374C11.2248 12.25 10.3999 12.25 8.75 12.25H5.25C3.60008 12.25 2.77513 12.25 2.26256 11.7374C1.75 11.2248 1.75 10.3999 1.75 8.75V6.70833C1.75 5.90292 2.40292 5.25 3.20833 5.25"
-                                            stroke="black" stroke-width="1.2" stroke-linecap="round" />
-                                        <path
-                                            d="M6.9984 9.33333L4.55078 6.88567M6.9984 9.33333L9.44607 6.88567M6.9984 9.33333V1.75"
-                                            stroke="black" stroke-width="1.2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>Downloads</button>
+                                            d="M6.6431 9.37957C4.77676 7.9842 3.44673 6.44936 2.72051 5.5865C2.4957 5.3194 2.42204 5.12392 2.37775 4.7796C2.22608 3.6006 2.15026 3.0111 2.49596 2.63055C2.84168 2.25 3.45303 2.25 4.67575 2.25H13.3243C14.547 2.25 15.1583 2.25 15.504 2.63055C15.8498 3.0111 15.7739 3.6006 15.6223 4.77961C15.578 5.12393 15.5043 5.3194 15.2795 5.5865C14.5523 6.45046 13.2196 7.98803 11.3495 9.38513C11.1803 9.51158 11.0687 9.71753 11.048 9.94605C10.8628 11.994 10.6919 13.1157 10.5856 13.6831C10.414 14.5993 9.1149 15.1505 8.4195 15.6422C8.00558 15.935 7.50323 15.5865 7.44959 15.1333C7.34732 14.2696 7.15471 12.5148 6.94445 9.94605C6.92557 9.71543 6.81365 9.50707 6.6431 9.37957Z"
+                                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <!--filter ratio dropdown-->
+                                <div
+                                    class="dropdown-menu z-[1000] absolute right-0 mt-2 w-full md:w-[720px] bg-[#202020] shadow-lg rounded-[10px] transform transition-all duration-300 py-4 px-5 
+         opacity-0 invisible md:translate-y-[-10px] 
+         max-sm:fixed max-sm:left-0 max-sm:right-0 max-sm:bottom-0 max-sm:mt-0 max-sm:rounded-t-[16px] max-sm:translate-y-full">
+                                    <div class="flex justify-between items-center pb-4">
+                                        <span class="text-base font-medium text-white">Models</span>
+
+                                        <button type="button" class="close-dropdown  cursor-pointer p-1.5 rounded-md
+                    bg-black text-white
+                    transition-all duration-300 hover:text-limegreen
+                    ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                viewBox="0 0 22 22" fill="none">
+                                                <path
+                                                    d="M6.19531 15.8057L11.0011 11M11.0011 11L15.8068 6.19421M11.0011 11L6.19531 6.19421M11.0011 11L15.8068 15.8057"
+                                                    stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                                                    stroke-linejoin="round"></path>
+                                            </svg>
+
+                                        </button>
+                                    </div>
+                                    <div class="overflow-y-auto md:max-h-[340px] max-h-[480px] h-full model-scroll">
+                                        <div class="grid md:grid-cols-3 grid-cols-1 gap-x-1 gap-y-1 ">
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]">
+                                                <input id="checkbox-flux" type="checkbox" value=""
+                                                    class="peer w-4 h-4 appearance-none border cursor-pointer border-[#66680]  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00]"
+                                                    checked="">
+                                                <label for="checkbox-flux"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Flux
+                                                    pro V1.1 Ultra Fintune</label>
+                                            </div>
+
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]">
+                                                <input id="checkbox-flux" type="checkbox" value=""
+                                                    class="peer w-4 h-4 appearance-none border cursor-pointer border-[#66680]  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] "
+                                                    checked="">
+                                                <label for="checkbox-flux"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Flux
+                                                    pro V1.1 Ultra Fintune</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px] ">
+                                                <input id="checkbox-ideogram" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border-wh[#666]rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-ideogram"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">bytedance
+                                                    seedream V3</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-minimax" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border-w[#666] rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-minimax"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">
+                                                    Seedream V3</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-bria" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer borde[#666]80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-bria"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Bria
+                                                    asff</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-sana" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer borde[#666]80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-sana"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Sana</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-sana" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer borde[#666]80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-sana"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Imagen
+                                                    3</label>
+                                            </div>
+
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-recraft" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border-w[#666] rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-recraft"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Recraft
+                                                    v3</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-janus" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border[#666]0  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-janus"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Janus</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px] ">
+                                                <input id="checkbox-ideogram" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border-wh[#666]rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-ideogram"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Ideogram</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-minimax" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border-w[#666] rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-minimax"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">
+                                                    Seedream V3</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-bria" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer borde[#666]80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-bria"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Bria
+                                                    asff</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-sana" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer borde[#666]80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-sana"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Sana</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-sana" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer borde[#666]80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-sana"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Imagen
+                                                    3</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-recraft" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border-w[#666] rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-recraft"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Recraft
+                                                    v3</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-janus" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border[#666]0  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-janus"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Janus</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px] ">
+                                                <input id="checkbox-ideogram" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border-wh[#666]rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-ideogram"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Ideogram</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-minimax" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border-w[#666] rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-minimax"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">
+                                                    Seedream V3</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-bria" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer borde[#666]80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-bria"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Bria
+                                                    asff</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-sana" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer borde[#666]80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-sana"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Sana</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-sana" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer borde[#666]80  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-sana"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Imagen
+                                                    3</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-recraft" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border-w[#666] rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-recraft"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Recraft
+                                                    v3</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-janus" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border[#666]0  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-janus"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Janus</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-janus" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border[#666]0  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-janus"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Janus</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-janus" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border[#666]0  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-janus"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Janus</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-janus" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border[#666]0  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-janus"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Janus</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-janus" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border[#666]0  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-janus"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Janus</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-janus" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border[#666]0  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-janus"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Janus</label>
+                                            </div>
+                                            <div
+                                                class="flex items-center gap-1 checkbox-row py-2 pl-2.5 pr-3.5 bg-transparent rounded-[10px]  ">
+                                                <input id="checkbox-janus" type="checkbox" value=""
+                                                    class="w-4 h-4 appearance-none border cursor-pointer border[#666]0  rounded-sm mr-2 checked:bg-no-repeat checked:border-transparent checked:bg-center checked:bg-[#C6FF00] ">
+                                                <label for="checkbox-janus"
+                                                    class="text-sm font-normal cursor-pointer text-white whitespace-nowrap">Janus</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="drop-overlay"
+                                    class=" w-full h-screen z-[200] bg-black/50 backdrop-blur-xl fixed top-0 left-0 opacity-0 invisible md:hidden">
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="lg:h-[calc(100vh-145px)] h-full overflow-y-auto lg:pb-3">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <!-- video box-1 -->
+                            <div
+                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
+                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
+                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
+                                        controlslist="nodownload noplaybackrate nopictureinpicture"
+                                        disablepictureinpicture="">
+                                        <source src="assets/images/clothes-changer.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <button
+                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path
+                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- video box-2 -->
+                            <div
+                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
+                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
+                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
+                                        controlslist="nodownload noplaybackrate nopictureinpicture"
+                                        disablepictureinpicture="">
+                                        <source src="assets/images/upscale-video.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <button
+                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path
+                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- video box-3 -->
+                            <div
+                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
+                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
+                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
+                                        controlslist="nodownload noplaybackrate nopictureinpicture"
+                                        disablepictureinpicture="">
+                                        <source src="assets/images/unblur-video.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <button
+                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path
+                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- video box-2 -->
+                            <div
+                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
+                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
+                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
+                                        controlslist="nodownload noplaybackrate nopictureinpicture"
+                                        disablepictureinpicture="">
+                                        <source src="assets/images/video-bg-remove.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+                                <button
+                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path
+                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
+                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1317,7 +1468,34 @@ hover:[&::-webkit-scrollbar-thumb]:bg-white/10">
                 });
             });
         </script>
+        <!--custom range slider-->
+        <script>
+            const ranges = document.querySelectorAll(".customRange");
 
+            ranges.forEach(range => {
+                const label = range.parentElement.querySelector(".rangeLabel");
+
+                function updateRange() {
+                    const value = range.value;
+                    const min = range.min;
+                    const max = range.max;
+                    const percent = ((value - min) / (max - min)) * 100;
+
+                    // Background progress fill
+                    range.style.background = `linear-gradient(to right, #C6FF00 ${percent}%, #ffffff1a ${percent}%)`;
+
+                    // 🔥 Auto-detect decimals
+                    if (range.step.includes(".")) {
+                        label.textContent = parseFloat(value).toFixed(1);   // for 0.5 / 0.1 etc.
+                    } else {
+                        label.textContent = value;                          // for normal integer sliders
+                    }
+                }
+
+                range.addEventListener("input", updateRange);
+                updateRange();
+            });
+        </script>
 
         <!--mobile tab scroll-->
         <script>
@@ -1384,7 +1562,359 @@ hover:[&::-webkit-scrollbar-thumb]:bg-white/10">
                 showCreate()
             }
         </script>
+        <script>
+            const canvas = document.getElementById('waveform');
+            const ctx = canvas.getContext('2d');
+            const playBtn = document.getElementById('play-btn');
+            const playIcon = document.getElementById('play-icon');
+            const pauseIcon = document.getElementById('pause-icon');
+            const playhead = document.getElementById('playhead');
 
+            let isPlaying = false;
+            let playheadPos = 0.55;
+            let animFrame;
+
+            function drawWaveform() {
+                const W = canvas.offsetWidth;
+                const H = canvas.offsetHeight;
+                canvas.width = W;
+                canvas.height = H;
+
+                const bars = Math.floor(W / 3);
+                const accent = '#C6FF00';
+                const dim = '#363927';
+
+                for (let i = 0; i < bars; i++) {
+                    const x = i * 3;
+                    const prog = i / bars;
+                    const amp = 0.2 + 0.7 * (
+                        Math.sin(i * 0.18) * 0.3 +
+                        Math.sin(i * 0.07) * 0.4 +
+                        Math.abs(Math.sin(i * 0.31)) * 0.3
+                    );
+                    const barH = Math.max(2, amp * H);
+                    const y = (H - barH) / 2;
+                    ctx.fillStyle = prog < playheadPos ? accent : dim;
+                    ctx.beginPath();
+                    ctx.fillRect(x, y, 2, barH);
+                    ctx.fill();
+                }
+            }
+
+            function animate() {
+                if (!isPlaying) return;
+                playheadPos = Math.min(playheadPos + 0.001, 1);
+                playhead.style.left = (playheadPos * 100) + '%';
+                drawWaveform();
+                if (playheadPos < 1) animFrame = requestAnimationFrame(animate);
+                else { isPlaying = false; playIcon.classList.remove('hidden'); pauseIcon.classList.add('hidden'); }
+            }
+
+            playBtn.addEventListener('click', () => {
+                isPlaying = !isPlaying;
+                playIcon.classList.toggle('hidden', isPlaying);
+                pauseIcon.classList.toggle('hidden', !isPlaying);
+                if (isPlaying) animate();
+                else cancelAnimationFrame(animFrame);
+            });
+
+            canvas.addEventListener('click', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                playheadPos = (e.clientX - rect.left) / rect.width;
+                playhead.style.left = (playheadPos * 100) + '%';
+                drawWaveform();
+            });
+
+            drawWaveform();
+            window.addEventListener('resize', drawWaveform);
+        </script>
+        <script>
+            const emotions = ['Happy', 'Sad', 'Angry', 'Fearful', 'Surprised', 'Excited', 'Calm'];
+            let blockCount = 1;
+            let activeId = 0;
+
+            const globalHint = document.createElement('div');
+            globalHint.className = 'hidden items-center gap-2';
+            globalHint.innerHTML = `
+  <kbd class="px-2 py-1 rounded border border-[rgba(255,255,255,0.15)] text-[11px] font-mono text-[rgba(255,255,255,0.4)]">↵ Enter</kbd>
+  <span class="text-xs text-[rgba(255,255,255,0.3)]">to start a new paragraph</span>
+`;
+            document.getElementById('script-editor').appendChild(globalHint);
+
+            function showHint() {
+                globalHint.classList.remove('hidden');
+                globalHint.classList.add('flex');
+                document.getElementById('script-editor').appendChild(globalHint);
+            }
+
+            function hideHint() {
+                globalHint.classList.add('hidden');
+                globalHint.classList.remove('flex');
+            }
+
+            function collapseBox(id) {
+                const box = document.getElementById(`emotion-box-${id}`);
+                if (!box) return;
+
+                box.classList.remove('ebox-expanded');
+
+                const expandOnly = box.querySelector('.expand-only');
+                if (expandOnly) {
+                    expandOnly.classList.add('hidden');
+                    expandOnly.classList.remove('flex');
+                }
+
+                const applyWrap = box.querySelector('.apply-wrap');
+                if (applyWrap) applyWrap.style.maxHeight = '0px';
+            }
+
+            function expandBox(id) {
+                const box = document.getElementById(`emotion-box-${id}`);
+                if (!box || box.classList.contains('hidden')) return;
+
+                box.classList.add('ebox-expanded');
+
+                const expandOnly = box.querySelector('.expand-only');
+                if (expandOnly) {
+                    expandOnly.classList.remove('hidden');
+                    expandOnly.classList.add('flex');
+                }
+
+                const applyWrap = box.querySelector('.apply-wrap');
+                if (applyWrap) {
+                    applyWrap.style.maxHeight = applyWrap.scrollHeight + 'px';
+                }
+            }
+
+            function collapseAll() {
+                document.querySelectorAll('[id^="emotion-box-"]').forEach(box => {
+                    collapseBox(box.id.replace('emotion-box-', ''));
+                });
+            }
+
+            function setActive(id) {
+                collapseAll();
+                expandBox(id);
+                activeId = id;
+            }
+
+            function showEmotion(id) {
+                const box = document.getElementById(`emotion-box-${id}`);
+                const label = document.getElementById(`emotion-label-${id}`);
+                if (!box) return;
+
+                label.textContent = emotions[id % emotions.length];
+                box.classList.remove('hidden');
+            }
+
+            function focusEnd(el) {
+                el.focus();
+                const range = document.createRange();
+                const sel = window.getSelection();
+                range.selectNodeContents(el);
+                range.collapse(false);
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }
+
+            function getBlockIds() {
+                return Array.from(document.querySelectorAll('[id^="block-wrap-"]'))
+                    .map(b => parseInt(b.id.replace('block-wrap-', '')));
+            }
+
+            function addBlock() {
+                const id = blockCount++;
+                const wrap = document.createElement('div');
+
+                wrap.className = 'flex gap-6 items-start';
+                wrap.id = `block-wrap-${id}`;
+
+                wrap.innerHTML = `
+    <div class="flex-1 min-w-0 flex flex-col gap-2">
+      <div class="flex items-center gap-2 w-fit bg-[rgba(255,255,255,0.06)] rounded-full px-2 py-1 cursor-pointer speaker-pill" data-id="${id}">
+        <div class="w-6 h-6 rounded-full overflow-hidden flex-shrink-0">
+          <div class="w-full h-full bg-gradient-to-br from-pink-500 to-orange-400"></div>
+        </div>
+        <span class="text-xs text-white font-medium">Calm Women</span>
+        <svg class="w-3 h-3 text-[rgba(255,255,255,0.4)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </div>
+
+      <div contenteditable="true"
+        data-placeholder="Continue here..."
+        id="block-${id}"
+        class="text-sm text-white leading-relaxed outline-none min-h-[24px] caret-[#C6FF00]"></div>
+    </div>
+
+    <div class="flex-shrink-0 w-[140px] mt-8 emotion-col" data-id="${id}">
+      <div class="border border-[rgba(255,255,255,0.12)] rounded-md overflow-hidden hidden"
+        id="emotion-box-${id}">
+
+        <div class="flex items-center justify-between px-3 py-2">
+          <span class="text-xs text-[rgba(255,255,255,0.7)]"
+            id="emotion-label-${id}"></span>
+
+          <div class="expand-only hidden items-center gap-1">
+            <button class="text-[rgba(255,255,255,0.3)] hover:text-white del-btn" data-id="${id}">✕</button>
+          </div>
+        </div>
+
+        <div class="apply-wrap">
+          <button class="text-[10px] text-[rgba(255,255,255,0.4)] hover:text-white border-t border-[rgba(255,255,255,0.1)] px-3 py-1.5 w-full text-left bg-white/5">
+            Apply to same voice
+          </button>
+        </div>
+
+      </div>
+    </div>
+  `;
+
+                const editor = document.getElementById('script-editor');
+                editor.insertBefore(wrap, globalHint);
+
+                attach(id);
+
+                setTimeout(() => {
+                    const el = document.getElementById(`block-${id}`);
+                    if (el) focusEnd(el);
+                }, 10);
+
+                editor.scrollTop = editor.scrollHeight;
+            }
+
+            function cleanIfEmpty(el) {
+                if (el.innerText.trim() === '') {
+                    el.innerHTML = '';
+                }
+            }
+
+            function attach(id) {
+                const el = document.getElementById(`block-${id}`);
+                const ebox = document.getElementById(`emotion-box-${id}`);
+                const pill = document.querySelector(`.speaker-pill[data-id="${id}"]`);
+                const delBtn = document.querySelector(`.del-btn[data-id="${id}"]`);
+                const col = document.querySelector(`.emotion-col[data-id="${id}"]`);
+
+                el.addEventListener('focus', () => setActive(id));
+
+                el.addEventListener('input', () => {
+                    cleanIfEmpty(el);
+
+                    const hasText = el.innerText.trim().length > 0;
+                    const ids = getBlockIds();
+
+                    if (hasText) {
+                        showEmotion(id);
+                        showHint();
+                        setActive(id);
+                    } else {
+                        if (ebox) ebox.classList.add('hidden');
+
+                        if (ids.length === 1) {
+                            el.innerHTML = '';
+                            el.setAttribute('data-placeholder', 'Type your script here...');
+                            hideHint();
+                        }
+                    }
+                });
+
+                el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        addBlock();
+                        return;
+                    }
+
+                    if (e.key === 'Backspace') {
+                        if (el.innerText.trim() !== '') return;
+
+                        e.preventDefault();
+                        const ids = getBlockIds();
+
+                        if (ids.length <= 1) {
+                            el.innerHTML = '';
+                            el.setAttribute('data-placeholder', 'Type your script here...');
+                            hideHint();
+                            return;
+                        }
+
+                        const idx = ids.indexOf(id);
+                        const prevId = idx > 0 ? ids[idx - 1] : ids[idx + 1];
+
+                        document.getElementById(`block-wrap-${id}`)?.remove();
+
+                        if (prevId !== undefined) {
+                            const prevEl = document.getElementById(`block-${prevId}`);
+                            if (prevEl) {
+                                focusEnd(prevEl);
+                                setActive(prevId);
+                            }
+                        }
+                    }
+                });
+
+                if (delBtn) {
+                    delBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (ebox) ebox.classList.add('hidden');
+                    });
+                }
+
+                if (pill) {
+                    pill.addEventListener('click', () => {
+                        focusEnd(el);
+                        setActive(id);
+                    });
+                }
+
+                // ✅ HOVER FIX
+                if (col) {
+                    col.addEventListener('mouseenter', () => {
+                        if (ebox && !ebox.classList.contains('hidden')) {
+
+                            ebox.classList.add('ebox-expanded');
+
+                            const expandOnly = ebox.querySelector('.expand-only');
+                            if (expandOnly) {
+                                expandOnly.classList.remove('hidden');
+                                expandOnly.classList.add('flex');
+                            }
+
+                            const applyWrap = ebox.querySelector('.apply-wrap');
+                            if (applyWrap) {
+                                applyWrap.style.maxHeight = applyWrap.scrollHeight + 'px';
+                            }
+                        }
+                    });
+
+                    col.addEventListener('mouseleave', () => {
+                        if (activeId !== id) {
+
+                            ebox.classList.remove('ebox-expanded');
+
+                            const expandOnly = ebox.querySelector('.expand-only');
+                            if (expandOnly) {
+                                expandOnly.classList.add('hidden');
+                                expandOnly.classList.remove('flex');
+                            }
+
+                            const applyWrap = ebox.querySelector('.apply-wrap');
+                            if (applyWrap) {
+                                applyWrap.style.maxHeight = '0px';
+                            }
+                        }
+                    });
+                }
+            }
+
+            attach(0);
+
+            const block0 = document.getElementById('block-0');
+            if (block0) {
+                block0.addEventListener('focus', () => setActive(0));
+            }
+        </script>
 </body>
 
 </html>

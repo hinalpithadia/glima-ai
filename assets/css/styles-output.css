@@ -7664,6 +7664,66 @@ pre{
   background-image: url('https://glima.ai/storage/media/1776417081_EvWOphpn3GoBc.png');
 }
 
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419275_UeAZphpKv0YZ5\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419275_UeAZphpKv0YZ5.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419292_l4U0phpA13Z1g\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419292_l4U0phpA13Z1g.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419309_b0DtphpynTuzi\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419309_b0DtphpynTuzi.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419326_1KL0phpeukH9x\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419326_1KL0phpeukH9x.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419342_LNvRphp19Pjnk\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419342_LNvRphp19Pjnk.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419361_e8lqphpvFB7H2\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419361_e8lqphpvFB7H2.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419384_KXwpphpIvE7Fv\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419384_KXwpphpIvE7Fv.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419400_zxmwphpIZVQNc\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419400_zxmwphpIZVQNc.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419419_65D4phpFwDlwp\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419419_65D4phpFwDlwp.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419440_X7UCphpxKnk7F\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419440_X7UCphpxKnk7F.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419461_pKBsphpqXG4G3\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419461_pKBsphpqXG4G3.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419479_ziirphpvnTnTP\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419479_ziirphpvnTnTP.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419496_J5w5phpQongNO\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419496_J5w5phpQongNO.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776419515_tNpNphp0aIypm\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776419515_tNpNphp0aIypm.png');
+}
+
+.bg-\[url\(\'https\:\/\/glima\.ai\/storage\/media\/1776420479_zSagphp5UR8wR\.png\'\)\] {
+  background-image: url('https://glima.ai/storage/media/1776420479_zSagphp5UR8wR.png');
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -11210,28 +11270,8 @@ textarea{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:animate-\[spin-slow_8s_linear_infinite\] {
-  animation: spin-slow 8s linear infinite;
-}
-
-.group:hover .group-hover\:animate-\[wave-move_1s_ease-in-out_infinite\] {
-  animation: wave-move 1s ease-in-out infinite;
-}
-
-.group:hover .group-hover\:animate-\[waveMorph_0\.8s_ease-in-out_infinite\] {
-  animation: waveMorph 0.8s ease-in-out infinite;
-}
-
-.group:hover .group-hover\:animate-\[waveMorph_1s_ease-in-out_infinite\] {
-  animation: waveMorph 1s ease-in-out infinite;
-}
-
 .group:hover .group-hover\:animate-\[spin-slow_12s_linear_infinite\] {
   animation: spin-slow 12s linear infinite;
-}
-
-.group:hover .group-hover\:animate-\[waveMorph_2s_ease-in-out_infinite\] {
-  animation: waveMorph 2s ease-in-out infinite;
 }
 
 .group:hover .group-hover\:animate-\[waveAdvanced_2s_ease-in-out_infinite\] {
@@ -12689,6 +12729,11 @@ textarea{
   .md\:gap-x-2\.5 {
     -moz-column-gap: 0.625rem;
          column-gap: 0.625rem;
+  }
+
+  .md\:gap-x-\[15px\] {
+    -moz-column-gap: 15px;
+         column-gap: 15px;
   }
 
   .md\:gap-y-4 {
@@ -15282,12 +15327,24 @@ textarea{
   background-color: #FFFFFF2E;
 }
 
+.\[\&\:\:-webkit-scrollbar-thumb\]\:bg-white\/10::-webkit-scrollbar-thumb {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
 .\[\&\:\:-webkit-scrollbar-thumb\]\:bg-white\/20::-webkit-scrollbar-thumb {
   background-color: rgb(255 255 255 / 0.2);
 }
 
+.hover\:\[\&\:\:-webkit-scrollbar-thumb\]\:bg-white\/10::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
 .\[\&\:\:-webkit-scrollbar-track\]\:rounded-full::-webkit-scrollbar-track {
   border-radius: 9999px;
+}
+
+.\[\&\:\:-webkit-scrollbar-track\]\:rounded-lg::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
 }
 
 .\[\&\:\:-webkit-scrollbar-track\]\:bg-transparent::-webkit-scrollbar-track {
