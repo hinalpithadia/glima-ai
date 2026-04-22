@@ -13669,6 +13669,10 @@ textarea{
     height: calc(100vh - 310px);
   }
 
+  .lg\:h-\[calc\(100vh-50px\)\] {
+    height: calc(100vh - 50px);
+  }
+
   .lg\:h-\[calc\(100vh-64px\)\] {
     height: calc(100vh - 64px);
   }
@@ -13981,6 +13985,14 @@ textarea{
   .lg\:max-w-max {
     max-width: -moz-max-content;
     max-width: max-content;
+  }
+
+  .lg\:max-w-\[780px\] {
+    max-width: 780px;
+  }
+
+  .lg\:max-w-\[790px\] {
+    max-width: 790px;
   }
 
   .lg\:-translate-x-1\/3 {
