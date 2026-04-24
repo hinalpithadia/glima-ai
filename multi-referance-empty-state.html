@@ -904,14 +904,14 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                             <h2 class="text-xl font-semibold leading-normal text-white">Multi Reference to Video</h2>
                         </div>
                             <div class="relative w-full flex flex-col gap-2.5 ">
-                                <label class="text-sm  font-medium text-white">Describe Your Video
+                                <label class="text-sm  font-medium text-white">Prompt
                                 </label>
                                 <textarea name="text-prompt" id="text-prompt" placeholder="Describe your image here"
                                     class="resize-none w-full h-[90px] bg-black rounded-[10px] py-2.5 px-[18px] text-base font-normal leading-[24px] placeholder:text-[#797979] text-white outline-none transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]"></textarea>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label class="text-sm text-white font-medium">
-                                    Image
+                                    Upload Reference Images
                                 </label>
                                 <div class="flex items-center gap-3.5">
 
@@ -1000,7 +1000,7 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                                         </div>
                                     </div>
                                     <div
-                                        class="transition-all duration-500 outline-none bg-black w-[84px] h-[84px] resize-none hover:bg-[#0f0f0f]  text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-md relative z-[2] cursor-pointer border-dashed border border-[#FFFFFF80] hover:text-limegreen">
+                                        class="transition-all duration-500 outline-none bg-black w-[84px] h-[84px] resize-none hover:bg-[#0f0f0f]  text-sm leading-6 font-normal text-white placeholder:text-[#4D4D4D] rounded-md relative z-[2] cursor-pointer border-dashed border border-[#292929] hover:text-limegreen">
                                         <label
                                             class="flex flex-col items-center justify-center gap-[18px] h-full w-full cursor-pointer">
 
@@ -1148,121 +1148,21 @@ scrollbar-hide h-screen pb-[130px] md:pb-0">
                 </aside>
             </div>
             <!--content-->
-            <div id="my-creation-section"
-                class="max-lg:pt-20 2xl:w-[calc(100%-404px)] xl:w-[calc(100%-380px)] lg:w-[calc(100%-280px)] h-full lg:h-screen w-full ml-auto relative overflow-y-auto pt-5 lg:pt-[90px] px-5 lg:px-5 lg:pb-5 pb-32">
-                <!--Main Content Page-->
+           <div id="my-creation-section" class="max-lg:pt-20 2xl:w-[calc(100%-404px)] xl:w-[calc(100%-380px)] lg:w-[calc(100%-280px)] h-auto w-full ml-auto relative overflow-hidden pt-5 lg:pt-[85px] px-5 lg:pb-0 pb-32">
                 <h3 class="text-xl font-semibold leading-normal text-white pb-5 lg:hidden block">My Creation</h3>
+                <!--Main Content Page-->
                 <div class="w-full h-full relative">
-                    <div class="flex flex-col gap-5">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <!-- video box-1 -->
-                            <div
-                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
-                                        controlslist="nodownload noplaybackrate nopictureinpicture"
-                                        disablepictureinpicture="">
-                                        <source src="/assets/images/clothes-changer.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
+                  
+                    <div class="lg:h-[calc(100vh-100px)] h-full overflow-y-auto lg:pb-3">
+                        <div class="w-full h-full bg-[#111111] rounded-lg flex flex-col items-center justify-center px-3 py-3 md:py-0 md:px-0">
+                            <div class="flex flex-col gap-10">
+                                <div class="flex flex-col gap-2.5">
+                                    <h3 class="lg:text-2xl text-lg font-medium text-white">AI Multi reference</h3>
+                                    <p class="lg:text-lg text-sm font-normal text-[#797979]">Merge multiple image effortlessly to produce high quality videos.</p>
                                 </div>
-
-                                <button
-                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <path
-                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <!-- video box-2 -->
-                            <div
-                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
-                                        controlslist="nodownload noplaybackrate nopictureinpicture"
-                                        disablepictureinpicture="">
-                                        <source src="/assets/images/upscale-video.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
+                                <div class="relative">
+                                    <img src="https://glima.ai/storage/media/1777025583_AJlsphpEWzGJf.png" alt="image">
                                 </div>
-
-                                <button
-                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <path
-                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <!-- video box-3 -->
-                            <div
-                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
-                                        controlslist="nodownload noplaybackrate nopictureinpicture"
-                                        disablepictureinpicture="">
-                                        <source src="/assets/images/unblur-video.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-
-                                <button
-                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <path
-                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                            </div>
-
-                            <!-- video box-2 -->
-                            <div
-                                class="w-full md:h-[478px] h-[380px] bg-[#111111] flex items-center justify-center transition-all duration-500 group relative rounded-[10px]">
-                                <div class="w-fit h-full flex items-center justify-center rounded-[10px]">
-                                    <video controls="" class="object-contain h-full aspect-video rounded-[10px]"
-                                        controlslist="nodownload noplaybackrate nopictureinpicture"
-                                        disablepictureinpicture="">
-                                        <source src="/assets/images/video-bg-remove.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-
-                                <button
-                                    class="transition-all duration-500 w-fit p-[13px] bg-[#C6FF00] rounded-[10px] z-40 absolute top-2.5 right-2.5 hover:bg-[#aad70e]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <path
-                                            d="M1.99976 11.3359C1.99976 11.9559 1.99976 12.2659 2.06791 12.5203C2.25284 13.2104 2.79194 13.7495 3.48212 13.9345C3.73646 14.0026 4.04644 14.0026 4.66642 14.0026H11.3331C11.9531 14.0026 12.2631 14.0026 12.5174 13.9345C13.2076 13.7495 13.7467 13.2104 13.9316 12.5203C13.9998 12.2659 13.9998 11.9559 13.9998 11.3359"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M10.9998 7.66669C10.9998 7.66669 8.79032 10.6667 7.99972 10.6667C7.20918 10.6667 4.99976 7.66669 4.99976 7.66669M7.99972 10V2"
-                                            stroke="black" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </button>
                             </div>
                         </div>
                     </div>

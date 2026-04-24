@@ -13769,12 +13769,20 @@ textarea{
     height: calc(100vh - 100px);
   }
 
+  .lg\:h-\[calc\(100vh-138px\)\] {
+    height: calc(100vh - 138px);
+  }
+
   .lg\:h-\[calc\(100vh-140px\)\] {
     height: calc(100vh - 140px);
   }
 
   .lg\:h-\[calc\(100vh-145px\)\] {
     height: calc(100vh - 145px);
+  }
+
+  .lg\:h-\[calc\(100vh-150px\)\] {
+    height: calc(100vh - 150px);
   }
 
   .lg\:h-\[calc\(100vh-310px\)\] {
@@ -13799,6 +13807,14 @@ textarea{
 
   .lg\:h-screen {
     height: 100vh;
+  }
+
+  .lg\:h-\[calc\(100vh-180px\)\] {
+    height: calc(100vh - 180px);
+  }
+
+  .lg\:h-\[calc\(100vh-50px\)\] {
+    height: calc(100vh - 50px);
   }
 
   .lg\:max-h-\[312px\] {
@@ -14597,6 +14613,10 @@ textarea{
 
   .lg\:pt-\[85px\] {
     padding-top: 85px;
+  }
+
+  .lg\:pt-\[90px\] {
+    padding-top: 90px;
   }
 
   .lg\:text-left {
