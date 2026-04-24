@@ -5229,10 +5229,6 @@ pre{
   width: 38px;
 }
 
-.w-\[397px\] {
-  width: 397px;
-}
-
 .w-\[40px\] {
   width: 40px;
 }
@@ -5983,6 +5979,11 @@ pre{
 
 .translate-x-\[-10px\] {
   --tw-translate-x: -10px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-\[45\%\] {
+  --tw-translate-x: 45%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -12415,6 +12416,10 @@ textarea{
     max-height: calc(100vh - 380px);
   }
 
+  .md\:max-h-\[clamp\(320px\2c calc\(100vh-22vh\)\2c 680px\)\] {
+    max-height: clamp(320px,calc(100vh - 22vh),680px);
+  }
+
   .md\:max-h-\[clamp\(420px\2c calc\(100vh-22vh\)\2c 500px\)\] {
     max-height: clamp(420px,calc(100vh - 22vh),500px);
   }
@@ -12437,6 +12442,10 @@ textarea{
 
   .md\:min-h-\[300px\] {
     min-height: 300px;
+  }
+
+  .md\:min-h-\[320px\] {
+    min-height: 320px;
   }
 
   .md\:min-h-\[328px\] {
@@ -12692,6 +12701,10 @@ textarea{
 
   .md\:max-w-\[637px\] {
     max-width: 637px;
+  }
+
+  .md\:max-w-\[665px\] {
+    max-width: 665px;
   }
 
   .md\:max-w-\[700px\] {
@@ -13756,16 +13769,16 @@ textarea{
     height: calc(100vh - 100px);
   }
 
+  .lg\:h-\[calc\(100vh-140px\)\] {
+    height: calc(100vh - 140px);
+  }
+
   .lg\:h-\[calc\(100vh-145px\)\] {
     height: calc(100vh - 145px);
   }
 
   .lg\:h-\[calc\(100vh-310px\)\] {
     height: calc(100vh - 310px);
-  }
-
-  .lg\:h-\[calc\(100vh-50px\)\] {
-    height: calc(100vh - 50px);
   }
 
   .lg\:h-\[calc\(100vh-64px\)\] {
@@ -14045,16 +14058,16 @@ textarea{
     max-width: 630px;
   }
 
+  .lg\:max-w-\[665px\] {
+    max-width: 665px;
+  }
+
   .lg\:max-w-\[700px\] {
     max-width: 700px;
   }
 
   .lg\:max-w-\[735px\] {
     max-width: 735px;
-  }
-
-  .lg\:max-w-\[790px\] {
-    max-width: 790px;
   }
 
   .lg\:max-w-\[800px\] {
@@ -14488,6 +14501,10 @@ textarea{
 
   .lg\:pb-4 {
     padding-bottom: 1rem;
+  }
+
+  .lg\:pb-5 {
+    padding-bottom: 1.25rem;
   }
 
   .lg\:pb-8 {
