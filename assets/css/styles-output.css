@@ -5969,6 +5969,10 @@ pre{
   max-width: 20rem;
 }
 
+.max-w-\[665px\] {
+  max-width: 665px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -12213,6 +12217,10 @@ textarea{
     top: 80px;
   }
 
+  .md\:top-\[40\%\] {
+    top: 40%;
+  }
+
   .md\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -14105,6 +14113,10 @@ textarea{
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-\[790px\] {
+    width: 790px;
   }
 
   .lg\:min-w-\[450px\] {
