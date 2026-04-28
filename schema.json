@@ -17,22 +17,22 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Create AI Jiggle Videos with Glima",
+  "name": "How to Create AI Background Explosion Videos",
   "step": [
     {
       "@type": "HowToStep",
       "name": "Upload Your Image",
-      "text": "Upload a photo you want to animate. The AI will analyze the image and prepare it for smooth, natural-looking motion effects."
+      "text": "Upload a clear image with a visible subject and background space."
     },
     {
       "@type": "HowToStep",
-      "name": "Adjust Motion Settings",
-      "text": "Customize the movement style, intensity, and animation speed to achieve the look you want, from subtle motion to more dynamic effects."
+      "name": "Apply the Explosion Effect",
+      "text": "AI adds realistic fire, debris, and cinematic blast animation behind you."
     },
     {
       "@type": "HowToStep",
-      "name": "Generate & Download",
-      "text": "Click generate and let AI create a lively animated video in seconds. Preview the result, download it, and share it on your favorite platforms."
+      "name": "Download Your Video",
+      "text": "Preview your action scene and download the explosion video instantly."
     }
   ]
 }
@@ -43,42 +43,42 @@ All 5 schemas (WebApplication, FAQPage, HowTo, Service, Organization)
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the AI Jiggle Video Generator?",
+      "name": "What is the AI Background Explosion video generator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It’s an AI-powered tool that transforms static images into animated videos by adding smooth, natural-looking motion effects."
+        "text": "It is an AI tool that adds a cinematic explosion behind the subject in your photo to create an action video."
       }
     },
     {
       "@type": "Question",
-      "name": "How realistic are the motion effects?",
+      "name": "What type of photo works best?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The AI applies smooth, natural movement designed to match the body’s posture and flow, creating visually appealing results."
+        "text": "Images with clear subjects and some background space give the best explosion results"
       }
     },
     {
       "@type": "Question",
-      "name": "Can I control the motion intensity?",
+      "name": "Does the explosion look realistic?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, you can adjust movement strength, speed, and animation style to achieve the desired look."
+        "text": "Yes. The AI generates fire, smoke, and debris effects to simulate real explosions."
       }
     },
     {
       "@type": "Question",
-      "name": "Is my uploaded image kept private?",
+      "name": "Can I control the intensity of the explosion?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, uploaded images are processed securely and handled according to privacy standards."
+        "text": "Some tools allow prompts to adjust size, fire intensity, and style of the explosion."
       }
     },
     {
       "@type": "Question",
-      "name": "What makes this tool different from other animation tools?",
+      "name": "How long does it take to generate the video?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, you can download high-quality generated videos instantly for personal or professional use."
+        "text": "Most explosion videos are created within seconds to a few minutes after uploading."
       }
     }
   ]

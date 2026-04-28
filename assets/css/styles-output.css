@@ -3072,6 +3072,10 @@ pre{
   left: 36%;
 }
 
+.left-\[40\%\] {
+  left: 40%;
+}
+
 .left-\[43\%\] {
   left: 43%;
 }
@@ -3468,6 +3472,10 @@ pre{
   top: 78px;
 }
 
+.top-\[80\%\] {
+  top: 80%;
+}
+
 .top-\[85px\] {
   top: 85px;
 }
@@ -3818,6 +3826,10 @@ pre{
 
 .ml-1\.5 {
   margin-left: 0.375rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
 }
 
 .ml-2 {
@@ -4820,6 +4832,10 @@ pre{
   max-height: max-content;
 }
 
+.max-h-\[230px\] {
+  max-height: 230px;
+}
+
 .min-h-52 {
   min-height: 13rem;
 }
@@ -5459,6 +5475,10 @@ pre{
   width: 1px;
 }
 
+.w-\[397px\] {
+  width: 397px;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -5935,6 +5955,14 @@ pre{
 
 .max-w-xs {
   max-width: 20rem;
+}
+
+.max-w-\[660px\] {
+  max-width: 660px;
+}
+
+.max-w-\[775px\] {
+  max-width: 775px;
 }
 
 .flex-1 {
@@ -12173,6 +12201,14 @@ textarea{
     top: 80px;
   }
 
+  .md\:left-\[18\%\] {
+    left: 18%;
+  }
+
+  .md\:top-11 {
+    top: 2.75rem;
+  }
+
   .md\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -12245,6 +12281,10 @@ textarea{
 
   .md\:mt-\[39px\] {
     margin-top: 39px;
+  }
+
+  .md\:ml-auto {
+    margin-left: auto;
   }
 
   .md\:line-clamp-\[11\] {
@@ -12459,6 +12499,14 @@ textarea{
 
   .md\:max-h-full {
     max-height: 100%;
+  }
+
+  .md\:max-h-\[420px\] {
+    max-height: 420px;
+  }
+
+  .md\:max-h-\[320px\] {
+    max-height: 320px;
   }
 
   .md\:\!min-h-96 {
@@ -12758,6 +12806,10 @@ textarea{
 
   .md\:max-w-full {
     max-width: 100%;
+  }
+
+  .md\:max-w-\[500px\] {
+    max-width: 500px;
   }
 
   .md\:-translate-x-1\/2 {
@@ -13597,6 +13649,10 @@ textarea{
     left: 50px;
   }
 
+  .lg\:left-\[69\%\] {
+    left: 69%;
+  }
+
   .lg\:left-\[85px\] {
     left: 85px;
   }
@@ -13842,6 +13898,10 @@ textarea{
     height: calc(100vh - 100px);
   }
 
+  .lg\:h-\[calc\(100vh-110px\)\] {
+    height: calc(100vh - 110px);
+  }
+
   .lg\:h-\[calc\(100vh-138px\)\] {
     height: calc(100vh - 138px);
   }
@@ -13864,6 +13924,10 @@ textarea{
 
   .lg\:h-\[calc\(100vh-65px\)\] {
     height: calc(100vh - 65px);
+  }
+
+  .lg\:h-\[calc\(100vh-90px\)\] {
+    height: calc(100vh - 90px);
   }
 
   .lg\:h-auto {
@@ -14031,6 +14095,14 @@ textarea{
     width: 100%;
   }
 
+  .lg\:w-\[660px\] {
+    width: 660px;
+  }
+
+  .lg\:w-\[760px\] {
+    width: 760px;
+  }
+
   .lg\:min-w-\[450px\] {
     min-width: 450px;
   }
@@ -14073,6 +14145,10 @@ textarea{
 
   .lg\:max-w-\[243px\] {
     max-width: 243px;
+  }
+
+  .lg\:max-w-\[246px\] {
+    max-width: 246px;
   }
 
   .lg\:max-w-\[256px\] {
