@@ -10,166 +10,32 @@
     <link rel="stylesheet" href="assets/css/styles-output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.css">
     <style>
-        .card.selected {
-            border-color: #C6FF00 !important;
-        }
-
-        .card.selected .click-icon {
-            opacity: 100 !important;
-        }
-
-        .card.selected .circle-bg {
-            opacity: 100 !important;
-        }
-
-        /* Custom thumb styling */
-        input[type="range"]::-webkit-slider-thumb {
-            appearance: none;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
-            transition: transform 0.2s;
-            filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.10));
-        }
-
-        input[type="range"]::-webkit-slider-thumb:hover {
-            transform: scale(1.1);
-        }
-
-        input[type="range"]::-moz-range-thumb {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
-        }
-
-        .interior-select .select-hidden {
-            display: none;
-            visibility: hidden;
-            padding-right: 10px;
-        }
-
-        .interior-select .select {
-            position: relative;
-            display: inline-block;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            margin-bottom: 0px !important;
-            width: 100%;
-            cursor: pointer;
-            -webkit-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-        }
-
-        .interior-select .select-styled {
-            position: relative;
-            display: flex;
-            align-items: center;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            margin-bottom: 0px !important;
-            width: 100%;
-            background: #000;
-            font-size: 14px;
-            color: #fff;
-            padding: 12px 18px;
-            border-radius: 10px;
-            -webkit-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-            font-weight: 500;
-        }
-
-        .dropdown-select .select-styled {
-            background: #0A0A0A;
-        }
-
-        .interior-select .select-styled:after {
-            content: "";
-            background: url(./assets/images/select-arrow-white.svg);
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            width: 20px;
-            height: 10px;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .interior-select .select-options {
-            display: none;
-            position: absolute;
-            top: 110%;
-            right: 0;
-            left: 0;
-            z-index: 999;
-            margin: 0;
-            padding: 2px;
-            list-style: none;
-            border-radius: 10px;
-            background-color: #000;
-            -webkit-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-            overflow: hidden;
-            max-height: 150px;
-            overflow-y: auto;
-        }
-
-        .interior-select .select-options::-webkit-scrollbar-track {
-            background-color: transparent !important;
-            border-left: 8px solid transparent;
-        }
-
-        .interior-select .select-options::-webkit-scrollbar {
-            width: 5px;
-            background-color: transparent !important;
-            border-radius: 6px;
-
-        }
-
-        .interior-select .select-options::-webkit-scrollbar-thumb {
-            background-color: #1f1f1f !important;
-            border-radius: 6px;
-            padding-right: 10px;
-        }
-
-        .interior-select .select-options li {
-            position: relative;
+        [contenteditable]:empty::before {
+            content: attr(data-placeholder);
+            color: rgba(255, 255, 255, 0.2);
+            pointer-events: none;
             display: block;
-            padding: 12px 18px;
-            font-size: 14px;
-            color: #fff;
-            border-radius: 10px;
-            cursor: pointer;
-            -webkit-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
         }
 
-        .select-options li:hover {
-            background: #0A0A0A;
+        .apply-wrap {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease;
         }
 
-        .select-options li[rel="hide"] {
-            display: none;
+        .ebox-expanded .apply-wrap {
+            max-height: 40px;
         }
 
-        .sub-tab-buttons li.active {
-            background: #000;
+        .btn.active {
+            border-color: #47580C;
             color: #C6FF00;
+            background: #C6FF0014;
+            box-shadow: 0 3px 0 0 #47580C;
         }
 
         .active-tab {
-            background-color: rgba(198, 255, 0, 0.10);
+            background-color: #C6FF0026;
             color: #C6FF00;
         }
 
@@ -907,69 +773,31 @@ scrollbar-hide h-screen pb-[100px] md:pb-0">
                                 <path opacity="0.1" d="M0.5 0.5L0.499999 30.5" stroke="white" stroke-linecap="round">
                                 </path>
                             </svg>
-                            <h2 class="text-xl font-semibold text-white ">Speech to Text</h2>
+                            <h2 class="text-xl font-semibold text-white capitalize">music generator</h2>
                         </div>
                         <ul class="flex flex-col gap-4">
+
                             <li>
-                                <div class="flex flex-col gap-2.5">
-                                    <label class="text-sm leading-[18px] text-white font-medium capitalize">Audio
-                                        File</label>
-                                    <div class="bg-black w-full h-[100px] p-[18px] rounded-[10px] border border-transparent 
-                                hover:border-[rgba(198,255,0,0.20)] transition-all duration-500">
-                                        <div class="flex items-center text-sm text-white/50">
-
-                                            <!-- Paste text (NOT input placeholder) -->
-                                            <span class="text-white/50">Paste here or</span>
-
-                                            <!-- No space between "or" and Upload -->
-                                            <label for="uploadInput" class="text-[#C6FF00] cursor-pointer ml-1.5">
-                                                Upload Audio File
-                                            </label>
-
-                                            <!-- Hidden file selector -->
-                                            <input id="uploadInput" type="file" class="hidden" accept="video/*">
-                                        </div>
-                                    </div>
+                                <div class="relative w-full flex flex-col gap-2.5 ">
+                                    <label class="text-sm  font-medium text-white">Prompt
+                                    </label>
+                                    <textarea name="text-prompt" id="text-prompt" placeholder="Write Prompt Here"
+                                        class="resize-none w-full h-[180px] bg-black rounded-[10px] p-[18px] text-sm font-normal leading-[24px] placeholder:text-[#797979] text-white outline-none transition-all duration-500 border border-transparent hover:border-[rgba(198,255,0,0.20)] focus:border-[rgba(198,255,0,0.20)]">Change the hair color of the human subject in the image to a different style: apply a natural or creative color black, ensure realistic shading, shine, and texture, maintain original hair flow and lighting, and blend the new color seamlessly for a natural and polished look.</textarea>
                                 </div>
                             </li>
                             <li>
                                 <div class="flex flex-col gap-2.5">
-                                    <label class="text-sm  font-medium text-white">Language
+                                    <label class="text-sm leading-[18px] text-white font-medium capitalize">Duration
                                     </label>
-                                    <!--custom select-->
-                                    <div class="interior-select">
-                                        <select id="language" name="language">
-
-                                            <option value="English" selected>English</option>
-                                            <option value="Spanish">Spanish</option>
-                                            <option value="French">French</option>
-                                            <option value="German">German</option>
-                                            <option value="Japanese">Japanese</option>
-                                            <option value="Chinese">Chinese</option>
-
-
-                                        </select>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex flex-col gap-2.5">
-                                    <label class="text-sm  font-medium text-white">Task
-                                    </label>
-                                    <div class="flex flex-col gap-4">
-                                        <!--custom select-->
-                                        <div class="interior-select">
-                                            <select id="Default" name="Default">
-
-                                                <option value="Default" selected>Default</option>
-                                                <option value="translate">translate</option>
-                                                <option value="transcribe">transcribe</option>
-
-
-
-                                            </select>
-                                        </div>
-
+                                    <div class="flex gap-[15px] items-center py-3.5 px-[18px] rounded-[10px] bg-black ">
+                                        <input id="customRange" type="range" min="2" max="12" step="1" value="8" class="customRange w-full h-[3px] appearance-none rounded-[100px] cursor-pointer 
+                                                bg-gradient-to-r from-[#C6FF00] to-[#C6FF00] 
+                                                [--range-progress:#C6FF00]"
+                                            style="background: linear-gradient(to right, rgb(198, 255, 0) 60%, rgba(255, 255, 255, 0.1) 60%);">
+                                        <label for="customRange"
+                                            class="text-white text-sm leading-4 font-normal min-w-5 text-right">
+                                            <span id="rangeLabel" class="rangeLabel min-w-10 text-right">8</span>
+                                        </label>
                                     </div>
                                 </div>
                             </li>
@@ -1069,30 +897,30 @@ scrollbar-hide h-screen pb-[100px] md:pb-0">
             </div>
             <!--content-->
             <div id="my-creation-section"
-                class="max-lg:pt-20 2xl:w-[calc(100%-404px)] xl:w-[calc(100%-380px)] lg:w-[calc(100%-280px)] h-full lg:h-screen w-full ml-auto relative overflow-y-auto pt-5 lg:pt-[90px] px-5 lg:px-5 lg:pb-0 pb-32">
+                class="max-lg:pt-20 2xl:w-[calc(100%-404px)] xl:w-[calc(100%-380px)] lg:w-[calc(100%-280px)] h-full lg:h-screen w-full ml-auto relative overflow-y-auto pt-5 lg:pt-[80px] px-5 lg:px-5 lg:pb-0 pb-32">
                 <!--Main Content Page-->
                 <div class="w-full h-full relative">
                     
                    <div class="lg:h-[calc(100vh-100px)] h-full overflow-y-auto lg:pb-3">
                         <div class="w-full h-full bg-[#111111] rounded-lg flex flex-col items-center justify-center px-3 py-3 md:py-0 md:px-0">
-                            <div class="flex flex-col gap-14 ">
+                            <div class="flex flex-col md:gap-14 gap-10 ">
                                 <div class="flex flex-col gap-2.5">
-                                    <h3 class="md:text-2xl text-xl font-medium text-white">Turn Speech into Text Effortlessly</h3>
-                                    <p class="md:text-lg text-sm font-normal text-[#797979]">It’s converts spoken words into accurate written text quickly for easy communication.
+                                    <h3 class="md:text-2xl text-xl font-medium text-white">Music Generator</h3>
+                                    <p class="md:text-lg text-sm font-normal text-[#797979]">Turn ideas into music with AI generated sounds in seconds.
 </p>
                                 </div>
-                                <div class="relative flex md:flex-row flex-col md:justify-start justify-center items-center gap-8 md:gap-[65px]  max-w-full">
-                                      <img src="https://glima.ai/storage/media/1775215495_EeHnphpn7uYJZ.png" alt="" class="z-20 md:translate-y-[-40px] translate-y-[-20px]">
+                                <div class="relative flex md:flex-row flex-col md:justify-start justify-center items-center gap-20 md:gap-[65px]  max-w-full">
+                                      
                                     <div class="md:w-[391px] bg-[linear-gradient(90deg,#C6FF0080,#BEBEBE33,#C6FF0080)] p-[1px] backdrop-blur-[75px] overflow-hidden rounded-[15px] shadow-[0_0_15px_0_rgba(198,255,0,0.15)] md:translate-y-[20px]">
-                                        <div class="w-full p-[18px] pr-[18px] md:pr-0 rounded-[15px] bg-[#151515]  backdrop-blur-[50px] relative h-fit">
+                                        <div class="w-full p-[18px] pr-[18px]  rounded-[15px] bg-[#151515]  backdrop-blur-[50px] relative h-fit">
                                            
                                             <div class="flex flex-col gap-3">
                                               
-                                                <p class="text-sm font-normal capitalize text-white leading-[30px]">The names "John Doe" for males, "Jane Doe" or "Jane Roe" for females, or "Jonnie Doe" and "Janie Doe" for children, or just "Doe" non-gender-specifically are used as placeholder names</p>
+                                                <p class="text-sm font-normal capitalize text-white leading-[30px]">Smooth chill hip hop beat with mellow piano melodies, deep bass, and soft drums, perfect for a night drive. </p>
                                             </div>
                                            
 
-                                            <button class="mt-[10px] md:mt-[10px] bg-[#C6FF00] pl-[15px] pr-[17px] py-2 rounded-lg shadow-[0_0_10px_3px_rgba(198,255,0,0.16)] max-w-[355px] w-full flex items-center justify-center gap-1.5 text-text-sm font-semibold hover:bg-[#a8d50c] transition-all duration-500"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                            <button class="mt-[20px] md:mt-[40px] bg-[#C6FF00] pl-[15px] pr-[17px] py-2 rounded-lg shadow-[0_0_10px_3px_rgba(198,255,0,0.16)] max-w-[355px] w-full flex items-center justify-center gap-1.5 text-text-sm font-semibold hover:bg-[#a8d50c] transition-all duration-500"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                                     <g clip-path="url(#clip0_6955_2656)">
                                                         <path d="M6.00098 11.25C9.657 11.25 11.251 9.71175 11.251 6C11.251 9.71175 12.8338 11.25 16.501 11.25C12.8338 11.25 11.251 12.8328 11.251 16.5C11.251 12.8328 9.657 11.25 6.00098 11.25Z" stroke="black" stroke-width="1.2" stroke-linejoin="round"></path>
                                                         <path d="M1.50098 4.875C3.8513 4.875 4.87598 3.88615 4.87598 1.5C4.87598 3.88615 5.89349 4.875 8.25098 4.875C5.89349 4.875 4.87598 5.89252 4.87598 8.25C4.87598 5.89252 3.8513 4.875 1.50098 4.875Z" stroke="black" stroke-width="1.2" stroke-linejoin="round"></path>
@@ -1107,9 +935,10 @@ scrollbar-hide h-screen pb-[100px] md:pb-0">
 
                                         </div>
                                     </div>
-
-                                    <svg class="absolute md:left-[200px] left-[170px] -translate-x-1/2  md:bottom-[10px] bottom-[265px] z-50 md:rotate-0 rotate-[90deg]" width="80" height="56" viewBox="0 0 80 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.00003 0.99989C13.1122 17.161 41.2793 44.3257 60.4287 27.2929C73.5028 15.664 57.3399 2.78924 43.5301 16.0597C29.7202 29.3302 43.2746 58.9419 78.4265 45.7396M78.4265 45.7396L72.0547 41.6813M78.4265 45.7396L72.7132 54.0459" stroke="#C6FF00" stroke-width="2" stroke-linecap="round"/>
+<img src="https://glima.ai/storage/media/1777538852_D2ykphplnvGqf.png" alt="" class="z-20 md:translate-y-[-40px] translate-y-[-20px]">
+                                   
+<svg class="md:w-auto w-[60px] absolute md:right-[18%] right-[85px] -translate-x-1/2  md:bottom-[15px] bottom-[37%] z-50 md:rotate-0 rotate-[140deg]" width="85" height="50" viewBox="0 0 85 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.998978 48.2797C21.0837 46.1606 58.8447 35.8937 54.0316 10.7214C50.7455 -6.46486 31.4071 0.816729 35.7257 19.476C40.0444 38.1352 72.4184 41.6704 79.095 4.7194M79.095 4.7194L72.3449 8.11132M79.095 4.7194L83.3 13.8821" stroke="#C6FF00" stroke-width="2" stroke-linecap="round"/>
 </svg>
 
                                 </div>
@@ -1117,6 +946,7 @@ scrollbar-hide h-screen pb-[100px] md:pb-0">
                         </div>
                     </div>
                 </div>
+
 
             </div>
             <div
@@ -1207,533 +1037,510 @@ scrollbar-hide h-screen pb-[100px] md:pb-0">
                 </div>
             </div>
         </div>
-    </div>
-    <!--voice dropdown single tab modal-->
-    <div
-        class="dropdown-menu  z-[100]  fixed lg:absolute left-[0px]  lg:left-[415px] lg:top-[50%] top-auto lg:bottom-auto bottom-0  mt-2  w-full lg:w-[376px] bg-black  shadow-lg rounded-[10px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
-        <div class="flex justify-between items-center  border-b border-[#222] py-3 px-[18px] ">
-            <span class="text-sm font-medium text-white">
-                Voices</span>
-            <button class="close-dropdown text-gray-500 hover:text-red-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path
-                        d="M4.50781 11.495L8.0029 7.99998M8.0029 7.99998L11.498 4.50488M8.0029 7.99998L4.50781 4.50488M8.0029 7.99998L11.498 11.495"
-                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
 
         <div
-            class="relative max-h-[280px] p-[2px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#1f1f1f] [&::-webkit-scrollbar-thumb]:rounded-full">
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Aria
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Roger
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Sarah
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Laura
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Charlie
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                George
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Callum
-            </a>
+            class="overlay-modal w-full h-screen z-[10000] bg-black/50 backdrop-blur-xl fixed top-0 left-0 opacity-0 invisible">
         </div>
-    </div>
-    <!--voice 1 dropdown multi tab modal-->
-    <div
-        class="dropdown-menu  z-[100]  fixed lg:absolute left-[0px]  lg:left-[415px] lg:top-[60%] top-auto lg:bottom-auto bottom-0   mt-2  lg:w-[376px] w-full bg-black  shadow-lg rounded-[10px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300">
-        <div class="flex justify-between items-center  border-b border-[#222] py-3 px-[18px] ">
-            <span class="text-sm font-medium text-white">
-                Voices</span>
-            <button class="close-dropdown text-gray-500 hover:text-red-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path
-                        d="M4.50781 11.495L8.0029 7.99998M8.0029 7.99998L11.498 4.50488M8.0029 7.99998L4.50781 4.50488M8.0029 7.99998L11.498 11.495"
-                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
+        <!-- MAIN JS-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            /*==============tooltip==================*/
+            document.addEventListener('DOMContentLoaded', () => {
+                const tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
 
-        <div
-            class="relative max-h-[280px] p-[2px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#1f1f1f] [&::-webkit-scrollbar-thumb]:rounded-full">
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Aria
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Roger
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Sarah
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Laura
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Charlie
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                George
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Callum
-            </a>
-        </div>
-    </div>
-    <!--voice 2 dropdown multi tab modal-->
-    <div
-        class=" dropdown-menu z-[100] fixed lg:absolute left-[0px] lg:left-[415px] lg:top-[60%] top-auto lg:bottom-auto bottom-0 mt-2 lg:w-[376px] w-full bg-black shadow-lg rounded-[10px] opacity-0 invisible transform translate-y-[-10px] transition-all duration-300 max-sm:translate-y-full">
+                tooltipTriggers.forEach(trigger => {
+                    const tooltip = trigger.nextElementSibling;
 
+                    const showTooltip = () => {
+                        tooltip.classList.remove('opacity-0', 'translate-x-2', 'invisible', 'z-[-1]');
+                        tooltip.classList.add('opacity-100', '-translate-x-2', 'visible', 'z-10');
+                    };
 
-       
-        <div class="flex justify-between items-center  border-b border-[#222] py-3 px-[18px] ">
-            <span class="text-sm font-medium text-white">
-                Voices</span>
-            <button class="close-dropdown text-gray-500 hover:text-red-500">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path
-                        d="M4.50781 11.495L8.0029 7.99998M8.0029 7.99998L11.498 4.50488M8.0029 7.99998L4.50781 4.50488M8.0029 7.99998L11.498 11.495"
-                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
+                    const hideTooltip = () => {
+                        tooltip.classList.remove('opacity-100', '-translate-x-2', 'visible', 'z-10');
+                        tooltip.classList.add('opacity-0', 'translate-x-2', 'invisible', 'z-[-1]');
+                    };
 
-        <div
-            class="relative max-h-[280px] p-[2px] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#1f1f1f] [&::-webkit-scrollbar-thumb]:rounded-full">
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Aria
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Roger
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Sarah
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Laura
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Charlie
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                George
-            </a>
-            <a href="#"
-                class="py-2.5 w-full cursor-pointer flex items-center gap-2.5 rounded-[10px] py-3 px-[18px] text-sm leading-[17px] text-white transition-all duration-500 hover:bg-[#0A0A0A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path
-                        d="M2.75 10.0833C2.75 6.62636 2.75 4.89789 3.82394 3.82394C4.89789 2.75 6.62636 2.75 10.0833 2.75H11.9167C15.3736 2.75 17.1022 2.75 18.176 3.82394C19.25 4.89789 19.25 6.62636 19.25 10.0833V11.9167C19.25 15.3736 19.25 17.1022 18.176 18.176C17.1022 19.25 15.3736 19.25 11.9167 19.25H10.0833C6.62636 19.25 4.89789 19.25 3.82394 18.176C2.75 17.1022 2.75 15.3736 2.75 11.9167V10.0833Z"
-                        stroke="white"></path>
-                    <path d="M11 14.6693V7.33594" stroke="white" stroke-linecap="round"></path>
-                    <path d="M13.75 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M8.25 13.75V8.25" stroke="white" stroke-linecap="round"></path>
-                    <path d="M16.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                    <path d="M5.5 12.8307V9.16406" stroke="white" stroke-linecap="round"></path>
-                </svg>
-                Callum
-            </a>
-        </div>
-    </div>
-    <div
-        class="overlay-modal w-full h-screen z-[10000] bg-black/50 backdrop-blur-xl fixed top-0 left-0 opacity-0 invisible">
-    </div>
-    <!-- MAIN JS-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/rangeslider.js/dist/rangeslider.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-        /*==============tooltip==================*/
-        document.addEventListener('DOMContentLoaded', () => {
-            const tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
+                    trigger.addEventListener('mouseenter', showTooltip);
+                    trigger.addEventListener('mouseleave', hideTooltip);
+                    trigger.addEventListener('focus', showTooltip);
+                    trigger.addEventListener('blur', hideTooltip);
 
-            tooltipTriggers.forEach(trigger => {
-                const tooltip = trigger.nextElementSibling;
-
-                const showTooltip = () => {
-                    tooltip.classList.remove('opacity-0', 'translate-x-2', 'invisible', 'z-[-1]');
-                    tooltip.classList.add('opacity-100', '-translate-x-2', 'visible', 'z-10');
-                };
-
-                const hideTooltip = () => {
-                    tooltip.classList.remove('opacity-100', '-translate-x-2', 'visible', 'z-10');
-                    tooltip.classList.add('opacity-0', 'translate-x-2', 'invisible', 'z-[-1]');
-                };
-
-                trigger.addEventListener('mouseenter', showTooltip);
-                trigger.addEventListener('mouseleave', hideTooltip);
-                trigger.addEventListener('focus', showTooltip);
-                trigger.addEventListener('blur', hideTooltip);
-
-                // Hide tooltip on click
-                trigger.addEventListener('click', hideTooltip);
-            });
-        });
-
-        document.querySelectorAll(".card").forEach(card => {
-            card.addEventListener("click", () => {
-                const circle = card.querySelector(".circle-bg");
-                const circle2 = card.querySelector(".circle-line");
-                const tick = card.querySelector(".tick");
-
-                card.classList.toggle("selected");
-
-                if (card.classList.contains("selected")) {
-                    circle.setAttribute("fill", "#C6FF00");
-                    circle2.setAttribute("stroke", "C6FF00");
-                    tick.setAttribute("stroke", "black");
-                } else {
-                    circle.setAttribute("fill", "#C6FF00");
-                    circle2.setAttribute("stroke", "#C6FF00");
-                    tick.setAttribute("stroke", "#C6FF00");
-                }
-
-            });
-        });
-    </script>
-    <!--custom range slider-->
-    <script>
-        const ranges = document.querySelectorAll(".customRange");
-
-        ranges.forEach(range => {
-            const label = range.parentElement.querySelector(".rangeLabel");
-
-            function updateRange() {
-                const value = range.value;
-                const min = range.min;
-                const max = range.max;
-                const percent = ((value - min) / (max - min)) * 100;
-
-                // Background progress fill
-                range.style.background = `linear-gradient(to right, #C6FF00 ${percent}%, #ffffff1a ${percent}%)`;
-
-                // 🔥 Auto-detect decimals
-                if (range.step.includes(".")) {
-                    label.textContent = parseFloat(value).toFixed(1);   // for 0.5 / 0.1 etc.
-                } else {
-                    label.textContent = value;                          // for normal integer sliders
-                }
-            }
-
-            range.addEventListener("input", updateRange);
-            updateRange();
-        });
-
-
-    </script>
-    <!-------tabs------->
-    <script>
-        $(document).ready(function () {
-            $('.tabs').each(function () {
-                const $tabs = $(this);
-                const $buttons = $tabs.find('> .tab-buttons > li');
-                const $panels = $tabs.find('> .tab-content > .tab-panel');
-
-                $buttons.click(function () {
-                    const index = $(this).index();
-
-                    $buttons.removeClass('active');
-                    $(this).addClass('active');
-
-                    $panels.removeClass('active');
-                    $panels.eq(index).addClass('active');
+                    // Hide tooltip on click
+                    trigger.addEventListener('click', hideTooltip);
                 });
             });
-        });
-    </script>
-    <!--mobile tab scroll-->
-    <script>
-        const createBtn = document.getElementById("create")
-        const myCreationBtn = document.getElementById("my-creation")
 
-        const createSection = document.getElementById("create-section")
-        const myCreationSection = document.getElementById("my-creation-section")
+            document.querySelectorAll(".card").forEach(card => {
+                card.addEventListener("click", () => {
+                    const circle = card.querySelector(".circle-bg");
+                    const circle2 = card.querySelector(".circle-line");
+                    const tick = card.querySelector(".tick");
 
-        function isSmallScreen() {
-            return window.innerWidth < 1024
-        }
+                    card.classList.toggle("selected");
 
-        function showCreate() {
-            if (!isSmallScreen()) return
+                    if (card.classList.contains("selected")) {
+                        circle.setAttribute("fill", "#C6FF00");
+                        circle2.setAttribute("stroke", "C6FF00");
+                        tick.setAttribute("stroke", "black");
+                    } else {
+                        circle.setAttribute("fill", "#C6FF00");
+                        circle2.setAttribute("stroke", "#C6FF00");
+                        tick.setAttribute("stroke", "#C6FF00");
+                    }
 
-            createSection.classList.remove("hidden")
-            myCreationSection.classList.add("hidden")
+                });
+            });
+        </script>
+        <!--custom range slider-->
+        <script>
+            const ranges = document.querySelectorAll(".customRange");
 
-            createBtn.classList.add("active-tab")
-            myCreationBtn.classList.remove("active-tab")
-        }
+            ranges.forEach(range => {
+                const label = range.parentElement.querySelector(".rangeLabel");
 
-        function showMyCreation() {
-            if (!isSmallScreen()) return
+                function updateRange() {
+                    const value = range.value;
+                    const min = range.min;
+                    const max = range.max;
+                    const percent = ((value - min) / (max - min)) * 100;
 
-            myCreationSection.classList.remove("hidden")
-            createSection.classList.add("hidden")
+                    // Background progress fill
+                    range.style.background = `linear-gradient(to right, #C6FF00 ${percent}%, #ffffff1a ${percent}%)`;
 
-            myCreationBtn.classList.add("active-tab")
-            createBtn.classList.remove("active-tab")
-        }
+                    // 🔥 Auto-detect decimals
+                    if (range.step.includes(".")) {
+                        label.textContent = parseFloat(value).toFixed(1);   // for 0.5 / 0.1 etc.
+                    } else {
+                        label.textContent = value;                          // for normal integer sliders
+                    }
+                }
 
-        // Button Clicks
-        createBtn.addEventListener("click", showCreate)
-        myCreationBtn.addEventListener("click", showMyCreation)
+                range.addEventListener("input", updateRange);
+                updateRange();
+            });
+        </script>
 
-        /* ✅ IMPORTANT FIX */
-        let lastWidth = window.innerWidth
+        <!--mobile tab scroll-->
+        <script>
+            const createBtn = document.getElementById("create")
+            const myCreationBtn = document.getElementById("my-creation")
 
-        window.addEventListener("resize", () => {
-            const currentWidth = window.innerWidth
+            const createSection = document.getElementById("create-section")
+            const myCreationSection = document.getElementById("my-creation-section")
 
-            // ❌ Ignore resize caused by scroll (height-only changes)
-            if (currentWidth === lastWidth) return
+            function isSmallScreen() {
+                return window.innerWidth < 1024
+            }
 
-            lastWidth = currentWidth
+            function showCreate() {
+                if (!isSmallScreen()) return
 
-            if (!isSmallScreen()) {
-                // Desktop → Show both
                 createSection.classList.remove("hidden")
-                myCreationSection.classList.remove("hidden")
+                myCreationSection.classList.add("hidden")
 
-                createBtn.classList.remove("active-tab")
+                createBtn.classList.add("active-tab")
                 myCreationBtn.classList.remove("active-tab")
-            } else {
-                // Mobile → Default only ON REAL WIDTH CHANGE
+            }
+
+            function showMyCreation() {
+                if (!isSmallScreen()) return
+
+                myCreationSection.classList.remove("hidden")
+                createSection.classList.add("hidden")
+
+                myCreationBtn.classList.add("active-tab")
+                createBtn.classList.remove("active-tab")
+            }
+
+            // Button Clicks
+            createBtn.addEventListener("click", showCreate)
+            myCreationBtn.addEventListener("click", showMyCreation)
+
+            /* ✅ IMPORTANT FIX */
+            let lastWidth = window.innerWidth
+
+            window.addEventListener("resize", () => {
+                const currentWidth = window.innerWidth
+
+                // ❌ Ignore resize caused by scroll (height-only changes)
+                if (currentWidth === lastWidth) return
+
+                lastWidth = currentWidth
+
+                if (!isSmallScreen()) {
+                    // Desktop → Show both
+                    createSection.classList.remove("hidden")
+                    myCreationSection.classList.remove("hidden")
+
+                    createBtn.classList.remove("active-tab")
+                    myCreationBtn.classList.remove("active-tab")
+                } else {
+                    // Mobile → Default only ON REAL WIDTH CHANGE
+                    showCreate()
+                }
+            })
+
+            // Initial Load
+            if (isSmallScreen()) {
                 showCreate()
             }
-        })
+        </script>
+        <script>
+            const canvas = document.getElementById('waveform');
+            const ctx = canvas.getContext('2d');
+            const playBtn = document.getElementById('play-btn');
+            const playIcon = document.getElementById('play-icon');
+            const pauseIcon = document.getElementById('pause-icon');
+            const playhead = document.getElementById('playhead');
 
-        // Initial Load
-        if (isSmallScreen()) {
-            showCreate()
-        }
-    </script>
+            let isPlaying = false;
+            let playheadPos = 0.55;
+            let animFrame;
 
+            function drawWaveform() {
+                const W = canvas.offsetWidth;
+                const H = canvas.offsetHeight;
+                canvas.width = W;
+                canvas.height = H;
+
+                const bars = Math.floor(W / 3);
+                const accent = '#C6FF00';
+                const dim = '#363927';
+
+                for (let i = 0; i < bars; i++) {
+                    const x = i * 3;
+                    const prog = i / bars;
+                    const amp = 0.2 + 0.7 * (
+                        Math.sin(i * 0.18) * 0.3 +
+                        Math.sin(i * 0.07) * 0.4 +
+                        Math.abs(Math.sin(i * 0.31)) * 0.3
+                    );
+                    const barH = Math.max(2, amp * H);
+                    const y = (H - barH) / 2;
+                    ctx.fillStyle = prog < playheadPos ? accent : dim;
+                    ctx.beginPath();
+                    ctx.fillRect(x, y, 2, barH);
+                    ctx.fill();
+                }
+            }
+
+            function animate() {
+                if (!isPlaying) return;
+                playheadPos = Math.min(playheadPos + 0.001, 1);
+                playhead.style.left = (playheadPos * 100) + '%';
+                drawWaveform();
+                if (playheadPos < 1) animFrame = requestAnimationFrame(animate);
+                else { isPlaying = false; playIcon.classList.remove('hidden'); pauseIcon.classList.add('hidden'); }
+            }
+
+            playBtn.addEventListener('click', () => {
+                isPlaying = !isPlaying;
+                playIcon.classList.toggle('hidden', isPlaying);
+                pauseIcon.classList.toggle('hidden', !isPlaying);
+                if (isPlaying) animate();
+                else cancelAnimationFrame(animFrame);
+            });
+
+            canvas.addEventListener('click', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                playheadPos = (e.clientX - rect.left) / rect.width;
+                playhead.style.left = (playheadPos * 100) + '%';
+                drawWaveform();
+            });
+
+            drawWaveform();
+            window.addEventListener('resize', drawWaveform);
+        </script>
+        <script>
+            const emotions = ['Happy', 'Sad', 'Angry', 'Fearful', 'Surprised', 'Excited', 'Calm'];
+            let blockCount = 1;
+            let activeId = 0;
+
+            const globalHint = document.createElement('div');
+            globalHint.className = 'hidden items-center gap-2';
+            globalHint.innerHTML = `
+  <kbd class="px-2 py-1 rounded border border-[rgba(255,255,255,0.15)] text-[11px] font-mono text-[rgba(255,255,255,0.4)]">↵ Enter</kbd>
+  <span class="text-xs text-[rgba(255,255,255,0.3)]">to start a new paragraph</span>
+`;
+            document.getElementById('script-editor').appendChild(globalHint);
+
+            function showHint() {
+                globalHint.classList.remove('hidden');
+                globalHint.classList.add('flex');
+                document.getElementById('script-editor').appendChild(globalHint);
+            }
+
+            function hideHint() {
+                globalHint.classList.add('hidden');
+                globalHint.classList.remove('flex');
+            }
+
+            function collapseBox(id) {
+                const box = document.getElementById(`emotion-box-${id}`);
+                if (!box) return;
+
+                box.classList.remove('ebox-expanded');
+
+                const expandOnly = box.querySelector('.expand-only');
+                if (expandOnly) {
+                    expandOnly.classList.add('hidden');
+                    expandOnly.classList.remove('flex');
+                }
+
+                const applyWrap = box.querySelector('.apply-wrap');
+                if (applyWrap) applyWrap.style.maxHeight = '0px';
+            }
+
+            function expandBox(id) {
+                const box = document.getElementById(`emotion-box-${id}`);
+                if (!box || box.classList.contains('hidden')) return;
+
+                box.classList.add('ebox-expanded');
+
+                const expandOnly = box.querySelector('.expand-only');
+                if (expandOnly) {
+                    expandOnly.classList.remove('hidden');
+                    expandOnly.classList.add('flex');
+                }
+
+                const applyWrap = box.querySelector('.apply-wrap');
+                if (applyWrap) {
+                    applyWrap.style.maxHeight = applyWrap.scrollHeight + 'px';
+                }
+            }
+
+            function collapseAll() {
+                document.querySelectorAll('[id^="emotion-box-"]').forEach(box => {
+                    collapseBox(box.id.replace('emotion-box-', ''));
+                });
+            }
+
+            function setActive(id) {
+                collapseAll();
+                expandBox(id);
+                activeId = id;
+            }
+
+            function showEmotion(id) {
+                const box = document.getElementById(`emotion-box-${id}`);
+                const label = document.getElementById(`emotion-label-${id}`);
+                if (!box) return;
+
+                label.textContent = emotions[id % emotions.length];
+                box.classList.remove('hidden');
+            }
+
+            function focusEnd(el) {
+                el.focus();
+                const range = document.createRange();
+                const sel = window.getSelection();
+                range.selectNodeContents(el);
+                range.collapse(false);
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }
+
+            function getBlockIds() {
+                return Array.from(document.querySelectorAll('[id^="block-wrap-"]'))
+                    .map(b => parseInt(b.id.replace('block-wrap-', '')));
+            }
+
+            function addBlock() {
+                const id = blockCount++;
+                const wrap = document.createElement('div');
+
+                wrap.className = 'flex gap-6 items-start';
+                wrap.id = `block-wrap-${id}`;
+
+                wrap.innerHTML = `
+    <div class="flex-1 min-w-0 flex flex-col gap-2">
+      <div class="flex items-center gap-2 w-fit bg-[rgba(255,255,255,0.06)] rounded-full px-2 py-1 cursor-pointer speaker-pill" data-id="${id}">
+        <div class="w-6 h-6 rounded-full overflow-hidden flex-shrink-0">
+          <div class="w-full h-full bg-gradient-to-br from-pink-500 to-orange-400"></div>
+        </div>
+        <span class="text-xs text-white font-medium">Calm Women</span>
+        <svg class="w-3 h-3 text-[rgba(255,255,255,0.4)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </div>
+
+      <div contenteditable="true"
+        data-placeholder="Continue here..."
+        id="block-${id}"
+        class="text-sm text-white leading-relaxed outline-none min-h-[24px] caret-[#C6FF00]"></div>
+    </div>
+
+    <div class="flex-shrink-0 w-[140px] mt-8 emotion-col" data-id="${id}">
+      <div class="border border-[rgba(255,255,255,0.12)] rounded-md overflow-hidden hidden"
+        id="emotion-box-${id}">
+
+        <div class="flex items-center justify-between px-3 py-2">
+          <span class="text-xs text-[rgba(255,255,255,0.7)]"
+            id="emotion-label-${id}"></span>
+
+          <div class="expand-only hidden items-center gap-1">
+            <button class="text-[rgba(255,255,255,0.3)] hover:text-white del-btn" data-id="${id}">✕</button>
+          </div>
+        </div>
+
+        <div class="apply-wrap">
+          <button class="text-[10px] text-[rgba(255,255,255,0.4)] hover:text-white border-t border-[rgba(255,255,255,0.1)] px-3 py-1.5 w-full text-left bg-white/5">
+            Apply to same voice
+          </button>
+        </div>
+
+      </div>
+    </div>
+  `;
+
+                const editor = document.getElementById('script-editor');
+                editor.insertBefore(wrap, globalHint);
+
+                attach(id);
+
+                setTimeout(() => {
+                    const el = document.getElementById(`block-${id}`);
+                    if (el) focusEnd(el);
+                }, 10);
+
+                editor.scrollTop = editor.scrollHeight;
+            }
+
+            function cleanIfEmpty(el) {
+                if (el.innerText.trim() === '') {
+                    el.innerHTML = '';
+                }
+            }
+
+            function attach(id) {
+                const el = document.getElementById(`block-${id}`);
+                const ebox = document.getElementById(`emotion-box-${id}`);
+                const pill = document.querySelector(`.speaker-pill[data-id="${id}"]`);
+                const delBtn = document.querySelector(`.del-btn[data-id="${id}"]`);
+                const col = document.querySelector(`.emotion-col[data-id="${id}"]`);
+
+                el.addEventListener('focus', () => setActive(id));
+
+                el.addEventListener('input', () => {
+                    cleanIfEmpty(el);
+
+                    const hasText = el.innerText.trim().length > 0;
+                    const ids = getBlockIds();
+
+                    if (hasText) {
+                        showEmotion(id);
+                        showHint();
+                        setActive(id);
+                    } else {
+                        if (ebox) ebox.classList.add('hidden');
+
+                        if (ids.length === 1) {
+                            el.innerHTML = '';
+                            el.setAttribute('data-placeholder', 'Type your script here...');
+                            hideHint();
+                        }
+                    }
+                });
+
+                el.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        addBlock();
+                        return;
+                    }
+
+                    if (e.key === 'Backspace') {
+                        if (el.innerText.trim() !== '') return;
+
+                        e.preventDefault();
+                        const ids = getBlockIds();
+
+                        if (ids.length <= 1) {
+                            el.innerHTML = '';
+                            el.setAttribute('data-placeholder', 'Type your script here...');
+                            hideHint();
+                            return;
+                        }
+
+                        const idx = ids.indexOf(id);
+                        const prevId = idx > 0 ? ids[idx - 1] : ids[idx + 1];
+
+                        document.getElementById(`block-wrap-${id}`)?.remove();
+
+                        if (prevId !== undefined) {
+                            const prevEl = document.getElementById(`block-${prevId}`);
+                            if (prevEl) {
+                                focusEnd(prevEl);
+                                setActive(prevId);
+                            }
+                        }
+                    }
+                });
+
+                if (delBtn) {
+                    delBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (ebox) ebox.classList.add('hidden');
+                    });
+                }
+
+                if (pill) {
+                    pill.addEventListener('click', () => {
+                        focusEnd(el);
+                        setActive(id);
+                    });
+                }
+
+                // ✅ HOVER FIX
+                if (col) {
+                    col.addEventListener('mouseenter', () => {
+                        if (ebox && !ebox.classList.contains('hidden')) {
+
+                            ebox.classList.add('ebox-expanded');
+
+                            const expandOnly = ebox.querySelector('.expand-only');
+                            if (expandOnly) {
+                                expandOnly.classList.remove('hidden');
+                                expandOnly.classList.add('flex');
+                            }
+
+                            const applyWrap = ebox.querySelector('.apply-wrap');
+                            if (applyWrap) {
+                                applyWrap.style.maxHeight = applyWrap.scrollHeight + 'px';
+                            }
+                        }
+                    });
+
+                    col.addEventListener('mouseleave', () => {
+                        if (activeId !== id) {
+
+                            ebox.classList.remove('ebox-expanded');
+
+                            const expandOnly = ebox.querySelector('.expand-only');
+                            if (expandOnly) {
+                                expandOnly.classList.add('hidden');
+                                expandOnly.classList.remove('flex');
+                            }
+
+                            const applyWrap = ebox.querySelector('.apply-wrap');
+                            if (applyWrap) {
+                                applyWrap.style.maxHeight = '0px';
+                            }
+                        }
+                    });
+                }
+            }
+
+            attach(0);
+
+            const block0 = document.getElementById('block-0');
+            if (block0) {
+                block0.addEventListener('focus', () => setActive(0));
+            }
+        </script>
 </body>
 
 </html>

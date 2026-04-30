@@ -2952,16 +2952,20 @@ pre{
   bottom: 20px;
 }
 
-.bottom-\[230px\] {
-  bottom: 230px;
-}
-
 .bottom-\[25px\] {
   bottom: 25px;
 }
 
+.bottom-\[265px\] {
+  bottom: 265px;
+}
+
 .bottom-\[30px\] {
   bottom: 30px;
+}
+
+.bottom-\[37\%\] {
+  bottom: 37%;
 }
 
 .bottom-\[40\%\] {
@@ -3288,6 +3292,10 @@ pre{
   right: 58%;
 }
 
+.right-\[85px\] {
+  right: 85px;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -3408,6 +3416,10 @@ pre{
   top: 122px;
 }
 
+.top-\[130px\] {
+  top: 130px;
+}
+
 .top-\[132px\] {
   top: 132px;
 }
@@ -3470,6 +3482,10 @@ pre{
 
 .top-\[42\%\] {
   top: 42%;
+}
+
+.top-\[45\%\] {
+  top: 45%;
 }
 
 .top-\[5\%\] {
@@ -3542,6 +3558,10 @@ pre{
 
 .top-full {
   top: 100%;
+}
+
+.left-\[30\%\] {
+  left: 30%;
 }
 
 .isolate {
@@ -3998,6 +4018,10 @@ pre{
 
 .mt-\[18px\] {
   margin-top: 18px;
+}
+
+.mt-\[20px\] {
+  margin-top: 20px;
 }
 
 .mt-\[22px\] {
@@ -6033,10 +6057,6 @@ pre{
   max-width: 20rem;
 }
 
-.max-w-\[412px\] {
-  max-width: 412px;
-}
-
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -6171,6 +6191,11 @@ pre{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-\[0px\] {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-\[1px\] {
   --tw-translate-y: 1px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -6211,8 +6236,28 @@ pre{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.rotate-\[70px\] {
+  --tw-rotate: 70px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .rotate-\[90deg\] {
   --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[70\] {
+  --tw-rotate: 70;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[70deg\] {
+  --tw-rotate: 70deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[40deg\] {
+  --tw-rotate: 40deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -7739,10 +7784,6 @@ pre{
   background-color: rgb(255 255 255 / .03);
 }
 
-.bg-\[\#000000cc\] {
-  background-color: #000000cc;
-}
-
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
@@ -8841,6 +8882,10 @@ pre{
   padding-bottom: 2.25rem;
 }
 
+.pb-\[0px\] {
+  padding-bottom: 0px;
+}
+
 .pb-\[100px\] {
   padding-bottom: 100px;
 }
@@ -9169,6 +9214,10 @@ pre{
   padding-top: 26px;
 }
 
+.pt-\[30px\] {
+  padding-top: 30px;
+}
+
 .pt-\[31px\] {
   padding-top: 31px;
 }
@@ -9235,18 +9284,6 @@ pre{
 
 .pt-px {
   padding-top: 1px;
-}
-
-.pb-\[30px\] {
-  padding-bottom: 30px;
-}
-
-.pt-\[30px\] {
-  padding-top: 30px;
-}
-
-.pb-\[0px\] {
-  padding-bottom: 0px;
 }
 
 .text-left {
@@ -9630,6 +9667,10 @@ pre{
   letter-spacing: 0.32px;
 }
 
+.tracking-\[0\.36px\] {
+  letter-spacing: 0.36px;
+}
+
 .tracking-\[0\.84px\] {
   letter-spacing: 0.84px;
 }
@@ -9668,14 +9709,6 @@ pre{
 
 .tracking-widest {
   letter-spacing: 0.1em;
-}
-
-.tracking-\[\] {
-  letter-spacing: ;
-}
-
-.tracking-\[0\.36px\] {
-  letter-spacing: 0.36px;
 }
 
 .text-\[\#002225\] {
@@ -11283,11 +11316,6 @@ textarea{
   background-color: rgb(168 213 12 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-\[\#ff3030\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 48 48 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-gradient-to-tr:hover {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
@@ -12256,6 +12284,10 @@ textarea{
     bottom: 145px;
   }
 
+  .md\:bottom-\[15px\] {
+    bottom: 15px;
+  }
+
   .md\:bottom-\[164px\] {
     bottom: 164px;
   }
@@ -12308,6 +12340,10 @@ textarea{
     left: 5%;
   }
 
+  .md\:left-\[55\%\] {
+    left: 55%;
+  }
+
   .md\:right-0 {
     right: 0px;
   }
@@ -12334,6 +12370,10 @@ textarea{
 
   .md\:right-\[178px\] {
     right: 178px;
+  }
+
+  .md\:right-\[18\%\] {
+    right: 18%;
   }
 
   .md\:right-\[180px\] {
@@ -12378,6 +12418,14 @@ textarea{
 
   .md\:top-\[80px\] {
     top: 80px;
+  }
+
+  .md\:top-\[90px\] {
+    top: 90px;
+  }
+
+  .md\:left-\[40\%\] {
+    left: 40%;
   }
 
   .md\:col-span-1 {
@@ -12460,6 +12508,10 @@ textarea{
 
   .md\:mt-\[39px\] {
     margin-top: 39px;
+  }
+
+  .md\:mt-\[40px\] {
+    margin-top: 40px;
   }
 
   .md\:line-clamp-\[11\] {
@@ -12554,6 +12606,10 @@ textarea{
 
   .md\:h-\[290px\] {
     height: 290px;
+  }
+
+  .md\:h-\[367px\] {
+    height: 367px;
   }
 
   .md\:h-\[380px\] {
@@ -12825,6 +12881,10 @@ textarea{
     width: 280px;
   }
 
+  .md\:w-\[314px\] {
+    width: 314px;
+  }
+
   .md\:w-\[320px\] {
     width: 320px;
   }
@@ -12975,12 +13035,20 @@ textarea{
     max-width: 400px;
   }
 
+  .md\:max-w-\[412px\] {
+    max-width: 412px;
+  }
+
   .md\:max-w-\[418px\] {
     max-width: 418px;
   }
 
   .md\:max-w-\[430px\] {
     max-width: 430px;
+  }
+
+  .md\:max-w-\[453px\] {
+    max-width: 453px;
   }
 
   .md\:max-w-\[470px\] {
@@ -13041,10 +13109,6 @@ textarea{
 
   .md\:max-w-full {
     max-width: 100%;
-  }
-
-  .md\:max-w-\[412px\] {
-    max-width: 412px;
   }
 
   .md\:-translate-x-1\/2 {
@@ -13180,6 +13244,10 @@ textarea{
 
   .md\:gap-12 {
     gap: 3rem;
+  }
+
+  .md\:gap-14 {
+    gap: 3.5rem;
   }
 
   .md\:gap-2 {
@@ -13483,6 +13551,11 @@ textarea{
     padding-bottom: 1.25rem;
   }
 
+  .md\:py-\[100px\] {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
   .md\:py-\[120px\] {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -13511,11 +13584,6 @@ textarea{
   .md\:py-\[9px\] {
     padding-top: 9px;
     padding-bottom: 9px;
-  }
-
-  .md\:py-\[100px\] {
-    padding-top: 100px;
-    padding-bottom: 100px;
   }
 
   .md\:pb-0 {
